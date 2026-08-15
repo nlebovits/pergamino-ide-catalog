@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "proyecto_presa",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_proyecto_presa.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_proyecto_presa",
+      "paint": {
+        "line-color": "#808080",
+        "line-width": 5.0,
+        "line-opacity": 1.0
+      }
+    }
+  ]
+}

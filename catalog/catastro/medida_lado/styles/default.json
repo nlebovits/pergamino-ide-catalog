@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "catastro_medida_lado",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_catastro_medida_lado.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_catastro_medida_lado",
+      "paint": {
+        "circle-color": "#bfbfbf",
+        "circle-radius": 3.5,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "version": 8,
+  "name": "comisiones_caminos_rurales",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_comisiones_caminos_rurales.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_comisiones_caminos_rurales",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "comision"
+          ],
+          "Acevedo",
+          "#FF8080",
+          "El Socorro",
+          "#FF8080",
+          "Fontezuela",
+          "#87e96e",
+          "Francisco Ayerza",
+          "#95e613",
+          "Guerrico",
+          "#5797dc",
+          "J A de la Pena",
+          "#cec740",
+          "La Violeta",
+          "#cd771b",
+          "M H Alfonzo",
+          "#5d66ef",
+          "Manuel Ocampo",
+          "#709b61",
+          "Mariano Benitez",
+          "#fcc73c",
+          "Pinzon",
+          "#cd991b",
+          "Rancagua",
+          "#5461a1",
+          "Urquiza",
+          "#cd771b",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "categorical-fill-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_comisiones_caminos_rurales",
+      "layout": {
+        "text-field": [
+          "get",
+          "comision"
+        ],
+        "text-size": 11.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

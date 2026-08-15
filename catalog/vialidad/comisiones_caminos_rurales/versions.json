@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.543410Z",
+      "breaking": false,
+      "assets": {
+        "publico_comisiones_caminos_rurales.parquet": {
+          "sha256": "5be220ac640ea51af6bc7496503744f87c46ef477f067413a44c5d9753a609d8",
+          "size_bytes": 51965,
+          "href": "publico_comisiones_caminos_rurales/publico_comisiones_caminos_rurales.parquet",
+          "source_mtime": 1786738175.637312,
+          "mtime": 1786738175.637312,
+          "feature_count": 29,
+          "schema_fingerprint": "04e77a99da74c282"
+        }
+      },
+      "changes": [
+        "publico_comisiones_caminos_rurales.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.307242Z",
+      "breaking": false,
+      "assets": {
+        "publico_comisiones_caminos_rurales.parquet": {
+          "sha256": "5be220ac640ea51af6bc7496503744f87c46ef477f067413a44c5d9753a609d8",
+          "size_bytes": 51965,
+          "href": "vialidad/comisiones_caminos_rurales/publico_comisiones_caminos_rurales.parquet",
+          "source_mtime": 1786738175.637312,
+          "mtime": 1786738175.637312,
+          "feature_count": 29,
+          "schema_fingerprint": "04e77a99da74c282"
+        },
+        "README.md": {
+          "sha256": "17484869ee522e920750757eeadbe2aa1a77c7645ac60d7f6085b8c5b89f49c1",
+          "size_bytes": 4445,
+          "href": "vialidad/comisiones_caminos_rurales/README.md",
+          "mtime": 1786738804.0273066
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:24:47.648349Z",
+      "breaking": false,
+      "assets": {
+        "publico_comisiones_caminos_rurales.parquet": {
+          "sha256": "5be220ac640ea51af6bc7496503744f87c46ef477f067413a44c5d9753a609d8",
+          "size_bytes": 51965,
+          "href": "vialidad/comisiones_caminos_rurales/publico_comisiones_caminos_rurales.parquet",
+          "source_mtime": 1786738175.637312,
+          "mtime": 1786738175.637312,
+          "feature_count": 29,
+          "schema_fingerprint": "04e77a99da74c282"
+        },
+        "README.md": {
+          "sha256": "17484869ee522e920750757eeadbe2aa1a77c7645ac60d7f6085b8c5b89f49c1",
+          "size_bytes": 4445,
+          "href": "vialidad/comisiones_caminos_rurales/README.md",
+          "mtime": 1786738804.0273066
+        },
+        "publico_comisiones_caminos_rurales.pmtiles": {
+          "sha256": "e850716ad575d1a7d0bc73942d68b8d4b33461b57444da45e7ac8c9397cc3089",
+          "size_bytes": 631817,
+          "href": "vialidad/comisiones_caminos_rurales/publico_comisiones_caminos_rurales.pmtiles",
+          "mtime": 1786739087.55784
+        },
+        "publico_comisiones_caminos_rurales.thumb.jpg": {
+          "sha256": "ebc73c49e7e9c728e0601d1d9bcb12fe53e3ee40cff2d0fc27baf204727494b4",
+          "size_bytes": 17062,
+          "href": "vialidad/comisiones_caminos_rurales/publico_comisiones_caminos_rurales.thumb.jpg",
+          "mtime": 1786740172.4444618
+        }
+      },
+      "changes": [
+        "publico_comisiones_caminos_rurales.pmtiles",
+        "publico_comisiones_caminos_rurales.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_comisiones_caminos_rurales.pmtiles, publico_comisiones_caminos_rurales.thumb.jpg"
+    }
+  ]
+}

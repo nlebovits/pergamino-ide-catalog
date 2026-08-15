@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "puntos_venta_simple",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_puntos_venta_simple.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_puntos_venta_simple",
+      "paint": {
+        "circle-color": "#0033cc",
+        "circle-radius": 5.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

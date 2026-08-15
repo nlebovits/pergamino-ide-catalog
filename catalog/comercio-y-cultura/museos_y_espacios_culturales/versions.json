@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.487539Z",
+      "breaking": false,
+      "assets": {
+        "publico_museos_y_espacios_culturales.parquet": {
+          "sha256": "893c4a6eaff988224395ee3573326a17e2cb546ad9764bd69a6c2b493fc563c0",
+          "size_bytes": 6105,
+          "href": "publico_museos_y_espacios_culturales/publico_museos_y_espacios_culturales.parquet",
+          "source_mtime": 1786738520.2037468,
+          "mtime": 1786738520.2037468,
+          "feature_count": 14,
+          "schema_fingerprint": "32b42232f83cec09"
+        }
+      },
+      "changes": [
+        "publico_museos_y_espacios_culturales.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.664370Z",
+      "breaking": false,
+      "assets": {
+        "publico_museos_y_espacios_culturales.parquet": {
+          "sha256": "893c4a6eaff988224395ee3573326a17e2cb546ad9764bd69a6c2b493fc563c0",
+          "size_bytes": 6105,
+          "href": "comercio-y-cultura/museos_y_espacios_culturales/publico_museos_y_espacios_culturales.parquet",
+          "source_mtime": 1786738520.2037468,
+          "mtime": 1786738520.2037468,
+          "feature_count": 14,
+          "schema_fingerprint": "32b42232f83cec09"
+        },
+        "README.md": {
+          "sha256": "2f6408c8c09017d21cbfa9ab1721af0475645685b74d7e3359b109a2c4bf777d",
+          "size_bytes": 1299,
+          "href": "comercio-y-cultura/museos_y_espacios_culturales/README.md",
+          "mtime": 1786738641.2937279
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:17.422522Z",
+      "breaking": false,
+      "assets": {
+        "publico_museos_y_espacios_culturales.parquet": {
+          "sha256": "893c4a6eaff988224395ee3573326a17e2cb546ad9764bd69a6c2b493fc563c0",
+          "size_bytes": 6105,
+          "href": "comercio-y-cultura/museos_y_espacios_culturales/publico_museos_y_espacios_culturales.parquet",
+          "source_mtime": 1786738520.2037468,
+          "mtime": 1786738520.2037468,
+          "feature_count": 14,
+          "schema_fingerprint": "32b42232f83cec09"
+        },
+        "README.md": {
+          "sha256": "2f6408c8c09017d21cbfa9ab1721af0475645685b74d7e3359b109a2c4bf777d",
+          "size_bytes": 1299,
+          "href": "comercio-y-cultura/museos_y_espacios_culturales/README.md",
+          "mtime": 1786738641.2937279
+        },
+        "publico_museos_y_espacios_culturales.pmtiles": {
+          "sha256": "3cbdcbdf908358e675a21a06b9e07d370ec444461256d73f928731ad30f27a8f",
+          "size_bytes": 8013,
+          "href": "comercio-y-cultura/museos_y_espacios_culturales/publico_museos_y_espacios_culturales.pmtiles",
+          "mtime": 1786739177.2726016
+        },
+        "publico_museos_y_espacios_culturales.thumb.jpg": {
+          "sha256": "2772026558ee35985c26ebe62433dfbf3485143c67f0b8e4407b4191db2ff885",
+          "size_bytes": 8697,
+          "href": "comercio-y-cultura/museos_y_espacios_culturales/publico_museos_y_espacios_culturales.thumb.jpg",
+          "mtime": 1786740135.1261768
+        }
+      },
+      "changes": [
+        "publico_museos_y_espacios_culturales.pmtiles",
+        "publico_museos_y_espacios_culturales.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_museos_y_espacios_culturales.pmtiles, publico_museos_y_espacios_culturales.thumb.jpg"
+    }
+  ]
+}

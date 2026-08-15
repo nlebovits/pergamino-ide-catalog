@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "pobreza_cronica",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_pobreza_cronica.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_pobreza_cronica",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "nivel_de_incidencia_de_pobreza_cronica"
+          ],
+          "Crítico (25 - 100%)",
+          "#67000d",
+          "Muy alto (15 - 24,99%)",
+          "#ba1419",
+          "Alto (10 - 14,99%)",
+          "#eb362a",
+          "Moderado (5 - 9,99%)",
+          "#fc7050",
+          "Bajo (1 - 4,99%)",
+          "#fca487",
+          "Muy bajo (0 - 0,99%)",
+          "#fed6c4",
+          "Sin datos",
+          "#ff64f0",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#232323"
+      }
+    }
+  ]
+}

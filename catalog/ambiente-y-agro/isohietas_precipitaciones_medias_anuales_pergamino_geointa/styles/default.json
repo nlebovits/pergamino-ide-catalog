@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "name": "isohietas_precipitaciones_medias_anuales_pergamino_geointa",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_isohietas_precipitaciones_medias_anuales_pergamino_geointa.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "graduated-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_isohietas_precipitaciones_medias_anuales_pergamino_geointa",
+      "paint": {
+        "line-color": [
+          "step",
+          [
+            "get",
+            "pma_mm"
+          ],
+          "#bdc9e1",
+          1000.0,
+          "#99afdd",
+          1020.0,
+          "#6fa2c6",
+          1040.0,
+          "#2a89b8",
+          1060.0,
+          "#045483"
+        ],
+        "line-width": 1.5,
+        "line-opacity": 1.0
+      }
+    }
+  ]
+}

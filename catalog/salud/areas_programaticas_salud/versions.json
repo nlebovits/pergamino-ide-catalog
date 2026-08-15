@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.257201Z",
+      "breaking": false,
+      "assets": {
+        "publico_areas_programaticas_salud.parquet": {
+          "sha256": "b8a9f775131dc764ea9e4fdd404ca531eb175f0dc2b9fd0570fae9ae48f2b284",
+          "size_bytes": 11547,
+          "href": "publico_areas_programaticas_salud/publico_areas_programaticas_salud.parquet",
+          "source_mtime": 1786738041.3303628,
+          "mtime": 1786738041.3303628,
+          "feature_count": 17,
+          "schema_fingerprint": "6ea983392e887e93"
+        }
+      },
+      "changes": [
+        "publico_areas_programaticas_salud.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.894136Z",
+      "breaking": false,
+      "assets": {
+        "publico_areas_programaticas_salud.parquet": {
+          "sha256": "b8a9f775131dc764ea9e4fdd404ca531eb175f0dc2b9fd0570fae9ae48f2b284",
+          "size_bytes": 11547,
+          "href": "salud/areas_programaticas_salud/publico_areas_programaticas_salud.parquet",
+          "source_mtime": 1786738041.3303628,
+          "mtime": 1786738041.3303628,
+          "feature_count": 17,
+          "schema_fingerprint": "6ea983392e887e93"
+        },
+        "README.md": {
+          "sha256": "0b54938969d32c24c17bde345cf85f1732474e020582af3cd16dd2b157a7f675",
+          "size_bytes": 4563,
+          "href": "salud/areas_programaticas_salud/README.md",
+          "mtime": 1786738803.9043055
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:20.310457Z",
+      "breaking": false,
+      "assets": {
+        "publico_areas_programaticas_salud.parquet": {
+          "sha256": "b8a9f775131dc764ea9e4fdd404ca531eb175f0dc2b9fd0570fae9ae48f2b284",
+          "size_bytes": 11547,
+          "href": "salud/areas_programaticas_salud/publico_areas_programaticas_salud.parquet",
+          "source_mtime": 1786738041.3303628,
+          "mtime": 1786738041.3303628,
+          "feature_count": 17,
+          "schema_fingerprint": "6ea983392e887e93"
+        },
+        "README.md": {
+          "sha256": "0b54938969d32c24c17bde345cf85f1732474e020582af3cd16dd2b157a7f675",
+          "size_bytes": 4563,
+          "href": "salud/areas_programaticas_salud/README.md",
+          "mtime": 1786738803.9043055
+        },
+        "publico_areas_programaticas_salud.pmtiles": {
+          "sha256": "68a34650eb7f825c128f22b73bcd50c30e68b7e345daaf2d84d5ced74cd99aee",
+          "size_bytes": 95013,
+          "href": "salud/areas_programaticas_salud/publico_areas_programaticas_salud.pmtiles",
+          "mtime": 1786739120.074118
+        },
+        "publico_areas_programaticas_salud.thumb.jpg": {
+          "sha256": "7834d9d149626c2ff5e199f0c545a94467ea75afc343f31ef3246d9c28c3ae6f",
+          "size_bytes": 17650,
+          "href": "salud/areas_programaticas_salud/publico_areas_programaticas_salud.thumb.jpg",
+          "mtime": 1786740148.6992805
+        }
+      },
+      "changes": [
+        "publico_areas_programaticas_salud.pmtiles",
+        "publico_areas_programaticas_salud.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_areas_programaticas_salud.pmtiles, publico_areas_programaticas_salud.thumb.jpg"
+    }
+  ]
+}

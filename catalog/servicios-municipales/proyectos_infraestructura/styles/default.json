@@ -1,0 +1,61 @@
+{
+  "version": 8,
+  "name": "proyectos_infraestructura",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_proyectos_infraestructura.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_proyectos_infraestructura",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "proyecto_infraestructura"
+          ],
+          "cordon",
+          "#01eeff",
+          "asfalto",
+          "#ff2701",
+          "cordon_y_asfalto",
+          "#01eeff",
+          "#cccccc"
+        ],
+        "line-width": 6.0,
+        "line-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-line-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_proyectos_infraestructura",
+      "layout": {
+        "text-field": [
+          "get",
+          "pav_etapa"
+        ],
+        "text-size": 11.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#FFFFFF",
+        "text-halo-width": 1.5
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

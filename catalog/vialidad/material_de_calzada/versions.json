@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.464890Z",
+      "breaking": false,
+      "assets": {
+        "publico_material_de_calzada.parquet": {
+          "sha256": "de0ead00693e220b40fcc019144ca2b09e863226ff60ac3d71118076ebd5380b",
+          "size_bytes": 787975,
+          "href": "publico_material_de_calzada/publico_material_de_calzada.parquet",
+          "source_mtime": 1786738514.7017078,
+          "mtime": 1786738514.7017078,
+          "feature_count": 11703,
+          "schema_fingerprint": "bb84c4eedbd864a9"
+        }
+      },
+      "changes": [
+        "publico_material_de_calzada.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.332656Z",
+      "breaking": false,
+      "assets": {
+        "publico_material_de_calzada.parquet": {
+          "sha256": "de0ead00693e220b40fcc019144ca2b09e863226ff60ac3d71118076ebd5380b",
+          "size_bytes": 787975,
+          "href": "vialidad/material_de_calzada/publico_material_de_calzada.parquet",
+          "source_mtime": 1786738514.7017078,
+          "mtime": 1786738514.7017078,
+          "feature_count": 11703,
+          "schema_fingerprint": "bb84c4eedbd864a9"
+        },
+        "README.md": {
+          "sha256": "bdf37a2439459dae6aeb49e27a6090eef46909c4df588dd5ded6a5eeb2173345",
+          "size_bytes": 1518,
+          "href": "vialidad/material_de_calzada/README.md",
+          "mtime": 1786738641.2787278
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:05.369053Z",
+      "breaking": false,
+      "assets": {
+        "publico_material_de_calzada.parquet": {
+          "sha256": "de0ead00693e220b40fcc019144ca2b09e863226ff60ac3d71118076ebd5380b",
+          "size_bytes": 787975,
+          "href": "vialidad/material_de_calzada/publico_material_de_calzada.parquet",
+          "source_mtime": 1786738514.7017078,
+          "mtime": 1786738514.7017078,
+          "feature_count": 11703,
+          "schema_fingerprint": "bb84c4eedbd864a9"
+        },
+        "README.md": {
+          "sha256": "bdf37a2439459dae6aeb49e27a6090eef46909c4df588dd5ded6a5eeb2173345",
+          "size_bytes": 1518,
+          "href": "vialidad/material_de_calzada/README.md",
+          "mtime": 1786738641.2787278
+        },
+        "publico_material_de_calzada.pmtiles": {
+          "sha256": "21cbfa6e950e7cf55232c2dce9db33f97f869a4c6ef2ba637e646095f5729826",
+          "size_bytes": 4882444,
+          "href": "vialidad/material_de_calzada/publico_material_de_calzada.pmtiles",
+          "mtime": 1786739224.9069998
+        },
+        "publico_material_de_calzada.thumb.jpg": {
+          "sha256": "eecd168bcace4829bd63982fa591236b9038ed5f7d2f8daf89b084e7bcd49869",
+          "size_bytes": 32607,
+          "href": "vialidad/material_de_calzada/publico_material_de_calzada.thumb.jpg",
+          "mtime": 1786740174.3834765
+        }
+      },
+      "changes": [
+        "publico_material_de_calzada.pmtiles",
+        "publico_material_de_calzada.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_material_de_calzada.pmtiles, publico_material_de_calzada.thumb.jpg"
+    }
+  ]
+}

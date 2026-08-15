@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.331690Z",
+      "breaking": false,
+      "assets": {
+        "publico_camaras_y_radares.parquet": {
+          "sha256": "046d7450a360378d38c8db8cf8b4879da7809003f42f40cc0b9b3df61053fbd2",
+          "size_bytes": 6261,
+          "href": "publico_camaras_y_radares/publico_camaras_y_radares.parquet",
+          "source_mtime": 1786738078.3916247,
+          "mtime": 1786738078.3916247,
+          "feature_count": 20,
+          "schema_fingerprint": "db50b2153a6d0d85"
+        }
+      },
+      "changes": [
+        "publico_camaras_y_radares.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.295905Z",
+      "breaking": false,
+      "assets": {
+        "publico_camaras_y_radares.parquet": {
+          "sha256": "046d7450a360378d38c8db8cf8b4879da7809003f42f40cc0b9b3df61053fbd2",
+          "size_bytes": 6261,
+          "href": "vialidad/camaras_y_radares/publico_camaras_y_radares.parquet",
+          "source_mtime": 1786738078.3916247,
+          "mtime": 1786738078.3916247,
+          "feature_count": 20,
+          "schema_fingerprint": "db50b2153a6d0d85"
+        },
+        "README.md": {
+          "sha256": "d625233d383d9108c6330030d43d2a1d7b79da5915dbda40ca485be8f7728cb9",
+          "size_bytes": 4481,
+          "href": "vialidad/camaras_y_radares/README.md",
+          "mtime": 1786738803.9343057
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:18.881446Z",
+      "breaking": false,
+      "assets": {
+        "publico_camaras_y_radares.parquet": {
+          "sha256": "046d7450a360378d38c8db8cf8b4879da7809003f42f40cc0b9b3df61053fbd2",
+          "size_bytes": 6261,
+          "href": "vialidad/camaras_y_radares/publico_camaras_y_radares.parquet",
+          "source_mtime": 1786738078.3916247,
+          "mtime": 1786738078.3916247,
+          "feature_count": 20,
+          "schema_fingerprint": "db50b2153a6d0d85"
+        },
+        "README.md": {
+          "sha256": "d625233d383d9108c6330030d43d2a1d7b79da5915dbda40ca485be8f7728cb9",
+          "size_bytes": 4481,
+          "href": "vialidad/camaras_y_radares/README.md",
+          "mtime": 1786738803.9343057
+        },
+        "publico_camaras_y_radares.pmtiles": {
+          "sha256": "e37f4050a8eccb10b931ca79e5c862f1039cf8485f27fd1eaa743001dab5ee5f",
+          "size_bytes": 17512,
+          "href": "vialidad/camaras_y_radares/publico_camaras_y_radares.pmtiles",
+          "mtime": 1786739118.7161064
+        },
+        "publico_camaras_y_radares.thumb.jpg": {
+          "sha256": "fac1deee2abaa554aed7ee51931b98cf1c6878eb7ad9b1800a117dffcbb5a293",
+          "size_bytes": 9141,
+          "href": "vialidad/camaras_y_radares/publico_camaras_y_radares.thumb.jpg",
+          "mtime": 1786740171.8914576
+        }
+      },
+      "changes": [
+        "publico_camaras_y_radares.pmtiles",
+        "publico_camaras_y_radares.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_camaras_y_radares.pmtiles, publico_camaras_y_radares.thumb.jpg"
+    }
+  ]
+}

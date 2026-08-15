@@ -1,0 +1,38 @@
+{
+  "version": 8,
+  "name": "gomerias",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_gomerias.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_gomerias",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-radius": 5.5,
+        "circle-opacity": 1.0,
+        "circle-stroke-color": "#333333",
+        "circle-stroke-width": 1.2
+      }
+    },
+    {
+      "id": "circle-1",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_gomerias",
+      "paint": {
+        "circle-color": "#858585",
+        "circle-radius": 3.5,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

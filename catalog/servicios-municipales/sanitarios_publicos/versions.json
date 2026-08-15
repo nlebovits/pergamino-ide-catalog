@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.789076Z",
+      "breaking": false,
+      "assets": {
+        "publico_sanitarios_publicos.parquet": {
+          "sha256": "0545c64296ad279c264c8ce8f87207ae955841e9f228f39d491fe4d5e0a3721f",
+          "size_bytes": 4513,
+          "href": "publico_sanitarios_publicos/publico_sanitarios_publicos.parquet",
+          "source_mtime": 1786738609.4224045,
+          "mtime": 1786738609.4224045,
+          "feature_count": 5,
+          "schema_fingerprint": "55e3a98339cac5c5"
+        }
+      },
+      "changes": [
+        "publico_sanitarios_publicos.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.064630Z",
+      "breaking": false,
+      "assets": {
+        "publico_sanitarios_publicos.parquet": {
+          "sha256": "0545c64296ad279c264c8ce8f87207ae955841e9f228f39d491fe4d5e0a3721f",
+          "size_bytes": 4513,
+          "href": "servicios-municipales/sanitarios_publicos/publico_sanitarios_publicos.parquet",
+          "source_mtime": 1786738609.4224045,
+          "mtime": 1786738609.4224045,
+          "feature_count": 5,
+          "schema_fingerprint": "55e3a98339cac5c5"
+        },
+        "README.md": {
+          "sha256": "1c384eca212280455573671203040650936cd3ce540e4efe2f4b6e92698538a4",
+          "size_bytes": 1223,
+          "href": "servicios-municipales/sanitarios_publicos/README.md",
+          "mtime": 1786738641.4787297
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:14.098783Z",
+      "breaking": false,
+      "assets": {
+        "publico_sanitarios_publicos.parquet": {
+          "sha256": "0545c64296ad279c264c8ce8f87207ae955841e9f228f39d491fe4d5e0a3721f",
+          "size_bytes": 4513,
+          "href": "servicios-municipales/sanitarios_publicos/publico_sanitarios_publicos.parquet",
+          "source_mtime": 1786738609.4224045,
+          "mtime": 1786738609.4224045,
+          "feature_count": 5,
+          "schema_fingerprint": "55e3a98339cac5c5"
+        },
+        "README.md": {
+          "sha256": "1c384eca212280455573671203040650936cd3ce540e4efe2f4b6e92698538a4",
+          "size_bytes": 1223,
+          "href": "servicios-municipales/sanitarios_publicos/README.md",
+          "mtime": 1786738641.4787297
+        },
+        "publico_sanitarios_publicos.pmtiles": {
+          "sha256": "f569a64ea5104b8963c05fb6b6df8977d006e703ddad89864dace6ef10d7075d",
+          "size_bytes": 4688,
+          "href": "servicios-municipales/sanitarios_publicos/publico_sanitarios_publicos.pmtiles",
+          "mtime": 1786739113.9550657
+        },
+        "publico_sanitarios_publicos.thumb.jpg": {
+          "sha256": "b6d39073ccd2b81ed3b0ab0036a196f6f4b7e9a83e809845e983cd9537224111",
+          "size_bytes": 12504,
+          "href": "servicios-municipales/sanitarios_publicos/publico_sanitarios_publicos.thumb.jpg",
+          "mtime": 1786740157.79235
+        }
+      },
+      "changes": [
+        "publico_sanitarios_publicos.pmtiles",
+        "publico_sanitarios_publicos.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_sanitarios_publicos.pmtiles, publico_sanitarios_publicos.thumb.jpg"
+    }
+  ]
+}

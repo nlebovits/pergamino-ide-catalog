@@ -1,0 +1,85 @@
+{
+  "version": 8,
+  "name": "zonificacion",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_zonificacion.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_zonificacion",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "descripcion"
+          ],
+          "AREA COMPLEMENTARIA",
+          "#fee1f4",
+          "AREA RURAL",
+          "#ffffff",
+          "AREA URBANA",
+          "#eedec1",
+          "BANDA DE CIRCULACION",
+          "#eeeeee",
+          "CENTRAL",
+          "#accce5",
+          "DISTRITO DE URBANIZACION ESPECIAL",
+          "#c5f4fb",
+          "INDUSTRIAL",
+          "#f1b0ac",
+          "PRECINTO INDUSTRIAL",
+          "#f4f5e1",
+          "RESIDENCIAL",
+          "#fdf8de",
+          "RESIDENCIAL CON DISPOSICIONES ESPECIALES",
+          "#fdf8de",
+          "RESIDENCIAL EXTRAURBANA",
+          "#fdf8de",
+          "USO ESPECIFICO",
+          "#fae9de",
+          "ZONA CLUB DE CAMPO",
+          "#c7d1c1",
+          "ZONA DE RECUPERACION",
+          "#dbe6d0",
+          "ZONA DE RESERVA FISCAL",
+          "#dbe6d0",
+          "ZONA VERDE",
+          "#afc3ad",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#232323"
+      }
+    },
+    {
+      "id": "categorical-fill-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_zonificacion",
+      "layout": {
+        "text-field": [
+          "get",
+          "designacion"
+        ],
+        "text-size": 9.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

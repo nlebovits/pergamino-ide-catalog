@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.406704Z",
+      "breaking": false,
+      "assets": {
+        "publico_centros_de_salud.parquet": {
+          "sha256": "e1bb8b5e33186427f64ce60c38dff8cbfa0c9ea52b1fb892f23576ea9510587a",
+          "size_bytes": 7376,
+          "href": "publico_centros_de_salud/publico_centros_de_salud.parquet",
+          "source_mtime": 1786738121.0879264,
+          "mtime": 1786738121.0879264,
+          "feature_count": 23,
+          "schema_fingerprint": "b8ed724830762d9e"
+        }
+      },
+      "changes": [
+        "publico_centros_de_salud.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.905404Z",
+      "breaking": false,
+      "assets": {
+        "publico_centros_de_salud.parquet": {
+          "sha256": "e1bb8b5e33186427f64ce60c38dff8cbfa0c9ea52b1fb892f23576ea9510587a",
+          "size_bytes": 7376,
+          "href": "salud/centros_de_salud/publico_centros_de_salud.parquet",
+          "source_mtime": 1786738121.0879264,
+          "mtime": 1786738121.0879264,
+          "feature_count": 23,
+          "schema_fingerprint": "b8ed724830762d9e"
+        },
+        "README.md": {
+          "sha256": "a83785c3cde14142b84fe981b45baec68453dc1b6bb97fb72851a450c264c785",
+          "size_bytes": 4448,
+          "href": "salud/centros_de_salud/README.md",
+          "mtime": 1786738803.971306
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:04.353923Z",
+      "breaking": false,
+      "assets": {
+        "publico_centros_de_salud.parquet": {
+          "sha256": "e1bb8b5e33186427f64ce60c38dff8cbfa0c9ea52b1fb892f23576ea9510587a",
+          "size_bytes": 7376,
+          "href": "salud/centros_de_salud/publico_centros_de_salud.parquet",
+          "source_mtime": 1786738121.0879264,
+          "mtime": 1786738121.0879264,
+          "feature_count": 23,
+          "schema_fingerprint": "b8ed724830762d9e"
+        },
+        "README.md": {
+          "sha256": "a83785c3cde14142b84fe981b45baec68453dc1b6bb97fb72851a450c264c785",
+          "size_bytes": 4448,
+          "href": "salud/centros_de_salud/README.md",
+          "mtime": 1786738803.971306
+        },
+        "publico_centros_de_salud.pmtiles": {
+          "sha256": "e7614991cd52aa1e2f3dc6218ac5902b3fa72f16f3a3cfc7b0df6567cddf38aa",
+          "size_bytes": 10212,
+          "href": "salud/centros_de_salud/publico_centros_de_salud.pmtiles",
+          "mtime": 1786739284.2044907
+        },
+        "publico_centros_de_salud.thumb.jpg": {
+          "sha256": "15c7c82354dbbd7ba2361014884479b1bbf3e1b61d697e4787638e6bb93a0524",
+          "size_bytes": 11806,
+          "href": "salud/centros_de_salud/publico_centros_de_salud.thumb.jpg",
+          "mtime": 1786740149.0972836
+        }
+      },
+      "changes": [
+        "publico_centros_de_salud.pmtiles",
+        "publico_centros_de_salud.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_centros_de_salud.pmtiles, publico_centros_de_salud.thumb.jpg"
+    }
+  ]
+}

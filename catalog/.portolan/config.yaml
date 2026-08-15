@@ -1,0 +1,8 @@
+# Portolan configuration
+
+tabular:
+  enabled: true
+
+pmtiles:
+  enabled: true
+  max_zoom: 15

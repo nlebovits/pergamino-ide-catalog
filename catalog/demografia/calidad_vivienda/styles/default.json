@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "name": "calidad_vivienda",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_calidad_vivienda.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "graduated-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_calidad_vivienda",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "get",
+            "indice_insuficiente"
+          ],
+          "#FEF0D9",
+          0.43,
+          "#FDCC8A",
+          3.05,
+          "#FC8D59",
+          8.51,
+          "#E34A33",
+          16.94,
+          "#B30000"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#ffffff"
+      }
+    }
+  ]
+}

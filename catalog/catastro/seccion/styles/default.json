@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "catastro_seccion",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_catastro_seccion.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_catastro_seccion",
+      "paint": {
+        "line-color": "#bfbfbf",
+        "line-width": 3.0,
+        "line-opacity": 1.0
+      }
+    }
+  ]
+}

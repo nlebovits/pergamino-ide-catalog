@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.216320Z",
+      "breaking": false,
+      "assets": {
+        "publico_fibra_optica.parquet": {
+          "sha256": "fea08b516a8ddb404d664bbb0af8f94036c4730b5d7b124992f49bf4db62f956",
+          "size_bytes": 6948,
+          "href": "publico_fibra_optica/publico_fibra_optica.parquet",
+          "source_mtime": 1786738411.5769792,
+          "mtime": 1786738411.5769792,
+          "feature_count": 16,
+          "schema_fingerprint": "e5e514baf5228865"
+        }
+      },
+      "changes": [
+        "publico_fibra_optica.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.809731Z",
+      "breaking": false,
+      "assets": {
+        "publico_fibra_optica.parquet": {
+          "sha256": "fea08b516a8ddb404d664bbb0af8f94036c4730b5d7b124992f49bf4db62f956",
+          "size_bytes": 6948,
+          "href": "energia-y-conectividad/fibra_optica/publico_fibra_optica.parquet",
+          "source_mtime": 1786738411.5769792,
+          "mtime": 1786738411.5769792,
+          "feature_count": 16,
+          "schema_fingerprint": "e5e514baf5228865"
+        },
+        "README.md": {
+          "sha256": "46c8c4874973c2bec2ad126071011266af92120255fab6d8599e4871afb9a25d",
+          "size_bytes": 1190,
+          "href": "energia-y-conectividad/fibra_optica/README.md",
+          "mtime": 1786738641.108726
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:20.823495Z",
+      "breaking": false,
+      "assets": {
+        "publico_fibra_optica.parquet": {
+          "sha256": "fea08b516a8ddb404d664bbb0af8f94036c4730b5d7b124992f49bf4db62f956",
+          "size_bytes": 6948,
+          "href": "energia-y-conectividad/fibra_optica/publico_fibra_optica.parquet",
+          "source_mtime": 1786738411.5769792,
+          "mtime": 1786738411.5769792,
+          "feature_count": 16,
+          "schema_fingerprint": "e5e514baf5228865"
+        },
+        "README.md": {
+          "sha256": "46c8c4874973c2bec2ad126071011266af92120255fab6d8599e4871afb9a25d",
+          "size_bytes": 1190,
+          "href": "energia-y-conectividad/fibra_optica/README.md",
+          "mtime": 1786738641.108726
+        },
+        "publico_fibra_optica.pmtiles": {
+          "sha256": "3070350904d2aa459b73f8a1371f0fd4d83dc42ad33d0825002c3fbea3bda19e",
+          "size_bytes": 20564,
+          "href": "energia-y-conectividad/fibra_optica/publico_fibra_optica.pmtiles",
+          "mtime": 1786739120.7451236
+        },
+        "publico_fibra_optica.thumb.jpg": {
+          "sha256": "470bb61f2cfbd5e00af191bbe946c3ed782641a14f470810fee312197a10be08",
+          "size_bytes": 18384,
+          "href": "energia-y-conectividad/fibra_optica/publico_fibra_optica.thumb.jpg",
+          "mtime": 1786740142.8122356
+        }
+      },
+      "changes": [
+        "publico_fibra_optica.pmtiles",
+        "publico_fibra_optica.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_fibra_optica.pmtiles, publico_fibra_optica.thumb.jpg"
+    }
+  ]
+}

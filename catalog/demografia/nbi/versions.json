@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.495197Z",
+      "breaking": false,
+      "assets": {
+        "publico_nbi.parquet": {
+          "sha256": "f3b065c4f37bdd1527f81f39a17f614ffa071e22fba67e8b8476dfe17793f876",
+          "size_bytes": 63380,
+          "href": "publico_nbi/publico_nbi.parquet",
+          "source_mtime": 1786738521.5607564,
+          "mtime": 1786738521.5607564,
+          "feature_count": 178,
+          "schema_fingerprint": "beed796629014087"
+        }
+      },
+      "changes": [
+        "publico_nbi.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.726645Z",
+      "breaking": false,
+      "assets": {
+        "publico_nbi.parquet": {
+          "sha256": "f3b065c4f37bdd1527f81f39a17f614ffa071e22fba67e8b8476dfe17793f876",
+          "size_bytes": 63380,
+          "href": "demografia/nbi/publico_nbi.parquet",
+          "source_mtime": 1786738521.5607564,
+          "mtime": 1786738521.5607564,
+          "feature_count": 178,
+          "schema_fingerprint": "beed796629014087"
+        },
+        "README.md": {
+          "sha256": "97d9b48a3d3b33ac25bdbe8b45134eb9eecb0bc80d6bad4bd141dfe21e40fe26",
+          "size_bytes": 1288,
+          "href": "demografia/nbi/README.md",
+          "mtime": 1786738641.298728
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:29:08.723699Z",
+      "breaking": false,
+      "assets": {
+        "publico_nbi.parquet": {
+          "sha256": "f3b065c4f37bdd1527f81f39a17f614ffa071e22fba67e8b8476dfe17793f876",
+          "size_bytes": 63380,
+          "href": "demografia/nbi/publico_nbi.parquet",
+          "source_mtime": 1786738521.5607564,
+          "mtime": 1786738521.5607564,
+          "feature_count": 178,
+          "schema_fingerprint": "beed796629014087"
+        },
+        "README.md": {
+          "sha256": "97d9b48a3d3b33ac25bdbe8b45134eb9eecb0bc80d6bad4bd141dfe21e40fe26",
+          "size_bytes": 1288,
+          "href": "demografia/nbi/README.md",
+          "mtime": 1786738641.298728
+        },
+        "publico_nbi.pmtiles": {
+          "sha256": "5f2a2dca80ba371439f1570793b5c86a1c4899b1c28705e6a679e07b25ed0f77",
+          "size_bytes": 912883,
+          "href": "demografia/nbi/publico_nbi.pmtiles",
+          "mtime": 1786739348.633018
+        },
+        "publico_nbi.thumb.jpg": {
+          "sha256": "1b7f6cae6be6546d2b5384b4ef681ee3bfd1fd7bfd37d3f592ed19f2f50b1fe4",
+          "size_bytes": 18103,
+          "href": "demografia/nbi/publico_nbi.thumb.jpg",
+          "mtime": 1786740138.1692002
+        }
+      },
+      "changes": [
+        "publico_nbi.pmtiles",
+        "publico_nbi.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_nbi.pmtiles, publico_nbi.thumb.jpg"
+    }
+  ]
+}

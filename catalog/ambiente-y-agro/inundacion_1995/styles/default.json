@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "inundacion_1995",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_inundacion_1995.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_inundacion_1995",
+      "paint": {
+        "fill-color": "#1749DE",
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#1749DE"
+      }
+    }
+  ]
+}

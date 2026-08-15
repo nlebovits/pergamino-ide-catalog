@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.754266Z",
+      "breaking": false,
+      "assets": {
+        "publico_reductores_de_velocidad.parquet": {
+          "sha256": "9bdfdd80c90986678fc0e92a7deec5b0e010131a16c1b356b652a84569853e5b",
+          "size_bytes": 15091,
+          "href": "publico_reductores_de_velocidad/publico_reductores_de_velocidad.parquet",
+          "source_mtime": 1786738601.476323,
+          "mtime": 1786738601.476323,
+          "feature_count": 217,
+          "schema_fingerprint": "498eed122d8ad609"
+        }
+      },
+      "changes": [
+        "publico_reductores_de_velocidad.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.366356Z",
+      "breaking": false,
+      "assets": {
+        "publico_reductores_de_velocidad.parquet": {
+          "sha256": "9bdfdd80c90986678fc0e92a7deec5b0e010131a16c1b356b652a84569853e5b",
+          "size_bytes": 15091,
+          "href": "vialidad/reductores_de_velocidad/publico_reductores_de_velocidad.parquet",
+          "source_mtime": 1786738601.476323,
+          "mtime": 1786738601.476323,
+          "feature_count": 217,
+          "schema_fingerprint": "498eed122d8ad609"
+        },
+        "README.md": {
+          "sha256": "217d253621a07217f6f165903c819c151f810f8800c361a076dbf889c2af62d4",
+          "size_bytes": 1230,
+          "href": "vialidad/reductores_de_velocidad/README.md",
+          "mtime": 1786738641.4587297
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:43.993579Z",
+      "breaking": false,
+      "assets": {
+        "publico_reductores_de_velocidad.parquet": {
+          "sha256": "9bdfdd80c90986678fc0e92a7deec5b0e010131a16c1b356b652a84569853e5b",
+          "size_bytes": 15091,
+          "href": "vialidad/reductores_de_velocidad/publico_reductores_de_velocidad.parquet",
+          "source_mtime": 1786738601.476323,
+          "mtime": 1786738601.476323,
+          "feature_count": 217,
+          "schema_fingerprint": "498eed122d8ad609"
+        },
+        "README.md": {
+          "sha256": "217d253621a07217f6f165903c819c151f810f8800c361a076dbf889c2af62d4",
+          "size_bytes": 1230,
+          "href": "vialidad/reductores_de_velocidad/README.md",
+          "mtime": 1786738641.4587297
+        },
+        "publico_reductores_de_velocidad.pmtiles": {
+          "sha256": "62c9685c8a7aa58be67da91e7d6c0efa3c6c945f112766ccff29ca681ad3f3ce",
+          "size_bytes": 29536,
+          "href": "vialidad/reductores_de_velocidad/publico_reductores_de_velocidad.pmtiles",
+          "mtime": 1786739323.8368158
+        },
+        "publico_reductores_de_velocidad.thumb.jpg": {
+          "sha256": "15de88b10eca4aff8ea71415fb3381d3ecd7ef6a6ee51c08089f27404deba0f7",
+          "size_bytes": 10216,
+          "href": "vialidad/reductores_de_velocidad/publico_reductores_de_velocidad.thumb.jpg",
+          "mtime": 1786740175.9054883
+        }
+      },
+      "changes": [
+        "publico_reductores_de_velocidad.pmtiles",
+        "publico_reductores_de_velocidad.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_reductores_de_velocidad.pmtiles, publico_reductores_de_velocidad.thumb.jpg"
+    }
+  ]
+}

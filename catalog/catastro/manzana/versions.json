@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.370742Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_manzana.parquet": {
+          "sha256": "7ca546cd3bc5d38b26bdbf12f692f42d6b969a3989198f2da4d2707938f5da9d",
+          "size_bytes": 810567,
+          "href": "publico_catastro_manzana/publico_catastro_manzana.parquet",
+          "source_mtime": 1786738092.8797271,
+          "mtime": 1786738092.8797271,
+          "feature_count": 2564,
+          "schema_fingerprint": "a1745360269e0254"
+        }
+      },
+      "changes": [
+        "publico_catastro_manzana.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.507200Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_manzana.parquet": {
+          "sha256": "7ca546cd3bc5d38b26bdbf12f692f42d6b969a3989198f2da4d2707938f5da9d",
+          "size_bytes": 810567,
+          "href": "catastro/manzana/publico_catastro_manzana.parquet",
+          "source_mtime": 1786738092.8797271,
+          "mtime": 1786738092.8797271,
+          "feature_count": 2564,
+          "schema_fingerprint": "a1745360269e0254"
+        },
+        "README.md": {
+          "sha256": "825f1a63a526e69c43302084a9c7ae333ebc3c735779028bbb5611312525760a",
+          "size_bytes": 4364,
+          "href": "catastro/manzana/README.md",
+          "mtime": 1786738803.9493058
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:24:01.863691Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_manzana.parquet": {
+          "sha256": "7ca546cd3bc5d38b26bdbf12f692f42d6b969a3989198f2da4d2707938f5da9d",
+          "size_bytes": 810567,
+          "href": "catastro/manzana/publico_catastro_manzana.parquet",
+          "source_mtime": 1786738092.8797271,
+          "mtime": 1786738092.8797271,
+          "feature_count": 2564,
+          "schema_fingerprint": "a1745360269e0254"
+        },
+        "README.md": {
+          "sha256": "825f1a63a526e69c43302084a9c7ae333ebc3c735779028bbb5611312525760a",
+          "size_bytes": 4364,
+          "href": "catastro/manzana/README.md",
+          "mtime": 1786738803.9493058
+        },
+        "publico_catastro_manzana.pmtiles": {
+          "sha256": "4d038083c00068eae0ce97d534b9775d9a0b67c9d7517f90a805c111c09619c2",
+          "size_bytes": 988172,
+          "href": "catastro/manzana/publico_catastro_manzana.pmtiles",
+          "mtime": 1786739039.6354268
+        },
+        "publico_catastro_manzana.thumb.jpg": {
+          "sha256": "691beef15dcb9aceefdc42dce55df0a550c7f3d45988067ee2d18db54bc0e99c",
+          "size_bytes": 8261,
+          "href": "catastro/manzana/publico_catastro_manzana.thumb.jpg",
+          "mtime": 1786740106.2459562
+        }
+      },
+      "changes": [
+        "publico_catastro_manzana.pmtiles",
+        "publico_catastro_manzana.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_catastro_manzana.pmtiles, publico_catastro_manzana.thumb.jpg"
+    }
+  ]
+}

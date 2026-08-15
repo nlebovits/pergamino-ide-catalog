@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.589091Z",
+      "breaking": false,
+      "assets": {
+        "publico_cursos_de_agua.parquet": {
+          "sha256": "4d60251538b4fcf8d910f2286ce110125d07ade4812f7adb89ca51faf04bcd55",
+          "size_bytes": 351499,
+          "href": "publico_cursos_de_agua/publico_cursos_de_agua.parquet",
+          "source_mtime": 1786738193.0924351,
+          "mtime": 1786738193.0924351,
+          "feature_count": 437,
+          "schema_fingerprint": "e69e812cb3ba657a"
+        }
+      },
+      "changes": [
+        "publico_cursos_de_agua.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.305859Z",
+      "breaking": false,
+      "assets": {
+        "publico_cursos_de_agua.parquet": {
+          "sha256": "4d60251538b4fcf8d910f2286ce110125d07ade4812f7adb89ca51faf04bcd55",
+          "size_bytes": 351499,
+          "href": "ambiente-y-agro/cursos_de_agua/publico_cursos_de_agua.parquet",
+          "source_mtime": 1786738193.0924351,
+          "mtime": 1786738193.0924351,
+          "feature_count": 437,
+          "schema_fingerprint": "e69e812cb3ba657a"
+        },
+        "README.md": {
+          "sha256": "181b7fdd15a5c91a836da2d5185374a2b6e7bb0e2b8515855d855649b8e0f4f7",
+          "size_bytes": 4537,
+          "href": "ambiente-y-agro/cursos_de_agua/README.md",
+          "mtime": 1786738804.0463068
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:24.659030Z",
+      "breaking": false,
+      "assets": {
+        "publico_cursos_de_agua.parquet": {
+          "sha256": "4d60251538b4fcf8d910f2286ce110125d07ade4812f7adb89ca51faf04bcd55",
+          "size_bytes": 351499,
+          "href": "ambiente-y-agro/cursos_de_agua/publico_cursos_de_agua.parquet",
+          "source_mtime": 1786738193.0924351,
+          "mtime": 1786738193.0924351,
+          "feature_count": 437,
+          "schema_fingerprint": "e69e812cb3ba657a"
+        },
+        "README.md": {
+          "sha256": "181b7fdd15a5c91a836da2d5185374a2b6e7bb0e2b8515855d855649b8e0f4f7",
+          "size_bytes": 4537,
+          "href": "ambiente-y-agro/cursos_de_agua/README.md",
+          "mtime": 1786738804.0463068
+        },
+        "publico_cursos_de_agua.pmtiles": {
+          "sha256": "920c138c4d53f9e4a11543b6c193eb85b6180db626dbf77c6884ac76696cfc19",
+          "size_bytes": 1035659,
+          "href": "ambiente-y-agro/cursos_de_agua/publico_cursos_de_agua.pmtiles",
+          "mtime": 1786739184.5136623
+        },
+        "publico_cursos_de_agua.thumb.jpg": {
+          "sha256": "659711096a7eb9458c395a1a8e80d714670f84ee13bf399c423f87be37b4bd6d",
+          "size_bytes": 28945,
+          "href": "ambiente-y-agro/cursos_de_agua/publico_cursos_de_agua.thumb.jpg",
+          "mtime": 1786740056.191573
+        }
+      },
+      "changes": [
+        "publico_cursos_de_agua.pmtiles",
+        "publico_cursos_de_agua.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_cursos_de_agua.pmtiles, publico_cursos_de_agua.thumb.jpg"
+    }
+  ]
+}

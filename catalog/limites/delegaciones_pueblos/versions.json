@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.611820Z",
+      "breaking": false,
+      "assets": {
+        "publico_delegaciones_pueblos.parquet": {
+          "sha256": "7a61a7518015be7e6abbff9f2e1480531dd0f80c952365fe6026a0637b5bc61f",
+          "size_bytes": 5589,
+          "href": "publico_delegaciones_pueblos/publico_delegaciones_pueblos.parquet",
+          "source_mtime": 1786738207.1975348,
+          "mtime": 1786738207.1975348,
+          "feature_count": 12,
+          "schema_fingerprint": "4203edf086ad4392"
+        }
+      },
+      "changes": [
+        "publico_delegaciones_pueblos.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.855569Z",
+      "breaking": false,
+      "assets": {
+        "publico_delegaciones_pueblos.parquet": {
+          "sha256": "7a61a7518015be7e6abbff9f2e1480531dd0f80c952365fe6026a0637b5bc61f",
+          "size_bytes": 5589,
+          "href": "limites/delegaciones_pueblos/publico_delegaciones_pueblos.parquet",
+          "source_mtime": 1786738207.1975348,
+          "mtime": 1786738207.1975348,
+          "feature_count": 12,
+          "schema_fingerprint": "4203edf086ad4392"
+        },
+        "README.md": {
+          "sha256": "6a8b37a02dfa74733499e3a47ccbf6bf99ce6cede28f68aae98a1a377a9a1ae9",
+          "size_bytes": 4412,
+          "href": "limites/delegaciones_pueblos/README.md",
+          "mtime": 1786738804.0573068
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:29.801192Z",
+      "breaking": false,
+      "assets": {
+        "publico_delegaciones_pueblos.parquet": {
+          "sha256": "7a61a7518015be7e6abbff9f2e1480531dd0f80c952365fe6026a0637b5bc61f",
+          "size_bytes": 5589,
+          "href": "limites/delegaciones_pueblos/publico_delegaciones_pueblos.parquet",
+          "source_mtime": 1786738207.1975348,
+          "mtime": 1786738207.1975348,
+          "feature_count": 12,
+          "schema_fingerprint": "4203edf086ad4392"
+        },
+        "README.md": {
+          "sha256": "6a8b37a02dfa74733499e3a47ccbf6bf99ce6cede28f68aae98a1a377a9a1ae9",
+          "size_bytes": 4412,
+          "href": "limites/delegaciones_pueblos/README.md",
+          "mtime": 1786738804.0573068
+        },
+        "publico_delegaciones_pueblos.pmtiles": {
+          "sha256": "a8d3d124bd0efdf955493463a84184cbd9a65e3d89e2e98aef7dc892a6dbf5a6",
+          "size_bytes": 17477,
+          "href": "limites/delegaciones_pueblos/publico_delegaciones_pueblos.pmtiles",
+          "mtime": 1786739189.6457052
+        },
+        "publico_delegaciones_pueblos.thumb.jpg": {
+          "sha256": "b4e683206037bf025ab83e8b3b169e3e7aa2782d69234d71d7d328b91105604a",
+          "size_bytes": 5813,
+          "href": "limites/delegaciones_pueblos/publico_delegaciones_pueblos.thumb.jpg",
+          "mtime": 1786740145.2092538
+        }
+      },
+      "changes": [
+        "publico_delegaciones_pueblos.pmtiles",
+        "publico_delegaciones_pueblos.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_delegaciones_pueblos.pmtiles, publico_delegaciones_pueblos.thumb.jpg"
+    }
+  ]
+}

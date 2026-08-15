@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.347641Z",
+      "breaking": false,
+      "assets": {
+        "publico_inundacion_1995.parquet": {
+          "sha256": "e19d00ae5a27eb0e442efc3ca8a563f6b5fc7444d8621ab3e6dd10e749d47d53",
+          "size_bytes": 123175,
+          "href": "publico_inundacion_1995/publico_inundacion_1995.parquet",
+          "source_mtime": 1786738478.762454,
+          "mtime": 1786738478.762454,
+          "feature_count": 26,
+          "schema_fingerprint": "456de78208a5e448"
+        }
+      },
+      "changes": [
+        "publico_inundacion_1995.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.393395Z",
+      "breaking": false,
+      "assets": {
+        "publico_inundacion_1995.parquet": {
+          "sha256": "e19d00ae5a27eb0e442efc3ca8a563f6b5fc7444d8621ab3e6dd10e749d47d53",
+          "size_bytes": 123175,
+          "href": "ambiente-y-agro/inundacion_1995/publico_inundacion_1995.parquet",
+          "source_mtime": 1786738478.762454,
+          "mtime": 1786738478.762454,
+          "feature_count": 26,
+          "schema_fingerprint": "456de78208a5e448"
+        },
+        "README.md": {
+          "sha256": "0e863075cee766fac7d1c4320ea0cf19bc7992010e05e06cb32786a601b66727",
+          "size_bytes": 1150,
+          "href": "ambiente-y-agro/inundacion_1995/README.md",
+          "mtime": 1786738641.2017272
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:23.183629Z",
+      "breaking": false,
+      "assets": {
+        "publico_inundacion_1995.parquet": {
+          "sha256": "e19d00ae5a27eb0e442efc3ca8a563f6b5fc7444d8621ab3e6dd10e749d47d53",
+          "size_bytes": 123175,
+          "href": "ambiente-y-agro/inundacion_1995/publico_inundacion_1995.parquet",
+          "source_mtime": 1786738478.762454,
+          "mtime": 1786738478.762454,
+          "feature_count": 26,
+          "schema_fingerprint": "456de78208a5e448"
+        },
+        "README.md": {
+          "sha256": "0e863075cee766fac7d1c4320ea0cf19bc7992010e05e06cb32786a601b66727",
+          "size_bytes": 1150,
+          "href": "ambiente-y-agro/inundacion_1995/README.md",
+          "mtime": 1786738641.2017272
+        },
+        "publico_inundacion_1995.pmtiles": {
+          "sha256": "4f4d10eb7fa5363b71c23581ad32d95f6865c15534d87f2b39d5e4896b3ed7d8",
+          "size_bytes": 54889,
+          "href": "ambiente-y-agro/inundacion_1995/publico_inundacion_1995.pmtiles",
+          "mtime": 1786739302.9176443
+        },
+        "publico_inundacion_1995.thumb.jpg": {
+          "sha256": "e5046f86c7c3d750a725ea8ae2966d4a397ac7a523aabc6d77db8e4799827aab",
+          "size_bytes": 22343,
+          "href": "ambiente-y-agro/inundacion_1995/publico_inundacion_1995.thumb.jpg",
+          "mtime": 1786740089.3148265
+        }
+      },
+      "changes": [
+        "publico_inundacion_1995.pmtiles",
+        "publico_inundacion_1995.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_inundacion_1995.pmtiles, publico_inundacion_1995.thumb.jpg"
+    }
+  ]
+}

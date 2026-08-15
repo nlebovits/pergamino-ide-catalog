@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.654960Z",
+      "breaking": false,
+      "assets": {
+        "publico_puntos_de_interes.parquet": {
+          "sha256": "f1704931e66a0e028c0682fd3fdc66783dc9b1e1e7f32c06d8f61aa727ffb8fc",
+          "size_bytes": 8786,
+          "href": "publico_puntos_de_interes/publico_puntos_de_interes.parquet",
+          "source_mtime": 1786738573.460123,
+          "mtime": 1786738573.460123,
+          "feature_count": 31,
+          "schema_fingerprint": "6b640d61d8c0fe52"
+        }
+      },
+      "changes": [
+        "publico_puntos_de_interes.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.682397Z",
+      "breaking": false,
+      "assets": {
+        "publico_puntos_de_interes.parquet": {
+          "sha256": "f1704931e66a0e028c0682fd3fdc66783dc9b1e1e7f32c06d8f61aa727ffb8fc",
+          "size_bytes": 8786,
+          "href": "comercio-y-cultura/puntos_de_interes/publico_puntos_de_interes.parquet",
+          "source_mtime": 1786738573.460123,
+          "mtime": 1786738573.460123,
+          "feature_count": 31,
+          "schema_fingerprint": "6b640d61d8c0fe52"
+        },
+        "README.md": {
+          "sha256": "39551cb282c8d3785846498bfe5656fc2597b8890961df86bd883e16da63a090",
+          "size_bytes": 1289,
+          "href": "comercio-y-cultura/puntos_de_interes/README.md",
+          "mtime": 1786738641.396729
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:23.259743Z",
+      "breaking": false,
+      "assets": {
+        "publico_puntos_de_interes.parquet": {
+          "sha256": "f1704931e66a0e028c0682fd3fdc66783dc9b1e1e7f32c06d8f61aa727ffb8fc",
+          "size_bytes": 8786,
+          "href": "comercio-y-cultura/puntos_de_interes/publico_puntos_de_interes.parquet",
+          "source_mtime": 1786738573.460123,
+          "mtime": 1786738573.460123,
+          "feature_count": 31,
+          "schema_fingerprint": "6b640d61d8c0fe52"
+        },
+        "README.md": {
+          "sha256": "39551cb282c8d3785846498bfe5656fc2597b8890961df86bd883e16da63a090",
+          "size_bytes": 1289,
+          "href": "comercio-y-cultura/puntos_de_interes/README.md",
+          "mtime": 1786738641.396729
+        },
+        "publico_puntos_de_interes.pmtiles": {
+          "sha256": "dc368d47791b73ba037faf24b3972de0c38449678cf21243218fe4948e58f2e3",
+          "size_bytes": 21286,
+          "href": "comercio-y-cultura/puntos_de_interes/publico_puntos_de_interes.pmtiles",
+          "mtime": 1786739183.1136506
+        },
+        "publico_puntos_de_interes.thumb.jpg": {
+          "sha256": "3c5fbc2c4af2e624d93154db4455e28a037c198528d6269ff5680b31cb926fc9",
+          "size_bytes": 6094,
+          "href": "comercio-y-cultura/puntos_de_interes/publico_puntos_de_interes.thumb.jpg",
+          "mtime": 1786740135.7551816
+        }
+      },
+      "changes": [
+        "publico_puntos_de_interes.pmtiles",
+        "publico_puntos_de_interes.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_puntos_de_interes.pmtiles, publico_puntos_de_interes.thumb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "version": 8,
+  "name": "caps",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_caps.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_caps",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-radius": 7.0,
+        "circle-opacity": 1.0,
+        "circle-stroke-color": "#333333",
+        "circle-stroke-width": 1.2
+      }
+    },
+    {
+      "id": "circle-1",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_caps",
+      "paint": {
+        "circle-color": "#ff0000",
+        "circle-radius": 5.5,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

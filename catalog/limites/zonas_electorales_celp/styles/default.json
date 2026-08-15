@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "zonas_electorales_celp",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_zonas_electorales_celp.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_zonas_electorales_celp",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "etiqueta"
+          ],
+          1,
+          "#7bed5c",
+          2,
+          "#e52883",
+          3,
+          "#85c4dd",
+          4,
+          "#18ca77",
+          5,
+          "#d94d1a",
+          6,
+          "#8582df",
+          7,
+          "#b945dc",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#f7f7f7"
+      }
+    }
+  ]
+}

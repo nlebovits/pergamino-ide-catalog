@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.655239Z",
+      "breaking": false,
+      "assets": {
+        "publico_desfibriladores.parquet": {
+          "sha256": "129559b6d122e2814b80736af67ce27116df8f905d9626f80278dc465f1c1837",
+          "size_bytes": 5998,
+          "href": "publico_desfibriladores/publico_desfibriladores.parquet",
+          "source_mtime": 1786738221.513636,
+          "mtime": 1786738221.513636,
+          "feature_count": 10,
+          "schema_fingerprint": "e734db234134892a"
+        }
+      },
+      "changes": [
+        "publico_desfibriladores.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.911143Z",
+      "breaking": false,
+      "assets": {
+        "publico_desfibriladores.parquet": {
+          "sha256": "129559b6d122e2814b80736af67ce27116df8f905d9626f80278dc465f1c1837",
+          "size_bytes": 5998,
+          "href": "salud/desfibriladores/publico_desfibriladores.parquet",
+          "source_mtime": 1786738221.513636,
+          "mtime": 1786738221.513636,
+          "feature_count": 10,
+          "schema_fingerprint": "e734db234134892a"
+        },
+        "README.md": {
+          "sha256": "49bce4f87f9af56271e3113a376ec0c99bf4e23051729aca8b2f23bd4aabd420",
+          "size_bytes": 4438,
+          "href": "salud/desfibriladores/README.md",
+          "mtime": 1786738804.074307
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:21.535891Z",
+      "breaking": false,
+      "assets": {
+        "publico_desfibriladores.parquet": {
+          "sha256": "129559b6d122e2814b80736af67ce27116df8f905d9626f80278dc465f1c1837",
+          "size_bytes": 5998,
+          "href": "salud/desfibriladores/publico_desfibriladores.parquet",
+          "source_mtime": 1786738221.513636,
+          "mtime": 1786738221.513636,
+          "feature_count": 10,
+          "schema_fingerprint": "e734db234134892a"
+        },
+        "README.md": {
+          "sha256": "49bce4f87f9af56271e3113a376ec0c99bf4e23051729aca8b2f23bd4aabd420",
+          "size_bytes": 4438,
+          "href": "salud/desfibriladores/README.md",
+          "mtime": 1786738804.074307
+        },
+        "publico_desfibriladores.pmtiles": {
+          "sha256": "7071bdfba9b981d1fe9b128cc14f6c564992bd99adf05018c50ca118bfbcf569",
+          "size_bytes": 13072,
+          "href": "salud/desfibriladores/publico_desfibriladores.pmtiles",
+          "mtime": 1786739181.376636
+        },
+        "publico_desfibriladores.thumb.jpg": {
+          "sha256": "49c43763d30783368dfff7b3668f95d42c1748bac7a733f2ebd4287eb0ad92fa",
+          "size_bytes": 7440,
+          "href": "salud/desfibriladores/publico_desfibriladores.thumb.jpg",
+          "mtime": 1786740149.280285
+        }
+      },
+      "changes": [
+        "publico_desfibriladores.pmtiles",
+        "publico_desfibriladores.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_desfibriladores.pmtiles, publico_desfibriladores.thumb.jpg"
+    }
+  ]
+}

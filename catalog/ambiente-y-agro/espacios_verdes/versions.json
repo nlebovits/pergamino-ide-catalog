@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.130999Z",
+      "breaking": false,
+      "assets": {
+        "publico_espacios_verdes.parquet": {
+          "sha256": "37af54c84d6f443d522996e77a618cb9711198faec83bac1fb8792fac309ff11",
+          "size_bytes": 133719,
+          "href": "publico_espacios_verdes/publico_espacios_verdes.parquet",
+          "source_mtime": 1786738384.4877877,
+          "mtime": 1786738384.4877877,
+          "feature_count": 492,
+          "schema_fingerprint": "3c59eeb0837292e1"
+        }
+      },
+      "changes": [
+        "publico_espacios_verdes.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.334149Z",
+      "breaking": false,
+      "assets": {
+        "publico_espacios_verdes.parquet": {
+          "sha256": "37af54c84d6f443d522996e77a618cb9711198faec83bac1fb8792fac309ff11",
+          "size_bytes": 133719,
+          "href": "ambiente-y-agro/espacios_verdes/publico_espacios_verdes.parquet",
+          "source_mtime": 1786738384.4877877,
+          "mtime": 1786738384.4877877,
+          "feature_count": 492,
+          "schema_fingerprint": "3c59eeb0837292e1"
+        },
+        "README.md": {
+          "sha256": "131490ce09e0d1f48dba41afd22416b53a731e11de7d296730843fbeebfe71c0",
+          "size_bytes": 2279,
+          "href": "ambiente-y-agro/espacios_verdes/README.md",
+          "mtime": 1786738641.0507255
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:18.427053Z",
+      "breaking": false,
+      "assets": {
+        "publico_espacios_verdes.parquet": {
+          "sha256": "37af54c84d6f443d522996e77a618cb9711198faec83bac1fb8792fac309ff11",
+          "size_bytes": 133719,
+          "href": "ambiente-y-agro/espacios_verdes/publico_espacios_verdes.parquet",
+          "source_mtime": 1786738384.4877877,
+          "mtime": 1786738384.4877877,
+          "feature_count": 492,
+          "schema_fingerprint": "3c59eeb0837292e1"
+        },
+        "README.md": {
+          "sha256": "131490ce09e0d1f48dba41afd22416b53a731e11de7d296730843fbeebfe71c0",
+          "size_bytes": 2279,
+          "href": "ambiente-y-agro/espacios_verdes/README.md",
+          "mtime": 1786738641.0507255
+        },
+        "publico_espacios_verdes.pmtiles": {
+          "sha256": "7958dddbb441faef96216812f1b5be05c56377bb5c64fc3c79f983917e3da528",
+          "size_bytes": 462979,
+          "href": "ambiente-y-agro/espacios_verdes/publico_espacios_verdes.pmtiles",
+          "mtime": 1786739298.235606
+        },
+        "publico_espacios_verdes.thumb.jpg": {
+          "sha256": "77e58df6a46457abb84863e98c145c166b0b697351fdcaecd8e989592c25909c",
+          "size_bytes": 7188,
+          "href": "ambiente-y-agro/espacios_verdes/publico_espacios_verdes.thumb.jpg",
+          "mtime": 1786740059.326597
+        }
+      },
+      "changes": [
+        "publico_espacios_verdes.pmtiles",
+        "publico_espacios_verdes.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_espacios_verdes.pmtiles, publico_espacios_verdes.thumb.jpg"
+    }
+  ]
+}

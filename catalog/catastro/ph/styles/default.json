@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "punto_negro",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_catastro_ph.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_catastro_ph",
+      "paint": {
+        "circle-color": "#000000",
+        "circle-radius": 3.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

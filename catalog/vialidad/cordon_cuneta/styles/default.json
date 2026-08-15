@@ -1,0 +1,65 @@
+{
+  "version": 8,
+  "name": "cordon_cuneta",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_cordon_cuneta.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_cordon_cuneta",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "cordon_cuneta"
+          ],
+          "ambos",
+          "#747474",
+          "impar",
+          "#ffffff",
+          "par",
+          "#ffffff",
+          "ninguno",
+          "#747474",
+          "no_corresponde",
+          "#747474",
+          "#cccccc"
+        ],
+        "line-width": 7.0,
+        "line-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-line-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_cordon_cuneta",
+      "layout": {
+        "text-field": [
+          "get",
+          "etiqueta"
+        ],
+        "text-size": 10.0,
+        "text-anchor": "center",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#2a2a2a",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

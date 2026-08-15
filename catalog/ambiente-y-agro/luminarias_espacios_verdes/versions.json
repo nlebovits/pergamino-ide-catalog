@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.449511Z",
+      "breaking": false,
+      "assets": {
+        "publico_luminarias_espacios_verdes.parquet": {
+          "sha256": "7f8988782a81fb8ca1a9b09d1c477913ab9ad432b1fff9865da8d64d23e39911",
+          "size_bytes": 69137,
+          "href": "publico_luminarias_espacios_verdes/publico_luminarias_espacios_verdes.parquet",
+          "source_mtime": 1786738505.7706447,
+          "mtime": 1786738505.7706447,
+          "feature_count": 1346,
+          "schema_fingerprint": "7458e61c0c8d9aa1"
+        }
+      },
+      "changes": [
+        "publico_luminarias_espacios_verdes.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.417278Z",
+      "breaking": false,
+      "assets": {
+        "publico_luminarias_espacios_verdes.parquet": {
+          "sha256": "7f8988782a81fb8ca1a9b09d1c477913ab9ad432b1fff9865da8d64d23e39911",
+          "size_bytes": 69137,
+          "href": "ambiente-y-agro/luminarias_espacios_verdes/publico_luminarias_espacios_verdes.parquet",
+          "source_mtime": 1786738505.7706447,
+          "mtime": 1786738505.7706447,
+          "feature_count": 1346,
+          "schema_fingerprint": "7458e61c0c8d9aa1"
+        },
+        "README.md": {
+          "sha256": "6ed61d10ff5facedf4442ebf44d0ea6b1722a6a31eaf3180006890c371ddddbb",
+          "size_bytes": 1483,
+          "href": "ambiente-y-agro/luminarias_espacios_verdes/README.md",
+          "mtime": 1786738641.2687278
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:50.777077Z",
+      "breaking": false,
+      "assets": {
+        "publico_luminarias_espacios_verdes.parquet": {
+          "sha256": "7f8988782a81fb8ca1a9b09d1c477913ab9ad432b1fff9865da8d64d23e39911",
+          "size_bytes": 69137,
+          "href": "ambiente-y-agro/luminarias_espacios_verdes/publico_luminarias_espacios_verdes.parquet",
+          "source_mtime": 1786738505.7706447,
+          "mtime": 1786738505.7706447,
+          "feature_count": 1346,
+          "schema_fingerprint": "7458e61c0c8d9aa1"
+        },
+        "README.md": {
+          "sha256": "6ed61d10ff5facedf4442ebf44d0ea6b1722a6a31eaf3180006890c371ddddbb",
+          "size_bytes": 1483,
+          "href": "ambiente-y-agro/luminarias_espacios_verdes/README.md",
+          "mtime": 1786738641.2687278
+        },
+        "publico_luminarias_espacios_verdes.pmtiles": {
+          "sha256": "103b9bacce67c618f7ddc5436b1bc8031c59775e2e11a3e30a47205004661c5f",
+          "size_bytes": 65600,
+          "href": "ambiente-y-agro/luminarias_espacios_verdes/publico_luminarias_espacios_verdes.pmtiles",
+          "mtime": 1786739330.6218712
+        },
+        "publico_luminarias_espacios_verdes.thumb.jpg": {
+          "sha256": "e1371ce032f74dfa352ccd6dd9ec8a0490138254982baa0666520135e837b2fd",
+          "size_bytes": 10333,
+          "href": "ambiente-y-agro/luminarias_espacios_verdes/publico_luminarias_espacios_verdes.thumb.jpg",
+          "mtime": 1786740091.1088402
+        }
+      },
+      "changes": [
+        "publico_luminarias_espacios_verdes.pmtiles",
+        "publico_luminarias_espacios_verdes.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_luminarias_espacios_verdes.pmtiles, publico_luminarias_espacios_verdes.thumb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "version": 8,
+  "name": "tipo_de_vereda",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_tipo_de_vereda.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_tipo_de_vereda",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "tipo_vereda_par"
+          ],
+          "Embaldosada",
+          "#2583cb",
+          "Mixta",
+          "#f3a30f",
+          "Verde",
+          "#00a30f",
+          "#cccccc"
+        ],
+        "line-width": 4.0,
+        "line-opacity": 1.0
+      }
+    }
+  ]
+}

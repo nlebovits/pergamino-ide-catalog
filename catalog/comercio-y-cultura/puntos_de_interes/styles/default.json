@@ -1,0 +1,69 @@
+{
+  "version": 8,
+  "name": "puntos_de_interes",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_puntos_de_interes.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_puntos_de_interes",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo_interes"
+          ],
+          "aire libre",
+          "#ec5578",
+          "arquitectonico",
+          "#6839ea",
+          "cultural",
+          "#e7ad6e",
+          "deportivo",
+          "#de10db",
+          "historico",
+          "#46dc46",
+          "monumento",
+          "#1f86ed",
+          "religioso",
+          "#d6f088",
+          "#cccccc"
+        ],
+        "circle-radius": 7.0,
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-circle-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_puntos_de_interes",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

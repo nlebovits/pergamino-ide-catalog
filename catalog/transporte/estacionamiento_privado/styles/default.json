@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "estacionamiento_privado",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_estacionamiento_privado.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_estacionamiento_privado",
+      "paint": {
+        "circle-color": "#888888",
+        "circle-radius": 9.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

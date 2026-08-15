@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.673176Z",
+      "breaking": false,
+      "assets": {
+        "publico_edificios_en_altura.parquet": {
+          "sha256": "09e2933ab316ce04e1e277b736870f8b9b09262bdea4e18512c68d7a89d26b30",
+          "size_bytes": 39085,
+          "href": "publico_edificios_en_altura/publico_edificios_en_altura.parquet",
+          "source_mtime": 1786738230.432699,
+          "mtime": 1786738230.432699,
+          "feature_count": 457,
+          "schema_fingerprint": "361a7d40c7f7ab77"
+        }
+      },
+      "changes": [
+        "publico_edificios_en_altura.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.482601Z",
+      "breaking": false,
+      "assets": {
+        "publico_edificios_en_altura.parquet": {
+          "sha256": "09e2933ab316ce04e1e277b736870f8b9b09262bdea4e18512c68d7a89d26b30",
+          "size_bytes": 39085,
+          "href": "catastro/edificios_en_altura/publico_edificios_en_altura.parquet",
+          "source_mtime": 1786738230.432699,
+          "mtime": 1786738230.432699,
+          "feature_count": 457,
+          "schema_fingerprint": "361a7d40c7f7ab77"
+        },
+        "README.md": {
+          "sha256": "fd22f215ac8f15d6254bb366fc89c84b8dbca03966d2808163224342f1d2c011",
+          "size_bytes": 4993,
+          "href": "catastro/edificios_en_altura/README.md",
+          "mtime": 1786738804.0853071
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:28.559543Z",
+      "breaking": false,
+      "assets": {
+        "publico_edificios_en_altura.parquet": {
+          "sha256": "09e2933ab316ce04e1e277b736870f8b9b09262bdea4e18512c68d7a89d26b30",
+          "size_bytes": 39085,
+          "href": "catastro/edificios_en_altura/publico_edificios_en_altura.parquet",
+          "source_mtime": 1786738230.432699,
+          "mtime": 1786738230.432699,
+          "feature_count": 457,
+          "schema_fingerprint": "361a7d40c7f7ab77"
+        },
+        "README.md": {
+          "sha256": "fd22f215ac8f15d6254bb366fc89c84b8dbca03966d2808163224342f1d2c011",
+          "size_bytes": 4993,
+          "href": "catastro/edificios_en_altura/README.md",
+          "mtime": 1786738804.0853071
+        },
+        "publico_edificios_en_altura.pmtiles": {
+          "sha256": "df3a653e42454f85af57c9cd6cd0ff3454204b2a82b5b13c0796dac948298173",
+          "size_bytes": 59883,
+          "href": "catastro/edificios_en_altura/publico_edificios_en_altura.pmtiles",
+          "mtime": 1786739188.405695
+        },
+        "publico_edificios_en_altura.thumb.jpg": {
+          "sha256": "4ae0082d42e95beac5fff07c7306ed103ebf0dd53a32476e0772c588a16c8ebe",
+          "size_bytes": 9387,
+          "href": "catastro/edificios_en_altura/publico_edificios_en_altura.thumb.jpg",
+          "mtime": 1786740100.1679096
+        }
+      },
+      "changes": [
+        "publico_edificios_en_altura.pmtiles",
+        "publico_edificios_en_altura.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_edificios_en_altura.pmtiles, publico_edificios_en_altura.thumb.jpg"
+    }
+  ]
+}

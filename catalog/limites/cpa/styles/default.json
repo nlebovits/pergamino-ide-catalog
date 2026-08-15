@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "cpa",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_cpa.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_cpa",
+      "paint": {
+        "circle-color": "#548846",
+        "circle-radius": 3.0,
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "circle-0-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_cpa",
+      "layout": {
+        "text-field": [
+          "get",
+          "cpa"
+        ],
+        "text-size": 9.0,
+        "text-anchor": "top",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

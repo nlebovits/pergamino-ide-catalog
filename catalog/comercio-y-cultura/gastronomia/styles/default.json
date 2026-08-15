@@ -1,0 +1,63 @@
+{
+  "version": 8,
+  "name": "gastronomia",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_gastronomia.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_gastronomia",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Café",
+          "#1381d5",
+          "Pizzería",
+          "#b252e5",
+          "Restaurante",
+          "#e3e673",
+          "Resto-bar",
+          "#d97b8b",
+          "#cccccc"
+        ],
+        "circle-radius": 7.0,
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-circle-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_gastronomia",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

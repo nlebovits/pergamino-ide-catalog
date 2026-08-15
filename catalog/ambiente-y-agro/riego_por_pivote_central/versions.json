@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.780716Z",
+      "breaking": false,
+      "assets": {
+        "publico_riego_por_pivote_central.parquet": {
+          "sha256": "b26c7d27b7fe5762d1e3cd6249aa579e6650f101fd3c787d1e8680ff5c3760b3",
+          "size_bytes": 24039,
+          "href": "publico_riego_por_pivote_central/publico_riego_por_pivote_central.parquet",
+          "source_mtime": 1786738607.8953888,
+          "mtime": 1786738607.8953888,
+          "feature_count": 87,
+          "schema_fingerprint": "0590a2260d5f7d22"
+        }
+      },
+      "changes": [
+        "publico_riego_por_pivote_central.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.439243Z",
+      "breaking": false,
+      "assets": {
+        "publico_riego_por_pivote_central.parquet": {
+          "sha256": "b26c7d27b7fe5762d1e3cd6249aa579e6650f101fd3c787d1e8680ff5c3760b3",
+          "size_bytes": 24039,
+          "href": "ambiente-y-agro/riego_por_pivote_central/publico_riego_por_pivote_central.parquet",
+          "source_mtime": 1786738607.8953888,
+          "mtime": 1786738607.8953888,
+          "feature_count": 87,
+          "schema_fingerprint": "0590a2260d5f7d22"
+        },
+        "README.md": {
+          "sha256": "2fa3a63450fabe1abfb40731dc56b7bf8fc97637a9c3caf2547a3c08594968ca",
+          "size_bytes": 1230,
+          "href": "ambiente-y-agro/riego_por_pivote_central/README.md",
+          "mtime": 1786738641.4737298
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:53.973210Z",
+      "breaking": false,
+      "assets": {
+        "publico_riego_por_pivote_central.parquet": {
+          "sha256": "b26c7d27b7fe5762d1e3cd6249aa579e6650f101fd3c787d1e8680ff5c3760b3",
+          "size_bytes": 24039,
+          "href": "ambiente-y-agro/riego_por_pivote_central/publico_riego_por_pivote_central.parquet",
+          "source_mtime": 1786738607.8953888,
+          "mtime": 1786738607.8953888,
+          "feature_count": 87,
+          "schema_fingerprint": "0590a2260d5f7d22"
+        },
+        "README.md": {
+          "sha256": "2fa3a63450fabe1abfb40731dc56b7bf8fc97637a9c3caf2547a3c08594968ca",
+          "size_bytes": 1230,
+          "href": "ambiente-y-agro/riego_por_pivote_central/README.md",
+          "mtime": 1786738641.4737298
+        },
+        "publico_riego_por_pivote_central.pmtiles": {
+          "sha256": "c1e2d318743a6477957f5af830c70bd6fa1fbb2f4beb50b914b2f2ca2230c930",
+          "size_bytes": 164984,
+          "href": "ambiente-y-agro/riego_por_pivote_central/publico_riego_por_pivote_central.pmtiles",
+          "mtime": 1786739331.2488763
+        },
+        "publico_riego_por_pivote_central.thumb.jpg": {
+          "sha256": "da13c4a54aac5712d9d896704982cdf46bba3bd55fd4e31d41683968e0e0b152",
+          "size_bytes": 9919,
+          "href": "ambiente-y-agro/riego_por_pivote_central/publico_riego_por_pivote_central.thumb.jpg",
+          "mtime": 1786740093.1208558
+        }
+      },
+      "changes": [
+        "publico_riego_por_pivote_central.pmtiles",
+        "publico_riego_por_pivote_central.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_riego_por_pivote_central.pmtiles, publico_riego_por_pivote_central.thumb.jpg"
+    }
+  ]
+}

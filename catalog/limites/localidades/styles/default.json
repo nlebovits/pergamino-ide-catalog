@@ -1,0 +1,74 @@
+{
+  "version": 8,
+  "name": "localidades",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_localidades.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_localidades",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "ciudad",
+          "#eeeeee",
+          "pueblo",
+          "#eeeeee",
+          "paraje",
+          "#eeeeee",
+          "#cccccc"
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "ciudad",
+          29.0,
+          "pueblo",
+          14.0,
+          "paraje",
+          7.0,
+          5.0
+        ],
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-circle-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_localidades",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

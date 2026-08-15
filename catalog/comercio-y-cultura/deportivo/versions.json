@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.643484Z",
+      "breaking": false,
+      "assets": {
+        "publico_deportivo.parquet": {
+          "sha256": "93359a6318f2871bf1c4471dc5003db59b84233f7b87c2d42bd4616a8e5b4e86",
+          "size_bytes": 14396,
+          "href": "publico_deportivo/publico_deportivo.parquet",
+          "source_mtime": 1786738214.4615862,
+          "mtime": 1786738214.4615862,
+          "feature_count": 108,
+          "schema_fingerprint": "2b1d7cd88d76cb88"
+        }
+      },
+      "changes": [
+        "publico_deportivo.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.595781Z",
+      "breaking": false,
+      "assets": {
+        "publico_deportivo.parquet": {
+          "sha256": "93359a6318f2871bf1c4471dc5003db59b84233f7b87c2d42bd4616a8e5b4e86",
+          "size_bytes": 14396,
+          "href": "comercio-y-cultura/deportivo/publico_deportivo.parquet",
+          "source_mtime": 1786738214.4615862,
+          "mtime": 1786738214.4615862,
+          "feature_count": 108,
+          "schema_fingerprint": "2b1d7cd88d76cb88"
+        },
+        "README.md": {
+          "sha256": "71d4fbb67b11c543cd9cebdc78d83d2a9590878fda06d4db541d0fd663ebb6f7",
+          "size_bytes": 4493,
+          "href": "comercio-y-cultura/deportivo/README.md",
+          "mtime": 1786738804.066307
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:15.404760Z",
+      "breaking": false,
+      "assets": {
+        "publico_deportivo.parquet": {
+          "sha256": "93359a6318f2871bf1c4471dc5003db59b84233f7b87c2d42bd4616a8e5b4e86",
+          "size_bytes": 14396,
+          "href": "comercio-y-cultura/deportivo/publico_deportivo.parquet",
+          "source_mtime": 1786738214.4615862,
+          "mtime": 1786738214.4615862,
+          "feature_count": 108,
+          "schema_fingerprint": "2b1d7cd88d76cb88"
+        },
+        "README.md": {
+          "sha256": "71d4fbb67b11c543cd9cebdc78d83d2a9590878fda06d4db541d0fd663ebb6f7",
+          "size_bytes": 4493,
+          "href": "comercio-y-cultura/deportivo/README.md",
+          "mtime": 1786738804.066307
+        },
+        "publico_deportivo.pmtiles": {
+          "sha256": "972692d7000d20d3a4fff5d17f4415a8d02eff3819c8070c7df3c1511811b767",
+          "size_bytes": 55072,
+          "href": "comercio-y-cultura/deportivo/publico_deportivo.pmtiles",
+          "mtime": 1786739175.2535846
+        },
+        "publico_deportivo.thumb.jpg": {
+          "sha256": "218e82edbfb5812922785a8e162eeadded388fcba6382ee747b5f88ab60f9795",
+          "size_bytes": 6820,
+          "href": "comercio-y-cultura/deportivo/publico_deportivo.thumb.jpg",
+          "mtime": 1786740132.3301556
+        }
+      },
+      "changes": [
+        "publico_deportivo.pmtiles",
+        "publico_deportivo.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_deportivo.pmtiles, publico_deportivo.thumb.jpg"
+    }
+  ]
+}

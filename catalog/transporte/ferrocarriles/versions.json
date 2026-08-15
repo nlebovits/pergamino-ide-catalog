@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.208665Z",
+      "breaking": false,
+      "assets": {
+        "publico_ferrocarriles.parquet": {
+          "sha256": "94cc1baa72fcd0e392f97ae9e08d99f38b2fd7d8731a244dd1b54c3aa49ed084",
+          "size_bytes": 24450,
+          "href": "publico_ferrocarriles/publico_ferrocarriles.parquet",
+          "source_mtime": 1786738405.8159385,
+          "mtime": 1786738405.8159385,
+          "feature_count": 109,
+          "schema_fingerprint": "6dc8c1c54bebd3ee"
+        }
+      },
+      "changes": [
+        "publico_ferrocarriles.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.220822Z",
+      "breaking": false,
+      "assets": {
+        "publico_ferrocarriles.parquet": {
+          "sha256": "94cc1baa72fcd0e392f97ae9e08d99f38b2fd7d8731a244dd1b54c3aa49ed084",
+          "size_bytes": 24450,
+          "href": "transporte/ferrocarriles/publico_ferrocarriles.parquet",
+          "source_mtime": 1786738405.8159385,
+          "mtime": 1786738405.8159385,
+          "feature_count": 109,
+          "schema_fingerprint": "6dc8c1c54bebd3ee"
+        },
+        "README.md": {
+          "sha256": "d51595f4244ee275f83529a8d11c8e611ccf6b93706d245c2c1a305e91ef31d9",
+          "size_bytes": 1274,
+          "href": "transporte/ferrocarriles/README.md",
+          "mtime": 1786738641.101726
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:17.630469Z",
+      "breaking": false,
+      "assets": {
+        "publico_ferrocarriles.parquet": {
+          "sha256": "94cc1baa72fcd0e392f97ae9e08d99f38b2fd7d8731a244dd1b54c3aa49ed084",
+          "size_bytes": 24450,
+          "href": "transporte/ferrocarriles/publico_ferrocarriles.parquet",
+          "source_mtime": 1786738405.8159385,
+          "mtime": 1786738405.8159385,
+          "feature_count": 109,
+          "schema_fingerprint": "6dc8c1c54bebd3ee"
+        },
+        "README.md": {
+          "sha256": "d51595f4244ee275f83529a8d11c8e611ccf6b93706d245c2c1a305e91ef31d9",
+          "size_bytes": 1274,
+          "href": "transporte/ferrocarriles/README.md",
+          "mtime": 1786738641.101726
+        },
+        "publico_ferrocarriles.pmtiles": {
+          "sha256": "bd58bb3930bb66708b9476516629d16bc1b2314ff86d58bc88279d7a4fb2b957",
+          "size_bytes": 400441,
+          "href": "transporte/ferrocarriles/publico_ferrocarriles.pmtiles",
+          "mtime": 1786739117.264094
+        },
+        "publico_ferrocarriles.thumb.jpg": {
+          "sha256": "904449022b517ee98167f29d321a8ef6f402e535b81725c001f17c1613ce86c7",
+          "size_bytes": 14749,
+          "href": "transporte/ferrocarriles/publico_ferrocarriles.thumb.jpg",
+          "mtime": 1786740168.2384298
+        }
+      },
+      "changes": [
+        "publico_ferrocarriles.pmtiles",
+        "publico_ferrocarriles.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_ferrocarriles.pmtiles, publico_ferrocarriles.thumb.jpg"
+    }
+  ]
+}

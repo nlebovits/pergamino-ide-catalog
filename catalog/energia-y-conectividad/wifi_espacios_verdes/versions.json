@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.845961Z",
+      "breaking": false,
+      "assets": {
+        "publico_wifi_espacios_verdes.parquet": {
+          "sha256": "e8968729f304430c3c1c5499df5eceab24a986e9b523db93486d42e254f6aac9",
+          "size_bytes": 4618,
+          "href": "publico_wifi_espacios_verdes/publico_wifi_espacios_verdes.parquet",
+          "source_mtime": 1786738624.7935612,
+          "mtime": 1786738624.7935612,
+          "feature_count": 11,
+          "schema_fingerprint": "34a982b9d916a00e"
+        }
+      },
+      "changes": [
+        "publico_wifi_espacios_verdes.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.828310Z",
+      "breaking": false,
+      "assets": {
+        "publico_wifi_espacios_verdes.parquet": {
+          "sha256": "e8968729f304430c3c1c5499df5eceab24a986e9b523db93486d42e254f6aac9",
+          "size_bytes": 4618,
+          "href": "energia-y-conectividad/wifi_espacios_verdes/publico_wifi_espacios_verdes.parquet",
+          "source_mtime": 1786738624.7935612,
+          "mtime": 1786738624.7935612,
+          "feature_count": 11,
+          "schema_fingerprint": "34a982b9d916a00e"
+        },
+        "README.md": {
+          "sha256": "b4739f6349e892308680532dc25b7db55a292b7f8a8818e5370a44c6b656a51f",
+          "size_bytes": 1196,
+          "href": "energia-y-conectividad/wifi_espacios_verdes/README.md",
+          "mtime": 1786738641.5147302
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:24:04.766647Z",
+      "breaking": false,
+      "assets": {
+        "publico_wifi_espacios_verdes.parquet": {
+          "sha256": "e8968729f304430c3c1c5499df5eceab24a986e9b523db93486d42e254f6aac9",
+          "size_bytes": 4618,
+          "href": "energia-y-conectividad/wifi_espacios_verdes/publico_wifi_espacios_verdes.parquet",
+          "source_mtime": 1786738624.7935612,
+          "mtime": 1786738624.7935612,
+          "feature_count": 11,
+          "schema_fingerprint": "34a982b9d916a00e"
+        },
+        "README.md": {
+          "sha256": "b4739f6349e892308680532dc25b7db55a292b7f8a8818e5370a44c6b656a51f",
+          "size_bytes": 1196,
+          "href": "energia-y-conectividad/wifi_espacios_verdes/README.md",
+          "mtime": 1786738641.5147302
+        },
+        "publico_wifi_espacios_verdes.pmtiles": {
+          "sha256": "e3f3a6705df77299da0422d511f1ca7aa2ab07f3edaff2086d3fe9843750555f",
+          "size_bytes": 6867,
+          "href": "energia-y-conectividad/wifi_espacios_verdes/publico_wifi_espacios_verdes.pmtiles",
+          "mtime": 1786739044.6104698
+        },
+        "publico_wifi_espacios_verdes.thumb.jpg": {
+          "sha256": "8bf6b75091645e3468461bba8fdd36f6dab28c19d63b754278c81a17430235bb",
+          "size_bytes": 13032,
+          "href": "energia-y-conectividad/wifi_espacios_verdes/publico_wifi_espacios_verdes.thumb.jpg",
+          "mtime": 1786740144.0892453
+        }
+      },
+      "changes": [
+        "publico_wifi_espacios_verdes.pmtiles",
+        "publico_wifi_espacios_verdes.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_wifi_espacios_verdes.pmtiles, publico_wifi_espacios_verdes.thumb.jpg"
+    }
+  ]
+}

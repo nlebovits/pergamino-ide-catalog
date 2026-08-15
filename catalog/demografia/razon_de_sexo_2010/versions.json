@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.697337Z",
+      "breaking": false,
+      "assets": {
+        "publico_razon_de_sexo_2010.parquet": {
+          "sha256": "b482980a0b585510ceb9309c1472b94fbcd780b07c9b76835e3310facbfcf895",
+          "size_bytes": 61879,
+          "href": "publico_razon_de_sexo_2010/publico_razon_de_sexo_2010.parquet",
+          "source_mtime": 1786738582.7951891,
+          "mtime": 1786738582.7951891,
+          "feature_count": 178,
+          "schema_fingerprint": "eecb87033621a871"
+        }
+      },
+      "changes": [
+        "publico_razon_de_sexo_2010.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.745140Z",
+      "breaking": false,
+      "assets": {
+        "publico_razon_de_sexo_2010.parquet": {
+          "sha256": "b482980a0b585510ceb9309c1472b94fbcd780b07c9b76835e3310facbfcf895",
+          "size_bytes": 61879,
+          "href": "demografia/razon_de_sexo_2010/publico_razon_de_sexo_2010.parquet",
+          "source_mtime": 1786738582.7951891,
+          "mtime": 1786738582.7951891,
+          "feature_count": 178,
+          "schema_fingerprint": "eecb87033621a871"
+        },
+        "README.md": {
+          "sha256": "a663cdafabd5e03c5357988815b5e1efdbbdff5d310b3025813e2154fec0f2ae",
+          "size_bytes": 1302,
+          "href": "demografia/razon_de_sexo_2010/README.md",
+          "mtime": 1786738641.4217293
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:44.970041Z",
+      "breaking": false,
+      "assets": {
+        "publico_razon_de_sexo_2010.parquet": {
+          "sha256": "b482980a0b585510ceb9309c1472b94fbcd780b07c9b76835e3310facbfcf895",
+          "size_bytes": 61879,
+          "href": "demografia/razon_de_sexo_2010/publico_razon_de_sexo_2010.parquet",
+          "source_mtime": 1786738582.7951891,
+          "mtime": 1786738582.7951891,
+          "feature_count": 178,
+          "schema_fingerprint": "eecb87033621a871"
+        },
+        "README.md": {
+          "sha256": "a663cdafabd5e03c5357988815b5e1efdbbdff5d310b3025813e2154fec0f2ae",
+          "size_bytes": 1302,
+          "href": "demografia/razon_de_sexo_2010/README.md",
+          "mtime": 1786738641.4217293
+        },
+        "publico_razon_de_sexo_2010.pmtiles": {
+          "sha256": "4d891876fb82a4b9afac066c2f5d27599f1481d45539c7b8777825328727f686",
+          "size_bytes": 898348,
+          "href": "demografia/razon_de_sexo_2010/publico_razon_de_sexo_2010.pmtiles",
+          "mtime": 1786739204.8818328
+        },
+        "publico_razon_de_sexo_2010.thumb.jpg": {
+          "sha256": "29ff0023a326eb85a89121e43f49a74412928ab38a8176e643abe1be2bfd104c",
+          "size_bytes": 18628,
+          "href": "demografia/razon_de_sexo_2010/publico_razon_de_sexo_2010.thumb.jpg",
+          "mtime": 1786740139.1772077
+        }
+      },
+      "changes": [
+        "publico_razon_de_sexo_2010.pmtiles",
+        "publico_razon_de_sexo_2010.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_razon_de_sexo_2010.pmtiles, publico_razon_de_sexo_2010.thumb.jpg"
+    }
+  ]
+}

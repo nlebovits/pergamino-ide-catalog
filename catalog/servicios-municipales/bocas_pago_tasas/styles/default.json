@@ -1,0 +1,67 @@
+{
+  "version": 8,
+  "name": "bocas_pago_tasas",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_bocas_pago_tasas.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_bocas_pago_tasas",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Cobro Express",
+          "#800080",
+          "Pago Facil",
+          "#ff00e2",
+          "Pronto Pago",
+          "#000000",
+          "Provincia NET",
+          "#6bbdfa",
+          "Rapi Pago",
+          "#ed1334",
+          "Banco",
+          "#48b651",
+          "Entidad",
+          "#e8ec5d",
+          "#cccccc"
+        ],
+        "circle-radius": 11.0,
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-circle-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_bocas_pago_tasas",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

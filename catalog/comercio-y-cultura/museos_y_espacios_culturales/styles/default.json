@@ -1,0 +1,38 @@
+{
+  "version": 8,
+  "name": "museos_y_espacios_culturales",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_museos_y_espacios_culturales.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_museos_y_espacios_culturales",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Escuela",
+          "#0000FF",
+          "Gobierno",
+          "#00FF00",
+          "Museo",
+          "#FF0000",
+          "#cccccc"
+        ],
+        "circle-radius": 10.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

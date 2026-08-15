@@ -1,0 +1,35 @@
+{
+  "version": 8,
+  "name": "estado_parcela",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_estado_parcela.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_estado_parcela",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "factor_ocupacion_parcela"
+          ],
+          0,
+          "#4fd597",
+          1,
+          "#b72ee1",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5
+      }
+    }
+  ]
+}

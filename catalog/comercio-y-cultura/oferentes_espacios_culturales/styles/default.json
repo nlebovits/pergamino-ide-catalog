@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "oferentes_espacios_culturales",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_oferentes_espacios_culturales.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_oferentes_espacios_culturales",
+      "paint": {
+        "circle-color": "#85b66f",
+        "circle-radius": 3.5,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

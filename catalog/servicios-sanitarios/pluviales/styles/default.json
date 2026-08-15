@@ -1,0 +1,51 @@
+{
+  "version": 8,
+  "name": "pluviales",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_pluviales.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_pluviales",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "conducto_cerrado"
+          ],
+          "si",
+          "#a46500",
+          "no",
+          "#a46500",
+          "conducto_sumidero",
+          "#e7982e",
+          "#cccccc"
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "conducto_cerrado"
+          ],
+          "si",
+          4.0,
+          "no",
+          5.0,
+          "conducto_sumidero",
+          2.0,
+          1.0
+        ],
+        "line-opacity": 1.0
+      }
+    }
+  ]
+}

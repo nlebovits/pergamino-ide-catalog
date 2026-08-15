@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.417544Z",
+      "breaking": false,
+      "assets": {
+        "publico_linea_e.parquet": {
+          "sha256": "69f45b3de8902862c1ab94a750fb3835fef478aa9065bbbb226e4b29448f2cca",
+          "size_bytes": 7215,
+          "href": "publico_linea_e/publico_linea_e.parquet",
+          "source_mtime": 1786738497.3925855,
+          "mtime": 1786738497.3925855,
+          "feature_count": 2,
+          "schema_fingerprint": "9db566d8c2b01ccf"
+        }
+      },
+      "changes": [
+        "publico_linea_e.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.258828Z",
+      "breaking": false,
+      "assets": {
+        "publico_linea_e.parquet": {
+          "sha256": "69f45b3de8902862c1ab94a750fb3835fef478aa9065bbbb226e4b29448f2cca",
+          "size_bytes": 7215,
+          "href": "transporte/linea_e/publico_linea_e.parquet",
+          "source_mtime": 1786738497.3925855,
+          "mtime": 1786738497.3925855,
+          "feature_count": 2,
+          "schema_fingerprint": "9db566d8c2b01ccf"
+        },
+        "README.md": {
+          "sha256": "8c0188639dd15531096f0e181a69b47f48ddfd67a3c0dfc99f746966ccefaa12",
+          "size_bytes": 1324,
+          "href": "transporte/linea_e/README.md",
+          "mtime": 1786738641.2467275
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:44.192173Z",
+      "breaking": false,
+      "assets": {
+        "publico_linea_e.parquet": {
+          "sha256": "69f45b3de8902862c1ab94a750fb3835fef478aa9065bbbb226e4b29448f2cca",
+          "size_bytes": 7215,
+          "href": "transporte/linea_e/publico_linea_e.parquet",
+          "source_mtime": 1786738497.3925855,
+          "mtime": 1786738497.3925855,
+          "feature_count": 2,
+          "schema_fingerprint": "9db566d8c2b01ccf"
+        },
+        "README.md": {
+          "sha256": "8c0188639dd15531096f0e181a69b47f48ddfd67a3c0dfc99f746966ccefaa12",
+          "size_bytes": 1324,
+          "href": "transporte/linea_e/README.md",
+          "mtime": 1786738641.2467275
+        },
+        "publico_linea_e.pmtiles": {
+          "sha256": "8edbf7535cfc36ab57fae7282b928ed6dfb2e68237774d9e8a023820bb933ca8",
+          "size_bytes": 12954,
+          "href": "transporte/linea_e/publico_linea_e.pmtiles",
+          "mtime": 1786739263.4313192
+        },
+        "publico_linea_e.thumb.jpg": {
+          "sha256": "a7cf805952dcc1b00fbe3ac745ffcee69726163fb7c8cd91120af5d235cfb9b5",
+          "size_bytes": 9005,
+          "href": "transporte/linea_e/publico_linea_e.thumb.jpg",
+          "mtime": 1786740169.1264365
+        }
+      },
+      "changes": [
+        "publico_linea_e.pmtiles",
+        "publico_linea_e.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_linea_e.pmtiles, publico_linea_e.thumb.jpg"
+    }
+  ]
+}

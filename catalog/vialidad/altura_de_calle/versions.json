@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.262365Z",
+      "breaking": false,
+      "assets": {
+        "publico_altura_de_calle.parquet": {
+          "sha256": "fa9a7f62601a8a80ae7bf95f8c47ecde802a6ee7cdcda6ecb2db70eb586f79b3",
+          "size_bytes": 730799,
+          "href": "publico_altura_de_calle/publico_altura_de_calle.parquet",
+          "source_mtime": 1786738034.1783123,
+          "mtime": 1786738034.1783123,
+          "feature_count": 11703,
+          "schema_fingerprint": "b14d4587bf9bacf5"
+        }
+      },
+      "changes": [
+        "publico_altura_de_calle.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.301817Z",
+      "breaking": false,
+      "assets": {
+        "publico_altura_de_calle.parquet": {
+          "sha256": "fa9a7f62601a8a80ae7bf95f8c47ecde802a6ee7cdcda6ecb2db70eb586f79b3",
+          "size_bytes": 730799,
+          "href": "vialidad/altura_de_calle/publico_altura_de_calle.parquet",
+          "source_mtime": 1786738034.1783123,
+          "mtime": 1786738034.1783123,
+          "feature_count": 11703,
+          "schema_fingerprint": "b14d4587bf9bacf5"
+        },
+        "README.md": {
+          "sha256": "96fd3f653929efe451ad34042e1f24de6458862ddac456d379a5e0ad9fdcd79b",
+          "size_bytes": 4447,
+          "href": "vialidad/altura_de_calle/README.md",
+          "mtime": 1786738803.8943055
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:42.990244Z",
+      "breaking": false,
+      "assets": {
+        "publico_altura_de_calle.parquet": {
+          "sha256": "fa9a7f62601a8a80ae7bf95f8c47ecde802a6ee7cdcda6ecb2db70eb586f79b3",
+          "size_bytes": 730799,
+          "href": "vialidad/altura_de_calle/publico_altura_de_calle.parquet",
+          "source_mtime": 1786738034.1783123,
+          "mtime": 1786738034.1783123,
+          "feature_count": 11703,
+          "schema_fingerprint": "b14d4587bf9bacf5"
+        },
+        "README.md": {
+          "sha256": "96fd3f653929efe451ad34042e1f24de6458862ddac456d379a5e0ad9fdcd79b",
+          "size_bytes": 4447,
+          "href": "vialidad/altura_de_calle/README.md",
+          "mtime": 1786738803.8943055
+        },
+        "publico_altura_de_calle.pmtiles": {
+          "sha256": "2ce1bf472b5a76503c1f6f390fb8e6fa8e682173f3bd72b352a17915c69674b6",
+          "size_bytes": 3104053,
+          "href": "vialidad/altura_de_calle/publico_altura_de_calle.pmtiles",
+          "mtime": 1786739262.662313
+        },
+        "publico_altura_de_calle.thumb.jpg": {
+          "sha256": "eecd168bcace4829bd63982fa591236b9038ed5f7d2f8daf89b084e7bcd49869",
+          "size_bytes": 32607,
+          "href": "vialidad/altura_de_calle/publico_altura_de_calle.thumb.jpg",
+          "mtime": 1786740171.0784514
+        }
+      },
+      "changes": [
+        "publico_altura_de_calle.pmtiles",
+        "publico_altura_de_calle.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_altura_de_calle.pmtiles, publico_altura_de_calle.thumb.jpg"
+    }
+  ]
+}

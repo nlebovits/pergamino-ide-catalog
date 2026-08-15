@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "guardias_emergencias_servicios",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_guardias_emergencias_servicios.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_guardias_emergencias_servicios",
+      "paint": {
+        "circle-color": "#db1e2a",
+        "circle-radius": 8.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "version": 8,
+  "name": "entretenimiento",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_entretenimiento.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_entretenimiento",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Cine",
+          "#FF0000",
+          "Juego de azar",
+          "#FFFF00",
+          "Teatro",
+          "#0000FF",
+          "Teatro bar",
+          "#00FF00",
+          "#cccccc"
+        ],
+        "circle-radius": 10.0,
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-circle-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_entretenimiento",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 11.0,
+        "text-anchor": "top-left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

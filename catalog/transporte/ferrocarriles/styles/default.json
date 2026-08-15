@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "ferrocarriles",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_ferrocarriles.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_ferrocarriles",
+      "paint": {
+        "line-color": "#333333",
+        "line-width": 3.0,
+        "line-opacity": 1.0
+      }
+    },
+    {
+      "id": "line-0-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_ferrocarriles",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 10.0,
+        "text-anchor": "center",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.583457Z",
+      "breaking": false,
+      "assets": {
+        "publico_cuencas_hidricas_norte_ba.parquet": {
+          "sha256": "0ed6aefad8e816e6e4cd41e8e88b0ea2e318e41fbd906c06632f51002aa3e07a",
+          "size_bytes": 99358,
+          "href": "publico_cuencas_hidricas_norte_ba/publico_cuencas_hidricas_norte_ba.parquet",
+          "source_mtime": 1786738192.201429,
+          "mtime": 1786738192.201429,
+          "feature_count": 10,
+          "schema_fingerprint": "10143a98a60c5704"
+        }
+      },
+      "changes": [
+        "publico_cuencas_hidricas_norte_ba.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.293692Z",
+      "breaking": false,
+      "assets": {
+        "publico_cuencas_hidricas_norte_ba.parquet": {
+          "sha256": "0ed6aefad8e816e6e4cd41e8e88b0ea2e318e41fbd906c06632f51002aa3e07a",
+          "size_bytes": 99358,
+          "href": "ambiente-y-agro/cuencas_hidricas_norte_ba/publico_cuencas_hidricas_norte_ba.parquet",
+          "source_mtime": 1786738192.201429,
+          "mtime": 1786738192.201429,
+          "feature_count": 10,
+          "schema_fingerprint": "10143a98a60c5704"
+        },
+        "README.md": {
+          "sha256": "f82fa58845edce4a660c96f4daa4a07bebe4da51ee1f63c1303290028299632d",
+          "size_bytes": 4371,
+          "href": "ambiente-y-agro/cuencas_hidricas_norte_ba/README.md",
+          "mtime": 1786738804.0443068
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:29:07.932760Z",
+      "breaking": false,
+      "assets": {
+        "publico_cuencas_hidricas_norte_ba.parquet": {
+          "sha256": "0ed6aefad8e816e6e4cd41e8e88b0ea2e318e41fbd906c06632f51002aa3e07a",
+          "size_bytes": 99358,
+          "href": "ambiente-y-agro/cuencas_hidricas_norte_ba/publico_cuencas_hidricas_norte_ba.parquet",
+          "source_mtime": 1786738192.201429,
+          "mtime": 1786738192.201429,
+          "feature_count": 10,
+          "schema_fingerprint": "10143a98a60c5704"
+        },
+        "README.md": {
+          "sha256": "f82fa58845edce4a660c96f4daa4a07bebe4da51ee1f63c1303290028299632d",
+          "size_bytes": 4371,
+          "href": "ambiente-y-agro/cuencas_hidricas_norte_ba/README.md",
+          "mtime": 1786738804.0443068
+        },
+        "publico_cuencas_hidricas_norte_ba.pmtiles": {
+          "sha256": "170712340d4182696444ef1672d62684f9ae7ab91152e8e4ec7e7c0c2e9c636e",
+          "size_bytes": 772006,
+          "href": "ambiente-y-agro/cuencas_hidricas_norte_ba/publico_cuencas_hidricas_norte_ba.pmtiles",
+          "mtime": 1786739347.6850104
+        },
+        "publico_cuencas_hidricas_norte_ba.thumb.jpg": {
+          "sha256": "18426d615c6aec6bda01dea5d872deb82b858de20719ef10a08394bd8926736c",
+          "size_bytes": 13877,
+          "href": "ambiente-y-agro/cuencas_hidricas_norte_ba/publico_cuencas_hidricas_norte_ba.thumb.jpg",
+          "mtime": 1786740055.533568
+        }
+      },
+      "changes": [
+        "publico_cuencas_hidricas_norte_ba.pmtiles",
+        "publico_cuencas_hidricas_norte_ba.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_cuencas_hidricas_norte_ba.pmtiles, publico_cuencas_hidricas_norte_ba.thumb.jpg"
+    }
+  ]
+}

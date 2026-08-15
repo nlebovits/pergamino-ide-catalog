@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.660957Z",
+      "breaking": false,
+      "assets": {
+        "publico_ecobotellas.parquet": {
+          "sha256": "95f9f748d5265721b76f71a4bd1a523f13fc3ada119cec1e4c82a6976d52551b",
+          "size_bytes": 4180,
+          "href": "publico_ecobotellas/publico_ecobotellas.parquet",
+          "source_mtime": 1786738222.08164,
+          "mtime": 1786738222.08164,
+          "feature_count": 4,
+          "schema_fingerprint": "d8754811146b9fbe"
+        }
+      },
+      "changes": [
+        "publico_ecobotellas.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.032703Z",
+      "breaking": false,
+      "assets": {
+        "publico_ecobotellas.parquet": {
+          "sha256": "95f9f748d5265721b76f71a4bd1a523f13fc3ada119cec1e4c82a6976d52551b",
+          "size_bytes": 4180,
+          "href": "servicios-municipales/ecobotellas/publico_ecobotellas.parquet",
+          "source_mtime": 1786738222.08164,
+          "mtime": 1786738222.08164,
+          "feature_count": 4,
+          "schema_fingerprint": "d8754811146b9fbe"
+        },
+        "README.md": {
+          "sha256": "0f318f7ad3471199b8a48bb059f950edaa269533d50a9e67a87013c3586ea1d8",
+          "size_bytes": 4346,
+          "href": "servicios-municipales/ecobotellas/README.md",
+          "mtime": 1786738804.079307
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:29:05.656001Z",
+      "breaking": false,
+      "assets": {
+        "publico_ecobotellas.parquet": {
+          "sha256": "95f9f748d5265721b76f71a4bd1a523f13fc3ada119cec1e4c82a6976d52551b",
+          "size_bytes": 4180,
+          "href": "servicios-municipales/ecobotellas/publico_ecobotellas.parquet",
+          "source_mtime": 1786738222.08164,
+          "mtime": 1786738222.08164,
+          "feature_count": 4,
+          "schema_fingerprint": "d8754811146b9fbe"
+        },
+        "README.md": {
+          "sha256": "0f318f7ad3471199b8a48bb059f950edaa269533d50a9e67a87013c3586ea1d8",
+          "size_bytes": 4346,
+          "href": "servicios-municipales/ecobotellas/README.md",
+          "mtime": 1786738804.079307
+        },
+        "publico_ecobotellas.pmtiles": {
+          "sha256": "5358e1cab8b5b33c21bdb6d96c73b029fbf9589484993eb605f4ff377012ec49",
+          "size_bytes": 6560,
+          "href": "servicios-municipales/ecobotellas/publico_ecobotellas.pmtiles",
+          "mtime": 1786739345.5039926
+        },
+        "publico_ecobotellas.thumb.jpg": {
+          "sha256": "a25e18fb4518d9183d2bc09800431711d63cd71abd621fb9bab2ca0095b3fa13",
+          "size_bytes": 7310,
+          "href": "servicios-municipales/ecobotellas/publico_ecobotellas.thumb.jpg",
+          "mtime": 1786740155.9953363
+        }
+      },
+      "changes": [
+        "publico_ecobotellas.pmtiles",
+        "publico_ecobotellas.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_ecobotellas.pmtiles, publico_ecobotellas.thumb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "bibliotecas",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_bibliotecas.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_bibliotecas",
+      "paint": {
+        "circle-color": "#7d3f4a",
+        "circle-radius": 3.5,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

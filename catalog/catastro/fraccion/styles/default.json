@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "catastro_fraccion",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_catastro_fraccion.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_catastro_fraccion",
+      "paint": {
+        "line-color": "#bfbfbf",
+        "line-width": 3.0,
+        "line-opacity": 1.0
+      }
+    }
+  ]
+}

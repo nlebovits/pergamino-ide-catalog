@@ -1,0 +1,88 @@
+# .portolan/metadata.yaml
+#
+# Catalog-level metadata. Feeds README generation and STAC fields.
+# Restored 2026-08-14 from the published copy at source.coop, which held the
+# curated version; a local re-extraction on 2026-06-09 had overwritten it with
+# an unfilled template.
+
+title: IDE Pergamino - Infraestructura de Datos Espaciales
+
+description: |
+  Catálogo de datos geoespaciales abiertos del Municipio de Pergamino,
+  Provincia de Buenos Aires, Argentina. Incluye capas de catastro,
+  infraestructura, transporte, servicios de emergencia, demografía,
+  agricultura, medio ambiente, planificación urbana e indicadores sociales.
+
+  Este catálogo es un espejo cloud-native de la IDE de Pergamino. Los datos
+  originales son publicados por la Dirección de Sistemas de Información
+  Georreferenciada (DSIG) de la Municipalidad de Pergamino a través de su
+  GeoServer y su portal GeoNode. Aquí se republican en formatos optimizados
+  para consulta directa desde la nube (GeoParquet, PMTiles) sin alterar su
+  contenido.
+
+contact:
+  name: Nissim Lebovits
+  email: nlebovits@pm.me
+
+license: CC-BY-SA-4.0
+license_url: https://creativecommons.org/licenses/by-sa/4.0/
+
+providers:
+  - name: Municipalidad de Pergamino
+    roles: [producer, licensor]
+    url: https://pergamino.ar/servicios/ide-pergamino/
+  - name: Source Cooperative
+    roles: [host]
+    url: https://source.coop/nlebovits/pergamino-ide
+    email: nlebovits@pm.me
+
+source_url: https://ide.pergamino.gob.ar:8443/geoserver/wfs
+
+attribution: >-
+  Municipalidad de Pergamino - Dirección de Sistemas de Información
+  Georreferenciada (IDE Pergamino), Provincia de Buenos Aires, Argentina
+
+citation: |
+  Municipalidad de Pergamino (2026). IDE Pergamino - Infraestructura de
+  Datos Espaciales. Espejo cloud-native publicado por Nissim Lebovits.
+  Disponible en: https://source.coop/nlebovits/pergamino-ide
+
+keywords:
+  - Argentina
+  - Buenos Aires
+  - Pergamino
+  - catastro
+  - infraestructura
+  - transporte
+  - censo
+  - agricultura
+  - medio ambiente
+  - planificación urbana
+  - datos abiertos
+  - GeoParquet
+  - STAC
+
+processing_notes: |
+  Extraído del servicio WFS de IDE Pergamino
+  (https://ide.pergamino.gob.ar:8443/geoserver/wfs) y enriquecido con los
+  metadatos ISO publicados por GeoNode (https://geonode.pergamino.gob.ar).
+  Convertido a GeoParquet 1.1.0 (WKB, EPSG:4326, columna de cobertura bbox)
+  y a PMTiles para visualización web. Las simbologías proceden de los SLD
+  oficiales del GeoServer municipal.
+
+known_issues: |
+  - La licencia CC BY-SA 4.0 corresponde a la declaración de la Municipalidad
+    de Pergamino para su IDE. Varias capas son datos de terceros rehospedados
+    por el municipio (INTA, IGN, INDEC, RENABAP, CONICET, INA, BAHRA, Correo
+    Argentino, CARTOARBA). Esas capas conservan la atribución a su organismo
+    de origen y no se relicencian.
+  - El municipio advierte que la información "se encuentra en constante
+    actualización por parte de las distintas áreas responsables de su
+    generación, por lo tanto, podria contener diferencias e inconsistencias
+    en relación al objeto o fenómeno representado, tanto espacial como
+    temporalmente."
+  - GeoNode declara `maintenance_frequency: notPlanned` para 111 de 218
+    conjuntos de datos. La mayor parte del catálogo no tiene una
+    actualización programada.
+  - La vigencia del contenido no coincide con la fecha de publicación de los
+    metadatos. Consultar las columnas `fuente` y `actualizacion` de cada capa.

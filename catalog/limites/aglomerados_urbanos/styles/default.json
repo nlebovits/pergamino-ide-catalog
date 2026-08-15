@@ -1,0 +1,38 @@
+{
+  "version": 8,
+  "name": "aglomerados_urbanos",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_aglomerados_urbanos.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_aglomerados_urbanos",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "clasificacion"
+          ],
+          "urbana",
+          "#528ed7",
+          "periurbana",
+          "#ff8538",
+          "urbano en ruralidad",
+          "#37a531",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#232323"
+      }
+    }
+  ]
+}

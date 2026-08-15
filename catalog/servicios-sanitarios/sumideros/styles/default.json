@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "sumideros",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_sumideros.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_sumideros",
+      "paint": {
+        "circle-color": "#f3a6b2",
+        "circle-radius": 2.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

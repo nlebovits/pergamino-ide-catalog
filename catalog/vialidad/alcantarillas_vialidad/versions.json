@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.241810Z",
+      "breaking": false,
+      "assets": {
+        "publico_alcantarillas_vialidad.parquet": {
+          "sha256": "32bb5dc326c0799ec82f1c7927ab7b4b3787e7b05d9f3d452c1e6c05436eba93",
+          "size_bytes": 11448,
+          "href": "publico_alcantarillas_vialidad/publico_alcantarillas_vialidad.parquet",
+          "source_mtime": 1786738026.639259,
+          "mtime": 1786738026.639259,
+          "feature_count": 74,
+          "schema_fingerprint": "1becb75748346546"
+        }
+      },
+      "changes": [
+        "publico_alcantarillas_vialidad.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.289776Z",
+      "breaking": false,
+      "assets": {
+        "publico_alcantarillas_vialidad.parquet": {
+          "sha256": "32bb5dc326c0799ec82f1c7927ab7b4b3787e7b05d9f3d452c1e6c05436eba93",
+          "size_bytes": 11448,
+          "href": "vialidad/alcantarillas_vialidad/publico_alcantarillas_vialidad.parquet",
+          "source_mtime": 1786738026.639259,
+          "mtime": 1786738026.639259,
+          "feature_count": 74,
+          "schema_fingerprint": "1becb75748346546"
+        },
+        "README.md": {
+          "sha256": "67ec59d4b56433d48f3cc4b833d2a326d17fe32411fba2a7d66058b08a631267",
+          "size_bytes": 4519,
+          "href": "vialidad/alcantarillas_vialidad/README.md",
+          "mtime": 1786738803.8913054
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:17.658192Z",
+      "breaking": false,
+      "assets": {
+        "publico_alcantarillas_vialidad.parquet": {
+          "sha256": "32bb5dc326c0799ec82f1c7927ab7b4b3787e7b05d9f3d452c1e6c05436eba93",
+          "size_bytes": 11448,
+          "href": "vialidad/alcantarillas_vialidad/publico_alcantarillas_vialidad.parquet",
+          "source_mtime": 1786738026.639259,
+          "mtime": 1786738026.639259,
+          "feature_count": 74,
+          "schema_fingerprint": "1becb75748346546"
+        },
+        "README.md": {
+          "sha256": "67ec59d4b56433d48f3cc4b833d2a326d17fe32411fba2a7d66058b08a631267",
+          "size_bytes": 4519,
+          "href": "vialidad/alcantarillas_vialidad/README.md",
+          "mtime": 1786738803.8913054
+        },
+        "publico_alcantarillas_vialidad.pmtiles": {
+          "sha256": "6a66ced0289ce60cfd3c9fd224cfd7acafef23c89c46fcedbec11cbac50c1052",
+          "size_bytes": 61734,
+          "href": "vialidad/alcantarillas_vialidad/publico_alcantarillas_vialidad.pmtiles",
+          "mtime": 1786739297.5036
+        },
+        "publico_alcantarillas_vialidad.thumb.jpg": {
+          "sha256": "c79e6273d5c573f5f3197a124836cfd47a77868bf64ae5905e8e07f4ccd62808",
+          "size_bytes": 9817,
+          "href": "vialidad/alcantarillas_vialidad/publico_alcantarillas_vialidad.thumb.jpg",
+          "mtime": 1786740170.4524467
+        }
+      },
+      "changes": [
+        "publico_alcantarillas_vialidad.pmtiles",
+        "publico_alcantarillas_vialidad.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_alcantarillas_vialidad.pmtiles, publico_alcantarillas_vialidad.thumb.jpg"
+    }
+  ]
+}

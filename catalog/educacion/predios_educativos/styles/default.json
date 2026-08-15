@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "predios_educativos",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_predios_educativos.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_predios_educativos",
+      "paint": {
+        "fill-color": "#e49f20",
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#e49f20"
+      }
+    }
+  ]
+}

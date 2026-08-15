@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.225662Z",
+      "breaking": false,
+      "assets": {
+        "publico_agencias_de_viaje.parquet": {
+          "sha256": "6dd2697830f46936897e8e8200485ee184c74fe0dcc47ff4eb84310d043a9d9f",
+          "size_bytes": 7320,
+          "href": "publico_agencias_de_viaje/publico_agencias_de_viaje.parquet",
+          "source_mtime": 1786738018.850204,
+          "mtime": 1786738018.850204,
+          "feature_count": 15,
+          "schema_fingerprint": "b98e6839c5d2fa9b"
+        }
+      },
+      "changes": [
+        "publico_agencias_de_viaje.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.579086Z",
+      "breaking": false,
+      "assets": {
+        "publico_agencias_de_viaje.parquet": {
+          "sha256": "6dd2697830f46936897e8e8200485ee184c74fe0dcc47ff4eb84310d043a9d9f",
+          "size_bytes": 7320,
+          "href": "comercio-y-cultura/agencias_de_viaje/publico_agencias_de_viaje.parquet",
+          "source_mtime": 1786738018.850204,
+          "mtime": 1786738018.850204,
+          "feature_count": 15,
+          "schema_fingerprint": "b98e6839c5d2fa9b"
+        },
+        "README.md": {
+          "sha256": "c39430895017130eb58ca32db6fcdd8bb21f2edb53d88afacf729daf2387af36",
+          "size_bytes": 4490,
+          "href": "comercio-y-cultura/agencias_de_viaje/README.md",
+          "mtime": 1786738803.8843052
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:14.679428Z",
+      "breaking": false,
+      "assets": {
+        "publico_agencias_de_viaje.parquet": {
+          "sha256": "6dd2697830f46936897e8e8200485ee184c74fe0dcc47ff4eb84310d043a9d9f",
+          "size_bytes": 7320,
+          "href": "comercio-y-cultura/agencias_de_viaje/publico_agencias_de_viaje.parquet",
+          "source_mtime": 1786738018.850204,
+          "mtime": 1786738018.850204,
+          "feature_count": 15,
+          "schema_fingerprint": "b98e6839c5d2fa9b"
+        },
+        "README.md": {
+          "sha256": "c39430895017130eb58ca32db6fcdd8bb21f2edb53d88afacf729daf2387af36",
+          "size_bytes": 4490,
+          "href": "comercio-y-cultura/agencias_de_viaje/README.md",
+          "mtime": 1786738803.8843052
+        },
+        "publico_agencias_de_viaje.pmtiles": {
+          "sha256": "e7f5512a0c94252a4d8f8213d035c424f3e7f53db7f61671e394deb997a9376b",
+          "size_bytes": 8255,
+          "href": "comercio-y-cultura/agencias_de_viaje/publico_agencias_de_viaje.pmtiles",
+          "mtime": 1786739114.5300708
+        },
+        "publico_agencias_de_viaje.thumb.jpg": {
+          "sha256": "9c52303a8bfe7dac20261be7b405acc7098d9815ecd7d297f31dcc25ad72fe38",
+          "size_bytes": 18319,
+          "href": "comercio-y-cultura/agencias_de_viaje/publico_agencias_de_viaje.thumb.jpg",
+          "mtime": 1786740127.967122
+        }
+      },
+      "changes": [
+        "publico_agencias_de_viaje.pmtiles",
+        "publico_agencias_de_viaje.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_agencias_de_viaje.pmtiles, publico_agencias_de_viaje.thumb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.354652Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_chacra.parquet": {
+          "sha256": "10737b0cd040491785ad94e09c4b46d1c15f457f6858d3cbc8abbf2b98f2c79d",
+          "size_bytes": 50161,
+          "href": "publico_catastro_chacra/publico_catastro_chacra.parquet",
+          "source_mtime": 1786738085.0156715,
+          "mtime": 1786738085.0156715,
+          "feature_count": 285,
+          "schema_fingerprint": "6e45d7b923a2bbbc"
+        }
+      },
+      "changes": [
+        "publico_catastro_chacra.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.458587Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_chacra.parquet": {
+          "sha256": "10737b0cd040491785ad94e09c4b46d1c15f457f6858d3cbc8abbf2b98f2c79d",
+          "size_bytes": 50161,
+          "href": "catastro/chacra/publico_catastro_chacra.parquet",
+          "source_mtime": 1786738085.0156715,
+          "mtime": 1786738085.0156715,
+          "feature_count": 285,
+          "schema_fingerprint": "6e45d7b923a2bbbc"
+        },
+        "README.md": {
+          "sha256": "9c6d21ea8a83279512aa12927815b5622febdb38f1a2d0d6cbad8295fa43fcbe",
+          "size_bytes": 4360,
+          "href": "catastro/chacra/README.md",
+          "mtime": 1786738803.9423058
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:34.585240Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_chacra.parquet": {
+          "sha256": "10737b0cd040491785ad94e09c4b46d1c15f457f6858d3cbc8abbf2b98f2c79d",
+          "size_bytes": 50161,
+          "href": "catastro/chacra/publico_catastro_chacra.parquet",
+          "source_mtime": 1786738085.0156715,
+          "mtime": 1786738085.0156715,
+          "feature_count": 285,
+          "schema_fingerprint": "6e45d7b923a2bbbc"
+        },
+        "README.md": {
+          "sha256": "9c6d21ea8a83279512aa12927815b5622febdb38f1a2d0d6cbad8295fa43fcbe",
+          "size_bytes": 4360,
+          "href": "catastro/chacra/README.md",
+          "mtime": 1786738803.9423058
+        },
+        "publico_catastro_chacra.pmtiles": {
+          "sha256": "f8406e2d06b2247239620aabdca85056470f1636611ff214d42177bb73a95270",
+          "size_bytes": 233581,
+          "href": "catastro/chacra/publico_catastro_chacra.pmtiles",
+          "mtime": 1786739251.3382192
+        },
+        "publico_catastro_chacra.thumb.jpg": {
+          "sha256": "0f0a2678a095ce8b6d0d5f76fff5559b77e0d08a4c9d0eb4684b29e37d834af8",
+          "size_bytes": 11621,
+          "href": "catastro/chacra/publico_catastro_chacra.thumb.jpg",
+          "mtime": 1786740093.9878623
+        }
+      },
+      "changes": [
+        "publico_catastro_chacra.pmtiles",
+        "publico_catastro_chacra.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_catastro_chacra.pmtiles, publico_catastro_chacra.thumb.jpg"
+    }
+  ]
+}

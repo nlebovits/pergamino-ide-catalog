@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "puntos_fijos",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_puntos_fijos.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_puntos_fijos",
+      "paint": {
+        "circle-color": "#FF0080",
+        "circle-radius": 7.5,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

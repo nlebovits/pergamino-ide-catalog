@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.605983Z",
+      "breaking": false,
+      "assets": {
+        "publico_curvas_nivel_cuenca.parquet": {
+          "sha256": "ca4de75a0620f7da419a0bf857cec93daa3bb20aab53070d52bfae8522d1bb87",
+          "size_bytes": 575465,
+          "href": "publico_curvas_nivel_cuenca/publico_curvas_nivel_cuenca.parquet",
+          "source_mtime": 1786738199.849483,
+          "mtime": 1786738199.849483,
+          "feature_count": 848,
+          "schema_fingerprint": "74ba99cd79d61c4b"
+        }
+      },
+      "changes": [
+        "publico_curvas_nivel_cuenca.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.321959Z",
+      "breaking": false,
+      "assets": {
+        "publico_curvas_nivel_cuenca.parquet": {
+          "sha256": "ca4de75a0620f7da419a0bf857cec93daa3bb20aab53070d52bfae8522d1bb87",
+          "size_bytes": 575465,
+          "href": "ambiente-y-agro/curvas_nivel_cuenca/publico_curvas_nivel_cuenca.parquet",
+          "source_mtime": 1786738199.849483,
+          "mtime": 1786738199.849483,
+          "feature_count": 848,
+          "schema_fingerprint": "74ba99cd79d61c4b"
+        },
+        "README.md": {
+          "sha256": "3c1c20252da5f390619216ae8e588d7c6be653fc2a809e9545152a7aa497e9eb",
+          "size_bytes": 4310,
+          "href": "ambiente-y-agro/curvas_nivel_cuenca/README.md",
+          "mtime": 1786738804.0513067
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:40.713526Z",
+      "breaking": false,
+      "assets": {
+        "publico_curvas_nivel_cuenca.parquet": {
+          "sha256": "ca4de75a0620f7da419a0bf857cec93daa3bb20aab53070d52bfae8522d1bb87",
+          "size_bytes": 575465,
+          "href": "ambiente-y-agro/curvas_nivel_cuenca/publico_curvas_nivel_cuenca.parquet",
+          "source_mtime": 1786738199.849483,
+          "mtime": 1786738199.849483,
+          "feature_count": 848,
+          "schema_fingerprint": "74ba99cd79d61c4b"
+        },
+        "README.md": {
+          "sha256": "3c1c20252da5f390619216ae8e588d7c6be653fc2a809e9545152a7aa497e9eb",
+          "size_bytes": 4310,
+          "href": "ambiente-y-agro/curvas_nivel_cuenca/README.md",
+          "mtime": 1786738804.0513067
+        },
+        "publico_curvas_nivel_cuenca.pmtiles": {
+          "sha256": "02f74bf9ccb00daaa81004c7d5c727e8d31e41266dea72acf6b5b08a9933b3ef",
+          "size_bytes": 904237,
+          "href": "ambiente-y-agro/curvas_nivel_cuenca/publico_curvas_nivel_cuenca.pmtiles",
+          "mtime": 1786739259.043283
+        },
+        "publico_curvas_nivel_cuenca.thumb.jpg": {
+          "sha256": "fc0f94138346fcab52c4012bdcb81f09ecf3fa98865105a5e1eda71014fd4dfc",
+          "size_bytes": 27347,
+          "href": "ambiente-y-agro/curvas_nivel_cuenca/publico_curvas_nivel_cuenca.thumb.jpg",
+          "mtime": 1786740058.9695942
+        }
+      },
+      "changes": [
+        "publico_curvas_nivel_cuenca.pmtiles",
+        "publico_curvas_nivel_cuenca.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_curvas_nivel_cuenca.pmtiles, publico_curvas_nivel_cuenca.thumb.jpg"
+    }
+  ]
+}

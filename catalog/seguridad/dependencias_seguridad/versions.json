@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.625428Z",
+      "breaking": false,
+      "assets": {
+        "publico_dependencias_seguridad.parquet": {
+          "sha256": "b032e0b630352cc442810233426951f011ef5ee2afcc900797f3e890af570221",
+          "size_bytes": 11546,
+          "href": "publico_dependencias_seguridad/publico_dependencias_seguridad.parquet",
+          "source_mtime": 1786738207.5955377,
+          "mtime": 1786738207.5955377,
+          "feature_count": 52,
+          "schema_fingerprint": "0de3a8e05b051c3d"
+        }
+      },
+      "changes": [
+        "publico_dependencias_seguridad.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.960109Z",
+      "breaking": false,
+      "assets": {
+        "publico_dependencias_seguridad.parquet": {
+          "sha256": "b032e0b630352cc442810233426951f011ef5ee2afcc900797f3e890af570221",
+          "size_bytes": 11546,
+          "href": "seguridad/dependencias_seguridad/publico_dependencias_seguridad.parquet",
+          "source_mtime": 1786738207.5955377,
+          "mtime": 1786738207.5955377,
+          "feature_count": 52,
+          "schema_fingerprint": "0de3a8e05b051c3d"
+        },
+        "README.md": {
+          "sha256": "17be2cf8e0c9e886f65bae6c38614ab4d5250772cb6963d82c4fa2419c4d3fa6",
+          "size_bytes": 4546,
+          "href": "seguridad/dependencias_seguridad/README.md",
+          "mtime": 1786738804.062307
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:58.990094Z",
+      "breaking": false,
+      "assets": {
+        "publico_dependencias_seguridad.parquet": {
+          "sha256": "b032e0b630352cc442810233426951f011ef5ee2afcc900797f3e890af570221",
+          "size_bytes": 11546,
+          "href": "seguridad/dependencias_seguridad/publico_dependencias_seguridad.parquet",
+          "source_mtime": 1786738207.5955377,
+          "mtime": 1786738207.5955377,
+          "feature_count": 52,
+          "schema_fingerprint": "0de3a8e05b051c3d"
+        },
+        "README.md": {
+          "sha256": "17be2cf8e0c9e886f65bae6c38614ab4d5250772cb6963d82c4fa2419c4d3fa6",
+          "size_bytes": 4546,
+          "href": "seguridad/dependencias_seguridad/README.md",
+          "mtime": 1786738804.062307
+        },
+        "publico_dependencias_seguridad.pmtiles": {
+          "sha256": "e3eedac594144a8b562c8e9025e01e7b3c3b95c17bb8e170bae3ec0c552d3b57",
+          "size_bytes": 41943,
+          "href": "seguridad/dependencias_seguridad/publico_dependencias_seguridad.pmtiles",
+          "mtime": 1786739338.8379383
+        },
+        "publico_dependencias_seguridad.thumb.jpg": {
+          "sha256": "202f686ea1ee22bfd40e16b13e98dc7bb33532f40ec26387dc83b3a2ab87878d",
+          "size_bytes": 6191,
+          "href": "seguridad/dependencias_seguridad/publico_dependencias_seguridad.thumb.jpg",
+          "mtime": 1786740150.7922964
+        }
+      },
+      "changes": [
+        "publico_dependencias_seguridad.pmtiles",
+        "publico_dependencias_seguridad.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_dependencias_seguridad.pmtiles, publico_dependencias_seguridad.thumb.jpg"
+    }
+  ]
+}

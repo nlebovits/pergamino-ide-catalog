@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.502581Z",
+      "breaking": false,
+      "assets": {
+        "publico_oferentes_espacios_culturales.parquet": {
+          "sha256": "23ec40845bd9ff51914eb7aad281673272e62d44c7136b144e0e698aa9f7f07a",
+          "size_bytes": 5881,
+          "href": "publico_oferentes_espacios_culturales/publico_oferentes_espacios_culturales.parquet",
+          "source_mtime": 1786738523.9917736,
+          "mtime": 1786738523.9917736,
+          "feature_count": 20,
+          "schema_fingerprint": "828d35ec9013e99d"
+        }
+      },
+      "changes": [
+        "publico_oferentes_espacios_culturales.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.657960Z",
+      "breaking": false,
+      "assets": {
+        "publico_oferentes_espacios_culturales.parquet": {
+          "sha256": "23ec40845bd9ff51914eb7aad281673272e62d44c7136b144e0e698aa9f7f07a",
+          "size_bytes": 5881,
+          "href": "comercio-y-cultura/oferentes_espacios_culturales/publico_oferentes_espacios_culturales.parquet",
+          "source_mtime": 1786738523.9917736,
+          "mtime": 1786738523.9917736,
+          "feature_count": 20,
+          "schema_fingerprint": "828d35ec9013e99d"
+        },
+        "README.md": {
+          "sha256": "7cd1606004922fb8c056a8d93edaca840e0f95f410cf0a91df66da8d25185d1f",
+          "size_bytes": 1238,
+          "href": "comercio-y-cultura/oferentes_espacios_culturales/README.md",
+          "mtime": 1786738641.303728
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:46.909412Z",
+      "breaking": false,
+      "assets": {
+        "publico_oferentes_espacios_culturales.parquet": {
+          "sha256": "23ec40845bd9ff51914eb7aad281673272e62d44c7136b144e0e698aa9f7f07a",
+          "size_bytes": 5881,
+          "href": "comercio-y-cultura/oferentes_espacios_culturales/publico_oferentes_espacios_culturales.parquet",
+          "source_mtime": 1786738523.9917736,
+          "mtime": 1786738523.9917736,
+          "feature_count": 20,
+          "schema_fingerprint": "828d35ec9013e99d"
+        },
+        "README.md": {
+          "sha256": "7cd1606004922fb8c056a8d93edaca840e0f95f410cf0a91df66da8d25185d1f",
+          "size_bytes": 1238,
+          "href": "comercio-y-cultura/oferentes_espacios_culturales/README.md",
+          "mtime": 1786738641.303728
+        },
+        "publico_oferentes_espacios_culturales.pmtiles": {
+          "sha256": "bf2e4574620843ed8035f81428167cb11bc649e86c91afa7f3a5db96f0913c97",
+          "size_bytes": 8903,
+          "href": "comercio-y-cultura/oferentes_espacios_culturales/publico_oferentes_espacios_culturales.pmtiles",
+          "mtime": 1786739266.7533467
+        },
+        "publico_oferentes_espacios_culturales.thumb.jpg": {
+          "sha256": "e0bd2094009305fd6ea2e36ecc85e16fd01212030b78f6f87c9b6af42727ce62",
+          "size_bytes": 8623,
+          "href": "comercio-y-cultura/oferentes_espacios_culturales/publico_oferentes_espacios_culturales.thumb.jpg",
+          "mtime": 1786740135.281178
+        }
+      },
+      "changes": [
+        "publico_oferentes_espacios_culturales.pmtiles",
+        "publico_oferentes_espacios_culturales.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_oferentes_espacios_culturales.pmtiles, publico_oferentes_espacios_culturales.thumb.jpg"
+    }
+  ]
+}

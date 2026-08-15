@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.496043Z",
+      "breaking": false,
+      "assets": {
+        "publico_cobertura_gas_natural.parquet": {
+          "sha256": "b19b0b696a0a1ca0f09e224fac48ee683bfd59ea7f9a4b5b9704885e917da039",
+          "size_bytes": 51259,
+          "href": "publico_cobertura_gas_natural/publico_cobertura_gas_natural.parquet",
+          "source_mtime": 1786738157.7871857,
+          "mtime": 1786738157.7871857,
+          "feature_count": 17,
+          "schema_fingerprint": "b8ed07553dc6235a"
+        }
+      },
+      "changes": [
+        "publico_cobertura_gas_natural.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.803867Z",
+      "breaking": false,
+      "assets": {
+        "publico_cobertura_gas_natural.parquet": {
+          "sha256": "b19b0b696a0a1ca0f09e224fac48ee683bfd59ea7f9a4b5b9704885e917da039",
+          "size_bytes": 51259,
+          "href": "energia-y-conectividad/cobertura_gas_natural/publico_cobertura_gas_natural.parquet",
+          "source_mtime": 1786738157.7871857,
+          "mtime": 1786738157.7871857,
+          "feature_count": 17,
+          "schema_fingerprint": "b8ed07553dc6235a"
+        },
+        "README.md": {
+          "sha256": "ecf3ce63d1243c541526354511f12071e3f7a8c97514fad1b460b4c0fee8a18f",
+          "size_bytes": 4464,
+          "href": "energia-y-conectividad/cobertura_gas_natural/README.md",
+          "mtime": 1786738804.0093064
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:37.021295Z",
+      "breaking": false,
+      "assets": {
+        "publico_cobertura_gas_natural.parquet": {
+          "sha256": "b19b0b696a0a1ca0f09e224fac48ee683bfd59ea7f9a4b5b9704885e917da039",
+          "size_bytes": 51259,
+          "href": "energia-y-conectividad/cobertura_gas_natural/publico_cobertura_gas_natural.parquet",
+          "source_mtime": 1786738157.7871857,
+          "mtime": 1786738157.7871857,
+          "feature_count": 17,
+          "schema_fingerprint": "b8ed07553dc6235a"
+        },
+        "README.md": {
+          "sha256": "ecf3ce63d1243c541526354511f12071e3f7a8c97514fad1b460b4c0fee8a18f",
+          "size_bytes": 4464,
+          "href": "energia-y-conectividad/cobertura_gas_natural/README.md",
+          "mtime": 1786738804.0093064
+        },
+        "publico_cobertura_gas_natural.pmtiles": {
+          "sha256": "d1c2b4ac486daf39b2e16c0828faff7c2cda24f61b86b6372924dd939da689d1",
+          "size_bytes": 123518,
+          "href": "energia-y-conectividad/cobertura_gas_natural/publico_cobertura_gas_natural.pmtiles",
+          "mtime": 1786739136.8642604
+        },
+        "publico_cobertura_gas_natural.thumb.jpg": {
+          "sha256": "f920997621a82b61a16f56c5322a129d3d40e249e6ef30f23439e97d425d6c08",
+          "size_bytes": 23776,
+          "href": "energia-y-conectividad/cobertura_gas_natural/publico_cobertura_gas_natural.thumb.jpg",
+          "mtime": 1786740142.5932338
+        }
+      },
+      "changes": [
+        "publico_cobertura_gas_natural.pmtiles",
+        "publico_cobertura_gas_natural.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_cobertura_gas_natural.pmtiles, publico_cobertura_gas_natural.thumb.jpg"
+    }
+  ]
+}

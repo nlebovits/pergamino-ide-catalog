@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.343919Z",
+      "breaking": false,
+      "assets": {
+        "publico_callejero.parquet": {
+          "sha256": "efea0d2a98de12765e7de3f6cdaae655ddf75a8b721798cfc03d7885504d37f1",
+          "size_bytes": 944069,
+          "href": "publico_callejero/publico_callejero.parquet",
+          "source_mtime": 1786738074.3615963,
+          "mtime": 1786738074.3615963,
+          "feature_count": 11703,
+          "schema_fingerprint": "4aeb6750053a50be"
+        }
+      },
+      "changes": [
+        "publico_callejero.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.313987Z",
+      "breaking": false,
+      "assets": {
+        "publico_callejero.parquet": {
+          "sha256": "efea0d2a98de12765e7de3f6cdaae655ddf75a8b721798cfc03d7885504d37f1",
+          "size_bytes": 944069,
+          "href": "vialidad/callejero/publico_callejero.parquet",
+          "source_mtime": 1786738074.3615963,
+          "mtime": 1786738074.3615963,
+          "feature_count": 11703,
+          "schema_fingerprint": "4aeb6750053a50be"
+        },
+        "README.md": {
+          "sha256": "ecb18dae04b24861c2f3d6d3bc9b6e50c837c58fe919e85f4fc5b64dd7ca74eb",
+          "size_bytes": 6094,
+          "href": "vialidad/callejero/README.md",
+          "mtime": 1786738803.9293058
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:24:10.120120Z",
+      "breaking": false,
+      "assets": {
+        "publico_callejero.parquet": {
+          "sha256": "efea0d2a98de12765e7de3f6cdaae655ddf75a8b721798cfc03d7885504d37f1",
+          "size_bytes": 944069,
+          "href": "vialidad/callejero/publico_callejero.parquet",
+          "source_mtime": 1786738074.3615963,
+          "mtime": 1786738074.3615963,
+          "feature_count": 11703,
+          "schema_fingerprint": "4aeb6750053a50be"
+        },
+        "README.md": {
+          "sha256": "ecb18dae04b24861c2f3d6d3bc9b6e50c837c58fe919e85f4fc5b64dd7ca74eb",
+          "size_bytes": 6094,
+          "href": "vialidad/callejero/README.md",
+          "mtime": 1786738803.9293058
+        },
+        "publico_callejero.pmtiles": {
+          "sha256": "4aa7f908a1ae1dcecb82ca67856b3e12ffcc4e5ea3d5a7195fcb68a66aa80251",
+          "size_bytes": 8262656,
+          "href": "vialidad/callejero/publico_callejero.pmtiles",
+          "mtime": 1786739049.6775138
+        },
+        "publico_callejero.thumb.jpg": {
+          "sha256": "eecd168bcace4829bd63982fa591236b9038ed5f7d2f8daf89b084e7bcd49869",
+          "size_bytes": 32607,
+          "href": "vialidad/callejero/publico_callejero.thumb.jpg",
+          "mtime": 1786740171.6354556
+        }
+      },
+      "changes": [
+        "publico_callejero.pmtiles",
+        "publico_callejero.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_callejero.pmtiles, publico_callejero.thumb.jpg"
+    }
+  ]
+}

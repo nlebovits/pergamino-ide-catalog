@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.528753Z",
+      "breaking": false,
+      "assets": {
+        "publico_parcelario_contralor.parquet": {
+          "sha256": "03bdf3c51e2fcb938dab3c938d45438fe32678f82b360a92251f9d4e3332e960",
+          "size_bytes": 4878373,
+          "href": "publico_parcelario_contralor/publico_parcelario_contralor.parquet",
+          "source_mtime": 1786738536.7678638,
+          "mtime": 1786738536.7678638,
+          "feature_count": 55134,
+          "schema_fingerprint": "d9a762f0a1aa6bff"
+        }
+      },
+      "changes": [
+        "publico_parcelario_contralor.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.619356Z",
+      "breaking": false,
+      "assets": {
+        "publico_parcelario_contralor.parquet": {
+          "sha256": "03bdf3c51e2fcb938dab3c938d45438fe32678f82b360a92251f9d4e3332e960",
+          "size_bytes": 4878373,
+          "href": "catastro/parcelario_contralor/publico_parcelario_contralor.parquet",
+          "source_mtime": 1786738536.7678638,
+          "mtime": 1786738536.7678638,
+          "feature_count": 55134,
+          "schema_fingerprint": "d9a762f0a1aa6bff"
+        },
+        "README.md": {
+          "sha256": "aef044e5ef6164ebee1dccf1ec9f274487804dd0c0163151f4bec35daba5d2be",
+          "size_bytes": 1272,
+          "href": "catastro/parcelario_contralor/README.md",
+          "mtime": 1786738641.3187282
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:28.966320Z",
+      "breaking": false,
+      "assets": {
+        "publico_parcelario_contralor.parquet": {
+          "sha256": "03bdf3c51e2fcb938dab3c938d45438fe32678f82b360a92251f9d4e3332e960",
+          "size_bytes": 4878373,
+          "href": "catastro/parcelario_contralor/publico_parcelario_contralor.parquet",
+          "source_mtime": 1786738536.7678638,
+          "mtime": 1786738536.7678638,
+          "feature_count": 55134,
+          "schema_fingerprint": "d9a762f0a1aa6bff"
+        },
+        "README.md": {
+          "sha256": "aef044e5ef6164ebee1dccf1ec9f274487804dd0c0163151f4bec35daba5d2be",
+          "size_bytes": 1272,
+          "href": "catastro/parcelario_contralor/README.md",
+          "mtime": 1786738641.3187282
+        },
+        "publico_parcelario_contralor.pmtiles": {
+          "sha256": "83350f643f49cc956580b9406cf72d49e5d6160d1685d4c0d57f1bc345298368",
+          "size_bytes": 14173482,
+          "href": "catastro/parcelario_contralor/publico_parcelario_contralor.pmtiles",
+          "mtime": 1786739248.8161983
+        },
+        "publico_parcelario_contralor.thumb.jpg": {
+          "sha256": "c9c02288cafefcbd7728f2ffc329cfd13e85cc98845af88c330f54e9e683675d",
+          "size_bytes": 21005,
+          "href": "catastro/parcelario_contralor/publico_parcelario_contralor.thumb.jpg",
+          "mtime": 1786740124.7770977
+        }
+      },
+      "changes": [
+        "publico_parcelario_contralor.pmtiles",
+        "publico_parcelario_contralor.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_parcelario_contralor.pmtiles, publico_parcelario_contralor.thumb.jpg"
+    }
+  ]
+}

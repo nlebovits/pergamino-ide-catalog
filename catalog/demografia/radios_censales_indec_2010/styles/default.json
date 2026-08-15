@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "radios_censales_indec_2010",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_radios_censales_indec_2010.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_radios_censales_indec_2010",
+      "paint": {
+        "fill-color": "#FFFFFF",
+        "fill-opacity": 0.6,
+        "fill-outline-color": "#555555"
+      }
+    }
+  ]
+}

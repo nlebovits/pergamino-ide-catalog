@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "extraccion_dinero",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_extraccion_dinero.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_extraccion_dinero",
+      "paint": {
+        "circle-color": "#888888",
+        "circle-radius": 10.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

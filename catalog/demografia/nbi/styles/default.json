@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "nbi",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_nbi.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "graduated-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_nbi",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "get",
+            "indice_nbi"
+          ],
+          "#ffea01",
+          3.4725,
+          "#ffd100",
+          6.945,
+          "#ffb900",
+          10.4175,
+          "#ffa100",
+          13.89,
+          "#ff8800",
+          17.3625,
+          "#ff7000",
+          20.835,
+          "#ff5800",
+          24.3075,
+          "#ff4000"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#ffffff"
+      }
+    }
+  ]
+}

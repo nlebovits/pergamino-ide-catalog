@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.245578Z",
+      "breaking": false,
+      "assets": {
+        "publico_guardias_medicas.parquet": {
+          "sha256": "7aec34b6fdd85d46178ff0bddef912346c97eb13a08e3a4108e1a16913caace3",
+          "size_bytes": 4373,
+          "href": "publico_guardias_medicas/publico_guardias_medicas.parquet",
+          "source_mtime": 1786738419.312034,
+          "mtime": 1786738419.312034,
+          "feature_count": 5,
+          "schema_fingerprint": "6df9287255e68dcc"
+        }
+      },
+      "changes": [
+        "publico_guardias_medicas.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.928900Z",
+      "breaking": false,
+      "assets": {
+        "publico_guardias_medicas.parquet": {
+          "sha256": "7aec34b6fdd85d46178ff0bddef912346c97eb13a08e3a4108e1a16913caace3",
+          "size_bytes": 4373,
+          "href": "salud/guardias_medicas/publico_guardias_medicas.parquet",
+          "source_mtime": 1786738419.312034,
+          "mtime": 1786738419.312034,
+          "feature_count": 5,
+          "schema_fingerprint": "6df9287255e68dcc"
+        },
+        "README.md": {
+          "sha256": "4abcf4bd493957cad893ab7eba81d30a21732e8158de1671c8fba38befa6182c",
+          "size_bytes": 1193,
+          "href": "salud/guardias_medicas/README.md",
+          "mtime": 1786738641.1297264
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:24:41.604443Z",
+      "breaking": false,
+      "assets": {
+        "publico_guardias_medicas.parquet": {
+          "sha256": "7aec34b6fdd85d46178ff0bddef912346c97eb13a08e3a4108e1a16913caace3",
+          "size_bytes": 4373,
+          "href": "salud/guardias_medicas/publico_guardias_medicas.parquet",
+          "source_mtime": 1786738419.312034,
+          "mtime": 1786738419.312034,
+          "feature_count": 5,
+          "schema_fingerprint": "6df9287255e68dcc"
+        },
+        "README.md": {
+          "sha256": "4abcf4bd493957cad893ab7eba81d30a21732e8158de1671c8fba38befa6182c",
+          "size_bytes": 1193,
+          "href": "salud/guardias_medicas/README.md",
+          "mtime": 1786738641.1297264
+        },
+        "publico_guardias_medicas.pmtiles": {
+          "sha256": "033409da42f9a29cd8de2e4f4c8a364e44543330900b3f8b231e0454f485e2c2",
+          "size_bytes": 5149,
+          "href": "salud/guardias_medicas/publico_guardias_medicas.pmtiles",
+          "mtime": 1786739081.4607878
+        },
+        "publico_guardias_medicas.thumb.jpg": {
+          "sha256": "705b1f1d79f5ae9005f39cb34c7e3a8c1922b730ad0cdfd1e9a5c1cc3780bf3e",
+          "size_bytes": 18174,
+          "href": "salud/guardias_medicas/publico_guardias_medicas.thumb.jpg",
+          "mtime": 1786740149.7612886
+        }
+      },
+      "changes": [
+        "publico_guardias_medicas.pmtiles",
+        "publico_guardias_medicas.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_guardias_medicas.pmtiles, publico_guardias_medicas.thumb.jpg"
+    }
+  ]
+}

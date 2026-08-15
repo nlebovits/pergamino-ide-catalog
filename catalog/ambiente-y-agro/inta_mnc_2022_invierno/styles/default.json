@@ -1,0 +1,37 @@
+{
+  "version": 8,
+  "name": "inta_mnc_2022_invierno",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_inta_mnc_2022_invierno.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_inta_mnc_2022_invierno",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "dn"
+          ],
+          16,
+          "#42f4ce",
+          18,
+          "#646b63",
+          20,
+          "#e6f0c2",
+          "#cccccc"
+        ],
+        "fill-opacity": 1.0
+      }
+    }
+  ]
+}

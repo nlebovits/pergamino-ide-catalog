@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "deportivo",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_deportivo.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_deportivo",
+      "paint": {
+        "circle-color": "#487bb6",
+        "circle-radius": 8.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

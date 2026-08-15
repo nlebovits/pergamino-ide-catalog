@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.577045Z",
+      "breaking": false,
+      "assets": {
+        "publico_pozos_agua_doss.parquet": {
+          "sha256": "40c09f6d6c6eaa92b11d81ec84486490314de208a79d82dd58d6adcb9055e90e",
+          "size_bytes": 9731,
+          "href": "publico_pozos_agua_doss/publico_pozos_agua_doss.parquet",
+          "source_mtime": 1786738550.3209596,
+          "mtime": 1786738550.3209596,
+          "feature_count": 95,
+          "schema_fingerprint": "449a51a6758f5cd8"
+        }
+      },
+      "changes": [
+        "publico_pozos_agua_doss.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.147314Z",
+      "breaking": false,
+      "assets": {
+        "publico_pozos_agua_doss.parquet": {
+          "sha256": "40c09f6d6c6eaa92b11d81ec84486490314de208a79d82dd58d6adcb9055e90e",
+          "size_bytes": 9731,
+          "href": "servicios-sanitarios/pozos_agua_doss/publico_pozos_agua_doss.parquet",
+          "source_mtime": 1786738550.3209596,
+          "mtime": 1786738550.3209596,
+          "feature_count": 95,
+          "schema_fingerprint": "449a51a6758f5cd8"
+        },
+        "README.md": {
+          "sha256": "214d6f7828ca7ff907b940e90adee95582acc107eca9480cd9e8a861b1cdbd89",
+          "size_bytes": 1176,
+          "href": "servicios-sanitarios/pozos_agua_doss/README.md",
+          "mtime": 1786738641.3507285
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:39.811804Z",
+      "breaking": false,
+      "assets": {
+        "publico_pozos_agua_doss.parquet": {
+          "sha256": "40c09f6d6c6eaa92b11d81ec84486490314de208a79d82dd58d6adcb9055e90e",
+          "size_bytes": 9731,
+          "href": "servicios-sanitarios/pozos_agua_doss/publico_pozos_agua_doss.parquet",
+          "source_mtime": 1786738550.3209596,
+          "mtime": 1786738550.3209596,
+          "feature_count": 95,
+          "schema_fingerprint": "449a51a6758f5cd8"
+        },
+        "README.md": {
+          "sha256": "214d6f7828ca7ff907b940e90adee95582acc107eca9480cd9e8a861b1cdbd89",
+          "size_bytes": 1176,
+          "href": "servicios-sanitarios/pozos_agua_doss/README.md",
+          "mtime": 1786738641.3507285
+        },
+        "publico_pozos_agua_doss.pmtiles": {
+          "sha256": "8265a2041bc2d7a9853a46edfb96f40fb83d77381186d25534d1cc05a959b1f0",
+          "size_bytes": 21614,
+          "href": "servicios-sanitarios/pozos_agua_doss/publico_pozos_agua_doss.pmtiles",
+          "mtime": 1786739199.656789
+        },
+        "publico_pozos_agua_doss.thumb.jpg": {
+          "sha256": "b0e08715bc44efc06ecb7e5c486b11fa60d96ab3dc15e911aa7f429ea6472546",
+          "size_bytes": 15563,
+          "href": "servicios-sanitarios/pozos_agua_doss/publico_pozos_agua_doss.thumb.jpg",
+          "mtime": 1786740163.6903949
+        }
+      },
+      "changes": [
+        "publico_pozos_agua_doss.pmtiles",
+        "publico_pozos_agua_doss.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_pozos_agua_doss.pmtiles, publico_pozos_agua_doss.thumb.jpg"
+    }
+  ]
+}

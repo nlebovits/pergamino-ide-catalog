@@ -1,0 +1,48 @@
+{
+  "version": 8,
+  "name": "dependencias_municipales",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_dependencias_municipales.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_dependencias_municipales",
+      "paint": {
+        "circle-color": "#FF8000",
+        "circle-radius": 4.0,
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "circle-0-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_dependencias_municipales",
+      "layout": {
+        "text-field": [
+          "get",
+          "dependencia"
+        ],
+        "text-size": 12.0,
+        "text-anchor": "top-left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#000000",
+        "text-halo-width": 1.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

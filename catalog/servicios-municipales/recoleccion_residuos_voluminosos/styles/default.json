@@ -1,0 +1,63 @@
+{
+  "version": 8,
+  "name": "recoleccion_residuos_voluminosos",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_recoleccion_residuos_voluminosos.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_recoleccion_residuos_voluminosos",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "zona"
+          ],
+          1,
+          "#00c462",
+          2,
+          "#009fec",
+          3,
+          "#ffff00",
+          4,
+          "#ff4242",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#232323"
+      }
+    },
+    {
+      "id": "categorical-fill-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_recoleccion_residuos_voluminosos",
+      "layout": {
+        "text-field": [
+          "get",
+          "zona"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

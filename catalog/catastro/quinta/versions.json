@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.387349Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_quinta.parquet": {
+          "sha256": "765be492a7a37e82858c683739bdc22a878309953d62be603cf91c0aaad1d298",
+          "size_bytes": 32131,
+          "href": "publico_catastro_quinta/publico_catastro_quinta.parquet",
+          "source_mtime": 1786738107.7958324,
+          "mtime": 1786738107.7958324,
+          "feature_count": 136,
+          "schema_fingerprint": "eb5578921f876c5e"
+        }
+      },
+      "changes": [
+        "publico_catastro_quinta.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.555248Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_quinta.parquet": {
+          "sha256": "765be492a7a37e82858c683739bdc22a878309953d62be603cf91c0aaad1d298",
+          "size_bytes": 32131,
+          "href": "catastro/quinta/publico_catastro_quinta.parquet",
+          "source_mtime": 1786738107.7958324,
+          "mtime": 1786738107.7958324,
+          "feature_count": 136,
+          "schema_fingerprint": "eb5578921f876c5e"
+        },
+        "README.md": {
+          "sha256": "8ee051281529ebdd36c5056c9c92be2c414ed980b051315846b18596508e1275",
+          "size_bytes": 4360,
+          "href": "catastro/quinta/README.md",
+          "mtime": 1786738803.961306
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:44.896411Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_quinta.parquet": {
+          "sha256": "765be492a7a37e82858c683739bdc22a878309953d62be603cf91c0aaad1d298",
+          "size_bytes": 32131,
+          "href": "catastro/quinta/publico_catastro_quinta.parquet",
+          "source_mtime": 1786738107.7958324,
+          "mtime": 1786738107.7958324,
+          "feature_count": 136,
+          "schema_fingerprint": "eb5578921f876c5e"
+        },
+        "README.md": {
+          "sha256": "8ee051281529ebdd36c5056c9c92be2c414ed980b051315846b18596508e1275",
+          "size_bytes": 4360,
+          "href": "catastro/quinta/README.md",
+          "mtime": 1786738803.961306
+        },
+        "publico_catastro_quinta.pmtiles": {
+          "sha256": "8860b2131dbbc1c14379082bfa227229d3cfb71441f0dfd3ec9e5b8131aa9181",
+          "size_bytes": 84335,
+          "href": "catastro/quinta/publico_catastro_quinta.pmtiles",
+          "mtime": 1786739264.6593294
+        },
+        "publico_catastro_quinta.thumb.jpg": {
+          "sha256": "71331a367c31a833ba954608e0a0886ed99ecc421a9196d1f367cde65331e304",
+          "size_bytes": 9178,
+          "href": "catastro/quinta/publico_catastro_quinta.thumb.jpg",
+          "mtime": 1786740125.4851031
+        }
+      },
+      "changes": [
+        "publico_catastro_quinta.pmtiles",
+        "publico_catastro_quinta.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_catastro_quinta.pmtiles, publico_catastro_quinta.thumb.jpg"
+    }
+  ]
+}

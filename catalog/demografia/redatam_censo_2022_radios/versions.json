@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.746345Z",
+      "breaking": false,
+      "assets": {
+        "publico_redatam_censo_2022_radios.parquet": {
+          "sha256": "31771b83b59fb30cfc9bbf1ab1909774e20347f286e68755a1cbb7c36300a8b4",
+          "size_bytes": 140272,
+          "href": "publico_redatam_censo_2022_radios/publico_redatam_censo_2022_radios.parquet",
+          "source_mtime": 1786738598.8243024,
+          "mtime": 1786738598.8243024,
+          "feature_count": 212,
+          "schema_fingerprint": "954dc59b65bba8a5"
+        }
+      },
+      "changes": [
+        "publico_redatam_censo_2022_radios.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.765339Z",
+      "breaking": false,
+      "assets": {
+        "publico_redatam_censo_2022_radios.parquet": {
+          "sha256": "31771b83b59fb30cfc9bbf1ab1909774e20347f286e68755a1cbb7c36300a8b4",
+          "size_bytes": 140272,
+          "href": "demografia/redatam_censo_2022_radios/publico_redatam_censo_2022_radios.parquet",
+          "source_mtime": 1786738598.8243024,
+          "mtime": 1786738598.8243024,
+          "feature_count": 212,
+          "schema_fingerprint": "954dc59b65bba8a5"
+        },
+        "README.md": {
+          "sha256": "e6cb52a6c1aea8206b801e23cb3378e44c0723fd2998bac48ce5673b8e882a64",
+          "size_bytes": 2076,
+          "href": "demografia/redatam_censo_2022_radios/README.md",
+          "mtime": 1786738641.4537296
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:57.500149Z",
+      "breaking": false,
+      "assets": {
+        "publico_redatam_censo_2022_radios.parquet": {
+          "sha256": "31771b83b59fb30cfc9bbf1ab1909774e20347f286e68755a1cbb7c36300a8b4",
+          "size_bytes": 140272,
+          "href": "demografia/redatam_censo_2022_radios/publico_redatam_censo_2022_radios.parquet",
+          "source_mtime": 1786738598.8243024,
+          "mtime": 1786738598.8243024,
+          "feature_count": 212,
+          "schema_fingerprint": "954dc59b65bba8a5"
+        },
+        "README.md": {
+          "sha256": "e6cb52a6c1aea8206b801e23cb3378e44c0723fd2998bac48ce5673b8e882a64",
+          "size_bytes": 2076,
+          "href": "demografia/redatam_censo_2022_radios/README.md",
+          "mtime": 1786738641.4537296
+        },
+        "publico_redatam_censo_2022_radios.pmtiles": {
+          "sha256": "9497557a29027cbcb9c2d72a1ee6ae99431730952808e605391bb6d32465d666",
+          "size_bytes": 2352070,
+          "href": "demografia/redatam_censo_2022_radios/publico_redatam_censo_2022_radios.pmtiles",
+          "mtime": 1786739217.4069374
+        },
+        "publico_redatam_censo_2022_radios.thumb.jpg": {
+          "sha256": "159e8cda136f7442207dfb31d61f779591fe0cac2a6c85486d82cef9d13057ab",
+          "size_bytes": 15932,
+          "href": "demografia/redatam_censo_2022_radios/publico_redatam_censo_2022_radios.thumb.jpg",
+          "mtime": 1786740139.3702092
+        }
+      },
+      "changes": [
+        "publico_redatam_censo_2022_radios.pmtiles",
+        "publico_redatam_censo_2022_radios.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_redatam_censo_2022_radios.pmtiles, publico_redatam_censo_2022_radios.thumb.jpg"
+    }
+  ]
+}

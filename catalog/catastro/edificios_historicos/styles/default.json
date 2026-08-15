@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "edificios_historicos",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_edificios_historicos.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_edificios_historicos",
+      "paint": {
+        "circle-color": "#888888",
+        "circle-radius": 7.5,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

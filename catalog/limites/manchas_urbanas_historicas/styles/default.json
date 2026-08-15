@@ -1,0 +1,71 @@
+{
+  "version": 8,
+  "name": "manchas_urbanas_historicas",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_manchas_urbanas_historicas.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_manchas_urbanas_historicas",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "año"
+          ],
+          1773,
+          "#db2a7a",
+          1854,
+          "#d35532",
+          1895,
+          "#71e80f",
+          1930,
+          "#86b2e4",
+          1960,
+          "#35cc56",
+          1985,
+          "#9885e4",
+          2010,
+          "#ecde77",
+          2025,
+          "#da7ee6",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.55,
+        "fill-outline-color": [
+          "match",
+          [
+            "get",
+            "año"
+          ],
+          1773,
+          "#db2a7a",
+          1854,
+          "#d35532",
+          1895,
+          "#71e80f",
+          1930,
+          "#86b2e4",
+          1960,
+          "#35cc56",
+          1985,
+          "#9885e4",
+          2010,
+          "#ecde77",
+          2025,
+          "#da7ee6",
+          "#000000"
+        ]
+      }
+    }
+  ]
+}

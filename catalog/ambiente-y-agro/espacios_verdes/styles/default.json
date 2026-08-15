@@ -1,0 +1,86 @@
+{
+  "version": 8,
+  "name": "espacios_verdes",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_espacios_verdes.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_espacios_verdes",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "denominacion"
+          ],
+          "circuito_deportivo",
+          "#912cd4",
+          "delimitador_vial",
+          "#e9a012",
+          "paseo",
+          "#6d8fca",
+          "plaza",
+          "#bee359",
+          "reserva",
+          "#2a2a2a",
+          "ribera",
+          "#2eedba",
+          "#cccccc"
+        ],
+        "fill-opacity": [
+          "match",
+          [
+            "get",
+            "denominacion"
+          ],
+          "circuito_deportivo",
+          0.5,
+          "delimitador_vial",
+          0.5,
+          "paseo",
+          0.5,
+          "plaza",
+          0.75,
+          "reserva",
+          0.25,
+          "ribera",
+          0.5,
+          1.0
+        ],
+        "fill-outline-color": "#ffffff"
+      }
+    },
+    {
+      "id": "categorical-fill-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_espacios_verdes",
+      "layout": {
+        "text-field": [
+          "get",
+          "etiqueta"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "center",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

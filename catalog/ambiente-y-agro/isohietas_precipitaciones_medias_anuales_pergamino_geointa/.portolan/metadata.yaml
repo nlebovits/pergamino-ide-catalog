@@ -1,0 +1,23 @@
+# .portolan/metadata.yaml
+#
+# Auto-seeded from: wfs
+# Review and complete fields marked with "TODO".
+#
+# Required fields:
+#   - contact.name: Person or team responsible
+#   - contact.email: Contact email address
+#   - license: SPDX identifier (e.g., "CC-BY-4.0", "MIT", "CC0-1.0")
+#
+# See: https://portolan.dev/docs/metadata for field descriptions
+
+contact:
+  name: 'TODO: Add value'
+  email: 'TODO: Add value'
+source_url: https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aisohietas_precipitaciones_medias_anuales_pergamino_geointa
+description: Isohietas de precipitaciones medias anuales elaboradas a partir de la
+  capa correspondiente del GeoInta, Atlas climático digital de la República Argentina.
+keywords:
+- features
+- isohietas_precipitaciones_medias_anuales_pergamino_geointa
+processing_notes: 'Extracted from wfs layer: publico:isohietas_precipitaciones_medias_anuales_pergamino_geointa
+  (isohietas_precipitaciones_medias_anuales_pergamino_geointa)'

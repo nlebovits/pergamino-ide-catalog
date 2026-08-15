@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "redatam_censo_2022_radios",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_redatam_censo_2022_radios.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "graduated-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_redatam_censo_2022_radios",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "get",
+            "poblacion_total"
+          ],
+          "#fff5f0",
+          250.0,
+          "#fedccd",
+          500.0,
+          "#fcb398",
+          750.0,
+          "#fc8666",
+          1000.0,
+          "#f6573e",
+          1250.0,
+          "#dd2a25",
+          1500.0,
+          "#b31218",
+          1750.0,
+          "#67000d"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#ffffff"
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.183433Z",
+      "breaking": false,
+      "assets": {
+        "publico_estaciones_servicio.parquet": {
+          "sha256": "c15ca92ee79dbaea83fa0d9554c8b770555e11bda064edf6d4476b0616b9b7c8",
+          "size_bytes": 6228,
+          "href": "publico_estaciones_servicio/publico_estaciones_servicio.parquet",
+          "source_mtime": 1786738398.101884,
+          "mtime": 1786738398.101884,
+          "feature_count": 19,
+          "schema_fingerprint": "697ab6618dd8e195"
+        }
+      },
+      "changes": [
+        "publico_estaciones_servicio.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.613329Z",
+      "breaking": false,
+      "assets": {
+        "publico_estaciones_servicio.parquet": {
+          "sha256": "c15ca92ee79dbaea83fa0d9554c8b770555e11bda064edf6d4476b0616b9b7c8",
+          "size_bytes": 6228,
+          "href": "comercio-y-cultura/estaciones_servicio/publico_estaciones_servicio.parquet",
+          "source_mtime": 1786738398.101884,
+          "mtime": 1786738398.101884,
+          "feature_count": 19,
+          "schema_fingerprint": "697ab6618dd8e195"
+        },
+        "README.md": {
+          "sha256": "d66b777e9744c66d160bb15fd89f531a3ee3856fc7aa4bc9eabe96c462910949",
+          "size_bytes": 1306,
+          "href": "comercio-y-cultura/estaciones_servicio/README.md",
+          "mtime": 1786738641.0857258
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:21.620557Z",
+      "breaking": false,
+      "assets": {
+        "publico_estaciones_servicio.parquet": {
+          "sha256": "c15ca92ee79dbaea83fa0d9554c8b770555e11bda064edf6d4476b0616b9b7c8",
+          "size_bytes": 6228,
+          "href": "comercio-y-cultura/estaciones_servicio/publico_estaciones_servicio.parquet",
+          "source_mtime": 1786738398.101884,
+          "mtime": 1786738398.101884,
+          "feature_count": 19,
+          "schema_fingerprint": "697ab6618dd8e195"
+        },
+        "README.md": {
+          "sha256": "d66b777e9744c66d160bb15fd89f531a3ee3856fc7aa4bc9eabe96c462910949",
+          "size_bytes": 1306,
+          "href": "comercio-y-cultura/estaciones_servicio/README.md",
+          "mtime": 1786738641.0857258
+        },
+        "publico_estaciones_servicio.pmtiles": {
+          "sha256": "95314fea967f565269dcac84d2bd99e85ef3eb089d10bbcf107acb4528ea278a",
+          "size_bytes": 13927,
+          "href": "comercio-y-cultura/estaciones_servicio/publico_estaciones_servicio.pmtiles",
+          "mtime": 1786739241.4681375
+        },
+        "publico_estaciones_servicio.thumb.jpg": {
+          "sha256": "848662c356628d3e674aa24e896565bb5d6b8538a7daa4938cbf3702a12fff04",
+          "size_bytes": 8843,
+          "href": "comercio-y-cultura/estaciones_servicio/publico_estaciones_servicio.thumb.jpg",
+          "mtime": 1786740133.045161
+        }
+      },
+      "changes": [
+        "publico_estaciones_servicio.pmtiles",
+        "publico_estaciones_servicio.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_estaciones_servicio.pmtiles, publico_estaciones_servicio.thumb.jpg"
+    }
+  ]
+}

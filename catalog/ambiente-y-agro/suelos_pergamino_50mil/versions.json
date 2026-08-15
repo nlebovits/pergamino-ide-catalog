@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.813189Z",
+      "breaking": false,
+      "assets": {
+        "publico_suelos_pergamino_50mil.parquet": {
+          "sha256": "7e61e451b4914f2152e93c04e2fcce240325e3cf61ebff6132c50ef89ddaa267",
+          "size_bytes": 567636,
+          "href": "publico_suelos_pergamino_50mil/publico_suelos_pergamino_50mil.parquet",
+          "source_mtime": 1786738617.7494895,
+          "mtime": 1786738617.7494895,
+          "feature_count": 95,
+          "schema_fingerprint": "a0e4b6222cad27da"
+        }
+      },
+      "changes": [
+        "publico_suelos_pergamino_50mil.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.465679Z",
+      "breaking": false,
+      "assets": {
+        "publico_suelos_pergamino_50mil.parquet": {
+          "sha256": "7e61e451b4914f2152e93c04e2fcce240325e3cf61ebff6132c50ef89ddaa267",
+          "size_bytes": 567636,
+          "href": "ambiente-y-agro/suelos_pergamino_50mil/publico_suelos_pergamino_50mil.parquet",
+          "source_mtime": 1786738617.7494895,
+          "mtime": 1786738617.7494895,
+          "feature_count": 95,
+          "schema_fingerprint": "a0e4b6222cad27da"
+        },
+        "README.md": {
+          "sha256": "c6b157d1f3a068736a115ae9589d6540a002b65807ff5c604d8b5a819e461daa",
+          "size_bytes": 1894,
+          "href": "ambiente-y-agro/suelos_pergamino_50mil/README.md",
+          "mtime": 1786738641.49473
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:03.770045Z",
+      "breaking": false,
+      "assets": {
+        "publico_suelos_pergamino_50mil.parquet": {
+          "sha256": "7e61e451b4914f2152e93c04e2fcce240325e3cf61ebff6132c50ef89ddaa267",
+          "size_bytes": 567636,
+          "href": "ambiente-y-agro/suelos_pergamino_50mil/publico_suelos_pergamino_50mil.parquet",
+          "source_mtime": 1786738617.7494895,
+          "mtime": 1786738617.7494895,
+          "feature_count": 95,
+          "schema_fingerprint": "a0e4b6222cad27da"
+        },
+        "README.md": {
+          "sha256": "c6b157d1f3a068736a115ae9589d6540a002b65807ff5c604d8b5a819e461daa",
+          "size_bytes": 1894,
+          "href": "ambiente-y-agro/suelos_pergamino_50mil/README.md",
+          "mtime": 1786738641.49473
+        },
+        "publico_suelos_pergamino_50mil.pmtiles": {
+          "sha256": "76525f1848446fcb8e54c3672161bedf34ea377da8be2dc9947e817260f8b276",
+          "size_bytes": 4100864,
+          "href": "ambiente-y-agro/suelos_pergamino_50mil/publico_suelos_pergamino_50mil.pmtiles",
+          "mtime": 1786739283.6644862
+        },
+        "publico_suelos_pergamino_50mil.thumb.jpg": {
+          "sha256": "82f708f99b473780e7a4b25c82b7b5c28068a6cde6ae7735cf26f78e95b21523",
+          "size_bytes": 29281,
+          "href": "ambiente-y-agro/suelos_pergamino_50mil/publico_suelos_pergamino_50mil.thumb.jpg",
+          "mtime": 1786740093.428858
+        }
+      },
+      "changes": [
+        "publico_suelos_pergamino_50mil.pmtiles",
+        "publico_suelos_pergamino_50mil.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_suelos_pergamino_50mil.pmtiles, publico_suelos_pergamino_50mil.thumb.jpg"
+    }
+  ]
+}

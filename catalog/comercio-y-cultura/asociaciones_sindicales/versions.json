@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.267521Z",
+      "breaking": false,
+      "assets": {
+        "publico_asociaciones_sindicales.parquet": {
+          "sha256": "e4da281834810398d1eadc0d062e7234fbdd0c472447fe5cc810b767aa891c77",
+          "size_bytes": 8191,
+          "href": "publico_asociaciones_sindicales/publico_asociaciones_sindicales.parquet",
+          "source_mtime": 1786738048.2434118,
+          "mtime": 1786738048.2434118,
+          "feature_count": 29,
+          "schema_fingerprint": "3e2bcceca4bc65c0"
+        }
+      },
+      "changes": [
+        "publico_asociaciones_sindicales.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.584644Z",
+      "breaking": false,
+      "assets": {
+        "publico_asociaciones_sindicales.parquet": {
+          "sha256": "e4da281834810398d1eadc0d062e7234fbdd0c472447fe5cc810b767aa891c77",
+          "size_bytes": 8191,
+          "href": "comercio-y-cultura/asociaciones_sindicales/publico_asociaciones_sindicales.parquet",
+          "source_mtime": 1786738048.2434118,
+          "mtime": 1786738048.2434118,
+          "feature_count": 29,
+          "schema_fingerprint": "3e2bcceca4bc65c0"
+        },
+        "README.md": {
+          "sha256": "81d45905199646fbbf55c27f8a89cf9a9f69afaccc25784e2d371edc72831c75",
+          "size_bytes": 4473,
+          "href": "comercio-y-cultura/asociaciones_sindicales/README.md",
+          "mtime": 1786738803.9073055
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:11.123637Z",
+      "breaking": false,
+      "assets": {
+        "publico_asociaciones_sindicales.parquet": {
+          "sha256": "e4da281834810398d1eadc0d062e7234fbdd0c472447fe5cc810b767aa891c77",
+          "size_bytes": 8191,
+          "href": "comercio-y-cultura/asociaciones_sindicales/publico_asociaciones_sindicales.parquet",
+          "source_mtime": 1786738048.2434118,
+          "mtime": 1786738048.2434118,
+          "feature_count": 29,
+          "schema_fingerprint": "3e2bcceca4bc65c0"
+        },
+        "README.md": {
+          "sha256": "81d45905199646fbbf55c27f8a89cf9a9f69afaccc25784e2d371edc72831c75",
+          "size_bytes": 4473,
+          "href": "comercio-y-cultura/asociaciones_sindicales/README.md",
+          "mtime": 1786738803.9073055
+        },
+        "publico_asociaciones_sindicales.pmtiles": {
+          "sha256": "c7de040304914c3d4b3632783c5c42c00176fe18b28ce8ed076c85fe72ed63ec",
+          "size_bytes": 11795,
+          "href": "comercio-y-cultura/asociaciones_sindicales/publico_asociaciones_sindicales.pmtiles",
+          "mtime": 1786739230.9720502
+        },
+        "publico_asociaciones_sindicales.thumb.jpg": {
+          "sha256": "42bc543bf71dbabf8657461ea1b50bf0757dd34b20d5678725d1fe78f2640efa",
+          "size_bytes": 13658,
+          "href": "comercio-y-cultura/asociaciones_sindicales/publico_asociaciones_sindicales.thumb.jpg",
+          "mtime": 1786740131.9131522
+        }
+      },
+      "changes": [
+        "publico_asociaciones_sindicales.pmtiles",
+        "publico_asociaciones_sindicales.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_asociaciones_sindicales.pmtiles, publico_asociaciones_sindicales.thumb.jpg"
+    }
+  ]
+}

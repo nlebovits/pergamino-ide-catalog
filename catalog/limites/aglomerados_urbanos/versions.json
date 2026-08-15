@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.231568Z",
+      "breaking": false,
+      "assets": {
+        "publico_aglomerados_urbanos.parquet": {
+          "sha256": "a1487a00b613d4379d193b756b836eb5c96aaac7face4f22d69ceb84ae3a4083",
+          "size_bytes": 50585,
+          "href": "publico_aglomerados_urbanos/publico_aglomerados_urbanos.parquet",
+          "source_mtime": 1786738026.8562605,
+          "mtime": 1786738026.8562605,
+          "feature_count": 166,
+          "schema_fingerprint": "2d704eb73cfa1397"
+        }
+      },
+      "changes": [
+        "publico_aglomerados_urbanos.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.833722Z",
+      "breaking": false,
+      "assets": {
+        "publico_aglomerados_urbanos.parquet": {
+          "sha256": "a1487a00b613d4379d193b756b836eb5c96aaac7face4f22d69ceb84ae3a4083",
+          "size_bytes": 50585,
+          "href": "limites/aglomerados_urbanos/publico_aglomerados_urbanos.parquet",
+          "source_mtime": 1786738026.8562605,
+          "mtime": 1786738026.8562605,
+          "feature_count": 166,
+          "schema_fingerprint": "2d704eb73cfa1397"
+        },
+        "README.md": {
+          "sha256": "0f55ace9938f69dd413b38f46ff46261379a160f202797bd4015c74eb1efcbf6",
+          "size_bytes": 4567,
+          "href": "limites/aglomerados_urbanos/README.md",
+          "mtime": 1786738803.8893054
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:52.738393Z",
+      "breaking": false,
+      "assets": {
+        "publico_aglomerados_urbanos.parquet": {
+          "sha256": "a1487a00b613d4379d193b756b836eb5c96aaac7face4f22d69ceb84ae3a4083",
+          "size_bytes": 50585,
+          "href": "limites/aglomerados_urbanos/publico_aglomerados_urbanos.parquet",
+          "source_mtime": 1786738026.8562605,
+          "mtime": 1786738026.8562605,
+          "feature_count": 166,
+          "schema_fingerprint": "2d704eb73cfa1397"
+        },
+        "README.md": {
+          "sha256": "0f55ace9938f69dd413b38f46ff46261379a160f202797bd4015c74eb1efcbf6",
+          "size_bytes": 4567,
+          "href": "limites/aglomerados_urbanos/README.md",
+          "mtime": 1786738803.8893054
+        },
+        "publico_aglomerados_urbanos.pmtiles": {
+          "sha256": "6a7869d2a945de738b540baad837d2a16c2ae3ce626fcdd2e185de84612635ce",
+          "size_bytes": 333247,
+          "href": "limites/aglomerados_urbanos/publico_aglomerados_urbanos.pmtiles",
+          "mtime": 1786739151.9873884
+        },
+        "publico_aglomerados_urbanos.thumb.jpg": {
+          "sha256": "80d8af8090ce3a430f5f677b00abd818e3b56d67a23b05be573512eac35bc9b3",
+          "size_bytes": 9212,
+          "href": "limites/aglomerados_urbanos/publico_aglomerados_urbanos.thumb.jpg",
+          "mtime": 1786740144.2422464
+        }
+      },
+      "changes": [
+        "publico_aglomerados_urbanos.pmtiles",
+        "publico_aglomerados_urbanos.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_aglomerados_urbanos.pmtiles, publico_aglomerados_urbanos.thumb.jpg"
+    }
+  ]
+}

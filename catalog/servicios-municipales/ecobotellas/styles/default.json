@@ -1,0 +1,47 @@
+{
+  "version": 8,
+  "name": "ecobotellas",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_ecobotellas.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_ecobotellas",
+      "paint": {
+        "circle-color": "#ffcc01",
+        "circle-radius": 3.0,
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "circle-1",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_ecobotellas",
+      "paint": {
+        "circle-color": "#32bd32",
+        "circle-radius": 5.5,
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "circle-2",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_ecobotellas",
+      "paint": {
+        "circle-color": "#32bd32",
+        "circle-radius": 5.5,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

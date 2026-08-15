@@ -1,0 +1,64 @@
+{
+  "version": 8,
+  "name": "zonas_seguridad",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_zonas_seguridad.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_zonas_seguridad",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "zona"
+          ],
+          "1A",
+          "#64C1C7",
+          "1B",
+          "#82B835",
+          "2A",
+          "#2D417C",
+          "2B",
+          "#904D91",
+          "3A",
+          "#F0037F",
+          "3B",
+          "#FECE2C",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5
+      }
+    },
+    {
+      "id": "categorical-fill-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_zonas_seguridad",
+      "layout": {
+        "text-field": [
+          "get",
+          "zona"
+        ],
+        "text-size": 12.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

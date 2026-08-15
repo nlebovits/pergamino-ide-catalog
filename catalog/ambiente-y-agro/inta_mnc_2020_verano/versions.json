@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.305607Z",
+      "breaking": false,
+      "assets": {
+        "publico_inta_mnc_2020_verano.parquet": {
+          "sha256": "696d563f7714e3341bb5d0574ad3958e4d0ba9068adbdf5fdd36c724a48e04ee",
+          "size_bytes": 2036129,
+          "href": "publico_inta_mnc_2020_verano/publico_inta_mnc_2020_verano.parquet",
+          "source_mtime": 1786738454.425282,
+          "mtime": 1786738454.425282,
+          "feature_count": 28724,
+          "schema_fingerprint": "a5ccc1712a558fdf"
+        }
+      },
+      "changes": [
+        "publico_inta_mnc_2020_verano.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.364236Z",
+      "breaking": false,
+      "assets": {
+        "publico_inta_mnc_2020_verano.parquet": {
+          "sha256": "696d563f7714e3341bb5d0574ad3958e4d0ba9068adbdf5fdd36c724a48e04ee",
+          "size_bytes": 2036129,
+          "href": "ambiente-y-agro/inta_mnc_2020_verano/publico_inta_mnc_2020_verano.parquet",
+          "source_mtime": 1786738454.425282,
+          "mtime": 1786738454.425282,
+          "feature_count": 28724,
+          "schema_fingerprint": "a5ccc1712a558fdf"
+        },
+        "README.md": {
+          "sha256": "503f675bb14bb78cc01869db65bdc8b01d171daf200d3e783aa7572f3477b8f7",
+          "size_bytes": 1149,
+          "href": "ambiente-y-agro/inta_mnc_2020_verano/README.md",
+          "mtime": 1786738641.1717267
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:55.182270Z",
+      "breaking": false,
+      "assets": {
+        "publico_inta_mnc_2020_verano.parquet": {
+          "sha256": "696d563f7714e3341bb5d0574ad3958e4d0ba9068adbdf5fdd36c724a48e04ee",
+          "size_bytes": 2036129,
+          "href": "ambiente-y-agro/inta_mnc_2020_verano/publico_inta_mnc_2020_verano.parquet",
+          "source_mtime": 1786738454.425282,
+          "mtime": 1786738454.425282,
+          "feature_count": 28724,
+          "schema_fingerprint": "a5ccc1712a558fdf"
+        },
+        "README.md": {
+          "sha256": "503f675bb14bb78cc01869db65bdc8b01d171daf200d3e783aa7572f3477b8f7",
+          "size_bytes": 1149,
+          "href": "ambiente-y-agro/inta_mnc_2020_verano/README.md",
+          "mtime": 1786738641.1717267
+        },
+        "publico_inta_mnc_2020_verano.pmtiles": {
+          "sha256": "f59d7291a1b0373aa92322a87c2c3cdbe6343c19126c1bc21c245665e1e5a3e9",
+          "size_bytes": 7383253,
+          "href": "ambiente-y-agro/inta_mnc_2020_verano/publico_inta_mnc_2020_verano.pmtiles",
+          "mtime": 1786739274.915414
+        },
+        "publico_inta_mnc_2020_verano.thumb.jpg": {
+          "sha256": "31168b383e0cf9ca3d7cfe0ab0157c52228f24c25e0746d4c87a70439afe739e",
+          "size_bytes": 29451,
+          "href": "ambiente-y-agro/inta_mnc_2020_verano/publico_inta_mnc_2020_verano.thumb.jpg",
+          "mtime": 1786740072.4256973
+        }
+      },
+      "changes": [
+        "publico_inta_mnc_2020_verano.pmtiles",
+        "publico_inta_mnc_2020_verano.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_inta_mnc_2020_verano.pmtiles, publico_inta_mnc_2020_verano.thumb.jpg"
+    }
+  ]
+}

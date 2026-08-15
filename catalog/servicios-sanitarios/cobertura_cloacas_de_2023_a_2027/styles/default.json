@@ -1,0 +1,24 @@
+{
+  "version": 8,
+  "name": "cobertura_cloacas_de_2023_a_2027",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_cobertura_cloacas_de_2023_a_2027.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_cobertura_cloacas_de_2023_a_2027",
+      "paint": {
+        "fill-color": "#58000c",
+        "fill-opacity": 0.5
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "edificaciones_pa",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_edificaciones_pa.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_edificaciones_pa",
+      "paint": {
+        "fill-color": "#00cc33",
+        "fill-opacity": 0.55,
+        "fill-outline-color": "#e9a700"
+      }
+    }
+  ]
+}

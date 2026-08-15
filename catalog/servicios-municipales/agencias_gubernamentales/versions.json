@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.236653Z",
+      "breaking": false,
+      "assets": {
+        "publico_agencias_gubernamentales.parquet": {
+          "sha256": "ff1c2ccd81eaab415f692d7405dbd2118f2a485b62017bac28a9b3c2a3c9fe9e",
+          "size_bytes": 5853,
+          "href": "publico_agencias_gubernamentales/publico_agencias_gubernamentales.parquet",
+          "source_mtime": 1786738025.9582543,
+          "mtime": 1786738025.9582543,
+          "feature_count": 10,
+          "schema_fingerprint": "a461ceb4e02a9042"
+        }
+      },
+      "changes": [
+        "publico_agencias_gubernamentales.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.984495Z",
+      "breaking": false,
+      "assets": {
+        "publico_agencias_gubernamentales.parquet": {
+          "sha256": "ff1c2ccd81eaab415f692d7405dbd2118f2a485b62017bac28a9b3c2a3c9fe9e",
+          "size_bytes": 5853,
+          "href": "servicios-municipales/agencias_gubernamentales/publico_agencias_gubernamentales.parquet",
+          "source_mtime": 1786738025.9582543,
+          "mtime": 1786738025.9582543,
+          "feature_count": 10,
+          "schema_fingerprint": "a461ceb4e02a9042"
+        },
+        "README.md": {
+          "sha256": "98301bd45b552479c9e1a8e49137b28f0e4295b5180b77f5b3802e359cd49980",
+          "size_bytes": 4432,
+          "href": "servicios-municipales/agencias_gubernamentales/README.md",
+          "mtime": 1786738803.8863053
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:14.805056Z",
+      "breaking": false,
+      "assets": {
+        "publico_agencias_gubernamentales.parquet": {
+          "sha256": "ff1c2ccd81eaab415f692d7405dbd2118f2a485b62017bac28a9b3c2a3c9fe9e",
+          "size_bytes": 5853,
+          "href": "servicios-municipales/agencias_gubernamentales/publico_agencias_gubernamentales.parquet",
+          "source_mtime": 1786738025.9582543,
+          "mtime": 1786738025.9582543,
+          "feature_count": 10,
+          "schema_fingerprint": "a461ceb4e02a9042"
+        },
+        "README.md": {
+          "sha256": "98301bd45b552479c9e1a8e49137b28f0e4295b5180b77f5b3802e359cd49980",
+          "size_bytes": 4432,
+          "href": "servicios-municipales/agencias_gubernamentales/README.md",
+          "mtime": 1786738803.8863053
+        },
+        "publico_agencias_gubernamentales.pmtiles": {
+          "sha256": "0b19abd606c6928d5d8c4add4d64ea769cc79dcb7f11db0cb4aff81351c00efb",
+          "size_bytes": 8544,
+          "href": "servicios-municipales/agencias_gubernamentales/publico_agencias_gubernamentales.pmtiles",
+          "mtime": 1786739174.6475794
+        },
+        "publico_agencias_gubernamentales.thumb.jpg": {
+          "sha256": "513dbdff91341a756a84156175bade10d6c97bad0cb1ae4d701371f9bed9f3ab",
+          "size_bytes": 7943,
+          "href": "servicios-municipales/agencias_gubernamentales/publico_agencias_gubernamentales.thumb.jpg",
+          "mtime": 1786740152.1943073
+        }
+      },
+      "changes": [
+        "publico_agencias_gubernamentales.pmtiles",
+        "publico_agencias_gubernamentales.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_agencias_gubernamentales.pmtiles, publico_agencias_gubernamentales.thumb.jpg"
+    }
+  ]
+}

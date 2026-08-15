@@ -1,0 +1,89 @@
+{
+  "version": 8,
+  "name": "areas_programaticas_salud",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_areas_programaticas_salud.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_areas_programaticas_salud",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "numero_area"
+          ],
+          7,
+          "#e78cde",
+          1,
+          "#80cd67",
+          10,
+          "#2ce5b7",
+          11,
+          "#5577da",
+          12,
+          "#60e56b",
+          13,
+          "#bdd014",
+          14,
+          "#b128da",
+          15,
+          "#e5402e",
+          16,
+          "#3997db",
+          17,
+          "#87dfe7",
+          2,
+          "#d7b547",
+          3,
+          "#eeb589",
+          4,
+          "#61e096",
+          5,
+          "#3324db",
+          6,
+          "#eb466d",
+          8,
+          "#7723e4",
+          9,
+          "#ca4d94",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#ffffff"
+      }
+    },
+    {
+      "id": "categorical-fill-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_areas_programaticas_salud",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre_area"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

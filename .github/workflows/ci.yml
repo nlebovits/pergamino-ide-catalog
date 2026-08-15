@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Pinned to the versions this catalog was validated against. The template
+      # ships these unpinned on purpose, so that a template does not hand every
+      # repo made from it a stale pin. This catalog is real, so it pins here.
+      - name: Install the validators
+        run: python -m pip install 'rashid==0.1.6' stac-check
+
+      - name: Lint the tooling
+        run: |
+          python -m pip install pyflakes
+          pyflakes tools/*.py tests/*.py tools/generate/*.py
+
+      # CI_LIGHT exempts the data files from the link check. They are gitignored
+      # by design and live in object storage, so a fresh clone has the metadata
+      # without the bytes. Structural links and every non-data asset are still
+      # checked. Run tests/run_all.py locally, where the data is present, to
+      # check those hrefs too.
+      - name: Catalog gates
+        env:
+          CI_LIGHT: "1"
+        run: python3 tests/run_all.py

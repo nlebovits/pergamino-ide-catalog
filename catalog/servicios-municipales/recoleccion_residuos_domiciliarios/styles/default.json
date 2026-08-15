@@ -1,0 +1,59 @@
+{
+  "version": 8,
+  "name": "recoleccion_residuos_domiciliarios",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_recoleccion_residuos_domiciliarios.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_recoleccion_residuos_domiciliarios",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "turno"
+          ],
+          "dia",
+          "#71b96c",
+          "noche",
+          "#21568c",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#ffffff"
+      }
+    },
+    {
+      "id": "categorical-fill-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_recoleccion_residuos_domiciliarios",
+      "layout": {
+        "text-field": [
+          "get",
+          "etiqueta"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#323232",
+        "text-halo-color": "#fafafa",
+        "text-halo-width": 2.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

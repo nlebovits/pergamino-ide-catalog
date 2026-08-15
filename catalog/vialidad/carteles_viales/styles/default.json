@@ -1,0 +1,38 @@
+{
+  "version": 8,
+  "name": "carteles_viales",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_carteles_viales.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_carteles_viales",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "categoria"
+          ],
+          "informativa",
+          "#4d6eda",
+          "prescriptiva",
+          "#ffffff",
+          "preventiva",
+          "#dada0f",
+          "#cccccc"
+        ],
+        "circle-radius": 7.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

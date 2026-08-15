@@ -1,0 +1,67 @@
+{
+  "version": 8,
+  "name": "pozos_agua_doss",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_pozos_agua_doss.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_pozos_agua_doss",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "estado"
+          ],
+          "anulado",
+          "#b6b5bb",
+          "cegado",
+          "#ff0101",
+          "construccion",
+          "#ff8901",
+          "funcionamiento",
+          "#010dff",
+          "parado",
+          "#ffd101",
+          "proyecto",
+          "#cb12c2",
+          "#cccccc"
+        ],
+        "circle-radius": 21.0,
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-circle-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_pozos_agua_doss",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 12.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "estaciones_servicio",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_estaciones_servicio.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_estaciones_servicio",
+      "paint": {
+        "circle-color": "#888888",
+        "circle-radius": 10.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

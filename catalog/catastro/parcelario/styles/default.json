@@ -1,0 +1,63 @@
+{
+  "version": 8,
+  "name": "catastro_parcela",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_parcelario.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_parcelario",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "situacion_administrativa"
+          ],
+          "Aprobada y publicada por ARBA",
+          "#404040",
+          "En proceso de subdivisión",
+          "#ff0000",
+          "Subdividida pero no publicada",
+          "#ffe135",
+          "Subdivisión de UF en trámite",
+          "#ff7a32",
+          "#cccccc"
+        ],
+        "line-width": 1,
+        "line-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-line-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_parcelario",
+      "layout": {
+        "text-field": [
+          "get",
+          "etiqueta"
+        ],
+        "text-size": 10.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

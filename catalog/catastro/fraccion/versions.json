@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.365423Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_fraccion.parquet": {
+          "sha256": "48f2e4245c69dcb3ee4ff8185187c8b94edac4ed2c24ac15bdcf9eccf01b9967",
+          "size_bytes": 61099,
+          "href": "publico_catastro_fraccion/publico_catastro_fraccion.parquet",
+          "source_mtime": 1786738087.919692,
+          "mtime": 1786738087.919692,
+          "feature_count": 181,
+          "schema_fingerprint": "a1745360269e0254"
+        }
+      },
+      "changes": [
+        "publico_catastro_fraccion.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.500546Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_fraccion.parquet": {
+          "sha256": "48f2e4245c69dcb3ee4ff8185187c8b94edac4ed2c24ac15bdcf9eccf01b9967",
+          "size_bytes": 61099,
+          "href": "catastro/fraccion/publico_catastro_fraccion.parquet",
+          "source_mtime": 1786738087.919692,
+          "mtime": 1786738087.919692,
+          "feature_count": 181,
+          "schema_fingerprint": "a1745360269e0254"
+        },
+        "README.md": {
+          "sha256": "7aab8ae4227556cc7e99e539207e3e5fd8d192705f967f663f0f6ec4950bfe11",
+          "size_bytes": 4365,
+          "href": "catastro/fraccion/README.md",
+          "mtime": 1786738803.947306
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:24:52.111328Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_fraccion.parquet": {
+          "sha256": "48f2e4245c69dcb3ee4ff8185187c8b94edac4ed2c24ac15bdcf9eccf01b9967",
+          "size_bytes": 61099,
+          "href": "catastro/fraccion/publico_catastro_fraccion.parquet",
+          "source_mtime": 1786738087.919692,
+          "mtime": 1786738087.919692,
+          "feature_count": 181,
+          "schema_fingerprint": "a1745360269e0254"
+        },
+        "README.md": {
+          "sha256": "7aab8ae4227556cc7e99e539207e3e5fd8d192705f967f663f0f6ec4950bfe11",
+          "size_bytes": 4365,
+          "href": "catastro/fraccion/README.md",
+          "mtime": 1786738803.947306
+        },
+        "publico_catastro_fraccion.pmtiles": {
+          "sha256": "9712e095df7abccdb00ce28e13994d9a86e9c9d1820ca7af0ec6c3ff3cd612ac",
+          "size_bytes": 134392,
+          "href": "catastro/fraccion/publico_catastro_fraccion.pmtiles",
+          "mtime": 1786739089.3788557
+        },
+        "publico_catastro_fraccion.thumb.jpg": {
+          "sha256": "5799aed7ac1fb52f47ea6a11b138c82fea094e2b0c42789bc42a6dec3f8b9ff5",
+          "size_bytes": 9412,
+          "href": "catastro/fraccion/publico_catastro_fraccion.thumb.jpg",
+          "mtime": 1786740105.719952
+        }
+      },
+      "changes": [
+        "publico_catastro_fraccion.pmtiles",
+        "publico_catastro_fraccion.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_catastro_fraccion.pmtiles, publico_catastro_fraccion.thumb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "version": 8,
+  "name": "paseos_comerciales",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_paseos_comerciales.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_paseos_comerciales",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "primario",
+          "#000004",
+          "secundario",
+          "#b63679",
+          "terciario",
+          "#fcfdbf",
+          "#cccccc"
+        ],
+        "line-width": 25.0,
+        "line-opacity": 0.5
+      }
+    }
+  ]
+}

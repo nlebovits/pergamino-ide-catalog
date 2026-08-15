@@ -1,0 +1,63 @@
+{
+  "version": 8,
+  "name": "barrido_y_limpieza",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_barrido_y_limpieza.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_barrido_y_limpieza",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "frecuencia"
+          ],
+          "Lunes a sabados",
+          "#ff0000",
+          "Lunes y jueves",
+          "#8080ff",
+          "Martes y viernes",
+          "#ff8000",
+          "Miercoles y viernes",
+          "#018571",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#232323"
+      }
+    },
+    {
+      "id": "categorical-fill-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_barrido_y_limpieza",
+      "layout": {
+        "text-field": [
+          "get",
+          "frecuencia"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.161306Z",
+      "breaking": false,
+      "assets": {
+        "publico_estacionamiento_privado.parquet": {
+          "sha256": "042831ce68bf0d7a038afe9f342b06fba4fd91b1138b30b739cfd441e470fee4",
+          "size_bytes": 5870,
+          "href": "publico_estacionamiento_privado/publico_estacionamiento_privado.parquet",
+          "source_mtime": 1786738391.759839,
+          "mtime": 1786738391.759839,
+          "feature_count": 30,
+          "schema_fingerprint": "269ada4d3b47d5c9"
+        }
+      },
+      "changes": [
+        "publico_estacionamiento_privado.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.214476Z",
+      "breaking": false,
+      "assets": {
+        "publico_estacionamiento_privado.parquet": {
+          "sha256": "042831ce68bf0d7a038afe9f342b06fba4fd91b1138b30b739cfd441e470fee4",
+          "size_bytes": 5870,
+          "href": "transporte/estacionamiento_privado/publico_estacionamiento_privado.parquet",
+          "source_mtime": 1786738391.759839,
+          "mtime": 1786738391.759839,
+          "feature_count": 30,
+          "schema_fingerprint": "269ada4d3b47d5c9"
+        },
+        "README.md": {
+          "sha256": "40b7e10e5c234d63529f541432680ac892b3c6de87369983d97d001b1a79a5c1",
+          "size_bytes": 1264,
+          "href": "transporte/estacionamiento_privado/README.md",
+          "mtime": 1786738641.0707257
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:22.112823Z",
+      "breaking": false,
+      "assets": {
+        "publico_estacionamiento_privado.parquet": {
+          "sha256": "042831ce68bf0d7a038afe9f342b06fba4fd91b1138b30b739cfd441e470fee4",
+          "size_bytes": 5870,
+          "href": "transporte/estacionamiento_privado/publico_estacionamiento_privado.parquet",
+          "source_mtime": 1786738391.759839,
+          "mtime": 1786738391.759839,
+          "feature_count": 30,
+          "schema_fingerprint": "269ada4d3b47d5c9"
+        },
+        "README.md": {
+          "sha256": "40b7e10e5c234d63529f541432680ac892b3c6de87369983d97d001b1a79a5c1",
+          "size_bytes": 1264,
+          "href": "transporte/estacionamiento_privado/README.md",
+          "mtime": 1786738641.0707257
+        },
+        "publico_estacionamiento_privado.pmtiles": {
+          "sha256": "872845bf2e3c50580bb99272ba6aefecfbd15dfccebe3f0e1fb5e3e01705e13f",
+          "size_bytes": 6396,
+          "href": "transporte/estacionamiento_privado/publico_estacionamiento_privado.pmtiles",
+          "mtime": 1786739181.9676409
+        },
+        "publico_estacionamiento_privado.thumb.jpg": {
+          "sha256": "4da9a24ac96814e37817e1518cf91c6f03a556cd7499680e997f24ff8a0e26df",
+          "size_bytes": 11253,
+          "href": "transporte/estacionamiento_privado/publico_estacionamiento_privado.thumb.jpg",
+          "mtime": 1786740168.0984287
+        }
+      },
+      "changes": [
+        "publico_estacionamiento_privado.pmtiles",
+        "publico_estacionamiento_privado.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_estacionamiento_privado.pmtiles, publico_estacionamiento_privado.thumb.jpg"
+    }
+  ]
+}

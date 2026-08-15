@@ -1,0 +1,50 @@
+{
+  "version": 8,
+  "name": "icv",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_icv.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "graduated-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_icv",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "get",
+            "indice_calidad_vida_2010"
+          ],
+          "#ff0000",
+          6.1557325,
+          "#ff3804",
+          6.486485,
+          "#ff7109",
+          6.8172375,
+          "#ffaa0e",
+          7.14799,
+          "#ffe312",
+          7.4787425,
+          "#e6ff19",
+          7.809495,
+          "#b3ff23",
+          8.140247500000001,
+          "#80ff2d",
+          8.471,
+          "#4dff37",
+          8.8017525,
+          "#1aff41"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#ffffff"
+      }
+    }
+  ]
+}

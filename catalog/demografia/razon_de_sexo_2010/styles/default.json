@@ -1,0 +1,37 @@
+{
+  "version": 8,
+  "name": "razon_de_sexo",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_razon_de_sexo_2010.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_razon_de_sexo_2010",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "predominancia"
+          ],
+          "igual",
+          "#ffdf8a",
+          "mujeres",
+          "#df40df",
+          "varones",
+          "#106cac",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5
+      }
+    }
+  ]
+}

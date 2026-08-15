@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.428984Z",
+      "breaking": false,
+      "assets": {
+        "publico_ciclovias.parquet": {
+          "sha256": "cf6e177fc519f0461d55a03b0a74ac6d66c6cfdbec5f1a8c60b11291f0a81d3d",
+          "size_bytes": 709734,
+          "href": "publico_ciclovias/publico_ciclovias.parquet",
+          "source_mtime": 1786738129.2869844,
+          "mtime": 1786738129.2869844,
+          "feature_count": 11703,
+          "schema_fingerprint": "8501f238d6ed2d29"
+        }
+      },
+      "changes": [
+        "publico_ciclovias.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.194817Z",
+      "breaking": false,
+      "assets": {
+        "publico_ciclovias.parquet": {
+          "sha256": "cf6e177fc519f0461d55a03b0a74ac6d66c6cfdbec5f1a8c60b11291f0a81d3d",
+          "size_bytes": 709734,
+          "href": "transporte/ciclovias/publico_ciclovias.parquet",
+          "source_mtime": 1786738129.2869844,
+          "mtime": 1786738129.2869844,
+          "feature_count": 11703,
+          "schema_fingerprint": "8501f238d6ed2d29"
+        },
+        "README.md": {
+          "sha256": "552c46283508d1be52ade6b78bf5a413149c03cc26a20d688f9be629d219ff50",
+          "size_bytes": 4372,
+          "href": "transporte/ciclovias/README.md",
+          "mtime": 1786738803.9793062
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:20.087404Z",
+      "breaking": false,
+      "assets": {
+        "publico_ciclovias.parquet": {
+          "sha256": "cf6e177fc519f0461d55a03b0a74ac6d66c6cfdbec5f1a8c60b11291f0a81d3d",
+          "size_bytes": 709734,
+          "href": "transporte/ciclovias/publico_ciclovias.parquet",
+          "source_mtime": 1786738129.2869844,
+          "mtime": 1786738129.2869844,
+          "feature_count": 11703,
+          "schema_fingerprint": "8501f238d6ed2d29"
+        },
+        "README.md": {
+          "sha256": "552c46283508d1be52ade6b78bf5a413149c03cc26a20d688f9be629d219ff50",
+          "size_bytes": 4372,
+          "href": "transporte/ciclovias/README.md",
+          "mtime": 1786738803.9793062
+        },
+        "publico_ciclovias.pmtiles": {
+          "sha256": "8415a3a4c25c141484883a834505a27df57d6a14d1d4e5637bc7adca95fefbf0",
+          "size_bytes": 3143834,
+          "href": "transporte/ciclovias/publico_ciclovias.pmtiles",
+          "mtime": 1786739179.6796217
+        },
+        "publico_ciclovias.thumb.jpg": {
+          "sha256": "eecd168bcace4829bd63982fa591236b9038ed5f7d2f8daf89b084e7bcd49869",
+          "size_bytes": 32607,
+          "href": "transporte/ciclovias/publico_ciclovias.thumb.jpg",
+          "mtime": 1786740165.0764055
+        }
+      },
+      "changes": [
+        "publico_ciclovias.pmtiles",
+        "publico_ciclovias.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_ciclovias.pmtiles, publico_ciclovias.thumb.jpg"
+    }
+  ]
+}

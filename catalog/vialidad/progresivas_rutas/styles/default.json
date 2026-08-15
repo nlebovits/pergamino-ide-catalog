@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "progresivas_rutas",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_progresivas_rutas.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_progresivas_rutas",
+      "paint": {
+        "circle-color": "#487bb6",
+        "circle-radius": 14.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

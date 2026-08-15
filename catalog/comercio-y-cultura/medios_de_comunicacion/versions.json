@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.479809Z",
+      "breaking": false,
+      "assets": {
+        "publico_medios_de_comunicacion.parquet": {
+          "sha256": "d96306221db058054304f1c600e1817b3886eed9b62aac919d0b450548d053ea",
+          "size_bytes": 8143,
+          "href": "publico_medios_de_comunicacion/publico_medios_de_comunicacion.parquet",
+          "source_mtime": 1786738516.6467216,
+          "mtime": 1786738516.6467216,
+          "feature_count": 36,
+          "schema_fingerprint": "32b42232f83cec09"
+        }
+      },
+      "changes": [
+        "publico_medios_de_comunicacion.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.651402Z",
+      "breaking": false,
+      "assets": {
+        "publico_medios_de_comunicacion.parquet": {
+          "sha256": "d96306221db058054304f1c600e1817b3886eed9b62aac919d0b450548d053ea",
+          "size_bytes": 8143,
+          "href": "comercio-y-cultura/medios_de_comunicacion/publico_medios_de_comunicacion.parquet",
+          "source_mtime": 1786738516.6467216,
+          "mtime": 1786738516.6467216,
+          "feature_count": 36,
+          "schema_fingerprint": "32b42232f83cec09"
+        },
+        "README.md": {
+          "sha256": "6e21efe28e70de5f6a733f322b8749548e96a9693b6ded1d90ebc5471e0baeba",
+          "size_bytes": 1275,
+          "href": "comercio-y-cultura/medios_de_comunicacion/README.md",
+          "mtime": 1786738641.288728
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:22.668014Z",
+      "breaking": false,
+      "assets": {
+        "publico_medios_de_comunicacion.parquet": {
+          "sha256": "d96306221db058054304f1c600e1817b3886eed9b62aac919d0b450548d053ea",
+          "size_bytes": 8143,
+          "href": "comercio-y-cultura/medios_de_comunicacion/publico_medios_de_comunicacion.parquet",
+          "source_mtime": 1786738516.6467216,
+          "mtime": 1786738516.6467216,
+          "feature_count": 36,
+          "schema_fingerprint": "32b42232f83cec09"
+        },
+        "README.md": {
+          "sha256": "6e21efe28e70de5f6a733f322b8749548e96a9693b6ded1d90ebc5471e0baeba",
+          "size_bytes": 1275,
+          "href": "comercio-y-cultura/medios_de_comunicacion/README.md",
+          "mtime": 1786738641.288728
+        },
+        "publico_medios_de_comunicacion.pmtiles": {
+          "sha256": "e8e2f9157a4bf40ff366df0d05ac5a411f501d06b3188e8cbbe14ef3af969b3f",
+          "size_bytes": 15171,
+          "href": "comercio-y-cultura/medios_de_comunicacion/publico_medios_de_comunicacion.pmtiles",
+          "mtime": 1786739182.5216455
+        },
+        "publico_medios_de_comunicacion.thumb.jpg": {
+          "sha256": "d6c077a35627e14657720b7dcfe83394c6e0eadb7202728289c86c641ec90380",
+          "size_bytes": 15581,
+          "href": "comercio-y-cultura/medios_de_comunicacion/publico_medios_de_comunicacion.thumb.jpg",
+          "mtime": 1786740134.9371755
+        }
+      },
+      "changes": [
+        "publico_medios_de_comunicacion.pmtiles",
+        "publico_medios_de_comunicacion.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_medios_de_comunicacion.pmtiles, publico_medios_de_comunicacion.thumb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.325953Z",
+      "breaking": false,
+      "assets": {
+        "publico_camaras_seguridad.parquet": {
+          "sha256": "dea682679a77b9ebebb98f2484db0878a7dffbaceb77981fe0f3a9a700bd77bd",
+          "size_bytes": 29732,
+          "href": "publico_camaras_seguridad/publico_camaras_seguridad.parquet",
+          "source_mtime": 1786738072.3185818,
+          "mtime": 1786738072.3185818,
+          "feature_count": 523,
+          "schema_fingerprint": "a6dbccdb1b1c71e8"
+        }
+      },
+      "changes": [
+        "publico_camaras_seguridad.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.943686Z",
+      "breaking": false,
+      "assets": {
+        "publico_camaras_seguridad.parquet": {
+          "sha256": "dea682679a77b9ebebb98f2484db0878a7dffbaceb77981fe0f3a9a700bd77bd",
+          "size_bytes": 29732,
+          "href": "seguridad/camaras_seguridad/publico_camaras_seguridad.parquet",
+          "source_mtime": 1786738072.3185818,
+          "mtime": 1786738072.3185818,
+          "feature_count": 523,
+          "schema_fingerprint": "a6dbccdb1b1c71e8"
+        },
+        "README.md": {
+          "sha256": "70ffb2811311a5261fcf30e4afedf3692f42ada7287b3a70a54b50e3579ea562",
+          "size_bytes": 4449,
+          "href": "seguridad/camaras_seguridad/README.md",
+          "mtime": 1786738803.9323058
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:22.413547Z",
+      "breaking": false,
+      "assets": {
+        "publico_camaras_seguridad.parquet": {
+          "sha256": "dea682679a77b9ebebb98f2484db0878a7dffbaceb77981fe0f3a9a700bd77bd",
+          "size_bytes": 29732,
+          "href": "seguridad/camaras_seguridad/publico_camaras_seguridad.parquet",
+          "source_mtime": 1786738072.3185818,
+          "mtime": 1786738072.3185818,
+          "feature_count": 523,
+          "schema_fingerprint": "a6dbccdb1b1c71e8"
+        },
+        "README.md": {
+          "sha256": "70ffb2811311a5261fcf30e4afedf3692f42ada7287b3a70a54b50e3579ea562",
+          "size_bytes": 4449,
+          "href": "seguridad/camaras_seguridad/README.md",
+          "mtime": 1786738803.9323058
+        },
+        "publico_camaras_seguridad.pmtiles": {
+          "sha256": "a049c4a0d78a1a2863e7cffd4c0a0fd2ae65d60191b1ecefd07d9c322c891352",
+          "size_bytes": 47268,
+          "href": "seguridad/camaras_seguridad/publico_camaras_seguridad.pmtiles",
+          "mtime": 1786739302.262639
+        },
+        "publico_camaras_seguridad.thumb.jpg": {
+          "sha256": "1da44378c8908e1098422039b8c475363273da3cfef13e1125fa623e227c05aa",
+          "size_bytes": 11719,
+          "href": "seguridad/camaras_seguridad/publico_camaras_seguridad.thumb.jpg",
+          "mtime": 1786740150.193292
+        }
+      },
+      "changes": [
+        "publico_camaras_seguridad.pmtiles",
+        "publico_camaras_seguridad.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_camaras_seguridad.pmtiles, publico_camaras_seguridad.thumb.jpg"
+    }
+  ]
+}

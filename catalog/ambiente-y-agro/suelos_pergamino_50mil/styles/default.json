@@ -1,0 +1,58 @@
+{
+  "version": 8,
+  "name": "suelos_pergamino_50mil",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_suelos_pergamino_50mil.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_suelos_pergamino_50mil",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "taxo_ppal"
+          ],
+          "Argiudol tipico",
+          "#5bbe49",
+          "Argiudol vertico",
+          "#288b3f",
+          "Argiudol abruptico",
+          "#28673f",
+          "Argiudol acuico",
+          "#94c8e9",
+          "Argiacuol vertico",
+          "#94ccea",
+          "Argialbol argiacuico",
+          "#e2ba83",
+          "Paleudol tipico",
+          "#96c658",
+          "Natracuol tipico",
+          "#2388bd",
+          "Miscelaneas",
+          "#b1dbc1",
+          "Natracualf tipico",
+          "#9556aa",
+          "Natracualf molico",
+          "#7d488f",
+          "Complejo indiferenciado",
+          "#c39e32",
+          "Lagunas",
+          "#154ea8",
+          "#cccccc"
+        ],
+        "fill-opacity": 1.0,
+        "fill-outline-color": "#232323"
+      }
+    }
+  ]
+}

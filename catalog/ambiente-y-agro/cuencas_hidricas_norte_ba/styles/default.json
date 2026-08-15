@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "cuencas_hidricas_norte_ba",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_cuencas_hidricas_norte_ba.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_cuencas_hidricas_norte_ba",
+      "paint": {
+        "fill-color": "#118dc2",
+        "fill-opacity": 0.32,
+        "fill-outline-color": "#232323"
+      }
+    }
+  ]
+}

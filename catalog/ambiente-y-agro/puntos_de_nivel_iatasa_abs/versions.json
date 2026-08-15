@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.663599Z",
+      "breaking": false,
+      "assets": {
+        "publico_puntos_de_nivel_iatasa_abs.parquet": {
+          "sha256": "64a82be44a623301bcdeae730714c9397593678dd7f5e5093a85523c2c77a145",
+          "size_bytes": 352062,
+          "href": "publico_puntos_de_nivel_iatasa_abs/publico_puntos_de_nivel_iatasa_abs.parquet",
+          "source_mtime": 1786738575.5831382,
+          "mtime": 1786738575.5831382,
+          "feature_count": 6003,
+          "schema_fingerprint": "3f7fe8643f7c6678"
+        }
+      },
+      "changes": [
+        "publico_puntos_de_nivel_iatasa_abs.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.447107Z",
+      "breaking": false,
+      "assets": {
+        "publico_puntos_de_nivel_iatasa_abs.parquet": {
+          "sha256": "64a82be44a623301bcdeae730714c9397593678dd7f5e5093a85523c2c77a145",
+          "size_bytes": 352062,
+          "href": "ambiente-y-agro/puntos_de_nivel_iatasa_abs/publico_puntos_de_nivel_iatasa_abs.parquet",
+          "source_mtime": 1786738575.5831382,
+          "mtime": 1786738575.5831382,
+          "feature_count": 6003,
+          "schema_fingerprint": "3f7fe8643f7c6678"
+        },
+        "README.md": {
+          "sha256": "b69abd97456fecf269837fa2c18b62cfa35242c0b16941c91c03c4607e4a7b66",
+          "size_bytes": 1317,
+          "href": "ambiente-y-agro/puntos_de_nivel_iatasa_abs/README.md",
+          "mtime": 1786738641.401729
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:20.957533Z",
+      "breaking": false,
+      "assets": {
+        "publico_puntos_de_nivel_iatasa_abs.parquet": {
+          "sha256": "64a82be44a623301bcdeae730714c9397593678dd7f5e5093a85523c2c77a145",
+          "size_bytes": 352062,
+          "href": "ambiente-y-agro/puntos_de_nivel_iatasa_abs/publico_puntos_de_nivel_iatasa_abs.parquet",
+          "source_mtime": 1786738575.5831382,
+          "mtime": 1786738575.5831382,
+          "feature_count": 6003,
+          "schema_fingerprint": "3f7fe8643f7c6678"
+        },
+        "README.md": {
+          "sha256": "b69abd97456fecf269837fa2c18b62cfa35242c0b16941c91c03c4607e4a7b66",
+          "size_bytes": 1317,
+          "href": "ambiente-y-agro/puntos_de_nivel_iatasa_abs/README.md",
+          "mtime": 1786738641.401729
+        },
+        "publico_puntos_de_nivel_iatasa_abs.pmtiles": {
+          "sha256": "be55529df54ba95fd11b4102091a9776b15a93b9a921cc071f6c3998d3b82af7",
+          "size_bytes": 435196,
+          "href": "ambiente-y-agro/puntos_de_nivel_iatasa_abs/publico_puntos_de_nivel_iatasa_abs.pmtiles",
+          "mtime": 1786739180.809631
+        },
+        "publico_puntos_de_nivel_iatasa_abs.thumb.jpg": {
+          "sha256": "9e12010e727f0ccbcbf453d936ff535a73ca161e38ca4690cdb516547d1cc6cf",
+          "size_bytes": 37990,
+          "href": "ambiente-y-agro/puntos_de_nivel_iatasa_abs/publico_puntos_de_nivel_iatasa_abs.thumb.jpg",
+          "mtime": 1786740092.9688544
+        }
+      },
+      "changes": [
+        "publico_puntos_de_nivel_iatasa_abs.pmtiles",
+        "publico_puntos_de_nivel_iatasa_abs.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_puntos_de_nivel_iatasa_abs.pmtiles, publico_puntos_de_nivel_iatasa_abs.thumb.jpg"
+    }
+  ]
+}

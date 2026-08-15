@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.537902Z",
+      "breaking": false,
+      "assets": {
+        "publico_complejos_habitacionales.parquet": {
+          "sha256": "2463b7840078317a6294725853c132f6278bf403129305f28e37e3a45c378565",
+          "size_bytes": 19821,
+          "href": "publico_complejos_habitacionales/publico_complejos_habitacionales.parquet",
+          "source_mtime": 1786738176.8973207,
+          "mtime": 1786738176.8973207,
+          "feature_count": 108,
+          "schema_fingerprint": "a04c99bc6a3c612e"
+        }
+      },
+      "changes": [
+        "publico_complejos_habitacionales.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.476723Z",
+      "breaking": false,
+      "assets": {
+        "publico_complejos_habitacionales.parquet": {
+          "sha256": "2463b7840078317a6294725853c132f6278bf403129305f28e37e3a45c378565",
+          "size_bytes": 19821,
+          "href": "catastro/complejos_habitacionales/publico_complejos_habitacionales.parquet",
+          "source_mtime": 1786738176.8973207,
+          "mtime": 1786738176.8973207,
+          "feature_count": 108,
+          "schema_fingerprint": "a04c99bc6a3c612e"
+        },
+        "README.md": {
+          "sha256": "cf72006942a1114332486951da9f467b632e663ef3579461502e0b573322d989",
+          "size_bytes": 4538,
+          "href": "catastro/complejos_habitacionales/README.md",
+          "mtime": 1786738804.0293067
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:39.214813Z",
+      "breaking": false,
+      "assets": {
+        "publico_complejos_habitacionales.parquet": {
+          "sha256": "2463b7840078317a6294725853c132f6278bf403129305f28e37e3a45c378565",
+          "size_bytes": 19821,
+          "href": "catastro/complejos_habitacionales/publico_complejos_habitacionales.parquet",
+          "source_mtime": 1786738176.8973207,
+          "mtime": 1786738176.8973207,
+          "feature_count": 108,
+          "schema_fingerprint": "a04c99bc6a3c612e"
+        },
+        "README.md": {
+          "sha256": "cf72006942a1114332486951da9f467b632e663ef3579461502e0b573322d989",
+          "size_bytes": 4538,
+          "href": "catastro/complejos_habitacionales/README.md",
+          "mtime": 1786738804.0293067
+        },
+        "publico_complejos_habitacionales.pmtiles": {
+          "sha256": "1c1ad53e550189b81e842349b09644d7891e4ed54c0668679dba201a38efbe73",
+          "size_bytes": 129096,
+          "href": "catastro/complejos_habitacionales/publico_complejos_habitacionales.pmtiles",
+          "mtime": 1786739199.0197837
+        },
+        "publico_complejos_habitacionales.thumb.jpg": {
+          "sha256": "ef645cd80a95196a8a0fd17998061d1abd112bdba2f5b55d5a9d143f3b128503",
+          "size_bytes": 10314,
+          "href": "catastro/complejos_habitacionales/publico_complejos_habitacionales.thumb.jpg",
+          "mtime": 1786740094.3538651
+        }
+      },
+      "changes": [
+        "publico_complejos_habitacionales.pmtiles",
+        "publico_complejos_habitacionales.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_complejos_habitacionales.pmtiles, publico_complejos_habitacionales.thumb.jpg"
+    }
+  ]
+}

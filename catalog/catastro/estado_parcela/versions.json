@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.190972Z",
+      "breaking": false,
+      "assets": {
+        "publico_estado_parcela.parquet": {
+          "sha256": "e9fb23fc26f451f38de463f18a056ca54cc51c793629595dc507c3643036aa16",
+          "size_bytes": 5070130,
+          "href": "publico_estado_parcela/publico_estado_parcela.parquet",
+          "source_mtime": 1786738409.7979665,
+          "mtime": 1786738409.7979665,
+          "feature_count": 55134,
+          "schema_fingerprint": "0251aad62d0fccaf"
+        }
+      },
+      "changes": [
+        "publico_estado_parcela.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.514127Z",
+      "breaking": false,
+      "assets": {
+        "publico_estado_parcela.parquet": {
+          "sha256": "e9fb23fc26f451f38de463f18a056ca54cc51c793629595dc507c3643036aa16",
+          "size_bytes": 5070130,
+          "href": "catastro/estado_parcela/publico_estado_parcela.parquet",
+          "source_mtime": 1786738409.7979665,
+          "mtime": 1786738409.7979665,
+          "feature_count": 55134,
+          "schema_fingerprint": "0251aad62d0fccaf"
+        },
+        "README.md": {
+          "sha256": "825bb58234b6d83a5d8ef60f1e34ccb13dc3d8377449045405ccf99c9bff0b50",
+          "size_bytes": 1321,
+          "href": "catastro/estado_parcela/README.md",
+          "mtime": 1786738641.090726
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:38.567220Z",
+      "breaking": false,
+      "assets": {
+        "publico_estado_parcela.parquet": {
+          "sha256": "e9fb23fc26f451f38de463f18a056ca54cc51c793629595dc507c3643036aa16",
+          "size_bytes": 5070130,
+          "href": "catastro/estado_parcela/publico_estado_parcela.parquet",
+          "source_mtime": 1786738409.7979665,
+          "mtime": 1786738409.7979665,
+          "feature_count": 55134,
+          "schema_fingerprint": "0251aad62d0fccaf"
+        },
+        "README.md": {
+          "sha256": "825bb58234b6d83a5d8ef60f1e34ccb13dc3d8377449045405ccf99c9bff0b50",
+          "size_bytes": 1321,
+          "href": "catastro/estado_parcela/README.md",
+          "mtime": 1786738641.090726
+        },
+        "publico_estado_parcela.pmtiles": {
+          "sha256": "8c5bcd024bc48eddf1a18fb65085b667371f0ba6c2d81ad50306ea9182a6b997",
+          "size_bytes": 17355491,
+          "href": "catastro/estado_parcela/publico_estado_parcela.pmtiles",
+          "mtime": 1786739198.4227788
+        },
+        "publico_estado_parcela.thumb.jpg": {
+          "sha256": "c9c02288cafefcbd7728f2ffc329cfd13e85cc98845af88c330f54e9e683675d",
+          "size_bytes": 21005,
+          "href": "catastro/estado_parcela/publico_estado_parcela.thumb.jpg",
+          "mtime": 1786740105.0909472
+        }
+      },
+      "changes": [
+        "publico_estado_parcela.pmtiles",
+        "publico_estado_parcela.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_estado_parcela.pmtiles, publico_estado_parcela.thumb.jpg"
+    }
+  ]
+}

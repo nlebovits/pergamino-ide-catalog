@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.368982Z",
+      "breaking": false,
+      "assets": {
+        "publico_jurisdicciones_policiales.parquet": {
+          "sha256": "89130e169e7219d92995098b7721d9bf4337eccec3dc8eb67e8242b4614a4097",
+          "size_bytes": 7278,
+          "href": "publico_jurisdicciones_policiales/publico_jurisdicciones_policiales.parquet",
+          "source_mtime": 1786738484.715496,
+          "mtime": 1786738484.715496,
+          "feature_count": 3,
+          "schema_fingerprint": "a0f9deeba3b922c2"
+        }
+      },
+      "changes": [
+        "publico_jurisdicciones_policiales.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.966066Z",
+      "breaking": false,
+      "assets": {
+        "publico_jurisdicciones_policiales.parquet": {
+          "sha256": "89130e169e7219d92995098b7721d9bf4337eccec3dc8eb67e8242b4614a4097",
+          "size_bytes": 7278,
+          "href": "seguridad/jurisdicciones_policiales/publico_jurisdicciones_policiales.parquet",
+          "source_mtime": 1786738484.715496,
+          "mtime": 1786738484.715496,
+          "feature_count": 3,
+          "schema_fingerprint": "a0f9deeba3b922c2"
+        },
+        "README.md": {
+          "sha256": "22a721421fb6947464cd660edac0005bc1f431782ae648e528e8262a6f45ae4c",
+          "size_bytes": 1154,
+          "href": "seguridad/jurisdicciones_policiales/README.md",
+          "mtime": 1786738641.2167273
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:00.090434Z",
+      "breaking": false,
+      "assets": {
+        "publico_jurisdicciones_policiales.parquet": {
+          "sha256": "89130e169e7219d92995098b7721d9bf4337eccec3dc8eb67e8242b4614a4097",
+          "size_bytes": 7278,
+          "href": "seguridad/jurisdicciones_policiales/publico_jurisdicciones_policiales.parquet",
+          "source_mtime": 1786738484.715496,
+          "mtime": 1786738484.715496,
+          "feature_count": 3,
+          "schema_fingerprint": "a0f9deeba3b922c2"
+        },
+        "README.md": {
+          "sha256": "22a721421fb6947464cd660edac0005bc1f431782ae648e528e8262a6f45ae4c",
+          "size_bytes": 1154,
+          "href": "seguridad/jurisdicciones_policiales/README.md",
+          "mtime": 1786738641.2167273
+        },
+        "publico_jurisdicciones_policiales.pmtiles": {
+          "sha256": "99c071d07897e41eca1de275c5f847cd08d6b13e6a08e5cf5b009d0deec8e624",
+          "size_bytes": 20060,
+          "href": "seguridad/jurisdicciones_policiales/publico_jurisdicciones_policiales.pmtiles",
+          "mtime": 1786739219.9269583
+        },
+        "publico_jurisdicciones_policiales.thumb.jpg": {
+          "sha256": "017896370a844383bd9107ead1b9d24a853f2b46bf90440110452be404d1c3e1",
+          "size_bytes": 13174,
+          "href": "seguridad/jurisdicciones_policiales/publico_jurisdicciones_policiales.thumb.jpg",
+          "mtime": 1786740151.0082982
+        }
+      },
+      "changes": [
+        "publico_jurisdicciones_policiales.pmtiles",
+        "publico_jurisdicciones_policiales.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_jurisdicciones_policiales.pmtiles, publico_jurisdicciones_policiales.thumb.jpg"
+    }
+  ]
+}

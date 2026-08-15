@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.277902Z",
+      "breaking": false,
+      "assets": {
+        "publico_barrido_y_limpieza.parquet": {
+          "sha256": "de5e3492cdf580e1a51e704a0a5f567efc5b09641a2fa6f2e18e44eb2f2bf115",
+          "size_bytes": 9285,
+          "href": "publico_barrido_y_limpieza/publico_barrido_y_limpieza.parquet",
+          "source_mtime": 1786738048.5134137,
+          "mtime": 1786738048.5134137,
+          "feature_count": 21,
+          "schema_fingerprint": "4680e5e83be465d5"
+        }
+      },
+      "changes": [
+        "publico_barrido_y_limpieza.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.995173Z",
+      "breaking": false,
+      "assets": {
+        "publico_barrido_y_limpieza.parquet": {
+          "sha256": "de5e3492cdf580e1a51e704a0a5f567efc5b09641a2fa6f2e18e44eb2f2bf115",
+          "size_bytes": 9285,
+          "href": "servicios-municipales/barrido_y_limpieza/publico_barrido_y_limpieza.parquet",
+          "source_mtime": 1786738048.5134137,
+          "mtime": 1786738048.5134137,
+          "feature_count": 21,
+          "schema_fingerprint": "4680e5e83be465d5"
+        },
+        "README.md": {
+          "sha256": "77c445829799cabc6f1495294a78dfee4abb332215519735bf6810645a24c4c3",
+          "size_bytes": 4379,
+          "href": "servicios-municipales/barrido_y_limpieza/README.md",
+          "mtime": 1786738803.9123056
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:24:46.887603Z",
+      "breaking": false,
+      "assets": {
+        "publico_barrido_y_limpieza.parquet": {
+          "sha256": "de5e3492cdf580e1a51e704a0a5f567efc5b09641a2fa6f2e18e44eb2f2bf115",
+          "size_bytes": 9285,
+          "href": "servicios-municipales/barrido_y_limpieza/publico_barrido_y_limpieza.parquet",
+          "source_mtime": 1786738048.5134137,
+          "mtime": 1786738048.5134137,
+          "feature_count": 21,
+          "schema_fingerprint": "4680e5e83be465d5"
+        },
+        "README.md": {
+          "sha256": "77c445829799cabc6f1495294a78dfee4abb332215519735bf6810645a24c4c3",
+          "size_bytes": 4379,
+          "href": "servicios-municipales/barrido_y_limpieza/README.md",
+          "mtime": 1786738803.9123056
+        },
+        "publico_barrido_y_limpieza.pmtiles": {
+          "sha256": "f23188d35ea4f3122336cd60130a42a98c92bf89836864f751d581a0ff554af8",
+          "size_bytes": 32151,
+          "href": "servicios-municipales/barrido_y_limpieza/publico_barrido_y_limpieza.pmtiles",
+          "mtime": 1786739085.4158218
+        },
+        "publico_barrido_y_limpieza.thumb.jpg": {
+          "sha256": "57d32edf0847d2b651689acc89633256324efc6a1c66c9cba149958f9324dd92",
+          "size_bytes": 21611,
+          "href": "servicios-municipales/barrido_y_limpieza/publico_barrido_y_limpieza.thumb.jpg",
+          "mtime": 1786740152.674311
+        }
+      },
+      "changes": [
+        "publico_barrido_y_limpieza.pmtiles",
+        "publico_barrido_y_limpieza.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_barrido_y_limpieza.pmtiles, publico_barrido_y_limpieza.thumb.jpg"
+    }
+  ]
+}

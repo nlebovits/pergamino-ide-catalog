@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "cobertura_agua_de_2015_a_2019",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_cobertura_agua_de_2015_a_2019.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_cobertura_agua_de_2015_a_2019",
+      "paint": {
+        "fill-color": "#71BEEF",
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#7180EF"
+      }
+    }
+  ]
+}

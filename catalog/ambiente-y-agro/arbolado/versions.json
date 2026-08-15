@@ -1,0 +1,128 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.3",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.320132Z",
+      "breaking": false,
+      "assets": {
+        "publico_arbolado.parquet": {
+          "sha256": "c275fc193bb5c9263f9445ad9a704b1d1b01409e658b5c6f813652c59aa3fa41",
+          "size_bytes": 2546733,
+          "href": "publico_arbolado/publico_arbolado.parquet",
+          "source_mtime": 1786738041.7993662,
+          "mtime": 1786738041.7993662,
+          "feature_count": 43525,
+          "schema_fingerprint": "634114b1fa4dbe84"
+        }
+      },
+      "changes": [
+        "publico_arbolado.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:22:21.873008Z",
+      "breaking": false,
+      "assets": {
+        "publico_arbolado.parquet": {
+          "sha256": "c275fc193bb5c9263f9445ad9a704b1d1b01409e658b5c6f813652c59aa3fa41",
+          "size_bytes": 2546733,
+          "href": "ambiente-y-agro/arbolado/publico_arbolado.parquet",
+          "source_mtime": 1786738041.7993662,
+          "mtime": 1786738041.7993662,
+          "feature_count": 43525,
+          "schema_fingerprint": "634114b1fa4dbe84"
+        },
+        "README.md": {
+          "sha256": "b67ca5bfcd031849af999a4df5eda35b3c76725ed157fbd286322d6229253d52",
+          "size_bytes": 5098,
+          "href": "ambiente-y-agro/arbolado/README.md",
+          "mtime": 1786738803.8973055
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:22:30.365713Z",
+      "breaking": false,
+      "assets": {
+        "publico_arbolado.parquet": {
+          "sha256": "c275fc193bb5c9263f9445ad9a704b1d1b01409e658b5c6f813652c59aa3fa41",
+          "size_bytes": 2546733,
+          "href": "ambiente-y-agro/arbolado/publico_arbolado.parquet",
+          "source_mtime": 1786738041.7993662,
+          "mtime": 1786738041.7993662,
+          "feature_count": 43525,
+          "schema_fingerprint": "634114b1fa4dbe84"
+        },
+        "README.md": {
+          "sha256": "b67ca5bfcd031849af999a4df5eda35b3c76725ed157fbd286322d6229253d52",
+          "size_bytes": 5098,
+          "href": "ambiente-y-agro/arbolado/README.md",
+          "mtime": 1786738803.8973055
+        },
+        "publico_arbolado.pmtiles": {
+          "sha256": "93c16ea65f1da8d11fceb4082f7eb90d0d8b3ac52b8479f8e96af3cc2cf06738",
+          "size_bytes": 3559480,
+          "href": "ambiente-y-agro/arbolado/publico_arbolado.pmtiles",
+          "mtime": 1786738949.1926317
+        },
+        "publico_arbolado.thumb.jpg": {
+          "sha256": "60e95faa1f02f08f83e20e6cba537fe4aff84ee5a8dcca9126f5515666137322",
+          "size_bytes": 4786,
+          "href": "ambiente-y-agro/arbolado/publico_arbolado.thumb.jpg",
+          "mtime": 1786738950.3396418
+        }
+      },
+      "changes": [
+        "publico_arbolado.pmtiles",
+        "publico_arbolado.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_arbolado.pmtiles, publico_arbolado.thumb.jpg"
+    },
+    {
+      "version": "1.0.3",
+      "created": "2026-08-14T20:29:55.680210Z",
+      "breaking": false,
+      "assets": {
+        "publico_arbolado.parquet": {
+          "sha256": "c275fc193bb5c9263f9445ad9a704b1d1b01409e658b5c6f813652c59aa3fa41",
+          "size_bytes": 2546733,
+          "href": "ambiente-y-agro/arbolado/publico_arbolado.parquet",
+          "source_mtime": 1786738041.7993662,
+          "mtime": 1786738041.7993662,
+          "feature_count": 43525,
+          "schema_fingerprint": "634114b1fa4dbe84"
+        },
+        "README.md": {
+          "sha256": "b67ca5bfcd031849af999a4df5eda35b3c76725ed157fbd286322d6229253d52",
+          "size_bytes": 5098,
+          "href": "ambiente-y-agro/arbolado/README.md",
+          "mtime": 1786738803.8973055
+        },
+        "publico_arbolado.pmtiles": {
+          "sha256": "062a918c7406a55b99239ab9b8596da022e95b24d96c96cfc948c150d3a12254",
+          "size_bytes": 4005310,
+          "href": "ambiente-y-agro/arbolado/publico_arbolado.pmtiles",
+          "mtime": 1786739395.3493972
+        },
+        "publico_arbolado.thumb.jpg": {
+          "sha256": "d491c77dde2509fd0f44651a3a859526c133d246814a3157607aa8ce205166ad",
+          "size_bytes": 15529,
+          "href": "ambiente-y-agro/arbolado/publico_arbolado.thumb.jpg",
+          "mtime": 1786740045.39049
+        }
+      },
+      "changes": [
+        "publico_arbolado.pmtiles",
+        "publico_arbolado.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_arbolado.pmtiles, publico_arbolado.thumb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.153925Z",
+      "breaking": false,
+      "assets": {
+        "publico_estacionamiento_nocturno.parquet": {
+          "sha256": "84d1dafb85b2c0c3d791c68c45aa0e43ff0b9c25a18d1cdaf14369fa1728af41",
+          "size_bytes": 13520,
+          "href": "publico_estacionamiento_nocturno/publico_estacionamiento_nocturno.parquet",
+          "source_mtime": 1786738391.6378381,
+          "mtime": 1786738391.6378381,
+          "feature_count": 47,
+          "schema_fingerprint": "3db51cd203184223"
+        }
+      },
+      "changes": [
+        "publico_estacionamiento_nocturno.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.227399Z",
+      "breaking": false,
+      "assets": {
+        "publico_estacionamiento_nocturno.parquet": {
+          "sha256": "84d1dafb85b2c0c3d791c68c45aa0e43ff0b9c25a18d1cdaf14369fa1728af41",
+          "size_bytes": 13520,
+          "href": "transporte/estacionamiento_nocturno/publico_estacionamiento_nocturno.parquet",
+          "source_mtime": 1786738391.6378381,
+          "mtime": 1786738391.6378381,
+          "feature_count": 47,
+          "schema_fingerprint": "3db51cd203184223"
+        },
+        "README.md": {
+          "sha256": "77e55d9f19050fb5779fbeb9fce8100f110dc00b29e2cceac755f9eed459b505",
+          "size_bytes": 1712,
+          "href": "transporte/estacionamiento_nocturno/README.md",
+          "mtime": 1786738641.0657256
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:27.350373Z",
+      "breaking": false,
+      "assets": {
+        "publico_estacionamiento_nocturno.parquet": {
+          "sha256": "84d1dafb85b2c0c3d791c68c45aa0e43ff0b9c25a18d1cdaf14369fa1728af41",
+          "size_bytes": 13520,
+          "href": "transporte/estacionamiento_nocturno/publico_estacionamiento_nocturno.parquet",
+          "source_mtime": 1786738391.6378381,
+          "mtime": 1786738391.6378381,
+          "feature_count": 47,
+          "schema_fingerprint": "3db51cd203184223"
+        },
+        "README.md": {
+          "sha256": "77e55d9f19050fb5779fbeb9fce8100f110dc00b29e2cceac755f9eed459b505",
+          "size_bytes": 1712,
+          "href": "transporte/estacionamiento_nocturno/README.md",
+          "mtime": 1786738641.0657256
+        },
+        "publico_estacionamiento_nocturno.pmtiles": {
+          "sha256": "12a397fc27591dbe394543b5d2c587cf50a83e468716c31b72a49f0404b4fbe8",
+          "size_bytes": 37571,
+          "href": "transporte/estacionamiento_nocturno/publico_estacionamiento_nocturno.pmtiles",
+          "mtime": 1786739185.9456742
+        },
+        "publico_estacionamiento_nocturno.thumb.jpg": {
+          "sha256": "01132eb55695576b658c245914e15f8dcc3c995726c0599fb4a847244e3cfb8a",
+          "size_bytes": 18691,
+          "href": "transporte/estacionamiento_nocturno/publico_estacionamiento_nocturno.thumb.jpg",
+          "mtime": 1786740167.9454274
+        }
+      },
+      "changes": [
+        "publico_estacionamiento_nocturno.pmtiles",
+        "publico_estacionamiento_nocturno.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_estacionamiento_nocturno.pmtiles, publico_estacionamiento_nocturno.thumb.jpg"
+    }
+  ]
+}

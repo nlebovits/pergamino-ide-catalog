@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.630512Z",
+      "breaking": false,
+      "assets": {
+        "publico_proyectos_infraestructura.parquet": {
+          "sha256": "782ed38e224892c115f051be7064ca9b3d41be4ab7ba9f0611494d532fd147c3",
+          "size_bytes": 789020,
+          "href": "publico_proyectos_infraestructura/publico_proyectos_infraestructura.parquet",
+          "source_mtime": 1786738568.2740865,
+          "mtime": 1786738568.2740865,
+          "feature_count": 11703,
+          "schema_fingerprint": "00be7710f25ad0e0"
+        }
+      },
+      "changes": [
+        "publico_proyectos_infraestructura.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.051118Z",
+      "breaking": false,
+      "assets": {
+        "publico_proyectos_infraestructura.parquet": {
+          "sha256": "782ed38e224892c115f051be7064ca9b3d41be4ab7ba9f0611494d532fd147c3",
+          "size_bytes": 789020,
+          "href": "servicios-municipales/proyectos_infraestructura/publico_proyectos_infraestructura.parquet",
+          "source_mtime": 1786738568.2740865,
+          "mtime": 1786738568.2740865,
+          "feature_count": 11703,
+          "schema_fingerprint": "00be7710f25ad0e0"
+        },
+        "README.md": {
+          "sha256": "8eeaefb78d3840b9518ab27b7d3a27c09bf534bc1667b97d6b496b577daf3cad",
+          "size_bytes": 1568,
+          "href": "servicios-municipales/proyectos_infraestructura/README.md",
+          "mtime": 1786738641.380729
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:24:44.329173Z",
+      "breaking": false,
+      "assets": {
+        "publico_proyectos_infraestructura.parquet": {
+          "sha256": "782ed38e224892c115f051be7064ca9b3d41be4ab7ba9f0611494d532fd147c3",
+          "size_bytes": 789020,
+          "href": "servicios-municipales/proyectos_infraestructura/publico_proyectos_infraestructura.parquet",
+          "source_mtime": 1786738568.2740865,
+          "mtime": 1786738568.2740865,
+          "feature_count": 11703,
+          "schema_fingerprint": "00be7710f25ad0e0"
+        },
+        "README.md": {
+          "sha256": "8eeaefb78d3840b9518ab27b7d3a27c09bf534bc1667b97d6b496b577daf3cad",
+          "size_bytes": 1568,
+          "href": "servicios-municipales/proyectos_infraestructura/README.md",
+          "mtime": 1786738641.380729
+        },
+        "publico_proyectos_infraestructura.pmtiles": {
+          "sha256": "4166172fcc6e4d76aa52d54170c39340809a6a64b37d3164c7712e51c5702374",
+          "size_bytes": 4949170,
+          "href": "servicios-municipales/proyectos_infraestructura/publico_proyectos_infraestructura.pmtiles",
+          "mtime": 1786739083.8798087
+        },
+        "publico_proyectos_infraestructura.thumb.jpg": {
+          "sha256": "eecd168bcace4829bd63982fa591236b9038ed5f7d2f8daf89b084e7bcd49869",
+          "size_bytes": 32607,
+          "href": "servicios-municipales/proyectos_infraestructura/publico_proyectos_infraestructura.thumb.jpg",
+          "mtime": 1786740156.622341
+        }
+      },
+      "changes": [
+        "publico_proyectos_infraestructura.pmtiles",
+        "publico_proyectos_infraestructura.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_proyectos_infraestructura.pmtiles, publico_proyectos_infraestructura.thumb.jpg"
+    }
+  ]
+}

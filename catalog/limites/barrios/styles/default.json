@@ -1,0 +1,79 @@
+{
+  "version": 8,
+  "name": "barrios_y_pueblos",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_barrios.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_barrios",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "color_id"
+          ],
+          1,
+          "#c4db69",
+          2,
+          "#4bdf5c",
+          3,
+          "#4b4eee",
+          4,
+          "#6ed0d5",
+          5,
+          "#e87749",
+          6,
+          "#83e0b9",
+          7,
+          "#8c4cda",
+          8,
+          "#156fc9",
+          9,
+          "#e56a81",
+          10,
+          "#5dda1e",
+          11,
+          "#cf7fd7",
+          12,
+          "#da2a9a",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.4,
+        "fill-outline-color": "#ffffff"
+      }
+    },
+    {
+      "id": "categorical-fill-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_barrios",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 10.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

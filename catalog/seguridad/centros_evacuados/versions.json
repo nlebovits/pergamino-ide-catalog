@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.412282Z",
+      "breaking": false,
+      "assets": {
+        "publico_centros_evacuados.parquet": {
+          "sha256": "49a29742190cf219dfa7267ca151dfb8a85d2e71bad1273fd2c8668878ae096d",
+          "size_bytes": 5212,
+          "href": "publico_centros_evacuados/publico_centros_evacuados.parquet",
+          "source_mtime": 1786738122.3399353,
+          "mtime": 1786738122.3399353,
+          "feature_count": 5,
+          "schema_fingerprint": "6c977413e9dfb247"
+        }
+      },
+      "changes": [
+        "publico_centros_evacuados.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.954542Z",
+      "breaking": false,
+      "assets": {
+        "publico_centros_evacuados.parquet": {
+          "sha256": "49a29742190cf219dfa7267ca151dfb8a85d2e71bad1273fd2c8668878ae096d",
+          "size_bytes": 5212,
+          "href": "seguridad/centros_evacuados/publico_centros_evacuados.parquet",
+          "source_mtime": 1786738122.3399353,
+          "mtime": 1786738122.3399353,
+          "feature_count": 5,
+          "schema_fingerprint": "6c977413e9dfb247"
+        },
+        "README.md": {
+          "sha256": "81733f12cf9964fc525d7a14e6a7e8e77fc2ba3b2a71257c95c42132bd120777",
+          "size_bytes": 4408,
+          "href": "seguridad/centros_evacuados/README.md",
+          "mtime": 1786738803.974306
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:10.565467Z",
+      "breaking": false,
+      "assets": {
+        "publico_centros_evacuados.parquet": {
+          "sha256": "49a29742190cf219dfa7267ca151dfb8a85d2e71bad1273fd2c8668878ae096d",
+          "size_bytes": 5212,
+          "href": "seguridad/centros_evacuados/publico_centros_evacuados.parquet",
+          "source_mtime": 1786738122.3399353,
+          "mtime": 1786738122.3399353,
+          "feature_count": 5,
+          "schema_fingerprint": "6c977413e9dfb247"
+        },
+        "README.md": {
+          "sha256": "81733f12cf9964fc525d7a14e6a7e8e77fc2ba3b2a71257c95c42132bd120777",
+          "size_bytes": 4408,
+          "href": "seguridad/centros_evacuados/README.md",
+          "mtime": 1786738803.974306
+        },
+        "publico_centros_evacuados.pmtiles": {
+          "sha256": "15a3908de114c67313f91fe0e0aace112edbde4d908eb711fcadf61f0c65c19e",
+          "size_bytes": 8010,
+          "href": "seguridad/centros_evacuados/publico_centros_evacuados.pmtiles",
+          "mtime": 1786739110.4130356
+        },
+        "publico_centros_evacuados.thumb.jpg": {
+          "sha256": "06818587e8e2a643f857ea435e5d6ae0f9ec06cb51c559ca901cac3ffc12ef97",
+          "size_bytes": 11262,
+          "href": "seguridad/centros_evacuados/publico_centros_evacuados.thumb.jpg",
+          "mtime": 1786740150.4132936
+        }
+      },
+      "changes": [
+        "publico_centros_evacuados.pmtiles",
+        "publico_centros_evacuados.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_centros_evacuados.pmtiles, publico_centros_evacuados.thumb.jpg"
+    }
+  ]
+}

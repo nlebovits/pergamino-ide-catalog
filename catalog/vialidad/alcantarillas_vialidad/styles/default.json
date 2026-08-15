@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "alcantarillas_vialidad",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_alcantarillas_vialidad.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_alcantarillas_vialidad",
+      "paint": {
+        "circle-color": "#b8b8b8",
+        "circle-radius": 3.5,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

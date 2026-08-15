@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.425477Z",
+      "breaking": false,
+      "assets": {
+        "publico_linea_parque_industrial.parquet": {
+          "sha256": "202b614d9302714457f2534f3d7e31123cba8818544bcf06610293ea4fb30bc4",
+          "size_bytes": 8049,
+          "href": "publico_linea_parque_industrial/publico_linea_parque_industrial.parquet",
+          "source_mtime": 1786738498.3745925,
+          "mtime": 1786738498.3745925,
+          "feature_count": 2,
+          "schema_fingerprint": "19b641044a1ddef3"
+        }
+      },
+      "changes": [
+        "publico_linea_parque_industrial.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.264830Z",
+      "breaking": false,
+      "assets": {
+        "publico_linea_parque_industrial.parquet": {
+          "sha256": "202b614d9302714457f2534f3d7e31123cba8818544bcf06610293ea4fb30bc4",
+          "size_bytes": 8049,
+          "href": "transporte/linea_parque_industrial/publico_linea_parque_industrial.parquet",
+          "source_mtime": 1786738498.3745925,
+          "mtime": 1786738498.3745925,
+          "feature_count": 2,
+          "schema_fingerprint": "19b641044a1ddef3"
+        },
+        "README.md": {
+          "sha256": "b748b0bafa4df2d4ef2c119378bdf22d7e8ff5d8483b5e07574e569fdc2ade2a",
+          "size_bytes": 1390,
+          "href": "transporte/linea_parque_industrial/README.md",
+          "mtime": 1786738641.2517276
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:09.388923Z",
+      "breaking": false,
+      "assets": {
+        "publico_linea_parque_industrial.parquet": {
+          "sha256": "202b614d9302714457f2534f3d7e31123cba8818544bcf06610293ea4fb30bc4",
+          "size_bytes": 8049,
+          "href": "transporte/linea_parque_industrial/publico_linea_parque_industrial.parquet",
+          "source_mtime": 1786738498.3745925,
+          "mtime": 1786738498.3745925,
+          "feature_count": 2,
+          "schema_fingerprint": "19b641044a1ddef3"
+        },
+        "README.md": {
+          "sha256": "b748b0bafa4df2d4ef2c119378bdf22d7e8ff5d8483b5e07574e569fdc2ade2a",
+          "size_bytes": 1390,
+          "href": "transporte/linea_parque_industrial/README.md",
+          "mtime": 1786738641.2517276
+        },
+        "publico_linea_parque_industrial.pmtiles": {
+          "sha256": "40b533a8af006d369506719c0447a9593b215fc13ac64e394d0666fc0b156f30",
+          "size_bytes": 8248,
+          "href": "transporte/linea_parque_industrial/publico_linea_parque_industrial.pmtiles",
+          "mtime": 1786739225.8080072
+        },
+        "publico_linea_parque_industrial.thumb.jpg": {
+          "sha256": "b5c9e6acf2a24658c4ab41054dc3d030fc604b8050240c367c1a583f863b7ba9",
+          "size_bytes": 11019,
+          "href": "transporte/linea_parque_industrial/publico_linea_parque_industrial.thumb.jpg",
+          "mtime": 1786740169.716441
+        }
+      },
+      "changes": [
+        "publico_linea_parque_industrial.pmtiles",
+        "publico_linea_parque_industrial.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_linea_parque_industrial.pmtiles, publico_linea_parque_industrial.thumb.jpg"
+    }
+  ]
+}

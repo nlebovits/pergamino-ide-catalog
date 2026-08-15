@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "centros_de_desarrollo_comunitario",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_centros_de_desarrollo_comunitario.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_centros_de_desarrollo_comunitario",
+      "paint": {
+        "circle-color": "#888888",
+        "circle-radius": 9.0,
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "circle-0-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_centros_de_desarrollo_comunitario",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 12.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

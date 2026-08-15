@@ -1,0 +1,65 @@
+{
+  "version": 8,
+  "name": "educacion_nivel",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_educacion_nivel.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_educacion_nivel",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "nivel"
+          ],
+          "especial",
+          "#4c50d1",
+          "formacion",
+          "#c220e6",
+          "inicial",
+          "#dc800e",
+          "primaria",
+          "#ec4a80",
+          "secundaria",
+          "#c0e982",
+          "superior",
+          "#25c4d5",
+          "#cccccc"
+        ],
+        "circle-radius": 7.0,
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-circle-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_educacion_nivel",
+      "layout": {
+        "text-field": [
+          "get",
+          "nivel"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

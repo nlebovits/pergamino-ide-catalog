@@ -1,0 +1,65 @@
+{
+  "version": 8,
+  "name": "hospedajes",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_hospedajes.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_hospedajes",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Camping",
+          "#e8104d",
+          "Hotel",
+          "#b465d1",
+          "Motel",
+          "#88ecd0",
+          "Residencial",
+          "#dab044",
+          "Rural",
+          "#708dd6",
+          "#cccccc"
+        ],
+        "circle-radius": 7.0,
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-circle-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_hospedajes",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

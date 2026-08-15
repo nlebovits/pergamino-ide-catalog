@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "areas_programaticas_desarrollo_social",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_areas_programaticas_desarrollo_social.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_areas_programaticas_desarrollo_social",
+      "paint": {
+        "fill-color": "#377eb8",
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#265980"
+      }
+    }
+  ]
+}

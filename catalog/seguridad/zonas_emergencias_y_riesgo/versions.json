@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.861429Z",
+      "breaking": false,
+      "assets": {
+        "publico_zonas_emergencias_y_riesgo.parquet": {
+          "sha256": "2158c102dd5725f628b9022ddc7bc541b1ef9466ddddf27d99d99033ca888686",
+          "size_bytes": 7338,
+          "href": "publico_zonas_emergencias_y_riesgo/publico_zonas_emergencias_y_riesgo.parquet",
+          "source_mtime": 1786738630.1426153,
+          "mtime": 1786738630.1426153,
+          "feature_count": 9,
+          "schema_fingerprint": "480a76016f99a5ca"
+        }
+      },
+      "changes": [
+        "publico_zonas_emergencias_y_riesgo.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.972715Z",
+      "breaking": false,
+      "assets": {
+        "publico_zonas_emergencias_y_riesgo.parquet": {
+          "sha256": "2158c102dd5725f628b9022ddc7bc541b1ef9466ddddf27d99d99033ca888686",
+          "size_bytes": 7338,
+          "href": "seguridad/zonas_emergencias_y_riesgo/publico_zonas_emergencias_y_riesgo.parquet",
+          "source_mtime": 1786738630.1426153,
+          "mtime": 1786738630.1426153,
+          "feature_count": 9,
+          "schema_fingerprint": "480a76016f99a5ca"
+        },
+        "README.md": {
+          "sha256": "6be05b1f7be16041b9acfb3b008a3905654d5fee3f5ef44d8988adf04c6f2a02",
+          "size_bytes": 1173,
+          "href": "seguridad/zonas_emergencias_y_riesgo/README.md",
+          "mtime": 1786738641.5247302
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:37.072911Z",
+      "breaking": false,
+      "assets": {
+        "publico_zonas_emergencias_y_riesgo.parquet": {
+          "sha256": "2158c102dd5725f628b9022ddc7bc541b1ef9466ddddf27d99d99033ca888686",
+          "size_bytes": 7338,
+          "href": "seguridad/zonas_emergencias_y_riesgo/publico_zonas_emergencias_y_riesgo.parquet",
+          "source_mtime": 1786738630.1426153,
+          "mtime": 1786738630.1426153,
+          "feature_count": 9,
+          "schema_fingerprint": "480a76016f99a5ca"
+        },
+        "README.md": {
+          "sha256": "6be05b1f7be16041b9acfb3b008a3905654d5fee3f5ef44d8988adf04c6f2a02",
+          "size_bytes": 1173,
+          "href": "seguridad/zonas_emergencias_y_riesgo/README.md",
+          "mtime": 1786738641.5247302
+        },
+        "publico_zonas_emergencias_y_riesgo.pmtiles": {
+          "sha256": "3ba6b06fb40ea35fcd4dc6b6555306d174971e130e67302d7ab242b9ea7ba413",
+          "size_bytes": 29632,
+          "href": "seguridad/zonas_emergencias_y_riesgo/publico_zonas_emergencias_y_riesgo.pmtiles",
+          "mtime": 1786739315.9927516
+        },
+        "publico_zonas_emergencias_y_riesgo.thumb.jpg": {
+          "sha256": "efc92ee5e2e19989d60f534f947ee8b57c9da06abc9f641800e1061d42a6f38c",
+          "size_bytes": 14475,
+          "href": "seguridad/zonas_emergencias_y_riesgo/publico_zonas_emergencias_y_riesgo.thumb.jpg",
+          "mtime": 1786740151.1832995
+        }
+      },
+      "changes": [
+        "publico_zonas_emergencias_y_riesgo.pmtiles",
+        "publico_zonas_emergencias_y_riesgo.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_zonas_emergencias_y_riesgo.pmtiles, publico_zonas_emergencias_y_riesgo.thumb.jpg"
+    }
+  ]
+}

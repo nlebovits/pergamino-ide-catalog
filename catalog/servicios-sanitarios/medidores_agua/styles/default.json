@@ -1,0 +1,63 @@
+{
+  "version": 8,
+  "name": "medidores_agua",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_medidores_agua.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_medidores_agua",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "etapa"
+          ],
+          "Plan Piloto de Agua Sur",
+          "#4daf4a",
+          "Primera etapa",
+          "#984ea3",
+          "Segunda etapa",
+          "#ffff33",
+          "Laguna del Virrey",
+          "#e61f18",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#232323"
+      }
+    },
+    {
+      "id": "categorical-fill-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_medidores_agua",
+      "layout": {
+        "text-field": [
+          "get",
+          "etiqueta"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#323232",
+        "text-halo-color": "#fafafa",
+        "text-halo-width": 1.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

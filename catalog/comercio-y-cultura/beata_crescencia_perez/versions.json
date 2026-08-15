@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.291164Z",
+      "breaking": false,
+      "assets": {
+        "publico_beata_crescencia_perez.parquet": {
+          "sha256": "a00fbd9f2f7ce7c1ddd0b911da94c37844aee01ee0426080588d9acd2d6c9214",
+          "size_bytes": 3486,
+          "href": "publico_beata_crescencia_perez/publico_beata_crescencia_perez.parquet",
+          "source_mtime": 1786738056.2824686,
+          "mtime": 1786738056.2824686,
+          "feature_count": 3,
+          "schema_fingerprint": "7802343fc9235b05"
+        }
+      },
+      "changes": [
+        "publico_beata_crescencia_perez.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.589959Z",
+      "breaking": false,
+      "assets": {
+        "publico_beata_crescencia_perez.parquet": {
+          "sha256": "a00fbd9f2f7ce7c1ddd0b911da94c37844aee01ee0426080588d9acd2d6c9214",
+          "size_bytes": 3486,
+          "href": "comercio-y-cultura/beata_crescencia_perez/publico_beata_crescencia_perez.parquet",
+          "source_mtime": 1786738056.2824686,
+          "mtime": 1786738056.2824686,
+          "feature_count": 3,
+          "schema_fingerprint": "7802343fc9235b05"
+        },
+        "README.md": {
+          "sha256": "7c18f30e406fd3aaea919ca08d34209a9fd9c5ef6afe442ac6f7f418b4a282ca",
+          "size_bytes": 4319,
+          "href": "comercio-y-cultura/beata_crescencia_perez/README.md",
+          "mtime": 1786738803.9173055
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:41.309226Z",
+      "breaking": false,
+      "assets": {
+        "publico_beata_crescencia_perez.parquet": {
+          "sha256": "a00fbd9f2f7ce7c1ddd0b911da94c37844aee01ee0426080588d9acd2d6c9214",
+          "size_bytes": 3486,
+          "href": "comercio-y-cultura/beata_crescencia_perez/publico_beata_crescencia_perez.parquet",
+          "source_mtime": 1786738056.2824686,
+          "mtime": 1786738056.2824686,
+          "feature_count": 3,
+          "schema_fingerprint": "7802343fc9235b05"
+        },
+        "README.md": {
+          "sha256": "7c18f30e406fd3aaea919ca08d34209a9fd9c5ef6afe442ac6f7f418b4a282ca",
+          "size_bytes": 4319,
+          "href": "comercio-y-cultura/beata_crescencia_perez/README.md",
+          "mtime": 1786738803.9173055
+        },
+        "publico_beata_crescencia_perez.pmtiles": {
+          "sha256": "386424695fcd1f518716bf48bb7db95e7d7a1d01aaf3c0f7767147b243d257b8",
+          "size_bytes": 3262,
+          "href": "comercio-y-cultura/beata_crescencia_perez/publico_beata_crescencia_perez.pmtiles",
+          "mtime": 1786739261.1533005
+        },
+        "publico_beata_crescencia_perez.thumb.jpg": {
+          "sha256": "7e010d5ed005d43d897cefdf28bc3dbd3a11617aed2b735da6fd580fd1afec73",
+          "size_bytes": 7892,
+          "href": "comercio-y-cultura/beata_crescencia_perez/publico_beata_crescencia_perez.thumb.jpg",
+          "mtime": 1786740132.026153
+        }
+      },
+      "changes": [
+        "publico_beata_crescencia_perez.pmtiles",
+        "publico_beata_crescencia_perez.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_beata_crescencia_perez.pmtiles, publico_beata_crescencia_perez.thumb.jpg"
+    }
+  ]
+}

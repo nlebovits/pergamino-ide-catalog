@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "estacionamiento_nocturno",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_estacionamiento_nocturno.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "line-0",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_estacionamiento_nocturno",
+      "paint": {
+        "line-color": "#487bb6",
+        "line-width": 9.0,
+        "line-opacity": 1.0
+      }
+    }
+  ]
+}

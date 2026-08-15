@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "riego_por_pivote_central",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_riego_por_pivote_central.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_riego_por_pivote_central",
+      "paint": {
+        "fill-color": "#a4d858",
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#93c000"
+      }
+    }
+  ]
+}

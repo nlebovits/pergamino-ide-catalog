@@ -1,0 +1,26 @@
+# .portolan/metadata.yaml
+#
+# Auto-seeded from: wfs
+# Review and complete fields marked with "TODO".
+#
+# Required fields:
+#   - contact.name: Person or team responsible
+#   - contact.email: Contact email address
+#   - license: SPDX identifier (e.g., "CC-BY-4.0", "MIT", "CC0-1.0")
+#
+# See: https://portolan.dev/docs/metadata for field descriptions
+
+contact:
+  name: 'TODO: Add value'
+  email: 'TODO: Add value'
+source_url: https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Asuelos_pergamino_50mil
+description: Cartas de Suelos República Argentina - Provincia de Buenos Aires (INTA).
+  El Plan Mapa de Suelos de la Región Pampeana en el año 1964 marca la etapa de mayor
+  trascendencia del inventario de los suelos de nuestro país a escala de semidetalle
+  y de reconocimiento (1:50.000 - 1:100.000). Las Cartas de Suelos de la Provincia
+  de Buenos Aires son el resultado de este plan y la continuación de las tareas de
+  relevamiento y cartografía de suelos hasta la actualidad.
+keywords:
+- features
+- suelos_pergamino_50mil
+processing_notes: 'Extracted from wfs layer: publico:suelos_pergamino_50mil (suelos_pergamino_50mil)'

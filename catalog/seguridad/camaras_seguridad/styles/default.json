@@ -1,0 +1,44 @@
+{
+  "version": 8,
+  "name": "camaras_seguridad",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_camaras_seguridad.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_camaras_seguridad",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "cuadricula"
+          ],
+          "C1A",
+          "#b0dfe2",
+          "C1B",
+          "#bfda99",
+          "C2A",
+          "#959fbc",
+          "C2B",
+          "#c6a5c7",
+          "C3A",
+          "#f680be",
+          "C3B",
+          "#fde594",
+          "#cccccc"
+        ],
+        "circle-radius": 7.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

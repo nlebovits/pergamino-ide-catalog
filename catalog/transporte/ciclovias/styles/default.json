@@ -1,0 +1,38 @@
+{
+  "version": 8,
+  "name": "ciclovia",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_ciclovias.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_ciclovias",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "lado_ciclovia"
+          ],
+          "ambos",
+          "#0068e8",
+          "impar",
+          "#0068e8",
+          "par",
+          "#0068e8",
+          "#cccccc"
+        ],
+        "line-width": 2.0,
+        "line-opacity": 1.0
+      }
+    }
+  ]
+}

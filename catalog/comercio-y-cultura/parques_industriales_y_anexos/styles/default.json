@@ -1,0 +1,59 @@
+{
+  "version": 8,
+  "name": "parques_industriales_y_anexos",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_parques_industriales_y_anexos.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_parques_industriales_y_anexos",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "estado"
+          ],
+          "activo",
+          "#80d456",
+          "en construcción",
+          "#d8642e",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#232323"
+      }
+    },
+    {
+      "id": "categorical-fill-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_parques_industriales_y_anexos",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 11.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#323232",
+        "text-halo-color": "#fafafa",
+        "text-halo-width": 2.0
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

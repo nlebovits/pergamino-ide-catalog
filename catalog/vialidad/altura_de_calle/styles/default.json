@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "Default",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_altura_de_calle.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "publico_altura_de_calle-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_altura_de_calle",
+      "paint": {
+        "line-color": "#3388ff",
+        "line-width": 2,
+        "line-opacity": 0.8
+      }
+    }
+  ]
+}

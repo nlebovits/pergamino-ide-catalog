@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.168604Z",
+      "breaking": false,
+      "assets": {
+        "publico_estaciones_de_bombeo.parquet": {
+          "sha256": "2ed454e5d2283e691e607668c8b57eade46ac81203fc8654199652c6e2332f6e",
+          "size_bytes": 4327,
+          "href": "publico_estaciones_de_bombeo/publico_estaciones_de_bombeo.parquet",
+          "source_mtime": 1786738397.3168783,
+          "mtime": 1786738397.3168783,
+          "feature_count": 4,
+          "schema_fingerprint": "83fa8c7b2ae4783e"
+        }
+      },
+      "changes": [
+        "publico_estaciones_de_bombeo.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.129943Z",
+      "breaking": false,
+      "assets": {
+        "publico_estaciones_de_bombeo.parquet": {
+          "sha256": "2ed454e5d2283e691e607668c8b57eade46ac81203fc8654199652c6e2332f6e",
+          "size_bytes": 4327,
+          "href": "servicios-sanitarios/estaciones_de_bombeo/publico_estaciones_de_bombeo.parquet",
+          "source_mtime": 1786738397.3168783,
+          "mtime": 1786738397.3168783,
+          "feature_count": 4,
+          "schema_fingerprint": "83fa8c7b2ae4783e"
+        },
+        "README.md": {
+          "sha256": "cadd3ca822dfe2ab414b417fe2e2f3d8b4feea1d8d5789b172505c45dec5477d",
+          "size_bytes": 1200,
+          "href": "servicios-sanitarios/estaciones_de_bombeo/README.md",
+          "mtime": 1786738641.0757258
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:27.942341Z",
+      "breaking": false,
+      "assets": {
+        "publico_estaciones_de_bombeo.parquet": {
+          "sha256": "2ed454e5d2283e691e607668c8b57eade46ac81203fc8654199652c6e2332f6e",
+          "size_bytes": 4327,
+          "href": "servicios-sanitarios/estaciones_de_bombeo/publico_estaciones_de_bombeo.parquet",
+          "source_mtime": 1786738397.3168783,
+          "mtime": 1786738397.3168783,
+          "feature_count": 4,
+          "schema_fingerprint": "83fa8c7b2ae4783e"
+        },
+        "README.md": {
+          "sha256": "cadd3ca822dfe2ab414b417fe2e2f3d8b4feea1d8d5789b172505c45dec5477d",
+          "size_bytes": 1200,
+          "href": "servicios-sanitarios/estaciones_de_bombeo/README.md",
+          "mtime": 1786738641.0757258
+        },
+        "publico_estaciones_de_bombeo.pmtiles": {
+          "sha256": "1c3972d2fb7da08ec59d5d87bae77c223df3ab31da8874fbeb816278555e5f2c",
+          "size_bytes": 5075,
+          "href": "servicios-sanitarios/estaciones_de_bombeo/publico_estaciones_de_bombeo.pmtiles",
+          "mtime": 1786739187.7896898
+        },
+        "publico_estaciones_de_bombeo.thumb.jpg": {
+          "sha256": "9b40b9b0f5ee5dc7fb079d5a807719dc2beb6772a08806ec99b26f43caa0278f",
+          "size_bytes": 12053,
+          "href": "servicios-sanitarios/estaciones_de_bombeo/publico_estaciones_de_bombeo.thumb.jpg",
+          "mtime": 1786740163.0783904
+        }
+      },
+      "changes": [
+        "publico_estaciones_de_bombeo.pmtiles",
+        "publico_estaciones_de_bombeo.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_estaciones_de_bombeo.pmtiles, publico_estaciones_de_bombeo.thumb.jpg"
+    }
+  ]
+}

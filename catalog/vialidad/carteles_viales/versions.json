@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.349388Z",
+      "breaking": false,
+      "assets": {
+        "publico_carteles_viales.parquet": {
+          "sha256": "f3d88aa2e1d7ee7199b1b1190c92b2cf85d3f2a627dda95c8caf232f361be24e",
+          "size_bytes": 125239,
+          "href": "publico_carteles_viales/publico_carteles_viales.parquet",
+          "source_mtime": 1786738081.274645,
+          "mtime": 1786738081.274645,
+          "feature_count": 3002,
+          "schema_fingerprint": "677960d5d5c77b7c"
+        }
+      },
+      "changes": [
+        "publico_carteles_viales.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.319818Z",
+      "breaking": false,
+      "assets": {
+        "publico_carteles_viales.parquet": {
+          "sha256": "f3d88aa2e1d7ee7199b1b1190c92b2cf85d3f2a627dda95c8caf232f361be24e",
+          "size_bytes": 125239,
+          "href": "vialidad/carteles_viales/publico_carteles_viales.parquet",
+          "source_mtime": 1786738081.274645,
+          "mtime": 1786738081.274645,
+          "feature_count": 3002,
+          "schema_fingerprint": "677960d5d5c77b7c"
+        },
+        "README.md": {
+          "sha256": "c1bcf73c4901d96aad39ff1f1424fd5d1df2eeb518c75e3d050fabe95cd9744b",
+          "size_bytes": 4586,
+          "href": "vialidad/carteles_viales/README.md",
+          "mtime": 1786738803.9393058
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:05.618715Z",
+      "breaking": false,
+      "assets": {
+        "publico_carteles_viales.parquet": {
+          "sha256": "f3d88aa2e1d7ee7199b1b1190c92b2cf85d3f2a627dda95c8caf232f361be24e",
+          "size_bytes": 125239,
+          "href": "vialidad/carteles_viales/publico_carteles_viales.parquet",
+          "source_mtime": 1786738081.274645,
+          "mtime": 1786738081.274645,
+          "feature_count": 3002,
+          "schema_fingerprint": "677960d5d5c77b7c"
+        },
+        "README.md": {
+          "sha256": "c1bcf73c4901d96aad39ff1f1424fd5d1df2eeb518c75e3d050fabe95cd9744b",
+          "size_bytes": 4586,
+          "href": "vialidad/carteles_viales/README.md",
+          "mtime": 1786738803.9393058
+        },
+        "publico_carteles_viales.pmtiles": {
+          "sha256": "e02ba16e191b9de946892e66c7124abec6868351862134ff70885a627167bd71",
+          "size_bytes": 70269,
+          "href": "vialidad/carteles_viales/publico_carteles_viales.pmtiles",
+          "mtime": 1786739285.4585009
+        },
+        "publico_carteles_viales.thumb.jpg": {
+          "sha256": "eee5ca4998b106b479616da4d8f4fa92f9b9d784a408f83c0cd74b8f07b5c4b3",
+          "size_bytes": 8927,
+          "href": "vialidad/carteles_viales/publico_carteles_viales.thumb.jpg",
+          "mtime": 1786740172.2614603
+        }
+      },
+      "changes": [
+        "publico_carteles_viales.pmtiles",
+        "publico_carteles_viales.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_carteles_viales.pmtiles, publico_carteles_viales.thumb.jpg"
+    }
+  ]
+}

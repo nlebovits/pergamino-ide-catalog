@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "beata_crescencia_perez",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_beata_crescencia_perez.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_beata_crescencia_perez",
+      "paint": {
+        "circle-color": "#888888",
+        "circle-radius": 15.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

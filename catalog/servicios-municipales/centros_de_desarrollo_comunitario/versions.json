@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.394414Z",
+      "breaking": false,
+      "assets": {
+        "publico_centros_de_desarrollo_comunitario.parquet": {
+          "sha256": "0b946df452878dd846f355bc6f5a9ff3ede248c7dcd2170bdd646a0ceacc46f4",
+          "size_bytes": 4848,
+          "href": "publico_centros_de_desarrollo_comunitario/publico_centros_de_desarrollo_comunitario.parquet",
+          "source_mtime": 1786738117.5629015,
+          "mtime": 1786738117.5629015,
+          "feature_count": 11,
+          "schema_fingerprint": "6850ae209a841ab5"
+        }
+      },
+      "changes": [
+        "publico_centros_de_desarrollo_comunitario.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.005724Z",
+      "breaking": false,
+      "assets": {
+        "publico_centros_de_desarrollo_comunitario.parquet": {
+          "sha256": "0b946df452878dd846f355bc6f5a9ff3ede248c7dcd2170bdd646a0ceacc46f4",
+          "size_bytes": 4848,
+          "href": "servicios-municipales/centros_de_desarrollo_comunitario/publico_centros_de_desarrollo_comunitario.parquet",
+          "source_mtime": 1786738117.5629015,
+          "mtime": 1786738117.5629015,
+          "feature_count": 11,
+          "schema_fingerprint": "6850ae209a841ab5"
+        },
+        "README.md": {
+          "sha256": "730481f9fbba26a1664699e0a083d5030a8baa020d50dd9574ae1373d9a90a42",
+          "size_bytes": 4396,
+          "href": "servicios-municipales/centros_de_desarrollo_comunitario/README.md",
+          "mtime": 1786738803.969306
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:46.111706Z",
+      "breaking": false,
+      "assets": {
+        "publico_centros_de_desarrollo_comunitario.parquet": {
+          "sha256": "0b946df452878dd846f355bc6f5a9ff3ede248c7dcd2170bdd646a0ceacc46f4",
+          "size_bytes": 4848,
+          "href": "servicios-municipales/centros_de_desarrollo_comunitario/publico_centros_de_desarrollo_comunitario.parquet",
+          "source_mtime": 1786738117.5629015,
+          "mtime": 1786738117.5629015,
+          "feature_count": 11,
+          "schema_fingerprint": "6850ae209a841ab5"
+        },
+        "README.md": {
+          "sha256": "730481f9fbba26a1664699e0a083d5030a8baa020d50dd9574ae1373d9a90a42",
+          "size_bytes": 4396,
+          "href": "servicios-municipales/centros_de_desarrollo_comunitario/README.md",
+          "mtime": 1786738803.969306
+        },
+        "publico_centros_de_desarrollo_comunitario.pmtiles": {
+          "sha256": "d18d9b4f9122817b48e81cc78bb6882d5b607c13cf8d26e611ae88fa3b42fb55",
+          "size_bytes": 12308,
+          "href": "servicios-municipales/centros_de_desarrollo_comunitario/publico_centros_de_desarrollo_comunitario.pmtiles",
+          "mtime": 1786739145.9423373
+        },
+        "publico_centros_de_desarrollo_comunitario.thumb.jpg": {
+          "sha256": "bceece4055a215e8345f4bcb860410f809142ed89d48993df0ab94883ce8d76c",
+          "size_bytes": 8013,
+          "href": "servicios-municipales/centros_de_desarrollo_comunitario/publico_centros_de_desarrollo_comunitario.thumb.jpg",
+          "mtime": 1786740153.073314
+        }
+      },
+      "changes": [
+        "publico_centros_de_desarrollo_comunitario.pmtiles",
+        "publico_centros_de_desarrollo_comunitario.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_centros_de_desarrollo_comunitario.pmtiles, publico_centros_de_desarrollo_comunitario.thumb.jpg"
+    }
+  ]
+}

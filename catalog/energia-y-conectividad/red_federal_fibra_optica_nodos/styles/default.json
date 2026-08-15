@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "red_federal_fibra_optica_nodos",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_red_federal_fibra_optica_nodos.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_red_federal_fibra_optica_nodos",
+      "paint": {
+        "circle-color": "#db1e2a",
+        "circle-radius": 3.5,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

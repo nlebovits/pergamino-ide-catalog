@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.620230Z",
+      "breaking": false,
+      "assets": {
+        "publico_proyecto_presa_area_inundable.parquet": {
+          "sha256": "2763fa5f448e3c6e0e9c1228f5d4997009d7b82b6a08d1ddd3f828d2f71fe73b",
+          "size_bytes": 20119,
+          "href": "publico_proyecto_presa_area_inundable/publico_proyecto_presa_area_inundable.parquet",
+          "source_mtime": 1786738561.70404,
+          "mtime": 1786738561.70404,
+          "feature_count": 1,
+          "schema_fingerprint": "0c002776bb7d71b8"
+        }
+      },
+      "changes": [
+        "publico_proyecto_presa_area_inundable.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.432800Z",
+      "breaking": false,
+      "assets": {
+        "publico_proyecto_presa_area_inundable.parquet": {
+          "sha256": "2763fa5f448e3c6e0e9c1228f5d4997009d7b82b6a08d1ddd3f828d2f71fe73b",
+          "size_bytes": 20119,
+          "href": "ambiente-y-agro/proyecto_presa_area_inundable/publico_proyecto_presa_area_inundable.parquet",
+          "source_mtime": 1786738561.70404,
+          "mtime": 1786738561.70404,
+          "feature_count": 1,
+          "schema_fingerprint": "0c002776bb7d71b8"
+        },
+        "README.md": {
+          "sha256": "15b45276b11a08daa390e670c5faff67adb8b2190e5c85584e29c253c8723cbb",
+          "size_bytes": 1214,
+          "href": "ambiente-y-agro/proyecto_presa_area_inundable/README.md",
+          "mtime": 1786738641.3757288
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:57.222581Z",
+      "breaking": false,
+      "assets": {
+        "publico_proyecto_presa_area_inundable.parquet": {
+          "sha256": "2763fa5f448e3c6e0e9c1228f5d4997009d7b82b6a08d1ddd3f828d2f71fe73b",
+          "size_bytes": 20119,
+          "href": "ambiente-y-agro/proyecto_presa_area_inundable/publico_proyecto_presa_area_inundable.parquet",
+          "source_mtime": 1786738561.70404,
+          "mtime": 1786738561.70404,
+          "feature_count": 1,
+          "schema_fingerprint": "0c002776bb7d71b8"
+        },
+        "README.md": {
+          "sha256": "15b45276b11a08daa390e670c5faff67adb8b2190e5c85584e29c253c8723cbb",
+          "size_bytes": 1214,
+          "href": "ambiente-y-agro/proyecto_presa_area_inundable/README.md",
+          "mtime": 1786738641.3757288
+        },
+        "publico_proyecto_presa_area_inundable.pmtiles": {
+          "sha256": "bab4ef741d3f84041171c3048d28fd4c6b9a8c865c0adee616f668baebe3e539",
+          "size_bytes": 58423,
+          "href": "ambiente-y-agro/proyecto_presa_area_inundable/publico_proyecto_presa_area_inundable.pmtiles",
+          "mtime": 1786739155.4044173
+        },
+        "publico_proyecto_presa_area_inundable.thumb.jpg": {
+          "sha256": "790a7cb4881d777f8485b7c1ad7856280bdf70820e98c200e1afc9c392086b01",
+          "size_bytes": 12515,
+          "href": "ambiente-y-agro/proyecto_presa_area_inundable/publico_proyecto_presa_area_inundable.thumb.jpg",
+          "mtime": 1786740092.5258512
+        }
+      },
+      "changes": [
+        "publico_proyecto_presa_area_inundable.pmtiles",
+        "publico_proyecto_presa_area_inundable.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_proyecto_presa_area_inundable.pmtiles, publico_proyecto_presa_area_inundable.thumb.jpg"
+    }
+  ]
+}

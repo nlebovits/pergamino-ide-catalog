@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "bomberos",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_bomberos.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_bomberos",
+      "paint": {
+        "circle-color": "#888888",
+        "circle-radius": 7.5,
+        "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "circle-0-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_bomberos",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 12.0,
+        "text-anchor": "top-left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

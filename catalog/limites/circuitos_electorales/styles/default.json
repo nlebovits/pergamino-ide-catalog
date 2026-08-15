@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "circuitos_electorales",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_circuitos_electorales.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_circuitos_electorales",
+      "paint": {
+        "fill-color": "#a7a7a7",
+        "fill-opacity": 1.0,
+        "fill-outline-color": "#ffffff"
+      }
+    }
+  ]
+}

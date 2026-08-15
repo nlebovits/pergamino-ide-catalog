@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.231074Z",
+      "breaking": false,
+      "assets": {
+        "publico_gomerias.parquet": {
+          "sha256": "a17bc8cfb6f7f7d31b1ed0f38f46e3a36536199dfabfb80b98d6cdca4d2a1598",
+          "size_bytes": 5593,
+          "href": "publico_gomerias/publico_gomerias.parquet",
+          "source_mtime": 1786738416.227012,
+          "mtime": 1786738416.227012,
+          "feature_count": 25,
+          "schema_fingerprint": "5f1ddfc3b5f5affb"
+        }
+      },
+      "changes": [
+        "publico_gomerias.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.637413Z",
+      "breaking": false,
+      "assets": {
+        "publico_gomerias.parquet": {
+          "sha256": "a17bc8cfb6f7f7d31b1ed0f38f46e3a36536199dfabfb80b98d6cdca4d2a1598",
+          "size_bytes": 5593,
+          "href": "comercio-y-cultura/gomerias/publico_gomerias.parquet",
+          "source_mtime": 1786738416.227012,
+          "mtime": 1786738416.227012,
+          "feature_count": 25,
+          "schema_fingerprint": "5f1ddfc3b5f5affb"
+        },
+        "README.md": {
+          "sha256": "5aeae12fb110d67f5aa806edb610a3c9fb19f163d58d4c5d2327b1888ed5739d",
+          "size_bytes": 1152,
+          "href": "comercio-y-cultura/gomerias/README.md",
+          "mtime": 1786738641.1197262
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:15.833635Z",
+      "breaking": false,
+      "assets": {
+        "publico_gomerias.parquet": {
+          "sha256": "a17bc8cfb6f7f7d31b1ed0f38f46e3a36536199dfabfb80b98d6cdca4d2a1598",
+          "size_bytes": 5593,
+          "href": "comercio-y-cultura/gomerias/publico_gomerias.parquet",
+          "source_mtime": 1786738416.227012,
+          "mtime": 1786738416.227012,
+          "feature_count": 25,
+          "schema_fingerprint": "5f1ddfc3b5f5affb"
+        },
+        "README.md": {
+          "sha256": "5aeae12fb110d67f5aa806edb610a3c9fb19f163d58d4c5d2327b1888ed5739d",
+          "size_bytes": 1152,
+          "href": "comercio-y-cultura/gomerias/README.md",
+          "mtime": 1786738641.1197262
+        },
+        "publico_gomerias.pmtiles": {
+          "sha256": "39292d79ce131b5f9e4a91e5c4b6b3c028b044e7e76698f3fda5a940011083f7",
+          "size_bytes": 7729,
+          "href": "comercio-y-cultura/gomerias/publico_gomerias.pmtiles",
+          "mtime": 1786739115.6890805
+        },
+        "publico_gomerias.thumb.jpg": {
+          "sha256": "41869509c9988c46952c961cf31bdf51167cf96dd1a2215464427f7dd56bdf72",
+          "size_bytes": 12532,
+          "href": "comercio-y-cultura/gomerias/publico_gomerias.thumb.jpg",
+          "mtime": 1786740134.3301709
+        }
+      },
+      "changes": [
+        "publico_gomerias.pmtiles",
+        "publico_gomerias.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_gomerias.pmtiles, publico_gomerias.thumb.jpg"
+    }
+  ]
+}

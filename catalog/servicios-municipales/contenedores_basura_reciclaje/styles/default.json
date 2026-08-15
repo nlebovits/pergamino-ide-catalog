@@ -1,0 +1,42 @@
+{
+  "version": 8,
+  "name": "contenedores",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_contenedores_basura_reciclaje.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_contenedores_basura_reciclaje",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "color"
+          ],
+          "amarillo",
+          "#e1e118",
+          "azul",
+          "#69a2eb",
+          "naranja",
+          "#e69a37",
+          "verde",
+          "#70D02C",
+          "gris",
+          "#bebebe",
+          "#cccccc"
+        ],
+        "circle-radius": 8.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

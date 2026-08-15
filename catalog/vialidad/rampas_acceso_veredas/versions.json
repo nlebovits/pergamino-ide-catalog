@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.696864Z",
+      "breaking": false,
+      "assets": {
+        "publico_rampas_acceso_veredas.parquet": {
+          "sha256": "ee8bcec1497217d406a24901b3ec3a23692899307bd5d3d6e15daca14619fde1",
+          "size_bytes": 77691,
+          "href": "publico_rampas_acceso_veredas/publico_rampas_acceso_veredas.parquet",
+          "source_mtime": 1786738019.1772063,
+          "mtime": 1786738019.1772063,
+          "feature_count": 1653,
+          "schema_fingerprint": "9d0c7d2798c3e2c1"
+        }
+      },
+      "changes": [
+        "publico_rampas_acceso_veredas.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.360004Z",
+      "breaking": false,
+      "assets": {
+        "publico_rampas_acceso_veredas.parquet": {
+          "sha256": "ee8bcec1497217d406a24901b3ec3a23692899307bd5d3d6e15daca14619fde1",
+          "size_bytes": 77691,
+          "href": "vialidad/rampas_acceso_veredas/publico_rampas_acceso_veredas.parquet",
+          "source_mtime": 1786738019.1772063,
+          "mtime": 1786738019.1772063,
+          "feature_count": 1653,
+          "schema_fingerprint": "9d0c7d2798c3e2c1"
+        },
+        "README.md": {
+          "sha256": "44faf77bb4b59f2de0ec6aaaeec70feb1f40956d5374bb2001a53d4f4b74925e",
+          "size_bytes": 4488,
+          "href": "vialidad/rampas_acceso_veredas/README.md",
+          "mtime": 1786738804.1023073
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:24:44.987805Z",
+      "breaking": false,
+      "assets": {
+        "publico_rampas_acceso_veredas.parquet": {
+          "sha256": "ee8bcec1497217d406a24901b3ec3a23692899307bd5d3d6e15daca14619fde1",
+          "size_bytes": 77691,
+          "href": "vialidad/rampas_acceso_veredas/publico_rampas_acceso_veredas.parquet",
+          "source_mtime": 1786738019.1772063,
+          "mtime": 1786738019.1772063,
+          "feature_count": 1653,
+          "schema_fingerprint": "9d0c7d2798c3e2c1"
+        },
+        "README.md": {
+          "sha256": "44faf77bb4b59f2de0ec6aaaeec70feb1f40956d5374bb2001a53d4f4b74925e",
+          "size_bytes": 4488,
+          "href": "vialidad/rampas_acceso_veredas/README.md",
+          "mtime": 1786738804.1023073
+        },
+        "publico_rampas_acceso_veredas.pmtiles": {
+          "sha256": "53329b1dd187a0c6ab1a72b5e6f5a478d3b16bd4881394098b18ac6e5be635de",
+          "size_bytes": 88999,
+          "href": "vialidad/rampas_acceso_veredas/publico_rampas_acceso_veredas.pmtiles",
+          "mtime": 1786739084.831817
+        },
+        "publico_rampas_acceso_veredas.thumb.jpg": {
+          "sha256": "2e226f4b582440aaef667b73ed792aed832bc6b8acc000c573a2d2c0bd8b3218",
+          "size_bytes": 6336,
+          "href": "vialidad/rampas_acceso_veredas/publico_rampas_acceso_veredas.thumb.jpg",
+          "mtime": 1786740174.952481
+        }
+      },
+      "changes": [
+        "publico_rampas_acceso_veredas.pmtiles",
+        "publico_rampas_acceso_veredas.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_rampas_acceso_veredas.pmtiles, publico_rampas_acceso_veredas.thumb.jpg"
+    }
+  ]
+}

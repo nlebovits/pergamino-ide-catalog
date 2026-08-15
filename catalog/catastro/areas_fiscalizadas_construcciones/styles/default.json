@@ -1,0 +1,37 @@
+{
+  "version": 8,
+  "name": "areas_fiscalizadas_construcciones",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_areas_fiscalizadas_construcciones.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_areas_fiscalizadas_construcciones",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "estado"
+          ],
+          "ejecucion",
+          "#E39A3B",
+          "finalizado",
+          "#70D02C",
+          "planificado",
+          "#FAFC54",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5
+      }
+    }
+  ]
+}

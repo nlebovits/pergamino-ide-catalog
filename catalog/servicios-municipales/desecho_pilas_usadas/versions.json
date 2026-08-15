@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.649317Z",
+      "breaking": false,
+      "assets": {
+        "publico_desecho_pilas_usadas.parquet": {
+          "sha256": "8a45559b81da08a3d2846af7d2a7ede3b7cc3a5c69dcd6a67e20a0c62b1f7a19",
+          "size_bytes": 4689,
+          "href": "publico_desecho_pilas_usadas/publico_desecho_pilas_usadas.parquet",
+          "source_mtime": 1786738214.9385896,
+          "mtime": 1786738214.9385896,
+          "feature_count": 2,
+          "schema_fingerprint": "e4a9f1e40f637446"
+        }
+      },
+      "changes": [
+        "publico_desecho_pilas_usadas.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.027439Z",
+      "breaking": false,
+      "assets": {
+        "publico_desecho_pilas_usadas.parquet": {
+          "sha256": "8a45559b81da08a3d2846af7d2a7ede3b7cc3a5c69dcd6a67e20a0c62b1f7a19",
+          "size_bytes": 4689,
+          "href": "servicios-municipales/desecho_pilas_usadas/publico_desecho_pilas_usadas.parquet",
+          "source_mtime": 1786738214.9385896,
+          "mtime": 1786738214.9385896,
+          "feature_count": 2,
+          "schema_fingerprint": "e4a9f1e40f637446"
+        },
+        "README.md": {
+          "sha256": "a5e070e10905dff7372e1ae636b4bc25dd4ff52072df2501e78a2e0857815f2b",
+          "size_bytes": 4368,
+          "href": "servicios-municipales/desecho_pilas_usadas/README.md",
+          "mtime": 1786738804.071307
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:23:55.145466Z",
+      "breaking": false,
+      "assets": {
+        "publico_desecho_pilas_usadas.parquet": {
+          "sha256": "8a45559b81da08a3d2846af7d2a7ede3b7cc3a5c69dcd6a67e20a0c62b1f7a19",
+          "size_bytes": 4689,
+          "href": "servicios-municipales/desecho_pilas_usadas/publico_desecho_pilas_usadas.parquet",
+          "source_mtime": 1786738214.9385896,
+          "mtime": 1786738214.9385896,
+          "feature_count": 2,
+          "schema_fingerprint": "e4a9f1e40f637446"
+        },
+        "README.md": {
+          "sha256": "a5e070e10905dff7372e1ae636b4bc25dd4ff52072df2501e78a2e0857815f2b",
+          "size_bytes": 4368,
+          "href": "servicios-municipales/desecho_pilas_usadas/README.md",
+          "mtime": 1786738804.071307
+        },
+        "publico_desecho_pilas_usadas.pmtiles": {
+          "sha256": "b802ecce6608d362a487766daec22a1250ba9740be357b3ab603420c356c1be5",
+          "size_bytes": 5195,
+          "href": "servicios-municipales/desecho_pilas_usadas/publico_desecho_pilas_usadas.pmtiles",
+          "mtime": 1786739033.195371
+        },
+        "publico_desecho_pilas_usadas.thumb.jpg": {
+          "sha256": "8d16a795020ebe583ff015224d36751f373faead997e710426cea0c42e2e97fb",
+          "size_bytes": 7273,
+          "href": "servicios-municipales/desecho_pilas_usadas/publico_desecho_pilas_usadas.thumb.jpg",
+          "mtime": 1786740155.0963295
+        }
+      },
+      "changes": [
+        "publico_desecho_pilas_usadas.pmtiles",
+        "publico_desecho_pilas_usadas.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_desecho_pilas_usadas.pmtiles, publico_desecho_pilas_usadas.thumb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.584751Z",
+      "breaking": false,
+      "assets": {
+        "publico_predios_educativos.parquet": {
+          "sha256": "5dc4712ae00aa6d291385262c831597d30a5a786483b3d4c2c6e342f376143d6",
+          "size_bytes": 26579,
+          "href": "publico_predios_educativos/publico_predios_educativos.parquet",
+          "source_mtime": 1786738554.0129857,
+          "mtime": 1786738554.0129857,
+          "feature_count": 133,
+          "schema_fingerprint": "a67d5fb7a8c44b0b"
+        }
+      },
+      "changes": [
+        "publico_predios_educativos.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.798224Z",
+      "breaking": false,
+      "assets": {
+        "publico_predios_educativos.parquet": {
+          "sha256": "5dc4712ae00aa6d291385262c831597d30a5a786483b3d4c2c6e342f376143d6",
+          "size_bytes": 26579,
+          "href": "educacion/predios_educativos/publico_predios_educativos.parquet",
+          "source_mtime": 1786738554.0129857,
+          "mtime": 1786738554.0129857,
+          "feature_count": 133,
+          "schema_fingerprint": "a67d5fb7a8c44b0b"
+        },
+        "README.md": {
+          "sha256": "5d56cc5d298f494b064e5df6d7e9146c4d184af54a50429c62b626d26cd22086",
+          "size_bytes": 1340,
+          "href": "educacion/predios_educativos/README.md",
+          "mtime": 1786738641.3557286
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:16.845091Z",
+      "breaking": false,
+      "assets": {
+        "publico_predios_educativos.parquet": {
+          "sha256": "5dc4712ae00aa6d291385262c831597d30a5a786483b3d4c2c6e342f376143d6",
+          "size_bytes": 26579,
+          "href": "educacion/predios_educativos/publico_predios_educativos.parquet",
+          "source_mtime": 1786738554.0129857,
+          "mtime": 1786738554.0129857,
+          "feature_count": 133,
+          "schema_fingerprint": "a67d5fb7a8c44b0b"
+        },
+        "README.md": {
+          "sha256": "5d56cc5d298f494b064e5df6d7e9146c4d184af54a50429c62b626d26cd22086",
+          "size_bytes": 1340,
+          "href": "educacion/predios_educativos/README.md",
+          "mtime": 1786738641.3557286
+        },
+        "publico_predios_educativos.pmtiles": {
+          "sha256": "60b742dac63ce3faaf561890b587a388724cc560241811d74f952dc8a6301094",
+          "size_bytes": 145897,
+          "href": "educacion/predios_educativos/publico_predios_educativos.pmtiles",
+          "mtime": 1786739175.8735898
+        },
+        "publico_predios_educativos.thumb.jpg": {
+          "sha256": "91b5f388dea44c9d8e7e39cf28538ef9460ef25aa2e8b4458606adcba24f6f7f",
+          "size_bytes": 7929,
+          "href": "educacion/predios_educativos/publico_predios_educativos.thumb.jpg",
+          "mtime": 1786740141.2752237
+        }
+      },
+      "changes": [
+        "publico_predios_educativos.pmtiles",
+        "publico_predios_educativos.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_predios_educativos.pmtiles, publico_predios_educativos.thumb.jpg"
+    }
+  ]
+}

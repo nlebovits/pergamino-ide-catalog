@@ -1,0 +1,71 @@
+{
+  "version": 8,
+  "name": "zonas_emergencias_y_riesgo",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_zonas_emergencias_y_riesgo.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_zonas_emergencias_y_riesgo",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "zona"
+          ],
+          "Centro",
+          "#58db93",
+          "Norte (n1)",
+          "#bf59d1",
+          "Norte (n2)",
+          "#8362e4",
+          "Norte (n3)",
+          "#d74c45",
+          "Norte (n4)",
+          "#0cc4cd",
+          "Sur (s1)",
+          "#cf75a7",
+          "Sur (s2)",
+          "#47e32b",
+          "Sur (s3)",
+          "#e49a1a",
+          "Sur (s4)",
+          "#7fa3e7",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#232323"
+      }
+    },
+    {
+      "id": "categorical-fill-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_zonas_emergencias_y_riesgo",
+      "layout": {
+        "text-field": [
+          "get",
+          "zona"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000"
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.667008Z",
+      "breaking": false,
+      "assets": {
+        "publico_domicilios_por_manzana.parquet": {
+          "sha256": "3cec4592bae8a1ac8cf4ddb59156ce274d5d309615036aa691cd89875993c104",
+          "size_bytes": 195408,
+          "href": "publico_domicilios_por_manzana/publico_domicilios_por_manzana.parquet",
+          "source_mtime": 1786738222.941646,
+          "mtime": 1786738222.941646,
+          "feature_count": 2197,
+          "schema_fingerprint": "05d8435e939bd133"
+        }
+      },
+      "changes": [
+        "publico_domicilios_por_manzana.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.701219Z",
+      "breaking": false,
+      "assets": {
+        "publico_domicilios_por_manzana.parquet": {
+          "sha256": "3cec4592bae8a1ac8cf4ddb59156ce274d5d309615036aa691cd89875993c104",
+          "size_bytes": 195408,
+          "href": "demografia/domicilios_por_manzana/publico_domicilios_por_manzana.parquet",
+          "source_mtime": 1786738222.941646,
+          "mtime": 1786738222.941646,
+          "feature_count": 2197,
+          "schema_fingerprint": "05d8435e939bd133"
+        },
+        "README.md": {
+          "sha256": "be5d49a19ab48442eca966e729641637f571437ed94f59c0156e75083449a00e",
+          "size_bytes": 4704,
+          "href": "demografia/domicilios_por_manzana/README.md",
+          "mtime": 1786738804.077307
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:26:18.384026Z",
+      "breaking": false,
+      "assets": {
+        "publico_domicilios_por_manzana.parquet": {
+          "sha256": "3cec4592bae8a1ac8cf4ddb59156ce274d5d309615036aa691cd89875993c104",
+          "size_bytes": 195408,
+          "href": "demografia/domicilios_por_manzana/publico_domicilios_por_manzana.parquet",
+          "source_mtime": 1786738222.941646,
+          "mtime": 1786738222.941646,
+          "feature_count": 2197,
+          "schema_fingerprint": "05d8435e939bd133"
+        },
+        "README.md": {
+          "sha256": "be5d49a19ab48442eca966e729641637f571437ed94f59c0156e75083449a00e",
+          "size_bytes": 4704,
+          "href": "demografia/domicilios_por_manzana/README.md",
+          "mtime": 1786738804.077307
+        },
+        "publico_domicilios_por_manzana.pmtiles": {
+          "sha256": "dd4f53e2c3fd62f416adb1061603e479470899a37e67a9800d944e3b9f0af595",
+          "size_bytes": 1090788,
+          "href": "demografia/domicilios_por_manzana/publico_domicilios_por_manzana.pmtiles",
+          "mtime": 1786739178.2146094
+        },
+        "publico_domicilios_por_manzana.thumb.jpg": {
+          "sha256": "57a9efba820b23083b3d4e38e5811ea1e350fb4aa4885ea7cde06b602428e3cd",
+          "size_bytes": 14052,
+          "href": "demografia/domicilios_por_manzana/publico_domicilios_por_manzana.thumb.jpg",
+          "mtime": 1786740137.1991928
+        }
+      },
+      "changes": [
+        "publico_domicilios_por_manzana.pmtiles",
+        "publico_domicilios_por_manzana.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_domicilios_por_manzana.pmtiles, publico_domicilios_por_manzana.thumb.jpg"
+    }
+  ]
+}

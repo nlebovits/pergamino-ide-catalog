@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.478598Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_parcela.parquet": {
+          "sha256": "c58d8b58f28b87cad8264cc470efbfee9decf27e199da62c6c32241bbea6b126",
+          "size_bytes": 6197673,
+          "href": "publico_catastro_parcela/publico_catastro_parcela.parquet",
+          "source_mtime": 1786738111.118856,
+          "mtime": 1786738111.118856,
+          "feature_count": 55134,
+          "schema_fingerprint": "0dd53a37edba7b91"
+        }
+      },
+      "changes": [
+        "publico_catastro_parcela.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.529361Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_parcela.parquet": {
+          "sha256": "c58d8b58f28b87cad8264cc470efbfee9decf27e199da62c6c32241bbea6b126",
+          "size_bytes": 6197673,
+          "href": "catastro/parcela/publico_catastro_parcela.parquet",
+          "source_mtime": 1786738111.118856,
+          "mtime": 1786738111.118856,
+          "feature_count": 55134,
+          "schema_fingerprint": "0dd53a37edba7b91"
+        },
+        "README.md": {
+          "sha256": "524f85fe44325eff9054420d4da9e6209fb94224f80ee617d92dcbee95c8baf8",
+          "size_bytes": 4844,
+          "href": "catastro/parcela/README.md",
+          "mtime": 1786738803.956306
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:33.737490Z",
+      "breaking": false,
+      "assets": {
+        "publico_catastro_parcela.parquet": {
+          "sha256": "c58d8b58f28b87cad8264cc470efbfee9decf27e199da62c6c32241bbea6b126",
+          "size_bytes": 6197673,
+          "href": "catastro/parcela/publico_catastro_parcela.parquet",
+          "source_mtime": 1786738111.118856,
+          "mtime": 1786738111.118856,
+          "feature_count": 55134,
+          "schema_fingerprint": "0dd53a37edba7b91"
+        },
+        "README.md": {
+          "sha256": "524f85fe44325eff9054420d4da9e6209fb94224f80ee617d92dcbee95c8baf8",
+          "size_bytes": 4844,
+          "href": "catastro/parcela/README.md",
+          "mtime": 1786738803.956306
+        },
+        "publico_catastro_parcela.pmtiles": {
+          "sha256": "0daffd65a750ab4dbc52261919becac62ee5ec4c17052c7683ae73b8511fff32",
+          "size_bytes": 33234031,
+          "href": "catastro/parcela/publico_catastro_parcela.pmtiles",
+          "mtime": 1786739133.5452323
+        },
+        "publico_catastro_parcela.thumb.jpg": {
+          "sha256": "c9c02288cafefcbd7728f2ffc329cfd13e85cc98845af88c330f54e9e683675d",
+          "size_bytes": 21005,
+          "href": "catastro/parcela/publico_catastro_parcela.thumb.jpg",
+          "mtime": 1786740115.142024
+        }
+      },
+      "changes": [
+        "publico_catastro_parcela.pmtiles",
+        "publico_catastro_parcela.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_catastro_parcela.pmtiles, publico_catastro_parcela.thumb.jpg"
+    }
+  ]
+}

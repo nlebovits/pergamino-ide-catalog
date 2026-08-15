@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.552599Z",
+      "breaking": false,
+      "assets": {
+        "publico_paseos_comerciales.parquet": {
+          "sha256": "77e08af3faa0eda458c42892343d60b2aab51c4a7c468b4c88e07a4dc2afcac5",
+          "size_bytes": 7248,
+          "href": "publico_paseos_comerciales/publico_paseos_comerciales.parquet",
+          "source_mtime": 1786738543.178909,
+          "mtime": 1786738543.178909,
+          "feature_count": 20,
+          "schema_fingerprint": "e1c6b84eb257e395"
+        }
+      },
+      "changes": [
+        "publico_paseos_comerciales.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.676340Z",
+      "breaking": false,
+      "assets": {
+        "publico_paseos_comerciales.parquet": {
+          "sha256": "77e08af3faa0eda458c42892343d60b2aab51c4a7c468b4c88e07a4dc2afcac5",
+          "size_bytes": 7248,
+          "href": "comercio-y-cultura/paseos_comerciales/publico_paseos_comerciales.parquet",
+          "source_mtime": 1786738543.178909,
+          "mtime": 1786738543.178909,
+          "feature_count": 20,
+          "schema_fingerprint": "e1c6b84eb257e395"
+        },
+        "README.md": {
+          "sha256": "3fb58d41007db3d88603c2f0d8ab926e2bda655873c8004924d1d48884d10017",
+          "size_bytes": 1213,
+          "href": "comercio-y-cultura/paseos_comerciales/README.md",
+          "mtime": 1786738641.3327284
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:47.212305Z",
+      "breaking": false,
+      "assets": {
+        "publico_paseos_comerciales.parquet": {
+          "sha256": "77e08af3faa0eda458c42892343d60b2aab51c4a7c468b4c88e07a4dc2afcac5",
+          "size_bytes": 7248,
+          "href": "comercio-y-cultura/paseos_comerciales/publico_paseos_comerciales.parquet",
+          "source_mtime": 1786738543.178909,
+          "mtime": 1786738543.178909,
+          "feature_count": 20,
+          "schema_fingerprint": "e1c6b84eb257e395"
+        },
+        "README.md": {
+          "sha256": "3fb58d41007db3d88603c2f0d8ab926e2bda655873c8004924d1d48884d10017",
+          "size_bytes": 1213,
+          "href": "comercio-y-cultura/paseos_comerciales/README.md",
+          "mtime": 1786738641.3327284
+        },
+        "publico_paseos_comerciales.pmtiles": {
+          "sha256": "00a637fb1c61e65afd6557c5cdd185760ead74e474c873cd8f8e10505ac2e2fd",
+          "size_bytes": 33835,
+          "href": "comercio-y-cultura/paseos_comerciales/publico_paseos_comerciales.pmtiles",
+          "mtime": 1786739147.1443474
+        },
+        "publico_paseos_comerciales.thumb.jpg": {
+          "sha256": "ca1208feb722d012cea52fb6fb5f166bf3db6e4908f2ba5745868af38a899021",
+          "size_bytes": 19008,
+          "href": "comercio-y-cultura/paseos_comerciales/publico_paseos_comerciales.thumb.jpg",
+          "mtime": 1786740135.6211805
+        }
+      },
+      "changes": [
+        "publico_paseos_comerciales.pmtiles",
+        "publico_paseos_comerciales.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_paseos_comerciales.pmtiles, publico_paseos_comerciales.thumb.jpg"
+    }
+  ]
+}

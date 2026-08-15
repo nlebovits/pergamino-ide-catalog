@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:20:03.451732Z",
+      "breaking": false,
+      "assets": {
+        "publico_cobertura_agua_de_2015_a_2019.parquet": {
+          "sha256": "29f125cd39ef193af2ee2de2827fdec390d9cce12070ffb079d75251b9203a7e",
+          "size_bytes": 12523,
+          "href": "publico_cobertura_agua_de_2015_a_2019/publico_cobertura_agua_de_2015_a_2019.parquet",
+          "source_mtime": 1786738137.008039,
+          "mtime": 1786738137.008039,
+          "feature_count": 39,
+          "schema_fingerprint": "15ce30639e4870ef"
+        }
+      },
+      "changes": [
+        "publico_cobertura_agua_de_2015_a_2019.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.077432Z",
+      "breaking": false,
+      "assets": {
+        "publico_cobertura_agua_de_2015_a_2019.parquet": {
+          "sha256": "29f125cd39ef193af2ee2de2827fdec390d9cce12070ffb079d75251b9203a7e",
+          "size_bytes": 12523,
+          "href": "servicios-sanitarios/cobertura_agua_de_2015_a_2019/publico_cobertura_agua_de_2015_a_2019.parquet",
+          "source_mtime": 1786738137.008039,
+          "mtime": 1786738137.008039,
+          "feature_count": 39,
+          "schema_fingerprint": "15ce30639e4870ef"
+        },
+        "README.md": {
+          "sha256": "7c4070f3c762cf86ac5d97bf75086ac5023104e8382bc55a654c3f18ca6af4e9",
+          "size_bytes": 4482,
+          "href": "servicios-sanitarios/cobertura_agua_de_2015_a_2019/README.md",
+          "mtime": 1786738803.9893062
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:58.407286Z",
+      "breaking": false,
+      "assets": {
+        "publico_cobertura_agua_de_2015_a_2019.parquet": {
+          "sha256": "29f125cd39ef193af2ee2de2827fdec390d9cce12070ffb079d75251b9203a7e",
+          "size_bytes": 12523,
+          "href": "servicios-sanitarios/cobertura_agua_de_2015_a_2019/publico_cobertura_agua_de_2015_a_2019.parquet",
+          "source_mtime": 1786738137.008039,
+          "mtime": 1786738137.008039,
+          "feature_count": 39,
+          "schema_fingerprint": "15ce30639e4870ef"
+        },
+        "README.md": {
+          "sha256": "7c4070f3c762cf86ac5d97bf75086ac5023104e8382bc55a654c3f18ca6af4e9",
+          "size_bytes": 4482,
+          "href": "servicios-sanitarios/cobertura_agua_de_2015_a_2019/README.md",
+          "mtime": 1786738803.9893062
+        },
+        "publico_cobertura_agua_de_2015_a_2019.pmtiles": {
+          "sha256": "6f0e8b174735cd206a7749d6559222b2eb93abab60fce4b9794a1652262f005a",
+          "size_bytes": 39658,
+          "href": "servicios-sanitarios/cobertura_agua_de_2015_a_2019/publico_cobertura_agua_de_2015_a_2019.pmtiles",
+          "mtime": 1786739338.1629329
+        },
+        "publico_cobertura_agua_de_2015_a_2019.thumb.jpg": {
+          "sha256": "7920342f318aca26e06e5233cd1b805d531dce73062a0aa423a9d09010020e2d",
+          "size_bytes": 12653,
+          "href": "servicios-sanitarios/cobertura_agua_de_2015_a_2019/publico_cobertura_agua_de_2015_a_2019.thumb.jpg",
+          "mtime": 1786740158.3743544
+        }
+      },
+      "changes": [
+        "publico_cobertura_agua_de_2015_a_2019.pmtiles",
+        "publico_cobertura_agua_de_2015_a_2019.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_cobertura_agua_de_2015_a_2019.pmtiles, publico_cobertura_agua_de_2015_a_2019.thumb.jpg"
+    }
+  ]
+}

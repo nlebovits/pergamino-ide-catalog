@@ -1,0 +1,39 @@
+{
+  "version": 8,
+  "name": "mnc_inta_2018_2019",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_inta_mnc_2018_2019.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_inta_mnc_2018_2019",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "dn"
+          ],
+          0,
+          "#0042ff",
+          1,
+          "#339820",
+          2,
+          "#ff0000",
+          7,
+          "#e6f0c2",
+          "#cccccc"
+        ],
+        "fill-opacity": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.269783Z",
+      "breaking": false,
+      "assets": {
+        "publico_hospedajes.parquet": {
+          "sha256": "e0c5caeed1b3a9072bddcc812b8cbfd6e035e7061cf7ecd4c73c20661eeca98c",
+          "size_bytes": 7324,
+          "href": "publico_hospedajes/publico_hospedajes.parquet",
+          "source_mtime": 1786738425.708079,
+          "mtime": 1786738425.708079,
+          "feature_count": 26,
+          "schema_fingerprint": "18173b980538d8eb"
+        }
+      },
+      "changes": [
+        "publico_hospedajes.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.643572Z",
+      "breaking": false,
+      "assets": {
+        "publico_hospedajes.parquet": {
+          "sha256": "e0c5caeed1b3a9072bddcc812b8cbfd6e035e7061cf7ecd4c73c20661eeca98c",
+          "size_bytes": 7324,
+          "href": "comercio-y-cultura/hospedajes/publico_hospedajes.parquet",
+          "source_mtime": 1786738425.708079,
+          "mtime": 1786738425.708079,
+          "feature_count": 26,
+          "schema_fingerprint": "18173b980538d8eb"
+        },
+        "README.md": {
+          "sha256": "c9fe14a02c73515c3fa615908756a274d7215e783a0fa01028f0e2f50ca6aa8e",
+          "size_bytes": 1228,
+          "href": "comercio-y-cultura/hospedajes/README.md",
+          "mtime": 1786738641.1457264
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:57.816717Z",
+      "breaking": false,
+      "assets": {
+        "publico_hospedajes.parquet": {
+          "sha256": "e0c5caeed1b3a9072bddcc812b8cbfd6e035e7061cf7ecd4c73c20661eeca98c",
+          "size_bytes": 7324,
+          "href": "comercio-y-cultura/hospedajes/publico_hospedajes.parquet",
+          "source_mtime": 1786738425.708079,
+          "mtime": 1786738425.708079,
+          "feature_count": 26,
+          "schema_fingerprint": "18173b980538d8eb"
+        },
+        "README.md": {
+          "sha256": "c9fe14a02c73515c3fa615908756a274d7215e783a0fa01028f0e2f50ca6aa8e",
+          "size_bytes": 1228,
+          "href": "comercio-y-cultura/hospedajes/README.md",
+          "mtime": 1786738641.1457264
+        },
+        "publico_hospedajes.pmtiles": {
+          "sha256": "4e40b8da531b4a935f3a25c334828dace24b75cc6ffbf9bc48b0316c855c8ff4",
+          "size_bytes": 17973,
+          "href": "comercio-y-cultura/hospedajes/publico_hospedajes.pmtiles",
+          "mtime": 1786739157.6634364
+        },
+        "publico_hospedajes.thumb.jpg": {
+          "sha256": "af2a6b6777454528bac0114232e67fe9fdb591fbff6faba6ceba9dceb31ed37a",
+          "size_bytes": 10138,
+          "href": "comercio-y-cultura/hospedajes/publico_hospedajes.thumb.jpg",
+          "mtime": 1786740134.744174
+        }
+      },
+      "changes": [
+        "publico_hospedajes.pmtiles",
+        "publico_hospedajes.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_hospedajes.pmtiles, publico_hospedajes.thumb.jpg"
+    }
+  ]
+}

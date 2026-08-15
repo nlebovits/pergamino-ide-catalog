@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "name": "hacinamiento",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_hacinamiento.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "graduated-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_hacinamiento",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "get",
+            "indice_mas3ppc"
+          ],
+          "#FEF0D9",
+          0.01,
+          "#FDCC8A",
+          0.29,
+          "#FC8D59",
+          1.05,
+          "#E34A33",
+          3.49,
+          "#B30000"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#ffffff"
+      }
+    }
+  ]
+}

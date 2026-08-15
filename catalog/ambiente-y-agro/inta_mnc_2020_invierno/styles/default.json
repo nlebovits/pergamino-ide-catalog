@@ -1,0 +1,39 @@
+{
+  "version": 8,
+  "name": "inta_mnc_2020_invierno",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_inta_mnc_2020_invierno.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_inta_mnc_2020_invierno",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "dn"
+          ],
+          0,
+          "#42f4ce",
+          18,
+          "#646b63",
+          20,
+          "#e6f0c2",
+          24,
+          "#d54b01",
+          "#cccccc"
+        ],
+        "fill-opacity": 1.0
+      }
+    }
+  ]
+}

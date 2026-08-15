@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.737986Z",
+      "breaking": false,
+      "assets": {
+        "publico_red_federal_fibra_optica_tramos.parquet": {
+          "sha256": "27ee8756e4e40e35063519c608da1350d33afb6f789150df2599fa8d6dd577e0",
+          "size_bytes": 41507,
+          "href": "publico_red_federal_fibra_optica_tramos/publico_red_federal_fibra_optica_tramos.parquet",
+          "source_mtime": 1786738596.9742894,
+          "mtime": 1786738596.9742894,
+          "feature_count": 53,
+          "schema_fingerprint": "836c72398a0e62f0"
+        }
+      },
+      "changes": [
+        "publico_red_federal_fibra_optica_tramos.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.822222Z",
+      "breaking": false,
+      "assets": {
+        "publico_red_federal_fibra_optica_tramos.parquet": {
+          "sha256": "27ee8756e4e40e35063519c608da1350d33afb6f789150df2599fa8d6dd577e0",
+          "size_bytes": 41507,
+          "href": "energia-y-conectividad/red_federal_fibra_optica_tramos/publico_red_federal_fibra_optica_tramos.parquet",
+          "source_mtime": 1786738596.9742894,
+          "mtime": 1786738596.9742894,
+          "feature_count": 53,
+          "schema_fingerprint": "836c72398a0e62f0"
+        },
+        "README.md": {
+          "sha256": "7db005431c4ed069dc3af08ba81ff26bb65b6112a70d78a920f082606c2c0fcf",
+          "size_bytes": 1294,
+          "href": "energia-y-conectividad/red_federal_fibra_optica_tramos/README.md",
+          "mtime": 1786738641.4487295
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:49.897486Z",
+      "breaking": false,
+      "assets": {
+        "publico_red_federal_fibra_optica_tramos.parquet": {
+          "sha256": "27ee8756e4e40e35063519c608da1350d33afb6f789150df2599fa8d6dd577e0",
+          "size_bytes": 41507,
+          "href": "energia-y-conectividad/red_federal_fibra_optica_tramos/publico_red_federal_fibra_optica_tramos.parquet",
+          "source_mtime": 1786738596.9742894,
+          "mtime": 1786738596.9742894,
+          "feature_count": 53,
+          "schema_fingerprint": "836c72398a0e62f0"
+        },
+        "README.md": {
+          "sha256": "7db005431c4ed069dc3af08ba81ff26bb65b6112a70d78a920f082606c2c0fcf",
+          "size_bytes": 1294,
+          "href": "energia-y-conectividad/red_federal_fibra_optica_tramos/README.md",
+          "mtime": 1786738641.4487295
+        },
+        "publico_red_federal_fibra_optica_tramos.pmtiles": {
+          "sha256": "41dd80308c53d6c4398f90238063cf1e9f7fd92d57ba4b0c7aeb2be44d0dcd99",
+          "size_bytes": 503979,
+          "href": "energia-y-conectividad/red_federal_fibra_optica_tramos/publico_red_federal_fibra_optica_tramos.pmtiles",
+          "mtime": 1786739149.4173667
+        },
+        "publico_red_federal_fibra_optica_tramos.thumb.jpg": {
+          "sha256": "4cf64fb221f19d704ff3f4069cf8ef59a3069a9205c1940e21d12fb4bc8b0a08",
+          "size_bytes": 18096,
+          "href": "energia-y-conectividad/red_federal_fibra_optica_tramos/publico_red_federal_fibra_optica_tramos.thumb.jpg",
+          "mtime": 1786740143.9052439
+        }
+      },
+      "changes": [
+        "publico_red_federal_fibra_optica_tramos.pmtiles",
+        "publico_red_federal_fibra_optica_tramos.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_red_federal_fibra_optica_tramos.pmtiles, publico_red_federal_fibra_optica_tramos.thumb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "asociaciones_sindicales",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_asociaciones_sindicales.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_asociaciones_sindicales",
+      "paint": {
+        "circle-color": "#b0b0b0",
+        "circle-radius": 8.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+# What publishes, and where.
+#
+# Everything under publish_dir is synced 1:1 to write_prefix. Data files are
+# never placed under publish_dir, so they cannot be published by accident.
+
+# The S3 URI uploads are written to.
+write_prefix: s3://us-west-2.opendata.source.coop/nlebovits/pergamino-ide/
+
+# The public base URL that serves write_prefix. Every href in the catalog is
+# built from this, so it goes in the STAC JSON and write_prefix does not.
+#
+# Note the two hostnames are not interchangeable. `source.coop` is the human
+# front door and belongs in prose, READMEs, and issue bodies. `data.source.coop`
+# is what a client resolves, and is the only one that belongs in an asset href.
+public_base: https://data.source.coop/nlebovits/pergamino-ide
+
+region: us-west-2
+
+# The directory that IS the published catalog, synced 1:1 to write_prefix.
+# Nothing outside it is ever uploaded.
+publish_dir: catalog

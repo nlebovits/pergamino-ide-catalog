@@ -1,0 +1,51 @@
+{
+  "version": 8,
+  "name": "cursos_de_agua",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_cursos_de_agua.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_cursos_de_agua",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "arroyo",
+          "#75affe",
+          "rio",
+          "#75affe",
+          "canal acequia o zanja",
+          "#75affe",
+          "#cccccc"
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "arroyo",
+          4.0,
+          "rio",
+          8.0,
+          "canal acequia o zanja",
+          1,
+          1.0
+        ],
+        "line-opacity": 1.0
+      }
+    }
+  ]
+}

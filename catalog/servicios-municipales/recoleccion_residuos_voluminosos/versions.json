@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.721620Z",
+      "breaking": false,
+      "assets": {
+        "publico_recoleccion_residuos_voluminosos.parquet": {
+          "sha256": "cdc8ccb22044c81c2b12accfae60608ddb29b4cfcbd0372cb41d5aa8387d7c26",
+          "size_bytes": 8880,
+          "href": "publico_recoleccion_residuos_voluminosos/publico_recoleccion_residuos_voluminosos.parquet",
+          "source_mtime": 1786738589.7992387,
+          "mtime": 1786738589.7992387,
+          "feature_count": 4,
+          "schema_fingerprint": "c6ad18e68e148cc1"
+        }
+      },
+      "changes": [
+        "publico_recoleccion_residuos_voluminosos.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.057168Z",
+      "breaking": false,
+      "assets": {
+        "publico_recoleccion_residuos_voluminosos.parquet": {
+          "sha256": "cdc8ccb22044c81c2b12accfae60608ddb29b4cfcbd0372cb41d5aa8387d7c26",
+          "size_bytes": 8880,
+          "href": "servicios-municipales/recoleccion_residuos_voluminosos/publico_recoleccion_residuos_voluminosos.parquet",
+          "source_mtime": 1786738589.7992387,
+          "mtime": 1786738589.7992387,
+          "feature_count": 4,
+          "schema_fingerprint": "c6ad18e68e148cc1"
+        },
+        "README.md": {
+          "sha256": "3667d1a50f0eabc49bc77be4ac1b8d3e9c525f881aeb7b79988dea88a9015765",
+          "size_bytes": 1289,
+          "href": "servicios-municipales/recoleccion_residuos_voluminosos/README.md",
+          "mtime": 1786738641.4367294
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:24:06.966914Z",
+      "breaking": false,
+      "assets": {
+        "publico_recoleccion_residuos_voluminosos.parquet": {
+          "sha256": "cdc8ccb22044c81c2b12accfae60608ddb29b4cfcbd0372cb41d5aa8387d7c26",
+          "size_bytes": 8880,
+          "href": "servicios-municipales/recoleccion_residuos_voluminosos/publico_recoleccion_residuos_voluminosos.parquet",
+          "source_mtime": 1786738589.7992387,
+          "mtime": 1786738589.7992387,
+          "feature_count": 4,
+          "schema_fingerprint": "c6ad18e68e148cc1"
+        },
+        "README.md": {
+          "sha256": "3667d1a50f0eabc49bc77be4ac1b8d3e9c525f881aeb7b79988dea88a9015765",
+          "size_bytes": 1289,
+          "href": "servicios-municipales/recoleccion_residuos_voluminosos/README.md",
+          "mtime": 1786738641.4367294
+        },
+        "publico_recoleccion_residuos_voluminosos.pmtiles": {
+          "sha256": "291cdc1105e5ffc4957058f874acbc8f13969ef682e1f557a2cdb8217b98ab61",
+          "size_bytes": 56151,
+          "href": "servicios-municipales/recoleccion_residuos_voluminosos/publico_recoleccion_residuos_voluminosos.pmtiles",
+          "mtime": 1786739045.215475
+        },
+        "publico_recoleccion_residuos_voluminosos.thumb.jpg": {
+          "sha256": "320d763fda858db1813e4a2d7a495a7882cc87dc98a070466e788abd73ba2322",
+          "size_bytes": 11618,
+          "href": "servicios-municipales/recoleccion_residuos_voluminosos/publico_recoleccion_residuos_voluminosos.thumb.jpg",
+          "mtime": 1786740157.1723452
+        }
+      },
+      "changes": [
+        "publico_recoleccion_residuos_voluminosos.pmtiles",
+        "publico_recoleccion_residuos_voluminosos.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_recoleccion_residuos_voluminosos.pmtiles, publico_recoleccion_residuos_voluminosos.thumb.jpg"
+    }
+  ]
+}

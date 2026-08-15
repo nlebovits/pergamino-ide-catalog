@@ -1,0 +1,42 @@
+{
+  "version": 8,
+  "name": "coeficientes_zonales_doss",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_coeficientes_zonales_doss.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_coeficientes_zonales_doss",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "to-string",
+            [
+              "get",
+              "coeficiente"
+            ]
+          ],
+          "0.9",
+          "#008000",
+          "1",
+          "#FF0000",
+          "1.1",
+          "#FFFF00",
+          "1.2",
+          "#8000FF",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.5
+      }
+    }
+  ]
+}

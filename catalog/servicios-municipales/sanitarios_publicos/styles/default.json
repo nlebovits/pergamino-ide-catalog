@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "sanitarios_publicos",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_sanitarios_publicos.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_sanitarios_publicos",
+      "paint": {
+        "circle-color": "#548846",
+        "circle-radius": 3.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

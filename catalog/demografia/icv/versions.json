@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.277255Z",
+      "breaking": false,
+      "assets": {
+        "publico_icv.parquet": {
+          "sha256": "e1d9a664c97a0c35c74a085879a0d7e8ba78bcc6f97fc1ee2399c0e3c556a14f",
+          "size_bytes": 65560,
+          "href": "publico_icv/publico_icv.parquet",
+          "source_mtime": 1786738431.090117,
+          "mtime": 1786738431.090117,
+          "feature_count": 178,
+          "schema_fingerprint": "ed32159afcc2fb2f"
+        }
+      },
+      "changes": [
+        "publico_icv.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.720650Z",
+      "breaking": false,
+      "assets": {
+        "publico_icv.parquet": {
+          "sha256": "e1d9a664c97a0c35c74a085879a0d7e8ba78bcc6f97fc1ee2399c0e3c556a14f",
+          "size_bytes": 65560,
+          "href": "demografia/icv/publico_icv.parquet",
+          "source_mtime": 1786738431.090117,
+          "mtime": 1786738431.090117,
+          "feature_count": 178,
+          "schema_fingerprint": "ed32159afcc2fb2f"
+        },
+        "README.md": {
+          "sha256": "8ad458297c4a85d9718bb85de24aea003651c7bfcb70f2fe8a30dd3a79b698f0",
+          "size_bytes": 1323,
+          "href": "demografia/icv/README.md",
+          "mtime": 1786738641.1507266
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:24:41.048957Z",
+      "breaking": false,
+      "assets": {
+        "publico_icv.parquet": {
+          "sha256": "e1d9a664c97a0c35c74a085879a0d7e8ba78bcc6f97fc1ee2399c0e3c556a14f",
+          "size_bytes": 65560,
+          "href": "demografia/icv/publico_icv.parquet",
+          "source_mtime": 1786738431.090117,
+          "mtime": 1786738431.090117,
+          "feature_count": 178,
+          "schema_fingerprint": "ed32159afcc2fb2f"
+        },
+        "README.md": {
+          "sha256": "8ad458297c4a85d9718bb85de24aea003651c7bfcb70f2fe8a30dd3a79b698f0",
+          "size_bytes": 1323,
+          "href": "demografia/icv/README.md",
+          "mtime": 1786738641.1507266
+        },
+        "publico_icv.pmtiles": {
+          "sha256": "5d4977f099b288bab61b80cc2258935287d5c295cbe8948b0e95a04b68e1bb3c",
+          "size_bytes": 1530788,
+          "href": "demografia/icv/publico_icv.pmtiles",
+          "mtime": 1786739080.9667835
+        },
+        "publico_icv.thumb.jpg": {
+          "sha256": "1b7f6cae6be6546d2b5384b4ef681ee3bfd1fd7bfd37d3f592ed19f2f50b1fe4",
+          "size_bytes": 18103,
+          "href": "demografia/icv/publico_icv.thumb.jpg",
+          "mtime": 1786740137.9851987
+        }
+      },
+      "changes": [
+        "publico_icv.pmtiles",
+        "publico_icv.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_icv.pmtiles, publico_icv.thumb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "cicloturismo_rural",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_cicloturismo_rural.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_cicloturismo_rural",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "circuito"
+          ],
+          "pergamino-fontezuela-violeta",
+          "#5b9bd5",
+          "pergamino-fontezuela-rancagua",
+          "#fd65ca",
+          "pergamino-peña-acevedo",
+          "#e80000",
+          "pergamino_ocampo_socorro",
+          "#9933ff",
+          "pergamino-benitez-gornati",
+          "#ffff00",
+          "pergamino_pinzon",
+          "#ed7d31",
+          "pergamino_basualdo",
+          "#70ad47",
+          "#cccccc"
+        ],
+        "line-width": 4.0,
+        "line-opacity": 1.0
+      }
+    }
+  ]
+}

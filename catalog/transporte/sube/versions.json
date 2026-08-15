@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.804940Z",
+      "breaking": false,
+      "assets": {
+        "publico_sube.parquet": {
+          "sha256": "80f5e9f828c8ffaddaede3b155bd38a7316a0046058615bedb6d4eb33c1e5b5c",
+          "size_bytes": 12030,
+          "href": "publico_sube/publico_sube.parquet",
+          "source_mtime": 1786738614.077452,
+          "mtime": 1786738614.077452,
+          "feature_count": 97,
+          "schema_fingerprint": "9d48f7c92fea18ed"
+        }
+      },
+      "changes": [
+        "publico_sube.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.283273Z",
+      "breaking": false,
+      "assets": {
+        "publico_sube.parquet": {
+          "sha256": "80f5e9f828c8ffaddaede3b155bd38a7316a0046058615bedb6d4eb33c1e5b5c",
+          "size_bytes": 12030,
+          "href": "transporte/sube/publico_sube.parquet",
+          "source_mtime": 1786738614.077452,
+          "mtime": 1786738614.077452,
+          "feature_count": 97,
+          "schema_fingerprint": "9d48f7c92fea18ed"
+        },
+        "README.md": {
+          "sha256": "2857f6732b208c33331b756db972cdd94697504542a08ccca5fe2997c4c0b4e9",
+          "size_bytes": 1363,
+          "href": "transporte/sube/README.md",
+          "mtime": 1786738641.48973
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:17.065166Z",
+      "breaking": false,
+      "assets": {
+        "publico_sube.parquet": {
+          "sha256": "80f5e9f828c8ffaddaede3b155bd38a7316a0046058615bedb6d4eb33c1e5b5c",
+          "size_bytes": 12030,
+          "href": "transporte/sube/publico_sube.parquet",
+          "source_mtime": 1786738614.077452,
+          "mtime": 1786738614.077452,
+          "feature_count": 97,
+          "schema_fingerprint": "9d48f7c92fea18ed"
+        },
+        "README.md": {
+          "sha256": "2857f6732b208c33331b756db972cdd94697504542a08ccca5fe2997c4c0b4e9",
+          "size_bytes": 1363,
+          "href": "transporte/sube/README.md",
+          "mtime": 1786738641.48973
+        },
+        "publico_sube.pmtiles": {
+          "sha256": "e3060ab7a260afa96e8b4f01479a5b54a75580985106264bd1ae09b9b0d161a6",
+          "size_bytes": 33518,
+          "href": "transporte/sube/publico_sube.pmtiles",
+          "mtime": 1786739296.910595
+        },
+        "publico_sube.thumb.jpg": {
+          "sha256": "461a3da298f84ade97d15241f5214425889154b0bcbb387b67f7e0f15791b1cc",
+          "size_bytes": 7647,
+          "href": "transporte/sube/publico_sube.thumb.jpg",
+          "mtime": 1786740170.2064447
+        }
+      },
+      "changes": [
+        "publico_sube.pmtiles",
+        "publico_sube.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_sube.pmtiles, publico_sube.thumb.jpg"
+    }
+  ]
+}

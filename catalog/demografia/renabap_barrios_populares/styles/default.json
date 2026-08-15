@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "name": "renabap_barrios_populares",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_renabap_barrios_populares.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "graduated-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_renabap_barrios_populares",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "get",
+            "cantidad_viviendas_aproximadas"
+          ],
+          "#faebdd",
+          40.0,
+          "#f58860",
+          70.0,
+          "#cb1b4f",
+          100.0,
+          "#611f53",
+          195.0,
+          "#03051a"
+        ],
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#ffffff"
+      }
+    }
+  ]
+}

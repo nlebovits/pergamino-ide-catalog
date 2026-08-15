@@ -1,0 +1,114 @@
+{
+  "version": 8,
+  "name": "callejero",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_callejero.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "publico_callejero",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "clase"
+          ],
+          "ACCESO",
+          "#4c78dd",
+          "AU",
+          "#ede61d",
+          "AVENIDA",
+          "#e21f13",
+          "CALLE",
+          "#d0d0c7",
+          "COLECTORA",
+          "#e8e8de",
+          "ENLACE",
+          "#e8e8de",
+          "CAMINO",
+          "#a35934",
+          "FFCC-PEATONAL",
+          "#7a61dd",
+          "PEATONAL",
+          "#ce4b2d",
+          "PUENTE",
+          "#ddae2c",
+          "PUENTE-PEATONAL",
+          "#ac61cc",
+          "RESTRINGIDO",
+          "#ddc9de",
+          "RUTA",
+          "#3d8d57",
+          "#cccccc"
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "clase"
+          ],
+          "ACCESO",
+          5.0,
+          "AU",
+          11.0,
+          "AVENIDA",
+          4.0,
+          "CALLE",
+          2.0,
+          "COLECTORA",
+          1.5,
+          "ENLACE",
+          1.5,
+          "CAMINO",
+          1,
+          "FFCC-PEATONAL",
+          0.5,
+          "PEATONAL",
+          0.5,
+          "PUENTE",
+          5.0,
+          "PUENTE-PEATONAL",
+          0.5,
+          "RESTRINGIDO",
+          1,
+          "RUTA",
+          6.0,
+          1.0
+        ],
+        "line-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-line-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "publico_callejero",
+      "layout": {
+        "text-field": [
+          "get",
+          "etiqueta"
+        ],
+        "text-size": 11.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#FFFFFF",
+        "text-halo-width": 1.5
+      }
+    }
+  ],
+  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+}

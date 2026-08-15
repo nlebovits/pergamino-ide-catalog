@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.689528Z",
+      "breaking": false,
+      "assets": {
+        "publico_radios_censales_indec_2010.parquet": {
+          "sha256": "7458bc3b570749891c7047e67323d94b9a03b4e0ddca8c5ba2ac98a64ec88dc9",
+          "size_bytes": 65314,
+          "href": "publico_radios_censales_indec_2010/publico_radios_censales_indec_2010.parquet",
+          "source_mtime": 1786738582.068184,
+          "mtime": 1786738582.068184,
+          "feature_count": 178,
+          "schema_fingerprint": "d652bfb6543a0036"
+        }
+      },
+      "changes": [
+        "publico_radios_censales_indec_2010.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.739266Z",
+      "breaking": false,
+      "assets": {
+        "publico_radios_censales_indec_2010.parquet": {
+          "sha256": "7458bc3b570749891c7047e67323d94b9a03b4e0ddca8c5ba2ac98a64ec88dc9",
+          "size_bytes": 65314,
+          "href": "demografia/radios_censales_indec_2010/publico_radios_censales_indec_2010.parquet",
+          "source_mtime": 1786738582.068184,
+          "mtime": 1786738582.068184,
+          "feature_count": 178,
+          "schema_fingerprint": "d652bfb6543a0036"
+        },
+        "README.md": {
+          "sha256": "a916a339c7649121bca712ceea021e156b8deea68f63d22a3a055674f5f9b9dc",
+          "size_bytes": 1380,
+          "href": "demografia/radios_censales_indec_2010/README.md",
+          "mtime": 1786738641.4167292
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:28:00.300014Z",
+      "breaking": false,
+      "assets": {
+        "publico_radios_censales_indec_2010.parquet": {
+          "sha256": "7458bc3b570749891c7047e67323d94b9a03b4e0ddca8c5ba2ac98a64ec88dc9",
+          "size_bytes": 65314,
+          "href": "demografia/radios_censales_indec_2010/publico_radios_censales_indec_2010.parquet",
+          "source_mtime": 1786738582.068184,
+          "mtime": 1786738582.068184,
+          "feature_count": 178,
+          "schema_fingerprint": "d652bfb6543a0036"
+        },
+        "README.md": {
+          "sha256": "a916a339c7649121bca712ceea021e156b8deea68f63d22a3a055674f5f9b9dc",
+          "size_bytes": 1380,
+          "href": "demografia/radios_censales_indec_2010/README.md",
+          "mtime": 1786738641.4167292
+        },
+        "publico_radios_censales_indec_2010.pmtiles": {
+          "sha256": "6dbeecbcdcfac722f6b9359132beb2012ff5918f12efb82ab0779e09f33e9546",
+          "size_bytes": 1040159,
+          "href": "demografia/radios_censales_indec_2010/publico_radios_censales_indec_2010.pmtiles",
+          "mtime": 1786739280.2154577
+        },
+        "publico_radios_censales_indec_2010.thumb.jpg": {
+          "sha256": "1b7f6cae6be6546d2b5384b4ef681ee3bfd1fd7bfd37d3f592ed19f2f50b1fe4",
+          "size_bytes": 18103,
+          "href": "demografia/radios_censales_indec_2010/publico_radios_censales_indec_2010.thumb.jpg",
+          "mtime": 1786740138.9922063
+        }
+      },
+      "changes": [
+        "publico_radios_censales_indec_2010.pmtiles",
+        "publico_radios_censales_indec_2010.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_radios_censales_indec_2010.pmtiles, publico_radios_censales_indec_2010.thumb.jpg"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "name": "arbolado",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_arbolado.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_arbolado",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "altura"
+          ],
+          "más de 15 metros",
+          "#426b42",
+          "de 6 a 15 metros",
+          "#62a062",
+          "hasta 6 metros",
+          "#bad7b3",
+          "sin_datos",
+          "#f0f0f0",
+          "#cccccc"
+        ],
+        "circle-radius": 7.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

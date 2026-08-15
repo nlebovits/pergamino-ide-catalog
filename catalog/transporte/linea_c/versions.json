@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.401913Z",
+      "breaking": false,
+      "assets": {
+        "publico_linea_c.parquet": {
+          "sha256": "04b0f86440a41ebec3613b3c6588ea78a5c9371fcb036dd0aa0c23197559273d",
+          "size_bytes": 8119,
+          "href": "publico_linea_c/publico_linea_c.parquet",
+          "source_mtime": 1786738491.9735472,
+          "mtime": 1786738491.9735472,
+          "feature_count": 3,
+          "schema_fingerprint": "e82f5905622cdfba"
+        }
+      },
+      "changes": [
+        "publico_linea_c.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:52.246420Z",
+      "breaking": false,
+      "assets": {
+        "publico_linea_c.parquet": {
+          "sha256": "04b0f86440a41ebec3613b3c6588ea78a5c9371fcb036dd0aa0c23197559273d",
+          "size_bytes": 8119,
+          "href": "transporte/linea_c/publico_linea_c.parquet",
+          "source_mtime": 1786738491.9735472,
+          "mtime": 1786738491.9735472,
+          "feature_count": 3,
+          "schema_fingerprint": "e82f5905622cdfba"
+        },
+        "README.md": {
+          "sha256": "5ce41dad468a169c9cb7d7f2b33bfeaa7f8fe5161a22bf1296486624a437cd91",
+          "size_bytes": 1321,
+          "href": "transporte/linea_c/README.md",
+          "mtime": 1786738641.2367275
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:27:10.525010Z",
+      "breaking": false,
+      "assets": {
+        "publico_linea_c.parquet": {
+          "sha256": "04b0f86440a41ebec3613b3c6588ea78a5c9371fcb036dd0aa0c23197559273d",
+          "size_bytes": 8119,
+          "href": "transporte/linea_c/publico_linea_c.parquet",
+          "source_mtime": 1786738491.9735472,
+          "mtime": 1786738491.9735472,
+          "feature_count": 3,
+          "schema_fingerprint": "e82f5905622cdfba"
+        },
+        "README.md": {
+          "sha256": "5ce41dad468a169c9cb7d7f2b33bfeaa7f8fe5161a22bf1296486624a437cd91",
+          "size_bytes": 1321,
+          "href": "transporte/linea_c/README.md",
+          "mtime": 1786738641.2367275
+        },
+        "publico_linea_c.pmtiles": {
+          "sha256": "9397e12c9798edad16e709b07cc6322b3d12671568783049c5345dbef32d03a5",
+          "size_bytes": 13114,
+          "href": "transporte/linea_c/publico_linea_c.pmtiles",
+          "mtime": 1786739230.458046
+        },
+        "publico_linea_c.thumb.jpg": {
+          "sha256": "50f8687a0370761459f5aff3bb6e959f70761ba7ebc00722e80ec1d04c6094f9",
+          "size_bytes": 10675,
+          "href": "transporte/linea_c/publico_linea_c.thumb.jpg",
+          "mtime": 1786740168.8934348
+        }
+      },
+      "changes": [
+        "publico_linea_c.pmtiles",
+        "publico_linea_c.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_linea_c.pmtiles, publico_linea_c.thumb.jpg"
+    }
+  ]
+}

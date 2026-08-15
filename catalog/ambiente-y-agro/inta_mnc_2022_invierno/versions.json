@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.326316Z",
+      "breaking": false,
+      "assets": {
+        "publico_inta_mnc_2022_invierno.parquet": {
+          "sha256": "33ce18d93071702d66f495bb125cdfc6f47609bef58f9aa74f8fd8c86c6a1be9",
+          "size_bytes": 2012553,
+          "href": "publico_inta_mnc_2022_invierno/publico_inta_mnc_2022_invierno.parquet",
+          "source_mtime": 1786738472.957413,
+          "mtime": 1786738472.957413,
+          "feature_count": 28132,
+          "schema_fingerprint": "8646849616bb0f76"
+        }
+      },
+      "changes": [
+        "publico_inta_mnc_2022_invierno.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.376200Z",
+      "breaking": false,
+      "assets": {
+        "publico_inta_mnc_2022_invierno.parquet": {
+          "sha256": "33ce18d93071702d66f495bb125cdfc6f47609bef58f9aa74f8fd8c86c6a1be9",
+          "size_bytes": 2012553,
+          "href": "ambiente-y-agro/inta_mnc_2022_invierno/publico_inta_mnc_2022_invierno.parquet",
+          "source_mtime": 1786738472.957413,
+          "mtime": 1786738472.957413,
+          "feature_count": 28132,
+          "schema_fingerprint": "8646849616bb0f76"
+        },
+        "README.md": {
+          "sha256": "0800a6ba51da0f8f56fdb5dd04f947eee76b7bdd803685f23563486fd38f5ed6",
+          "size_bytes": 1158,
+          "href": "ambiente-y-agro/inta_mnc_2022_invierno/README.md",
+          "mtime": 1786738641.1867268
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:25:07.400365Z",
+      "breaking": false,
+      "assets": {
+        "publico_inta_mnc_2022_invierno.parquet": {
+          "sha256": "33ce18d93071702d66f495bb125cdfc6f47609bef58f9aa74f8fd8c86c6a1be9",
+          "size_bytes": 2012553,
+          "href": "ambiente-y-agro/inta_mnc_2022_invierno/publico_inta_mnc_2022_invierno.parquet",
+          "source_mtime": 1786738472.957413,
+          "mtime": 1786738472.957413,
+          "feature_count": 28132,
+          "schema_fingerprint": "8646849616bb0f76"
+        },
+        "README.md": {
+          "sha256": "0800a6ba51da0f8f56fdb5dd04f947eee76b7bdd803685f23563486fd38f5ed6",
+          "size_bytes": 1158,
+          "href": "ambiente-y-agro/inta_mnc_2022_invierno/README.md",
+          "mtime": 1786738641.1867268
+        },
+        "publico_inta_mnc_2022_invierno.pmtiles": {
+          "sha256": "85f45978a185983ea0859216179cc01d7983308f0ae4160c7f34f6b89fa09ae5",
+          "size_bytes": 7265793,
+          "href": "ambiente-y-agro/inta_mnc_2022_invierno/publico_inta_mnc_2022_invierno.pmtiles",
+          "mtime": 1786739107.2650087
+        },
+        "publico_inta_mnc_2022_invierno.thumb.jpg": {
+          "sha256": "3dcb13109cd05c6a74936c1eceb59c8b2689e7b54c818338b751fbba28024528",
+          "size_bytes": 28277,
+          "href": "ambiente-y-agro/inta_mnc_2022_invierno/publico_inta_mnc_2022_invierno.thumb.jpg",
+          "mtime": 1786740080.9377625
+        }
+      },
+      "changes": [
+        "publico_inta_mnc_2022_invierno.pmtiles",
+        "publico_inta_mnc_2022_invierno.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_inta_mnc_2022_invierno.pmtiles, publico_inta_mnc_2022_invierno.thumb.jpg"
+    }
+  ]
+}

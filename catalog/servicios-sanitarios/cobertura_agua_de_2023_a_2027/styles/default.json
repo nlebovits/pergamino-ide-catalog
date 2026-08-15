@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "cobertura_agua_de_2023_a_2027",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_cobertura_agua_de_2023_a_2027.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "publico_cobertura_agua_de_2023_a_2027",
+      "paint": {
+        "fill-color": "#032554",
+        "fill-opacity": 0.5,
+        "fill-outline-color": "#62a5ce"
+      }
+    }
+  ]
+}

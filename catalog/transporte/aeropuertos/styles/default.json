@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "aeropuertos",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../publico_aeropuertos.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "publico_aeropuertos",
+      "paint": {
+        "circle-color": "#888888",
+        "circle-radius": 12.5,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

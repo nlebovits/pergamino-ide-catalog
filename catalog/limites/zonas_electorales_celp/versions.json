@@ -1,0 +1,89 @@
+{
+  "spec_version": "1.0.0",
+  "current_version": "1.0.2",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "created": "2026-08-14T20:17:20.853711Z",
+      "breaking": false,
+      "assets": {
+        "publico_zonas_electorales_celp.parquet": {
+          "sha256": "be3e83cc3e21780e2ea6817d3d7fc97529fad2ff66ba3a703b7672dbdb4f199d",
+          "size_bytes": 9998,
+          "href": "publico_zonas_electorales_celp/publico_zonas_electorales_celp.parquet",
+          "source_mtime": 1786738629.2526064,
+          "mtime": 1786738629.2526064,
+          "feature_count": 8,
+          "schema_fingerprint": "a72da8ad38d2ff06"
+        }
+      },
+      "changes": [
+        "publico_zonas_electorales_celp.parquet"
+      ]
+    },
+    {
+      "version": "1.0.1",
+      "created": "2026-08-14T20:23:51.888591Z",
+      "breaking": false,
+      "assets": {
+        "publico_zonas_electorales_celp.parquet": {
+          "sha256": "be3e83cc3e21780e2ea6817d3d7fc97529fad2ff66ba3a703b7672dbdb4f199d",
+          "size_bytes": 9998,
+          "href": "limites/zonas_electorales_celp/publico_zonas_electorales_celp.parquet",
+          "source_mtime": 1786738629.2526064,
+          "mtime": 1786738629.2526064,
+          "feature_count": 8,
+          "schema_fingerprint": "a72da8ad38d2ff06"
+        },
+        "README.md": {
+          "sha256": "c5f264b1af5abc33e55662090843ba1acf6b3781785bc3374b384a78396b7ffd",
+          "size_bytes": 1271,
+          "href": "limites/zonas_electorales_celp/README.md",
+          "mtime": 1786738641.5197303
+        }
+      },
+      "changes": [
+        "README.md"
+      ]
+    },
+    {
+      "version": "1.0.2",
+      "created": "2026-08-14T20:29:06.263692Z",
+      "breaking": false,
+      "assets": {
+        "publico_zonas_electorales_celp.parquet": {
+          "sha256": "be3e83cc3e21780e2ea6817d3d7fc97529fad2ff66ba3a703b7672dbdb4f199d",
+          "size_bytes": 9998,
+          "href": "limites/zonas_electorales_celp/publico_zonas_electorales_celp.parquet",
+          "source_mtime": 1786738629.2526064,
+          "mtime": 1786738629.2526064,
+          "feature_count": 8,
+          "schema_fingerprint": "a72da8ad38d2ff06"
+        },
+        "README.md": {
+          "sha256": "c5f264b1af5abc33e55662090843ba1acf6b3781785bc3374b384a78396b7ffd",
+          "size_bytes": 1271,
+          "href": "limites/zonas_electorales_celp/README.md",
+          "mtime": 1786738641.5197303
+        },
+        "publico_zonas_electorales_celp.pmtiles": {
+          "sha256": "4e2d7c978bc77e644a21bcd6381d3296f6615f892daddd7d59586adc4e64d4bb",
+          "size_bytes": 85342,
+          "href": "limites/zonas_electorales_celp/publico_zonas_electorales_celp.pmtiles",
+          "mtime": 1786739346.1179976
+        },
+        "publico_zonas_electorales_celp.thumb.jpg": {
+          "sha256": "49cb467b6621121b1d6a1de449c92375f1b9f3cfbe53e6c93e8bdd9dc7b0d2b2",
+          "size_bytes": 12709,
+          "href": "limites/zonas_electorales_celp/publico_zonas_electorales_celp.thumb.jpg",
+          "mtime": 1786740148.4622788
+        }
+      },
+      "changes": [
+        "publico_zonas_electorales_celp.pmtiles",
+        "publico_zonas_electorales_celp.thumb.jpg"
+      ],
+      "message": "Generated PMTiles and thumbnail: publico_zonas_electorales_celp.pmtiles, publico_zonas_electorales_celp.thumb.jpg"
+    }
+  ]
+}
