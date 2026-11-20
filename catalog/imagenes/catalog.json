@@ -1,0 +1,47 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json"
+  ],
+  "id": "imagenes",
+  "title": "Imágenes",
+  "description": "Imágenes del Partido de Pergamino: las ortofotos de 10 cm de 2022 que publica la Municipalidad en su GeoNode y mosaicos trimestrales sin nubes de Sentinel-2 desde 2017.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "./ortofotos_10cm_2022/collection.json",
+      "type": "application/json",
+      "title": "Ortofotos 10 cm 2022"
+    },
+    {
+      "rel": "child",
+      "href": "./sentinel2_trimestral/collection.json",
+      "type": "application/json",
+      "title": "Sentinel-2: mosaicos trimestrales sin nubes"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Human-readable documentation"
+    }
+  ],
+  "updated": "2026-11-20T00:00:00Z"
+}

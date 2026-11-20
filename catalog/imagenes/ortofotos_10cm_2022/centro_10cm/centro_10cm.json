@@ -1,0 +1,261 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "centro_10cm",
+  "collection": "imagenes/ortofotos_10cm_2022",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -60.5769846,
+          -33.88738
+        ],
+        [
+          -60.5768605,
+          -33.8874835
+        ],
+        [
+          -60.5769846,
+          -33.8876284
+        ],
+        [
+          -60.5764881,
+          -33.8875456
+        ],
+        [
+          -60.5658754,
+          -33.8910842
+        ],
+        [
+          -60.5658754,
+          -33.8911463
+        ],
+        [
+          -60.5656892,
+          -33.8911463
+        ],
+        [
+          -60.5640135,
+          -33.891705
+        ],
+        [
+          -60.5646755,
+          -33.8931949
+        ],
+        [
+          -60.5649031,
+          -33.8935674
+        ],
+        [
+          -60.5701577,
+          -33.9045558
+        ],
+        [
+          -60.5760537,
+          -33.9033141
+        ],
+        [
+          -60.5787223,
+          -33.9025278
+        ],
+        [
+          -60.5851975,
+          -33.9010999
+        ],
+        [
+          -60.5849493,
+          -33.9004791
+        ],
+        [
+          -60.5784534,
+          -33.8869248
+        ],
+        [
+          -60.5769846,
+          -33.88738
+        ]
+      ],
+      [
+        [
+          -60.5722265,
+          -33.8932156
+        ],
+        [
+          -60.5721851,
+          -33.8932156
+        ],
+        [
+          -60.5721851,
+          -33.8931949
+        ],
+        [
+          -60.5722265,
+          -33.8932156
+        ]
+      ],
+      [
+        [
+          -60.5745228,
+          -33.8950988
+        ],
+        [
+          -60.5745021,
+          -33.8950988
+        ],
+        [
+          -60.5745021,
+          -33.8950781
+        ],
+        [
+          -60.5745228,
+          -33.8950988
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -60.5851975,
+    -33.9045558,
+    -60.5640135,
+    -33.8869248
+  ],
+  "properties": {
+    "title": "Ortofoto 2022: Barrio Centro",
+    "description": "Vuelos fotogramétricos del año 2022 realizados con VANT a pedido de la Municipalidad de Pergamino. Las imágenes fueron capturadas y elaboradas por la empresa TECSO a pedido de la Municipalidad de Pergamino, poseen entre 8 y 10 cm/px de resolución espacial. Área cubierta: Barrio Centro",
+    "datetime": null,
+    "start_datetime": "2022-01-01T00:00:00Z",
+    "end_datetime": "2022-12-31T23:59:59Z",
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      17631,
+      21184
+    ],
+    "proj:transform": [
+      1e-06,
+      0.0,
+      -60.585197526516,
+      0.0,
+      -1e-06,
+      -33.886924768732
+    ],
+    "proj:bbox": [
+      -60.585197527,
+      -33.904555769,
+      -60.564013527,
+      -33.886924769
+    ],
+    "pergamino:geonode_pk": 418,
+    "pergamino:geonode_uuid": "6bd60a9d-49c3-4cb4-9fab-ff9012ca5a49",
+    "pergamino:geonode_alternate": "geonode:centro_10cm",
+    "pergamino:geonode_title": "centro_10cm_2022",
+    "pergamino:source_updated": "2026-07-28T11:27:17.695603Z",
+    "pergamino:source_method": "dataset_download",
+    "pergamino:jpeg_quality": 50,
+    "pergamino:attribution": "Municipalidad de Pergamino"
+  },
+  "assets": {
+    "data": {
+      "href": "./centro_10cm.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Ortofoto RGB de 8 bits (COG)",
+      "description": "Descargado de GeoNode (dataset_download); copia byte a byte de la descarga de GeoNode. RGB de 8 bits en EPSG:4326, JPEG YCbCr, teselas de 512 px, overviews internas, máscara interna para el área sin imagen y estadísticas por banda embebidas en la cabecera.",
+      "roles": [
+        "data",
+        "visual"
+      ],
+      "bands": [
+        {
+          "name": "red",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 114.7534,
+            "stddev": 68.2511,
+            "valid_percent": 60.32
+          }
+        },
+        {
+          "name": "green",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 109.5252,
+            "stddev": 66.4375,
+            "valid_percent": 60.32
+          }
+        },
+        {
+          "name": "blue",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 110.9761,
+            "stddev": 66.0842,
+            "valid_percent": 60.32
+          }
+        }
+      ],
+      "file:size": 54776344,
+      "file:checksum": "122009a792af0c9fb95232eb838c19ecc1eba3ebc803877591f569991556e0ecdded"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Vista previa",
+      "description": "JPEG del mosaico reducido; blanco fuera de la máscara.",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 38171,
+      "file:checksum": "1220c1470167909645e251b4cb3faf33007b443bf100c8b68ac59bdcd2639a63f609"
+    },
+    "source": {
+      "href": "https://geonode.pergamino.gob.ar/datasets/geonode:centro_10cm/dataset_download",
+      "type": "image/tiff; application=geotiff",
+      "title": "Original en GeoNode (GeoTIFF)",
+      "description": "Descarga del mosaico original desde GeoNode.",
+      "roles": [
+        "source"
+      ],
+      "file:size": 54776344,
+      "file:checksum": "122009a792af0c9fb95232eb838c19ecc1eba3ebc803877591f569991556e0ecdded"
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/418",
+      "type": "text/html",
+      "title": "GeoNode: centro_10cm_2022"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "CC BY-SA 4.0"
+    }
+  ]
+}

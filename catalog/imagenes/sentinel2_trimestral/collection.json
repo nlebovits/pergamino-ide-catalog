@@ -1,0 +1,223 @@
+{
+  "type": "Collection",
+  "id": "imagenes/sentinel2_trimestral",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json"
+  ],
+  "title": "Sentinel-2: mosaicos trimestrales sin nubes",
+  "description": "Un mosaico por trimestre calendario, desde 2017, de imágenes Sentinel-2 L2A sobre el rectángulo del Partido de Pergamino: la mediana por píxel de las observaciones que la clasificación de escena (SCL) no marca como nube, sombra de nube, cirro, saturación o sin dato. Bandas B02, B03, B04 y B08 a 10 m en UTM 20S (EPSG:32720). Derivado de Copernicus Sentinel-2 vía Element 84 Earth Search.",
+  "keywords": [
+    "Sentinel-2",
+    "Copernicus",
+    "imágenes satelitales",
+    "mosaico",
+    "mediana trimestral",
+    "Pergamino"
+  ],
+  "license": "other",
+  "providers": [
+    {
+      "name": "European Space Agency (ESA), Copernicus",
+      "description": "Opera Sentinel-2 dentro del programa Copernicus de la Unión Europea.",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://sentinels.copernicus.eu/"
+    },
+    {
+      "name": "Element 84",
+      "description": "Publica los productos L2A como COG y el catálogo STAC Earth Search.",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://element84.com"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.9592921,
+          -34.1932065,
+          -60.1176329,
+          -33.5239586
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-07-01T00:00:00Z",
+          "2024-09-30T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "summaries": {
+    "constellation": [
+      "sentinel-2"
+    ],
+    "instruments": [
+      "msi"
+    ],
+    "gsd": [
+      10
+    ]
+  },
+  "item_assets": {
+    "data": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Mosaico de reflectancia, 4 bandas (COG)",
+      "description": "B02, B03, B04 y B08 a 10 m en EPSG:32720, uint16, nodata 0. Reflectancia = DN * 0.0001 - 0.1.",
+      "roles": [
+        "data",
+        "reflectance"
+      ],
+      "bands": [
+        {
+          "name": "B02",
+          "eo:common_name": "blue",
+          "data_type": "uint16",
+          "nodata": 0,
+          "raster:scale": 0.0001,
+          "raster:offset": -0.1
+        },
+        {
+          "name": "B03",
+          "eo:common_name": "green",
+          "data_type": "uint16",
+          "nodata": 0,
+          "raster:scale": 0.0001,
+          "raster:offset": -0.1
+        },
+        {
+          "name": "B04",
+          "eo:common_name": "red",
+          "data_type": "uint16",
+          "nodata": 0,
+          "raster:scale": 0.0001,
+          "raster:offset": -0.1
+        },
+        {
+          "name": "B08",
+          "eo:common_name": "nir",
+          "data_type": "uint16",
+          "nodata": 0,
+          "raster:scale": 0.0001,
+          "raster:offset": -0.1
+        }
+      ]
+    },
+    "visual": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Color verdadero, 8 bits (COG)",
+      "description": "B04, B03 y B02 en RGB de 8 bits, JPEG, con máscara interna.",
+      "roles": [
+        "visual"
+      ]
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "Vista previa",
+      "description": "JPEG del recurso visual reducido, sin mapa base.",
+      "roles": [
+        "thumbnail"
+      ]
+    }
+  },
+  "assets": {
+    "items": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Copia de los ítems (stac-geoparquet)",
+      "description": "Una fila por ítem de esta colección, en stac-geoparquet, ordenadas por la curva de Hilbert del centro de su bbox. Una sola lectura devuelve todos los trimestres.",
+      "roles": [
+        "collection-mirror"
+      ],
+      "file:size": 41949,
+      "file:checksum": "1220a2bfa687f9c682e12ff5942d614a0eb465c8b4bbde7c4c38d97f6077a30b0b1b"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Vista previa",
+      "description": "Vista previa del mosaico más reciente (2024q3).",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 71922,
+      "file:checksum": "1220cd6a52ace92e34d299444ad26990895bf84b0b02e2515f279307476220c46766"
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Imágenes"
+    },
+    {
+      "rel": "item",
+      "href": "./2024q3/2024q3.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, mediana trimestral 2024 T3"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "via",
+      "href": "https://registry.opendata.aws/sentinel-2-l2a-cogs/",
+      "type": "text/html",
+      "title": "Sentinel-2 Cloud-Optimized GeoTIFFs (Registry of Open Data on AWS)"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-c1-l2a",
+      "type": "application/json",
+      "title": "Earth Search: Sentinel-2 Collection 1 Level-2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a",
+      "type": "application/json",
+      "title": "Earth Search: Sentinel-2 Level-2A"
+    },
+    {
+      "rel": "license",
+      "href": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "type": "application/pdf",
+      "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
+    }
+  ],
+  "updated": "2026-11-20T08:36:44Z",
+  "pergamino:attribution": "Contains modified Copernicus Sentinel data 2024-2024"
+}

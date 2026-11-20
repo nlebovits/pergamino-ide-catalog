@@ -92,6 +92,12 @@
       "title": "Comercio y cultura"
     },
     {
+      "rel": "child",
+      "href": "./imagenes/catalog.json",
+      "type": "application/json",
+      "title": "Imágenes"
+    },
+    {
       "rel": "agents",
       "href": "./AGENTS.md",
       "type": "text/markdown",

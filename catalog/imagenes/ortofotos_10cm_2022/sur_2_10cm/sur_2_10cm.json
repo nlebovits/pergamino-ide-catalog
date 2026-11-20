@@ -1,0 +1,592 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "sur_2_10cm",
+  "collection": "imagenes/ortofotos_10cm_2022",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -60.6076225,
+          -33.8989056
+        ],
+        [
+          -60.6075664,
+          -33.8989898
+        ],
+        [
+          -60.6070331,
+          -33.8990179
+        ],
+        [
+          -60.6060508,
+          -33.8988775
+        ],
+        [
+          -60.6054053,
+          -33.8992424
+        ],
+        [
+          -60.6040861,
+          -33.8993266
+        ],
+        [
+          -60.6029074,
+          -33.8997477
+        ],
+        [
+          -60.6020092,
+          -33.8997757
+        ],
+        [
+          -60.6013356,
+          -33.9000003
+        ],
+        [
+          -60.600634,
+          -33.9000564
+        ],
+        [
+          -60.5998201,
+          -33.9002529
+        ],
+        [
+          -60.59895,
+          -33.9008985
+        ],
+        [
+          -60.5975186,
+          -33.9008424
+        ],
+        [
+          -60.597266,
+          -33.9010108
+        ],
+        [
+          -60.5964521,
+          -33.9011512
+        ],
+        [
+          -60.5958908,
+          -33.9013757
+        ],
+        [
+          -60.5949365,
+          -33.9013196
+        ],
+        [
+          -60.593898,
+          -33.9011231
+        ],
+        [
+          -60.5927193,
+          -33.9013196
+        ],
+        [
+          -60.5907265,
+          -33.9013757
+        ],
+        [
+          -60.5878638,
+          -33.9007863
+        ],
+        [
+          -60.586713,
+          -33.9007863
+        ],
+        [
+          -60.5855062,
+          -33.9009547
+        ],
+        [
+          -60.5851975,
+          -33.9010389
+        ],
+        [
+          -60.5851975,
+          -33.9011792
+        ],
+        [
+          -60.5894355,
+          -33.9102177
+        ],
+        [
+          -60.5896039,
+          -33.910723
+        ],
+        [
+          -60.5905862,
+          -33.9126879
+        ],
+        [
+          -60.5907546,
+          -33.9131931
+        ],
+        [
+          -60.5908107,
+          -33.9132773
+        ],
+        [
+          -60.5910914,
+          -33.9132773
+        ],
+        [
+          -60.5976028,
+          -33.9111159
+        ],
+        [
+          -60.5988939,
+          -33.9108072
+        ],
+        [
+          -60.5995955,
+          -33.9108914
+        ],
+        [
+          -60.6013076,
+          -33.9113124
+        ],
+        [
+          -60.6020934,
+          -33.9112563
+        ],
+        [
+          -60.6022057,
+          -33.9111159
+        ],
+        [
+          -60.6027109,
+          -33.9111159
+        ],
+        [
+          -60.6027951,
+          -33.9110879
+        ],
+        [
+          -60.602767,
+          -33.9107791
+        ],
+        [
+          -60.6033845,
+          -33.910751
+        ],
+        [
+          -60.6033845,
+          -33.9106388
+        ],
+        [
+          -60.6034687,
+          -33.9106107
+        ],
+        [
+          -60.6043949,
+          -33.9104984
+        ],
+        [
+          -60.6045352,
+          -33.9104423
+        ],
+        [
+          -60.6045071,
+          -33.9102739
+        ],
+        [
+          -60.6046194,
+          -33.9102177
+        ],
+        [
+          -60.6052649,
+          -33.9101616
+        ],
+        [
+          -60.605293,
+          -33.9100774
+        ],
+        [
+          -60.606135,
+          -33.9100493
+        ],
+        [
+          -60.6062192,
+          -33.9099932
+        ],
+        [
+          -60.6061911,
+          -33.9097125
+        ],
+        [
+          -60.6077628,
+          -33.9094037
+        ],
+        [
+          -60.6077628,
+          -33.9092353
+        ],
+        [
+          -60.607847,
+          -33.9093475
+        ],
+        [
+          -60.6079874,
+          -33.9093475
+        ],
+        [
+          -60.6080996,
+          -33.9092633
+        ],
+        [
+          -60.6088574,
+          -33.9091511
+        ],
+        [
+          -60.6088574,
+          -33.9090107
+        ],
+        [
+          -60.6095591,
+          -33.9089826
+        ],
+        [
+          -60.6096152,
+          -33.90873
+        ],
+        [
+          -60.6111308,
+          -33.9084774
+        ],
+        [
+          -60.6111869,
+          -33.9082248
+        ],
+        [
+          -60.6126183,
+          -33.9079441
+        ],
+        [
+          -60.6125903,
+          -33.9074669
+        ],
+        [
+          -60.6129551,
+          -33.9075511
+        ],
+        [
+          -60.6129551,
+          -33.9074107
+        ],
+        [
+          -60.6128709,
+          -33.9073546
+        ],
+        [
+          -60.6128148,
+          -33.9069055
+        ],
+        [
+          -60.6124219,
+          -33.9069335
+        ],
+        [
+          -60.6124219,
+          -33.9068213
+        ],
+        [
+          -60.6126183,
+          -33.9067371
+        ],
+        [
+          -60.6126183,
+          -33.9064844
+        ],
+        [
+          -60.6125341,
+          -33.9062599
+        ],
+        [
+          -60.6123938,
+          -33.9062037
+        ],
+        [
+          -60.6122815,
+          -33.9056423
+        ],
+        [
+          -60.6120851,
+          -33.9056143
+        ],
+        [
+          -60.6120289,
+          -33.9047722
+        ],
+        [
+          -60.6116641,
+          -33.9048002
+        ],
+        [
+          -60.611636,
+          -33.9045476
+        ],
+        [
+          -60.6117202,
+          -33.9045195
+        ],
+        [
+          -60.6117202,
+          -33.9044073
+        ],
+        [
+          -60.6115799,
+          -33.9044073
+        ],
+        [
+          -60.6115799,
+          -33.904295
+        ],
+        [
+          -60.6114676,
+          -33.9042669
+        ],
+        [
+          -60.6114676,
+          -33.9037897
+        ],
+        [
+          -60.6111589,
+          -33.9037897
+        ],
+        [
+          -60.6111589,
+          -33.9034529
+        ],
+        [
+          -60.6110466,
+          -33.9033967
+        ],
+        [
+          -60.6110185,
+          -33.9032283
+        ],
+        [
+          -60.6109624,
+          -33.9032845
+        ],
+        [
+          -60.6106537,
+          -33.9019933
+        ],
+        [
+          -60.610345,
+          -33.9019933
+        ],
+        [
+          -60.6103169,
+          -33.9013757
+        ],
+        [
+          -60.6101485,
+          -33.9014038
+        ],
+        [
+          -60.6101204,
+          -33.9008143
+        ],
+        [
+          -60.6099801,
+          -33.9008424
+        ],
+        [
+          -60.6097836,
+          -33.9000564
+        ],
+        [
+          -60.609531,
+          -33.9000284
+        ],
+        [
+          -60.6094468,
+          -33.8998319
+        ],
+        [
+          -60.6093065,
+          -33.899888
+        ],
+        [
+          -60.6091942,
+          -33.8995512
+        ],
+        [
+          -60.6089978,
+          -33.899467
+        ],
+        [
+          -60.6089697,
+          -33.8988775
+        ],
+        [
+          -60.6087171,
+          -33.8988775
+        ],
+        [
+          -60.6087452,
+          -33.898681
+        ],
+        [
+          -60.6086048,
+          -33.8985968
+        ],
+        [
+          -60.6076225,
+          -33.8989056
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -60.6129551,
+    -33.9132773,
+    -60.5851975,
+    -33.8985968
+  ],
+  "properties": {
+    "title": "Ortofoto 2022: Barrios Belgrano y Mariano Moreno",
+    "description": "Vuelos fotogramétricos del año 2022 realizados con VANT a pedido de la Municipalidad de Pergamino. Las imágenes fueron capturadas y elaboradas por la empresa TECSO a pedido de la Municipalidad de Pergamino, poseen entre 8 y 10 cm/px de resolución espacial. Área cubierta: Barrios Belgrano y Mariano Moreno.",
+    "datetime": null,
+    "start_datetime": "2022-01-01T00:00:00Z",
+    "end_datetime": "2022-12-31T23:59:59Z",
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      14877,
+      28740
+    ],
+    "proj:transform": [
+      1e-06,
+      0.0,
+      -60.613937455355,
+      0.0,
+      -1e-06,
+      -33.898400321858
+    ],
+    "proj:bbox": [
+      -60.613937455,
+      -33.913277322,
+      -60.585197455,
+      -33.898400322
+    ],
+    "pergamino:geonode_pk": 397,
+    "pergamino:geonode_uuid": "5579fe61-f8bc-4f1d-85d3-b18bce4fd3be",
+    "pergamino:geonode_alternate": "geonode:sur_2_10cm",
+    "pergamino:geonode_title": "sur_2_10cm_2022",
+    "pergamino:source_updated": "2026-06-25T16:30:05.666450Z",
+    "pergamino:source_method": "dataset_download",
+    "pergamino:jpeg_quality": 55,
+    "pergamino:attribution": "Municipalidad de Pergamino",
+    "pergamino:reencoded_because": [
+      "band 1 lacks embedded statistics"
+    ]
+  },
+  "assets": {
+    "data": {
+      "href": "./sur_2_10cm.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Ortofoto RGB de 8 bits (COG)",
+      "description": "Descargado de GeoNode (dataset_download); recodificado una vez como COG JPEG, con la calidad JPEG que declara el original (75 cuando el original no la declara). RGB de 8 bits en EPSG:4326, JPEG YCbCr, teselas de 512 px, overviews internas, máscara interna para el área sin imagen y estadísticas por banda embebidas en la cabecera.",
+      "roles": [
+        "data",
+        "visual"
+      ],
+      "bands": [
+        {
+          "name": "red",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 120.0554,
+            "stddev": 50.6386,
+            "valid_percent": 58.6845
+          }
+        },
+        {
+          "name": "green",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 110.345,
+            "stddev": 46.8176,
+            "valid_percent": 58.6845
+          }
+        },
+        {
+          "name": "blue",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 103.9267,
+            "stddev": 44.9767,
+            "valid_percent": 58.6845
+          }
+        }
+      ],
+      "file:size": 51786866,
+      "file:checksum": "122012c5e922735b70bda8623bce95fae0e99716fa28b493cf2ba4390136b0ec87ac"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Vista previa",
+      "description": "JPEG del mosaico reducido; blanco fuera de la máscara.",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 20659,
+      "file:checksum": "122001b9eeed74ff062935ddc1a64e8593b194bfd6ac02ec5b398383748d14eee89d"
+    },
+    "source": {
+      "href": "https://geonode.pergamino.gob.ar/datasets/geonode:sur_2_10cm/dataset_download",
+      "type": "image/tiff; application=geotiff",
+      "title": "Original en GeoNode (GeoTIFF)",
+      "description": "Descarga del mosaico original desde GeoNode.",
+      "roles": [
+        "source"
+      ],
+      "file:size": 51837497,
+      "file:checksum": "1220d20be0533c137be2bdd3e2c768b4b378d1bb423622191402531179d353fa59bf"
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/397",
+      "type": "text/html",
+      "title": "GeoNode: sur_2_10cm_2022"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "CC BY-SA 4.0"
+    }
+  ]
+}

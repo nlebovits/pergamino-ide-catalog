@@ -23,6 +23,7 @@ TESTS = [
     "test_no_data_numbers.py",
     "test_no_stale_dates.py",
     "test_queries.py",
+    "test_imagery_refresh.py",
 ]
 
 failed = []
