@@ -43,8 +43,11 @@ from pathlib import Path
 from typing import Any
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+# Appended, not prepended: tools/ and tools/imagery/ both have a refresh.py.
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 import common  # noqa: E402
+from featured import with_featured  # noqa: E402
 
 GEONODE = "https://geonode.pergamino.gob.ar"
 WCS = f"{GEONODE}/geoserver/ows"
@@ -711,6 +714,7 @@ def update_collection(overview: bool = True) -> dict[str, Any]:
     keep = [ln for ln in doc["links"] if ln["rel"] != "item"]
     doc["links"] = keep[:2] + common.item_links(COLLECTION_DIR, items) \
         + keep[2:]
+    doc["keywords"] = with_featured(doc["id"], doc.get("keywords", []))
     doc["updated"] = common.utc_now()
     common.write_json(path, doc)
     return doc

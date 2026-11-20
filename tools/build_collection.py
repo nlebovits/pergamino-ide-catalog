@@ -28,6 +28,7 @@ sys.path.insert(0, str(HERE / "generate"))
 import geonode  # noqa: E402
 import stac_versions as stac  # noqa: E402
 from assets import normalize_assets  # noqa: E402
+from featured import with_featured  # noqa: E402
 from group_descriptions import HAND_WRITTEN  # noqa: E402
 from grouping import TITLES  # noqa: E402
 
@@ -351,7 +352,7 @@ def build(catalog: Path, collection: str, entry: dict, record: dict, *,
         "stac_extensions": extensions,
         "title": title,
         "description": description_for(entry, record),
-        "keywords": keywords_for(record),
+        "keywords": with_featured(collection, keywords_for(record)),
         "license": LICENSE,
         "providers": providers_for(record),
         "extent": {

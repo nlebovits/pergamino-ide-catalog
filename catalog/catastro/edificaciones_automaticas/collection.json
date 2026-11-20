@@ -18,7 +18,8 @@
     "ia",
     "deteccion",
     "buildings",
-    "edificio"
+    "edificio",
+    "destacado"
   ],
   "license": "CC-BY-SA-4.0",
   "providers": [
@@ -114,7 +115,7 @@
     }
   ],
   "version": "2026-11-20",
-  "updated": "2026-11-20T13:47:34Z",
+  "updated": "2026-11-20T14:19:56Z",
   "pergamino:geonode_pk": 140,
   "pergamino:geonode_uuid": "56016b2c-ffd1-4aaa-a117-f18cbee8e85c",
   "pergamino:source_updated": "2026-05-11T16:23:23Z",

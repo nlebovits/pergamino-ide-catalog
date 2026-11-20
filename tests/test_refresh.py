@@ -280,8 +280,26 @@ for collection, kept in tiles.TILE_COLUMNS.items():
               f"{style.relative_to(ROOT)} reads columns the tiles drop: "
               f"{sorted(used - set(kept))}")
 
+# --- featured collections -------------------------------------------------
+# The browser's featured row reads the keyword, so the catalog must carry it
+# on the featured collections and on no other.
+import featured  # noqa: E402
+
+check(featured.with_featured(featured.FEATURED[0], ["a"])
+      == ["a", featured.FEATURED_KEYWORD]
+      and featured.with_featured("x/y", ["a", featured.FEATURED_KEYWORD])
+      == ["a"], "with_featured adds the keyword only to featured ids")
+marked = set()
+for path in sorted((ROOT / "catalog").glob("*/*/collection.json")):
+    doc = json.loads(path.read_text())
+    if featured.FEATURED_KEYWORD in doc.get("keywords", []):
+        marked.add(doc["id"])
+check(marked == set(featured.FEATURED),
+      f"featured keyword on {sorted(marked)}, expected "
+      f"{sorted(featured.FEATURED)}")
+
 if errors:
     print("\n".join(f"error  {e}" for e in errors))
     raise SystemExit(1)
-print("OK: refresh decisions, style checks, rebuilds, upload order and "
-      "tile drop rate and tile columns hold")
+print("OK: refresh decisions, style checks, rebuilds, upload order, "
+      "tile drop rate, tile columns and featured keywords hold")

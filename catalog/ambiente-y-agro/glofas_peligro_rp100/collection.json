@@ -17,7 +17,8 @@
     "GloFAS",
     "JRC",
     "Copernicus",
-    "Pergamino"
+    "Pergamino",
+    "destacado"
   ],
   "license": "other",
   "providers": [
@@ -274,5 +275,5 @@
     "tile": "ID75_S30_W70",
     "recipe": "https://data.source.coop/nlebovits/pergamino-ide/ambiente-y-agro/glofas_peligro_rp100/glofas_peligro_rp100.vrt"
   },
-  "updated": "2026-11-20T12:59:05Z"
+  "updated": "2026-11-20T14:17:58Z"
 }
