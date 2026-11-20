@@ -15,8 +15,8 @@ Builds ``catalog/imagenes/ortofotos_10cm_2022``:
   file that does not, including every WCS assembly, is re-encoded once as a
   JPEG COG with an internal mask and exact embedded statistics.
 - Writes one Item per tile with the valid-data footprint as geometry, a
-  thumbnail, the collection overview (8-bit RGB in EPSG:3857 at 1 m, with an
-  internal mask), the collection thumbnail and ``items.parquet``.
+  thumbnail, the collection overview (8-bit RGB plus alpha in EPSG:3857 at
+  1 m, WebP), the collection thumbnail and ``items.parquet``.
 
 Idempotent: a tile whose Item exists and whose GeoNode ``last_updated``
 equals the Item's ``pergamino:source_updated`` is not downloaded again.
@@ -601,11 +601,16 @@ def set_masked_stats(path: Path) -> None:
 
 
 def build_overview(items: list[dict[str, Any]]) -> Path:
-    """8-bit RGB overview of every tile in EPSG:3857 at 1 m.
+    """8-bit RGB plus alpha overview of every tile in EPSG:3857 at 1 m.
 
-    gdalwarp reads each tile's internal overviews and honours its mask; the
-    alpha band it writes becomes the COG's internal mask. Areas with no tile
-    are left unwritten (sparse), so the file stays small.
+    gdalwarp reads each tile's internal overviews and honours its mask. The
+    alpha band it writes stays a band of the COG, compressed with lossy
+    WebP. An internal mask would not do: GDAL writes it as a 1-band image
+    after each overview level, and a viewer that ignores the TIFF mask flag
+    takes the smallest of those for the lowest zoom, which shows the
+    collection as a white silhouette on black. JPEG cannot hold the alpha
+    band. Areas with no tile are left unwritten (sparse), so the file stays
+    small.
     """
     out = COLLECTION_DIR / OVERVIEW_FILE
     work = Path(tempfile.mkdtemp(prefix="overview_", dir=RAW.parent))
@@ -621,8 +626,7 @@ def build_overview(items: list[dict[str, Any]]) -> Path:
     ])
     set_masked_stats(warped)
     common.run([
-        "gdal_translate", "-q", "-of", "COG", "-b", "1", "-b", "2",
-        "-b", "3", "-mask", "4", "-co", "COMPRESS=JPEG",
+        "gdal_translate", "-q", "-of", "COG", "-co", "COMPRESS=WEBP",
         "-co", "QUALITY=80", "-co", "BLOCKSIZE=512",
         "-co", "SPARSE_OK=TRUE", "-co", "STATISTICS=AUTO",
         "-co", "OVERVIEW_RESAMPLING=AVERAGE", "-co", "BIGTIFF=IF_SAFER",
@@ -682,7 +686,7 @@ def update_collection(overview: bool = True) -> dict[str, Any]:
             {"name": n, "data_type": "uint8", "statistics": s}
             for n, s in zip(("red", "green", "blue"),
                             common.embedded_stats(ov))
-        ]
+        ] + [{"name": "alpha", "data_type": "uint8"}]
         doc["assets"]["overview"].update(common.proj_fields(ov))
     keep = [ln for ln in doc["links"] if ln["rel"] != "item"]
     doc["links"] = keep[:2] + common.item_links(COLLECTION_DIR, items) \

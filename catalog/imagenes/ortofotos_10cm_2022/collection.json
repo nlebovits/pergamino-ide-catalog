@@ -95,15 +95,15 @@
       "href": "./overview.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "title": "Vista general de todos los mosaicos (COG)",
-      "description": "Todos los mosaicos en una sola imagen RGB de 8 bits, en Web Mercator (EPSG:3857) a 1 m, JPEG con máscara interna. Sirve para ver qué cubre la colección; para análisis usar el COG de cada ítem.",
+      "description": "Todos los mosaicos en una sola imagen RGB de 8 bits, en Web Mercator (EPSG:3857) a 1 m, WebP con una banda alfa para el área sin imagen. Sirve para ver qué cubre la colección; para análisis usar el COG de cada ítem.",
       "roles": [
         "visual",
         "overview"
       ],
       "start_datetime": "2022-01-01T00:00:00Z",
       "end_datetime": "2022-12-31T23:59:59Z",
-      "file:size": 38184736,
-      "file:checksum": "12207a6803b59084fb23123283b9188c0fc4e68085f76aaa3ea909fe952fc9f797b2",
+      "file:size": 31039080,
+      "file:checksum": "12208e53163ef88caf7cc3b25e9555294330a099cef11d8a45201ce1d486481613c3",
       "bands": [
         {
           "name": "red",
@@ -137,6 +137,10 @@
             "stddev": 41.7983,
             "valid_percent": 2.2605
           }
+        },
+        {
+          "name": "alpha",
+          "data_type": "uint8"
         }
       ],
       "proj:code": "EPSG:3857",
@@ -178,8 +182,8 @@
       "roles": [
         "thumbnail"
       ],
-      "file:size": 85372,
-      "file:checksum": "1220ee7b13008f290a940d7d9463c0a40c2eb49193abc0f6e1f7847af57c645575c1"
+      "file:size": 83974,
+      "file:checksum": "1220631cb75b2a2b2e45850f119f65e2ac57a4efeb6dbcdfab4e382857426ff6a174"
     }
   },
   "links": [
@@ -418,5 +422,5 @@
       "title": "CC BY-SA 4.0"
     }
   ],
-  "updated": "2026-11-20T11:34:25Z"
+  "updated": "2026-11-20T12:21:34Z"
 }

@@ -30,7 +30,8 @@ del mosaico en GeoNode.
   píxeles válidos, no el rectángulo de la grilla.
 - **`overview.tif`**, recurso de la colección con los roles `visual` y
   `overview`: todos los mosaicos en una imagen RGB de 8 bits en Web Mercator
-  (EPSG:3857) a 1 m, con máscara interna. Sirve para ver qué cubre la
+  (EPSG:3857) a 1 m, comprimida en WebP, con una cuarta banda alfa que
+  marca el área sin imagen. Sirve para ver qué cubre la
   colección sin abrir cada mosaico. Para medir o analizar, usar los COG de
   los ítems.
 - **`items.parquet`**: una fila por ítem, en stac-geoparquet, ordenadas por

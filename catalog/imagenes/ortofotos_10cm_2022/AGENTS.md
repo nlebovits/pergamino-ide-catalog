@@ -109,7 +109,8 @@ import rasterio
 url = ("https://data.source.coop/nlebovits/pergamino-ide/imagenes/"
        "ortofotos_10cm_2022/overview.tif")
 with rasterio.open(url) as src:
-    small = src.read(out_shape=(3, src.height // 64, src.width // 64),
+    small = src.read([1, 2, 3],
+                     out_shape=(3, src.height // 64, src.width // 64),
                      masked=True)
 print(src.crs, small.shape)
 ```
