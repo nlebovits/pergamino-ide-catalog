@@ -1,0 +1,278 @@
+{
+  "type": "Collection",
+  "id": "externos/glofas/peligro_rp10",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json"
+  ],
+  "title": "Clases de profundidad de inundación, retorno de 10 años",
+  "description": "Profundidad del agua agrupada en cuatro clases para una crecida fluvial con un período de retorno de 10 años, modelada por el JRC (CEMS-GloFAS), recortada al partido de Pergamino sin copiar los datos.",
+  "keywords": [
+    "inundación",
+    "peligro",
+    "GloFAS",
+    "JRC",
+    "Copernicus",
+    "Pergamino"
+  ],
+  "license": "other",
+  "providers": [
+    {
+      "name": "European Commission, Joint Research Centre (JRC)",
+      "description": "Copernicus Emergency Management Service (CEMS), Global Flood Awareness System (GloFAS).",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://joint-research-centre.ec.europa.eu/"
+    },
+    {
+      "name": "JRC GloFAS en Source Cooperative (nlebovits/jrc-glofas)",
+      "description": "Convierte los GeoTIFF del JRC en COG y los publica. Los bytes que referencia esta colección están allí.",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://source.coop/nlebovits/jrc-glofas"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.94404785,
+          -34.17655858,
+          -60.13879236,
+          -33.54021706
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Peligro de inundación fluvial (JRC GloFAS)"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "via",
+      "href": "https://doi.org/10.2905/JRC.VD32YWG",
+      "type": "text/html",
+      "title": "Global river flood hazard maps (JRC, DOI)"
+    },
+    {
+      "rel": "via",
+      "href": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/CEMS-GLOFAS/flood_hazard/",
+      "type": "text/html",
+      "title": "Descarga original del JRC (CEMS-GLOFAS/flood_hazard)"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://data.source.coop/nlebovits/jrc-glofas/hazard-rp10/collection.json",
+      "type": "application/json",
+      "title": "Colección hazard-rp10 en nlebovits/jrc-glofas"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "title": "CC BY 4.0 (copyright.txt del JRC)"
+    },
+    {
+      "rel": "license",
+      "href": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "type": "text/html",
+      "title": "ODbL 1.0 (README.txt del JRC y Catálogo de Datos del JRC)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/nlebovits/jrc-glofas/hazard-rp10/ID75_S30_W70/ID75_S30_W70_RP10_depth_reclass.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data",
+        "external"
+      ],
+      "title": "Tesela COG de GloFAS (externa)",
+      "description": "Tesela ID75_S30_W70 de la capa `hazard-rp10` del catálogo nlebovits/jrc-glofas. Cubre 10° × 10°; el partido es una ventana dentro de ella. Los bytes no se copian a este catálogo.",
+      "bands": [
+        {
+          "name": "b1",
+          "data_type": "uint8"
+        }
+      ],
+      "nodata": 255.0,
+      "classification:classes": [
+        {
+          "value": 1,
+          "name": "menos_de_1_m",
+          "title": "Menos de 1 m",
+          "description": "Profundidad del agua menor a 1 m.",
+          "color_hint": "C6DBEF"
+        },
+        {
+          "value": 2,
+          "name": "de_1_a_3_m",
+          "title": "De 1 m a menos de 3 m",
+          "description": "Profundidad del agua de 1 m a menos de 3 m.",
+          "color_hint": "6BAED6"
+        },
+        {
+          "value": 3,
+          "name": "de_3_a_10_m",
+          "title": "De 3 m a menos de 10 m",
+          "description": "Profundidad del agua de 3 m a menos de 10 m.",
+          "color_hint": "2171B5"
+        },
+        {
+          "value": 4,
+          "name": "mas_de_10_m",
+          "title": "Más de 10 m",
+          "description": "Profundidad del agua mayor a 10 m.",
+          "color_hint": "08306B"
+        }
+      ],
+      "processing:expression": {
+        "format": "gdalwarp",
+        "expression": "gdalwarp -of VRT -cutline /vsicurl/https://data.source.coop/nlebovits/pergamino-ide/limites/partido_pergamino/partido_pergamino.parquet -crop_to_cutline /vsicurl/https://data.source.coop/nlebovits/jrc-glofas/hazard-rp10/ID75_S30_W70/ID75_S30_W70_RP10_depth_reclass.tif peligro_rp10.vrt"
+      }
+    },
+    "recorte": {
+      "href": "./peligro_rp10.vrt",
+      "type": "application/xml",
+      "roles": [
+        "metadata",
+        "recipe"
+      ],
+      "title": "Recorte al partido (GDAL VRT)",
+      "description": "VRT de GDAL que lee la tesela externa por /vsicurl/ y la recorta al límite oficial del partido. Abrirlo con GDAL, QGIS o rasterio lee solo la ventana del partido. Las estadísticas de la banda describen esa ventana.",
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        763,
+        965
+      ],
+      "proj:transform": [
+        0.000833333336,
+        0.0,
+        -60.943748902766,
+        0.0,
+        -0.000833333333,
+        -33.54043333333
+      ],
+      "bands": [
+        {
+          "name": "b1",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 1.0,
+            "maximum": 3.0,
+            "mean": 1.492,
+            "stddev": 0.541,
+            "valid_percent": 1.549
+          }
+        }
+      ],
+      "nodata": 255.0,
+      "classification:classes": [
+        {
+          "value": 1,
+          "name": "menos_de_1_m",
+          "title": "Menos de 1 m",
+          "description": "Profundidad del agua menor a 1 m.",
+          "color_hint": "C6DBEF"
+        },
+        {
+          "value": 2,
+          "name": "de_1_a_3_m",
+          "title": "De 1 m a menos de 3 m",
+          "description": "Profundidad del agua de 1 m a menos de 3 m.",
+          "color_hint": "6BAED6"
+        },
+        {
+          "value": 3,
+          "name": "de_3_a_10_m",
+          "title": "De 3 m a menos de 10 m",
+          "description": "Profundidad del agua de 3 m a menos de 10 m.",
+          "color_hint": "2171B5"
+        },
+        {
+          "value": 4,
+          "name": "mas_de_10_m",
+          "title": "Más de 10 m",
+          "description": "Profundidad del agua mayor a 10 m.",
+          "color_hint": "08306B"
+        }
+      ],
+      "file:size": 85737,
+      "file:checksum": "122002ced20e512f2198a9f5e7dfed04ca517730f95d3cb995a793ae1286ee5bd949"
+    },
+    "style": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "title": "Máscara del partido",
+      "description": "Estilo MapLibre que cubre todo lo que queda fuera del partido y traza su límite. El ráster se dibuja con la definición `renders` o con las clases de la banda.",
+      "file:size": 47094,
+      "file:checksum": "1220f5814e8227115f5d6cca11d059db56ae069b1350d7256d798c73a81f21459b85"
+    },
+    "thumbnail": {
+      "href": "./peligro_rp10.thumb.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Vista previa",
+      "description": "La ventana del partido dibujada con la rampa o las clases por defecto sobre un mapa base, con la máscara aplicada.",
+      "file:size": 30082,
+      "file:checksum": "1220747d3f810db1ad1e039fffa4f8a04d0319180953842c62c61d62999f7c3273b3"
+    }
+  },
+  "pergamino:virtual": {
+    "upstream_catalog": "https://data.source.coop/nlebovits/jrc-glofas/catalog.json",
+    "upstream_collection": "hazard-rp10",
+    "tile": "ID75_S30_W70",
+    "recipe": "https://data.source.coop/nlebovits/pergamino-ide/externos/glofas/peligro_rp10/peligro_rp10.vrt"
+  },
+  "updated": "2026-11-20T09:02:38Z"
+}

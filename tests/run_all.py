@@ -18,6 +18,8 @@ TESTS = [
     "test_stac_valid.py",
     "test_conformance.py",
     "test_regen.py",
+    "test_virtual_refresh.py",
+    "test_virtual.py",
 ]
 
 failed = []

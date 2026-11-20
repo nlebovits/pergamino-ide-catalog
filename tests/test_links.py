@@ -30,9 +30,13 @@ BASE = ROOT / config["publish_dir"]
 # resolve, which is what this gate is for. Locally, with the data present, the
 # variable is unset and everything is checked.
 CI_LIGHT = os.environ.get("CI_LIGHT") == "1"
+#
+# `.ddb` is here for the same reason: externos/overture/pergamino_overture.ddb
+# is a generated binary (DuckDB views, no data), rebuilt by
+# tools/virtual/build.py and kept out of git like the data it points at.
 DATA_SUFFIXES = (
     ".parquet", ".pmtiles", ".tif", ".tiff", ".copc.laz", ".laz", ".gpkg",
-    ".zarr", ".geojsonl", ".shp", ".zip",
+    ".zarr", ".geojsonl", ".shp", ".zip", ".ddb",
 )
 
 

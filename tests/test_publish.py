@@ -118,6 +118,9 @@ check(
     content_type_for(Path("a/d.parquet")) == "application/vnd.apache.parquet",
     "parquet",
 )
+check(content_type_for(Path("a/b.vrt")) == "application/xml", "GDAL VRT")
+check(content_type_for(Path("a/b.ddb")) == "application/vnd.duckdb",
+      "DuckDB file")
 check(content_type_for(Path("a/x.unknown")) == "application/octet-stream",
       "unknown suffix falls back")
 
