@@ -5,7 +5,8 @@ municipality's styles depend on that: a street is a grey casing under a
 coloured line, a camera is a white disc with a dark ring under a coloured
 mark. The Portolan CLI's converter keeps the first symbolizer of each rule
 and drops the rest, so those layers render as the casing alone, or as white
-on white.
+on white (portolan-sdi/portolan-cli#1125). This file can go once the
+converter draws every symbolizer.
 
 This converter handles rules whose filter is absent, an ``ElseFilter``, or
 one ``PropertyIsEqualTo``. Symbolizer *i* of every rule becomes MapLibre

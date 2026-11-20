@@ -226,8 +226,9 @@ def is_point_layer(parquet: Path) -> bool:
 def tippecanoe_command(build):
     """gpio's tippecanoe command builder, with ``DROP_RATE`` added.
 
-    gpio (pinned in tools/requirements.txt) has no drop-rate option.
-    ``tests/test_refresh.py`` checks that the flag reaches the command.
+    gpio (pinned in tools/requirements.txt) has no drop-rate option
+    (geoparquet/geoparquet-io#1471). ``tests/test_refresh.py`` checks that
+    the flag reaches the command.
     """
     def command(*args, **kwargs):
         cmd = build(*args, **kwargs)

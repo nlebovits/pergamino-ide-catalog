@@ -285,7 +285,13 @@ def point_radius(style: dict, sld: bytes) -> list[str]:
 
 def repair(style: dict, types: dict[str, str],
            sld: bytes | None = None) -> list[str]:
-    """Fix the style in place; return a note per change."""
+    """Fix the style in place; return a note per change.
+
+    Each repair works around a defect of the Portolan CLI's SLD converter
+    (portolan-sdi/portolan-cli#1125): match labels typed from the literal,
+    colours built with strConcat, mark strokes, and the categorical point
+    radius. Remove a repair once the converter handles its case.
+    """
     notes = point_radius(style, sld) if sld else []
     colors = sld_colors(sld) if sld else {}
     strokes = sld_strokes(sld) if sld else []
