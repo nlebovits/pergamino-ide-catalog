@@ -11,7 +11,7 @@ For each quarter:
    2017 comes from ``sentinel-2-l2a``.
 2. Load B02, B03, B04, B08 and SCL with odc-stac at 10 m in EPSG:32720
    (UTM 20S, the zone that holds the whole partido), grouped by solar day,
-   as dask arrays in 2048 px chunks.
+   as dask arrays in 1024 px chunks.
 3. Mask every pixel whose SCL class is 0 (no data), 1 (saturated or
    defective), 3 (cloud shadow), 8 (cloud, medium probability), 9 (cloud,
    high probability) or 10 (thin cirrus), and every band value of 0.
@@ -39,6 +39,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 import shutil
 import sys
@@ -58,10 +59,14 @@ L2A = "sentinel-2-l2a"
 BBOX = (-60.944, -34.177, -60.139, -33.540)
 CRS = "EPSG:32720"
 RESOLUTION = 10
-CHUNK = 2048
+CHUNK = 1024
 FIRST_QUARTER = "2017Q1"
 MAX_SCENE_CLOUD = 90  # percent, the scene's own eo:cloud_cover
-THREADS = 32  # dask threads; the load waits on network, not CPU
+# Dask threads. Each one holds every scene of the quarter for one chunk, so
+# memory grows with threads x scenes x CHUNK^2: 32 threads at 2048 px passed
+# 22 GB on 2019Q2. The median is per pixel, so neither value changes the
+# output.
+THREADS = int(os.environ.get("S2_THREADS", "8"))
 LAG_DAYS = 14  # a quarter is added once it ended this many days ago
 
 # STAC asset key -> (Sentinel-2 band, common name). Wavelengths are read

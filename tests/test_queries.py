@@ -17,10 +17,11 @@ this to test new data before it uploads it.
 Blocks that open with WHERE are fragments and are skipped. Only ```sql fences
 run; ```python and ```bash fences are prose.
 
-One connection runs every block in turn. It loads spatial and httpfs once
-and uses at most half the machine's cores and memory, so a local run leaves
-the rest of the machine usable. QUERY_THREADS and QUERY_MEMORY override the
-two limits.
+One connection loads spatial and httpfs once and uses at most half the
+machine's cores and memory, so a run leaves the rest of the machine usable.
+QUERY_THREADS and QUERY_MEMORY override the two limits. QUERY_WORKERS
+blocks (default 8) run at once, each on its own cursor of that connection,
+so a remote run overlaps its HTTP waits inside the same limits.
 
     python3 tests/test_queries.py
     QUERY_ONLY=limites python3 tests/test_queries.py   # one subtree
@@ -32,6 +33,7 @@ import os
 import re
 import sys
 import threading
+from concurrent.futures import ThreadPoolExecutor
 from importlib.util import find_spec
 from pathlib import Path
 
@@ -39,6 +41,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CATALOG = ROOT / "catalog"
 REMOTE = ("https://", "s3://")
 TIMEOUT = 900
+WORKERS = int(os.environ.get("QUERY_WORKERS", "8"))
 FENCE = re.compile(r"```sql\n(.*?)```", re.S)
 LOCAL = os.environ.get("QUERY_LOCAL", "0") == "1"
 
@@ -113,11 +116,16 @@ def main() -> int:
     skipped = len(blocks) - len(todo)
     os.chdir(CATALOG)
     con = connect()
-    failures = []
-    for label, sql in todo:
-        code, why = run(con, sql)
-        if code:
-            failures.append((label, why))
+    local = threading.local()
+
+    def run_block(block):
+        if not hasattr(local, "cursor"):
+            local.cursor = con.cursor()
+        return block[0], *run(local.cursor, block[1])
+
+    with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+        results = list(pool.map(run_block, todo))
+    failures = [(label, why) for label, code, why in results if code]
     for label, why in failures:
         print(f"FAIL {label}: {why}")
     tail = f", {skipped} remote skipped" if skipped else ""
