@@ -60,13 +60,13 @@ FROM read_parquet('https://data.source.coop/nlebovits/pergamino-ide/imagenes/ort
 ORDER BY id;
 ```
 
-Mosaicos que tocan un barrio del catálogo (`limites/barrios`):
+Mosaicos que tocan un barrio del catálogo (`limites/barrios_y_pueblos`):
 
 ```sql
 SELECT b.nombre AS barrio, o.id AS mosaico
-FROM read_parquet('https://data.source.coop/nlebovits/pergamino-ide/limites/barrios/publico_barrios.parquet') b
+FROM read_parquet('https://data.source.coop/nlebovits/pergamino-ide/limites/barrios_y_pueblos/barrios_y_pueblos.parquet') b
 JOIN read_parquet('https://data.source.coop/nlebovits/pergamino-ide/imagenes/ortofotos_10cm_2022/items.parquet') o
-  ON ST_Intersects(b.geometry, o.geometry)
+  ON ST_Intersects(b.geometry, ST_SetCRS(o.geometry, 'OGC:CRS84'))
 WHERE b.nombre ILIKE '%centro%'
 ORDER BY mosaico;
 ```
