@@ -60,7 +60,7 @@
     "temporal": {
       "interval": [
         [
-          "2024-07-01T00:00:00Z",
+          "2017-01-01T00:00:00Z",
           "2024-09-30T23:59:59Z"
         ]
       ]
@@ -147,8 +147,8 @@
       "roles": [
         "collection-mirror"
       ],
-      "file:size": 41949,
-      "file:checksum": "1220a2bfa687f9c682e12ff5942d614a0eb465c8b4bbde7c4c38d97f6077a30b0b1b"
+      "file:size": 92968,
+      "file:checksum": "12208578e6f84a5e0bf8c6463b61302004cf0cc48357aef36cb54510385fe0414f21"
     },
     "thumbnail": {
       "href": "./thumbnail.jpg",
@@ -174,6 +174,60 @@
       "href": "../catalog.json",
       "type": "application/json",
       "title": "Imágenes"
+    },
+    {
+      "rel": "item",
+      "href": "./2017q1/2017q1.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, mediana trimestral 2017 T1"
+    },
+    {
+      "rel": "item",
+      "href": "./2017q2/2017q2.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, mediana trimestral 2017 T2"
+    },
+    {
+      "rel": "item",
+      "href": "./2017q3/2017q3.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, mediana trimestral 2017 T3"
+    },
+    {
+      "rel": "item",
+      "href": "./2017q4/2017q4.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, mediana trimestral 2017 T4"
+    },
+    {
+      "rel": "item",
+      "href": "./2018q1/2018q1.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, mediana trimestral 2018 T1"
+    },
+    {
+      "rel": "item",
+      "href": "./2018q2/2018q2.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, mediana trimestral 2018 T2"
+    },
+    {
+      "rel": "item",
+      "href": "./2018q3/2018q3.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, mediana trimestral 2018 T3"
+    },
+    {
+      "rel": "item",
+      "href": "./2018q4/2018q4.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, mediana trimestral 2018 T4"
+    },
+    {
+      "rel": "item",
+      "href": "./2019q1/2019q1.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, mediana trimestral 2019 T1"
     },
     {
       "rel": "item",
@@ -218,6 +272,6 @@
       "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
     }
   ],
-  "updated": "2026-11-20T08:36:44Z",
-  "pergamino:attribution": "Contains modified Copernicus Sentinel data 2024-2024"
+  "updated": "2026-11-20T11:20:20Z",
+  "pergamino:attribution": "Contains modified Copernicus Sentinel data 2017-2024"
 }
