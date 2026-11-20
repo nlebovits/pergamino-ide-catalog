@@ -559,6 +559,47 @@ def tile_href(item: dict[str, Any]) -> str:
     return f"/vsicurl/{PUBLIC}/{item['id']}/{item['id']}.tif"
 
 
+def set_masked_stats(path: Path) -> None:
+    """Write exact statistics of bands 1-3 over the pixels band 4 marks valid.
+
+    The COG driver's STATISTICS=YES ignores the alpha band of a sparse
+    warp, and it wrote a standard deviation of about 6 for the overview,
+    against about 26 in the image. A viewer that stretches contrast from
+    the statistics then maps a narrow grey range to the full 0-255 and
+    washes the image out. These values go into the band metadata, and
+    STATISTICS=AUTO copies them into the COG header.
+    """
+    import numpy as np
+    import rasterio
+
+    n = s = ss = 0
+    lo = np.full(3, 255.0)
+    hi = np.zeros(3)
+    with rasterio.open(path, "r+") as src:
+        for _, win in src.block_windows(4):
+            alpha = src.read(4, window=win)
+            valid = alpha > 0
+            if not valid.any():
+                continue
+            vals = src.read([1, 2, 3], window=win)[:, valid].astype("float64")
+            n += vals.shape[1]
+            s = s + vals.sum(axis=1)
+            ss = ss + (vals * vals).sum(axis=1)
+            lo = np.minimum(lo, vals.min(axis=1))
+            hi = np.maximum(hi, vals.max(axis=1))
+        total = src.width * src.height
+        for b in range(3):
+            mean = s[b] / n
+            std = float(np.sqrt(max(ss[b] / n - mean * mean, 0.0)))
+            src.update_tags(b + 1, **{
+                "STATISTICS_MINIMUM": repr(float(lo[b])),
+                "STATISTICS_MAXIMUM": repr(float(hi[b])),
+                "STATISTICS_MEAN": repr(float(mean)),
+                "STATISTICS_STDDEV": repr(std),
+                "STATISTICS_VALID_PERCENT": repr(100.0 * n / total),
+            })
+
+
 def build_overview(items: list[dict[str, Any]]) -> Path:
     """8-bit RGB overview of every tile in EPSG:3857 at 1 m.
 
@@ -578,11 +619,12 @@ def build_overview(items: list[dict[str, Any]]) -> Path:
         "-co", "COMPRESS=DEFLATE", "-co", "SPARSE_OK=TRUE",
         "-co", "BIGTIFF=YES", *srcs, str(warped),
     ])
+    set_masked_stats(warped)
     common.run([
         "gdal_translate", "-q", "-of", "COG", "-b", "1", "-b", "2",
         "-b", "3", "-mask", "4", "-co", "COMPRESS=JPEG",
         "-co", "QUALITY=80", "-co", "BLOCKSIZE=512",
-        "-co", "SPARSE_OK=TRUE", "-co", "STATISTICS=YES",
+        "-co", "SPARSE_OK=TRUE", "-co", "STATISTICS=AUTO",
         "-co", "OVERVIEW_RESAMPLING=AVERAGE", "-co", "BIGTIFF=IF_SAFER",
         "-co", "NUM_THREADS=ALL_CPUS", str(warped), str(out),
     ])

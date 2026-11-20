@@ -102,8 +102,8 @@
       ],
       "start_datetime": "2022-01-01T00:00:00Z",
       "end_datetime": "2022-12-31T23:59:59Z",
-      "file:size": 35940294,
-      "file:checksum": "1220b47c11efe3801f16e0df727d5f133afa25696a23cb91ffd0fce21f2a8b8788e9",
+      "file:size": 38184736,
+      "file:checksum": "12207a6803b59084fb23123283b9188c0fc4e68085f76aaa3ea909fe952fc9f797b2",
       "bands": [
         {
           "name": "red",
@@ -111,9 +111,9 @@
           "statistics": {
             "minimum": 0.0,
             "maximum": 255.0,
-            "mean": 124.2045,
-            "stddev": 6.2688,
-            "valid_percent": 100.0
+            "mean": 124.5296,
+            "stddev": 42.7747,
+            "valid_percent": 2.2605
           }
         },
         {
@@ -122,9 +122,9 @@
           "statistics": {
             "minimum": 0.0,
             "maximum": 255.0,
-            "mean": 117.3677,
-            "stddev": 5.8436,
-            "valid_percent": 100.0
+            "mean": 117.6534,
+            "stddev": 39.8164,
+            "valid_percent": 2.2605
           }
         },
         {
@@ -133,9 +133,9 @@
           "statistics": {
             "minimum": 0.0,
             "maximum": 255.0,
-            "mean": 100.7486,
-            "stddev": 6.144,
-            "valid_percent": 100.0
+            "mean": 100.4202,
+            "stddev": 41.7983,
+            "valid_percent": 2.2605
           }
         }
       ],
@@ -167,8 +167,8 @@
       "roles": [
         "collection-mirror"
       ],
-      "file:size": 102141,
-      "file:checksum": "1220cbde82428f4c4904250cdd0c8a0232858f0e0cc6f17e20a5f7ce3cf8a675c11b"
+      "file:size": 109751,
+      "file:checksum": "12201a657bf466b5a3b54a41c6e6a423acb65c60c389a615cbd7dcfb8d27a21a6721"
     },
     "thumbnail": {
       "href": "./thumbnail.jpg",
@@ -329,6 +329,18 @@
     },
     {
       "rel": "item",
+      "href": "./pinzon_10cm/pinzon_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Pueblo Pinzon"
+    },
+    {
+      "rel": "item",
+      "href": "./rancagua_10cm/rancagua_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Pueblo Rancagua"
+    },
+    {
+      "rel": "item",
       "href": "./socorro_10cm/socorro_10cm.json",
       "type": "application/geo+json",
       "title": "Ortofoto 2022: Pueblo El Socorro (Villa Angélica)"
@@ -406,5 +418,5 @@
       "title": "CC BY-SA 4.0"
     }
   ],
-  "updated": "2026-11-20T10:57:34Z"
+  "updated": "2026-11-20T11:34:25Z"
 }

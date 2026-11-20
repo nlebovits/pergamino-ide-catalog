@@ -36,3 +36,7 @@ __pycache__/
 *.pyc
 .venv/
 .ruff_cache/
+
+# GDAL scratch files of an interrupted build.
+*.tmp
+*.ovr
