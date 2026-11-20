@@ -16,7 +16,7 @@ FEATURED_KEYWORD = "destacado"
 FEATURED: tuple[str, ...] = (
     "imagenes/ortofotos_10cm_2022",
     "catastro/edificaciones_automaticas",
-    "ambiente-y-agro/glofas_peligro_rp100",
+    "ambiente-y-agro/glofas_profundidad_rp100",
 )
 
 
