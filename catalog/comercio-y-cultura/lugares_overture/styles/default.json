@@ -2375,7 +2375,8 @@
         "circle-opacity": 0.9,
         "circle-stroke-color": "#FFFFFF",
         "circle-stroke-width": 0.8
-      }
+      },
+      "minzoom": 14
     },
     {
       "id": "mascara",

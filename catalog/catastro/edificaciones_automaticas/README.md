@@ -81,6 +81,8 @@ Hay más consultas, todas probadas, en [AGENTS.md](./AGENTS.md).
 
 Las teselas vectoriales están en `./edificaciones_automaticas.pmtiles` (capa `edificaciones_automaticas`). El estilo por defecto, `styles/default.json`, deriva del estilo SLD que publica GeoNode para esta capa.
 
+Las teselas llevan solo los atributos que usan los mapas: `altura_minima`, `altura_promedio`, `altura_maxima`, `nombre`, `localidad`, `confidence`. Las demás columnas están en el GeoParquet.
+
 Leyenda tal como la publica la fuente:
 
 ![Leyenda](./legends/source.png)

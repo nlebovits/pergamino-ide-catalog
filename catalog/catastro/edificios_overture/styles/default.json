@@ -2365,7 +2365,8 @@
       "paint": {
         "fill-color": "#b0a377",
         "fill-opacity": 0.85
-      }
+      },
+      "minzoom": 13
     },
     {
       "id": "building-outline",
@@ -2394,7 +2395,8 @@
           7,
           0.6
         ]
-      }
+      },
+      "minzoom": 13
     },
     {
       "id": "mascara",

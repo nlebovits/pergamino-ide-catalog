@@ -222,8 +222,66 @@ if build is not None:
     check(cmd[0] == "tippecanoe" and cmd.count(extract.DROP_RATE) == 1,
           f"the drop rate reaches tippecanoe once: {cmd}")
 
+# --- tile columns ---------------------------------------------------------
+# make_pmtiles hands the kept columns to gpio as include_cols. Every column a
+# collection's style reads must be kept, and every kept column must exist.
+import tiles  # noqa: E402
+from geoparquet_io.api import ops as gpio_ops  # noqa: E402
+
+seen = {}
+
+
+def fake_create(src, out, **kwargs):
+    seen.update(kwargs)
+
+
+real_create, real_point = gpio_ops.create_pmtiles, extract.is_point_layer
+gpio_ops.create_pmtiles = fake_create
+extract.is_point_layer = lambda _: False
+try:
+    extract.make_pmtiles(Path("x.parquet"), Path("x.pmtiles"), "x",
+                         ["a", "b"])
+    check(seen.get("include_cols") == "a,b",
+          f"kept columns reach gpio as include_cols: {seen}")
+    seen.clear()
+    extract.make_pmtiles(Path("x.parquet"), Path("x.pmtiles"), "x")
+    check(seen.get("include_cols") is None,
+          f"no column list keeps every column: {seen}")
+finally:
+    gpio_ops.create_pmtiles = real_create
+    extract.is_point_layer = real_point
+
+
+def style_fields(node) -> set[str]:
+    """Every property a MapLibre style expression reads with get or has."""
+    found = set()
+    if isinstance(node, list):
+        if len(node) == 2 and node[0] in ("get", "has") \
+                and isinstance(node[1], str):
+            found.add(node[1])
+        for child in node:
+            found |= style_fields(child)
+    elif isinstance(node, dict):
+        for child in node.values():
+            found |= style_fields(child)
+    return found
+
+
+for collection, kept in tiles.TILE_COLUMNS.items():
+    folder = ROOT / "catalog" / collection
+    doc = json.loads((folder / "collection.json").read_text())
+    names = {c["name"] for c in doc.get("table:columns", [])}
+    check(set(kept) <= names,
+          f"{collection}: kept tile columns missing from the data: "
+          f"{sorted(set(kept) - names)}")
+    for style in sorted((folder / "styles").glob("*.json")):
+        used = style_fields(json.loads(style.read_text()).get("layers", []))
+        check(used <= set(kept),
+              f"{style.relative_to(ROOT)} reads columns the tiles drop: "
+              f"{sorted(used - set(kept))}")
+
 if errors:
     print("\n".join(f"error  {e}" for e in errors))
     raise SystemExit(1)
 print("OK: refresh decisions, style checks, rebuilds, upload order and "
-      "tile drop rate hold")
+      "tile drop rate and tile columns hold")

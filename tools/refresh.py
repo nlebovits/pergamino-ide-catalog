@@ -61,6 +61,7 @@ import extract as extractor  # noqa: E402
 import geonode  # noqa: E402
 import snapshot  # noqa: E402
 import stac_versions as stac  # noqa: E402
+from tiles import tile_columns  # noqa: E402
 from publish import ROOT, load_config  # noqa: E402
 from styles import place_style  # noqa: E402
 
@@ -227,7 +228,8 @@ def refresh_one(ctx: Context, collection: str, probe: geonode.SourceState,
             shutil.copyfile(result.legend, folder / "legends" / "source.png")
 
     extractor.make_pmtiles(folder / f"{leaf}.parquet",
-                           folder / f"{leaf}.pmtiles", leaf)
+                           folder / f"{leaf}.pmtiles", leaf,
+                           tile_columns(collection))
     build_collection.build(
         ctx.catalog, collection, entry, record, updated=ctx.stamp,
         new_version={

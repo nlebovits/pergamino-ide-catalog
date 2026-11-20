@@ -229,6 +229,9 @@ def vector_style(doc: dict, folder: Path, partido: C.Partido,
             continue
         ly = copy.deepcopy(ly)
         ly.pop("source-layer", None)
+        # The style's minzoom follows Overture's tiles; the clip drawn here
+        # has every feature at every zoom.
+        ly.pop("minzoom", None)
         data_layers.append(ly)
     tolerance = (bbox[2] - bbox[0]) / SIZE / 4
     sources, layers = base_layers(with_basemap)

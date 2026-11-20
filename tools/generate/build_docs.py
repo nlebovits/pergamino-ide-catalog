@@ -37,6 +37,7 @@ from build_catalogs import EXTRA_GROUPS  # noqa: E402
 from group_descriptions import GROUP_DOCS  # noqa: E402
 from grouping import GROUPS  # noqa: E402
 from publish import load_config  # noqa: E402
+from tiles import tile_columns  # noqa: E402
 
 BASE = load_config()["public_base"].rstrip("/")
 DATA = HERE / "data"
@@ -252,6 +253,11 @@ def collection_readme(catalog: Path, collection: str) -> None:
               f"Las teselas vectoriales están en `./{leaf}.pmtiles` (capa "
               f"`{leaf}`). El estilo por defecto, `styles/default.json`, "
               "deriva del estilo SLD que publica GeoNode para esta capa."]
+        kept = tile_columns(collection)
+        if kept:
+            L += ["", "Las teselas llevan solo los atributos que usan los "
+                  "mapas: " + ", ".join(f"`{c}`" for c in kept) + ". Las "
+                  "demás columnas están en el GeoParquet."]
         if "legends/source" in doc["assets"]:
             L += ["", "Leyenda tal como la publica la fuente:", "",
                   "![Leyenda](./legends/source.png)"]

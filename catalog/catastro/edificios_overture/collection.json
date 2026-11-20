@@ -287,8 +287,8 @@
       ],
       "title": "Por defecto, con máscara del partido",
       "description": "Las capas del estilo por defecto de overture-portolan sobre las PMTiles de esta publicación, con una máscara que cubre todo lo que queda fuera del partido.",
-      "file:size": 48055,
-      "file:checksum": "12209f8a55682d5acc6e81c68ab147562ac6153292f1d89eb2ef58c12313cc2ed786"
+      "file:size": 48097,
+      "file:checksum": "1220d643f6640d68207f971784220b82b94d3a90cfc0bb45c8b01aa7a85e97ba2505"
     },
     "thumbnail": {
       "href": "./edificios_overture.thumb.jpg",
@@ -325,5 +325,5 @@
     },
     "recipe": "https://data.source.coop/nlebovits/pergamino-ide/catastro/edificios_overture/edificios_overture.ddb"
   },
-  "updated": "2026-11-20T12:59:05Z"
+  "updated": "2026-11-20T13:46:04Z"
 }

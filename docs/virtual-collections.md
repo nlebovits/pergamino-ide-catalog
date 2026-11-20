@@ -120,7 +120,11 @@ so that DuckDB 1.x clients can attach it.
 Each collection's `styles/default.json` draws the data, then an inverse mask:
 a world polygon with the partido as its hole, inlined as GeoJSON, followed by
 the partido outline. Overture styles reuse `overture-portolan`'s default
-layers over Overture's PMTiles. GloFAS styles hold the mask and outline only.
+layers over Overture's PMTiles. GloFAS styles hold the mask and outline only. Overture's PMTiles hold
+places only from z14 and buildings only from about z13, so the `minzoom` of
+those layers in `tools/virtual/sources.json` goes on their data layers: a map
+opened at the partido's zoom shows nothing rather than an empty layer. The
+thumbnails are drawn from the clip and ignore it.
 Their COG is drawn from the `renders` object (viridis for depth, the JRC
 class colours for hazard and water), the render-from-source path of
 formats.md, so the COG keeps the `data` role and is not duplicated as

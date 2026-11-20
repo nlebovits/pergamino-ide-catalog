@@ -54,6 +54,7 @@ import geonode  # noqa: E402
 import stac_versions as stac  # noqa: E402
 import snapshot  # noqa: E402
 from styles import place_style  # noqa: E402
+from tiles import tile_columns  # noqa: E402
 
 CATALOG = ROOT / "catalog"
 FIRST_COMMIT = "ced500a"
@@ -127,7 +128,8 @@ def migrate_one(collection: str, entry: dict, record: dict,
             shutil.copyfile(result.legend, folder / "legends" / "source.png")
     clean_old_files(folder, leaf)
     extract.make_pmtiles(folder / f"{leaf}.parquet",
-                         folder / f"{leaf}.pmtiles", leaf)
+                         folder / f"{leaf}.pmtiles", leaf,
+                         tile_columns(collection))
 
     archive_href = None
     first = first_version(collection)

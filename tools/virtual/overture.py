@@ -449,7 +449,15 @@ def build_item(layer: dict, res: dict, part: dict, partido: C.Partido,
 
 def build_style(layer: dict, res: dict, partido: C.Partido,
                 zooms: tuple[int, int], mirror_style: dict | None) -> dict:
-    """The mirror's default layers over this release's PMTiles, masked."""
+    """The mirror's default layers over this release's PMTiles, masked.
+
+    Overture's PMTiles hold a theme only from a fixed zoom: over Pergamino the
+    places tiles are empty below z14, and the buildings tiles are empty or
+    nearly so below z13. A layer's ``minzoom`` in sources.json goes on every
+    data layer, so a map opened at a lower zoom shows nothing rather than an
+    empty layer that looks like missing data. The mask and outline keep no
+    minzoom.
+    """
     url = pmtiles_url(res["release"], layer)
     if mirror_style:
         layers = []
@@ -463,6 +471,9 @@ def build_style(layer: dict, res: dict, partido: C.Partido,
         layers = [{"id": f"{layer['type']}-line", "type": "line",
                    "source": "data", "source-layer": layer["type"],
                    "paint": {"line-color": "#555555"}}]
+    if "minzoom" in layer:
+        for ly in layers:
+            ly["minzoom"] = max(ly.get("minzoom", 0), layer["minzoom"])
     return {
         "version": 8,
         "name": TITLES[layer["type"]][0],
@@ -693,10 +704,37 @@ def write_recipe(layer: dict, res: dict, partido: C.Partido,
     return f"wrote {name}"
 
 
+def stored_release(layer: dict) -> str | None:
+    """The Overture release the built collection follows, if any."""
+    path = C.folder(layer["collection"]) / "collection.json"
+    if not path.exists():
+        return None
+    virt = json.loads(path.read_text()).get("pergamino:virtual", {})
+    return virt.get("overture_release")
+
+
+def resolve_kept(layer: dict, bbox: list[float]) -> dict:
+    """resolve(), but never older than the release already built.
+
+    overture-portolan can lag a release behind Overture. A build that took
+    the mirror's word would move a collection back to the older release, so
+    a newer stored release is resolved from Overture's STAC instead, as
+    refresh.py's decide_overture keeps it.
+    """
+    res = resolve(layer, bbox)
+    stored = stored_release(layer)
+    if stored and stored > res["release"]:
+        older = res["release"]
+        res = resolve_from_stac(layer, bbox, stored)
+        res["note"] = f"{stored} kept; overture-portolan offers older {older}"
+    return res
+
+
 def build(partido: C.Partido, docs, now,
           partido_url: str | None = None) -> list[str]:
     layers = OVERTURE["layers"]
-    resolutions = {ly["id"]: resolve(ly, partido.bbox) for ly in layers}
+    resolutions = {ly["id"]: resolve_kept(ly, partido.bbox)
+                   for ly in layers}
     written = []
     for layer in layers:
         res = resolutions[layer["id"]]

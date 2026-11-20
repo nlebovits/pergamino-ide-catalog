@@ -235,11 +235,13 @@ def tippecanoe_command(build):
     return command
 
 
-def make_pmtiles(parquet: Path, out: Path, layer: str) -> None:
+def make_pmtiles(parquet: Path, out: Path, layer: str,
+                 columns: list[str] | None = None) -> None:
     """Build the collection's PMTiles with tippecanoe, through gpio.
 
-    tippecanoe writes a progress line per tile to the inherited stderr. The
-    output goes to a file and is shown only when the build fails.
+    ``columns`` limits the tile attributes (tools/tiles.py); None keeps every
+    column. tippecanoe writes a progress line per tile to the inherited
+    stderr. The output goes to a file and is shown only when the build fails.
     """
     import os
 
@@ -258,7 +260,9 @@ def make_pmtiles(parquet: Path, out: Path, layer: str) -> None:
             cap = POINT_TILE_BYTES if is_point_layer(parquet) else None
             create_pmtiles(str(parquet), str(out), layer=layer, min_zoom=0,
                            max_zoom=PMTILES_MAX_ZOOM, force=True,
-                           maximum_tile_bytes=cap)
+                           maximum_tile_bytes=cap,
+                           include_cols=",".join(columns) if columns
+                           else None)
         except Exception as exc:
             log.seek(0)
             tail = log.read().decode(errors="replace")[-3000:]

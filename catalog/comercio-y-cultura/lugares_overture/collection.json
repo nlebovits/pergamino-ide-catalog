@@ -257,8 +257,8 @@
       ],
       "title": "Por defecto, con máscara del partido",
       "description": "Las capas del estilo por defecto de overture-portolan sobre las PMTiles de esta publicación, con una máscara que cubre todo lo que queda fuera del partido.",
-      "file:size": 47783,
-      "file:checksum": "12208081547cf901d89f6a152980f7bb8a7967ffbcc83f27b4872a9f859b979debd0"
+      "file:size": 47804,
+      "file:checksum": "1220bc4fde23c5b34fd9932a3a2bc4ec49d8ec98c4785f3c16baf5a70f718b32d0dd"
     },
     "thumbnail": {
       "href": "./lugares_overture.thumb.jpg",
@@ -289,5 +289,5 @@
     },
     "recipe": "https://data.source.coop/nlebovits/pergamino-ide/comercio-y-cultura/lugares_overture/lugares_overture.ddb"
   },
-  "updated": "2026-11-20T12:59:05Z"
+  "updated": "2026-11-20T13:46:04Z"
 }

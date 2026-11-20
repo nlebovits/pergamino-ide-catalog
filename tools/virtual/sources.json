@@ -33,8 +33,8 @@
     "release_url": "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/{release}/theme={theme}/type={type}/",
     "pmtiles": "https://overturemaps-extras-us-west-2.s3.us-west-2.amazonaws.com/tiles/{release}/{theme}.pmtiles",
     "layers": [
-      {"id": "edificios", "collection": "catastro/edificios_overture", "theme": "buildings", "type": "building", "view": "edificios"},
-      {"id": "lugares", "collection": "comercio-y-cultura/lugares_overture", "theme": "places", "type": "place", "view": "lugares"},
+      {"id": "edificios", "collection": "catastro/edificios_overture", "minzoom": 13, "theme": "buildings", "type": "building", "view": "edificios"},
+      {"id": "lugares", "collection": "comercio-y-cultura/lugares_overture", "minzoom": 14, "theme": "places", "type": "place", "view": "lugares"},
       {"id": "segmentos", "collection": "vialidad/segmentos_overture", "theme": "transportation", "type": "segment", "view": "segmentos"},
       {"id": "uso_del_suelo", "collection": "ambiente-y-agro/uso_del_suelo_overture", "theme": "base", "type": "land_use", "view": "uso_del_suelo"}
     ],
