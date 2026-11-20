@@ -1,20 +1,20 @@
 {
   "version": 8,
-  "name": "pozos_agua_doss",
+  "name": "pozos_bombeo_doss",
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_pozos_agua_doss.pmtiles",
+      "url": "pmtiles://../pozos_agua_doss.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_pozos_agua_doss",
+      "source-layer": "pozos_agua_doss",
       "paint": {
         "circle-color": [
           "match",
@@ -34,17 +34,115 @@
           "#ffd101",
           "proyecto",
           "#cb12c2",
-          "#cccccc"
+          "#000000"
         ],
-        "circle-radius": 21.0,
-        "circle-opacity": 1.0
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "estado"
+          ],
+          "anulado",
+          1.0,
+          "cegado",
+          1.0,
+          "construccion",
+          1.0,
+          "funcionamiento",
+          1.0,
+          "parado",
+          1.0,
+          "proyecto",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "estado"
+          ],
+          "anulado",
+          8.0,
+          "cegado",
+          8.0,
+          "construccion",
+          8.0,
+          "funcionamiento",
+          8.0,
+          "parado",
+          8.0,
+          "proyecto",
+          8.0,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "estado"
+          ],
+          "anulado",
+          "#ffffff",
+          "cegado",
+          "#ffffff",
+          "construccion",
+          "#ffffff",
+          "funcionamiento",
+          "#ffffff",
+          "parado",
+          "#ffffff",
+          "proyecto",
+          "#ffffff",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "estado"
+          ],
+          "anulado",
+          2.0,
+          "cegado",
+          2.0,
+          "construccion",
+          2.0,
+          "funcionamiento",
+          2.0,
+          "parado",
+          2.0,
+          "proyecto",
+          2.0,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "estado"
+          ],
+          "anulado",
+          1.0,
+          "cegado",
+          1.0,
+          "construccion",
+          1.0,
+          "funcionamiento",
+          1.0,
+          "parado",
+          1.0,
+          "proyecto",
+          1.0,
+          0
+        ]
       }
     },
     {
       "id": "categorical-circle-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_pozos_agua_doss",
+      "source-layer": "pozos_agua_doss",
       "layout": {
         "text-field": [
           "get",
@@ -62,6 +160,5 @@
         "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

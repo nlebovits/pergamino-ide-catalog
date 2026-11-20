@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_suelos_pergamino_50mil.pmtiles",
+      "url": "pmtiles://../suelos_pergamino_50mil.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_suelos_pergamino_50mil",
+      "source-layer": "suelos_pergamino_50mil",
       "paint": {
         "fill-color": [
           "match",

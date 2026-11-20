@@ -4,21 +4,24 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_puntos_fijos.pmtiles",
+      "url": "pmtiles://../puntos_fijos.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_puntos_fijos",
+      "source-layer": "puntos_fijos",
       "paint": {
-        "circle-color": "#FF0080",
-        "circle-radius": 7.5,
-        "circle-opacity": 1.0
+        "circle-color": "#e08a21",
+        "circle-opacity": 1.0,
+        "circle-radius": 6.0,
+        "circle-stroke-color": "#a46518",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
       }
     }
   ]

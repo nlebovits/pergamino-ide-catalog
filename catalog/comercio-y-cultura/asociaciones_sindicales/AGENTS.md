@@ -1,27 +1,68 @@
-# AGENTS.md — IDE Pergamino - Infraestructura de Datos Espaciales
+# Guía para agentes — Asociaciones sindicales
 
-Guidance for AI agents and LLMs working with this collection. This file supplements the README with practical, agent-oriented notes. Replace the prompts below with real content; delete anything that does not apply.
+`comercio-y-cultura/asociaciones_sindicales`: puntos. Sedes de gremios o asociaciones sindicales presentes en Pergamino.
 
-## Overview
+## Acceso
 
-<!-- What this collection contains and when to use it. -->
+- Datos: `https://data.source.coop/nlebovits/pergamino-ide/comercio-y-cultura/asociaciones_sindicales/asociaciones_sindicales.parquet`. GeoParquet 1.1, geometría WKB en EPSG:4326, columna de cobertura `bbox`, orden espacial Hilbert.
+- Teselas: `https://data.source.coop/nlebovits/pergamino-ide/comercio-y-cultura/asociaciones_sindicales/asociaciones_sindicales.pmtiles`, capa `asociaciones_sindicales`, zoom 0 a 15.
+- Metadatos: `https://data.source.coop/nlebovits/pergamino-ide/comercio-y-cultura/asociaciones_sindicales/collection.json`. El número de registros está en `table:row_count`, y cada versión anterior en un activo `version-*`.
+- Fuente: capa WFS `geonode:asociaciones_sindicales` de GeoNode.
 
-## Accessing the data
+## Esquema
 
-<!-- Working code to load the data (e.g. DuckDB SQL, Python). -->
+- `geometry` (binary)
+- `id` (int64)
+- `fid` (int64)
+- `nombre` (string)
+- `domicilio` (string)
+- `localidad` (string)
+- `contacto_tel` (string)
+- `contacto_mail` (string)
+- `web` (string)
+- `descripcion` (string)
+- `bbox` (struct<xmin: double, ymin: double, xmax: double, ymax: double>)
 
-## Schema & field notes
+La fuente no publica descripciones de columnas: GeoNode devuelve una descripción vacía para cada atributo. Por eso las columnas no tienen descripción en `table:columns`, salvo `geometry` y `bbox`, que agrega este catálogo.
 
-<!-- Field names, types, meanings, and any coded or sentinel values. -->
+## Consultas de ejemplo
 
-## Data quality & usage notes
+Cada bloque corre tal cual en el CLI de DuckDB después de `INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;`.
 
-<!-- Privacy suppressions, known quirks, CRS/units, and other caveats. -->
+### Primeros registros
 
-## Example queries
+```sql
+SELECT * EXCLUDE (geometry, bbox)
+FROM read_parquet('https://data.source.coop/nlebovits/pergamino-ide/comercio-y-cultura/asociaciones_sindicales/asociaciones_sindicales.parquet')
+LIMIT 5;
+```
 
-<!-- Practical, working analysis examples. -->
+### Registros por barrio
 
-## Related collections
+```sql
+SELECT b.nombre AS barrio, count(*) AS registros
+FROM read_parquet('https://data.source.coop/nlebovits/pergamino-ide/comercio-y-cultura/asociaciones_sindicales/asociaciones_sindicales.parquet') AS t
+JOIN read_parquet('https://data.source.coop/nlebovits/pergamino-ide/limites/barrios_y_pueblos/barrios_y_pueblos.parquet') AS b
+  ON ST_Intersects(ST_PointOnSurface(t.geometry), b.geometry)
+GROUP BY b.nombre
+ORDER BY registros DESC
+LIMIT 10;
+```
 
-<!-- Cross-references and join keys to complementary collections. -->
+### Filtro por ventana, con la columna `bbox`
+
+```sql
+SELECT count(*) AS registros
+FROM read_parquet('https://data.source.coop/nlebovits/pergamino-ide/comercio-y-cultura/asociaciones_sindicales/asociaciones_sindicales.parquet')
+WHERE bbox.xmin >= -60.5786 AND bbox.xmax <= -60.5686
+  AND bbox.ymin >= -33.8984 AND bbox.ymax <= -33.8884;
+```
+
+## Notas de calidad
+
+- Las geometrías inválidas de la fuente se reparan con `shapely.make_valid`. `pergamino:repaired_geometries` en el activo de datos dice cuántas se repararon en cada versión.
+- La fecha de los metadatos es de publicación en GeoNode, no del contenido. Si la capa tiene columnas como `fuente` o `actualizacion`, son la mejor señal de vigencia.
+
+## Colecciones relacionadas
+
+- `limites/barrios_y_pueblos`, por intersección espacial.

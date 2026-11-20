@@ -2,7 +2,56 @@
   "type": "Collection",
   "id": "vialidad/callejero",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Callejero",
   "description": "No abstract provided",
+  "keywords": [],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.9441859,
+          -34.1768118,
+          -60.1387924,
+          -33.5532086
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -11,54 +60,59 @@
       "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
     },
     {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
       "rel": "parent",
       "href": "../catalog.json",
       "type": "application/json",
       "title": "Vialidad"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/77",
+      "type": "text/html",
+      "title": "Callejero en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:callejero",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:callejero)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_callejero.pmtiles",
+      "href": "./callejero.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_callejero"
+        "callejero"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiLineString",
-  "geoparquet:feature_count": 11703,
-  "table:row_count": 11703,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 77,
+  "pergamino:geonode_uuid": "44e6e35b-e9e3-4bd4-9c5a-b19641953f06",
+  "pergamino:source_updated": "2026-03-25T19:22:45Z",
+  "pergamino:update_frequency": "unknown",
   "table:primary_geometry": "geometry",
+  "table:row_count": 11714,
   "table:columns": [
     {
       "name": "id",
@@ -326,121 +380,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.9114543,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_callejero"
-  ],
-  "title": "Callejero",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.94418595,
-          -34.1768119,
-          -60.138792,
-          -33.55320865
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "MultiLineString",
+  "geoparquet:feature_count": 11714,
   "assets": {
-    "publico_callejero": {
-      "href": "./publico_callejero.parquet",
+    "callejero": {
+      "href": "./callejero.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-03-25T19:22:45Z",
+      "pergamino:content_hash": "107116165084437992370866:11714",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 944069,
-      "file:checksum": "1220efea0d2a98de12765e7de3f6cdaae655ddf75a8b721798cfc03d7885504d37f1",
       "roles": [
         "data"
       ],
+      "table:row_count": 11714,
+      "file:size": 929431,
+      "file:checksum": "12205768498e2b8726387b4f39f1a3f1c0eea10f72ac5c4f88dff8b300fc3340d9dd",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 6094,
-      "file:checksum": "1220ecb18dae04b24861c2f3d6d3bc9b6e50c837c58fe919e85f4fc5b64dd7ca74eb",
+    "version-2026-08-14": {
+      "href": "./publico_callejero.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:callejero). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 11703,
+      "file:size": 944069,
+      "file:checksum": "1220efea0d2a98de12765e7de3f6cdaae655ddf75a8b721798cfc03d7885504d37f1"
     },
-    "publico_callejero-tiles": {
-      "href": "./publico_callejero.pmtiles",
+    "callejero-tiles": {
+      "href": "./callejero.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_callejero (vector tiles)",
-      "file:size": 8262656,
-      "file:checksum": "12204aa7f908a1ae1dcecb82ca67856b3e12ffcc4e5ea3d5a7195fcb68a66aa80251",
       "roles": [
         "visual"
       ],
+      "file:size": 8296480,
+      "file:checksum": "12200c9022167c768435281309becf015c7de3cc2d70a4d6827a914bfa531d3024c0",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "callejero",
-      "file:size": 2261,
-      "file:checksum": "1220bf708294bb83fef868be3e3fa1a0f9b9c135eab909943922148e79eb8b9f574e",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 2237,
+      "file:checksum": "122064ce1576f688792e9685c0b81c381bb78441007059d4fac66e06bc5311591d55",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 3967,
+      "file:checksum": "122069ff1fea721750192a5bc20934d6594ac1911a1ce80d5a618b648450b18fdef3",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_callejero.thumb.jpg",
+      "href": "./callejero.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 191246,
-      "file:checksum": "1220dc1750c54b6d5288f4130fa6012a8386ab8ffe0ba27a81463cfe2d13dd57b8b9",
+      "file:size": 183732,
+      "file:checksum": "122025734b59591824123b8552444d67e28f541e3a416c6fcfb83edd931782fc2b84",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 4569,
+      "file:checksum": "1220fd25499111b95534f3bdd4237ed80f0b98cd89363b674b85a02455f93752e8e9",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "callejero"
+  ]
 }

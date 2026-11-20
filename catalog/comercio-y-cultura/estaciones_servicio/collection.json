@@ -2,7 +2,73 @@
   "type": "Collection",
   "id": "comercio-y-cultura/estaciones_servicio",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Estaciones de servicio",
   "description": "Capa de estaciones de servicio del Partido de Pergamino.",
+  "keywords": [
+    "pergamino",
+    "ruta",
+    "servicio",
+    "neumatico",
+    "shell",
+    "energia",
+    "combustible",
+    "bandera blanca",
+    "ypf",
+    "axion",
+    "carga",
+    "estacion",
+    "gasoil",
+    "surtidor",
+    "shop",
+    "nafta"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.5905669,
+          -33.9269729,
+          -60.3806919,
+          -33.756573
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,48 +83,63 @@
       "title": "Comercio y cultura"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/155",
+      "type": "text/html",
+      "title": "Estaciones de servicio en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:estaciones_servicio",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:estaciones_servicio)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aestaciones_servicio",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:estaciones_servicio"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_estaciones_servicio.pmtiles",
+      "href": "./estaciones_servicio.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_estaciones_servicio"
+        "estaciones_servicio"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 19,
-  "table:row_count": 19,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 155,
+  "pergamino:geonode_uuid": "b6ad6fb1-bafd-49ff-9f3f-f0595da83869",
+  "pergamino:source_updated": "2026-05-11T11:39:28Z",
+  "pergamino:update_frequency": "asNeeded",
   "table:primary_geometry": "geometry",
+  "table:row_count": 19,
   "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "nombre",
       "type": "string"
@@ -96,134 +177,107 @@
       "type": "string"
     },
     {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_estaciones_servicio"
-  ],
-  "title": "Estaciones de servicio",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.5905669,
-          -33.92697294,
-          -60.38069188,
-          -33.7565729
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 19,
   "assets": {
-    "publico_estaciones_servicio": {
-      "href": "./publico_estaciones_servicio.parquet",
+    "estaciones_servicio": {
+      "href": "./estaciones_servicio.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-11T11:39:28Z",
+      "pergamino:content_hash": "138339764255843796601:19",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 6228,
-      "file:checksum": "1220c15ca92ee79dbaea83fa0d9554c8b770555e11bda064edf6d4476b0616b9b7c8",
       "roles": [
         "data"
       ],
+      "table:row_count": 19,
+      "file:size": 4391,
+      "file:checksum": "1220a53e5123b264ad7b0b8acabc6e87df856c1633dab330cfb2b63c66478d6664c0",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_estaciones_servicio.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:estaciones_servicio). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 19,
+      "file:size": 6228,
+      "file:checksum": "1220c15ca92ee79dbaea83fa0d9554c8b770555e11bda064edf6d4476b0616b9b7c8"
+    },
+    "estaciones_servicio-tiles": {
+      "href": "./estaciones_servicio.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 20826,
+      "file:checksum": "12200c3ed7a51894004c65d8b5391b75d390a991bbd234253b3b70fa81a39f409911",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "estaciones_servicios",
-      "file:size": 497,
-      "file:checksum": "122048917a355faa95b3d17b668c4cee8253034a4e83864d86ec9ac2016ed1c484ba",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 3351,
+      "file:checksum": "12201eb1e00a98a9c9e20c226de037689105b5fe6986ab4504ab065b94e23cb8d347",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
-      "file:size": 86,
-      "file:checksum": "1220b82b8e288f0051eb49fc87843b6c8d9fd06a5c309075dcc3e478892f68617b0b",
+      "file:size": 542,
+      "file:checksum": "12207ed2f1d9c218329ef37f0d5852d977b31d197569198a7bc4a00f99e89706696a",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1306,
-      "file:checksum": "1220d66b777e9744c66d160bb15fd89f531a3ee3856fc7aa4bc9eabe96c462910949",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_estaciones_servicio-tiles": {
-      "href": "./publico_estaciones_servicio.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_estaciones_servicio (vector tiles)",
-      "file:size": 13927,
-      "file:checksum": "122095314fea967f565269dcac84d2bd99e85ef3eb089d10bbcf107acb4528ea278a",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_estaciones_servicio.thumb.jpg",
+      "href": "./estaciones_servicio.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 41177,
-      "file:checksum": "12207324c700b46d6fa0dff1f68d67e8b540047b2d8434bdcc38b0a4cbeded467cfe",
+      "file:size": 25820,
+      "file:checksum": "12208fe8364dfcda6ef2b0cf21292feb445fb6263703f433643430355f5822f12a8a",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3354,
+      "file:checksum": "12204c57150b6675f10f95c4dfd5d28f0557e9aec1d19ac804ed618ba7ff75f98223",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "estaciones_servicio"
+  ]
 }

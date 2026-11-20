@@ -4,21 +4,66 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_estacionamiento_motos_bicicletas.pmtiles",
+      "url": "pmtiles://../estacionamiento_motos_bicicletas.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_estacionamiento_motos_bicicletas",
+      "source-layer": "estacionamiento_motos_bicicletas",
       "paint": {
-        "circle-color": "#888888",
-        "circle-radius": 9.0,
-        "circle-opacity": 1.0
+        "circle-color": "#232323",
+        "circle-opacity": 1.0,
+        "circle-radius": 4.0,
+        "circle-stroke-color": "#232323",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estacionamiento_motos_bicicletas",
+      "paint": {
+        "circle-color": "#232323",
+        "circle-opacity": 1.0,
+        "circle-radius": 4.0,
+        "circle-stroke-color": "#232323",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-2-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estacionamiento_motos_bicicletas",
+      "paint": {
+        "circle-color": "#232323",
+        "circle-opacity": 1.0,
+        "circle-radius": 3.5,
+        "circle-stroke-color": "#232323",
+        "circle-stroke-width": 4.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-3-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estacionamiento_motos_bicicletas",
+      "paint": {
+        "circle-color": "#232323",
+        "circle-opacity": 1.0,
+        "circle-radius": 3.5,
+        "circle-stroke-color": "#232323",
+        "circle-stroke-width": 3.0,
+        "circle-stroke-opacity": 1.0
       }
     }
   ]

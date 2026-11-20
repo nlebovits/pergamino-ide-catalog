@@ -1,0 +1,243 @@
+{
+  "type": "Collection",
+  "id": "ambiente-y-agro/inta_carbono_suelo_2015_2022",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Almacenamiento de Carbono en los suelos 2015-2022",
+  "description": "Vectorización de los datos provisto por INTA respecto al almacenamiento de carbono en el suelo para el Partido de Pergamino con datos recolectados entre 2015 y 2022.",
+  "keywords": [
+    "componente",
+    "organica",
+    "random forest",
+    "carbono",
+    "pergamino",
+    "suelo",
+    "inta",
+    "co2",
+    "materia",
+    "tierra",
+    "almacenamiento"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Instituto Nacional de Tecnología Agropecuaria (INTA)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.argentina.gob.ar/inta"
+    },
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.9439547,
+          -34.176405,
+          -60.1399625,
+          -33.5408469
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Ambiente y agro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/182",
+      "type": "text/html",
+      "title": "Almacenamiento de Carbono en los suelos 2015-2022 en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:inta_carbono_suelo_2015_2022",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:inta_carbono_suelo_2015_2022)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./inta_carbono_suelo_2015_2022.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "inta_carbono_suelo_2015_2022"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 182,
+  "pergamino:geonode_uuid": "adcb55ee-1175-4418-bf89-d2caa3730e19",
+  "pergamino:source_updated": "2026-05-07T11:35:45Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 16706,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "fid",
+      "type": "int64"
+    },
+    {
+      "name": "dn",
+      "type": "int64"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 16706,
+  "assets": {
+    "inta_carbono_suelo_2015_2022": {
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-07T11:35:45Z",
+      "pergamino:content_hash": "153858926489443931496064:16706",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
+      "href": "./inta_carbono_suelo_2015_2022.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "table:row_count": 16706,
+      "file:size": 403760,
+      "file:checksum": "122033422d7ba13c2e3d5201ebb45b7b75ba9fba3bcd5479717eea2d86e2a4924a1e",
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "inta_carbono_suelo_2015_2022-tiles": {
+      "href": "./inta_carbono_suelo_2015_2022.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 4509827,
+      "file:checksum": "122096a3147f4d218697699bc12390f14101c9c8a5971a7325c488f30c7a3d6efe55",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
+    },
+    "styles/default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 768,
+      "file:checksum": "1220e26e25cca2489383974419c53ef040ec27ca68753b42b0374fd819c083233d8a",
+      "title": "Estilo MapLibre",
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
+    },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 851,
+      "file:checksum": "122027acfd233d846070fe5aba1934bca45a1b03e2b3e4916f6e1de9048dcd7afbac",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
+    "thumbnail": {
+      "href": "./inta_carbono_suelo_2015_2022.thumb.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 308679,
+      "file:checksum": "12205c1e3d7e6108549c32d8ffa399139d7cf569e53ef20974d4b965ad01bb14f966",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 4284,
+      "file:checksum": "1220341e278aa6fd1e53bbdaa9b7b7b9969e86c2b80baaccd7c10c05e1f4f53b1560",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+    }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "inta_carbono_suelo_2015_2022"
+  ]
+}

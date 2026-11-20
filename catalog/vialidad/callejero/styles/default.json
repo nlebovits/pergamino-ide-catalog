@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_callejero.pmtiles",
+      "url": "pmtiles://../callejero.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-line",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_callejero",
+      "source-layer": "callejero",
       "paint": {
         "line-color": [
           "match",
@@ -91,7 +91,7 @@
       "id": "categorical-line-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_callejero",
+      "source-layer": "callejero",
       "layout": {
         "text-field": [
           "get",

@@ -4,28 +4,31 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_desarrollo_social.pmtiles",
+      "url": "pmtiles://../desarrollo_social.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_desarrollo_social",
+      "source-layer": "desarrollo_social",
       "paint": {
-        "circle-color": "#ff0000",
-        "circle-radius": 4.0,
-        "circle-opacity": 1.0
+        "circle-color": "#d62828",
+        "circle-opacity": 1.0,
+        "circle-radius": 5.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 2.0,
+        "circle-stroke-opacity": 1.0
       }
     },
     {
       "id": "circle-0-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_desarrollo_social",
+      "source-layer": "desarrollo_social",
       "layout": {
         "text-field": [
           "get",
@@ -38,9 +41,10 @@
         ]
       },
       "paint": {
-        "text-color": "#000000"
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

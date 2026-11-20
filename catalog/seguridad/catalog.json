@@ -6,7 +6,7 @@
   ],
   "id": "seguridad",
   "title": "Seguridad",
-  "description": "Cuarteles de bomberos, cuadrículas y jurisdicciones policiales, cámaras de seguridad, dependencias, zonas de emergencia y riesgo, y centros de evacuados.",
+  "description": "Cuarteles de bomberos, dependencias de seguridad, zonas de seguridad, zonas de emergencia y riesgo, y centros de evacuados.",
   "links": [
     {
       "rel": "root",
@@ -26,33 +26,15 @@
     },
     {
       "rel": "child",
-      "href": "./camaras_seguridad/collection.json",
-      "type": "application/json",
-      "title": "Camaras seguridad"
-    },
-    {
-      "rel": "child",
       "href": "./centros_evacuados/collection.json",
       "type": "application/json",
       "title": "Centros de evacuados ante riesgo"
     },
     {
       "rel": "child",
-      "href": "./cuadriculas_policiales/collection.json",
-      "type": "application/json",
-      "title": "Cuadriculas policiales"
-    },
-    {
-      "rel": "child",
       "href": "./dependencias_seguridad/collection.json",
       "type": "application/json",
       "title": "Dependencias de seguridad y acceso a la justicia"
-    },
-    {
-      "rel": "child",
-      "href": "./jurisdicciones_policiales/collection.json",
-      "type": "application/json",
-      "title": "Jurisdicciones policiales"
     },
     {
       "rel": "child",
@@ -79,5 +61,5 @@
       "title": "Human-readable documentation"
     }
   ],
-  "updated": "2026-11-20T07:41:37Z"
+  "updated": "2026-11-20T09:51:46Z"
 }

@@ -4,43 +4,157 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_dependencias_seguridad.pmtiles",
+      "url": "pmtiles://../dependencias_seguridad.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_dependencias_seguridad",
+      "source-layer": "dependencias_seguridad",
       "paint": {
-        "circle-color": "#888888",
-        "circle-radius": 7.5,
-        "circle-opacity": 1.0
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "ambito"
+          ],
+          "justicia",
+          "#7b4a12",
+          "seguridad",
+          "#2d5bd1",
+          "#000000"
+        ],
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "ambito"
+          ],
+          "justicia",
+          1.0,
+          "seguridad",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "ambito"
+          ],
+          "justicia",
+          9.0,
+          "seguridad",
+          9.0,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "ambito"
+          ],
+          "justicia",
+          "#ffffff",
+          "seguridad",
+          "#ffffff",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "ambito"
+          ],
+          "justicia",
+          1.0,
+          "seguridad",
+          1.0,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "ambito"
+          ],
+          "justicia",
+          1.0,
+          "seguridad",
+          1.0,
+          0
+        ]
       }
     },
     {
-      "id": "circle-0-labels",
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "dependencias_seguridad",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "ambito"
+          ],
+          "justicia",
+          "#ffffff",
+          "seguridad",
+          "#ffffff",
+          "#000000"
+        ],
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "ambito"
+          ],
+          "justicia",
+          1.0,
+          "seguridad",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "ambito"
+          ],
+          "justicia",
+          6.0,
+          "seguridad",
+          5.5,
+          0
+        ]
+      }
+    },
+    {
+      "id": "categorical-circle-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_dependencias_seguridad",
+      "source-layer": "dependencias_seguridad",
       "layout": {
         "text-field": [
           "get",
-          "nombre"
+          "etiqueta"
         ],
         "text-size": 12.0,
-        "text-anchor": "top-left",
+        "text-anchor": "left",
         "text-font": [
           "Noto Sans Regular"
         ]
       },
       "paint": {
-        "text-color": "#000000"
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

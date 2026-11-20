@@ -2,125 +2,36 @@
   "type": "Collection",
   "id": "catastro/chacra",
   "stac_version": "1.1.0",
-  "description": "Chacras catastrales del Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Catastro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_catastro_chacra.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_catastro_chacra"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiPolygon",
-  "geoparquet:feature_count": 285,
-  "table:row_count": 285,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "id",
-      "type": "int64"
-    },
-    {
-      "name": "cca",
-      "type": "string"
-    },
-    {
-      "name": "ara1",
-      "type": "double"
-    },
-    {
-      "name": "sag",
-      "type": "string"
-    },
-    {
-      "name": "etiqueta",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5950927,
-    -33.8749762,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_catastro_chacra"
-  ],
   "title": "Catastro chacra",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.74206003,
-          -34.1347074,
-          -60.36938253,
-          -33.69546769
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Chacras catastrales del Partido de Pergamino.",
+  "keywords": [
+    "objeto",
+    "inmueble",
+    "partida",
+    "circunscripcion",
+    "fraccion",
+    "manzana",
+    "quinta",
+    "subparcela",
+    "pergamino",
+    "catastro",
+    "planeamiento",
+    "seccion",
+    "cartoarba",
+    "chacra",
+    "nomenclatura",
+    "letra",
+    "ph",
+    "arba",
+    "parcela"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -148,62 +59,215 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.74206,
+          -34.1347074,
+          -60.3693825,
+          -33.6954677
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Catastro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/84",
+      "type": "text/html",
+      "title": "Catastro chacra en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:catastro_chacra",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:catastro_chacra)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./chacra.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "chacra"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 84,
+  "pergamino:geonode_uuid": "042fbeb7-f4e3-4d27-855e-20810534996d",
+  "pergamino:source_updated": "2026-05-15T13:45:27Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 285,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "cca",
+      "type": "string"
+    },
+    {
+      "name": "ara1",
+      "type": "double"
+    },
+    {
+      "name": "sag",
+      "type": "string"
+    },
+    {
+      "name": "etiqueta",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPolygon",
+  "geoparquet:feature_count": 285,
   "assets": {
-    "publico_catastro_chacra": {
-      "href": "./publico_catastro_chacra.parquet",
+    "chacra": {
+      "href": "./chacra.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-15T13:45:27Z",
+      "pergamino:content_hash": "2725326970929897173479:285",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 50161,
-      "file:checksum": "122010737b0cd040491785ad94e09c4b46d1c15f457f6858d3cbc8abbf2b98f2c79d",
       "roles": [
         "data"
       ],
+      "table:row_count": 285,
+      "file:size": 55286,
+      "file:checksum": "122070cc1362212a3297ccd262c0973e6ae3869997d2770cbbc05b4a055424fb977c",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4360,
-      "file:checksum": "12209c6d21ea8a83279512aa12927815b5622febdb38f1a2d0d6cbad8295fa43fcbe",
+    "version-2026-08-14": {
+      "href": "./publico_catastro_chacra.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:catastro_chacra). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 285,
+      "file:size": 50161,
+      "file:checksum": "122010737b0cd040491785ad94e09c4b46d1c15f457f6858d3cbc8abbf2b98f2c79d"
     },
-    "publico_catastro_chacra-tiles": {
-      "href": "./publico_catastro_chacra.pmtiles",
+    "chacra-tiles": {
+      "href": "./chacra.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_catastro_chacra (vector tiles)",
-      "file:size": 233581,
-      "file:checksum": "1220f8406e2d06b2247239620aabdca85056470f1636611ff214d42177bb73a95270",
       "roles": [
         "visual"
       ],
+      "file:size": 227667,
+      "file:checksum": "1220e0366dd7865ab4cfa9280d7bbb62623ecb5e19b794ab189aa3b649f13832e74a",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "catastro_chacra",
-      "file:size": 473,
-      "file:checksum": "122073b3379c3d05875ae35b7c50230bbf28d8e3ff642f4af392318f143218b53753",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 453,
+      "file:checksum": "122069c43c93b0f4cb15ee7135cf45a5f529ecd9dde218d705bbbd7d442ad044043b",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 286,
+      "file:checksum": "12200b20541d706dc69b780f9a5283b8920537a0497e72cf15839c2e162eaf068d4e",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_catastro_chacra.thumb.jpg",
+      "href": "./chacra.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 43975,
-      "file:checksum": "1220792c60c96a7aefa943751f247207220ff0bc80f6b56fc50bc29bfaa08685ee98",
+      "file:size": 37989,
+      "file:checksum": "12201296b2c2abba030072a85bdfb17a5c5e54b74cf9d36c5f4d1c014e5bfc180d2c",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3480,
+      "file:checksum": "1220b7624ea57b6eb509369aceff9c3c9d540f84fdb6547c3b0c33c030d0994149b4",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "chacra"
+  ]
 }

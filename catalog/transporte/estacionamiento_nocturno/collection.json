@@ -2,7 +2,62 @@
   "type": "Collection",
   "id": "transporte/estacionamiento_nocturno",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Estacionamiento lado izquierdo",
   "description": "Calles en las cuales se permite el estacionamiento del lado izquierdo en la Ciudad de Pergamino.",
+  "keywords": [
+    "parking",
+    "estacionamiento",
+    "nocturno",
+    "izquierdo",
+    "auto"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.5750309,
+          -33.8973018,
+          -60.5661072,
+          -33.8895134
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,48 +72,58 @@
       "title": "Transporte"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/150",
+      "type": "text/html",
+      "title": "Estacionamiento lado izquierdo en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:estacionamiento_nocturno",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:estacionamiento_nocturno)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aestacionamiento_nocturno",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:estacionamiento_nocturno"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_estacionamiento_nocturno.pmtiles",
+      "href": "./estacionamiento_nocturno.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_estacionamiento_nocturno"
+        "estacionamiento_nocturno"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "MultiLineString",
-  "geoparquet:feature_count": 47,
-  "table:row_count": 47,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 150,
+  "pergamino:geonode_uuid": "77cf48af-1709-4efe-8d03-c1735c544635",
+  "pergamino:source_updated": "2026-05-11T13:05:37Z",
+  "pergamino:update_frequency": "notPlanned",
   "table:primary_geometry": "geometry",
+  "table:row_count": 47,
   "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "nombre",
       "type": "string"
@@ -149,133 +214,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_estacionamiento_nocturno"
-  ],
-  "title": "Estacionamiento lado izquierdo",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.575031,
-          -33.8973019,
-          -60.5661069,
-          -33.8895129
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "MultiLineString",
+  "geoparquet:feature_count": 47,
   "assets": {
-    "publico_estacionamiento_nocturno": {
-      "href": "./publico_estacionamiento_nocturno.parquet",
+    "estacionamiento_nocturno": {
+      "href": "./estacionamiento_nocturno.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-11T13:05:37Z",
+      "pergamino:content_hash": "423960584541512218564:47",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 13520,
-      "file:checksum": "122084d1dafb85b2c0c3d791c68c45aa0e43ff0b9c25a18d1cdaf14369fa1728af41",
       "roles": [
         "data"
       ],
+      "table:row_count": 47,
+      "file:size": 10391,
+      "file:checksum": "1220afd586660190903a3b0cf3268db1004ec10cc1318254808a27e228e97783e4a6",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_estacionamiento_nocturno.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:estacionamiento_nocturno). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 47,
+      "file:size": 13520,
+      "file:checksum": "122084d1dafb85b2c0c3d791c68c45aa0e43ff0b9c25a18d1cdaf14369fa1728af41"
+    },
+    "estacionamiento_nocturno-tiles": {
+      "href": "./estacionamiento_nocturno.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 40170,
+      "file:checksum": "122039e3639316ecf5ec39009aaeeacbed3d61453831ffc39ebf8314ce75865f8ee7",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "estacionamiento_nocturno",
-      "file:size": 500,
-      "file:checksum": "122099062257880acef6beab4745fbccca90a3b3292000748e61242f3769446b4ab6",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 484,
+      "file:checksum": "1220fa923fd042e1a2add07f69dbc859bd64b9414cba1bd883ee92127b60c87fc037",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 548,
       "file:checksum": "1220f7c53694631b43b1dd12dba034639c85c9324f9c8d4710169432157a75dc5f26",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1712,
-      "file:checksum": "122077e55d9f19050fb5779fbeb9fce8100f110dc00b29e2cceac755f9eed459b505",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_estacionamiento_nocturno-tiles": {
-      "href": "./publico_estacionamiento_nocturno.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_estacionamiento_nocturno (vector tiles)",
-      "file:size": 37571,
-      "file:checksum": "122012a397fc27591dbe394543b5d2c587cf50a83e468716c31b72a49f0404b4fbe8",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_estacionamiento_nocturno.thumb.jpg",
+      "href": "./estacionamiento_nocturno.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 112567,
-      "file:checksum": "1220393e81b3f7ed8908e3fcebdce5357be9a882c6c25fae99fc1cc7563b099f0ae9",
+      "file:size": 101637,
+      "file:checksum": "1220f6d165ef1ef27c4da12e087b87c9f560e3eaf12ee05746a33707d22844bb6cc8",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 4048,
+      "file:checksum": "122018d57e50587307db32ad5fce4d934a86b22b2dd18782ff7b6494722e01aa5bd0",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "estacionamiento_nocturno"
+  ]
 }

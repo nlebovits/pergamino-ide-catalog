@@ -2,7 +2,68 @@
   "type": "Collection",
   "id": "servicios-sanitarios/zonas_facturacion",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Zonas de facturacion",
   "description": "Zonas de coeficientes de facturación determinadas por la Secretaría de Hacienda para el Partido de Pergamino.",
+  "keywords": [
+    "ciudad",
+    "tasas",
+    "servicios",
+    "facturacion",
+    "alumbrado",
+    "hacienda",
+    "pergamino",
+    "sanitario",
+    "coeficientes",
+    "pueblos",
+    "zonas"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.8486486,
+          -34.0358434,
+          -60.1620092,
+          -33.6591921
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,48 +78,58 @@
       "title": "Servicios sanitarios"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/267",
+      "type": "text/html",
+      "title": "Zonas de facturacion en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:zonas_facturacion",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:zonas_facturacion)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Azonas_facturacion",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:zonas_facturacion"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_zonas_facturacion.pmtiles",
+      "href": "./zonas_facturacion.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_zonas_facturacion"
+        "zonas_facturacion"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "MultiPolygon",
-  "geoparquet:feature_count": 54,
-  "table:row_count": 54,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 267,
+  "pergamino:geonode_uuid": "aac9707e-565c-49b8-9fe8-8256c331d2b1",
+  "pergamino:source_updated": "2026-05-12T10:34:42Z",
+  "pergamino:update_frequency": "notPlanned",
   "table:primary_geometry": "geometry",
+  "table:row_count": 54,
   "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "zona",
       "type": "string"
@@ -85,133 +156,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5511474,
-    -33.9023362,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_zonas_facturacion"
-  ],
-  "title": "Zonas de facturacion",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.848649,
-          -34.0358434,
-          -60.1620089,
-          -33.659192
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "MultiPolygon",
+  "geoparquet:feature_count": 54,
   "assets": {
-    "publico_zonas_facturacion": {
-      "href": "./publico_zonas_facturacion.parquet",
+    "zonas_facturacion": {
+      "href": "./zonas_facturacion.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-12T10:34:42Z",
+      "pergamino:content_hash": "514718101640824148539:54",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 23324,
-      "file:checksum": "1220ae1cc7bf867827578c608e92283d0c2705a3af8ba8d2885b822ff049475c94ce",
       "roles": [
         "data"
       ],
+      "table:row_count": 54,
+      "file:size": 24026,
+      "file:checksum": "12209609bb361e521214ae587d66babf43d6cec81728ba7475bc9e65280f39770c1f",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_zonas_facturacion.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:zonas_facturacion). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 54,
+      "file:size": 23324,
+      "file:checksum": "1220ae1cc7bf867827578c608e92283d0c2705a3af8ba8d2885b822ff049475c94ce"
+    },
+    "zonas_facturacion-tiles": {
+      "href": "./zonas_facturacion.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 116979,
+      "file:checksum": "1220787f995376e1e89bd988dc8335dc281735f0bfc3ef7f8d01b6e23a6cf3e3588d",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "zonas_facturacion",
-      "file:size": 1564,
-      "file:checksum": "1220a583ad135eb3fa2bfdec15e82776097ea5bf9b1e4bc4c206e78f2212526f4a3e",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1540,
+      "file:checksum": "1220be5d767bbdb0318fed64d27adcb587b16c681ab8da6fa88e75a89af1be47861e",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 2768,
       "file:checksum": "122075066793351cbcde3bddcc4a89f90a8c177dc3da5cd5ed7dc49b7321faeec1ff",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1250,
-      "file:checksum": "1220f7e267ccf04d62524011931b6aa17e099ce94e8135124814b4721de7e90a5c6b",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_zonas_facturacion-tiles": {
-      "href": "./publico_zonas_facturacion.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_zonas_facturacion (vector tiles)",
-      "file:size": 113738,
-      "file:checksum": "122096c6024a59f6ae14b13ac0bfe2c9d45f73da30f5093a28030d76143ed3de6e40",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_zonas_facturacion.thumb.jpg",
+      "href": "./zonas_facturacion.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 50128,
-      "file:checksum": "1220074b331f198709d35764e185930f5dd32aabb3058017fd97f6630c3cf74700ab",
+      "file:size": 34893,
+      "file:checksum": "1220e0c57346ea20238721ee7c54cb61378b1099edba4afd11dcadb6acd797e526e6",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3493,
+      "file:checksum": "1220e47268d60d11e4245c9d42e4f770c5e3bd40dcb046b7725eba9e2c353cd28ce5",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "zonas_facturacion"
+  ]
 }

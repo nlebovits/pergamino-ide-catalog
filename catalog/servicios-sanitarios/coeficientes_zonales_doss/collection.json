@@ -2,113 +2,29 @@
   "type": "Collection",
   "id": "servicios-sanitarios/coeficientes_zonales_doss",
   "stac_version": "1.1.0",
-  "description": "Coeficientes multiplicadores para el cobro de tasas por Servicios Sanitarios para la Ciudad de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Servicios sanitarios"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_coeficientes_zonales_doss.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_coeficientes_zonales_doss"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiPolygon",
-  "geoparquet:feature_count": 58,
-  "table:row_count": 58,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "coeficiente",
-      "type": "double"
-    },
-    {
-      "name": "fuente",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5841064,
-    -33.9114543,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_coeficientes_zonales_doss"
-  ],
   "title": "Coeficientes zonales (DOSS)",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.63982,
-          -33.9312519,
-          -60.5319089,
-          -33.8493059
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Coeficientes multiplicadores para el cobro de tasas por Servicios Sanitarios para la Ciudad de Pergamino.",
+  "keywords": [
+    "cloacas",
+    "tasa",
+    "cobro",
+    "zona",
+    "sanitarias",
+    "obras",
+    "hacienda",
+    "pergamino",
+    "sanitario",
+    "coeficientes",
+    "zonales",
+    "agua"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -129,62 +45,207 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6398198,
+          -33.9312515,
+          -60.5319095,
+          -33.8493063
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Servicios sanitarios"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/113",
+      "type": "text/html",
+      "title": "Coeficientes zonales (DOSS) en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:coeficientes_zonales_doss",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:coeficientes_zonales_doss)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./coeficientes_zonales_doss.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "coeficientes_zonales_doss"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 113,
+  "pergamino:geonode_uuid": "5a20eaf8-86cf-4470-9439-f610d3e2c0c0",
+  "pergamino:source_updated": "2026-05-15T15:17:24Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 58,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "coeficiente",
+      "type": "double"
+    },
+    {
+      "name": "fuente",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPolygon",
+  "geoparquet:feature_count": 58,
   "assets": {
-    "publico_coeficientes_zonales_doss": {
-      "href": "./publico_coeficientes_zonales_doss.parquet",
+    "coeficientes_zonales_doss": {
+      "href": "./coeficientes_zonales_doss.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-15T15:17:24Z",
+      "pergamino:content_hash": "501839697900127437297:58",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 13205,
-      "file:checksum": "12206ddaf695882bf64e68e12784aeedcbfa48644ce060932534de643cf99a0602be",
       "roles": [
         "data"
       ],
+      "table:row_count": 58,
+      "file:size": 11833,
+      "file:checksum": "1220bdcc05c0c5f147dd52abd8a01b8f2cd6f855c7e0665c1c9accb923718331e469",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4327,
-      "file:checksum": "12209393b66b58a721dfa004ab8cd36b13628c8dca048ee8a7136edfacab5eb4de2d",
+    "version-2026-08-14": {
+      "href": "./publico_coeficientes_zonales_doss.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:coeficientes_zonales_doss). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 58,
+      "file:size": 13205,
+      "file:checksum": "12206ddaf695882bf64e68e12784aeedcbfa48644ce060932534de643cf99a0602be"
     },
-    "publico_coeficientes_zonales_doss-tiles": {
-      "href": "./publico_coeficientes_zonales_doss.pmtiles",
+    "coeficientes_zonales_doss-tiles": {
+      "href": "./coeficientes_zonales_doss.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_coeficientes_zonales_doss (vector tiles)",
-      "file:size": 52943,
-      "file:checksum": "1220fde88d72912065e0435e1fe0fd6a9e9905ff286a0eedbf306c0f4741b9bf6400",
       "roles": [
         "visual"
       ],
+      "file:size": 56779,
+      "file:checksum": "12203ead25312f395b30427d797e2c6b92fbccb615a3e9bfa92fd5ee814e8f8bf540",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "coeficientes_zonales_doss",
-      "file:size": 804,
-      "file:checksum": "12204c80cbf7d0edceb57ee1cc433c90b2144a91ca3099b9959bb7563c00bbb154b1",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 789,
+      "file:checksum": "1220ae6960383d50c0ed5cc8d4f183dbcbb660bdd0cb24807c19b0fdd8d42f9399e1",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 488,
+      "file:checksum": "12200833be67bf7a312038ebcfe3624c71ca9c2b43c8b3e9ed1659b3a66cd61bdb83",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_coeficientes_zonales_doss.thumb.jpg",
+      "href": "./coeficientes_zonales_doss.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 98983,
-      "file:checksum": "1220b3abd2b4a484fa75f523de2858fa658a93afe012c1f8caf55f6790e9108e6650",
+      "file:size": 95358,
+      "file:checksum": "1220cce43cffcde67686718973f87ef69905af4d5bd46f926445352302a33bdcaa62",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3529,
+      "file:checksum": "12201635b2504c3d21b38da8cee156ee716620905f8e7c9f57a98c5cef15b293f22f",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "coeficientes_zonales_doss"
+  ]
 }

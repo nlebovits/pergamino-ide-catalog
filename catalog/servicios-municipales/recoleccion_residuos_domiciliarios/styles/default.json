@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_recoleccion_residuos_domiciliarios.pmtiles",
+      "url": "pmtiles://../recoleccion_residuos_domiciliarios.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_recoleccion_residuos_domiciliarios",
+      "source-layer": "recoleccion_residuos_domiciliarios",
       "paint": {
         "fill-color": [
           "match",
@@ -36,7 +36,7 @@
       "id": "categorical-fill-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_recoleccion_residuos_domiciliarios",
+      "source-layer": "recoleccion_residuos_domiciliarios",
       "layout": {
         "text-field": [
           "get",

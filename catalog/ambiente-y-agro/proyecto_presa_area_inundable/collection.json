@@ -2,117 +2,24 @@
   "type": "Collection",
   "id": "ambiente-y-agro/proyecto_presa_area_inundable",
   "stac_version": "1.1.0",
-  "description": "Área inundable según el proyecto de presa de contención para prevenir inundaciones en la Ciudad de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Ambiente y agro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aproyecto_presa_area_inundable",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:proyecto_presa_area_inundable"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_proyecto_presa_area_inundable.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_proyecto_presa_area_inundable"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 1,
-  "table:row_count": 1,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "area_km2",
-      "type": "double"
-    },
-    {
-      "name": "area_ha",
-      "type": "double"
-    },
-    {
-      "name": "fuente",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.7269287,
-    -33.9205714,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_proyecto_presa_area_inundable"
-  ],
   "title": "Proyecto presa Pergamino - Área inundable",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.7976899,
-          -33.9327413,
-          -60.6256309,
-          -33.8217239
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Área inundable según el proyecto de presa de contención para prevenir inundaciones en la Ciudad de Pergamino.",
+  "keywords": [
+    "pluviales",
+    "contencion",
+    "presa",
+    "pregamino",
+    "arroyo",
+    "inundacion",
+    "agua"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -133,73 +40,211 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.7976896,
+          -33.9327413,
+          -60.6256311,
+          -33.8217241
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Ambiente y agro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/233",
+      "type": "text/html",
+      "title": "Proyecto presa Pergamino - Área inundable en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:proyecto_presa_area_inundable",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:proyecto_presa_area_inundable)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./proyecto_presa_area_inundable.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "proyecto_presa_area_inundable"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 233,
+  "pergamino:geonode_uuid": "96c63539-1e49-48b8-a4aa-84e31e0ac3ed",
+  "pergamino:source_updated": "2026-05-12T12:39:08Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 1,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "area_km2",
+      "type": "double"
+    },
+    {
+      "name": "area_ha",
+      "type": "double"
+    },
+    {
+      "name": "fuente",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 1,
   "assets": {
-    "publico_proyecto_presa_area_inundable": {
-      "href": "./publico_proyecto_presa_area_inundable.parquet",
+    "proyecto_presa_area_inundable": {
+      "href": "./proyecto_presa_area_inundable.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-12T12:39:08Z",
+      "pergamino:content_hash": "5390805107780227657:1",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 20119,
-      "file:checksum": "12202763fa5f448e3c6e0e9c1228f5d4997009d7b82b6a08d1ddd3f828d2f71fe73b",
       "roles": [
         "data"
       ],
+      "table:row_count": 1,
+      "file:size": 25423,
+      "file:checksum": "12200ed38b9684bbdcc29c7863c5728f0179ddc99f76c8f5dc50db9db5c86b57abbe",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_proyecto_presa_area_inundable.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:proyecto_presa_area_inundable). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 1,
+      "file:size": 20119,
+      "file:checksum": "12202763fa5f448e3c6e0e9c1228f5d4997009d7b82b6a08d1ddd3f828d2f71fe73b"
+    },
+    "proyecto_presa_area_inundable-tiles": {
+      "href": "./proyecto_presa_area_inundable.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 58924,
+      "file:checksum": "1220e8a8773ff6d85e0eb6b1595c5b1a2a2d3d47d64182187423d001ae60d3b7ef95",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "presa_zona_inundable",
-      "file:size": 529,
-      "file:checksum": "12205c5c68f8b07241566c582216df1c6129da32a79a3cad899539b3888030b33430",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 513,
+      "file:checksum": "1220605280facee030f08d66585f307b841978c70aee55540c1fc4b3dda3dbf6ca39",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 137,
       "file:checksum": "1220f619738f855eb5a70d224bb1dff4065f7ff4627e2b7f68b59dd329a9bd7ceddc",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1214,
-      "file:checksum": "122015b45276b11a08daa390e670c5faff67adb8b2190e5c85584e29c253c8723cbb",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_proyecto_presa_area_inundable-tiles": {
-      "href": "./publico_proyecto_presa_area_inundable.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_proyecto_presa_area_inundable (vector tiles)",
-      "file:size": 58423,
-      "file:checksum": "1220bab4ef741d3f84041171c3048d28fd4c6b9a8c865c0adee616f668baebe3e539",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_proyecto_presa_area_inundable.thumb.jpg",
+      "href": "./proyecto_presa_area_inundable.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 68357,
-      "file:checksum": "1220dd581292d09eee5baf098a8a2674e2a3f7cab5578c51d8108f508a273942b112",
+      "file:size": 57817,
+      "file:checksum": "12204837f57a0f01304b9a3b6e3dca135505d1fde9a3fbe94980cea83a9d7d0ae8d5",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3676,
+      "file:checksum": "12203692ccc50a2cf37b2cae535b016132b3195b8105f65b9e40a11e7d6af8146003",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "proyecto_presa_area_inundable"
+  ]
 }

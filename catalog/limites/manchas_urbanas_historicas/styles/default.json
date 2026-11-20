@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_manchas_urbanas_historicas.pmtiles",
+      "url": "pmtiles://../manchas_urbanas_historicas.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,55 +14,55 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_manchas_urbanas_historicas",
+      "source-layer": "manchas_urbanas_historicas",
       "paint": {
         "fill-color": [
           "match",
           [
             "get",
-            "año"
+            "periodo"
           ],
-          1773,
-          "#db2a7a",
-          1854,
-          "#d35532",
-          1895,
-          "#71e80f",
-          1930,
-          "#86b2e4",
-          1960,
-          "#35cc56",
-          1985,
-          "#9885e4",
-          2010,
-          "#ecde77",
           2025,
-          "#da7ee6",
+          "#fec387",
+          2010,
+          "#fb8761",
+          1985,
+          "#e65164",
+          1960,
+          "#b6377a",
+          1930,
+          "#822581",
+          1895,
+          "#50127b",
+          1854,
+          "#1d1047",
+          1773,
+          "#000004",
           "#cccccc"
         ],
-        "fill-opacity": 0.55,
+        "fill-opacity": 0.1,
         "fill-outline-color": [
           "match",
           [
             "get",
-            "año"
+            "periodo"
           ],
-          1773,
-          "#db2a7a",
-          1854,
-          "#d35532",
-          1895,
-          "#71e80f",
-          1930,
-          "#86b2e4",
-          1960,
-          "#35cc56",
-          1985,
-          "#9885e4",
-          2010,
-          "#ecde77",
           2025,
-          "#da7ee6",
+          "#fec387",
+          2010,
+          "#fb8761",
+          1985,
+          "#e65164",
+          1960,
+          "#b6377a",
+          1930,
+          "#822581",
+          1895,
+          "#50127b",
+          1854,
+          "#1d1047",
+          1773,
+          "#000004",
           "#000000"
         ]
       }

@@ -2,7 +2,69 @@
   "type": "Collection",
   "id": "transporte/sube",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Puntos de recarga SUBE",
   "description": "Puntos de recarga de tarjetas SUBE en el Partido de Pergamino.",
+  "keywords": [
+    "estacion",
+    "omnibus",
+    "nueva",
+    "ramal",
+    "terminal",
+    "sube",
+    "bus",
+    "colectivo",
+    "pergamino",
+    "linea",
+    "perla",
+    "pueblos"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.8368167,
+          -33.9234844,
+          -60.3829295,
+          -33.6632532
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,48 +79,63 @@
       "title": "Transporte"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/258",
+      "type": "text/html",
+      "title": "Puntos de recarga SUBE en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:sube",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:sube)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Asube",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:sube"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_sube.pmtiles",
+      "href": "./sube.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_sube"
+        "sube"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 97,
-  "table:row_count": 97,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 258,
+  "pergamino:geonode_uuid": "04df4108-8d3d-48c2-847b-04ba442d142e",
+  "pergamino:source_updated": "2026-05-18T16:57:08Z",
+  "pergamino:update_frequency": "unknown",
   "table:primary_geometry": "geometry",
+  "table:row_count": 97,
   "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "nombre",
       "type": "string"
@@ -112,134 +189,107 @@
       "type": "string"
     },
     {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5841064,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_sube"
-  ],
-  "title": "Puntos de recarga SUBE",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.8368169,
-          -33.92348445,
-          -60.382929,
-          -33.663253
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 97,
   "assets": {
-    "publico_sube": {
-      "href": "./publico_sube.parquet",
+    "sube": {
+      "href": "./sube.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-18T16:57:08Z",
+      "pergamino:content_hash": "897428557779053243183:97",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 12030,
-      "file:checksum": "122080f5e9f828c8ffaddaede3b155bd38a7316a0046058615bedb6d4eb33c1e5b5c",
       "roles": [
         "data"
       ],
+      "table:row_count": 97,
+      "file:size": 10364,
+      "file:checksum": "122068a44c08fb652c7d814a8e69480b8aaffa56c5eb6176f4883e411b5b8c99c713",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_sube.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:sube). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 97,
+      "file:size": 12030,
+      "file:checksum": "122080f5e9f828c8ffaddaede3b155bd38a7316a0046058615bedb6d4eb33c1e5b5c"
+    },
+    "sube-tiles": {
+      "href": "./sube.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 73268,
+      "file:checksum": "12204482f025f09d743e9c18d599e2a28d8ba2e79e3b11abb74c8a5a381861225ec9",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "sube",
-      "file:size": 452,
-      "file:checksum": "1220c4cb100a48b22c68ac917722677bdcaaa838c4ac486955296b4598778a31e860",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1512,
+      "file:checksum": "1220edb899430259c1434d89c09f7455cc8874354936efa395f6d541d041c38e0273",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
-      "file:size": 118,
-      "file:checksum": "1220d72a408de9d168e5710d77ed06d34288ed790165c89764037d2ac6c2cfcbd527",
+      "file:size": 325,
+      "file:checksum": "12204acd8d703d39791dd4cdbdeed095e7db0714f1006db92cd7cd8db8a49fffd258",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1363,
-      "file:checksum": "12202857f6732b208c33331b756db972cdd94697504542a08ccca5fe2997c4c0b4e9",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_sube-tiles": {
-      "href": "./publico_sube.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_sube (vector tiles)",
-      "file:size": 33518,
-      "file:checksum": "1220e3060ab7a260afa96e8b4f01479a5b54a75580985106264bd1ae09b9b0d161a6",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_sube.thumb.jpg",
+      "href": "./sube.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 32260,
-      "file:checksum": "1220d3d9dbf1240df2b19f51089145cca4c9ceaf902c29b3ff91d4d15df945202a25",
+      "file:size": 29979,
+      "file:checksum": "1220c1ea27bc49629b74cf5b16e533f3741bdef175733904ce298bf9d25f4fe4d292",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3323,
+      "file:checksum": "1220bc7d89d4353d5d8b12ee47cdf855334dfaac70239fa2242c37771960885d7739",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "sube"
+  ]
 }

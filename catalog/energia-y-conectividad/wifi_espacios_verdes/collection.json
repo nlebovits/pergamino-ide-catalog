@@ -2,121 +2,26 @@
   "type": "Collection",
   "id": "energia-y-conectividad/wifi_espacios_verdes",
   "stac_version": "1.1.0",
-  "description": "Zonas de Internet gratuito por WiFi en espacios verdes de la Ciudad de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Energía y conectividad"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Awifi_espacios_verdes",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:wifi_espacios_verdes"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_wifi_espacios_verdes.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_wifi_espacios_verdes"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 11,
-  "table:row_count": 11,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "id",
-      "type": "int64"
-    },
-    {
-      "name": "nombre",
-      "type": "string"
-    },
-    {
-      "name": "barrio",
-      "type": "string"
-    },
-    {
-      "name": "localidad",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5621337,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_wifi_espacios_verdes"
-  ],
   "title": "WiFi en espacios verdes públicos",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.59436725,
-          -33.91009439,
-          -60.554737,
-          -33.86326896
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Zonas de Internet gratuito por WiFi en espacios verdes de la Ciudad de Pergamino.",
+  "keywords": [
+    "internet",
+    "modernizacion",
+    "wifi",
+    "gratuito",
+    "accesibilidad",
+    "espacio",
+    "plaza",
+    "pergamino",
+    "verde"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -137,73 +42,211 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.5943672,
+          -33.9100944,
+          -60.5547372,
+          -33.863269
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Energía y conectividad"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/264",
+      "type": "text/html",
+      "title": "WiFi en espacios verdes públicos en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:wifi_espacios_verdes",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:wifi_espacios_verdes)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./wifi_espacios_verdes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "wifi_espacios_verdes"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 264,
+  "pergamino:geonode_uuid": "8a5ce164-27cb-4d6a-accd-f354ab2c7ed5",
+  "pergamino:source_updated": "2026-05-12T10:37:26Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 11,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "barrio",
+      "type": "string"
+    },
+    {
+      "name": "localidad",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 11,
   "assets": {
-    "publico_wifi_espacios_verdes": {
-      "href": "./publico_wifi_espacios_verdes.parquet",
+    "wifi_espacios_verdes": {
+      "href": "./wifi_espacios_verdes.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-12T10:37:26Z",
+      "pergamino:content_hash": "86456930641847674499:11",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 4618,
-      "file:checksum": "1220e8968729f304430c3c1c5499df5eceab24a986e9b523db93486d42e254f6aac9",
       "roles": [
         "data"
       ],
+      "table:row_count": 11,
+      "file:size": 2667,
+      "file:checksum": "12204d9513dfffee6b54d098d3be98abb38962e0f88c0701406b51d675adb18c25de",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_wifi_espacios_verdes.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:wifi_espacios_verdes). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 11,
+      "file:size": 4618,
+      "file:checksum": "1220e8968729f304430c3c1c5499df5eceab24a986e9b523db93486d42e254f6aac9"
+    },
+    "wifi_espacios_verdes-tiles": {
+      "href": "./wifi_espacios_verdes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 11038,
+      "file:checksum": "1220562ddef89cbfeac7f7d2a683ac0e110c613a3a0f699062ae72be18857263a603",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "wifi_espacios_verdes",
-      "file:size": 995,
-      "file:checksum": "122001a100962c071e56864e1c74009828a2b901fd62ac9aeb91be7946303c14f761",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1995,
+      "file:checksum": "1220e3b3d68075e0c0401dc7e0a5179e86c71b861493f4d43252948ed8cb988f763c",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
-      "file:size": 102,
-      "file:checksum": "12206b071e3b00232b6e969192ac2edb0c5c81c245c269cc480ec5e4eac3215a6938",
+      "file:size": 437,
+      "file:checksum": "12206ec7468356e572c811d4160204a15477a6a2951b028d7f91bae4934e4c505a33",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1196,
-      "file:checksum": "1220b4739f6349e892308680532dc25b7db55a292b7f8a8818e5370a44c6b656a51f",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_wifi_espacios_verdes-tiles": {
-      "href": "./publico_wifi_espacios_verdes.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_wifi_espacios_verdes (vector tiles)",
-      "file:size": 6867,
-      "file:checksum": "1220e3f3a6705df77299da0422d511f1ca7aa2ab07f3edaff2086d3fe9843750555f",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_wifi_espacios_verdes.thumb.jpg",
+      "href": "./wifi_espacios_verdes.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 79982,
-      "file:checksum": "12209436b2b124a035578d154eb01545410b45d35c90cf562f146e08e8bcd23caf55",
+      "file:size": 59478,
+      "file:checksum": "1220aae325c069554e997929168bb90f446eff8bd44ca8e57213ebcd3f1bdd9f826c",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3273,
+      "file:checksum": "12208331d9c2605bd07a6afa0f95a9231a0d68e99c714e6cbd2b01f488158e016614",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "wifi_espacios_verdes"
+  ]
 }

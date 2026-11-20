@@ -2,7 +2,66 @@
   "type": "Collection",
   "id": "servicios-sanitarios/sumideros",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Sumideros pluviales",
   "description": "Sumideros pluviales de la Ciudad de Pergamino.",
+  "keywords": [
+    "canales",
+    "sumidero",
+    "pendiente",
+    "desagues",
+    "caño",
+    "cuneta",
+    "pergamino",
+    "pluvial",
+    "agua"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.596173,
+          -33.9145375,
+          -60.53881,
+          -33.8671425
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,47 +76,53 @@
       "title": "Servicios sanitarios"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/260",
+      "type": "text/html",
+      "title": "Sumideros pluviales en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:sumideros",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:sumideros)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Asumideros",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:sumideros"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_sumideros.pmtiles",
+      "href": "./sumideros.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_sumideros"
+        "sumideros"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 955,
-  "table:row_count": 955,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 260,
+  "pergamino:geonode_uuid": "3db3708b-03b3-49fc-9687-441063afe1fc",
+  "pergamino:source_updated": "2026-05-12T10:44:50Z",
+  "pergamino:update_frequency": "asNeeded",
   "table:primary_geometry": "geometry",
+  "table:row_count": 1030,
   "table:columns": [
     {
       "name": "id",
@@ -117,133 +182,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_sumideros"
-  ],
-  "title": "Sumideros pluviales",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.596173,
-          -33.91453746,
-          -60.5388099,
-          -33.867142
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 1030,
   "assets": {
-    "publico_sumideros": {
-      "href": "./publico_sumideros.parquet",
+    "sumideros": {
+      "href": "./sumideros.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-12T10:44:50Z",
+      "pergamino:content_hash": "9285863422781921025052:1030",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 58691,
-      "file:checksum": "12203e0faac7cfb6843d1b00a76c172edcb12b44ee27916f8dba281c69f524bfbe60",
       "roles": [
         "data"
       ],
+      "table:row_count": 1030,
+      "file:size": 60093,
+      "file:checksum": "1220ba2ad1d5465c5388cdc9881c75faf801384bb27800aadec020fc65d2d1562146",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_sumideros.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:sumideros). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 955,
+      "file:size": 58691,
+      "file:checksum": "12203e0faac7cfb6843d1b00a76c172edcb12b44ee27916f8dba281c69f524bfbe60"
+    },
+    "sumideros-tiles": {
+      "href": "./sumideros.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 439254,
+      "file:checksum": "122097d93e851957ac9740d4ed7029419ce58de3b24b5cb9f9f57f168581e50d9246",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "sumideros",
-      "file:size": 466,
-      "file:checksum": "12200226901d80f960ea55dbf939e421a801f63ecb19fdc5dd77a9372c4d38154fc8",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 571,
+      "file:checksum": "12207ebef406ba38ccbc9fb071b7fd89b24ac13183bd5084fcdfad392c6f1f334982",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
-      "file:size": 208,
-      "file:checksum": "12205da4bfff69b0006d6011a7cba2c3d91d3d20326dd0bf9f6d258ed4d33adc2714",
+      "file:size": 220,
+      "file:checksum": "1220a0a56022eb269180c4ef439aae8dc9968dd4a8b3630e12fd3f2c3c0ccfec94c9",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1425,
-      "file:checksum": "122047f1c5943158601a5cb01af5b69196851986b9e46614cbdaf78e931cf5080dda",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_sumideros-tiles": {
-      "href": "./publico_sumideros.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_sumideros (vector tiles)",
-      "file:size": 84374,
-      "file:checksum": "1220710517cd36c646ebe65417610be780e57adfb3ad1c539cb572deae1fbd4e7a31",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_sumideros.thumb.jpg",
+      "href": "./sumideros.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 85469,
-      "file:checksum": "1220de0929f4d2eb85b384523bf023db2709d47329d50d0ad2b79f615e9724b0ba6e",
+      "file:size": 102952,
+      "file:checksum": "1220e215b3f6e3b885b968b6ede4fbe1f98165519e62b6421423f2a791c7e2f265e4",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3475,
+      "file:checksum": "1220dc351253bee93ff8fd10550a950a61a9a668859e0b806ea3d41a3ea82e8a42f8",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "sumideros"
+  ]
 }

@@ -4,21 +4,24 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_puntos_clickeados.pmtiles",
+      "url": "pmtiles://../puntos_clickeados.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_puntos_clickeados",
+      "source-layer": "puntos_clickeados",
       "paint": {
         "circle-color": "#ffd500",
+        "circle-opacity": 1.0,
         "circle-radius": 4.5,
-        "circle-opacity": 1.0
+        "circle-stroke-color": "#232323",
+        "circle-stroke-width": 0.5,
+        "circle-stroke-opacity": 1.0
       }
     }
   ]

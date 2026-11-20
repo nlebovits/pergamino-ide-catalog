@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_nbi.pmtiles",
+      "url": "pmtiles://../nbi.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "graduated-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_nbi",
+      "source-layer": "nbi",
       "paint": {
         "fill-color": [
           "step",

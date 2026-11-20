@@ -2,7 +2,62 @@
   "type": "Collection",
   "id": "transporte/estacionamiento_motos_bicicletas",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Estacionamiento de motos y bicicletas",
   "description": "Capa de estacionamiento de motos y bicicletas en la vía pública para el Partido de Pergamino.",
+  "keywords": [
+    "estacionamiento",
+    "pergamino",
+    "motos",
+    "bicicletas",
+    "motocicleta"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.5936742,
+          -33.9177144,
+          -60.5607616,
+          -33.8845499
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,48 +72,63 @@
       "title": "Transporte"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/149",
+      "type": "text/html",
+      "title": "Estacionamiento de motos y bicicletas en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:estacionamiento_motos_bicicletas",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:estacionamiento_motos_bicicletas)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aestacionamiento_motos_bicicletas",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:estacionamiento_motos_bicicletas"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_estacionamiento_motos_bicicletas.pmtiles",
+      "href": "./estacionamiento_motos_bicicletas.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_estacionamiento_motos_bicicletas"
+        "estacionamiento_motos_bicicletas"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 69,
-  "table:row_count": 69,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 149,
+  "pergamino:geonode_uuid": "b6830e48-c07b-479a-9e41-8d13246f7380",
+  "pergamino:source_updated": "2026-05-11T14:17:58Z",
+  "pergamino:update_frequency": "asNeeded",
   "table:primary_geometry": "geometry",
+  "table:row_count": 69,
   "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "ubicacion",
       "type": "string"
@@ -92,134 +162,107 @@
       "type": "string"
     },
     {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_estacionamiento_motos_bicicletas"
-  ],
-  "title": "Estacionamiento de motos y bicicletas",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.59367419,
-          -33.91771441,
-          -60.56076161,
-          -33.88454986
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 69,
   "assets": {
-    "publico_estacionamiento_motos_bicicletas": {
-      "href": "./publico_estacionamiento_motos_bicicletas.parquet",
+    "estacionamiento_motos_bicicletas": {
+      "href": "./estacionamiento_motos_bicicletas.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-11T14:17:58Z",
+      "pergamino:content_hash": "599897210610295877402:69",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 9054,
-      "file:checksum": "1220006f9eeb1499ea0f6e705887db4efd080c6403ec4e5cd10f84471efce4e41a8f",
       "roles": [
         "data"
       ],
+      "table:row_count": 69,
+      "file:size": 7387,
+      "file:checksum": "12208e3e18a27b68c859c203576932ccc992742e9dd81138d7735d65a5af4eb4d661",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_estacionamiento_motos_bicicletas.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:estacionamiento_motos_bicicletas). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 69,
+      "file:size": 9054,
+      "file:checksum": "1220006f9eeb1499ea0f6e705887db4efd080c6403ec4e5cd10f84471efce4e41a8f"
+    },
+    "estacionamiento_motos_bicicletas-tiles": {
+      "href": "./estacionamiento_motos_bicicletas.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 37185,
+      "file:checksum": "122014dd97eac03ca88c0e36d329aa23ed55d464d344a6a9af3898c653dcbd527bc9",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "estacionamiento_motos_bicicletas",
-      "file:size": 535,
-      "file:checksum": "12200d1163f073f0b6c39c903e13cfa9b931fdc624729613ed89ebbc9145d931f086",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1789,
+      "file:checksum": "12201fd47a5d911f155c7f9a1b38b91ab0ce9528894f3492c78e00e1fe4978c9cfd3",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
-      "file:size": 94,
-      "file:checksum": "1220d284337f84079d57bcacf7dcc6f320ee4ecfd6a8393cc2cc83fe9066005f4fce",
+      "file:size": 314,
+      "file:checksum": "1220734a3c5d0f0a850181fca60d27fc8bae5467d24a6f96b8cef92ef59cbd16e0a8",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1386,
-      "file:checksum": "12207c66d557906e11adb89df1a8174180195cf1cd2c4b548647a369cdb9d5ed6d97",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_estacionamiento_motos_bicicletas-tiles": {
-      "href": "./publico_estacionamiento_motos_bicicletas.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_estacionamiento_motos_bicicletas (vector tiles)",
-      "file:size": 12625,
-      "file:checksum": "12200d229f18364119f295db7f6ff057505d3b58095082db2c6bd4e7fce8f4c6739a",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_estacionamiento_motos_bicicletas.thumb.jpg",
+      "href": "./estacionamiento_motos_bicicletas.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 93771,
-      "file:checksum": "122060b6c952aa4f224f129fd9535f27b3a10a5ef82ed85fc0166e478ef7618246d6",
+      "file:size": 72475,
+      "file:checksum": "1220d104edc91d6c2a28ab7e393385ebf61bec4a8e281e6a84eedf154d6250ba5d67",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3739,
+      "file:checksum": "12204eb0be7bc7ff96fb6bd0f1506d8f687d9e73c7e56af9a32212f9a673e868793b",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "estacionamiento_motos_bicicletas"
+  ]
 }

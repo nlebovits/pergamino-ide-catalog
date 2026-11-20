@@ -1,24 +1,27 @@
 {
   "version": 8,
-  "name": "punto_negro",
+  "name": "catastro_ph",
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_catastro_ph.pmtiles",
+      "url": "pmtiles://../ph.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_catastro_ph",
+      "source-layer": "ph",
       "paint": {
-        "circle-color": "#000000",
+        "circle-color": "#5f5f5f",
+        "circle-opacity": 1.0,
         "circle-radius": 3.0,
-        "circle-opacity": 1.0
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
       }
     }
   ]

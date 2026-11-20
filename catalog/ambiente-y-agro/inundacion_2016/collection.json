@@ -2,113 +2,24 @@
   "type": "Collection",
   "id": "ambiente-y-agro/inundacion_2016",
   "stac_version": "1.1.0",
-  "description": "Mancha de máxima de inundación y anegamiento del evento climatológico ocurrido el 26-12-2016 en el Partido de Pergamino, que afectó zonas bajas cercanas a cursos de agua.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Ambiente y agro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Ainundacion_2016",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:inundacion_2016"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_inundacion_2016.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_inundacion_2016"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "MultiPolygon",
-  "geoparquet:feature_count": 7,
-  "table:row_count": 7,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "relevo",
-      "type": "string"
-    },
-    {
-      "name": "localidad",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5841064,
-    -33.9023362,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_inundacion_2016"
-  ],
   "title": "Inundacion de 2016",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.73296024,
-          -33.99906448,
-          -60.5429099,
-          -33.75712064
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Mancha de máxima de inundación y anegamiento del evento climatológico ocurrido el 26-12-2016 en el Partido de Pergamino, que afectó zonas bajas cercanas a cursos de agua.",
+  "keywords": [
+    "ina",
+    "inudnacion",
+    "2016",
+    "mancha",
+    "pergamino",
+    "arroyo",
+    "agua"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -129,73 +40,207 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.7329602,
+          -33.9990645,
+          -60.5429103,
+          -33.7571206
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Ambiente y agro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/193",
+      "type": "text/html",
+      "title": "Inundacion de 2016 en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:inundacion_2016",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:inundacion_2016)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./inundacion_2016.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "inundacion_2016"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 193,
+  "pergamino:geonode_uuid": "782b749d-bcc1-472a-9578-3db4a5915f36",
+  "pergamino:source_updated": "2026-05-06T14:35:36Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 7,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "relevo",
+      "type": "string"
+    },
+    {
+      "name": "localidad",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPolygon",
+  "geoparquet:feature_count": 7,
   "assets": {
-    "publico_inundacion_2016": {
-      "href": "./publico_inundacion_2016.parquet",
+    "inundacion_2016": {
+      "href": "./inundacion_2016.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-06T14:35:36Z",
+      "pergamino:content_hash": "75446910690608770436:7",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 11179,
-      "file:checksum": "1220debe0b28fe4f2adb7fd356366d3acdda52f69857a0a758fc2eff59567778efd6",
       "roles": [
         "data"
       ],
+      "table:row_count": 7,
+      "file:size": 9573,
+      "file:checksum": "122070a38d92dc840884b954fa71d0d5ef7c8343ef135402277b2f772a18a15ae75b",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_inundacion_2016.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:inundacion_2016). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 7,
+      "file:size": 11179,
+      "file:checksum": "1220debe0b28fe4f2adb7fd356366d3acdda52f69857a0a758fc2eff59567778efd6"
+    },
+    "inundacion_2016-tiles": {
+      "href": "./inundacion_2016.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 18058,
+      "file:checksum": "122042d23601554e8a630d30ba1cf435b62627a9590508ca48ee492e92ccea407006",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "inundacion2016",
-      "file:size": 487,
-      "file:checksum": "1220dd71a9619b78dd803ebafbeaa61879d39cccb63a0c05e066cc55ff182b6a8d5a",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 471,
+      "file:checksum": "12208e3c3665f4650144affba50c6bb57d2adbff47e64d87c5c3cc4dda95b9c0a24b",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 142,
       "file:checksum": "122000ed65479c65eb6909a2ee46183fc1b32e3efbdec2e5a6408ef4a9f2eaa73544",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1136,
-      "file:checksum": "1220dcd8912e67f9b1054ea4573f591fd0e221df5727f80d09365a51552c6a5d3799",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_inundacion_2016-tiles": {
-      "href": "./publico_inundacion_2016.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_inundacion_2016 (vector tiles)",
-      "file:size": 17730,
-      "file:checksum": "12202d370223f50610d612307739de7fffc78e3474c5198b0c5b38a35ba004701a02",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_inundacion_2016.thumb.jpg",
+      "href": "./inundacion_2016.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 47785,
-      "file:checksum": "1220df1c1878525ecf35bb68414269c4d6edf0ea2cb5d9f196474933256b1ba46c8b",
+      "file:size": 21428,
+      "file:checksum": "122075bc1d64072749434128e2782d9cf51d1bc4702dafe1df22d918a011fa87cd47",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3573,
+      "file:checksum": "12200b70ec3265ed5e4baa538aeaf87129cbbd67289e8060d52b84a655ee3f2a61f1",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "inundacion_2016"
+  ]
 }

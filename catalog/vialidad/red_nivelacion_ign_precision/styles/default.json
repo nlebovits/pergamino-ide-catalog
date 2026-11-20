@@ -1,0 +1,46 @@
+{
+  "version": 8,
+  "name": "red_nivelacion_ign_precision",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../red_nivelacion_ign_precision.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "graduated-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "red_nivelacion_ign_precision",
+      "paint": {
+        "circle-color": [
+          "step",
+          [
+            "get",
+            "cotasrvn16"
+          ],
+          "#ffffff",
+          45.0,
+          "#ffdbdb",
+          50.0,
+          "#ffb6b6",
+          55.0,
+          "#ff9292",
+          60.0,
+          "#ff6d6d",
+          65.0,
+          "#ff4949",
+          70.0,
+          "#ff2424",
+          75.0,
+          "#ff0000"
+        ],
+        "circle-radius": 5,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

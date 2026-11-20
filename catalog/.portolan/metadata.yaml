@@ -16,7 +16,7 @@ description: |
   Este catálogo es un espejo cloud-native de la IDE de Pergamino. Los datos
   originales son publicados por la Dirección de Sistemas de Información
   Georreferenciada (DSIG) de la Municipalidad de Pergamino a través de su
-  GeoServer y su portal GeoNode. Aquí se republican en formatos optimizados
+  portal GeoNode. Aquí se republican en formatos optimizados
   para consulta directa desde la nube (GeoParquet, PMTiles) sin alterar su
   contenido.
 
@@ -36,7 +36,7 @@ providers:
     url: https://source.coop/nlebovits/pergamino-ide
     email: nlebovits@pm.me
 
-source_url: https://ide.pergamino.gob.ar:8443/geoserver/wfs
+source_url: https://geonode.pergamino.gob.ar/
 
 attribution: >-
   Municipalidad de Pergamino - Dirección de Sistemas de Información
@@ -63,12 +63,15 @@ keywords:
   - STAC
 
 processing_notes: |
-  Extraído del servicio WFS de IDE Pergamino
-  (https://ide.pergamino.gob.ar:8443/geoserver/wfs) y enriquecido con los
-  metadatos ISO publicados por GeoNode (https://geonode.pergamino.gob.ar).
-  Convertido a GeoParquet 1.1.0 (WKB, EPSG:4326, columna de cobertura bbox)
-  y a PMTiles para visualización web. Las simbologías proceden de los SLD
-  oficiales del GeoServer municipal.
+  Extraído del servicio WFS del GeoNode de la IDE Pergamino
+  (https://geonode.pergamino.gob.ar/geoserver/ows), con los metadatos que
+  publica la API de GeoNode. Convertido a GeoParquet 1.1.0 (WKB, EPSG:4326,
+  columna de cobertura bbox) y a PMTiles para visualización web. Las
+  simbologías proceden de los SLD que publica GeoNode para cada capa. Un
+  proceso semanal compara cada capa con GeoNode y publica una versión nueva
+  cuando los datos cambian. La primera versión de las capas anteriores al
+  GeoNode proviene del GeoServer previo
+  (https://ide.pergamino.gob.ar:8443/geoserver/wfs).
 
 known_issues: |
   - La licencia CC BY-SA 4.0 corresponde a la declaración de la Municipalidad

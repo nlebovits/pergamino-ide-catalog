@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_riego_por_pivote_central.pmtiles",
+      "url": "pmtiles://../riego_por_pivote_central.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "fill-0",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_riego_por_pivote_central",
+      "source-layer": "riego_por_pivote_central",
       "paint": {
         "fill-color": "#a4d858",
         "fill-opacity": 0.5,

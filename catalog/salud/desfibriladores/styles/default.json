@@ -4,21 +4,46 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_desfibriladores.pmtiles",
+      "url": "pmtiles://../desfibriladores.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_desfibriladores",
+      "source-layer": "desfibriladores",
       "paint": {
-        "circle-color": "#888888",
-        "circle-radius": 15.0,
-        "circle-opacity": 1.0
+        "circle-color": "#018554",
+        "circle-opacity": 1.0,
+        "circle-radius": 10.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 1.2,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "desfibriladores",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 5.0
+      }
+    },
+    {
+      "id": "sld-2-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "desfibriladores",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 3.0
       }
     }
   ]

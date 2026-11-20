@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "name": "inta_carbono_suelo_2015_2022",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../inta_carbono_suelo_2015_2022.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "graduated-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "inta_carbono_suelo_2015_2022",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "get",
+            "dn"
+          ],
+          "#ffffd4",
+          52.0,
+          "#fed98e",
+          53.0,
+          "#fe9929",
+          55.0,
+          "#d95f0e",
+          57.0,
+          "#993404"
+        ],
+        "fill-opacity": 1.0,
+        "fill-outline-color": "#ffffff"
+      }
+    }
+  ]
+}

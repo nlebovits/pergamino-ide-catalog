@@ -2,7 +2,68 @@
   "type": "Collection",
   "id": "comercio-y-cultura/hospedajes",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Hoteles y hospedajes",
   "description": "Hoteles y hospedajes del Partido de Pergamino.",
+  "keywords": [
+    "motel",
+    "camping",
+    "hotel",
+    "hospedaje",
+    "casa",
+    "alojamiento",
+    "turismo",
+    "posada",
+    "pergamino",
+    "campo",
+    "gastronomia"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6849674,
+          -33.9656461,
+          -60.397981,
+          -33.7092887
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,48 +78,63 @@
       "title": "Comercio y cultura"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/178",
+      "type": "text/html",
+      "title": "Hoteles y hospedajes en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:hospedajes",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:hospedajes)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Ahospedajes",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:hospedajes"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_hospedajes.pmtiles",
+      "href": "./hospedajes.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_hospedajes"
+        "hospedajes"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 26,
-  "table:row_count": 26,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 178,
+  "pergamino:geonode_uuid": "729959e0-3bdf-4d0f-bf32-ae6567007690",
+  "pergamino:source_updated": "2026-05-08T11:17:11Z",
+  "pergamino:update_frequency": "asNeeded",
   "table:primary_geometry": "geometry",
+  "table:row_count": 26,
   "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "nombre",
       "type": "string"
@@ -88,134 +164,107 @@
       "type": "string"
     },
     {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_hospedajes"
-  ],
-  "title": "Hoteles y hospedajes",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.68496744,
-          -33.96564611,
-          -60.397981,
-          -33.70928872
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 26,
   "assets": {
-    "publico_hospedajes": {
-      "href": "./publico_hospedajes.parquet",
+    "hospedajes": {
+      "href": "./hospedajes.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-08T11:17:11Z",
+      "pergamino:content_hash": "199941986414476434536:26",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 7324,
-      "file:checksum": "1220e0c5caeed1b3a9072bddcc812b8cbfd6e035e7061cf7ecd4c73c20661eeca98c",
       "roles": [
         "data"
       ],
+      "table:row_count": 26,
+      "file:size": 5265,
+      "file:checksum": "1220c4728792d9fff66f1a59c5044d505f3bcfb4e48547c7c0e9ee146f538c1c45c4",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_hospedajes.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:hospedajes). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 26,
+      "file:size": 7324,
+      "file:checksum": "1220e0c5caeed1b3a9072bddcc812b8cbfd6e035e7061cf7ecd4c73c20661eeca98c"
+    },
+    "hospedajes-tiles": {
+      "href": "./hospedajes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 41835,
+      "file:checksum": "1220bbcc33af7afd27ae3389d429ad25e5457f7efa4ddec15ef26d8d45221dbd201c",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "hospedajes",
-      "file:size": 1353,
-      "file:checksum": "122009962bf303d5f554bf3f6e459ba3ff4cffd2166768e1d3ea8d36a7f305e17097",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 3018,
+      "file:checksum": "1220861068bc911e943307730c274f8a580f58c1040561167a21f2fe6f710ed4d7dd",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
-      "file:size": 1444,
-      "file:checksum": "12208e16b1f6ce64944546cc1f44917c14891882a2b5e69c771fed06a04707444ebc",
+      "file:size": 1675,
+      "file:checksum": "122046dd7a6ce259156279c2bfabec5560980bc5994bd993336c5144fbd5b400fe3e",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1228,
-      "file:checksum": "1220c9fe14a02c73515c3fa615908756a274d7215e783a0fa01028f0e2f50ca6aa8e",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_hospedajes-tiles": {
-      "href": "./publico_hospedajes.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_hospedajes (vector tiles)",
-      "file:size": 17973,
-      "file:checksum": "12204e40b8da531b4a935f3a25c334828dace24b75cc6ffbf9bc48b0316c855c8ff4",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_hospedajes.thumb.jpg",
+      "href": "./hospedajes.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 30279,
-      "file:checksum": "1220df8375c3b9758ea717b5a2fa02fb725428cd0230e848aca92f4eb1d8777c892b",
+      "file:size": 17832,
+      "file:checksum": "12208833a84678cbd38a219533012b97e5f5660f1bf44929139060fc3c27faa173ef",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3220,
+      "file:checksum": "12200f254a615f4383883aa5b03e9d4fb7603de8771af0b6167648d78e6624606b4c",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "hospedajes"
+  ]
 }

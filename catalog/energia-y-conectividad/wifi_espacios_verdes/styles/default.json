@@ -4,43 +4,83 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_wifi_espacios_verdes.pmtiles",
+      "url": "pmtiles://../wifi_espacios_verdes.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_wifi_espacios_verdes",
+      "source-layer": "wifi_espacios_verdes",
       "paint": {
-        "circle-color": "#888888",
-        "circle-radius": 7.5,
-        "circle-opacity": 1.0
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 9.0
       }
     },
     {
-      "id": "circle-0-labels",
-      "type": "symbol",
+      "id": "sld-1-circle",
+      "type": "circle",
       "source": "data",
-      "source-layer": "publico_wifi_espacios_verdes",
-      "layout": {
-        "text-field": [
-          "get",
-          "nombre"
-        ],
-        "text-size": 12.0,
-        "text-anchor": "top-left",
-        "text-font": [
-          "Noto Sans Regular"
-        ]
-      },
+      "source-layer": "wifi_espacios_verdes",
       "paint": {
-        "text-color": "#000000"
+        "circle-color": "#238723",
+        "circle-opacity": 0.0,
+        "circle-radius": 7.0,
+        "circle-stroke-color": "#238723",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-2-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "wifi_espacios_verdes",
+      "paint": {
+        "circle-color": "#238723",
+        "circle-opacity": 0.0,
+        "circle-radius": 4.5,
+        "circle-stroke-color": "#238723",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-3-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "wifi_espacios_verdes",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 4.0
+      }
+    },
+    {
+      "id": "sld-4-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "wifi_espacios_verdes",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 4.5
+      }
+    },
+    {
+      "id": "sld-5-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "wifi_espacios_verdes",
+      "paint": {
+        "circle-color": "#238723",
+        "circle-opacity": 1.0,
+        "circle-radius": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

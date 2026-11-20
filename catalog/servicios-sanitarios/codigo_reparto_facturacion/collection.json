@@ -2,145 +2,31 @@
   "type": "Collection",
   "id": "servicios-sanitarios/codigo_reparto_facturacion",
   "stac_version": "1.1.0",
-  "description": "Dataset extraído del callejero con los códigos de reparto de facturación según la Secretaría de Hacienda.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Servicios sanitarios"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_codigo_reparto_facturacion.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_codigo_reparto_facturacion"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiLineString",
-  "geoparquet:feature_count": 11703,
-  "table:row_count": 11703,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "id",
-      "type": "int64"
-    },
-    {
-      "name": "numero_reparto_facturacion",
-      "type": "int64"
-    },
-    {
-      "name": "nombre",
-      "type": "string"
-    },
-    {
-      "name": "impar_ini",
-      "type": "int64"
-    },
-    {
-      "name": "impar_fin",
-      "type": "int64"
-    },
-    {
-      "name": "par_ini",
-      "type": "int64"
-    },
-    {
-      "name": "par_fin",
-      "type": "int64"
-    },
-    {
-      "name": "clase",
-      "type": "string"
-    },
-    {
-      "name": "barrio",
-      "type": "string"
-    },
-    {
-      "name": "localidad",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.9114543,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_codigo_reparto_facturacion"
-  ],
   "title": "Códigos de reparto de facturación",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.94418595,
-          -34.1768119,
-          -60.138792,
-          -33.55320865
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Dataset extraído del callejero con los códigos de reparto de facturación según la Secretaría de Hacienda.",
+  "keywords": [
+    "cloacas",
+    "red",
+    "tasas",
+    "sanitarios",
+    "facturacion",
+    "reparto",
+    "hacienda",
+    "zonas",
+    "correo",
+    "vial",
+    "impuestos",
+    "agua",
+    "luminarias",
+    "finanzas"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -161,62 +47,247 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.9441859,
+          -34.1768118,
+          -60.1387924,
+          -33.5532086
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Servicios sanitarios"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/296",
+      "type": "text/html",
+      "title": "Códigos de reparto de facturación en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:codigo_reparto_facturacion",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:codigo_reparto_facturacion)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./codigo_reparto_facturacion.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "codigo_reparto_facturacion"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 296,
+  "pergamino:geonode_uuid": "ed0690d4-8921-4d98-b7ad-bfbf909c343e",
+  "pergamino:source_updated": "2026-05-07T14:23:16Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 11714,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "nombre_alt",
+      "type": "string"
+    },
+    {
+      "name": "numero_reparto_facturacion",
+      "type": "int64"
+    },
+    {
+      "name": "pre_tipo",
+      "type": "string"
+    },
+    {
+      "name": "pre_dir",
+      "type": "string"
+    },
+    {
+      "name": "impar_ini",
+      "type": "int64"
+    },
+    {
+      "name": "par_fin",
+      "type": "int64"
+    },
+    {
+      "name": "clase",
+      "type": "string"
+    },
+    {
+      "name": "sentido",
+      "type": "int64"
+    },
+    {
+      "name": "barrio",
+      "type": "string"
+    },
+    {
+      "name": "localidad",
+      "type": "string"
+    },
+    {
+      "name": "long",
+      "type": "int64"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiLineString",
+  "geoparquet:feature_count": 11714,
   "assets": {
-    "publico_codigo_reparto_facturacion": {
-      "href": "./publico_codigo_reparto_facturacion.parquet",
+    "codigo_reparto_facturacion": {
+      "href": "./codigo_reparto_facturacion.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-07T14:23:16Z",
+      "pergamino:content_hash": "107943010717111331057788:11714",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 736794,
-      "file:checksum": "122083adcb5ceb3ad2b8d5d6bbdf7b66fe45d6cac84510f89cb3065d53d95429baa3",
       "roles": [
         "data"
       ],
+      "table:row_count": 11714,
+      "file:size": 722437,
+      "file:checksum": "1220ee90e1077d85b3d73cf8b1815d94cdab4998081a49fbbddceb2743b2570b845c",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4530,
-      "file:checksum": "12205e4098f37471446d2c9b81fe8791db58217ed99985d5266d2078b0ad888df0da",
+    "version-2026-08-14": {
+      "href": "./publico_codigo_reparto_facturacion.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:codigo_reparto_facturacion). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 11703,
+      "file:size": 736794,
+      "file:checksum": "122083adcb5ceb3ad2b8d5d6bbdf7b66fe45d6cac84510f89cb3065d53d95429baa3"
     },
-    "publico_codigo_reparto_facturacion-tiles": {
-      "href": "./publico_codigo_reparto_facturacion.pmtiles",
+    "codigo_reparto_facturacion-tiles": {
+      "href": "./codigo_reparto_facturacion.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_codigo_reparto_facturacion (vector tiles)",
-      "file:size": 3597908,
-      "file:checksum": "1220b04068d2e7c878aca081e3256884cf5da9631defb4c208f950b4927f751f1dea",
       "roles": [
         "visual"
       ],
+      "file:size": 4175056,
+      "file:checksum": "122037fd3f543088a2262fa0c169fbad4c8cbaa67a6806080b670cdd142466aa9e2b",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "codigo_reparto_facturacion",
-      "file:size": 1859,
-      "file:checksum": "122008af5da72343b9a6f27d8c0cb39d82d9a1c0dc1a1587b1af49ef53aecbcb818d",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 2362,
+      "file:checksum": "12205c649a63a39daeb9b2e1a24c1d1c97eff03d2dcbd30e11f1a5aae8e31f2a7aef",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 7610,
+      "file:checksum": "1220f49a483d7a028f0af61d4a6cd4a46334b863b6633982d77384ededa85456ec62",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_codigo_reparto_facturacion.thumb.jpg",
+      "href": "./codigo_reparto_facturacion.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 100503,
-      "file:checksum": "122026bcbcbd2ef3089706da784e657150683820d37dcbec4b9d86da6fffa83a87c3",
+      "file:size": 98043,
+      "file:checksum": "122055bbc5a6feb2af9ab7b4976c52c4f3e47258d7c3c76d7a77fe003ef2a9a77b03",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3875,
+      "file:checksum": "1220e8a809af4786de4ac01f19f7f167c7ed6ddf7dc92171b8d5cba262931016750d",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "codigo_reparto_facturacion"
+  ]
 }

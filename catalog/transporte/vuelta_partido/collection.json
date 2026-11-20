@@ -1,0 +1,245 @@
+{
+  "type": "Collection",
+  "id": "transporte/vuelta_partido",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Vuelta al Partido",
+  "description": "Trazas kml de ciclismo rural para 120km y 240km en el Partido de Pergamino.",
+  "keywords": [
+    "240km",
+    "ciclismo",
+    "trazas",
+    "120km",
+    "turismo",
+    "bicicleta",
+    "rural",
+    "partido",
+    "cicloturismo",
+    "pergamino",
+    "kml",
+    "pueblos"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.84424,
+          -34.05399,
+          -60.37007,
+          -33.65331
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Transporte"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/263",
+      "type": "text/html",
+      "title": "Vuelta al Partido en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:vuelta_partido",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:vuelta_partido)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./vuelta_partido.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "vuelta_partido"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 263,
+  "pergamino:geonode_uuid": "7fd1f1f2-8077-45b1-bf2e-12ab0838b4dd",
+  "pergamino:source_updated": "2026-05-20T13:29:59Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 2,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "fid",
+      "type": "int64"
+    },
+    {
+      "name": "longitud",
+      "type": "int64"
+    },
+    {
+      "name": "layer",
+      "type": "string"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "LineString Z",
+  "geoparquet:feature_count": 2,
+  "assets": {
+    "vuelta_partido": {
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-20T13:29:59Z",
+      "pergamino:content_hash": "9901888803861316474:2",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
+      "href": "./vuelta_partido.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "table:row_count": 2,
+      "file:size": 23099,
+      "file:checksum": "1220e485cabfe46f762795afc25aed75d0d32c65d15f3abfba03204f965b93262b70",
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "vuelta_partido-tiles": {
+      "href": "./vuelta_partido.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 109759,
+      "file:checksum": "1220294f6b13b9c7fd8ee51a19da4612244235198e257c79eaeb3f56a0bdb2ab932a",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
+    },
+    "styles/default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 650,
+      "file:checksum": "1220ee0c331699b3524e44921f1659ce01ca65203605c48fd29753d63b0dc56e0e58",
+      "title": "Estilo MapLibre",
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
+    },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 540,
+      "file:checksum": "12207dffc647898e4fc94b50db7e2e302a89df248cb58fb9828251efe66408aa7469",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
+    "thumbnail": {
+      "href": "./vuelta_partido.thumb.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 59835,
+      "file:checksum": "12201ae5029f94fc5628d775a1634e957a77a3614e879fd99da1e481712c69936d33",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3282,
+      "file:checksum": "1220f69f335d42a047340180d554466e82540452e15beb3ec5cd8f20a9fb2ccf655e",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+    }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "vuelta_partido"
+  ]
+}

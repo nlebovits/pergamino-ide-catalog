@@ -4,43 +4,118 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_ferrocarriles.pmtiles",
+      "url": "pmtiles://../ferrocarriles.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "line-0",
+      "id": "sld-0-line",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_ferrocarriles",
+      "source-layer": "ferrocarriles",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
       "paint": {
-        "line-color": "#333333",
-        "line-width": 3.0,
-        "line-opacity": 1.0
+        "line-color": [
+          "match",
+          [
+            "get",
+            "estado"
+          ],
+          "activa",
+          "#ef8f00",
+          "desuso",
+          "#919191",
+          "#000000"
+        ],
+        "line-opacity": [
+          "match",
+          [
+            "get",
+            "estado"
+          ],
+          "activa",
+          1.0,
+          "desuso",
+          1.0,
+          0
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "estado"
+          ],
+          "activa",
+          2.0,
+          "desuso",
+          2.0,
+          0
+        ]
       }
     },
     {
-      "id": "line-0-labels",
+      "id": "sld-1-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "ferrocarriles",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#000000",
+        "line-opacity": [
+          "match",
+          [
+            "get",
+            "estado"
+          ],
+          "activa",
+          1.0,
+          "desuso",
+          1.0,
+          0
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "estado"
+          ],
+          "activa",
+          1.0,
+          "desuso",
+          1.0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "categorical-line-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_ferrocarriles",
+      "source-layer": "ferrocarriles",
       "layout": {
         "text-field": [
           "get",
           "nombre"
         ],
-        "text-size": 10.0,
+        "text-size": 11.0,
         "text-anchor": "center",
         "text-font": [
           "Noto Sans Regular"
         ]
       },
       "paint": {
-        "text-color": "#000000"
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

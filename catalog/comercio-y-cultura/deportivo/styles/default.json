@@ -4,21 +4,73 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_deportivo.pmtiles",
+      "url": "pmtiles://../deportivo.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "categorical-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_deportivo",
+      "source-layer": "deportivo",
       "paint": {
-        "circle-color": "#487bb6",
-        "circle-radius": 8.0,
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "campo de deportes",
+          "#e675bd",
+          "estadio",
+          "#7865d5",
+          "pista",
+          "#eeb973",
+          "sede",
+          "#7ee060",
+          "#cccccc"
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "campo de deportes",
+          8.0,
+          "estadio",
+          8.0,
+          "pista",
+          8.0,
+          "sede",
+          8.0,
+          2.5
+        ],
         "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-circle-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "deportivo",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 11.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
       }
     }
   ]

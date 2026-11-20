@@ -4,45 +4,137 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_agencias_gubernamentales.pmtiles",
+      "url": "pmtiles://../agencias_gubernamentales.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_agencias_gubernamentales",
+      "source-layer": "agencias_gubernamentales",
       "paint": {
-        "circle-color": "#FF8000",
-        "circle-radius": 4.0,
-        "circle-opacity": 1.0
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "asunto"
+          ],
+          "educativo",
+          "#d2c83e",
+          "impositivo",
+          "#4ded62",
+          "investigacion",
+          "#de6785",
+          "social",
+          "#9942e5",
+          "#000000"
+        ],
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "asunto"
+          ],
+          "educativo",
+          1.0,
+          "impositivo",
+          1.0,
+          "investigacion",
+          1.0,
+          "social",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "asunto"
+          ],
+          "educativo",
+          4.0,
+          "impositivo",
+          4.0,
+          "investigacion",
+          4.0,
+          "social",
+          4.0,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "asunto"
+          ],
+          "educativo",
+          "#ffffff",
+          "impositivo",
+          "#ffffff",
+          "investigacion",
+          "#ffffff",
+          "social",
+          "#ffffff",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "asunto"
+          ],
+          "educativo",
+          0.5,
+          "impositivo",
+          0.5,
+          "investigacion",
+          0.5,
+          "social",
+          0.5,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "asunto"
+          ],
+          "educativo",
+          1.0,
+          "impositivo",
+          1.0,
+          "investigacion",
+          1.0,
+          "social",
+          1.0,
+          0
+        ]
       }
     },
     {
-      "id": "circle-0-labels",
+      "id": "categorical-circle-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_agencias_gubernamentales",
+      "source-layer": "agencias_gubernamentales",
       "layout": {
         "text-field": [
           "get",
           "nombre"
         ],
-        "text-size": 12.0,
+        "text-size": 11.0,
         "text-anchor": "top-left",
         "text-font": [
           "Noto Sans Regular"
         ]
       },
       "paint": {
-        "text-color": "#000000",
-        "text-halo-color": "#000000",
-        "text-halo-width": 1.0
+        "text-color": "#323232",
+        "text-halo-color": "#fafafa",
+        "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

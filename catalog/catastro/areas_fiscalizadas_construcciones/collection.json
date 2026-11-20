@@ -2,7 +2,68 @@
   "type": "Collection",
   "id": "catastro/areas_fiscalizadas_construcciones",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Áreas fiscalizadas construcciones no declaradas",
   "description": "Áreas de las fiscalizaciones en el marco del Proyecto de Detección de Construcciones No Declaradas de la Secretaría de Hacienda para el Partido de Pergamino",
+  "keywords": [
+    "construcciones",
+    "proyecto",
+    "hacienda",
+    "pergamino",
+    "deteccion",
+    "fiscalizacion",
+    "clandestino",
+    "imagen",
+    "aerea",
+    "vuelo",
+    "declarado"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6399942,
+          -33.9313238,
+          -60.5058007,
+          -33.8596808
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -11,55 +72,64 @@
       "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
     },
     {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
       "rel": "parent",
       "href": "../catalog.json",
       "type": "application/json",
       "title": "Catastro"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/60",
+      "type": "text/html",
+      "title": "Áreas fiscalizadas construcciones no declaradas en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:areas_fiscalizadas_construcciones",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:areas_fiscalizadas_construcciones)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_areas_fiscalizadas_construcciones.pmtiles",
+      "href": "./areas_fiscalizadas_construcciones.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_areas_fiscalizadas_construcciones"
+        "areas_fiscalizadas_construcciones"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 33,
-  "table:row_count": 33,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 60,
+  "pergamino:geonode_uuid": "599b7d6c-9c51-4a72-b759-3a700891bc4d",
+  "pergamino:source_updated": "2026-05-18T13:46:34Z",
+  "pergamino:update_frequency": "continual",
   "table:primary_geometry": "geometry",
+  "table:row_count": 49,
   "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "nombre",
       "type": "string"
@@ -94,121 +164,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5621337,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_areas_fiscalizadas_construcciones"
-  ],
-  "title": "Áreas fiscalizadas construcciones no declaradas",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.63999415,
-          -33.9313239,
-          -60.50580074,
-          -33.8600149
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 49,
   "assets": {
-    "publico_areas_fiscalizadas_construcciones": {
-      "href": "./publico_areas_fiscalizadas_construcciones.parquet",
+    "areas_fiscalizadas_construcciones": {
+      "href": "./areas_fiscalizadas_construcciones.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-18T13:46:34Z",
+      "pergamino:content_hash": "440826864103659604589:49",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 10771,
-      "file:checksum": "12208504478abccf205e45bd50563af80b4bb0752e4f5b3780b9be92ab3ec3de38b0",
       "roles": [
         "data"
       ],
+      "table:row_count": 49,
+      "file:size": 11097,
+      "file:checksum": "1220cf9381d342961f04f2609d8b484d27a8cc74139c4c1cbca36c1444040aba868d",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4500,
-      "file:checksum": "12203d2d1e204592fd9b991563f8d0536c3a32c4cc965ae69e4aca14602fc19e6236",
+    "version-2026-08-14": {
+      "href": "./publico_areas_fiscalizadas_construcciones.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:areas_fiscalizadas_construcciones). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 33,
+      "file:size": 10771,
+      "file:checksum": "12208504478abccf205e45bd50563af80b4bb0752e4f5b3780b9be92ab3ec3de38b0"
     },
-    "publico_areas_fiscalizadas_construcciones-tiles": {
-      "href": "./publico_areas_fiscalizadas_construcciones.pmtiles",
+    "areas_fiscalizadas_construcciones-tiles": {
+      "href": "./areas_fiscalizadas_construcciones.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_areas_fiscalizadas_construcciones (vector tiles)",
-      "file:size": 52087,
-      "file:checksum": "1220c1dcac231ada57a6086680b4510a88aa0b5519cb300267af1c143119d31c8fc0",
       "roles": [
         "visual"
       ],
+      "file:size": 72199,
+      "file:checksum": "12207069c62c9757d2f664c226c60e9fa19095f6c607112c04597c85ea9fb2921ef3",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "areas_fiscalizadas_construcciones",
-      "file:size": 751,
-      "file:checksum": "122030b537fb8cab90a38e15b62abfd50b421f32a827d1161460e1056b3cb76ce831",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 735,
+      "file:checksum": "1220fb3669b1bd1158bd137fe57f3cb439da46d0c1bfe96216632385bda71d163fc2",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 735,
+      "file:checksum": "122051722a876620d4368d7a50bc2bdd29380be9e2c0adb72a338b865232a24cb9cb",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_areas_fiscalizadas_construcciones.thumb.jpg",
+      "href": "./areas_fiscalizadas_construcciones.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 73345,
-      "file:checksum": "12209db925daab1aab6eb07e1d42709d23b0c9e2d6f6ec18ed64a627898634be2786",
+      "file:size": 77719,
+      "file:checksum": "122062d115e9976b914ac199250f2983550e9c044d7e8acf594de5c547b4b2ccdb51",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3818,
+      "file:checksum": "12207a79227a42ec12ff28ad54d8809b320467cfbd3cceed2a0bc3999fd4ce0d770e",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "areas_fiscalizadas_construcciones"
+  ]
 }

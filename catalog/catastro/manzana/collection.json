@@ -2,125 +2,36 @@
   "type": "Collection",
   "id": "catastro/manzana",
   "stac_version": "1.1.0",
-  "description": "Manzanas catastrales del Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Catastro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_catastro_manzana.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_catastro_manzana"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiPolygon",
-  "geoparquet:feature_count": 2564,
-  "table:row_count": 2564,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "id",
-      "type": "int64"
-    },
-    {
-      "name": "cca",
-      "type": "string"
-    },
-    {
-      "name": "ara1",
-      "type": "double"
-    },
-    {
-      "name": "sag",
-      "type": "string"
-    },
-    {
-      "name": "etiqueta",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8840972,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_catastro_manzana"
-  ],
   "title": "Catastro manzana",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.8492289,
-          -34.09299935,
-          -60.162936,
-          -33.5856239
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Manzanas catastrales del Partido de Pergamino.",
+  "keywords": [
+    "objeto",
+    "inmueble",
+    "partida",
+    "circunscripcion",
+    "fraccion",
+    "manzana",
+    "quinta",
+    "subparcela",
+    "pergamino",
+    "catastro",
+    "planeamiento",
+    "seccion",
+    "cartoarba",
+    "chacra",
+    "nomenclatura",
+    "letra",
+    "ph",
+    "arba",
+    "parcela"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -148,62 +59,215 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.8492285,
+          -34.0929993,
+          -60.1629363,
+          -33.5856243
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Catastro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/90",
+      "type": "text/html",
+      "title": "Catastro manzana en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:catastro_manzana",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:catastro_manzana)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./manzana.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "manzana"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 90,
+  "pergamino:geonode_uuid": "b1fafd66-489e-4380-972b-8853488403bb",
+  "pergamino:source_updated": "2026-05-15T13:20:47Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 2564,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "cca",
+      "type": "string"
+    },
+    {
+      "name": "ara1",
+      "type": "double"
+    },
+    {
+      "name": "sag",
+      "type": "string"
+    },
+    {
+      "name": "etiqueta",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPolygon",
+  "geoparquet:feature_count": 2564,
   "assets": {
-    "publico_catastro_manzana": {
-      "href": "./publico_catastro_manzana.parquet",
+    "manzana": {
+      "href": "./manzana.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-15T13:20:47Z",
+      "pergamino:content_hash": "23214055310056012805743:2564",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 810567,
-      "file:checksum": "12207ca546cd3bc5d38b26bdbf12f692f42d6b969a3989198f2da4d2707938f5da9d",
       "roles": [
         "data"
       ],
+      "table:row_count": 2564,
+      "file:size": 820629,
+      "file:checksum": "1220cb2cd89d2f4defe0e1d8d6dece0a7cf0734f023b81aa1d1d5a4fe4d23523e12b",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4364,
-      "file:checksum": "1220825f1a63a526e69c43302084a9c7ae333ebc3c735779028bbb5611312525760a",
+    "version-2026-08-14": {
+      "href": "./publico_catastro_manzana.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:catastro_manzana). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 2564,
+      "file:size": 810567,
+      "file:checksum": "12207ca546cd3bc5d38b26bdbf12f692f42d6b969a3989198f2da4d2707938f5da9d"
     },
-    "publico_catastro_manzana-tiles": {
-      "href": "./publico_catastro_manzana.pmtiles",
+    "manzana-tiles": {
+      "href": "./manzana.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_catastro_manzana (vector tiles)",
-      "file:size": 988172,
-      "file:checksum": "12204d038083c00068eae0ce97d534b9775d9a0b67c9d7517f90a805c111c09619c2",
       "roles": [
         "visual"
       ],
+      "file:size": 983368,
+      "file:checksum": "1220dd6f8017c9e0e51ae44e9fac51d5160a6ab72438077a6d6ec68c07ecb05f1175",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "catastro_manzana",
-      "file:size": 476,
-      "file:checksum": "1220d9ad966f8e86161dd481aceaa29dc4a62501bdd454020fd82f0718b719837058",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 456,
+      "file:checksum": "1220cd112391fd9049ee16343d96cfb6ac1639199ea062eec3566e95957e7eb83138",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 286,
+      "file:checksum": "12200b20541d706dc69b780f9a5283b8920537a0497e72cf15839c2e162eaf068d4e",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_catastro_manzana.thumb.jpg",
+      "href": "./manzana.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 31373,
-      "file:checksum": "1220b1fe3501bba7899daacafbd47afd8496e7ef43eb174bc1b13df6f746927318ca",
+      "file:size": 27817,
+      "file:checksum": "12201047bba790b994cf91cf5ae9ff72628e2c9a5be6e72ed320fe3d7affde077b96",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3487,
+      "file:checksum": "12205190bc371239df413d203e1511896de29d9f8faa6f22a8fc6f600f4540c89b73",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "manzana"
+  ]
 }

@@ -4,17 +4,17 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_camaras_y_radares.pmtiles",
+      "url": "pmtiles://../camaras_y_radares.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_camaras_y_radares",
+      "source-layer": "camaras_y_radares",
       "paint": {
         "circle-color": [
           "match",
@@ -28,7 +28,21 @@
           "#f7f7f7",
           "totem",
           "#ffd641",
-          "#cccccc"
+          "#000000"
+        ],
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          1.0,
+          "radar",
+          0.0,
+          "totem",
+          1.0,
+          0
         ],
         "circle-radius": [
           "match",
@@ -37,14 +51,226 @@
             "tipo"
           ],
           "cámara",
-          13.0,
+          6.5,
           "radar",
-          16.0,
+          8.0,
           "totem",
-          14.0,
-          5.0
+          7.0,
+          0
         ],
-        "circle-opacity": 1.0
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          "#ff3700",
+          "radar",
+          "#535353",
+          "totem",
+          "#232323",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          0.5,
+          "radar",
+          1.0,
+          "totem",
+          0.5,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          1.0,
+          "radar",
+          1.0,
+          "totem",
+          1.0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "camaras_y_radares",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          "#ff3700",
+          "radar",
+          "#f7f7f7",
+          "totem",
+          "#000000",
+          "#000000"
+        ],
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          1.0,
+          "radar",
+          0.0,
+          "totem",
+          0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          4.5,
+          "radar",
+          5.5,
+          "totem",
+          0,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          "#ff3700",
+          "radar",
+          "#535353",
+          "totem",
+          "#000000",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          0.5,
+          "radar",
+          1.0,
+          "totem",
+          0,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          1.0,
+          "radar",
+          1.0,
+          "totem",
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sld-2-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "camaras_y_radares",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          "#000000",
+          "radar",
+          "#f7f7f7",
+          "totem",
+          "#000000",
+          "#000000"
+        ],
+        "circle-opacity": 0,
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          0,
+          "radar",
+          2.5,
+          "totem",
+          0,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          "#000000",
+          "radar",
+          "#535353",
+          "totem",
+          "#000000",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          0,
+          "radar",
+          1.0,
+          "totem",
+          0,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cámara",
+          0,
+          "radar",
+          1.0,
+          "totem",
+          0,
+          0
+        ]
       }
     }
   ]

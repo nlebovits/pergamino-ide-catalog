@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_areas_fiscalizadas_construcciones.pmtiles",
+      "url": "pmtiles://../areas_fiscalizadas_construcciones.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_areas_fiscalizadas_construcciones",
+      "source-layer": "areas_fiscalizadas_construcciones",
       "paint": {
         "fill-color": [
           "match",

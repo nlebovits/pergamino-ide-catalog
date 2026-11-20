@@ -4,43 +4,25 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_cpa.pmtiles",
+      "url": "pmtiles://../cpa.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_cpa",
+      "source-layer": "cpa",
       "paint": {
-        "circle-color": "#548846",
-        "circle-radius": 3.0,
-        "circle-opacity": 1.0
-      }
-    },
-    {
-      "id": "circle-0-labels",
-      "type": "symbol",
-      "source": "data",
-      "source-layer": "publico_cpa",
-      "layout": {
-        "text-field": [
-          "get",
-          "cpa"
-        ],
-        "text-size": 9.0,
-        "text-anchor": "top",
-        "text-font": [
-          "Noto Sans Regular"
-        ]
-      },
-      "paint": {
-        "text-color": "#000000"
+        "circle-color": "#152663",
+        "circle-opacity": 1.0,
+        "circle-radius": 2.0,
+        "circle-stroke-color": "#ffce00",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

@@ -4,21 +4,77 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_curvas_nivel_ign.pmtiles",
+      "url": "pmtiles://../curvas_nivel_ign.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "line-0",
+      "id": "categorical-line",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_curvas_nivel_ign",
+      "source-layer": "curvas_nivel_ign",
       "paint": {
-        "line-color": "#0040FF",
-        "line-width": 1,
+        "line-color": [
+          "match",
+          [
+            "get",
+            "cota"
+          ],
+          40,
+          "#d8b08c",
+          50,
+          "#c28a5a",
+          60,
+          "#9a6037",
+          70,
+          "#7d4f2c",
+          80,
+          "#5f3a20",
+          "#cccccc"
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "cota"
+          ],
+          40,
+          0.4,
+          50,
+          0.5,
+          60,
+          0.6,
+          70,
+          0.7,
+          80,
+          0.9,
+          1.0
+        ],
         "line-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-line-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "curvas_nivel_ign",
+      "layout": {
+        "text-field": [
+          "get",
+          "cota"
+        ],
+        "text-size": 10.0,
+        "text-anchor": "center",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#4d321d",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.5
       }
     }
   ]

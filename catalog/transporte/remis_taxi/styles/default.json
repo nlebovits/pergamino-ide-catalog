@@ -4,17 +4,17 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_remis_taxi.pmtiles",
+      "url": "pmtiles://../remis_taxi.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_remis_taxi",
+      "source-layer": "remis_taxi",
       "paint": {
         "circle-color": [
           "match",
@@ -23,20 +23,78 @@
             "tipo"
           ],
           "remis",
-          "#2d31e9",
+          "#0b7a75",
           "taxi",
           "#dcdc38",
-          "#cccccc"
+          "#000000"
         ],
-        "circle-radius": 7.0,
-        "circle-opacity": 1.0
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "remis",
+          1.0,
+          "taxi",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "remis",
+          5.5,
+          "taxi",
+          5.5,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "remis",
+          "#ffffff",
+          "taxi",
+          "#232323",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "remis",
+          2.0,
+          "taxi",
+          2.0,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "remis",
+          1.0,
+          "taxi",
+          1.0,
+          0
+        ]
       }
     },
     {
       "id": "categorical-circle-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_remis_taxi",
+      "source-layer": "remis_taxi",
       "layout": {
         "text-field": [
           "get",
@@ -54,6 +112,5 @@
         "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

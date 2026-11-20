@@ -1,10 +1,10 @@
 {
   "version": 8,
-  "name": "cicloturismo_rural",
+  "name": "cicloturismo",
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_cicloturismo_rural.pmtiles",
+      "url": "pmtiles://../cicloturismo_rural.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-line",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_cicloturismo_rural",
+      "source-layer": "cicloturismo_rural",
       "paint": {
         "line-color": [
           "match",

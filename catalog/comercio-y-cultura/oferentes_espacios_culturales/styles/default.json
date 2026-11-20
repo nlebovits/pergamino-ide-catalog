@@ -4,21 +4,24 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_oferentes_espacios_culturales.pmtiles",
+      "url": "pmtiles://../oferentes_espacios_culturales.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_oferentes_espacios_culturales",
+      "source-layer": "oferentes_espacios_culturales",
       "paint": {
         "circle-color": "#85b66f",
+        "circle-opacity": 1.0,
         "circle-radius": 3.5,
-        "circle-opacity": 1.0
+        "circle-stroke-color": "#232323",
+        "circle-stroke-width": 0.5,
+        "circle-stroke-opacity": 1.0
       }
     }
   ]

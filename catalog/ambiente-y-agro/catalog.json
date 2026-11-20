@@ -6,7 +6,7 @@
   ],
   "id": "ambiente-y-agro",
   "title": "Ambiente y agro",
-  "description": "Arbolado urbano, espacios verdes, suelos y cultivos INTA, hidrografía y cuencas, curvas de nivel, isohietas, modelo digital de elevaciones, inundaciones históricas y el proyecto de presa. Incluye datos de INTA, IGN e INA rehospedados por el municipio.",
+  "description": "Arbolado urbano, espacios verdes, suelos y cultivos INTA, hidrografía y cuencas, curvas de nivel, isohietas, carbono en el suelo, inundaciones históricas y el proyecto de presa. Incluye datos de INTA, IGN e INA rehospedados por el municipio.",
   "links": [
     {
       "rel": "root",
@@ -77,6 +77,12 @@
       "href": "./espacios_verdes/collection.json",
       "type": "application/json",
       "title": "Espacios verdes públicos"
+    },
+    {
+      "rel": "child",
+      "href": "./inta_carbono_suelo_2015_2022/collection.json",
+      "type": "application/json",
+      "title": "Almacenamiento de Carbono en los suelos 2015-2022"
     },
     {
       "rel": "child",
@@ -205,5 +211,5 @@
       "title": "Human-readable documentation"
     }
   ],
-  "updated": "2026-11-20T07:41:37Z"
+  "updated": "2026-11-20T09:51:46Z"
 }

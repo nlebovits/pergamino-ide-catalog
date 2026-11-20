@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_espacios_verdes.pmtiles",
+      "url": "pmtiles://../espacios_verdes.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_espacios_verdes",
+      "source-layer": "espacios_verdes",
       "paint": {
         "fill-color": [
           "match",
@@ -63,7 +63,7 @@
       "id": "categorical-fill-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_espacios_verdes",
+      "source-layer": "espacios_verdes",
       "layout": {
         "text-field": [
           "get",

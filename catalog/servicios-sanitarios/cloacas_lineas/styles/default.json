@@ -1,0 +1,44 @@
+{
+  "version": 8,
+  "name": "cloacas_lineas",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../cloacas_lineas.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "sld-0-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "cloacas_lineas",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#c20000",
+        "line-opacity": 1.0,
+        "line-width": 4.0
+      }
+    },
+    {
+      "id": "sld-1-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "cloacas_lineas",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#000000",
+        "line-opacity": 1.0,
+        "line-width": 1.0
+      }
+    }
+  ]
+}

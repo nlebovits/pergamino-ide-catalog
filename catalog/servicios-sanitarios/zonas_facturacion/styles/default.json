@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_zonas_facturacion.pmtiles",
+      "url": "pmtiles://../zonas_facturacion.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_zonas_facturacion",
+      "source-layer": "zonas_facturacion",
       "paint": {
         "fill-color": [
           "match",
@@ -53,7 +53,7 @@
       "id": "categorical-fill-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_zonas_facturacion",
+      "source-layer": "zonas_facturacion",
       "layout": {
         "text-field": [
           "get",

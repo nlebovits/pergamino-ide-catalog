@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_redatam_censo_2022_radios.pmtiles",
+      "url": "pmtiles://../redatam_censo_2022_radios.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "graduated-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_redatam_censo_2022_radios",
+      "source-layer": "redatam_censo_2022_radios",
       "paint": {
         "fill-color": [
           "step",

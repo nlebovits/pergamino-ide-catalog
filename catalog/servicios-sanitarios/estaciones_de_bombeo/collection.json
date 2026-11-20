@@ -2,121 +2,27 @@
   "type": "Collection",
   "id": "servicios-sanitarios/estaciones_de_bombeo",
   "stac_version": "1.1.0",
-  "description": "Estaciones de bombeo de agua pluvial que sirven para evitar inundaciones en la Ciudad de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Servicios sanitarios"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aestaciones_de_bombeo",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:estaciones_de_bombeo"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_estaciones_de_bombeo.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_estaciones_de_bombeo"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 4,
-  "table:row_count": 4,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "ubicacion",
-      "type": "string"
-    },
-    {
-      "name": "barrio",
-      "type": "string"
-    },
-    {
-      "name": "estado",
-      "type": "string"
-    },
-    {
-      "name": "fuente",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5621337,
-    -33.9034529,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_estaciones_de_bombeo"
-  ],
   "title": "Estaciones de bombeo pluvial",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.57291004,
-          -33.9124489,
-          -60.5593309,
-          -33.9034529
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Estaciones de bombeo de agua pluvial que sirven para evitar inundaciones en la Ciudad de Pergamino.",
+  "keywords": [
+    "bombeo",
+    "estacion",
+    "desagote",
+    "sumidero",
+    "bomba",
+    "pergamino",
+    "pluvial",
+    "arroyo",
+    "inundacion",
+    "agua"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -137,73 +43,215 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.57291,
+          -33.9124488,
+          -60.5593314,
+          -33.9034531
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Servicios sanitarios"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/152",
+      "type": "text/html",
+      "title": "Estaciones de bombeo pluvial en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:estaciones_de_bombeo",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:estaciones_de_bombeo)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./estaciones_de_bombeo.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "estaciones_de_bombeo"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 152,
+  "pergamino:geonode_uuid": "eb20a313-80af-4794-8705-5950a81befde",
+  "pergamino:source_updated": "2026-05-11T12:25:31Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 4,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "ubicacion",
+      "type": "string"
+    },
+    {
+      "name": "barrio",
+      "type": "string"
+    },
+    {
+      "name": "estado",
+      "type": "string"
+    },
+    {
+      "name": "fuente",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 4,
   "assets": {
-    "publico_estaciones_de_bombeo": {
-      "href": "./publico_estaciones_de_bombeo.parquet",
+    "estaciones_de_bombeo": {
+      "href": "./estaciones_de_bombeo.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-11T12:25:31Z",
+      "pergamino:content_hash": "24679591776802951230:4",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 4327,
-      "file:checksum": "12202ed454e5d2283e691e607668c8b57eade46ac81203fc8654199652c6e2332f6e",
       "roles": [
         "data"
       ],
+      "table:row_count": 4,
+      "file:size": 2512,
+      "file:checksum": "12209bc23c58f2d608c1a048b153276ec00cb4399a02e5f7f09311f1d0d7dc404b2e",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_estaciones_de_bombeo.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:estaciones_de_bombeo). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 4,
+      "file:size": 4327,
+      "file:checksum": "12202ed454e5d2283e691e607668c8b57eade46ac81203fc8654199652c6e2332f6e"
+    },
+    "estaciones_de_bombeo-tiles": {
+      "href": "./estaciones_de_bombeo.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 7227,
+      "file:checksum": "12205c569f752b2e9f2044cabdcb2e665afb5d87a627ae69c6eac4cfa58f1b38d672",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "estaciones_de_bombeo",
-      "file:size": 1017,
-      "file:checksum": "122037c8569877b92b6265510854b730e1e724ebf27ab0e582a87386e3bccb1898fc",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 998,
+      "file:checksum": "122079f5cbb838e5309050598d71ec1ec7fea1fab0d7a87fff56ebd8dae2bdfd685f",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 285,
       "file:checksum": "1220975ad749a8912ffc49787c9f037185004f8ce92d4cec0ca9c8b1eb77e584fbd6",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1200,
-      "file:checksum": "1220cadd3ca822dfe2ab414b417fe2e2f3d8b4feea1d8d5789b172505c45dec5477d",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_estaciones_de_bombeo-tiles": {
-      "href": "./publico_estaciones_de_bombeo.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_estaciones_de_bombeo (vector tiles)",
-      "file:size": 5075,
-      "file:checksum": "12201c3972d2fb7da08ec59d5d87bae77c223df3ab31da8874fbeb816278555e5f2c",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_estaciones_de_bombeo.thumb.jpg",
+      "href": "./estaciones_de_bombeo.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 79192,
-      "file:checksum": "122058ba3ce01db05201d77119c61e650a2eb57b217687cf335b5c6f4b0053412ca6",
+      "file:size": 60985,
+      "file:checksum": "12206461c295e18ed0b4f2fa7e5a40d8569d16b48849e8465516c5f2f21e6f5312c8",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3606,
+      "file:checksum": "1220e6212380d72b53791ab1963af4a6a7360edf1bb731cc86db5cfb77e8eb855ebd",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "estaciones_de_bombeo"
+  ]
 }

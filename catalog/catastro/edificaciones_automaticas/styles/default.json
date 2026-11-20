@@ -1,0 +1,42 @@
+{
+  "version": 8,
+  "name": "edificaciones_automaticas",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../edificaciones_automaticas.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "graduated-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "edificaciones_automaticas",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "get",
+            "confidence"
+          ],
+          "#fff5f0",
+          0.7,
+          "#fcbba1",
+          0.75,
+          "#fc9272",
+          0.8,
+          "#fb6a4a",
+          0.85,
+          "#de2d26",
+          0.9,
+          "#67000d"
+        ],
+        "fill-opacity": 0.9,
+        "fill-outline-color": "#ffffff"
+      }
+    }
+  ]
+}

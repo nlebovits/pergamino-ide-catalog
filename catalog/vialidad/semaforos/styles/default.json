@@ -4,17 +4,17 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_semaforos.pmtiles",
+      "url": "pmtiles://../semaforos.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_semaforos",
+      "source-layer": "semaforos",
       "paint": {
         "circle-color": [
           "match",
@@ -28,10 +28,262 @@
           "#ff0000",
           "vehicular",
           "#39e341",
-          "#cccccc"
+          "#000000"
         ],
-        "circle-radius": 7.0,
-        "circle-opacity": 1.0
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          1.0,
+          "peatonal",
+          1.0,
+          "vehicular",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          3.5,
+          "peatonal",
+          3.5,
+          "vehicular",
+          3.5,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          "#232323",
+          "peatonal",
+          "#232323",
+          "vehicular",
+          "#232323",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          0.5,
+          "peatonal",
+          0.5,
+          "vehicular",
+          0.5,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          1.0,
+          "peatonal",
+          1.0,
+          "vehicular",
+          1.0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "semaforos",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          "#ffff38",
+          "peatonal",
+          "#ffffff",
+          "vehicular",
+          "#ffff38",
+          "#000000"
+        ],
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          1.0,
+          "peatonal",
+          1.0,
+          "vehicular",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          3.5,
+          "peatonal",
+          3.5,
+          "vehicular",
+          3.5,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          "#232323",
+          "peatonal",
+          "#232323",
+          "vehicular",
+          "#232323",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          0.5,
+          "peatonal",
+          0.5,
+          "vehicular",
+          0.5,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          1.0,
+          "peatonal",
+          1.0,
+          "vehicular",
+          1.0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sld-2-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "semaforos",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          "#000000",
+          "peatonal",
+          "#000000",
+          "vehicular",
+          "#ff0000",
+          "#000000"
+        ],
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          0,
+          "peatonal",
+          0,
+          "vehicular",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          0,
+          "peatonal",
+          0,
+          "vehicular",
+          3.5,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          "#000000",
+          "peatonal",
+          "#000000",
+          "vehicular",
+          "#232323",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          0,
+          "peatonal",
+          0,
+          "vehicular",
+          0.5,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "intermitente",
+          0,
+          "peatonal",
+          0,
+          "vehicular",
+          1.0,
+          0
+        ]
       }
     }
   ]

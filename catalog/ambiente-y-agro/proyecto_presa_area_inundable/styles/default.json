@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_proyecto_presa_area_inundable.pmtiles",
+      "url": "pmtiles://../proyecto_presa_area_inundable.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "fill-0",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_proyecto_presa_area_inundable",
+      "source-layer": "proyecto_presa_area_inundable",
       "paint": {
         "fill-color": "#0000FF",
         "fill-opacity": 0.5,

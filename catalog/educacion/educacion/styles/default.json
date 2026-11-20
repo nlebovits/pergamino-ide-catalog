@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "educacion",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../educacion.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "circle-0",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "educacion",
+      "paint": {
+        "circle-color": "#FF0000",
+        "circle-radius": 3.0,
+        "circle-opacity": 1.0
+      }
+    }
+  ]
+}

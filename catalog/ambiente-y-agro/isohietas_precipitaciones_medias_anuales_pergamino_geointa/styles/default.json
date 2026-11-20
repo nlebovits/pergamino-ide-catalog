@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_isohietas_precipitaciones_medias_anuales_pergamino_geointa.pmtiles",
+      "url": "pmtiles://../isohietas_precipitaciones_medias_anuales_pergamino_geointa.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "graduated-line",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_isohietas_precipitaciones_medias_anuales_pergamino_geointa",
+      "source-layer": "isohietas_precipitaciones_medias_anuales_pergamino_geointa",
       "paint": {
         "line-color": [
           "step",

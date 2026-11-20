@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_cobertura_gas_natural.pmtiles",
+      "url": "pmtiles://../cobertura_gas_natural.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "fill-0",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_cobertura_gas_natural",
+      "source-layer": "cobertura_gas_natural",
       "paint": {
         "fill-color": "#ffcd27",
         "fill-opacity": 0.6,

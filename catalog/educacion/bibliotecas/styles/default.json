@@ -4,21 +4,35 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_bibliotecas.pmtiles",
+      "url": "pmtiles://../bibliotecas.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_bibliotecas",
+      "source-layer": "bibliotecas",
       "paint": {
-        "circle-color": "#7d3f4a",
-        "circle-radius": 3.5,
-        "circle-opacity": 1.0
+        "circle-color": "#8b5a2b",
+        "circle-opacity": 1.0,
+        "circle-radius": 8.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "bibliotecas",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 5.0
       }
     }
   ]

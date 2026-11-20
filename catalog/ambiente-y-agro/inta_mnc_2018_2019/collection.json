@@ -2,113 +2,37 @@
   "type": "Collection",
   "id": "ambiente-y-agro/inta_mnc_2018_2019",
   "stac_version": "1.1.0",
-  "description": "Mapa nacional de cultivos INTA 2018-2019 para el Partido de Pergamino, tomado de https://geo-backend.inta.gob.ar/catalogue/#/dataset/479",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Ambiente y agro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Ainta_mnc_2018_2019",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:inta_mnc_2018_2019"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_inta_mnc_2018_2019.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_inta_mnc_2018_2019"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 47114,
-  "table:row_count": 47114,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "dn",
-      "type": "int64"
-    },
-    {
-      "name": "categorias",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.803833,
-    -33.6923522,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_inta_mnc_2018_2019"
-  ],
   "title": "Mapa nacional de cultivos INTA 2018-2019",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.94404449,
-          -34.176495,
-          -60.13879467,
-          -33.54991991
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Mapa nacional de cultivos INTA 2018-2019 para el Partido de Pergamino, tomado de https://geo-backend.inta.gob.ar/catalogue/#/dataset/479",
+  "keywords": [
+    "cultivo",
+    "mapa",
+    "nacional",
+    "geointa",
+    "sorgo",
+    "trigo",
+    "cereales",
+    "invierno",
+    "cobertura",
+    "agricola",
+    "soja",
+    "arveja",
+    "maiz",
+    "campaña",
+    "barbecho",
+    "ganadero",
+    "pergamino",
+    "2019",
+    "2018",
+    "inta"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -136,73 +60,207 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.9440445,
+          -34.1764948,
+          -60.1387947,
+          -33.5499199
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Ambiente y agro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/183",
+      "type": "text/html",
+      "title": "Mapa nacional de cultivos INTA 2018-2019 en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:inta_mnc_2018_2019",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:inta_mnc_2018_2019)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./inta_mnc_2018_2019.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "inta_mnc_2018_2019"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 183,
+  "pergamino:geonode_uuid": "8e97ebdd-adcd-43e0-b9eb-21902f5f1fb3",
+  "pergamino:source_updated": "2026-05-07T11:18:01Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 47114,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "dn",
+      "type": "int64"
+    },
+    {
+      "name": "categorias",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 47114,
   "assets": {
-    "publico_inta_mnc_2018_2019": {
-      "href": "./publico_inta_mnc_2018_2019.parquet",
+    "inta_mnc_2018_2019": {
+      "href": "./inta_mnc_2018_2019.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-07T11:18:01Z",
+      "pergamino:content_hash": "432303672462843996365656:47114",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 2886264,
-      "file:checksum": "1220858d960c684bada86ee9b3f3d77ddfda74333520ee13c6db5862e8b01fb11c9a",
       "roles": [
         "data"
       ],
+      "table:row_count": 47114,
+      "file:size": 3089623,
+      "file:checksum": "122030c370f4ff7975b6820e4afe1cc3a812959eeef8878a0426ec0946b94c492854",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_inta_mnc_2018_2019.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:inta_mnc_2018_2019). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 47114,
+      "file:size": 2886264,
+      "file:checksum": "1220858d960c684bada86ee9b3f3d77ddfda74333520ee13c6db5862e8b01fb11c9a"
+    },
+    "inta_mnc_2018_2019-tiles": {
+      "href": "./inta_mnc_2018_2019.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 13326348,
+      "file:checksum": "122031369c4b2d495e50b0193f1173efe72644b25af08c651bd9c2d9f7a01f45edc2",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "mnc_inta_2018_2019",
-      "file:size": 703,
-      "file:checksum": "1220004ccf25f4137c5114d70063ccf767af777a8b0cc0b7cbf337eccc2f41f5aff2",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 687,
+      "file:checksum": "12206ccb234cac268ded275131e9b00a3c19a7e1899651f2fa2d7638147eb174cc8d",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
-      "file:size": 1553,
-      "file:checksum": "12204ee0df3bb86dc5e320651cf56bfd38cd634cee932439fe77c8fb21b9314d815d",
+      "file:size": 2041,
+      "file:checksum": "1220bdabb9d9563e341617cc278b9c5962be8d20aa8f1a4234e2df5cfb1af10d8f1a",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1143,
-      "file:checksum": "12203a7d8bd0187b626d3e69a3e239cc8b27e06461de3b2ea0c18f698e9886cb550c",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_inta_mnc_2018_2019-tiles": {
-      "href": "./publico_inta_mnc_2018_2019.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_inta_mnc_2018_2019 (vector tiles)",
-      "file:size": 10817804,
-      "file:checksum": "12201a78a53f842c876a20014968917f46b9dce60a2a33bdf41f7a396c58776b6ad8",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_inta_mnc_2018_2019.thumb.jpg",
+      "href": "./inta_mnc_2018_2019.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 361051,
-      "file:checksum": "1220e67b4d211a9db7a2783292142a5be89677deb9fab457fb3acf70fcc3894e271a",
+      "file:size": 356246,
+      "file:checksum": "122086add2ad3cc843c648ba31f4bb1b0b56763ac7267ba572c58b29bb74b7cae6fb",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3729,
+      "file:checksum": "12202567f28f64bcf28bfb1d3ee410908a4f55d682a5681906fa42c6265a3b607d84",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "inta_mnc_2018_2019"
+  ]
 }

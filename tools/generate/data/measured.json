@@ -1,0 +1,3979 @@
+{
+  "ambiente-y-agro/arbolado": {
+    "geometry": "point",
+    "categories": {
+      "espacio": [
+        "ajardinada",
+        "sin_cazuela",
+        "con_cazuela",
+        "sin_datos"
+      ],
+      "altura": [
+        "hasta 6 metros",
+        "de 6 a 15 metros",
+        "más de 15 metros",
+        "sin_datos"
+      ],
+      "estado_gen": [
+        "bueno",
+        "regular",
+        "muerto",
+        "malo"
+      ],
+      "lado": [
+        "par",
+        "impar",
+        "sin_dato"
+      ],
+      "vereda": [
+        "Mixta",
+        "Verde",
+        "Embaldosada",
+        "sin_dato"
+      ],
+      "elementos_estranos": [
+        "no",
+        "si"
+      ],
+      "tipo_elementos_estranos": [
+        "Residuos",
+        "Metálicos",
+        "Otros",
+        "Luminarias y publicidad"
+      ],
+      "clavel_del_aire": [
+        "si",
+        "no"
+      ],
+      "dano_en_vereda": [
+        "no",
+        "medio",
+        "bajo",
+        "alto",
+        "sin_dato"
+      ],
+      "vereda_levantada": [
+        "no",
+        "si",
+        "sin_dato"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/banados": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": false
+  },
+  "ambiente-y-agro/cobertura_arbolado_urbano": {
+    "geometry": "polygon",
+    "categories": {
+      "localidad": [
+        "Pergamino",
+        "Manuel Ocampo",
+        "Acevedo",
+        "El Socorro (Villa Angélica)",
+        "Rancagua",
+        "Urquiza (Juan Anchorena)",
+        "Mariano Alfonzo",
+        "La Violeta",
+        "Pinzón",
+        "Guerrico",
+        "Fontezuela",
+        "Mariano Benítez",
+        "Juan Andrés de la Peña"
+      ],
+      "espacio_verde": [
+        "no",
+        "si"
+      ],
+      "metodo_deteccion": [
+        "automatica",
+        "manual",
+        "correccion"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/cuencas_arroyo_pergamino": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/cuencas_hidricas_norte_ba": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/cursos_de_agua": {
+    "geometry": "line",
+    "categories": {
+      "tipo": [
+        "canal acequia o zanja",
+        "arroyo",
+        "rio"
+      ],
+      "entubado": [
+        "no",
+        "si"
+      ],
+      "regimen": [
+        "no permanente",
+        "permanente"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/curvas_de_nivel_iatasa_abs": {
+    "geometry": "line",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/curvas_nivel_cuenca": {
+    "geometry": "line",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/curvas_nivel_ign": {
+    "geometry": "line",
+    "categories": {
+      "hoja": [
+        "3360-III",
+        "3560-I"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/espacios_verdes": {
+    "geometry": "polygon",
+    "categories": {
+      "circ": [
+        "1",
+        "2",
+        "14",
+        "15",
+        "16",
+        "12",
+        "19",
+        "17",
+        "5",
+        "22",
+        "11",
+        "23",
+        "4",
+        "9",
+        "I"
+      ],
+      "seccion": [
+        "D",
+        "B",
+        "0",
+        "A",
+        "K",
+        "C",
+        "E",
+        "H",
+        "M",
+        "F",
+        "G",
+        "Z",
+        "N",
+        "J",
+        "L"
+      ],
+      "localidad": [
+        "Pergamino",
+        "J. A. de la Peña",
+        "Guerrico",
+        "Urquiza",
+        "Manuel Ocampo",
+        "Mariano Alfonzo",
+        "Acevedo",
+        "La Violeta",
+        "El Socorro",
+        "Fontezuela",
+        "Mariano Benitez",
+        "Rancagua",
+        "Pinzon"
+      ],
+      "juegos": [
+        "no",
+        "si",
+        "sin dato"
+      ],
+      "est_salud": [
+        "no",
+        "si"
+      ],
+      "monumento": [
+        "no",
+        "si",
+        "sin dato"
+      ],
+      "luminaria": [
+        "no",
+        "si"
+      ],
+      "asientos": [
+        "no",
+        "si",
+        "sin dato"
+      ],
+      "senda_peat": [
+        "no",
+        "si",
+        "sin dato"
+      ],
+      "arbolado": [
+        "no",
+        "si",
+        "sin dato"
+      ],
+      "edificado": [
+        "no",
+        "si",
+        "sin dato"
+      ],
+      "mastil": [
+        "no",
+        "si",
+        "sin dato"
+      ],
+      "sector": [
+        "sur",
+        "norte",
+        "pueblos",
+        "este",
+        "oeste",
+        "centro",
+        "no"
+      ],
+      "plan_led": [
+        "2017-MINEM",
+        "2017-licitacion"
+      ],
+      "mejoras": [
+        "no",
+        "si"
+      ],
+      "origen": [
+        "vial",
+        "catastro",
+        "ffcc",
+        "fluvial",
+        "electroducto"
+      ],
+      "alcance_uso": [
+        "adyacente",
+        "ninguno",
+        "vecinal",
+        "barrial",
+        "ciudad",
+        "metropolitano"
+      ],
+      "tipo_cobertura_mayoritaria": [
+        "verde",
+        "jardin",
+        "dura"
+      ],
+      "funcion": [
+        "conector_urbano",
+        "nodo_verde",
+        "sin_funcion",
+        "especifico"
+      ],
+      "forma": [
+        "lineal",
+        "cuadrangular",
+        "irregular",
+        "triangular",
+        "circular"
+      ],
+      "denominacion": [
+        "delimitador_vial",
+        "reserva",
+        "plazoleta",
+        "plaza",
+        "ribera",
+        "paseo",
+        "circuito_deportivo",
+        "parque"
+      ],
+      "delimitacion": [
+        "abierta",
+        "cerrada",
+        "mixta"
+      ],
+      "uso_transito": [
+        "ninguno",
+        "peatonal",
+        "vehicular",
+        "peatonal, patin_patineta",
+        "peatonal, vehicular",
+        "peatonal, ciclismo",
+        "peatonal, patin_patineta, vehicular, ciclismo"
+      ],
+      "disponibilidad": [
+        "funcional",
+        "sin_proyecto",
+        "en_construccion",
+        "proyecto"
+      ]
+    },
+    "joins": {
+      "partida": "catastro/parcela"
+    },
+    "in_city": true
+  },
+  "ambiente-y-agro/inta_carbono_suelo_2015_2022": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/inta_mnc_2018_2019": {
+    "geometry": "polygon",
+    "categories": {
+      "categorias": [
+        "Maz (Cultivo unico)",
+        "Ganaderia",
+        "Soja (Cultivo unico)",
+        "Cultivo de invierno - Soja"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/inta_mnc_2019_invierno": {
+    "geometry": "polygon",
+    "categories": {
+      "categoria": [
+        "No agricola",
+        "Barbecho",
+        "Cereales de invierno"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/inta_mnc_2020_invierno": {
+    "geometry": "polygon",
+    "categories": {
+      "categoria": [
+        "No agricola",
+        "Barbecho",
+        "Cereales de invierno",
+        "Arveja"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/inta_mnc_2020_verano": {
+    "geometry": "polygon",
+    "categories": {
+      "categoria": [
+        "No agricola",
+        "Soja",
+        "Maiz"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/inta_mnc_2021_invierno": {
+    "geometry": "polygon",
+    "categories": {
+      "categoria": [
+        "No agricola",
+        "Cereales de invierno",
+        "Barbecho",
+        "Arveja"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/inta_mnc_2021_verano": {
+    "geometry": "polygon",
+    "categories": {
+      "categoria": [
+        "No agricola",
+        "Soja",
+        "Maiz",
+        "Sorgo"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/inta_mnc_2022_invierno": {
+    "geometry": "polygon",
+    "categories": {
+      "categorias": [
+        "No agricola",
+        "Cultivo de invierno",
+        "Barbecho"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/inta_mnc_2022_verano": {
+    "geometry": "polygon",
+    "categories": {
+      "categorias": [
+        "No agricola",
+        "Soja",
+        "Maiz",
+        "Sorgo"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/inta_mnc_2023_verano": {
+    "geometry": "polygon",
+    "categories": {
+      "categoria": [
+        "No agricola",
+        "Soja",
+        "Maiz",
+        "Sorgo",
+        "Barbecho"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/inundacion_1995": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/inundacion_2016": {
+    "geometry": "polygon",
+    "categories": {
+      "relevo": [
+        "Contralor Urbano",
+        "Delegado Claudio A López",
+        "Delegado Cornejo Fernando"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Manuel Ocampo",
+        "Pinzon"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/isohietas_precipitaciones_medias_anuales_pergamino_geointa": {
+    "geometry": "line",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/limpieza_mantenimiento_espacios_verdes": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/luminarias_espacios_verdes": {
+    "geometry": "point",
+    "categories": {
+      "fuente": [
+        "Imagen aérea",
+        "Secretaría de Control de Gestión",
+        "Subsecretaría de Control de Gestión",
+        "Control de Gestión",
+        "Delegación Guerrico"
+      ],
+      "marca_lampara": [
+        "Philips",
+        "Italavia",
+        "Strand",
+        "Philco"
+      ],
+      "modelo_lampara": [
+        "824110110681",
+        "82301026",
+        "SX200",
+        "Ranger",
+        "82300289"
+      ],
+      "tipo_poste": [
+        "acero",
+        "Acero, brazo simple",
+        "columna_acero",
+        "madera"
+      ],
+      "tipo_lampara": [
+        "led",
+        "LED",
+        "halogena"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/proyecto_presa": {
+    "geometry": "line",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/proyecto_presa_area_inundable": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/puntos_de_nivel_iatasa_abs": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "cruce",
+        "rejilla-tapa",
+        "punto-medicion",
+        "sumidero",
+        "alcantarilla-zanja",
+        "calle",
+        "umbral",
+        "vias",
+        "canal-arroyo"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/riego_por_pivote_central": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "ambiente-y-agro/suelos_pergamino_50mil": {
+    "geometry": "polygon",
+    "categories": {
+      "tipo": [
+        "Consociacion",
+        "Comp Indif.",
+        "Complejo",
+        "Asociacion",
+        "GND"
+      ],
+      "serie3": [
+        "Las Gamas",
+        "Faustina",
+        "Santa Lucia",
+        "El Recuerdo",
+        "Gelly",
+        "Manantiales",
+        "Ramallo",
+        "Wheelwright"
+      ],
+      "posic3": [
+        "bajo",
+        "Bajo",
+        "pendiente",
+        "plano medio",
+        "Hoya y tendido"
+      ],
+      "taxo_ppal": [
+        "Argiudol tipico",
+        "Argiudol vertico",
+        "Complejo indiferenciado",
+        "Argiudol abruptico",
+        "Argiudol acuico",
+        "Natracualf molico",
+        "Natracualf tipico",
+        "Natracuol tipico",
+        "Paleudol tipico",
+        "Argiacuol vertico",
+        "Argialbol argiacuico",
+        "Lagunas",
+        "Miscelaneas"
+      ],
+      "taxo_2rio": [
+        "Argiudol tipico",
+        "Argiudol vertico",
+        "Natracualf tipico",
+        "Natralbol tipico",
+        "Argiudol abruptico",
+        "Natracualf molico",
+        "Argialbol argiacuico",
+        "Natracuol tipico",
+        "Paleudol tipico"
+      ],
+      "taxo_3rio": [
+        "Argiudol abruptico",
+        "Natracualf molico",
+        "Natracuol tipico",
+        "Natralbol tipico",
+        "Natracualf tipico",
+        "Argiudol vertico"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "catastro/areas_fiscalizadas_construcciones": {
+    "geometry": "polygon",
+    "categories": {
+      "estado": [
+        "finalizado",
+        "ejecucion"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "catastro/chacra": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "catastro/circunscripcion": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "catastro/complejos_habitacionales": {
+    "geometry": "polygon",
+    "categories": {
+      "tipo": [
+        "abierto",
+        "cerrado",
+        "mixto"
+      ],
+      "plan": [
+        "privado",
+        "Municipal, Secretaría de Tierra y Vivienda",
+        "Municipal",
+        "municipal",
+        "Instituto de la Vivienda",
+        "ProCreAr",
+        "Solares Urquiza I",
+        "Solares Urquiza II"
+      ],
+      "distrito": [
+        "Norte",
+        "Sur",
+        "Este",
+        "Pueblo",
+        "Oeste",
+        "Rural",
+        "Centro"
+      ],
+      "estado": [
+        "finalizado",
+        "en construccion",
+        "parcialmente construido",
+        "En trámite"
+      ],
+      "zonificacion": [
+        "R4",
+        "R5c",
+        "R6",
+        "AR (en proceso a CC)",
+        "AR (en proceso a R6)",
+        "CC",
+        "R5d",
+        "AR",
+        "AR (en proceso a R5c)",
+        "I1c",
+        "R5b"
+      ],
+      "a_prefactibilidad": [
+        "sin datos",
+        "en proceso",
+        "completado",
+        "avanzado",
+        "presentado"
+      ],
+      "b_visacion": [
+        "sin datos",
+        "en proceso",
+        "completado",
+        "no iniciado",
+        "avanzado",
+        "presentado"
+      ],
+      "c_proyecto_infraestructura": [
+        "sin datos",
+        "en proceso",
+        "no iniciado",
+        "avanzado",
+        "completado",
+        "presentado"
+      ],
+      "d_administrativa_y_obras": [
+        "sin datos",
+        "en proceso",
+        "no iniciado",
+        "completado",
+        "presentado"
+      ],
+      "e_finalizacion": [
+        "sin datos",
+        "no iniciado",
+        "en proceso",
+        "completado",
+        "presentado",
+        "avanzado"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "catastro/edificaciones_automaticas": {
+    "geometry": "polygon",
+    "categories": {
+      "tipo": [
+        "Abierto",
+        "Pueblo",
+        "Mixto",
+        "Restringido"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Rural",
+        "Acevedo",
+        "El Socorro (Villa Angélica)",
+        "Urquiza (Juan Anchorena)",
+        "Mariano Alfonzo",
+        "Manuel Ocampo",
+        "La Violeta",
+        "Rancagua",
+        "Pinzón",
+        "Guerrico",
+        "Fontezuela",
+        "Mariano Benítez",
+        "Juan Andrés de la Peña",
+        "Villa San José de Rancagua"
+      ],
+      "chacra_letra": [
+        "D",
+        "0",
+        "B"
+      ],
+      "fraccion_letra": [
+        "B",
+        "0",
+        "A"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "catastro/edificios_en_altura": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "vivienda",
+        "comercio",
+        "educacion",
+        "hotel",
+        "clinica",
+        "mixto",
+        "municipalidad",
+        "sin dato",
+        "club",
+        "religion",
+        "justicia",
+        "salud",
+        "cultura",
+        "otro"
+      ],
+      "cocheras": [
+        "si",
+        "no",
+        "1",
+        "5",
+        "8"
+      ],
+      "estado": [
+        "finalizado",
+        "construccion",
+        "en construcción"
+      ],
+      "tipo_complementario": [
+        "comercio",
+        "ninguna",
+        "oficina",
+        "administrativo",
+        "ninguno",
+        "vivienda"
+      ],
+      "escalera_tipo": [
+        "interna",
+        "interna externa_emergencia"
+      ],
+      "accesibilidad": [
+        "no",
+        "si"
+      ],
+      "categoria": [
+        "privado",
+        "publico",
+        "público"
+      ],
+      "ph": [
+        "si",
+        "no_corresponde",
+        "no",
+        "sin_dato"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "catastro/edificios_historicos": {
+    "geometry": "point",
+    "categories": {
+      "circunsc": [
+        "I",
+        "1",
+        "II",
+        "XV"
+      ],
+      "seccion": [
+        "B",
+        "A",
+        "C",
+        "D",
+        "E",
+        "H"
+      ],
+      "instituto": [
+        "X",
+        "35"
+      ],
+      "estado": [
+        "BUENO",
+        "REGULAR",
+        "MALO",
+        "MUY BUENO",
+        "NHD"
+      ],
+      "ordenanza": [
+        "8261-15",
+        "8948-18"
+      ]
+    },
+    "joins": {
+      "partida": "catastro/parcela"
+    },
+    "in_city": true
+  },
+  "catastro/fraccion": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "catastro/manzana": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "catastro/medida_lado": {
+    "geometry": "point",
+    "categories": {
+      "tdl": [
+        "COSTADO",
+        "FRENTE",
+        "CONTRAFRENTE",
+        "OCHAVA"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "catastro/parcela": {
+    "geometry": "polygon",
+    "categories": {
+      "tpa": [
+        "Urbano",
+        "Rural"
+      ],
+      "chacra_letra": [
+        "0",
+        "B",
+        "D"
+      ],
+      "fraccion_letra": [
+        "B",
+        "A",
+        "0"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Rural",
+        "Acevedo",
+        "Manuel Ocampo",
+        "El Socorro (Villa Angélica)",
+        "Mariano Alfonzo",
+        "Urquiza (Juan Anchorena)",
+        "Rancagua",
+        "La Violeta",
+        "Pinzón",
+        "Guerrico",
+        "Mariano Benítez",
+        "Fontezuela",
+        "Villa San José de Rancagua"
+      ],
+      "situacion_administrativa": [
+        "Aprobada y publicada por ARBA",
+        "En proceso de subdivisión",
+        "Subdividida pero no publicada",
+        "Subdivisión de UF en trámite",
+        "NO FIGURA EN ARBA",
+        "Figura como macizo en ARBA"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "catastro/ph": {
+    "geometry": "point",
+    "categories": {
+      "seccion": [
+        "B",
+        "C",
+        "A",
+        "D",
+        "G",
+        "0",
+        "H",
+        "E",
+        "F",
+        "K",
+        "J",
+        "L",
+        "M",
+        "Z",
+        "N"
+      ],
+      "localidad": [
+        "Pergamino",
+        "El Socorro (Villa Angélica)",
+        "Manuel Ocampo",
+        "Urquiza (Juan Anchorena)",
+        "Guerrico",
+        "La Violeta",
+        "Rural",
+        "Acevedo",
+        "Mariano Alfonzo",
+        "Fontezuela",
+        "Rancagua"
+      ],
+      "actualizacion": [
+        "2025-05-26Z",
+        "2025-07-07Z",
+        "2025-07-08Z",
+        "2025-08-21Z",
+        "2025-06-26Z"
+      ]
+    },
+    "joins": {
+      "partida": "catastro/parcela"
+    },
+    "in_city": true
+  },
+  "catastro/quinta": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "catastro/seccion": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "catastro/subparcela": {
+    "geometry": "polygon",
+    "categories": {
+      "fecha": [
+        "2015-09-11Z",
+        "2022-10-19Z"
+      ],
+      "caracteris": [
+        "4",
+        "A"
+      ]
+    },
+    "joins": {
+      "partida": "catastro/parcela"
+    },
+    "in_city": true
+  },
+  "catastro/zonificacion": {
+    "geometry": "polygon",
+    "categories": {
+      "hmax": [
+        "9,5 MTS",
+        "16MTS"
+      ],
+      "tipo_suelo": [
+        "RESIDENCIAL",
+        "PRODUCTIVO - INTENSIVO",
+        "PRODUCTIVO INDUSTRIAL",
+        "ESPACIO VERDE",
+        "CORREDORES",
+        "UE - EQUIPAMIENTO",
+        "RESERVA",
+        "RECUPERACION",
+        "PRODUCTIVO - EXTENSIVO",
+        "RESIDENCIAL - ESPECIAL"
+      ],
+      "zonas": [
+        "RESIDENCIAL",
+        "AGROPECUARIA",
+        "INDUSTRIAL",
+        "ESPARCIMIENTO",
+        "COMERCIAL",
+        "USO ESPECIFICO",
+        "RESERVA",
+        "RECUPERACION",
+        "RESIDENCIAL EXTRAURBANA"
+      ],
+      "u_c_r": [
+        "URBANA",
+        "COMPLEMENTARIA",
+        "EV, ESPARCIMIENTO, RECREACION",
+        "USO ESPECIFICO",
+        "RURAL"
+      ],
+      "ord_mod": [
+        "8591-17 EN PROCESO DE CONVALIDACION",
+        "9003-18",
+        "7890-2013",
+        "8919-18 EN PROCESO DE CONVALIDACION",
+        "9003-18, 9746/2023",
+        "9741-23",
+        "9741-23 EN PROCESO DE CONVALIDACION"
+      ],
+      "dec_mod": [
+        "EN PROCESO DE CONVALIDACION",
+        "Convalidado por Decreto Provincial Nº 183/2019"
+      ],
+      "fecha_ac": [
+        "09/2016",
+        "01/2020",
+        "05/2017",
+        "07/2025",
+        "01/2019",
+        "08/2018",
+        "03/2020",
+        "07/2009",
+        "08/2024",
+        "12/2024"
+      ],
+      "localidad": [
+        "PERGAMINO",
+        "FONTEZUELA",
+        "GUERRICO",
+        "URQUIZA",
+        "ACEVEDO",
+        "J. A. DE LA PEÑA",
+        "MARIANO ALFONSO",
+        "RANCAGUA",
+        "LA VIOLETA",
+        "MANUEL OCAMPO",
+        "MARIANO BENITEZ",
+        "PINZON",
+        "EL SOCORRO",
+        "RURAL"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/agencias_de_viaje": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/asociaciones_sindicales": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/colegios_de_profesionales": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/deportivo": {
+    "geometry": "point",
+    "categories": {
+      "clase": [
+        "club",
+        "gimnasio",
+        "fútbol",
+        "atletismo",
+        "ciclismo",
+        "natatorio",
+        "tenis",
+        "Social",
+        "colombofilia",
+        "golf",
+        "karate",
+        "remo",
+        "skate",
+        "tiro"
+      ],
+      "tipo": [
+        "sede",
+        "campo de deportes",
+        "estadio",
+        "pista"
+      ],
+      "gestion": [
+        "comunitaria",
+        "privada",
+        "estatal"
+      ],
+      "actualizacion": [
+        "2020-10-22Z",
+        "2020-12-10Z",
+        "2021-02-03Z"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/entretenimiento": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "Teatro",
+        "Teatro bar",
+        "Otro",
+        "Cine",
+        "Juego de azar"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/estaciones_servicio": {
+    "geometry": "point",
+    "categories": {
+      "marca": [
+        "YPF",
+        "Bandera Blanca",
+        "Esso",
+        "Petrobras",
+        "Shell",
+        "Axion",
+        "Sol"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Acevedo",
+        "J. A. de la PeÃ±a",
+        "Urquiza"
+      ],
+      "nafta": [
+        "SI",
+        "NO"
+      ],
+      "diesel": [
+        "SI",
+        "NO"
+      ],
+      "gnc": [
+        "NO",
+        "SI"
+      ],
+      "agro": [
+        "NO",
+        "SI",
+        "SIN ESPECIFICAR"
+      ],
+      "shop": [
+        "SI",
+        "NO",
+        "SIN ESPECIFICAR"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/extraccion_dinero": {
+    "geometry": "point",
+    "categories": {
+      "actualizado": [
+        "2020-01-13Z",
+        "2026-05-11Z"
+      ],
+      "red": [
+        "Link",
+        "Banelco"
+      ],
+      "sucursal": [
+        "Única",
+        "Centenario",
+        "Centro",
+        "Centro de servicios",
+        "Acevedo",
+        "Cruce",
+        "El Avenida",
+        "Hipermecado",
+        "Market"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/gastronomia": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "Restaurante",
+        "Resto-bar",
+        "Heladeria",
+        "Café",
+        "Pizzería",
+        "Bar"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/gomerias": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "gomeria",
+        "venta de neumáticos"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/hospedajes": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "Hotel",
+        "Rural",
+        "Apart",
+        "Motel",
+        "Residencial",
+        "Camping"
+      ],
+      "categoria": [
+        "no informa",
+        "4",
+        "boutique"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/medios_de_comunicacion": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "Radio",
+        "Gráfico",
+        "Television"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/museos_y_espacios_culturales": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "Museo",
+        "Gobierno",
+        "Escuela"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/oferentes_espacios_culturales": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/parques_industriales_y_anexos": {
+    "geometry": "polygon",
+    "categories": {
+      "caracter": [
+        "privada",
+        "pública"
+      ],
+      "estado": [
+        "en construcción",
+        "activo"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/paseos_comerciales": {
+    "geometry": "line",
+    "categories": {
+      "tipo": [
+        "secundario",
+        "terciario",
+        "primario"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/puntos_de_interes": {
+    "geometry": "point",
+    "categories": {
+      "localidad": [
+        "Pergamino",
+        "Mariano Benítez",
+        "Rural"
+      ],
+      "tipo_interes": [
+        "cultural",
+        "aire libre",
+        "arquitectonico",
+        "historico",
+        "monumento",
+        "religioso",
+        "deportivo"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "comercio-y-cultura/puntos_venta_simple": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "kiosko",
+        "centro de cobro",
+        "loteria",
+        "telefonia",
+        "centro de estetica",
+        "kiosco",
+        "locutorio",
+        "regaleria",
+        "verduleria"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "demografia/calidad_vivienda": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "demografia/hacinamiento": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "demografia/icv": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {
+      "clavera": "demografia/radios_censales_indec_2010"
+    },
+    "in_city": true
+  },
+  "demografia/manzanas_isdd": {
+    "geometry": "polygon",
+    "categories": {
+      "clasificacion": [
+        "urbana",
+        "periurbana"
+      ],
+      "barrio_tipo": [
+        "Abierto",
+        "Pueblo",
+        "Cerrado"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "demografia/nbi": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "demografia/poblacion_1991": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "demografia/poblacion_2001": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "demografia/poblacion_2010": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "demografia/poblacion_2022": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "demografia/pobreza_cronica": {
+    "geometry": "polygon",
+    "categories": {
+      "nivel_de_incidencia_de_pobreza_cronica": [
+        "Muy bajo (0 - 0,99%)",
+        "Bajo (1 - 4,99%)",
+        "Moderado (5 - 9,99%)",
+        "Alto (10 - 14,99%)",
+        "Muy alto (15 - 24,99%)",
+        "Crítico (25 - 100%)",
+        "Sin datos"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "demografia/radios_censales_indec_2010": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "demografia/razon_de_sexo_2010": {
+    "geometry": "polygon",
+    "categories": {
+      "predominancia": [
+        "mujeres",
+        "varones",
+        "igual"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "demografia/redatam_censo_2022_radios": {
+    "geometry": "polygon",
+    "categories": {
+      "tipo": [
+        "URBANO",
+        "RURAL"
+      ]
+    },
+    "joins": {
+      "clavera": "demografia/radios_censales_indec_2010"
+    },
+    "in_city": true
+  },
+  "demografia/renabap_barrios_populares": {
+    "geometry": "polygon",
+    "categories": {
+      "localidad": [
+        "Pergamino",
+        "Rancagua"
+      ],
+      "decada_de_creacion": [
+        "Década 2000",
+        "Década 1990",
+        "Década 2010",
+        "Década 1980",
+        "Década 1920",
+        "Década 1930",
+        "Década 1950"
+      ],
+      "efluentes_cloacales": [
+        "Desagüe sólo a pozo negro/ciego u hoyo",
+        "Desagüe a cámara séptica y pozo ciego"
+      ],
+      "agua_corriente": [
+        "Conexión irregular a la red de agua",
+        "Bomba de agua de pozo domiciliaria",
+        "Bomba de agua de pozo comunitaria",
+        "Conexión formal a la red de agua con factura",
+        "Conexión regular a la red de agua pero sin factura"
+      ],
+      "calefaccion": [
+        "Sin Datos",
+        "Leña o carbón",
+        "Energía eléctrica",
+        "Gas en garrafa"
+      ],
+      "clasificacion_barrio": [
+        "Asentamiento",
+        "Villa"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "educacion/bibliotecas": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "Biblioteca",
+        "biblioteca"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "educacion/educacion": {
+    "geometry": "point",
+    "categories": {
+      "cp": [
+        "2700",
+        "2717",
+        "2718",
+        "2701",
+        "2715",
+        "2751",
+        "2703",
+        "2713",
+        "2711",
+        "B2700KIZ"
+      ],
+      "sector": [
+        "Estatal",
+        "Privada"
+      ],
+      "nivel": [
+        "primaria",
+        "inicial",
+        "secundaria",
+        "superior",
+        "especial",
+        "formacion",
+        "primario"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Rural",
+        "El Socorro (Villa Angélica)",
+        "Mariano Alfonzo",
+        "Acevedo",
+        "Guerrico",
+        "La Violeta",
+        "Manuel Ocampo",
+        "Rancagua",
+        "Urquiza (Juan Anchorena)",
+        "Fontezuela",
+        "Juan Andrés de la Peña",
+        "Mariano Benítez",
+        "Pinzón",
+        "Villa San José de Rancagua"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "educacion/gestion": {
+    "geometry": "point",
+    "categories": {
+      "cp": [
+        "2700",
+        "2717",
+        "2718",
+        "2701",
+        "2715",
+        "2751",
+        "2703",
+        "2713",
+        "2711",
+        "B2700KIZ"
+      ],
+      "sector": [
+        "Estatal",
+        "Privada"
+      ],
+      "nivel": [
+        "primaria",
+        "inicial",
+        "secundaria",
+        "superior",
+        "especial",
+        "formacion",
+        "primario"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Rural",
+        "El Socorro (Villa Angélica)",
+        "Mariano Alfonzo",
+        "Acevedo",
+        "Guerrico",
+        "La Violeta",
+        "Manuel Ocampo",
+        "Rancagua",
+        "Urquiza (Juan Anchorena)",
+        "Fontezuela",
+        "Juan Andrés de la Peña",
+        "Mariano Benítez",
+        "Pinzón",
+        "Villa San José de Rancagua"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "educacion/nivel": {
+    "geometry": "point",
+    "categories": {
+      "cp": [
+        "2700",
+        "2717",
+        "2718",
+        "2701",
+        "2715",
+        "2751",
+        "2703",
+        "2713",
+        "2711",
+        "B2700KIZ"
+      ],
+      "sector": [
+        "Estatal",
+        "Privada"
+      ],
+      "nivel": [
+        "primaria",
+        "inicial",
+        "secundaria",
+        "superior",
+        "especial",
+        "formacion",
+        "primario"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Rural",
+        "El Socorro (Villa Angélica)",
+        "Mariano Alfonzo",
+        "Acevedo",
+        "Guerrico",
+        "La Violeta",
+        "Manuel Ocampo",
+        "Rancagua",
+        "Urquiza (Juan Anchorena)",
+        "Fontezuela",
+        "Juan Andrés de la Peña",
+        "Mariano Benítez",
+        "Pinzón",
+        "Villa San José de Rancagua"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "educacion/predios_educativos": {
+    "geometry": "polygon",
+    "categories": {
+      "actualizacion": [
+        "2024-09-11Z",
+        "2026-03-11Z",
+        "2026-03-04Z",
+        "2026-03-03Z",
+        "2026-03-06Z",
+        "2026-03-09Z",
+        "2026-03-19Z"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Rural",
+        "El Socorro (Villa Angélica)",
+        "Acevedo",
+        "Mariano Alfonzo",
+        "Fontezuela",
+        "Guerrico",
+        "Juan Andrés de la Peña",
+        "Manuel Ocampo",
+        "Rancagua",
+        "Urquiza (Juan Anchorena)",
+        "La Violeta",
+        "Mariano Benítez",
+        "Pinzón"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "energia-y-conectividad/circuitos_energeticos": {
+    "geometry": "point",
+    "categories": {
+      "sendero": [
+        "recorrido_historico",
+        "recorrido_de_actores",
+        "energias_renovables"
+      ],
+      "financiamiento": [
+        "Privado",
+        "Estado Nacional",
+        "Municipal",
+        "Cuotas de afiliados",
+        "KWS Argentina S.A."
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "energia-y-conectividad/cobertura_gas_natural": {
+    "geometry": "polygon",
+    "categories": {
+      "numero_plano": [
+        "89-06 Rev.117",
+        "89-03 Rev.97",
+        "89-07 Rev.59",
+        "89-04 rev.85",
+        "89.2 Rev.179",
+        "89-01 Rev.188",
+        "89-05 Rev.124",
+        "89-08 Rev.61"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "energia-y-conectividad/red_federal_fibra_optica_nodos": {
+    "geometry": "point",
+    "categories": {
+      "departamen": [
+        "Pergamino",
+        "Rosario",
+        "Constitución",
+        "Ramallo",
+        "Salto",
+        "San Nicolas",
+        "Arrecifes",
+        "Capitán Sarmiento",
+        "Chacabuco",
+        "Colón",
+        "Rojas",
+        "San Pedro",
+        "Junin"
+      ],
+      "provincia": [
+        "Buenos Aires",
+        "Santa Fe"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "energia-y-conectividad/red_federal_fibra_optica_tramos": {
+    "geometry": "line",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "energia-y-conectividad/wifi_espacios_verdes": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "limites/aglomerados_urbanos": {
+    "geometry": "polygon",
+    "categories": {
+      "clasificacion": [
+        "periurbana",
+        "urbano en ruralidad",
+        "urbana"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "limites/areas_localidades": {
+    "geometry": "polygon",
+    "categories": {
+      "tipo": [
+        "pueblo",
+        "ciudad"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "limites/barrios_y_pueblos": {
+    "geometry": "polygon",
+    "categories": {
+      "tipo": [
+        "Abierto",
+        "Pueblo",
+        "Mixto",
+        "Restringido"
+      ],
+      "ordenanza": [
+        "8850-18",
+        "9159-19"
+      ],
+      "distrito": [
+        "norte",
+        "rural",
+        "sur",
+        "este",
+        "oeste",
+        "centro"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Acevedo",
+        "El Socorro (Villa Angélica)",
+        "Fontezuela",
+        "Guerrico",
+        "Juan Andrés de la Peña",
+        "La Violeta",
+        "Manuel Ocampo",
+        "Mariano Alfonzo",
+        "Mariano Benítez",
+        "Pinzón",
+        "Rancagua",
+        "Urquiza (Juan Anchorena)",
+        "Villa San José de Rancagua"
+      ],
+      "seccion": [
+        "1",
+        "4",
+        "2",
+        "3",
+        "3 y 4",
+        "2 y 3"
+      ]
+    },
+    "joins": {},
+    "in_city": false
+  },
+  "limites/circuitos_electorales": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "limites/cpa": {
+    "geometry": "point",
+    "categories": {
+      "pre_tipo": [
+        "BV",
+        "AV",
+        "PJE",
+        "BIS"
+      ],
+      "clase": [
+        "CALLE",
+        "AVENIDA",
+        "RUTA",
+        "PEATONAL",
+        "RESTRINGIDO"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "limites/delegaciones_pueblos": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "limites/localidades": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "pueblo",
+        "paraje",
+        "ciudad"
+      ],
+      "fuente": [
+        "IGN - BAHRA - Municipalidad de Pergamino",
+        "IGN - BAHRA"
+      ],
+      "partido": [
+        "Pergamino",
+        "Villa Constitución",
+        "San Nicolás",
+        "Arrecifes",
+        "Colón",
+        "Rojas",
+        "Salto",
+        "General López",
+        "Ramallo"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "limites/manchas_urbanas_historicas": {
+    "geometry": "polygon",
+    "categories": {
+      "fuente": [
+        "PEP",
+        "IDE"
+      ],
+      "denominacion": [
+        "Pergamino",
+        "La Dormida de Pergamino"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "limites/partido_pergamino": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "limites/zonas_electorales_celp": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "salud/areas_programaticas_salud": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "salud/caps": {
+    "geometry": "point",
+    "categories": {
+      "horario": [
+        "8 a 14",
+        "8 a 16",
+        "8 A 18"
+      ],
+      "tipo": [
+        "caps",
+        "vacunatorio"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Acevedo",
+        "El Socorro (Villa Angélica)",
+        "Fontezuela",
+        "Guerrico",
+        "Juan Andrés de la Peña",
+        "La Violeta",
+        "Manuel Ocampo",
+        "Mariano Alfonzo",
+        "Mariano Benítez",
+        "Pinzón",
+        "Rancagua",
+        "Urquiza (Juan Anchorena)"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "salud/centros_de_salud": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "Instituto",
+        "Clínica",
+        "Terapéutico",
+        "Hospital"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "salud/desfibriladores": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "salud/estaciones_de_salud": {
+    "geometry": "point",
+    "categories": {
+      "localidad": [
+        "Pergamino",
+        "Manuel Ocampo",
+        "Acevedo",
+        "El Socorro",
+        "Fontezuela",
+        "Guerrico",
+        "J A de la Peña",
+        "La Violeta",
+        "Mariano H Alfonzo",
+        "Pinzon",
+        "Rancagua",
+        "Urquiza"
+      ],
+      "actualizacion": [
+        "2020-10-22Z",
+        "2020-12-11Z",
+        "2020-12-21Z",
+        "2021-01-22Z",
+        "2023-01-24Z"
+      ],
+      "fuente": [
+        "Municipalidad de Pergamino",
+        "Imagen aérea 2020",
+        "Imagenes aéreas 2020"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "salud/guardias_emergencias_servicios": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "salud/guardias_medicas": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "seguridad/bomberos": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "seguridad/centros_evacuados": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "seguridad/dependencias_seguridad": {
+    "geometry": "point",
+    "categories": {
+      "localidad": [
+        "Pergamino",
+        "Fontezuela",
+        "Acevedo",
+        "El Socorro",
+        "El Socorro (Villa Alicia)",
+        "Guerrico",
+        "Juan A de la Peña",
+        "La Violeta",
+        "Manuel Ocampo",
+        "Mariano Benitez",
+        "Mariano H Alfonzo",
+        "Pinzon",
+        "Rancagua",
+        "Urquiza"
+      ],
+      "actualizacion": [
+        "2026-05-13Z",
+        "2026-09-22Z"
+      ],
+      "fuente": [
+        "Municipalidad de Pergamino",
+        "SCBA",
+        "Ministerio de Seguridad",
+        "Dataset PBA",
+        "ordenanza 9423-21"
+      ],
+      "ambito": [
+        "seguridad",
+        "justicia"
+      ],
+      "clase": [
+        "destacamento",
+        "juzgado",
+        "oficina administrativa",
+        "asesoria",
+        "comisaria",
+        "delegacion",
+        "camara",
+        "defensoria",
+        "tribunal",
+        "departamento"
+      ],
+      "jurisdiccion": [
+        "provincial",
+        "municipal",
+        "nacion"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "seguridad/zonas_emergencias_y_riesgo": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "seguridad/zonas_seguridad": {
+    "geometry": "polygon",
+    "categories": {
+      "comisaria": [
+        "1ra",
+        "2da",
+        "3ra"
+      ],
+      "zona": [
+        "1A",
+        "1B",
+        "2A",
+        "2B",
+        "3A",
+        "3B"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/agencias_gubernamentales": {
+    "geometry": "point",
+    "categories": {
+      "reparticio": [
+        "provincial",
+        "nacional"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/areas_programaticas_desarrollo_social": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/barrido_y_limpieza": {
+    "geometry": "polygon",
+    "categories": {
+      "zona": [
+        "sur",
+        "centro",
+        "este",
+        "norte",
+        "oeste",
+        "Sur"
+      ],
+      "empresa": [
+        "La Esperanza",
+        "Santísima trinidad",
+        "ENTRE SRL",
+        "San Cayetano",
+        "Cooperativa Centenario"
+      ],
+      "frecuencia": [
+        "Lunes y jueves",
+        "Martes y viernes",
+        "Miercoles y viernes",
+        "Lunes a sabados"
+      ],
+      "expediente_electronico": [
+        "2026 107260 SSP",
+        "2026 107871 SSP",
+        "2026 107383 SSP",
+        "2026 108782 SSP"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/bocas_pago_tasas": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "Cobro Express",
+        "Pronto Pago",
+        "Pago Facil",
+        "Provincia NET",
+        "Banco",
+        "Entidad",
+        "Rapi Pago"
+      ],
+      "actualizacion": [
+        "2019-11-29Z",
+        "2020-04-13Z"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/centros_de_desarrollo_comunitario": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/contenedores_basura_reciclaje": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "contenedor movil",
+        "contenedor fijo"
+      ],
+      "color": [
+        "verde",
+        "naranja",
+        "amarillo",
+        "azul"
+      ],
+      "fuente": [
+        "Higiene Urbana",
+        "imágenes aereas 2020",
+        "imágenes aereas 2022"
+      ],
+      "localidad": [
+        "Pergamino",
+        "El Socorro (Villa Angélica)",
+        "La Violeta",
+        "Mariano Alfonzo",
+        "Acevedo",
+        "Juan Andrés de la Peña",
+        "Guerrico",
+        "Fontezuela",
+        "Manuel Ocampo",
+        "Mariano Benítez",
+        "Pinzón",
+        "Rancagua",
+        "Urquiza (Juan Anchorena)"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/dependencias_municipales": {
+    "geometry": "point",
+    "categories": {
+      "area": [
+        "Secretaria de Desarrollo Social",
+        "Secretaria Privada",
+        "Secretaria de Hacienda y Finanzas",
+        "Secretaria de Gobierno",
+        "Secretaria de Servicios Publicos",
+        "Secretaria de Modernizacion, Innovacion y Tecnologia",
+        "Honorable Concejo Deliberante",
+        "Secretaria de Seguridad",
+        "Secretaria de Desarrollo Urbano",
+        "Secretaria de Produccion y Desarrollo",
+        "Conmutador",
+        "Secretaria de Salud",
+        "Secretaria de Tierras, Vivienda y Obra Publica Social",
+        "Secretaria de Educacion"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/desarrollo_social": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/desecho_pilas_usadas": {
+    "geometry": "point",
+    "categories": {
+      "activo": [
+        "no",
+        "si"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/proyectos_infraestructura": {
+    "geometry": "line",
+    "categories": {
+      "clase": [
+        "CALLE",
+        "RESTRINGIDO",
+        "CAMINO",
+        "AVENIDA",
+        "RUTA",
+        "PUENTE",
+        "ENLACE",
+        "ACCESO",
+        "PEATONAL",
+        "COLECTORA",
+        "AU",
+        "FFCC-PEATONAL",
+        "PUENTE-PEATONAL"
+      ],
+      "material_calzada": [
+        "tierra",
+        "asfalto",
+        "hormigon",
+        "escoriado",
+        "adoquinado",
+        "metal"
+      ],
+      "cordon_cuneta": [
+        "ambos",
+        "ninguno",
+        "no_corresponde",
+        "par",
+        "impar"
+      ],
+      "proyecto_infraestructura": [
+        "asfalto",
+        "cordon",
+        "cordon_y_asfalto"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/puntos_clickeados": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/recoleccion_residuos_domiciliarios": {
+    "geometry": "polygon",
+    "categories": {
+      "turno": [
+        "dia",
+        "noche"
+      ],
+      "lunes": [
+        "1",
+        "0",
+        "si"
+      ],
+      "martes": [
+        "0",
+        "1",
+        "si"
+      ],
+      "miercoles": [
+        "1",
+        "0",
+        "si"
+      ],
+      "jueves": [
+        "0",
+        "1",
+        "si"
+      ],
+      "viernes": [
+        "1",
+        "0",
+        "si"
+      ],
+      "sabado": [
+        "0",
+        "1",
+        "si"
+      ],
+      "horario": [
+        "05 a 13",
+        "13 a 21",
+        "21 a 04"
+      ],
+      "etiqueta": [
+        "Lu, Mi, Vi",
+        "Ma, Ju, Sa",
+        "Lu, Ju",
+        "Ma, Vi",
+        "Mi, Sa",
+        "Lu, Ma, Mi, Ju, Vi, Sa",
+        "Ma, Ju, Do",
+        "Lu, Ma, Mi, Ju, Vi, Do"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/recoleccion_residuos_voluminosos": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-municipales/sanitarios_publicos": {
+    "geometry": "point",
+    "categories": {
+      "horario": [
+        "13h a 19h",
+        "7h a 21h"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/agua_lineas": {
+    "geometry": "line",
+    "categories": {
+      "material": [
+        "PVC",
+        "FF",
+        "AC"
+      ],
+      "ubicacion": [
+        "CALLE",
+        "VEREDA",
+        "PREDIO"
+      ],
+      "fin_tapon": [
+        "SI",
+        "NO"
+      ],
+      "clase": [
+        "DOMICILIARIA",
+        "CABECERA",
+        "IMPULSION",
+        "DISTRIBUCION"
+      ],
+      "sistema": [
+        "NORTE",
+        "SUR",
+        "KENNEDY",
+        "VILLA ALICIA",
+        "QUINTA MASTRANGELO",
+        "CENTRO",
+        "CENTENARIO",
+        "LA GUARIDA"
+      ],
+      "antig": [
+        "2017",
+        "2022",
+        "2018",
+        "2023",
+        "2024",
+        "1994",
+        "2025",
+        "2021",
+        "2016",
+        "2015",
+        "2026",
+        "2019",
+        "2020"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/agua_nodos": {
+    "geometry": "point",
+    "categories": {
+      "material": [
+        "FF",
+        "PVC",
+        "AC"
+      ],
+      "ubicacion": [
+        "CALLE",
+        "VEREDA",
+        "PREDIO"
+      ],
+      "clase": [
+        "NODO",
+        "VALVULA",
+        "HIDRANTE",
+        "TAPON",
+        "DESAGUE",
+        "CONEXION",
+        "TANQUE ELEVADO",
+        "BOMBA",
+        "CISTERNA"
+      ],
+      "tipo_valv": [
+        "ESCLUSA",
+        "TE",
+        "CRUZ",
+        "CODO",
+        "EMPALME",
+        "REDUCCION"
+      ],
+      "sistema": [
+        "NORTE",
+        "SUR",
+        "KENNEDY",
+        "VILLA ALICIA",
+        "512",
+        "QUINTA MASTRANGELO",
+        "LA GUARIDA"
+      ],
+      "condicion": [
+        "VISIBLE",
+        "ANULADO"
+      ],
+      "conexion": [
+        "CORTA",
+        "LARGA",
+        "VIVIENDA",
+        "CANILLA"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/cloacas_lineas": {
+    "geometry": "line",
+    "categories": {
+      "material": [
+        "PVC",
+        "HS",
+        "AC"
+      ],
+      "ubicacion": [
+        "VEREDA",
+        "CENTRO CALLE",
+        "CALLE",
+        "PREDIO"
+      ],
+      "clase": [
+        "DOMICILIARIO",
+        "MAXIMA"
+      ],
+      "ventila": [
+        "NO",
+        "SI"
+      ],
+      "sistema": [
+        "TERCERA",
+        "SEGUNDA",
+        "PRIMERA",
+        "PARQUE_INDUSTRIAL"
+      ],
+      "condicion": [
+        "FUERA DE SERVICIO",
+        "0"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/cloacas_nodos": {
+    "geometry": "point",
+    "categories": {
+      "ubicacion": [
+        "CENTRO DE CALLE",
+        "VEREDA",
+        "ESQUINA EN CALLE",
+        "ESQUINA VEREDA",
+        "CALLE",
+        "PREDIO"
+      ],
+      "clase": [
+        "BOCA DE REGISTRO",
+        "CAMARA DE LIMPIEZA",
+        "CONEXION",
+        "EMPALME"
+      ],
+      "mat_tapa": [
+        "FUNDICION",
+        "CEMENTO"
+      ],
+      "material": [
+        "MAMPOSTERIA",
+        "-"
+      ],
+      "tipo_tapa": [
+        "CIEGA",
+        "VENTILADA"
+      ],
+      "condicion": [
+        "VISIBLE",
+        "TAPA TAPADA"
+      ],
+      "sistema": [
+        "TERCERA",
+        "SEGUNDA",
+        "PRIMERA",
+        "PARQUE_INDUSTRIAL"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/cobertura_agua": {
+    "geometry": "polygon",
+    "categories": {
+      "zona": [
+        "Norte",
+        "Sur",
+        "Kennedy",
+        "Villa Alicia",
+        "Quinta Mastrangelo"
+      ],
+      "sistema": [
+        "Distribución con bombas de impulsión",
+        "Central con tanque elevado"
+      ],
+      "gestion": [
+        "entre 2015 y 2019",
+        "entre 2023 y 2027",
+        "entre 2019 y 2023",
+        "Anterior a 2015"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/cobertura_cloacas": {
+    "geometry": "polygon",
+    "categories": {
+      "colectora": [
+        "3ra",
+        "2da",
+        "1ra",
+        "Industrial"
+      ],
+      "ramal": [
+        "Principal",
+        "Norte",
+        "Sur",
+        "Oeste",
+        "Kennedy",
+        "Nexo Sur",
+        "Nexo Norte",
+        "Centenario",
+        "Villa Gral San Martín",
+        "del Lago"
+      ],
+      "gestion": [
+        "entre 2015 y 2019",
+        "Anterior a 2015",
+        "entre 2019 y 2023",
+        "entre 2023 y 2027"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/codigo_reparto_facturacion": {
+    "geometry": "line",
+    "categories": {
+      "pre_tipo": [
+        "AV",
+        "BV",
+        "AU",
+        "PJE",
+        "PASEO"
+      ],
+      "pre_dir": [
+        "BIS",
+        "AV"
+      ],
+      "clase": [
+        "CALLE",
+        "RESTRINGIDO",
+        "CAMINO",
+        "AVENIDA",
+        "RUTA",
+        "PUENTE",
+        "ENLACE",
+        "ACCESO",
+        "PEATONAL",
+        "COLECTORA",
+        "AU",
+        "FFCC-PEATONAL",
+        "PUENTE-PEATONAL"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/coeficientes_zonales_doss": {
+    "geometry": "polygon",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/compuertas_pluviales": {
+    "geometry": "point",
+    "categories": {
+      "forma": [
+        "circular",
+        "cuadrada"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/estaciones_de_bombeo": {
+    "geometry": "point",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/medidores_agua": {
+    "geometry": "polygon",
+    "categories": {
+      "etapa": [
+        "Primera etapa",
+        "Plan Piloto de Agua Sur",
+        "Segunda etapa",
+        "Laguna del Virrey"
+      ],
+      "etiqueta": [
+        "1ra Etapa",
+        "2da Etapa",
+        "PPAS",
+        "LDV"
+      ],
+      "fecha": [
+        "2021/2022",
+        "1998",
+        "2022/2023",
+        "2013"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/pluviales": {
+    "geometry": "line",
+    "categories": {
+      "tipo": [
+        "ducto",
+        "canal",
+        "natural"
+      ],
+      "forma": [
+        "irregular",
+        "circular",
+        "rectangular",
+        "trapecio",
+        "bobeda"
+      ],
+      "material": [
+        "natural",
+        "cemento",
+        "hormigon",
+        "PVC"
+      ],
+      "conducto_cerrado": [
+        "si",
+        "no"
+      ],
+      "funcion": [
+        "conducto",
+        "conducto_sumidero",
+        "egreso",
+        "bombeo"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/pozos_agua_doss": {
+    "geometry": "point",
+    "categories": {
+      "estado": [
+        "funcionamiento",
+        "parado",
+        "anulado",
+        "cegado",
+        "proyecto",
+        "construccion"
+      ],
+      "actualizacion_estado": [
+        "2020-10-27Z",
+        "2025-05-30Z",
+        "2026-02-09Z",
+        "2023-12-28Z",
+        "2025-01-13Z",
+        "2025-05-29Z"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/sumideros": {
+    "geometry": "point",
+    "categories": {
+      "tapa_acceso": [
+        "visible",
+        "no_visible"
+      ],
+      "reja": [
+        "no",
+        "si"
+      ],
+      "vereda": [
+        "par",
+        "impar"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "servicios-sanitarios/zonas_facturacion": {
+    "geometry": "polygon",
+    "categories": {
+      "zona": [
+        "Zona 3",
+        "Zona 6",
+        "Zona 5",
+        "Zona 2",
+        "Zona 4",
+        "Zona 7",
+        "Zona 3 Delegaciones",
+        "Zona 1 Delegaciones",
+        "Zona 2 Delegaciones",
+        "Zona 4 Delegaciones",
+        "Zona 1"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "transporte/aeropuertos": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "Aeródromo",
+        "Helipuerto"
+      ],
+      "condicion": [
+        "PRIVADO",
+        "PUBLICO"
+      ],
+      "control": [
+        "NOCONTROL",
+        "AERADIO"
+      ],
+      "uso": [
+        "CIVIL",
+        "AEROAPP",
+        "ULM"
+      ],
+      "sna": [
+        "NO",
+        "SI"
+      ],
+      "provincia": [
+        "BUENOS AIRES",
+        "SANTA FÉ"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "transporte/cicloturismo_rural": {
+    "geometry": "line",
+    "categories": {
+      "tramo": [
+        "ida y vuelta",
+        "alternativo",
+        "ida",
+        "vuelta"
+      ],
+      "dificultad": [
+        "alta",
+        "baja",
+        "media"
+      ],
+      "tipo_linea": [
+        "solid",
+        "dot"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "transporte/colectivos_interurbanos": {
+    "geometry": "line",
+    "categories": {
+      "empresa": [
+        "EVHSA",
+        "13 de Noviembre",
+        "La Nueva Perla",
+        "El Acuerdo"
+      ],
+      "ruta": [
+        "Conesa-Pergamino",
+        "Pergamino-Conesa",
+        "Ruta 32",
+        "Ruta 188",
+        "Ruta 8",
+        "Acceso Benitez",
+        "Bv. Colón"
+      ],
+      "linea": [
+        "227",
+        "345",
+        "Linea 2",
+        "330",
+        "368"
+      ],
+      "recorrido": [
+        "Vuelta",
+        "Ida",
+        "Ida-alternativa",
+        "Vuelta-alternativa"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "transporte/colectivos_urbanos": {
+    "geometry": "line",
+    "categories": {
+      "recorrido": [
+        "IDA",
+        "VUELTA"
+      ],
+      "ramal": [
+        "D",
+        "A",
+        "C",
+        "B",
+        "E",
+        "Parque Industrial"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "transporte/estacionamiento_motos_bicicletas": {
+    "geometry": "point",
+    "categories": {
+      "delimitador": [
+        "bolardos plasticos",
+        "pintura en pavimento",
+        "cartel con base de cemento",
+        "no"
+      ],
+      "atador": [
+        "no",
+        "si"
+      ],
+      "actualizacion": [
+        "2025-07-04Z",
+        "2025-02-19Z",
+        "2025-02-18Z",
+        "2025-02-20Z",
+        "2025-03-05Z",
+        "2023-04-13Z",
+        "2023-09-20Z",
+        "2025-01-20Z",
+        "2025-02-21Z",
+        "2025-09-03Z",
+        "2025-11-20Z",
+        "2025-12-22Z",
+        "2025-12-23Z",
+        "2026-03-11Z"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "transporte/estacionamiento_nocturno": {
+    "geometry": "line",
+    "categories": {
+      "est_medido": [
+        "centro",
+        "micro",
+        "macro"
+      ],
+      "material_calzada": [
+        "hormigon",
+        "asfalto"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "transporte/estacionamiento_privado": {
+    "geometry": "point",
+    "categories": {
+      "horario": [
+        "24hs",
+        "8 a 22",
+        "restringido"
+      ],
+      "tipo": [
+        "temporal",
+        "permanente",
+        "restringido",
+        "temporal-permanente",
+        "estacionamiento"
+      ],
+      "arancelado": [
+        "pago",
+        "gratuito para clientes",
+        "gratuito"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "transporte/ferrocarriles": {
+    "geometry": "line",
+    "categories": {
+      "trocha": [
+        "Ancha  (1676 Mm)",
+        "Angosta (1000 Mm)"
+      ],
+      "provincia": [
+        "Buenos Aires",
+        "Santa Fe"
+      ],
+      "etiqueta": [
+        "General Bartolome Mitre",
+        "General Belgrano",
+        "General San Martin"
+      ],
+      "estado": [
+        "desuso",
+        "activa"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "transporte/paradas_de_colectivo": {
+    "geometry": "point",
+    "categories": {
+      "fuente": [
+        "La Nueva Perla SA y ordenanza 9620-22",
+        "Imagen satelital"
+      ],
+      "refugio": [
+        "no",
+        "si"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "transporte/remis_taxi": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "remis",
+        "taxi"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "transporte/sube": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "KIOSCO",
+        "COMERCIO",
+        "ALMACEN-AUTOSERVICIO",
+        "ESTACIÓN DE SERVICIO",
+        "LOCUTORIO",
+        "SUPERMERCADO",
+        "CIBER",
+        "OFICINA DE LICENCIAS",
+        "TERMINAL AUTOMATICA",
+        "TERMINAL DE OMNIBUS"
+      ],
+      "conseguir": [
+        "NO",
+        "SI"
+      ],
+      "cargar": [
+        "SI",
+        "NO"
+      ],
+      "registrar": [
+        "NO",
+        "SI"
+      ],
+      "acreditar": [
+        "NO",
+        "SI"
+      ],
+      "gestion": [
+        "NO",
+        "SI"
+      ],
+      "social": [
+        "NO",
+        "SI"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "transporte/vuelta_partido": {
+    "geometry": "line",
+    "categories": {},
+    "joins": {},
+    "in_city": true
+  },
+  "vialidad/alcantarillas_vialidad": {
+    "geometry": "point",
+    "categories": {
+      "clase_estr": [
+        "alc. losa separada",
+        "losa",
+        "alc. caño circular"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "vialidad/callejero": {
+    "geometry": "line",
+    "categories": {
+      "pre_tipo": [
+        "AV",
+        "BV",
+        "AU",
+        "PJE",
+        "PASEO"
+      ],
+      "pre_dir": [
+        "BIS",
+        "AV"
+      ],
+      "clase": [
+        "CALLE",
+        "RESTRINGIDO",
+        "CAMINO",
+        "AVENIDA",
+        "RUTA",
+        "PUENTE",
+        "ENLACE",
+        "ACCESO",
+        "PEATONAL",
+        "COLECTORA",
+        "AU",
+        "FFCC-PEATONAL",
+        "PUENTE-PEATONAL"
+      ],
+      "zona_barri": [
+        "SUR",
+        "CENTRO",
+        "ESTE",
+        "OESTE",
+        "NORTE",
+        "P PERGAMINENSES"
+      ],
+      "est_medido": [
+        "centro",
+        "micro",
+        "macro",
+        "macro_proyecto"
+      ],
+      "cc_empresa": [
+        "Argentina Hace",
+        "SANTA CELIA CONSTRUCCIONES S.R.L.",
+        "FIM",
+        "CELP",
+        "SANTA CELIA CONSTRUCCIONES S.R.L",
+        "AMOREBLA S.A.",
+        "COOP. DE TRABAJO SAN FRANCISCO SOLANO LIMITADA",
+        "Amorebla S.A.",
+        "COOP. DE TRABAJO SAN FRANCISCO SOLANO",
+        "D-1740/2018",
+        "SANTA CELIA CONSUTRCCIONES S.R.L."
+      ],
+      "cc_expediente": [
+        "D-1208/2018",
+        "D-822/2018",
+        "Licitación Provincia",
+        "D-1740/2018",
+        "Licitación provincia",
+        "D/10211/2017"
+      ],
+      "pav_empresa": [
+        "CELP DIVISION VIAL",
+        "CELP Division Vial",
+        "3_2024"
+      ],
+      "pav_expediente": [
+        "8525-16",
+        "9892-17",
+        "D-5101/2018"
+      ],
+      "restriccion_estacionamiento": [
+        "solo impar - 00:00 a 24:00",
+        "total - 00:00 a 24:00",
+        "total - 08:00 a 20:00",
+        "impar - 00:00 a 24:00",
+        "solo par - 00:00 a 24:00"
+      ],
+      "tipo_vereda_par": [
+        "Verde",
+        "Mixta",
+        "sin_dato",
+        "Embaldosada",
+        "no_corresponde"
+      ],
+      "tipo_vereda_impar": [
+        "Verde",
+        "Mixta",
+        "sin_dato",
+        "Embaldosada",
+        "no_corresponde"
+      ],
+      "cob_cloacas_par": [
+        "no_corresponde",
+        "total",
+        "duda",
+        "sin_cobertura",
+        "limite",
+        "sin_dato",
+        "parcial"
+      ],
+      "cob_cloacas_impar": [
+        "no_corresponde",
+        "total",
+        "duda",
+        "sin_cobertura",
+        "limite",
+        "sin_dato",
+        "parcial"
+      ],
+      "cob_agua_par": [
+        "no_corresponde",
+        "total",
+        "duda",
+        "sin_cobertura",
+        "limite",
+        "sin_dato",
+        "parcial"
+      ],
+      "cob_agua_impar": [
+        "no_corresponde",
+        "total",
+        "duda",
+        "sin_cobertura",
+        "limite",
+        "sin_dato",
+        "parcial"
+      ],
+      "lado_ciclovia": [
+        "no",
+        "par",
+        "impar"
+      ],
+      "transitable": [
+        "si",
+        "no"
+      ],
+      "material_calzada": [
+        "tierra",
+        "asfalto",
+        "hormigon",
+        "escoriado",
+        "adoquinado",
+        "metal"
+      ],
+      "cordon_cuneta": [
+        "ambos",
+        "ninguno",
+        "no_corresponde",
+        "par",
+        "impar"
+      ],
+      "proyecto_infraestructura": [
+        "asfalto",
+        "cordon",
+        "cordon_y_asfalto"
+      ],
+      "arbolado": [
+        "ambos",
+        "ninguno",
+        "impar",
+        "par",
+        "no_corresponde"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "vialidad/camaras_y_radares": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "cámara",
+        "radar",
+        "totem"
+      ],
+      "actualizacion": [
+        "2021-06-15Z",
+        "2026-09-21Z",
+        "2024-05-15Z"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Guerrico"
+      ],
+      "exceso_velocidad": [
+        "si",
+        "no"
+      ],
+      "semaforo_rojo": [
+        "no",
+        "si"
+      ],
+      "senda_peatonal": [
+        "no",
+        "si"
+      ],
+      "sentido": [
+        "ambos",
+        "descendente",
+        "ingreso",
+        "ascendente",
+        "único"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "vialidad/carteles_viales": {
+    "geometry": "point",
+    "categories": {
+      "fuente": [
+        "vista de calle",
+        "Imagen aérea 2022",
+        "DSIG"
+      ],
+      "instalado": [
+        "si",
+        "no"
+      ],
+      "estado": [
+        "incompleto",
+        "bueno",
+        "malo"
+      ],
+      "verificar": [
+        "no",
+        "si"
+      ],
+      "categoria": [
+        "informativa",
+        "prescriptiva",
+        "preventiva"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Urquiza",
+        "Fontezuela"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "vialidad/comisiones_caminos_rurales": {
+    "geometry": "polygon",
+    "categories": {
+      "comision": [
+        "El Socorro",
+        "La Violeta",
+        "M H Alfonzo",
+        "Pinzon",
+        "Rancagua",
+        "Acevedo",
+        "Fontezuela",
+        "Guerrico",
+        "Manuel Ocampo",
+        "Mariano Benitez",
+        "Urquiza",
+        "Francisco Ayerza",
+        "J A de la Pena"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "vialidad/cordon_cuneta": {
+    "geometry": "line",
+    "categories": {
+      "pre_tipo": [
+        "AV",
+        "BV",
+        "AU",
+        "PJE",
+        "PASEO"
+      ],
+      "pre_dir": [
+        "BIS",
+        "AV"
+      ],
+      "clase": [
+        "CALLE",
+        "RESTRINGIDO",
+        "CAMINO",
+        "AVENIDA",
+        "RUTA",
+        "PUENTE",
+        "ENLACE",
+        "ACCESO",
+        "PEATONAL",
+        "COLECTORA",
+        "AU",
+        "FFCC-PEATONAL",
+        "PUENTE-PEATONAL"
+      ],
+      "zona_barri": [
+        "SUR",
+        "CENTRO",
+        "ESTE",
+        "OESTE",
+        "NORTE",
+        "P PERGAMINENSES"
+      ],
+      "est_medido": [
+        "centro",
+        "micro",
+        "macro",
+        "macro_proyecto"
+      ],
+      "cc_empresa": [
+        "Argentina Hace",
+        "SANTA CELIA CONSTRUCCIONES S.R.L.",
+        "FIM",
+        "CELP",
+        "SANTA CELIA CONSTRUCCIONES S.R.L",
+        "AMOREBLA S.A.",
+        "COOP. DE TRABAJO SAN FRANCISCO SOLANO LIMITADA",
+        "Amorebla S.A.",
+        "COOP. DE TRABAJO SAN FRANCISCO SOLANO",
+        "D-1740/2018",
+        "SANTA CELIA CONSUTRCCIONES S.R.L."
+      ],
+      "cc_expediente": [
+        "D-1208/2018",
+        "D-822/2018",
+        "Licitación Provincia",
+        "D-1740/2018",
+        "Licitación provincia",
+        "D/10211/2017"
+      ],
+      "pav_empresa": [
+        "CELP DIVISION VIAL",
+        "CELP Division Vial",
+        "3_2024"
+      ],
+      "pav_expediente": [
+        "8525-16",
+        "9892-17",
+        "D-5101/2018"
+      ],
+      "restriccion_estacionamiento": [
+        "solo impar - 00:00 a 24:00",
+        "total - 00:00 a 24:00",
+        "total - 08:00 a 20:00",
+        "impar - 00:00 a 24:00",
+        "solo par - 00:00 a 24:00"
+      ],
+      "tipo_vereda_par": [
+        "Verde",
+        "Mixta",
+        "sin_dato",
+        "Embaldosada",
+        "no_corresponde"
+      ],
+      "tipo_vereda_impar": [
+        "Verde",
+        "Mixta",
+        "sin_dato",
+        "Embaldosada",
+        "no_corresponde"
+      ],
+      "cob_cloacas_par": [
+        "no_corresponde",
+        "total",
+        "duda",
+        "sin_cobertura",
+        "limite",
+        "sin_dato",
+        "parcial"
+      ],
+      "cob_cloacas_impar": [
+        "no_corresponde",
+        "total",
+        "duda",
+        "sin_cobertura",
+        "limite",
+        "sin_dato",
+        "parcial"
+      ],
+      "cob_agua_par": [
+        "no_corresponde",
+        "total",
+        "duda",
+        "sin_cobertura",
+        "limite",
+        "sin_dato",
+        "parcial"
+      ],
+      "cob_agua_impar": [
+        "no_corresponde",
+        "total",
+        "duda",
+        "sin_cobertura",
+        "limite",
+        "sin_dato",
+        "parcial"
+      ],
+      "lado_ciclovia": [
+        "no",
+        "par",
+        "impar"
+      ],
+      "transitable": [
+        "si",
+        "no"
+      ],
+      "material_calzada": [
+        "tierra",
+        "asfalto",
+        "hormigon",
+        "escoriado",
+        "adoquinado",
+        "metal"
+      ],
+      "cordon_cuneta": [
+        "ambos",
+        "ninguno",
+        "no_corresponde",
+        "par",
+        "impar"
+      ],
+      "proyecto_infraestructura": [
+        "asfalto",
+        "cordon",
+        "cordon_y_asfalto"
+      ],
+      "arbolado": [
+        "ambos",
+        "ninguno",
+        "impar",
+        "par",
+        "no_corresponde"
+      ]
+    },
+    "joins": {
+      "id_calle": "vialidad/callejero"
+    },
+    "in_city": true
+  },
+  "vialidad/luminarias": {
+    "geometry": "point",
+    "categories": {
+      "lado": [
+        "Impar",
+        "Par",
+        "Centro"
+      ],
+      "tipo_vereda": [
+        "Verde",
+        "Mixta o ajardinada",
+        "Embaldosada"
+      ],
+      "arboles": [
+        "Si",
+        "No"
+      ],
+      "soporte_luminaria": [
+        "Columna de caño BAJA",
+        "Columna de caño MEDIA",
+        "Columna de madera con brazo",
+        "Columna de caño ALTA",
+        "Paleta BAJA adosada a caño",
+        "Colgante",
+        "Columna de caño extra BAJA"
+      ],
+      "tipo_lampara": [
+        "LED",
+        "SODIO",
+        "ninguna",
+        "sin datos"
+      ],
+      "fuente": [
+        "Control de Gestión",
+        "Imagen aerea 2022",
+        "Imagen aerea 2020",
+        "Delegación Pinzon",
+        "Delegación Alfonso",
+        "Delegación Guerrico",
+        "CELP",
+        "Delegación Acevedo",
+        "Desarrollo Urbano",
+        "Delegación La Violeta"
+      ],
+      "recambio_led": [
+        "ejecutado_2016-2020",
+        "licitado_2022",
+        "licitado_2024",
+        "ejecutado_2022",
+        "ejecutado_2021",
+        "licitado_2025"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Manuel Ocampo",
+        "El Socorro (Villa Angélica)",
+        "Alfonzo",
+        "Urquiza",
+        "Acevedo",
+        "Guerrico",
+        "La Violeta",
+        "Fontezuela",
+        "Rancagua",
+        "Juan Andrés de la Peña",
+        "Pinzon",
+        "Mariano Benítez",
+        "Villa San José de rancagua",
+        "Ayerza"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "vialidad/material_de_calzada": {
+    "geometry": "line",
+    "categories": {
+      "pre_tipo": [
+        "AV",
+        "BV",
+        "AU",
+        "PJE",
+        "PASEO"
+      ],
+      "pre_dir": [
+        "BIS",
+        "AV"
+      ],
+      "clase": [
+        "CALLE",
+        "RESTRINGIDO",
+        "CAMINO",
+        "AVENIDA",
+        "RUTA",
+        "PUENTE",
+        "ENLACE",
+        "ACCESO",
+        "PEATONAL",
+        "COLECTORA",
+        "AU",
+        "FFCC-PEATONAL",
+        "PUENTE-PEATONAL"
+      ],
+      "zona_barri": [
+        "SUR",
+        "CENTRO",
+        "ESTE",
+        "OESTE",
+        "NORTE",
+        "P PERGAMINENSES"
+      ],
+      "est_medido": [
+        "centro",
+        "micro",
+        "macro",
+        "macro_proyecto"
+      ],
+      "cc_empresa": [
+        "Argentina Hace",
+        "SANTA CELIA CONSTRUCCIONES S.R.L.",
+        "FIM",
+        "CELP",
+        "SANTA CELIA CONSTRUCCIONES S.R.L",
+        "AMOREBLA S.A.",
+        "COOP. DE TRABAJO SAN FRANCISCO SOLANO LIMITADA",
+        "Amorebla S.A.",
+        "COOP. DE TRABAJO SAN FRANCISCO SOLANO",
+        "D-1740/2018",
+        "SANTA CELIA CONSUTRCCIONES S.R.L."
+      ],
+      "cc_expediente": [
+        "D-1208/2018",
+        "D-822/2018",
+        "Licitación Provincia",
+        "D-1740/2018",
+        "Licitación provincia",
+        "D/10211/2017"
+      ],
+      "pav_empresa": [
+        "CELP DIVISION VIAL",
+        "CELP Division Vial",
+        "3_2024"
+      ],
+      "pav_expediente": [
+        "8525-16",
+        "9892-17",
+        "D-5101/2018"
+      ],
+      "restriccion_estacionamiento": [
+        "solo impar - 00:00 a 24:00",
+        "total - 00:00 a 24:00",
+        "total - 08:00 a 20:00",
+        "impar - 00:00 a 24:00",
+        "solo par - 00:00 a 24:00"
+      ],
+      "tipo_vereda_par": [
+        "Verde",
+        "Mixta",
+        "sin_dato",
+        "Embaldosada",
+        "no_corresponde"
+      ],
+      "tipo_vereda_impar": [
+        "Verde",
+        "Mixta",
+        "sin_dato",
+        "Embaldosada",
+        "no_corresponde"
+      ],
+      "cob_cloacas_par": [
+        "no_corresponde",
+        "total",
+        "duda",
+        "sin_cobertura",
+        "limite",
+        "sin_dato",
+        "parcial"
+      ],
+      "cob_cloacas_impar": [
+        "no_corresponde",
+        "total",
+        "duda",
+        "sin_cobertura",
+        "limite",
+        "sin_dato",
+        "parcial"
+      ],
+      "cob_agua_par": [
+        "no_corresponde",
+        "total",
+        "duda",
+        "sin_cobertura",
+        "limite",
+        "sin_dato",
+        "parcial"
+      ],
+      "cob_agua_impar": [
+        "no_corresponde",
+        "total",
+        "duda",
+        "sin_cobertura",
+        "limite",
+        "sin_dato",
+        "parcial"
+      ],
+      "lado_ciclovia": [
+        "no",
+        "par",
+        "impar"
+      ],
+      "transitable": [
+        "si",
+        "no"
+      ],
+      "material_calzada": [
+        "tierra",
+        "asfalto",
+        "hormigon",
+        "escoriado",
+        "adoquinado",
+        "metal"
+      ],
+      "cordon_cuneta": [
+        "ambos",
+        "ninguno",
+        "no_corresponde",
+        "par",
+        "impar"
+      ],
+      "proyecto_infraestructura": [
+        "asfalto",
+        "cordon",
+        "cordon_y_asfalto"
+      ],
+      "arbolado": [
+        "ambos",
+        "ninguno",
+        "impar",
+        "par",
+        "no_corresponde"
+      ]
+    },
+    "joins": {
+      "id_calle": "vialidad/callejero"
+    },
+    "in_city": true
+  },
+  "vialidad/progresivas_rutas": {
+    "geometry": "point",
+    "categories": {
+      "ruta": [
+        "32",
+        "AU8",
+        "8",
+        "188",
+        "178",
+        "51",
+        "18"
+      ],
+      "tipo": [
+        "mojon",
+        "cartel",
+        "SOS"
+      ],
+      "fuente": [
+        "IDERA",
+        "Municipalidad",
+        "Imagen aérea"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "vialidad/puntos_fijos": {
+    "geometry": "point",
+    "categories": {
+      "ente": [
+        "Geodesia",
+        "DOSS"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "vialidad/rampas_acceso_veredas": {
+    "geometry": "point",
+    "categories": {
+      "estado": [
+        "bueno",
+        "regular",
+        "malo"
+      ],
+      "organismo": [
+        "Consejo Municipal del Discapacitado",
+        "dirección de Infraestructura",
+        "particular"
+      ],
+      "baranda": [
+        "no",
+        "si"
+      ],
+      "tipo": [
+        "premoldeado",
+        "verde",
+        "pavimento",
+        "baldosa"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Acevedo",
+        "Mariano ALfonzo",
+        "El Socorro",
+        "Manuel Ocampo",
+        "La Violeta",
+        "Guerrico",
+        "Rancagua",
+        "Urquiza (Juan Anchorena)"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "vialidad/red_nivelacion_ign_precision": {
+    "geometry": "point",
+    "categories": {
+      "precision": [
+        "500 m",
+        "15 m",
+        "0.05 m"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "vialidad/reductores_de_velocidad": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "cemento",
+        "escombro",
+        "plastico"
+      ],
+      "localidad": [
+        "Pergamino",
+        "Fontezuela",
+        "El Socorro (Villa Angélica)",
+        "Mariano Alfonzo",
+        "Juan Andrés de la Peña",
+        "Manuel Ocampo",
+        "Rancagua",
+        "Acevedo",
+        "La Violeta"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  },
+  "vialidad/semaforos": {
+    "geometry": "point",
+    "categories": {
+      "tipo": [
+        "vehicular",
+        "peatonal",
+        "intermitente"
+      ],
+      "vehicular": [
+        "si",
+        "no"
+      ],
+      "peatonal": [
+        "no",
+        "si"
+      ],
+      "actualizacion": [
+        "enero 2020",
+        "octubre 2025",
+        "septiembre 2026",
+        "septiembre 2022",
+        "enero 2024",
+        "noviembre 2023",
+        "enero 2023",
+        "enero 2022",
+        "noviembre 2022",
+        "noviembre 2024",
+        "junio 2026"
+      ]
+    },
+    "joins": {},
+    "in_city": true
+  }
+}

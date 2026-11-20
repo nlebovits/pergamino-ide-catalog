@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_circuitos_energeticos.pmtiles",
+      "url": "pmtiles://../circuitos_energeticos.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_circuitos_energeticos",
+      "source-layer": "circuitos_energeticos",
       "paint": {
         "circle-color": [
           "match",
@@ -30,7 +30,20 @@
           "#e64718",
           "#cccccc"
         ],
-        "circle-radius": 18.0,
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "sendero"
+          ],
+          "energias_renovables",
+          9.0,
+          "recorrido_de_actores",
+          9.0,
+          "recorrido_historico",
+          9.0,
+          2.5
+        ],
         "circle-opacity": 1.0
       }
     },
@@ -38,13 +51,13 @@
       "id": "categorical-circle-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_circuitos_energeticos",
+      "source-layer": "circuitos_energeticos",
       "layout": {
         "text-field": [
           "get",
           "identificador"
         ],
-        "text-size": 8.0,
+        "text-size": 10.0,
         "text-anchor": "center",
         "text-font": [
           "Noto Sans Regular"
@@ -54,6 +67,5 @@
         "text-color": "#ffffff"
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

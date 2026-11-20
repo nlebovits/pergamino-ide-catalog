@@ -1,0 +1,36 @@
+{
+  "version": 8,
+  "name": "vuelta_partido",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../vuelta_partido.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "vuelta_partido",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "nombre"
+          ],
+          "120km",
+          "#1c0fd3",
+          "240km",
+          "#7489ff",
+          "#cccccc"
+        ],
+        "line-width": 4.0,
+        "line-opacity": 1.0
+      }
+    }
+  ]
+}

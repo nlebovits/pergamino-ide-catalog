@@ -4,21 +4,35 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_centros_evacuados.pmtiles",
+      "url": "pmtiles://../centros_evacuados.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_centros_evacuados",
+      "source-layer": "centros_evacuados",
       "paint": {
-        "circle-color": "#888888",
-        "circle-radius": 10.0,
-        "circle-opacity": 1.0
+        "circle-color": "#0085de",
+        "circle-opacity": 1.0,
+        "circle-radius": 9.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 1.2,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "centros_evacuados",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 5.5
       }
     }
   ]

@@ -2,121 +2,29 @@
   "type": "Collection",
   "id": "servicios-sanitarios/pozos_agua_doss",
   "stac_version": "1.1.0",
-  "description": "Localización de pozos de extracción de agua de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Servicios sanitarios"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Apozos_agua_doss",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:pozos_agua_doss"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_pozos_agua_doss.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_pozos_agua_doss"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "MultiPoint",
-  "geoparquet:feature_count": 95,
-  "table:row_count": 95,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "id",
-      "type": "int64"
-    },
-    {
-      "name": "nombre",
-      "type": "string"
-    },
-    {
-      "name": "ubicacion",
-      "type": "string"
-    },
-    {
-      "name": "estado",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
+  "title": "Pozos de agua DOSS",
+  "description": "Localización de pozos de extracción de agua de la Dirección de Obras y Servicios Sanitarios de la Ciudad de Pergamino.",
+  "keywords": [
+    "agua",
+    "bombeo",
+    "extraccion",
+    "sanitarias",
+    "obras",
+    "impulsion",
+    "bomba",
+    "sanitario",
+    "pozos",
+    "cañeria",
+    "doss",
+    "llave"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8567314,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_pozos_agua_doss"
-  ],
-  "title": "Pozos agua doss",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.613977,
-          -33.93090439,
-          -60.5305869,
-          -33.848341
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -137,73 +45,231 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6139767,
+          -33.9309044,
+          -60.5305873,
+          -33.8483413
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Servicios sanitarios"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/295",
+      "type": "text/html",
+      "title": "Pozos de agua DOSS en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:pozos_doss",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:pozos_doss)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./pozos_agua_doss.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "pozos_agua_doss"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 295,
+  "pergamino:geonode_uuid": "b70f94fd-cb42-4369-8cfc-9afdc5ea2f21",
+  "pergamino:source_updated": "2026-04-30T10:45:18Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 96,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "ubicacion",
+      "type": "string"
+    },
+    {
+      "name": "estado",
+      "type": "string"
+    },
+    {
+      "name": "anio_pozo",
+      "type": "int64"
+    },
+    {
+      "name": "hp_bomba",
+      "type": "double"
+    },
+    {
+      "name": "actualizacion_estado",
+      "type": "string"
+    },
+    {
+      "name": "longitud",
+      "type": "double"
+    },
+    {
+      "name": "latitud",
+      "type": "double"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPoint",
+  "geoparquet:feature_count": 96,
   "assets": {
-    "publico_pozos_agua_doss": {
-      "href": "./publico_pozos_agua_doss.parquet",
+    "pozos_agua_doss": {
+      "href": "./pozos_agua_doss.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-04-30T10:45:18Z",
+      "pergamino:content_hash": "869611046938324994774:96",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 9731,
-      "file:checksum": "122040c09f6d6c6eaa92b11d81ec84486490314de208a79d82dd58d6adcb9055e90e",
       "roles": [
         "data"
       ],
+      "table:row_count": 96,
+      "file:size": 10537,
+      "file:checksum": "1220807c653cee821ba01e77f8effcf66308a7fdd11ba091277b4f52335c6b0a9efb",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_pozos_agua_doss.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:pozos_agua_doss). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 95,
+      "file:size": 9731,
+      "file:checksum": "122040c09f6d6c6eaa92b11d81ec84486490314de208a79d82dd58d6adcb9055e90e"
+    },
+    "pozos_agua_doss-tiles": {
+      "href": "./pozos_agua_doss.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 107365,
+      "file:checksum": "12200f6d6c23a9a26845f2ffb275188019c7316410d51d90e69d5059bd96a3d94ce8",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "pozos_agua_doss",
-      "file:size": 1431,
-      "file:checksum": "1220571d006296333b5473f9e83fa4df9a86ee673aa405531a6bcf481045f3daadf5",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 3142,
+      "file:checksum": "1220c3d7223a6d39b2d1215524b49c0fa2267eb116490916c477b2368c6462a867c9",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
-      "file:size": 1386,
-      "file:checksum": "1220f3892706d6c496de9b227846ebcbb46153b865e421af4a111830fb284a3f56fb",
+      "file:size": 1373,
+      "file:checksum": "1220329b5c13fdb846ac780af255e94e475b4d6480a16f5f4a45f21f04ec0b468cb6",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1176,
-      "file:checksum": "1220214d6f7828ca7ff907b940e90adee95582acc107eca9480cd9e8a861b1cdbd89",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_pozos_agua_doss-tiles": {
-      "href": "./publico_pozos_agua_doss.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_pozos_agua_doss (vector tiles)",
-      "file:size": 21614,
-      "file:checksum": "12208265a2041bc2d7a9853a46edfb96f40fb83d77381186d25534d1cc05a959b1f0",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_pozos_agua_doss.thumb.jpg",
+      "href": "./pozos_agua_doss.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 59606,
-      "file:checksum": "1220fceb7d43eb252d1d8f64eda170d3a6c4ca0c8697b7283423de9e001166a11fa4",
+      "file:size": 85430,
+      "file:checksum": "12200216695252ad916e0e582714c08ec4bcabc3480d8fc8ec8d20b4b32fe4eecc27",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3396,
+      "file:checksum": "12202d3e5b0fd68a6747df037fa2bd98842d99e6d333ed0868b1025cc4c48b8c539e",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "pozos_agua_doss"
+  ]
 }

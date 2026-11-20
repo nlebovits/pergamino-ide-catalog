@@ -2,7 +2,72 @@
   "type": "Collection",
   "id": "salud/estaciones_de_salud",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Estaciones de salud",
   "description": "Estaciones de salud del Partido de Pergamino donde se puede realizar gimnasia al aire libre.",
+  "keywords": [
+    "salud",
+    "maquina",
+    "espacio",
+    "plaza",
+    "estacion",
+    "aerobico",
+    "ejercicio",
+    "aire",
+    "pergamino",
+    "libre",
+    "verde",
+    "cardio",
+    "fija",
+    "aparatos",
+    "deporte"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.8349053,
+          -34.0275092,
+          -60.1690799,
+          -33.6613317
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,48 +82,63 @@
       "title": "Salud"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/153",
+      "type": "text/html",
+      "title": "Estaciones de salud en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:estaciones_de_salud",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:estaciones_de_salud)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aestaciones_de_salud",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:estaciones_de_salud"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_estaciones_de_salud.pmtiles",
+      "href": "./estaciones_de_salud.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_estaciones_de_salud"
+        "estaciones_de_salud"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "MultiPoint",
-  "geoparquet:feature_count": 29,
-  "table:row_count": 29,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 153,
+  "pergamino:geonode_uuid": "d0bad0a6-29b9-4a88-99b5-deb5d72093d8",
+  "pergamino:source_updated": "2026-05-11T12:13:59Z",
+  "pergamino:update_frequency": "asNeeded",
   "table:primary_geometry": "geometry",
+  "table:row_count": 29,
   "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "nombre",
       "type": "string"
@@ -84,134 +164,107 @@
       "type": "string"
     },
     {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.9023362,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_estaciones_de_salud"
-  ],
-  "title": "Estaciones de salud",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.83490533,
-          -34.02750924,
-          -60.16907993,
-          -33.6613317
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "MultiPoint",
+  "geoparquet:feature_count": 29,
   "assets": {
-    "publico_estaciones_de_salud": {
-      "href": "./publico_estaciones_de_salud.parquet",
+    "estaciones_de_salud": {
+      "href": "./estaciones_de_salud.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-11T12:13:59Z",
+      "pergamino:content_hash": "293681275176135171576:29",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 6783,
-      "file:checksum": "1220e014bcbefeda5a5a4475819e012b69ad3aa9280602d6ac7b22ab5ea649eb1b75",
       "roles": [
         "data"
       ],
+      "table:row_count": 29,
+      "file:size": 4943,
+      "file:checksum": "122086a7173dcc2dfefb2f0c3a8f34180182161ebfc0b0b59d24082588dccd7b9b55",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_estaciones_de_salud.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:estaciones_de_salud). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 29,
+      "file:size": 6783,
+      "file:checksum": "1220e014bcbefeda5a5a4475819e012b69ad3aa9280602d6ac7b22ab5ea649eb1b75"
+    },
+    "estaciones_de_salud-tiles": {
+      "href": "./estaciones_de_salud.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 35979,
+      "file:checksum": "12203f3fb5f24af0812df404253f59079556e2ccdc92ff3f21e984096fd591b76151",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "estacion_salud",
-      "file:size": 497,
-      "file:checksum": "1220112252b6b2fe394dd0794b463e3032e5a200ee7fa9390e6e7d7ca8b4586ad8df",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 856,
+      "file:checksum": "12208e88b73ce55282cbe1e6a98891c28ae98c577edef45d4c043313610c0b469092",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
-      "file:size": 86,
-      "file:checksum": "1220b82b8e288f0051eb49fc87843b6c8d9fd06a5c309075dcc3e478892f68617b0b",
+      "file:size": 621,
+      "file:checksum": "1220f5228e027c7351f74cc2585605b6bf5713f7e13a526a23932e6229ef863c18e3",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1252,
-      "file:checksum": "1220d908134fdcf653740517b9a7a9cd270d317c144b4a723bc0b0b80fcc1e55a784",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_estaciones_de_salud-tiles": {
-      "href": "./publico_estaciones_de_salud.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_estaciones_de_salud (vector tiles)",
-      "file:size": 23701,
-      "file:checksum": "12203c7954c2808028ab51edb082bc5b32bff584cf2aabb22c308b2cd3fdae988b15",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_estaciones_de_salud.thumb.jpg",
+      "href": "./estaciones_de_salud.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 35992,
-      "file:checksum": "1220b80a488b69301d3423b3aacacc73f909aa28567d7966460d7a4cc1eaf41fe619",
+      "file:size": 36176,
+      "file:checksum": "12209f968de6cdec61600b6f29b0d392c18520e6fff344477a0a3e1274822271d4de",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3502,
+      "file:checksum": "12202f71708e7311c4c4155abdb25e344f35aae192257703c68183f2ff2e67bf67da",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "estaciones_de_salud"
+  ]
 }

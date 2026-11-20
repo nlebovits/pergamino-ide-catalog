@@ -2,113 +2,36 @@
   "type": "Collection",
   "id": "ambiente-y-agro/inta_mnc_2022_invierno",
   "stac_version": "1.1.0",
-  "description": "Mapa nacional de cultivos INTA invierno 2022 para el Partido de Pergamino, tomado de https://geo-backend.inta.gob.ar/catalogue/#/dataset/496",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Ambiente y agro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Ainta_mnc_2022_invierno",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:inta_mnc_2022_invierno"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_inta_mnc_2022_invierno.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_inta_mnc_2022_invierno"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 28132,
-  "table:row_count": 28132,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "dn",
-      "type": "int64"
-    },
-    {
-      "name": "categorias",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.4632568,
-    -34.1299946,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_inta_mnc_2022_invierno"
-  ],
   "title": "Mapa nacional de cultivos INTA invierno 2022",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.94404449,
-          -34.176495,
-          -60.13879467,
-          -33.5402179
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Mapa nacional de cultivos INTA invierno 2022 para el Partido de Pergamino, tomado de https://geo-backend.inta.gob.ar/catalogue/#/dataset/496",
+  "keywords": [
+    "cultivo",
+    "mapa",
+    "nacional",
+    "geointa",
+    "sorgo",
+    "trigo",
+    "cereales",
+    "2022",
+    "cobertura",
+    "invierno",
+    "agricola",
+    "soja",
+    "arveja",
+    "maiz",
+    "campaña",
+    "barbecho",
+    "ganadero",
+    "pergamino",
+    "inta"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -136,73 +59,207 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.9440445,
+          -34.1764948,
+          -60.1387947,
+          -33.5402181
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Ambiente y agro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/189",
+      "type": "text/html",
+      "title": "Mapa nacional de cultivos INTA invierno 2022 en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:inta_mnc_2022_invierno",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:inta_mnc_2022_invierno)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./inta_mnc_2022_invierno.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "inta_mnc_2022_invierno"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 189,
+  "pergamino:geonode_uuid": "e09a50ba-1b81-4b97-a8ad-094ce68c43f5",
+  "pergamino:source_updated": "2026-05-06T18:28:48Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 28132,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "dn",
+      "type": "int64"
+    },
+    {
+      "name": "categorias",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 28132,
   "assets": {
-    "publico_inta_mnc_2022_invierno": {
-      "href": "./publico_inta_mnc_2022_invierno.parquet",
+    "inta_mnc_2022_invierno": {
+      "href": "./inta_mnc_2022_invierno.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-06T18:28:48Z",
+      "pergamino:content_hash": "257773421919399458215751:28132",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 2012553,
-      "file:checksum": "122033ce18d93071702d66f495bb125cdfc6f47609bef58f9aa74f8fd8c86c6a1be9",
       "roles": [
         "data"
       ],
+      "table:row_count": 28132,
+      "file:size": 2137534,
+      "file:checksum": "12202ecc453b16283e3fee91a5eaeb4d6f9581bc7020038f4beef9ea1b87866778c9",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_inta_mnc_2022_invierno.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:inta_mnc_2022_invierno). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 28132,
+      "file:size": 2012553,
+      "file:checksum": "122033ce18d93071702d66f495bb125cdfc6f47609bef58f9aa74f8fd8c86c6a1be9"
+    },
+    "inta_mnc_2022_invierno-tiles": {
+      "href": "./inta_mnc_2022_invierno.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 8765901,
+      "file:checksum": "12205c8ecaea1d0072fcfb6a44012473abc9ebd426847e342d96b7bc5877bfe8c39a",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "inta_mnc_2022_invierno",
-      "file:size": 684,
-      "file:checksum": "1220d989be42dba0f48a22f0a0cfdc447e74d8943f77b33c04c1bd71e9b75643b0c7",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 668,
+      "file:checksum": "1220042c987acff40f8e02edc19fbbe507016e5c0c96e7c7120a048f37c53a021dd8",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 948,
       "file:checksum": "122010f0f8a099788e939e2b962d9eb0f55379b8939ab96faaf1375b4f111ab03409",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1158,
-      "file:checksum": "12200800a6ba51da0f8f56fdb5dd04f947eee76b7bdd803685f23563486fd38f5ed6",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_inta_mnc_2022_invierno-tiles": {
-      "href": "./publico_inta_mnc_2022_invierno.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_inta_mnc_2022_invierno (vector tiles)",
-      "file:size": 7265793,
-      "file:checksum": "122085f45978a185983ea0859216179cc01d7983308f0ae4160c7f34f6b89fa09ae5",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_inta_mnc_2022_invierno.thumb.jpg",
+      "href": "./inta_mnc_2022_invierno.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 249103,
-      "file:checksum": "1220028e0490546bf5380530801fcfe2d4238fc84d1ff97258473e6a6f2dfdc7a89e",
+      "file:size": 244417,
+      "file:checksum": "122062f847e9a5fc2a4825cfd2ac8e8524d0edf0ce653b99ee73d985a9fbe90f6f50",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3773,
+      "file:checksum": "1220d32d216ae3c16f60ee2c84d8550e526ec56fe78c7e9f0ff5e349f3434478423d",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "inta_mnc_2022_invierno"
+  ]
 }

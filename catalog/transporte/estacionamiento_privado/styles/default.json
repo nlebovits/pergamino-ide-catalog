@@ -4,21 +4,35 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_estacionamiento_privado.pmtiles",
+      "url": "pmtiles://../estacionamiento_privado.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_estacionamiento_privado",
+      "source-layer": "estacionamiento_privado",
       "paint": {
-        "circle-color": "#888888",
+        "circle-color": "#1565C0",
+        "circle-opacity": 1.0,
         "circle-radius": 9.0,
-        "circle-opacity": 1.0
+        "circle-stroke-color": "#FFFFFF",
+        "circle-stroke-width": 2.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estacionamiento_privado",
+      "paint": {
+        "circle-color": "#FFFFFF",
+        "circle-opacity": 1.0,
+        "circle-radius": 6.0
       }
     }
   ]

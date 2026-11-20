@@ -1,0 +1,164 @@
+{
+  "version": 8,
+  "name": "agua_nodos",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../agua_nodos.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "sld-0-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "agua_nodos",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "clase"
+          ],
+          "CONEXION",
+          "#ffffff",
+          "HIDRANTE",
+          "#2560e0",
+          "VALVULA",
+          "#1975d8",
+          "NODO",
+          "#2560e0",
+          "TAPON",
+          "#ffffff",
+          "DESAGUE",
+          "#2560e0",
+          "#000000"
+        ],
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "clase"
+          ],
+          "CONEXION",
+          1.0,
+          "HIDRANTE",
+          1.0,
+          "VALVULA",
+          1.0,
+          "NODO",
+          1.0,
+          "TAPON",
+          1.0,
+          "DESAGUE",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "clase"
+          ],
+          "CONEXION",
+          6.0,
+          "HIDRANTE",
+          6.0,
+          "VALVULA",
+          8.0,
+          "NODO",
+          5.5,
+          "TAPON",
+          5.5,
+          "DESAGUE",
+          5.5,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "clase"
+          ],
+          "CONEXION",
+          "#000000",
+          "HIDRANTE",
+          "#232323",
+          "VALVULA",
+          "#000000",
+          "NODO",
+          "#000000",
+          "TAPON",
+          "#000000",
+          "DESAGUE",
+          "#232323",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "clase"
+          ],
+          "CONEXION",
+          0.5,
+          "HIDRANTE",
+          0.5,
+          "VALVULA",
+          0.5,
+          "NODO",
+          0.5,
+          "TAPON",
+          0.5,
+          "DESAGUE",
+          0.5,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "clase"
+          ],
+          "CONEXION",
+          1.0,
+          "HIDRANTE",
+          1.0,
+          "VALVULA",
+          1.0,
+          "NODO",
+          1.0,
+          "TAPON",
+          1.0,
+          "DESAGUE",
+          1.0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "categorical-circle-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "agua_nodos",
+      "layout": {
+        "text-field": [
+          "get",
+          "diametro"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#2560e0",
+        "text-halo-color": "#fafafa",
+        "text-halo-width": 2.0
+      }
+    }
+  ]
+}

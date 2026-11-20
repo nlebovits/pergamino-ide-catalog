@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_cuencas_arroyo_pergamino.pmtiles",
+      "url": "pmtiles://../cuencas_arroyo_pergamino.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,11 +14,11 @@
       "id": "fill-0",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_cuencas_arroyo_pergamino",
+      "source-layer": "cuencas_arroyo_pergamino",
       "paint": {
         "fill-color": "#0080C0",
         "fill-opacity": 0.5,
-        "fill-outline-color": "#0080C0"
+        "fill-outline-color": "#ffffff"
       }
     }
   ]

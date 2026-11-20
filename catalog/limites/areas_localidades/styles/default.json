@@ -1,0 +1,25 @@
+{
+  "version": 8,
+  "name": "areas_localidades",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../areas_localidades.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "fill-0",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "areas_localidades",
+      "paint": {
+        "fill-color": "#AAAAAA",
+        "fill-opacity": 0.75,
+        "fill-outline-color": "#F0F0F0"
+      }
+    }
+  ]
+}

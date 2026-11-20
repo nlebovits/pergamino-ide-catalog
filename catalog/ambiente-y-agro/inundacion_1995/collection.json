@@ -2,117 +2,25 @@
   "type": "Collection",
   "id": "ambiente-y-agro/inundacion_1995",
   "stac_version": "1.1.0",
-  "description": "Mancha de la inundación del año 1995 en el área urbana de la Ciudad de Pergamino, según datos relevados por el INA.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Ambiente y agro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Ainundacion_1995",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:inundacion_1995"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_inundacion_1995.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_inundacion_1995"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 26,
-  "table:row_count": 26,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "gid",
-      "type": "int64"
-    },
-    {
-      "name": "layer",
-      "type": "string"
-    },
-    {
-      "name": "area",
-      "type": "double"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5511474,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_inundacion_1995"
-  ],
   "title": "Inundacion de 1995",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.60007543,
-          -33.920937,
-          -60.5349699,
-          -33.8607559
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Mancha de la inundación del año 1995 en el área urbana de la Ciudad de Pergamino, según datos relevados por el INA.",
+  "keywords": [
+    "ina",
+    "anegamiento",
+    "1995",
+    "mancha",
+    "pergamino",
+    "arroyo",
+    "inundacion",
+    "agua"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -140,73 +48,214 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6000754,
+          -33.9209367,
+          -60.5349701,
+          -33.8607562
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Ambiente y agro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/192",
+      "type": "text/html",
+      "title": "Inundacion de 1995 en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:inundacion_1995",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:inundacion_1995)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./inundacion_1995.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "inundacion_1995"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 192,
+  "pergamino:geonode_uuid": "985b043e-ea74-4ee2-833c-3738f4e552b4",
+  "pergamino:source_updated": "2026-05-06T18:09:03Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 26,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "gid",
+      "type": "int64"
+    },
+    {
+      "name": "layer",
+      "type": "string"
+    },
+    {
+      "name": "area",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": [
+    "MultiPolygon",
+    "Polygon"
+  ],
+  "geoparquet:feature_count": 26,
   "assets": {
-    "publico_inundacion_1995": {
-      "href": "./publico_inundacion_1995.parquet",
+    "inundacion_1995": {
+      "href": "./inundacion_1995.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-06T18:09:03Z",
+      "pergamino:content_hash": "247133054085103968367:26",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 123175,
-      "file:checksum": "1220e19d00ae5a27eb0e442efc3ca8a563f6b5fc7444d8621ab3e6dd10e749d47d53",
       "roles": [
         "data"
       ],
+      "table:row_count": 26,
+      "file:size": 140894,
+      "file:checksum": "122010c2e18abfa4a4a1a34f4f146e103fd3ba294757cfc90c3efbb0ab9dd271cc43",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_inundacion_1995.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:inundacion_1995). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 26,
+      "file:size": 123175,
+      "file:checksum": "1220e19d00ae5a27eb0e442efc3ca8a563f6b5fc7444d8621ab3e6dd10e749d47d53"
+    },
+    "inundacion_1995-tiles": {
+      "href": "./inundacion_1995.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 55245,
+      "file:checksum": "1220bb834e791d65946fa1fba932c5ef3f1874f7500425cfab7d102fc997dc848dad",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "inundacion1995",
-      "file:size": 487,
-      "file:checksum": "1220c3a2b9bbb6d4fcd54d5f8999dd2fbc40aed2810904b05a56b93a98ea508bff63",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 471,
+      "file:checksum": "1220d175a91d96c57b5342b49111365604247858fdfa18ed6efc19eb627d3f815727",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 142,
       "file:checksum": "1220347a1530c662d1117a68a50031f9983f1039f3ea22134cc547ad485f2dd8b0a1",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1150,
-      "file:checksum": "12200e863075cee766fac7d1c4320ea0cf19bc7992010e05e06cb32786a601b66727",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_inundacion_1995-tiles": {
-      "href": "./publico_inundacion_1995.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_inundacion_1995 (vector tiles)",
-      "file:size": 54889,
-      "file:checksum": "12204f4d10eb7fa5363b71c23581ad32d95f6865c15534d87f2b39d5e4896b3ed7d8",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_inundacion_1995.thumb.jpg",
+      "href": "./inundacion_1995.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 110381,
-      "file:checksum": "12209ce4c05eef8f9c3f03e1526606485a475286bbc6de7b7e23d7483bd8e99c4171",
+      "file:size": 90030,
+      "file:checksum": "1220ebba52e78d67efd5c718dd4b1073ee64db2c869eff935c651d683d1a36ed0c61",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3522,
+      "file:checksum": "122025b3341cc557bba7df5c40e4fc2481233fb25b24a5095503a04497c40b22c5ad",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "inundacion_1995"
+  ]
 }

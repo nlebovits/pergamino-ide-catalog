@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_pluviales.pmtiles",
+      "url": "pmtiles://../pluviales.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-line",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_pluviales",
+      "source-layer": "pluviales",
       "paint": {
         "line-color": [
           "match",

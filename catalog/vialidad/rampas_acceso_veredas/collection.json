@@ -2,7 +2,71 @@
   "type": "Collection",
   "id": "vialidad/rampas_acceso_veredas",
   "stac_version": "1.1.0",
-  "description": "Rampas de acceso a veredas para personas con discapacidad motriz.",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Rampas de acceso discapacidad motriz",
+  "description": "Rampas de acceso a veredas para personas con dificultades motrices o carritos de bebés/infantes para todo el Partido de Pergamino.",
+  "keywords": [
+    "accesibilidad",
+    "motriz",
+    "movilidad",
+    "bajada",
+    "silla",
+    "personas",
+    "cordon",
+    "discapacidad",
+    "pergamino",
+    "ruedas",
+    "pueblos",
+    "rampas",
+    "subida",
+    "vereda"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.8387736,
+          -34.0279686,
+          -60.1678877,
+          -33.6629897
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -11,55 +75,69 @@
       "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
     },
     {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
       "rel": "parent",
       "href": "../catalog.json",
       "type": "application/json",
       "title": "Vialidad"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/241",
+      "type": "text/html",
+      "title": "Rampas de acceso discapacidad motriz en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:rampas_acceso_discapacidad",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:rampas_acceso_discapacidad)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_rampas_acceso_veredas.pmtiles",
+      "href": "./rampas_acceso_veredas.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_rampas_acceso_veredas"
+        "rampas_acceso_veredas"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 1653,
-  "table:row_count": 1653,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 241,
+  "pergamino:geonode_uuid": "620b830c-20c7-4970-a400-c3bc6a4ae6d4",
+  "pergamino:source_updated": "2026-04-29T12:45:30Z",
+  "pergamino:update_frequency": "asNeeded",
   "table:primary_geometry": "geometry",
+  "table:row_count": 1653,
   "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "direccion",
       "type": "string"
@@ -97,122 +175,107 @@
       "type": "string"
     },
     {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_rampas_acceso_veredas"
-  ],
-  "title": "Rampas de acceso a veredas",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.8387739,
-          -34.027969,
-          -60.16788773,
-          -33.66298966
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 1653,
   "assets": {
-    "publico_rampas_acceso_veredas": {
-      "href": "./publico_rampas_acceso_veredas.parquet",
+    "rampas_acceso_veredas": {
+      "href": "./rampas_acceso_veredas.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-04-29T12:45:30Z",
+      "pergamino:content_hash": "15337648788345722261661:1653",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 77691,
-      "file:checksum": "1220ee8bcec1497217d406a24901b3ec3a23692899307bd5d3d6e15daca14619fde1",
       "roles": [
         "data"
       ],
+      "table:row_count": 1653,
+      "file:size": 79099,
+      "file:checksum": "12203407bacf43cd0ee6b9734450ceb6670a4a65d01f4973aa31fcfaf60019d06ee9",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4488,
-      "file:checksum": "122044faf77bb4b59f2de0ec6aaaeec70feb1f40956d5374bb2001a53d4f4b74925e",
+    "version-2026-08-14": {
+      "href": "./publico_rampas_acceso_veredas.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:rampas_acceso_veredas). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 1653,
+      "file:size": 77691,
+      "file:checksum": "1220ee8bcec1497217d406a24901b3ec3a23692899307bd5d3d6e15daca14619fde1"
     },
-    "publico_rampas_acceso_veredas-tiles": {
-      "href": "./publico_rampas_acceso_veredas.pmtiles",
+    "rampas_acceso_veredas-tiles": {
+      "href": "./rampas_acceso_veredas.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_rampas_acceso_veredas (vector tiles)",
-      "file:size": 88999,
-      "file:checksum": "122053329b1dd187a0c6ab1a72b5e6f5a478d3b16bd4881394098b18ac6e5be635de",
       "roles": [
         "visual"
       ],
+      "file:size": 416040,
+      "file:checksum": "12200899d1e5c94dba8bf435c98e4a5032f41f8d365d60e926c592312a4933409665",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "rampas",
-      "file:size": 773,
-      "file:checksum": "1220937241551d66641aab46e0db0f4e8275142a5dbc71c5b2a455e989b034ff1fbc",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 2144,
+      "file:checksum": "1220e4b492bee065272bf302507f4ff3e7286bfeb65e04abc39b30f472ac972e613a",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 1483,
+      "file:checksum": "12202e9307289ece3cb5f4f0973b397c52e10d78577f8f6bbd1a909270e3243348d2",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_rampas_acceso_veredas.thumb.jpg",
+      "href": "./rampas_acceso_veredas.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 37247,
-      "file:checksum": "1220ed0035b47dd960dcadbb02fdc6266fafb4ae5923199bec6cdeecf6023e746c7c",
+      "file:size": 28314,
+      "file:checksum": "12201c5704097b97935d8ba6158325aaedb5ce27754dc422385128357741519bbb23",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3805,
+      "file:checksum": "122031c945bbc32d4463e51d3a71e3ea0749795856b089104f9522c63b1b8da33a64",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "rampas_acceso_veredas"
+  ]
 }

@@ -2,121 +2,28 @@
   "type": "Collection",
   "id": "servicios-municipales/centros_de_desarrollo_comunitario",
   "stac_version": "1.1.0",
-  "description": "Centros de Desarrollo Comunitario (CDC) del Partido de Pergamino, dependientes de la Secretaría de Desarrollo Social.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Servicios municipales"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_centros_de_desarrollo_comunitario.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_centros_de_desarrollo_comunitario"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 11,
-  "table:row_count": 11,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "nombre",
-      "type": "string"
-    },
-    {
-      "name": "direccion",
-      "type": "string"
-    },
-    {
-      "name": "telefono",
-      "type": "string"
-    },
-    {
-      "name": "observaciones",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5950927,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_centros_de_desarrollo_comunitario"
-  ],
   "title": "Centros de Desarrollo Comunitario (CDC)",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.65521816,
-          -33.92374832,
-          -60.38232888,
-          -33.7550219
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Centros de Desarrollo Comunitario (CDC) del Partido de Pergamino, dependientes de la Secretaría de Desarrollo Social.",
+  "keywords": [
+    "actividades",
+    "social",
+    "digital",
+    "capi",
+    "dia",
+    "desarrollo",
+    "cdc",
+    "centros",
+    "hogar",
+    "pergamino",
+    "punto"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -137,62 +44,215 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6552182,
+          -33.9237483,
+          -60.3823289,
+          -33.755022
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Servicios municipales"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/99",
+      "type": "text/html",
+      "title": "Centros de Desarrollo Comunitario (CDC) en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:centros_de_desarrollo_comunitario",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:centros_de_desarrollo_comunitario)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./centros_de_desarrollo_comunitario.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "centros_de_desarrollo_comunitario"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 99,
+  "pergamino:geonode_uuid": "084f8176-7524-4964-81b8-6988debf4f4c",
+  "pergamino:source_updated": "2026-05-15T11:52:03Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 11,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "direccion",
+      "type": "string"
+    },
+    {
+      "name": "telefono",
+      "type": "string"
+    },
+    {
+      "name": "observaciones",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 11,
   "assets": {
-    "publico_centros_de_desarrollo_comunitario": {
-      "href": "./publico_centros_de_desarrollo_comunitario.parquet",
+    "centros_de_desarrollo_comunitario": {
+      "href": "./centros_de_desarrollo_comunitario.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-15T11:52:03Z",
+      "pergamino:content_hash": "78662474542504159395:11",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 4848,
-      "file:checksum": "12200b946df452878dd846f355bc6f5a9ff3ede248c7dcd2170bdd646a0ceacc46f4",
       "roles": [
         "data"
       ],
+      "table:row_count": 11,
+      "file:size": 3008,
+      "file:checksum": "122045d830aec78861dd93857a3bed9a4dd9cbee267bf18560ad39415e7d44c35153",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4396,
-      "file:checksum": "1220730481f9fbba26a1664699e0a083d5030a8baa020d50dd9574ae1373d9a90a42",
+    "version-2026-08-14": {
+      "href": "./publico_centros_de_desarrollo_comunitario.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:centros_de_desarrollo_comunitario). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 11,
+      "file:size": 4848,
+      "file:checksum": "12200b946df452878dd846f355bc6f5a9ff3ede248c7dcd2170bdd646a0ceacc46f4"
     },
-    "publico_centros_de_desarrollo_comunitario-tiles": {
-      "href": "./publico_centros_de_desarrollo_comunitario.pmtiles",
+    "centros_de_desarrollo_comunitario-tiles": {
+      "href": "./centros_de_desarrollo_comunitario.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_centros_de_desarrollo_comunitario (vector tiles)",
-      "file:size": 12308,
-      "file:checksum": "1220d18d9b4f9122817b48e81cc78bb6882d5b607c13cf8d26e611ae88fa3b42fb55",
       "roles": [
         "visual"
       ],
+      "file:size": 18972,
+      "file:checksum": "1220cfd1fc23824f5cc7f6db0526fd8f205048f3f043e7fa603530bfb488614591fc",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "cdc",
-      "file:size": 1043,
-      "file:checksum": "122050d4bc0dac2a062b73f4b79a4eb5eb73c50ac8821870e5e13f6712dfbab3bd53",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1065,
+      "file:checksum": "122091dd070795b51d15a77b473320d14fbe16ad32a703f1accaa7feddaab64167c2",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 96,
+      "file:checksum": "122062dd711a1c907e992577f7f85cd960b1cbc48e798479ee7731497b55bdcd1673",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_centros_de_desarrollo_comunitario.thumb.jpg",
+      "href": "./centros_de_desarrollo_comunitario.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 42099,
-      "file:checksum": "1220dafea93794e0be5275a4853beab563c45e8c90c2ee3388a7523a96ee18ba9972",
+      "file:size": 21958,
+      "file:checksum": "1220dbc2bc00a88e5a83f651057d346469a3a7fefb4b29d5ebd6813984b1525eea1c",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3649,
+      "file:checksum": "12206362676b6def524877504c912816045b03614a20aca278e153888515f19507d9",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "centros_de_desarrollo_comunitario"
+  ]
 }

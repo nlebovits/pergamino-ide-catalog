@@ -2,117 +2,27 @@
   "type": "Collection",
   "id": "ambiente-y-agro/cuencas_arroyo_pergamino",
   "stac_version": "1.1.0",
-  "description": "Cuenca hídricas del Arroyo Pergamino, subdividida en subcuencas. Ocupan parte del Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Ambiente y agro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_cuencas_arroyo_pergamino.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_cuencas_arroyo_pergamino"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 32,
-  "table:row_count": 32,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "curso",
-      "type": "string"
-    },
-    {
-      "name": "area",
-      "type": "double"
-    },
-    {
-      "name": "fuente",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.6829833,
-    -33.9570299,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_cuencas_arroyo_pergamino"
-  ],
   "title": "Cuenca del Arroyo Pergamino",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -61.3327849,
-          -34.17622626,
-          -60.1315779,
-          -33.6210109
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Cuenca hídricas del Arroyo Pergamino, subdividida en subcuencas. Ocupan parte del Partido de Pergamino.",
+  "keywords": [
+    "colon",
+    "cuenca",
+    "hidrica",
+    "arrecifes",
+    "pergamino",
+    "santa fe",
+    "cursos",
+    "arroyo",
+    "canal",
+    "agua"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -133,62 +43,211 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -61.3327845,
+          -34.1762263,
+          -60.131578,
+          -33.6210113
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Ambiente y agro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/124",
+      "type": "text/html",
+      "title": "Cuenca del Arroyo Pergamino en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:cuencas_arroyo_pergamino",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:cuencas_arroyo_pergamino)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./cuencas_arroyo_pergamino.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "cuencas_arroyo_pergamino"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 124,
+  "pergamino:geonode_uuid": "7db1b88d-a895-4f2b-9f82-830f316b022f",
+  "pergamino:source_updated": "2026-05-14T11:26:38Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 32,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "curso",
+      "type": "string"
+    },
+    {
+      "name": "area",
+      "type": "double"
+    },
+    {
+      "name": "fuente",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 32,
   "assets": {
-    "publico_cuencas_arroyo_pergamino": {
-      "href": "./publico_cuencas_arroyo_pergamino.parquet",
+    "cuencas_arroyo_pergamino": {
+      "href": "./cuencas_arroyo_pergamino.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-14T11:26:38Z",
+      "pergamino:content_hash": "246645184934475790919:32",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 8,
       "type": "application/vnd.apache.parquet",
-      "file:size": 86422,
-      "file:checksum": "1220c516e06cab59b27b65cecb06ba6ae81a06d8aece3b929cb2979297df6b560a73",
       "roles": [
         "data"
       ],
+      "table:row_count": 32,
+      "file:size": 110830,
+      "file:checksum": "1220efdf2a4be009d04711431a60f9be2cb7548f7b951d17377cc721a15e5d6e43f8",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4341,
-      "file:checksum": "1220c7a593b7b2bccefe7b073e8da2ed3a4de86e9d7d74d54973365154ff45cfb2e9",
+    "version-2026-08-14": {
+      "href": "./publico_cuencas_arroyo_pergamino.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:cuencas_arroyo_pergamino). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 32,
+      "file:size": 86422,
+      "file:checksum": "1220c516e06cab59b27b65cecb06ba6ae81a06d8aece3b929cb2979297df6b560a73"
     },
-    "publico_cuencas_arroyo_pergamino-tiles": {
-      "href": "./publico_cuencas_arroyo_pergamino.pmtiles",
+    "cuencas_arroyo_pergamino-tiles": {
+      "href": "./cuencas_arroyo_pergamino.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_cuencas_arroyo_pergamino (vector tiles)",
-      "file:size": 524071,
-      "file:checksum": "1220373171c284396bce00a1369194f68b177d43a90edf9e4c0a3081adf782125152",
       "roles": [
         "visual"
       ],
+      "file:size": 533923,
+      "file:checksum": "122020ed4b2b0d755778779ea6f31df1798966c97d118dcb6df2b991167c7edb0d23",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "cuencas_arroyo_pergamino",
-      "file:size": 514,
-      "file:checksum": "12206579bfaf5f8420f7234369d70138b1845020242bbbc8e7d42c83439a4f537e6d",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 498,
+      "file:checksum": "122052f82ae571b06fa3280fb242ffdbe878cd9d801c37750d49a26ecf926bdb3c00",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 118,
+      "file:checksum": "1220691eb8f1e2f70001de44fa9d5bdeec5840e30ffde9f40fd4e2ad3593e44ae5d2",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_cuencas_arroyo_pergamino.thumb.jpg",
+      "href": "./cuencas_arroyo_pergamino.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 75805,
-      "file:checksum": "1220e93696514326ccec535faebeeaf36dbbdef4d574f4e0185e4c2c0456e60489e5",
+      "file:size": 64247,
+      "file:checksum": "122081d6ce2b44142f6589bf4c4c6acbae44cfcd21ac2f9fba07322d3b4af514e15e",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3533,
+      "file:checksum": "12206cb7438b8548a7aa30cb346cf3510e0b70b440acf312bda452c1826e1bd59193",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "cuencas_arroyo_pergamino"
+  ]
 }

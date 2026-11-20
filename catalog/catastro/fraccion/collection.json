@@ -2,125 +2,36 @@
   "type": "Collection",
   "id": "catastro/fraccion",
   "stac_version": "1.1.0",
-  "description": "Fracciones catastrales del Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Catastro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_catastro_fraccion.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_catastro_fraccion"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiPolygon",
-  "geoparquet:feature_count": 181,
-  "table:row_count": 181,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "id",
-      "type": "int64"
-    },
-    {
-      "name": "cca",
-      "type": "string"
-    },
-    {
-      "name": "ara1",
-      "type": "double"
-    },
-    {
-      "name": "sag",
-      "type": "string"
-    },
-    {
-      "name": "etiqueta",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5950927,
-    -33.9205714,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_catastro_fraccion"
-  ],
   "title": "Catastro fraccion",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.84130102,
-          -34.0363449,
-          -60.2902329,
-          -33.6594589
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Fracciones catastrales del Partido de Pergamino.",
+  "keywords": [
+    "objeto",
+    "inmueble",
+    "partida",
+    "circunscripcion",
+    "fraccion",
+    "manzana",
+    "quinta",
+    "subparcela",
+    "pergamino",
+    "catastro",
+    "planeamiento",
+    "seccion",
+    "cartoarba",
+    "chacra",
+    "nomenclatura",
+    "letra",
+    "ph",
+    "arba",
+    "parcela"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -148,62 +59,215 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.841301,
+          -34.0363447,
+          -60.2902332,
+          -33.6594593
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Catastro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/86",
+      "type": "text/html",
+      "title": "Catastro fraccion en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:catastro_fraccion",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:catastro_fraccion)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./fraccion.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "fraccion"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 86,
+  "pergamino:geonode_uuid": "661681c4-7d5b-4b78-b3de-53ba6140aff7",
+  "pergamino:source_updated": "2026-05-15T13:35:17Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 181,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "cca",
+      "type": "string"
+    },
+    {
+      "name": "ara1",
+      "type": "double"
+    },
+    {
+      "name": "sag",
+      "type": "string"
+    },
+    {
+      "name": "etiqueta",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPolygon",
+  "geoparquet:feature_count": 181,
   "assets": {
-    "publico_catastro_fraccion": {
-      "href": "./publico_catastro_fraccion.parquet",
+    "fraccion": {
+      "href": "./fraccion.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-15T13:35:17Z",
+      "pergamino:content_hash": "1706658334588355606867:181",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 61099,
-      "file:checksum": "122048f2e4245c69dcb3ee4ff8185187c8b94edac4ed2c24ac15bdcf9eccf01b9967",
       "roles": [
         "data"
       ],
+      "table:row_count": 181,
+      "file:size": 72298,
+      "file:checksum": "1220852c160b157b34d8a10fa66ca67eb8a970e65deaaf1add5c3148d8066da833d0",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4365,
-      "file:checksum": "12207aab8ae4227556cc7e99e539207e3e5fd8d192705f967f663f0f6ec4950bfe11",
+    "version-2026-08-14": {
+      "href": "./publico_catastro_fraccion.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:catastro_fraccion). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 181,
+      "file:size": 61099,
+      "file:checksum": "122048f2e4245c69dcb3ee4ff8185187c8b94edac4ed2c24ac15bdcf9eccf01b9967"
     },
-    "publico_catastro_fraccion-tiles": {
-      "href": "./publico_catastro_fraccion.pmtiles",
+    "fraccion-tiles": {
+      "href": "./fraccion.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_catastro_fraccion (vector tiles)",
-      "file:size": 134392,
-      "file:checksum": "12209712e095df7abccdb00ce28e13994d9a86e9c9d1820ca7af0ec6c3ff3cd612ac",
       "roles": [
         "visual"
       ],
+      "file:size": 129948,
+      "file:checksum": "122053c796780bb9523b0c7533bb135ccd1812e38c9c15bc7f9403dabd0d1f7c58db",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "catastro_fraccion",
-      "file:size": 479,
-      "file:checksum": "1220439e174591749a2e80eae164af5ce953cb22cec513a507776bf0032b3b08025a",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 459,
+      "file:checksum": "12203dc8fa0340a156997492dca1613bbc89af5809c1e6256cc311e88142d031e7ed",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 286,
+      "file:checksum": "12200b20541d706dc69b780f9a5283b8920537a0497e72cf15839c2e162eaf068d4e",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_catastro_fraccion.thumb.jpg",
+      "href": "./fraccion.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 40819,
-      "file:checksum": "1220a95290c071e76940fff591340df027aba324583353db822727c7d696a3e55bb4",
+      "file:size": 29157,
+      "file:checksum": "12202e3b794a704088e429a552e8b7bb98bd40d1e6b718b9546b6ad1a34af395a889",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3500,
+      "file:checksum": "1220414caa1b9c0f32c2f7ff4c18d979a1eb3295f78f5c9ec849e8cc2f7e8e9f9ec3",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "fraccion"
+  ]
 }

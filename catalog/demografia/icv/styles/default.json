@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_icv.pmtiles",
+      "url": "pmtiles://../icv.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "graduated-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_icv",
+      "source-layer": "icv",
       "paint": {
         "fill-color": [
           "step",

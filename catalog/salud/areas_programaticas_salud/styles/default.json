@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_areas_programaticas_salud.pmtiles",
+      "url": "pmtiles://../areas_programaticas_salud.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_areas_programaticas_salud",
+      "source-layer": "areas_programaticas_salud",
       "paint": {
         "fill-color": [
           "match",
@@ -66,7 +66,7 @@
       "id": "categorical-fill-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_areas_programaticas_salud",
+      "source-layer": "areas_programaticas_salud",
       "layout": {
         "text-field": [
           "get",
@@ -84,6 +84,5 @@
         "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

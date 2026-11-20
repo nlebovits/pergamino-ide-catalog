@@ -4,21 +4,24 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_sumideros.pmtiles",
+      "url": "pmtiles://../sumideros.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_sumideros",
+      "source-layer": "sumideros",
       "paint": {
-        "circle-color": "#f3a6b2",
-        "circle-radius": 2.0,
-        "circle-opacity": 1.0
+        "circle-color": "#fa8072",
+        "circle-opacity": 1.0,
+        "circle-radius": 2.5,
+        "circle-stroke-color": "#000000",
+        "circle-stroke-width": 0.5,
+        "circle-stroke-opacity": 1.0
       }
     }
   ]

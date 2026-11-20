@@ -2,121 +2,28 @@
   "type": "Collection",
   "id": "comercio-y-cultura/gomerias",
   "stac_version": "1.1.0",
-  "description": "Gomerías y tiendas de venta de neumáticos en Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Comercio y cultura"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Agomerias",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:gomerias"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_gomerias.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_gomerias"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 25,
-  "table:row_count": 25,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "nombre",
-      "type": "string"
-    },
-    {
-      "name": "ubicacion",
-      "type": "string"
-    },
-    {
-      "name": "horario",
-      "type": "string"
-    },
-    {
-      "name": "tipo",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8840972,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_gomerias"
-  ],
   "title": "Gomerias",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.59416634,
-          -33.9145759,
-          -60.55319351,
-          -33.8627649
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Gomerías y tiendas de venta de neumáticos en Pergamino.",
+  "keywords": [
+    "moto",
+    "goma",
+    "pinchadura",
+    "taller",
+    "neumatico",
+    "colectivo",
+    "pergamino",
+    "gomeria",
+    "repuesto",
+    "auto",
+    "camion"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -137,73 +44,215 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.5941663,
+          -33.9145759,
+          -60.5531935,
+          -33.8627653
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Comercio y cultura"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/171",
+      "type": "text/html",
+      "title": "Gomerias en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:gomerias",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:gomerias)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./gomerias.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "gomerias"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 171,
+  "pergamino:geonode_uuid": "2cd94122-aaaf-4ee7-bfd8-c86a35f330c8",
+  "pergamino:source_updated": "2026-05-12T13:33:53Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 25,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "ubicacion",
+      "type": "string"
+    },
+    {
+      "name": "horario",
+      "type": "string"
+    },
+    {
+      "name": "tipo",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 25,
   "assets": {
-    "publico_gomerias": {
-      "href": "./publico_gomerias.parquet",
+    "gomerias": {
+      "href": "./gomerias.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-12T13:33:53Z",
+      "pergamino:content_hash": "204273898726845911375:25",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 5593,
-      "file:checksum": "1220a17bc8cfb6f7f7d31b1ed0f38f46e3a36536199dfabfb80b98d6cdca4d2a1598",
       "roles": [
         "data"
       ],
+      "table:row_count": 25,
+      "file:size": 3978,
+      "file:checksum": "122064bbba0c21d391b79aa09202155e9360d4d50bc4e9a313044c17f769ae7cea97",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_gomerias.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:gomerias). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 25,
+      "file:size": 5593,
+      "file:checksum": "1220a17bc8cfb6f7f7d31b1ed0f38f46e3a36536199dfabfb80b98d6cdca4d2a1598"
+    },
+    "gomerias-tiles": {
+      "href": "./gomerias.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 21001,
+      "file:checksum": "1220de14bac5d3637de3cce2b989d01b1d787f64e169e59bbcb88f1f73521e716952",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "gomerias",
-      "file:size": 788,
-      "file:checksum": "12203ca20612d99d0fc6577a52347eb73d399725de37d513d680678eab4ae97d0f7e",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 927,
+      "file:checksum": "12200a83a19ce640f8d31f9a682a4b557e7826129529660ebb6c72c17ecb2ec85b6a",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 632,
       "file:checksum": "12205f8e3d720dfb86ca3796c63762099c93f8f5e14cbbddb0494fb4ba169d6746a9",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1152,
-      "file:checksum": "12205aeae12fb110d67f5aa806edb610a3c9fb19f163d58d4c5d2327b1888ed5739d",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_gomerias-tiles": {
-      "href": "./publico_gomerias.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_gomerias (vector tiles)",
-      "file:size": 7729,
-      "file:checksum": "122039292d79ce131b5f9e4a91e5c4b6b3c028b044e7e76698f3fda5a940011083f7",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_gomerias.thumb.jpg",
+      "href": "./gomerias.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 78738,
-      "file:checksum": "1220abf3940860f3fb008d3cf26dc2762157339671cfe87d05c50c92fef4de641a74",
+      "file:size": 61053,
+      "file:checksum": "12207cc1b5dcdbe8cb93fef0f5152185454770513faa8ce9353ec143f3808def6f92",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3154,
+      "file:checksum": "12208dacd78a9d5ecff927c5bc56a48c575edc613eba28711ff3048b99eba2a78543",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "gomerias"
+  ]
 }

@@ -6,7 +6,7 @@
   ],
   "id": "catastro",
   "title": "Catastro",
-  "description": "Parcelario y jerarquía catastral del Partido de Pergamino, desde la circunscripción hasta la subparcela y la propiedad horizontal, junto con zonificación, edificaciones y edificios de interés.",
+  "description": "Parcelario y jerarquía catastral del Partido de Pergamino, desde la circunscripción hasta la subparcela y la propiedad horizontal, junto con zonificación, edificaciones detectadas sobre imágenes y edificios de interés.",
   "links": [
     {
       "rel": "root",
@@ -35,6 +35,30 @@
       "href": "./circunscripcion/collection.json",
       "type": "application/json",
       "title": "Catastro circunscripcion"
+    },
+    {
+      "rel": "child",
+      "href": "./complejos_habitacionales/collection.json",
+      "type": "application/json",
+      "title": "Complejos habitacionales"
+    },
+    {
+      "rel": "child",
+      "href": "./edificaciones_automaticas/collection.json",
+      "type": "application/json",
+      "title": "Edificaciones detectadas con IA"
+    },
+    {
+      "rel": "child",
+      "href": "./edificios_en_altura/collection.json",
+      "type": "application/json",
+      "title": "Edificios en altura"
+    },
+    {
+      "rel": "child",
+      "href": "./edificios_historicos/collection.json",
+      "type": "application/json",
+      "title": "Edificios históricos"
     },
     {
       "rel": "child",
@@ -86,54 +110,6 @@
     },
     {
       "rel": "child",
-      "href": "./complejos_habitacionales/collection.json",
-      "type": "application/json",
-      "title": "Complejos habitacionales"
-    },
-    {
-      "rel": "child",
-      "href": "./edificaciones_pa/collection.json",
-      "type": "application/json",
-      "title": "Edificaciones detectadas PA"
-    },
-    {
-      "rel": "child",
-      "href": "./edificaciones_pb/collection.json",
-      "type": "application/json",
-      "title": "Edificaciones detectadas PB"
-    },
-    {
-      "rel": "child",
-      "href": "./edificios_en_altura/collection.json",
-      "type": "application/json",
-      "title": "Edificios en altura"
-    },
-    {
-      "rel": "child",
-      "href": "./edificios_historicos/collection.json",
-      "type": "application/json",
-      "title": "Edificios históricos"
-    },
-    {
-      "rel": "child",
-      "href": "./estado_parcela/collection.json",
-      "type": "application/json",
-      "title": "Estado parcela"
-    },
-    {
-      "rel": "child",
-      "href": "./parcelario/collection.json",
-      "type": "application/json",
-      "title": "Parcelario"
-    },
-    {
-      "rel": "child",
-      "href": "./parcelario_contralor/collection.json",
-      "type": "application/json",
-      "title": "Parcelario contralor"
-    },
-    {
-      "rel": "child",
       "href": "./zonificacion/collection.json",
       "type": "application/json",
       "title": "Zonificacion"
@@ -151,5 +127,5 @@
       "title": "Human-readable documentation"
     }
   ],
-  "updated": "2026-11-20T07:41:37Z"
+  "updated": "2026-11-20T09:51:46Z"
 }

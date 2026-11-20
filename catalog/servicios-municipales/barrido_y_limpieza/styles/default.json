@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_barrido_y_limpieza.pmtiles",
+      "url": "pmtiles://../barrido_y_limpieza.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_barrido_y_limpieza",
+      "source-layer": "barrido_y_limpieza",
       "paint": {
         "fill-color": [
           "match",
@@ -40,7 +40,7 @@
       "id": "categorical-fill-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_barrido_y_limpieza",
+      "source-layer": "barrido_y_limpieza",
       "layout": {
         "text-field": [
           "get",

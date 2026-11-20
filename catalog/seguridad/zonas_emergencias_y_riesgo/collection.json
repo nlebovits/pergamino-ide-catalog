@@ -2,113 +2,26 @@
   "type": "Collection",
   "id": "seguridad/zonas_emergencias_y_riesgo",
   "stac_version": "1.1.0",
-  "description": "Zonas de división de tareas en la Gestión de Emergencias y Riesgo para la Ciudad de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Seguridad"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Azonas_emergencias_y_riesgo",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:zonas_emergencias_y_riesgo"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_zonas_emergencias_y_riesgo.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_zonas_emergencias_y_riesgo"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 9,
-  "table:row_count": 9,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "zona",
-      "type": "string"
-    },
-    {
-      "name": "fuente",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5621337,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_zonas_emergencias_y_riesgo"
-  ],
   "title": "Zonas de gestión ante emergencias y riesgos",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.61498629,
-          -33.9312925,
-          -60.504233,
-          -33.849405
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Zonas de división de tareas en la Gestión de Emergencias y Riesgo para la Ciudad de Pergamino.",
+  "keywords": [
+    "pergamino",
+    "zonas",
+    "bomberos",
+    "emergencia",
+    "defensa",
+    "inundacion",
+    "civil",
+    "evacuados",
+    "riesgo"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -129,73 +42,207 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6149863,
+          -33.9312925,
+          -60.5042332,
+          -33.8494055
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Seguridad"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/266",
+      "type": "text/html",
+      "title": "Zonas de gestión ante emergencias y riesgos en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:zonas_emergencias_y_riesgo",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:zonas_emergencias_y_riesgo)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./zonas_emergencias_y_riesgo.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "zonas_emergencias_y_riesgo"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 266,
+  "pergamino:geonode_uuid": "fc37fb85-3ae3-4ea0-97c2-491cfcc8d49c",
+  "pergamino:source_updated": "2026-05-12T10:35:22Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 9,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "zona",
+      "type": "string"
+    },
+    {
+      "name": "fuente",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 9,
   "assets": {
-    "publico_zonas_emergencias_y_riesgo": {
-      "href": "./publico_zonas_emergencias_y_riesgo.parquet",
+    "zonas_emergencias_y_riesgo": {
+      "href": "./zonas_emergencias_y_riesgo.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-12T10:35:22Z",
+      "pergamino:content_hash": "73080398297192507660:9",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 7338,
-      "file:checksum": "12202158c102dd5725f628b9022ddc7bc541b1ef9466ddddf27d99d99033ca888686",
       "roles": [
         "data"
       ],
+      "table:row_count": 9,
+      "file:size": 5473,
+      "file:checksum": "1220679251d8bd97740a6cbe321a4bac3034d8d1c4e41b0258a8cd6d8774029a41aa",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_zonas_emergencias_y_riesgo.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:zonas_emergencias_y_riesgo). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 9,
+      "file:size": 7338,
+      "file:checksum": "12202158c102dd5725f628b9022ddc7bc541b1ef9466ddddf27d99d99033ca888686"
+    },
+    "zonas_emergencias_y_riesgo-tiles": {
+      "href": "./zonas_emergencias_y_riesgo.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 30460,
+      "file:checksum": "122004e69fac874167ac864e066840645c6c6457226a32f8dbbf04f42ee361f40a30",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "zonas_emergencias_y_riesgo",
-      "file:size": 1531,
-      "file:checksum": "1220379c85e15540ef17c453b2fbeefbdae94f044204fe9fb7d0940642cd030ccaeb",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1507,
+      "file:checksum": "1220db92c2c8cac66378720b4e0fcd9f020ee86237a32dea1c05f5cf3bb8e85cd44e",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 2103,
       "file:checksum": "12205d568f64d7265eec38a1d62fedc2f7d77805071d38c568cc875056fa6b09c28d",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1173,
-      "file:checksum": "12206be05b1f7be16041b9acfb3b008a3905654d5fee3f5ef44d8988adf04c6f2a02",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_zonas_emergencias_y_riesgo-tiles": {
-      "href": "./publico_zonas_emergencias_y_riesgo.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_zonas_emergencias_y_riesgo (vector tiles)",
-      "file:size": 29632,
-      "file:checksum": "12203ba6b06fb40ea35fcd4dc6b6555306d174971e130e67302d7ab242b9ea7ba413",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_zonas_emergencias_y_riesgo.thumb.jpg",
+      "href": "./zonas_emergencias_y_riesgo.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 71816,
-      "file:checksum": "12208fa62a584758a95e1c2a3d4e2a2c39bb82a1bb7b65c130a3a0d6bec1d780bd50",
+      "file:size": 68493,
+      "file:checksum": "1220aa57eae2e7d51d65b7046de01f697214cdd2847341d848d37662e304cf517d05",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3537,
+      "file:checksum": "12206042d563d7fa3d9c554a9e46521014e1891383c789c7c79af0e4305b26c531e4",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "zonas_emergencias_y_riesgo"
+  ]
 }

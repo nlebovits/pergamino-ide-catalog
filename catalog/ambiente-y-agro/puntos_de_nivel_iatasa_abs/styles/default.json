@@ -4,21 +4,24 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_puntos_de_nivel_iatasa_abs.pmtiles",
+      "url": "pmtiles://../puntos_de_nivel_iatasa_abs.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_puntos_de_nivel_iatasa_abs",
+      "source-layer": "puntos_de_nivel_iatasa_abs",
       "paint": {
         "circle-color": "#e08a21",
+        "circle-opacity": 1.0,
         "circle-radius": 3.5,
-        "circle-opacity": 1.0
+        "circle-stroke-color": "#a46518",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
       }
     }
   ]

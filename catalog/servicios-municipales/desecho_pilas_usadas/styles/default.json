@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_desecho_pilas_usadas.pmtiles",
+      "url": "pmtiles://../desecho_pilas_usadas.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "circle-0",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_desecho_pilas_usadas",
+      "source-layer": "desecho_pilas_usadas",
       "paint": {
         "circle-color": "#888888",
         "circle-radius": 12.5,

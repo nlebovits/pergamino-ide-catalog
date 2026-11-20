@@ -2,7 +2,64 @@
   "type": "Collection",
   "id": "energia-y-conectividad/cobertura_gas_natural",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Cobertura de gas natural",
   "description": "Cobertura de gas natural en el territorio de la Ciudad de Pergamino, provista por Litoral Gas S.A.",
+  "keywords": [
+    "energia",
+    "cocina",
+    "cobertura",
+    "calefaccion",
+    "gas",
+    "litoral",
+    "servicio"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6055133,
+          -33.943044,
+          -60.5126071,
+          -33.861453
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -11,54 +68,59 @@
       "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
     },
     {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
       "rel": "parent",
       "href": "../catalog.json",
       "type": "application/json",
       "title": "Energía y conectividad"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/111",
+      "type": "text/html",
+      "title": "Cobertura de gas natural en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:cobertura_gas_natural",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:cobertura_gas_natural)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_cobertura_gas_natural.pmtiles",
+      "href": "./cobertura_gas_natural.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_cobertura_gas_natural"
+        "cobertura_gas_natural"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 17,
-  "table:row_count": 17,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 111,
+  "pergamino:geonode_uuid": "5d6a75b9-adc9-4675-840c-0f8231d2b2b3",
+  "pergamino:source_updated": "2026-05-14T15:36:52Z",
+  "pergamino:update_frequency": "unknown",
   "table:primary_geometry": "geometry",
+  "table:row_count": 17,
   "table:columns": [
     {
       "name": "id",
@@ -90,121 +152,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8749762,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_cobertura_gas_natural"
-  ],
-  "title": "Cobertura de gas natural",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.60551331,
-          -33.943044,
-          -60.5126069,
-          -33.8614529
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 17,
   "assets": {
-    "publico_cobertura_gas_natural": {
-      "href": "./publico_cobertura_gas_natural.parquet",
+    "cobertura_gas_natural": {
+      "href": "./cobertura_gas_natural.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-14T15:36:52Z",
+      "pergamino:content_hash": "178760094832990976684:17",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 51259,
-      "file:checksum": "1220b19b0b696a0a1ca0f09e224fac48ee683bfd59ea7f9a4b5b9704885e917da039",
       "roles": [
         "data"
       ],
+      "table:row_count": 17,
+      "file:size": 64517,
+      "file:checksum": "1220e59d99d58d170f27a307705acf65cab95556cb669f5ec9cef5aebfacc47d3934",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4464,
-      "file:checksum": "1220ecf3ce63d1243c541526354511f12071e3f7a8c97514fad1b460b4c0fee8a18f",
+    "version-2026-08-14": {
+      "href": "./publico_cobertura_gas_natural.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:cobertura_gas_natural). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 17,
+      "file:size": 51259,
+      "file:checksum": "1220b19b0b696a0a1ca0f09e224fac48ee683bfd59ea7f9a4b5b9704885e917da039"
     },
-    "publico_cobertura_gas_natural-tiles": {
-      "href": "./publico_cobertura_gas_natural.pmtiles",
+    "cobertura_gas_natural-tiles": {
+      "href": "./cobertura_gas_natural.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_cobertura_gas_natural (vector tiles)",
-      "file:size": 123518,
-      "file:checksum": "1220d1c2b4ac486daf39b2e16c0828faff7c2cda24f61b86b6372924dd939da689d1",
       "roles": [
         "visual"
       ],
+      "file:size": 122454,
+      "file:checksum": "12203ea4d004ac26b7699d071c1217a7c615cf8f5e3cb4a3d2c2ac0998bcc92ead32",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "cobertura_gas",
-      "file:size": 505,
-      "file:checksum": "12209ec123794cea49d8295b83cdc1ad55e3af19292c0a7d41f98fff8fb50365c0f0",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 489,
+      "file:checksum": "1220e9f94cbaecf532246fc88836de805d4b07ddf23749d662f089a82e09d1c427d7",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 138,
+      "file:checksum": "12204c83b7c4eeae70378043466b55f8ea0edc5e6ce8bb317f887a0ddff6c1060182",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_cobertura_gas_natural.thumb.jpg",
+      "href": "./cobertura_gas_natural.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 109484,
-      "file:checksum": "1220f3fbc79cf5e07f374da8ce4b41c146fb5d6a14e7d23c10b57a58adce8453f54a",
+      "file:size": 101704,
+      "file:checksum": "1220aecef3d5e5a3086de8657348763b88103fac343cbcb19f309df7f2a41f81d322",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3674,
+      "file:checksum": "122056e9f61bc0ace41b099cc5622bb59ae73d6ce42adef5a77bf3605c175e0b0932",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "cobertura_gas_natural"
+  ]
 }

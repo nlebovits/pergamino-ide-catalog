@@ -4,21 +4,35 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_alcantarillas_vialidad.pmtiles",
+      "url": "pmtiles://../alcantarillas_vialidad.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_alcantarillas_vialidad",
+      "source-layer": "alcantarillas_vialidad",
       "paint": {
-        "circle-color": "#b8b8b8",
-        "circle-radius": 3.5,
-        "circle-opacity": 1.0
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 6.0
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "alcantarillas_vialidad",
+      "paint": {
+        "circle-color": "#000000",
+        "circle-opacity": 0.0,
+        "circle-radius": 5.5,
+        "circle-stroke-color": "#d60000",
+        "circle-stroke-width": 1.5,
+        "circle-stroke-opacity": 1.0
       }
     }
   ]

@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_inundacion_1995.pmtiles",
+      "url": "pmtiles://../inundacion_1995.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "fill-0",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_inundacion_1995",
+      "source-layer": "inundacion_1995",
       "paint": {
         "fill-color": "#1749DE",
         "fill-opacity": 0.5,

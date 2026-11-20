@@ -4,21 +4,64 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_areas_programaticas_desarrollo_social.pmtiles",
+      "url": "pmtiles://../areas_programaticas_desarrollo_social.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "fill-0",
+      "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_areas_programaticas_desarrollo_social",
+      "source-layer": "areas_programaticas_desarrollo_social",
       "paint": {
-        "fill-color": "#377eb8",
-        "fill-opacity": 0.5,
-        "fill-outline-color": "#265980"
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "zona"
+          ],
+          "Zona 1",
+          "#4baee4",
+          "Zona 2",
+          "#47dea4",
+          "Zona 3",
+          "#dff048",
+          "Zona 4",
+          "#c776d5",
+          "Zona 5",
+          "#d59b7c",
+          "Zona 6",
+          "#74db64",
+          "Zona 7",
+          "#7d71ee",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.75,
+        "fill-outline-color": "#ffffff"
+      }
+    },
+    {
+      "id": "categorical-fill-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "areas_programaticas_desarrollo_social",
+      "layout": {
+        "text-field": [
+          "get",
+          "zona"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
       }
     }
   ]

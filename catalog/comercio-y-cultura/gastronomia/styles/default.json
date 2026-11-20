@@ -4,17 +4,17 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_gastronomia.pmtiles",
+      "url": "pmtiles://../gastronomia.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_gastronomia",
+      "source-layer": "gastronomia",
       "paint": {
         "circle-color": [
           "match",
@@ -22,25 +22,32 @@
             "get",
             "tipo"
           ],
+          "Bar",
+          "#eb8ee0",
           "Café",
-          "#1381d5",
+          "#6f4bd2",
+          "Heladeria",
+          "#64ecaf",
           "Pizzería",
-          "#b252e5",
+          "#efdb7a",
           "Restaurante",
-          "#e3e673",
+          "#85d165",
           "Resto-bar",
-          "#d97b8b",
-          "#cccccc"
+          "#388dca",
+          "#ee2f32"
         ],
-        "circle-radius": 7.0,
-        "circle-opacity": 1.0
+        "circle-opacity": 1.0,
+        "circle-radius": 3.5,
+        "circle-stroke-color": "#232323",
+        "circle-stroke-width": 0.5,
+        "circle-stroke-opacity": 1.0
       }
     },
     {
       "id": "categorical-circle-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_gastronomia",
+      "source-layer": "gastronomia",
       "layout": {
         "text-field": [
           "get",
@@ -58,6 +65,5 @@
         "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

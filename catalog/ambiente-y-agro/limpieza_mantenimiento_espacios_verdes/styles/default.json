@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_limpieza_mantenimiento_espacios_verdes.pmtiles",
+      "url": "pmtiles://../limpieza_mantenimiento_espacios_verdes.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_limpieza_mantenimiento_espacios_verdes",
+      "source-layer": "limpieza_mantenimiento_espacios_verdes",
       "paint": {
         "fill-color": [
           "match",
@@ -33,14 +33,29 @@
           "#cccccc"
         ],
         "fill-opacity": 1.0,
-        "fill-outline-color": "#232323"
+        "fill-outline-color": [
+          "match",
+          [
+            "get",
+            "nombre"
+          ],
+          "El Tucumano",
+          "#232323",
+          "Lobo",
+          "#232323",
+          "24 de Marzo",
+          "#232323",
+          "Linaza",
+          "#232323",
+          "#000000"
+        ]
       }
     },
     {
       "id": "categorical-fill-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_limpieza_mantenimiento_espacios_verdes",
+      "source-layer": "limpieza_mantenimiento_espacios_verdes",
       "layout": {
         "text-field": [
           "get",
@@ -58,6 +73,5 @@
         "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

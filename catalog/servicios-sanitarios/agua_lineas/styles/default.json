@@ -1,0 +1,62 @@
+{
+  "version": 8,
+  "name": "agua_lineas",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../agua_lineas.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "agua_lineas",
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "clase"
+          ],
+          "CABECERA",
+          "#333ed0",
+          "DISTRIBUCION",
+          "#00ffdd",
+          "DOMICILIARIA",
+          "#4b92d5",
+          "IMPULSION",
+          "#8e63e5",
+          "#cccccc"
+        ],
+        "line-width": 4.0,
+        "line-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-line-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "agua_lineas",
+      "layout": {
+        "text-field": [
+          "get",
+          "diametro"
+        ],
+        "text-size": 13.0,
+        "text-anchor": "center",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#323232",
+        "text-halo-color": "#fafafa",
+        "text-halo-width": 2.0
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_zonas_seguridad.pmtiles",
+      "url": "pmtiles://../zonas_seguridad.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_zonas_seguridad",
+      "source-layer": "zonas_seguridad",
       "paint": {
         "fill-color": [
           "match",
@@ -43,7 +43,7 @@
       "id": "categorical-fill-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_zonas_seguridad",
+      "source-layer": "zonas_seguridad",
       "layout": {
         "text-field": [
           "get",

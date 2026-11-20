@@ -4,17 +4,17 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_localidades.pmtiles",
+      "url": "pmtiles://../localidades.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_localidades",
+      "source-layer": "localidades",
       "paint": {
         "circle-color": [
           "match",
@@ -28,7 +28,21 @@
           "#eeeeee",
           "paraje",
           "#eeeeee",
-          "#cccccc"
+          "#000000"
+        ],
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "ciudad",
+          1.0,
+          "pueblo",
+          1.0,
+          "paraje",
+          1.0,
+          0
         ],
         "circle-radius": [
           "match",
@@ -37,21 +51,144 @@
             "tipo"
           ],
           "ciudad",
-          29.0,
+          14.5,
           "pueblo",
-          14.0,
-          "paraje",
           7.0,
-          5.0
+          "paraje",
+          3.5,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sld-0-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "localidades",
+      "paint": {
+        "circle-color": "#000000",
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "ciudad",
+          1.0,
+          "pueblo",
+          1.0,
+          "paraje",
+          1.0,
+          0
         ],
-        "circle-opacity": 1.0
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "ciudad",
+          3.0,
+          "pueblo",
+          1.5,
+          "paraje",
+          1.0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sld-1-0-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "localidades",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "ciudad",
+          "#eeeeee",
+          "pueblo",
+          "#eeeeee",
+          "paraje",
+          "#eeeeee",
+          "#000000"
+        ],
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "ciudad",
+          1.0,
+          "pueblo",
+          1.0,
+          "paraje",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "ciudad",
+          14.5,
+          "pueblo",
+          7.0,
+          "paraje",
+          3.5,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sld-1-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "localidades",
+      "paint": {
+        "circle-color": "#000000",
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "ciudad",
+          1.0,
+          "pueblo",
+          1.0,
+          "paraje",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "ciudad",
+          3.0,
+          "pueblo",
+          1.5,
+          "paraje",
+          1.0,
+          0
+        ]
       }
     },
     {
       "id": "categorical-circle-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_localidades",
+      "source-layer": "localidades",
       "layout": {
         "text-field": [
           "get",
@@ -69,6 +206,5 @@
         "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

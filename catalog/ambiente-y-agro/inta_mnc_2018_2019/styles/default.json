@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_inta_mnc_2018_2019.pmtiles",
+      "url": "pmtiles://../inta_mnc_2018_2019.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_inta_mnc_2018_2019",
+      "source-layer": "inta_mnc_2018_2019",
       "paint": {
         "fill-color": [
           "match",

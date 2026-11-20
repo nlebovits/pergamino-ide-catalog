@@ -2,121 +2,34 @@
   "type": "Collection",
   "id": "ambiente-y-agro/cuencas_hidricas_norte_ba",
   "stac_version": "1.1.0",
-  "description": "Cuencas hídricas del norte de la Provincia de Buenos Aires que solapan al Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Ambiente y agro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_cuencas_hidricas_norte_ba.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_cuencas_hidricas_norte_ba"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiPolygon",
-  "geoparquet:feature_count": 10,
-  "table:row_count": 10,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "fid",
-      "type": "int64"
-    },
-    {
-      "name": "nombre",
-      "type": "string"
-    },
-    {
-      "name": "fuente",
-      "type": "string"
-    },
-    {
-      "name": "actualizacion",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.3533935,
-    -33.9205714,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_cuencas_hidricas_norte_ba"
-  ],
   "title": "Cuencas hídricas del Norte de la Provincia de Buenos Aires",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -61.39643931,
-          -34.57668835,
-          -59.5030258,
-          -33.2675429
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Cuencas hídricas del norte de la Provincia de Buenos Aires que solapan al Partido de Pergamino.",
+  "keywords": [
+    "salto",
+    "ramallo",
+    "san nicolas",
+    "colon",
+    "curso",
+    "cuenca",
+    "hidrica",
+    "arrecifes",
+    "rojas",
+    "rio",
+    "buenos aires",
+    "pergamino",
+    "nivel",
+    "arroyo",
+    "canal",
+    "curvas",
+    "agua"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -137,62 +50,215 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -61.3964393,
+          -34.5766883,
+          -59.5030258,
+          -33.2675432
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Ambiente y agro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/125",
+      "type": "text/html",
+      "title": "Cuencas hídricas del Norte de la Provincia de Buenos Aires en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:cuencas_hidricas_norte_ba",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:cuencas_hidricas_norte_ba)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./cuencas_hidricas_norte_ba.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "cuencas_hidricas_norte_ba"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 125,
+  "pergamino:geonode_uuid": "e38f274c-50b6-49b4-97cf-ff0c493293d2",
+  "pergamino:source_updated": "2026-05-14T11:26:23Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 10,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "fid",
+      "type": "int64"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "fuente",
+      "type": "string"
+    },
+    {
+      "name": "actualizacion",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPolygon",
+  "geoparquet:feature_count": 10,
   "assets": {
-    "publico_cuencas_hidricas_norte_ba": {
-      "href": "./publico_cuencas_hidricas_norte_ba.parquet",
+    "cuencas_hidricas_norte_ba": {
+      "href": "./cuencas_hidricas_norte_ba.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-14T11:26:23Z",
+      "pergamino:content_hash": "108824116841794282114:10",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 99358,
-      "file:checksum": "12200ed6aefad8e816e6e4cd41e8e88b0ea2e318e41fbd906c06632f51002aa3e07a",
       "roles": [
         "data"
       ],
+      "table:row_count": 10,
+      "file:size": 125437,
+      "file:checksum": "12206c7d4cdcd1ac2877254a47cf3eaefaf8f2c91bb5249a2d5ec8cba4f9db09b2b1",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4371,
-      "file:checksum": "1220f82fa58845edce4a660c96f4daa4a07bebe4da51ee1f63c1303290028299632d",
+    "version-2026-08-14": {
+      "href": "./publico_cuencas_hidricas_norte_ba.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:cuencas_hidricas_norte_ba). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 10,
+      "file:size": 99358,
+      "file:checksum": "12200ed6aefad8e816e6e4cd41e8e88b0ea2e318e41fbd906c06632f51002aa3e07a"
     },
-    "publico_cuencas_hidricas_norte_ba-tiles": {
-      "href": "./publico_cuencas_hidricas_norte_ba.pmtiles",
+    "cuencas_hidricas_norte_ba-tiles": {
+      "href": "./cuencas_hidricas_norte_ba.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_cuencas_hidricas_norte_ba (vector tiles)",
-      "file:size": 772006,
-      "file:checksum": "1220170712340d4182696444ef1672d62684f9ae7ab91152e8e4ec7e7c0c2e9c636e",
       "roles": [
         "visual"
       ],
+      "file:size": 772142,
+      "file:checksum": "122070cea8ddf324f0548e6fcec794f2b1a8e729c234d15e0d7765e4020b4aec8c85",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "cuencas_hidricas_norte_ba",
-      "file:size": 518,
-      "file:checksum": "1220e3c9605d933bf2ceac28a157becb4a40192e8bb2e0a84cc7e392bcca3156cba5",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 501,
+      "file:checksum": "12207894ee460ed11d8a6d08c94c119810257c768b815ee77493c713b47852ae2ba7",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 281,
+      "file:checksum": "1220f1c12fb7b8ddfa53a43b9b45460afc82e08a8019af8097b24b2f8439a716cf81",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_cuencas_hidricas_norte_ba.thumb.jpg",
+      "href": "./cuencas_hidricas_norte_ba.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 81863,
-      "file:checksum": "1220b508834a09eefc4b14ff009485dbee339827af4fa2bcc86a2cc318b7a8c5011f",
+      "file:size": 57305,
+      "file:checksum": "1220997213e6dec3207fc02a94b796997c45882393b6f15e8d8a400fa996052c996a",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3625,
+      "file:checksum": "122015009ad051c23e863bfdb7bf8fa71ee77fcc2fa911efc142e85784ee6b39ad8a",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "cuencas_hidricas_norte_ba"
+  ]
 }

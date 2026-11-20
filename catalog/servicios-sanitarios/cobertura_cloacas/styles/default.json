@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "name": "cobertura_cloacas",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../cobertura_cloacas.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "categorical-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "cobertura_cloacas",
+      "paint": {
+        "fill-color": [
+          "match",
+          [
+            "get",
+            "gestion"
+          ],
+          "Anterior a 2015",
+          "#d8c3a5",
+          "entre 2015 y 2019",
+          "#c7a27d",
+          "entre 2019 y 2023",
+          "#b07d56",
+          "entre 2023 y 2027",
+          "#8f5a3c",
+          "#cccccc"
+        ],
+        "fill-opacity": 0.55,
+        "fill-outline-color": "#8d7b68"
+      }
+    }
+  ]
+}

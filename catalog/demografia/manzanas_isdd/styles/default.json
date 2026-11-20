@@ -1,0 +1,44 @@
+{
+  "version": 8,
+  "name": "manzanas_isdd",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../manzanas_isdd.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "graduated-fill",
+      "type": "fill",
+      "source": "data",
+      "source-layer": "manzanas_isdd",
+      "paint": {
+        "fill-color": [
+          "step",
+          [
+            "get",
+            "densidad_isdd_hab_ha"
+          ],
+          "#ffea46",
+          1.0,
+          "#d5c264",
+          15.0,
+          "#a79e75",
+          40.0,
+          "#7d7c78",
+          60.0,
+          "#575c6d",
+          90.0,
+          "#243e6c",
+          150.0,
+          "#00204d"
+        ],
+        "fill-opacity": 0.8,
+        "fill-outline-color": "#ffffff"
+      }
+    }
+  ]
+}

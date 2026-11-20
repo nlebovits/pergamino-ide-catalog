@@ -2,117 +2,25 @@
   "type": "Collection",
   "id": "ambiente-y-agro/banados",
   "stac_version": "1.1.0",
-  "description": "Capa de bañados de la cuenca del Arroyo Pergamino. La extensión de la capa supera el territorio del Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Ambiente y agro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_banados.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_banados"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 10,
-  "table:row_count": 10,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "area",
-      "type": "double"
-    },
-    {
-      "name": "perimetro",
-      "type": "double"
-    },
-    {
-      "name": "fuente",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.8258056,
-    -33.8202299,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_banados"
-  ],
   "title": "Bañados",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -61.0044309,
-          -33.95851724,
-          -60.7463479,
-          -33.72149794
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Capa de bañados de la cuenca del Arroyo Pergamino. La extensión de la capa supera el territorio del Partido de Pergamino.",
+  "keywords": [
+    "humedal",
+    "biodiversidad",
+    "bañado",
+    "banado",
+    "cuenca",
+    "pergamino",
+    "arroyo",
+    "agua"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -133,62 +41,211 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -61.0044307,
+          -33.9585172,
+          -60.7463484,
+          -33.7214979
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Ambiente y agro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/65",
+      "type": "text/html",
+      "title": "Bañados en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:banados",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:banados)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./banados.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "banados"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 65,
+  "pergamino:geonode_uuid": "cf9b4451-a805-4687-90a3-bcbd8da4fea8",
+  "pergamino:source_updated": "2026-05-18T12:34:25Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 10,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "area",
+      "type": "double"
+    },
+    {
+      "name": "perimetro",
+      "type": "double"
+    },
+    {
+      "name": "fuente",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 10,
   "assets": {
-    "publico_banados": {
-      "href": "./publico_banados.parquet",
+    "banados": {
+      "href": "./banados.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-18T12:34:25Z",
+      "pergamino:content_hash": "73012961134237375359:10",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 13689,
-      "file:checksum": "12204ccc753fdb95fc00dc4b5a794a9676c9e573984f6b5808cb6d551e1db9926b99",
       "roles": [
         "data"
       ],
+      "table:row_count": 10,
+      "file:size": 15581,
+      "file:checksum": "1220004a81306068a5df8675ba39c2bc1e9dd9d11e23278aea930a563d3d5828eeaf",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4311,
-      "file:checksum": "12206e70e09aa3004751cb33624e4e97f2c7a2387143acccf7cf2cd7df0ee65123bf",
+    "version-2026-08-14": {
+      "href": "./publico_banados.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:banados). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 10,
+      "file:size": 13689,
+      "file:checksum": "12204ccc753fdb95fc00dc4b5a794a9676c9e573984f6b5808cb6d551e1db9926b99"
     },
-    "publico_banados-tiles": {
-      "href": "./publico_banados.pmtiles",
+    "banados-tiles": {
+      "href": "./banados.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_banados (vector tiles)",
-      "file:size": 53045,
-      "file:checksum": "12204ab6667c1c79c6c5d7e6d95a7947f0f28dd13e0181f9556b89ad1d7ddf001599",
       "roles": [
         "visual"
       ],
+      "file:size": 53251,
+      "file:checksum": "1220a218d814f1be77d5f96e11321c238a6b83f12008d4a6d8fe0d79487de8f918d6",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "bañados",
-      "file:size": 463,
-      "file:checksum": "1220213a7a9627d4ddb77fee836b5c5373689a13a3e4348ffd0a627057352e4d7066",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 447,
+      "file:checksum": "122073c2642298f694b7d15b0e8e3da01b89a1fc8d857e242675c13c86637eeea86c",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 142,
+      "file:checksum": "1220886ba209f817eb4744258573ebfbf54e7798c737ab0567e78aab7a97c8e142fd",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_banados.thumb.jpg",
+      "href": "./banados.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 56847,
-      "file:checksum": "12203cf317883ae1c73a9c519ee953537f62cea87cf7b3e4ce81e3e1f6356d8a3c1b",
+      "file:size": 37884,
+      "file:checksum": "122011ea3e49c1f94ece54edf3d40b7184e34877ca563edf1a548a0d6a03b437b492",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3553,
+      "file:checksum": "12206fb649a888a9d545611f99581ac87d4898bef3fe7cfe1d0c4e6a7d14551e59cf",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "banados"
+  ]
 }

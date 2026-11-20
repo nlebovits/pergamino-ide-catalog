@@ -2,129 +2,25 @@
   "type": "Collection",
   "id": "energia-y-conectividad/red_federal_fibra_optica_tramos",
   "stac_version": "1.1.0",
-  "description": "Capa de tramos de la Red Federal de Fibra Óptica de Argentina (REFEFO) en un radio de 50km desde el Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Energía y conectividad"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Ared_federal_fibra_optica_tramos",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:red_federal_fibra_optica_tramos"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_red_federal_fibra_optica_tramos.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_red_federal_fibra_optica_tramos"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "MultiLineString",
-  "geoparquet:feature_count": 53,
-  "table:row_count": 53,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "id",
-      "type": "int64"
-    },
-    {
-      "name": "cuicom",
-      "type": "int64"
-    },
-    {
-      "name": "nivacc",
-      "type": "int64"
-    },
-    {
-      "name": "actual",
-      "type": "timestamp[us]"
-    },
-    {
-      "name": "observ",
-      "type": "string"
-    },
-    {
-      "name": "nombre_tramo",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.6610107,
-    -33.0132697,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_red_federal_fibra_optica_tramos"
-  ],
   "title": "Tramos de la Red Federal de Fibra Óptica",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -61.109921,
-          -34.57499725,
-          -59.656732,
-          -32.9103978
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Capa de tramos de la Red Federal de Fibra Óptica de Argentina (REFEFO) en un radio de 50km desde el Partido de Pergamino.",
+  "keywords": [
+    "internet",
+    "red",
+    "comunicaciones",
+    "pergamino",
+    "tramos",
+    "optica",
+    "refefo",
+    "fibra"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -152,73 +48,219 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -61.109921,
+          -34.5749973,
+          -59.6567321,
+          -32.9103978
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Energía y conectividad"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/246",
+      "type": "text/html",
+      "title": "Tramos de la Red Federal de Fibra Óptica en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:red_federal_fibra_optica_tramos",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:red_federal_fibra_optica_tramos)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./red_federal_fibra_optica_tramos.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "red_federal_fibra_optica_tramos"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 246,
+  "pergamino:geonode_uuid": "024a93d7-e568-4bfc-a37d-e25606260d9c",
+  "pergamino:source_updated": "2026-05-21T13:17:48Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 53,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "cuicom",
+      "type": "int64"
+    },
+    {
+      "name": "nivacc",
+      "type": "int64"
+    },
+    {
+      "name": "actual",
+      "type": "timestamp[us]"
+    },
+    {
+      "name": "observ",
+      "type": "string"
+    },
+    {
+      "name": "nombre_tramo",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiLineString",
+  "geoparquet:feature_count": 53,
   "assets": {
-    "publico_red_federal_fibra_optica_tramos": {
-      "href": "./publico_red_federal_fibra_optica_tramos.parquet",
+    "red_federal_fibra_optica_tramos": {
+      "href": "./red_federal_fibra_optica_tramos.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-21T13:17:48Z",
+      "pergamino:content_hash": "456430875014977593229:53",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 41507,
-      "file:checksum": "122027ee8756e4e40e35063519c608da1350d33afb6f789150df2599fa8d6dd577e0",
       "roles": [
         "data"
       ],
+      "table:row_count": 53,
+      "file:size": 37854,
+      "file:checksum": "122011a2fe55e9a001b19a5142464d3a4b56d8f6ade6fad7d335de357a8e3d7c9f1a",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_red_federal_fibra_optica_tramos.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:red_federal_fibra_optica_tramos). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 53,
+      "file:size": 41507,
+      "file:checksum": "122027ee8756e4e40e35063519c608da1350d33afb6f789150df2599fa8d6dd577e0"
+    },
+    "red_federal_fibra_optica_tramos-tiles": {
+      "href": "./red_federal_fibra_optica_tramos.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 491741,
+      "file:checksum": "122099bd54a786d6b8b9f62da2fc6cd50f4e3db2cdd67751a099fe3406f48865ac1e",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "refefo_tramos",
-      "file:size": 521,
-      "file:checksum": "12203133fcbcfd01d6a196f2b517d118b6ddf78c98d11c9e22852170ced7fa56ac63",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 505,
+      "file:checksum": "1220bec0f793191f481ae1a3e28dbad3f85de3f09f4ca96ecbf0a7d5aec6388bfff7",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 200,
       "file:checksum": "1220dd5c253cb0dbdcf737d17cf93c2ad9908351a05aeef48f62f734efbc074d2bdf",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1294,
-      "file:checksum": "12207db005431c4ed069dc3af08ba81ff26bb65b6112a70d78a920f082606c2c0fcf",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_red_federal_fibra_optica_tramos-tiles": {
-      "href": "./publico_red_federal_fibra_optica_tramos.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_red_federal_fibra_optica_tramos (vector tiles)",
-      "file:size": 503979,
-      "file:checksum": "122041dd80308c53d6c4398f90238063cf1e9f7fd92d57ba4b0c7aeb2be44d0dcd99",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_red_federal_fibra_optica_tramos.thumb.jpg",
+      "href": "./red_federal_fibra_optica_tramos.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 84827,
-      "file:checksum": "122068c83433053f9eef24c3e3721f4266aff256d651002533a8c039c2baf2b2c2e3",
+      "file:size": 51519,
+      "file:checksum": "1220add22df2de1451aa3f8fa74be10ec6006b070048a0201027abece9de7ccfc66d",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3596,
+      "file:checksum": "1220a9f1fb44940a7b69f97e84d48a98ffa1c03cf3b527fb9006c3aa7307a1126d61",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "red_federal_fibra_optica_tramos"
+  ]
 }

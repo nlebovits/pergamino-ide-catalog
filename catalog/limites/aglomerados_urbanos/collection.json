@@ -2,7 +2,68 @@
   "type": "Collection",
   "id": "limites/aglomerados_urbanos",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Aglomerados urbanos",
   "description": "Mancha de aglomerados urbanos del Partido de Pergamino donde se observan edificaciones e instalaciones urbanas en las cuales se desarrollan actividades humanas.",
+  "keywords": [
+    "social",
+    "limite",
+    "urbano",
+    "actividad",
+    "rural",
+    "mancha",
+    "pergamino",
+    "aglomerados",
+    "periferia",
+    "perirubano",
+    "humano"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.8493298,
+          -34.0942993,
+          -60.1628531,
+          -33.5844608
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -11,54 +72,59 @@
       "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
     },
     {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
       "rel": "parent",
       "href": "../catalog.json",
       "type": "application/json",
       "title": "Límites administrativos"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/46",
+      "type": "text/html",
+      "title": "Aglomerados urbanos en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:aglomerados_urbanos",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:aglomerados_urbanos)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_aglomerados_urbanos.pmtiles",
+      "href": "./aglomerados_urbanos.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_aglomerados_urbanos"
+        "aglomerados_urbanos"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 166,
-  "table:row_count": 166,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 46,
+  "pergamino:geonode_uuid": "602ec356-afd3-453c-b48b-bcf64ff1ccb4",
+  "pergamino:source_updated": "2026-05-18T16:31:38Z",
+  "pergamino:update_frequency": "asNeeded",
   "table:primary_geometry": "geometry",
+  "table:row_count": 166,
   "table:columns": [
     {
       "name": "id",
@@ -106,121 +172,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.6060791,
-    -33.8840972,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_aglomerados_urbanos"
-  ],
-  "title": "Aglomerados urbanos",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.8493299,
-          -34.09429927,
-          -60.162853,
-          -33.58446085
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 166,
   "assets": {
-    "publico_aglomerados_urbanos": {
-      "href": "./publico_aglomerados_urbanos.parquet",
+    "aglomerados_urbanos": {
+      "href": "./aglomerados_urbanos.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-18T16:31:38Z",
+      "pergamino:content_hash": "1497200816115329451686:166",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 50585,
-      "file:checksum": "1220a1487a00b613d4379d193b756b836eb5c96aaac7face4f22d69ceb84ae3a4083",
       "roles": [
         "data"
       ],
+      "table:row_count": 166,
+      "file:size": 53169,
+      "file:checksum": "12200a05d5c4b52cd8f4917c54d53835ec7ac86cd45559bbc0028da8bb4c037c8e96",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4567,
-      "file:checksum": "12200f55ace9938f69dd413b38f46ff46261379a160f202797bd4015c74eb1efcbf6",
+    "version-2026-08-14": {
+      "href": "./publico_aglomerados_urbanos.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:aglomerados_urbanos). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 166,
+      "file:size": 50585,
+      "file:checksum": "1220a1487a00b613d4379d193b756b836eb5c96aaac7face4f22d69ceb84ae3a4083"
     },
-    "publico_aglomerados_urbanos-tiles": {
-      "href": "./publico_aglomerados_urbanos.pmtiles",
+    "aglomerados_urbanos-tiles": {
+      "href": "./aglomerados_urbanos.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_aglomerados_urbanos (vector tiles)",
-      "file:size": 333247,
-      "file:checksum": "12206a7869d2a945de738b540baad837d2a16c2ae3ce626fcdd2e185de84612635ce",
       "roles": [
         "visual"
       ],
+      "file:size": 330890,
+      "file:checksum": "1220c38ae4c700039b5a2624e1847c1836d43acd33d3aa2255ffd153b959dccf3062",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "aglomerados_urbanos",
-      "file:size": 762,
-      "file:checksum": "1220a9ed293c5d38d7580447be165d0189504b4c7a4ea565b9685fc35ca70d258145",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 746,
+      "file:checksum": "1220b19a02932b06709a7a592bfe5c38636ba0d5c74a9342be4e26118851aed7ff03",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 908,
+      "file:checksum": "12204a14725c634c5ed886c06a07628e25f69c11df61ee40d68470b65ce2b3519afc",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_aglomerados_urbanos.thumb.jpg",
+      "href": "./aglomerados_urbanos.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 39997,
-      "file:checksum": "12202a272bdbba135ef8161a9f55284a2bd30862669853a8f98758099c09dc28c6dc",
+      "file:size": 29019,
+      "file:checksum": "1220fe2d69d306a9cef2aa717c445275e2a5ef57f409446bf82f653ec3aaf3c62a97",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3913,
+      "file:checksum": "12202406d231ba62ba56b9ab457c3df6d3c88fed200e528bfc46b20f92e4bc62c4a2",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "aglomerados_urbanos"
+  ]
 }

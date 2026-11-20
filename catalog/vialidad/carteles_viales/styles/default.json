@@ -4,17 +4,17 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_carteles_viales.pmtiles",
+      "url": "pmtiles://../carteles_viales.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_carteles_viales",
+      "source-layer": "carteles_viales",
       "paint": {
         "circle-color": [
           "match",
@@ -28,10 +28,78 @@
           "#ffffff",
           "preventiva",
           "#dada0f",
-          "#cccccc"
+          "#000000"
         ],
-        "circle-radius": 7.0,
-        "circle-opacity": 1.0
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "categoria"
+          ],
+          "informativa",
+          1.0,
+          "prescriptiva",
+          1.0,
+          "preventiva",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "categoria"
+          ],
+          "informativa",
+          3.5,
+          "prescriptiva",
+          3.5,
+          "preventiva",
+          3.5,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "categoria"
+          ],
+          "informativa",
+          "#ffffff",
+          "prescriptiva",
+          "#ed1447",
+          "preventiva",
+          "#232323",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "categoria"
+          ],
+          "informativa",
+          0.5,
+          "prescriptiva",
+          1.0,
+          "preventiva",
+          1.0,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "categoria"
+          ],
+          "informativa",
+          1.0,
+          "prescriptiva",
+          1.0,
+          "preventiva",
+          1.0,
+          0
+        ]
       }
     }
   ]

@@ -4,21 +4,135 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_estaciones_servicio.pmtiles",
+      "url": "pmtiles://../estaciones_servicio.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_estaciones_servicio",
+      "source-layer": "estaciones_servicio",
       "paint": {
-        "circle-color": "#888888",
-        "circle-radius": 10.0,
-        "circle-opacity": 1.0
+        "circle-color": "#ff0000",
+        "circle-opacity": 1.0,
+        "circle-radius": 0.5,
+        "circle-stroke-color": "#232323",
+        "circle-stroke-width": 2.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estaciones_servicio",
+      "paint": {
+        "circle-color": "#ff0000",
+        "circle-opacity": 1.0,
+        "circle-radius": 0.5,
+        "circle-stroke-color": "#232323",
+        "circle-stroke-width": 2.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-2-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estaciones_servicio",
+      "paint": {
+        "circle-color": "#ff0000",
+        "circle-opacity": 1.0,
+        "circle-radius": 0.5,
+        "circle-stroke-color": "#232323",
+        "circle-stroke-width": 2.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-3-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estaciones_servicio",
+      "paint": {
+        "circle-color": "#0056d6",
+        "circle-opacity": 1.0,
+        "circle-radius": 5.5
+      }
+    },
+    {
+      "id": "sld-4-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estaciones_servicio",
+      "paint": {
+        "circle-color": "#0056d6",
+        "circle-opacity": 1.0,
+        "circle-radius": 5.5
+      }
+    },
+    {
+      "id": "sld-5-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estaciones_servicio",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 3.0
+      }
+    },
+    {
+      "id": "sld-6-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estaciones_servicio",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 2.0
+      }
+    },
+    {
+      "id": "sld-7-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estaciones_servicio",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 2.0
+      }
+    },
+    {
+      "id": "sld-8-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estaciones_servicio",
+      "paint": {
+        "circle-color": "#ff0000",
+        "circle-opacity": 1.0,
+        "circle-radius": 4.5,
+        "circle-stroke-color": "#232323",
+        "circle-stroke-width": 2.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-9-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estaciones_servicio",
+      "paint": {
+        "circle-color": "#ff0000",
+        "circle-opacity": 1.0,
+        "circle-radius": 8.0,
+        "circle-stroke-color": "#232323",
+        "circle-stroke-width": 2.0,
+        "circle-stroke-opacity": 1.0
       }
     }
   ]

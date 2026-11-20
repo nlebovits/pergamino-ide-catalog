@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_zonas_electorales_celp.pmtiles",
+      "url": "pmtiles://../zonas_electorales_celp.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_zonas_electorales_celp",
+      "source-layer": "zonas_electorales_celp",
       "paint": {
         "fill-color": [
           "match",

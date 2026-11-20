@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_luminarias.pmtiles",
+      "url": "pmtiles://../luminarias.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_luminarias",
+      "source-layer": "luminarias",
       "paint": {
         "circle-color": [
           "match",
@@ -32,7 +32,22 @@
           "#ffffff",
           "#cccccc"
         ],
-        "circle-radius": 6.0,
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo_lampara"
+          ],
+          "SODIO",
+          3.0,
+          "LED",
+          3.0,
+          "sin datos",
+          3.0,
+          "ninguna",
+          3.0,
+          2.5
+        ],
         "circle-opacity": 1.0
       }
     }

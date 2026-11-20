@@ -6,7 +6,7 @@
   ],
   "id": "limites",
   "title": "Límites administrativos",
-  "description": "Límites del partido, barrios, localidades y pueblos, delegaciones, aglomerados urbanos, manchas urbanas históricas desde 1773, circuitos electorales y códigos postales.",
+  "description": "Límites del partido, barrios y pueblos, localidades y sus áreas, delegaciones, aglomerados urbanos, manchas urbanas históricas desde 1773, circuitos electorales y códigos postales.",
   "links": [
     {
       "rel": "root",
@@ -26,9 +26,15 @@
     },
     {
       "rel": "child",
-      "href": "./barrios/collection.json",
+      "href": "./areas_localidades/collection.json",
       "type": "application/json",
-      "title": "Barrios"
+      "title": "Áreas de localidades por método Voronoi"
+    },
+    {
+      "rel": "child",
+      "href": "./barrios_y_pueblos/collection.json",
+      "type": "application/json",
+      "title": "Barrios y pueblos"
     },
     {
       "rel": "child",
@@ -68,12 +74,6 @@
     },
     {
       "rel": "child",
-      "href": "./pueblos/collection.json",
-      "type": "application/json",
-      "title": "Pueblos"
-    },
-    {
-      "rel": "child",
       "href": "./zonas_electorales_celp/collection.json",
       "type": "application/json",
       "title": "Zonas electorales celp"
@@ -91,5 +91,5 @@
       "title": "Human-readable documentation"
     }
   ],
-  "updated": "2026-11-20T07:41:37Z"
+  "updated": "2026-11-20T09:51:46Z"
 }

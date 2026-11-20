@@ -4,23 +4,24 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_centros_de_salud.pmtiles",
+      "url": "pmtiles://../centros_de_salud.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_centros_de_salud",
+      "source-layer": "centros_de_salud",
       "paint": {
         "circle-color": "#ffffff",
-        "circle-radius": 9.0,
         "circle-opacity": 1.0,
-        "circle-stroke-color": "#333333",
-        "circle-stroke-width": 1.2
+        "circle-radius": 9.0,
+        "circle-stroke-color": "#ff2222",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
       }
     }
   ]

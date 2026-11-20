@@ -2,7 +2,64 @@
   "type": "Collection",
   "id": "vialidad/luminarias",
   "stac_version": "1.1.0",
-  "description": "Luminarias en vía pública del Partido de Pergamino. Permite distinguir las zonas con luminaria LED y de sodio, así como el tipo de soporte de poste.",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Luminarias en vía pública",
+  "description": "Luminarias en vía pública del Partido de Pergamino.",
+  "keywords": [
+    "celp",
+    "pergamino",
+    "sodio",
+    "luminaria",
+    "poste",
+    "led",
+    "luz"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.8481771,
+          -34.0972666,
+          -60.1630829,
+          -33.6523376
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,48 +74,59 @@
       "title": "Vialidad"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/199",
+      "type": "text/html",
+      "title": "Luminarias en vía pública en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:luminarias",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:luminarias)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aluminarias",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:luminarias"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_luminarias.pmtiles",
+      "href": "./luminarias.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_luminarias"
+        "luminarias"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "MultiPoint",
-  "geoparquet:feature_count": 25152,
-  "table:row_count": 25152,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 199,
+  "pergamino:geonode_uuid": "da18cb91-648a-46ad-bc01-1ddace8a70da",
+  "pergamino:source_updated": "2026-05-06T12:28:35Z",
+  "pergamino:update_frequency": "continual",
   "table:primary_geometry": "geometry",
+  "table:row_count": 25339,
   "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
     {
       "name": "id",
       "type": "int64"
@@ -188,134 +256,107 @@
       "type": "string"
     },
     {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5841064,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_luminarias"
-  ],
-  "title": "Luminarias en vía pública",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.84817714,
-          -34.097267,
-          -60.16356653,
-          -33.65233763
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "MultiPoint",
+  "geoparquet:feature_count": 25339,
   "assets": {
-    "publico_luminarias": {
-      "href": "./publico_luminarias.parquet",
+    "luminarias": {
+      "href": "./luminarias.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-06T12:28:35Z",
+      "pergamino:content_hash": "234415066231149964572223:25339",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 1863015,
-      "file:checksum": "12204038baa87fb88d71b0bcc3487a05c6bd281237a0d796f36c3508d48306c87044",
       "roles": [
         "data"
       ],
+      "table:row_count": 25339,
+      "file:size": 1676361,
+      "file:checksum": "122099e5cb3e61e09fb50b29e19eace0a0efcb2c61e696d9dbffe7ddff8c75b8ff8b",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_luminarias.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:luminarias). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 25152,
+      "file:size": 1863015,
+      "file:checksum": "12204038baa87fb88d71b0bcc3487a05c6bd281237a0d796f36c3508d48306c87044"
+    },
+    "luminarias-tiles": {
+      "href": "./luminarias.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 10561828,
+      "file:checksum": "1220535b5a791b51d3fd370e19b9458886800f7a73af298547dd1771d79933511859",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "luminarias",
-      "file:size": 755,
-      "file:checksum": "122042494fcb92917324721f376976afb28f0185648c75c54d194ae4def87167a470",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 992,
+      "file:checksum": "1220f032c88c62cd205b9836c997e3e6f3dd4ced025f7c6827eb526ee92d7e91124e",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 1113,
       "file:checksum": "1220d3ec08dad9411da195b44842eb81222aaedb4749c529427b0552ec63ed27aada",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1943,
-      "file:checksum": "1220e3d552f8d25f488a04be6d9f804e0f5dc5d32965b96cebd4bf23d34f1ded4020",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_luminarias-tiles": {
-      "href": "./publico_luminarias.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_luminarias (vector tiles)",
-      "file:size": 2705890,
-      "file:checksum": "1220ac9873e27bdd10305169ee1e3b41586cb7da723cfca5107212218ab36d354502",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_luminarias.thumb.jpg",
+      "href": "./luminarias.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 46892,
-      "file:checksum": "122002ebe0ad7784c3d794a2268e47eae74e7374c20170ce5df38f4292349861363c",
+      "file:size": 46027,
+      "file:checksum": "1220888a70e323ddf33291543d5741071cee540053e3ae5652ae904504e462eac1fa",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 4282,
+      "file:checksum": "12202711d4039adc9b221795ebe3b13621b0926bc09fd13c674d6926c0c755e56fc8",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "luminarias"
+  ]
 }

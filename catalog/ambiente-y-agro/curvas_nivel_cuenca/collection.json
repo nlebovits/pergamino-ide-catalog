@@ -2,113 +2,26 @@
   "type": "Collection",
   "id": "ambiente-y-agro/curvas_nivel_cuenca",
   "stac_version": "1.1.0",
-  "description": "Curvas de nivel elaboradas por IATASA-ABS para el proyecto de la Presa del Arroyo Pergamino, nivel de paso a 2.5m. El área de la cuenca excede los límites del Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Ambiente y agro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_curvas_nivel_cuenca.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_curvas_nivel_cuenca"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "LineString",
-  "geoparquet:feature_count": 848,
-  "table:row_count": 848,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "cota",
-      "type": "double"
-    },
-    {
-      "name": "fuente",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.8367919,
-    -33.7654485,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_curvas_nivel_cuenca"
-  ],
   "title": "Curvas de nivel cuenca Arroyo Pergamino",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -61.101931,
-          -34.0632739,
-          -60.5032879,
-          -33.67098559
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Curvas de nivel elaboradas por IATASA-ABS para el proyecto de la Presa del Arroyo Pergamino, nivel de paso a 2.5m. El área de la cuenca excede los límites del Partido de Pergamino.",
+  "keywords": [
+    "iatasa",
+    "cuencas",
+    "elevacion",
+    "pergamino",
+    "arroyo",
+    "curvas",
+    "nivel",
+    "abs",
+    "isolineas"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -135,62 +48,207 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -61.1019305,
+          -34.0632737,
+          -60.5032882,
+          -33.6709856
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Ambiente y agro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/128",
+      "type": "text/html",
+      "title": "Curvas de nivel cuenca Arroyo Pergamino en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:curvas_nivel_cuenca",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:curvas_nivel_cuenca)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./curvas_nivel_cuenca.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "curvas_nivel_cuenca"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 128,
+  "pergamino:geonode_uuid": "8620b5cf-22ab-4343-a799-af31cd0651b4",
+  "pergamino:source_updated": "2026-05-13T17:20:15Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 848,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "fuente",
+      "type": "string"
+    },
+    {
+      "name": "cotas",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "LineString",
+  "geoparquet:feature_count": 848,
   "assets": {
-    "publico_curvas_nivel_cuenca": {
-      "href": "./publico_curvas_nivel_cuenca.parquet",
+    "curvas_nivel_cuenca": {
+      "href": "./curvas_nivel_cuenca.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-13T17:20:15Z",
+      "pergamino:content_hash": "8056567558767148985634:848",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 575465,
-      "file:checksum": "1220ca4de75a0620f7da419a0bf857cec93daa3bb20aab53070d52bfae8522d1bb87",
       "roles": [
         "data"
       ],
+      "table:row_count": 848,
+      "file:size": 586311,
+      "file:checksum": "12207becf4e67110d0b0ae0f36eea7a2f7ee5c9fc838921da0417ec135e5e5a48b23",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4310,
-      "file:checksum": "12203c1c20252da5f390619216ae8e588d7c6be653fc2a809e9545152a7aa497e9eb",
+    "version-2026-08-14": {
+      "href": "./publico_curvas_nivel_cuenca.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:curvas_nivel_cuenca). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 848,
+      "file:size": 575465,
+      "file:checksum": "1220ca4de75a0620f7da419a0bf857cec93daa3bb20aab53070d52bfae8522d1bb87"
     },
-    "publico_curvas_nivel_cuenca-tiles": {
-      "href": "./publico_curvas_nivel_cuenca.pmtiles",
+    "curvas_nivel_cuenca-tiles": {
+      "href": "./curvas_nivel_cuenca.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_curvas_nivel_cuenca (vector tiles)",
-      "file:size": 904237,
-      "file:checksum": "122002f74bf9ccb00daaa81004c7d5c727e8d31e41266dea72acf6b5b08a9933b3ef",
       "roles": [
         "visual"
       ],
+      "file:size": 985324,
+      "file:checksum": "1220bffb5442d5240946dcfe8893d13fd3763230f105d9bb2ba088bf179edb388986",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "curvas_nivel_cuenca",
-      "file:size": 972,
-      "file:checksum": "1220163c24d67949a5f8e320da80c34b99645486a7cf8365893f55d49ed41caa9dc5",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 948,
+      "file:checksum": "12208f3c59d62bf6aa90cc2a319270c3151f2a3f77679885c0cc320c78675b38c4f7",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 901,
+      "file:checksum": "12209725a1e05563f59956d77a5fb48ca2fced09d3371e3ae0a49fab7101176ef2e4",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_curvas_nivel_cuenca.thumb.jpg",
+      "href": "./curvas_nivel_cuenca.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 212935,
-      "file:checksum": "122051f7ec06bb0015dd9489ae240c8e12807598f1afca7ddae340dcb987c09c8a9a",
+      "file:size": 204939,
+      "file:checksum": "122009f261ed6a7aad608a94fb6ba3a2398ed12269dfe3db705007e0730e38167cbb",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3666,
+      "file:checksum": "1220e130599691ae19db715981f0606b8c8f69b681532d06caae05db5d6959a88212",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "curvas_nivel_cuenca"
+  ]
 }

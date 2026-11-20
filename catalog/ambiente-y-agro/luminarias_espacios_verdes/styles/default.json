@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_luminarias_espacios_verdes.pmtiles",
+      "url": "pmtiles://../luminarias_espacios_verdes.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,10 +14,10 @@
       "id": "circle-0",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_luminarias_espacios_verdes",
+      "source-layer": "luminarias_espacios_verdes",
       "paint": {
-        "circle-color": "#E74C3C",
-        "circle-radius": 4.0,
+        "circle-color": "#3d8035",
+        "circle-radius": 3.5,
         "circle-opacity": 1.0
       }
     }

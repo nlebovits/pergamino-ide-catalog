@@ -4,17 +4,17 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_hospedajes.pmtiles",
+      "url": "pmtiles://../hospedajes.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_hospedajes",
+      "source-layer": "hospedajes",
       "paint": {
         "circle-color": [
           "match",
@@ -32,17 +32,117 @@
           "#dab044",
           "Rural",
           "#708dd6",
-          "#cccccc"
+          "Apart",
+          "#caff3a",
+          "#000000"
         ],
-        "circle-radius": 7.0,
-        "circle-opacity": 1.0
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Camping",
+          1.0,
+          "Hotel",
+          1.0,
+          "Motel",
+          1.0,
+          "Residencial",
+          1.0,
+          "Rural",
+          1.0,
+          "Apart",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Camping",
+          3.5,
+          "Hotel",
+          3.5,
+          "Motel",
+          3.5,
+          "Residencial",
+          3.5,
+          "Rural",
+          3.5,
+          "Apart",
+          3.5,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Camping",
+          "#232323",
+          "Hotel",
+          "#232323",
+          "Motel",
+          "#232323",
+          "Residencial",
+          "#232323",
+          "Rural",
+          "#232323",
+          "Apart",
+          "#232323",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Camping",
+          0.5,
+          "Hotel",
+          0.5,
+          "Motel",
+          0.5,
+          "Residencial",
+          0.5,
+          "Rural",
+          0.5,
+          "Apart",
+          0.5,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Camping",
+          1.0,
+          "Hotel",
+          1.0,
+          "Motel",
+          1.0,
+          "Residencial",
+          1.0,
+          "Rural",
+          1.0,
+          "Apart",
+          1.0,
+          0
+        ]
       }
     },
     {
       "id": "categorical-circle-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_hospedajes",
+      "source-layer": "hospedajes",
       "layout": {
         "text-field": [
           "get",
@@ -60,6 +160,5 @@
         "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

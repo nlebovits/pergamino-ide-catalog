@@ -2,169 +2,26 @@
   "type": "Collection",
   "id": "vialidad/cordon_cuneta",
   "stac_version": "1.1.0",
-  "description": "Describe si la calle posee cordón cuneta ejecutado, tanto en ambas como en alguna de ellas: ambas, par, impar, ninguno y no_corresponde.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Vialidad"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_cordon_cuneta.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_cordon_cuneta"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiLineString",
-  "geoparquet:feature_count": 11703,
-  "table:row_count": 11703,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "id",
-      "type": "int64"
-    },
-    {
-      "name": "nombre",
-      "type": "string"
-    },
-    {
-      "name": "impar_ini",
-      "type": "int64"
-    },
-    {
-      "name": "impar_fin",
-      "type": "int64"
-    },
-    {
-      "name": "par_ini",
-      "type": "int64"
-    },
-    {
-      "name": "par_fin",
-      "type": "int64"
-    },
-    {
-      "name": "clase",
-      "type": "string"
-    },
-    {
-      "name": "barrio",
-      "type": "string"
-    },
-    {
-      "name": "etiqueta",
-      "type": "string"
-    },
-    {
-      "name": "localidad",
-      "type": "string"
-    },
-    {
-      "name": "long",
-      "type": "int64"
-    },
-    {
-      "name": "ancho_real",
-      "type": "double"
-    },
-    {
-      "name": "ancho_calzada",
-      "type": "double"
-    },
-    {
-      "name": "material_calzada",
-      "type": "string"
-    },
-    {
-      "name": "cordon_cuneta",
-      "type": "string"
-    },
-    {
-      "name": "proyecto_infraestructura",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.9114543,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_cordon_cuneta"
-  ],
   "title": "Cordon cuneta",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.94418595,
-          -34.1768119,
-          -60.138792,
-          -33.55320865
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Describe tipo de cordón cuneta para las calles del Partido de Pergamino en ambas márgenes: ambas, par, impar, ninguno y no_corresponde.",
+  "keywords": [
+    "obra",
+    "cordon",
+    "cuneta",
+    "pergamino",
+    "pluvial",
+    "desague",
+    "calzada",
+    "calle",
+    "material"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -185,62 +42,459 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.9441859,
+          -34.1768118,
+          -60.1387924,
+          -33.5532086
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vialidad"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/294",
+      "type": "text/html",
+      "title": "Cordon cuneta en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:vista_callejero_2",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:vista_callejero_2)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./cordon_cuneta.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "cordon_cuneta"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 294,
+  "pergamino:geonode_uuid": "6f27e87b-caa9-490c-8320-9e4ef04e400f",
+  "pergamino:source_updated": "2026-05-12T10:21:15Z",
+  "pergamino:update_frequency": "continual",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 11714,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "codigo",
+      "type": "int64"
+    },
+    {
+      "name": "ancho",
+      "type": "int64"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "nombre_alt",
+      "type": "string"
+    },
+    {
+      "name": "pre_tipo",
+      "type": "string"
+    },
+    {
+      "name": "pre_dir",
+      "type": "string"
+    },
+    {
+      "name": "impar_ini",
+      "type": "int64"
+    },
+    {
+      "name": "impar_fin",
+      "type": "int64"
+    },
+    {
+      "name": "par_ini",
+      "type": "int64"
+    },
+    {
+      "name": "par_fin",
+      "type": "int64"
+    },
+    {
+      "name": "ruta",
+      "type": "string"
+    },
+    {
+      "name": "clase",
+      "type": "string"
+    },
+    {
+      "name": "sentido",
+      "type": "int64"
+    },
+    {
+      "name": "barrio",
+      "type": "string"
+    },
+    {
+      "name": "barrido",
+      "type": "decimal128(38, 0)"
+    },
+    {
+      "name": "zona_barri",
+      "type": "string"
+    },
+    {
+      "name": "etiqueta",
+      "type": "string"
+    },
+    {
+      "name": "buffer",
+      "type": "int64"
+    },
+    {
+      "name": "t_etiq",
+      "type": "int64"
+    },
+    {
+      "name": "e_num_imp",
+      "type": "string"
+    },
+    {
+      "name": "e_num_par",
+      "type": "string"
+    },
+    {
+      "name": "localidad",
+      "type": "string"
+    },
+    {
+      "name": "long",
+      "type": "int64"
+    },
+    {
+      "name": "long_km",
+      "type": "double"
+    },
+    {
+      "name": "buff",
+      "type": "int64"
+    },
+    {
+      "name": "ordenanza",
+      "type": "string"
+    },
+    {
+      "name": "prog_ini",
+      "type": "double"
+    },
+    {
+      "name": "prog_fin",
+      "type": "double"
+    },
+    {
+      "name": "est_medido",
+      "type": "string"
+    },
+    {
+      "name": "cc_empresa",
+      "type": "string"
+    },
+    {
+      "name": "cc_fecha_inicio_obra",
+      "type": "string"
+    },
+    {
+      "name": "cc_fecha_fin_obra",
+      "type": "string"
+    },
+    {
+      "name": "cc_expediente",
+      "type": "string"
+    },
+    {
+      "name": "cc_etapa",
+      "type": "double"
+    },
+    {
+      "name": "pav_empresa",
+      "type": "string"
+    },
+    {
+      "name": "pav_fecha_inicio_obra",
+      "type": "string"
+    },
+    {
+      "name": "pav_fecha_fin_obra",
+      "type": "string"
+    },
+    {
+      "name": "pav_expediente",
+      "type": "string"
+    },
+    {
+      "name": "pav_etapa",
+      "type": "double"
+    },
+    {
+      "name": "velocidad_maxima",
+      "type": "int64"
+    },
+    {
+      "name": "cpa_impar",
+      "type": "string"
+    },
+    {
+      "name": "cpa_par",
+      "type": "string"
+    },
+    {
+      "name": "restriccion_estacionamiento",
+      "type": "string"
+    },
+    {
+      "name": "observaciones",
+      "type": "string"
+    },
+    {
+      "name": "nombre_corto",
+      "type": "string"
+    },
+    {
+      "name": "ancho_vereda_par",
+      "type": "double"
+    },
+    {
+      "name": "ancho_vereda_impar",
+      "type": "double"
+    },
+    {
+      "name": "tipo_vereda_par",
+      "type": "string"
+    },
+    {
+      "name": "tipo_vereda_impar",
+      "type": "string"
+    },
+    {
+      "name": "cob_cloacas_par",
+      "type": "string"
+    },
+    {
+      "name": "cob_cloacas_impar",
+      "type": "string"
+    },
+    {
+      "name": "cob_agua_par",
+      "type": "string"
+    },
+    {
+      "name": "cob_agua_impar",
+      "type": "string"
+    },
+    {
+      "name": "ancho_nominal",
+      "type": "int64"
+    },
+    {
+      "name": "ancho_real",
+      "type": "double"
+    },
+    {
+      "name": "ancho_calzada",
+      "type": "double"
+    },
+    {
+      "name": "id_calle",
+      "type": "int64"
+    },
+    {
+      "name": "lado_ciclovia",
+      "type": "string"
+    },
+    {
+      "name": "transitable",
+      "type": "string"
+    },
+    {
+      "name": "numero_reparto_facturacion",
+      "type": "int64"
+    },
+    {
+      "name": "nombre_completo",
+      "type": "string"
+    },
+    {
+      "name": "material_calzada",
+      "type": "string"
+    },
+    {
+      "name": "cordon_cuneta",
+      "type": "string"
+    },
+    {
+      "name": "proyecto_infraestructura",
+      "type": "string"
+    },
+    {
+      "name": "arbolado",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiLineString",
+  "geoparquet:feature_count": 11714,
   "assets": {
-    "publico_cordon_cuneta": {
-      "href": "./publico_cordon_cuneta.parquet",
+    "cordon_cuneta": {
+      "href": "./cordon_cuneta.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-12T10:21:15Z",
+      "pergamino:content_hash": "107116165084437992370866:11714",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 787975,
-      "file:checksum": "1220de0ead00693e220b40fcc019144ca2b09e863226ff60ac3d71118076ebd5380b",
       "roles": [
         "data"
       ],
+      "table:row_count": 11714,
+      "file:size": 929431,
+      "file:checksum": "12205768498e2b8726387b4f39f1a3f1c0eea10f72ac5c4f88dff8b300fc3340d9dd",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4668,
-      "file:checksum": "12203f803c945586c09d28f5fa6c7bba251b9673c4d2ff86588bb82c68f6dcdf31f3",
+    "version-2026-08-14": {
+      "href": "./publico_cordon_cuneta.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:cordon_cuneta). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 11703,
+      "file:size": 787975,
+      "file:checksum": "1220de0ead00693e220b40fcc019144ca2b09e863226ff60ac3d71118076ebd5380b"
     },
-    "publico_cordon_cuneta-tiles": {
-      "href": "./publico_cordon_cuneta.pmtiles",
+    "cordon_cuneta-tiles": {
+      "href": "./cordon_cuneta.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_cordon_cuneta (vector tiles)",
-      "file:size": 4864377,
-      "file:checksum": "1220fec6f963179bbd47bc90fb540b9ea55af1807fae7c502f70e37a4e5555d37b17",
       "roles": [
         "visual"
       ],
+      "file:size": 8285448,
+      "file:checksum": "1220b25d6306eec93d4756c06adf9eb0643e31c6cedef2a9d740424683e560472d2b",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "cordon_cuneta",
-      "file:size": 1366,
-      "file:checksum": "122009f08e9e1d8497c0cebe3badda03b5dbc0a45e0d94e189137009ff3547b6bc87",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 3226,
+      "file:checksum": "12203b6a18a9621c9595cb5b2f2fc7113c8b7603f117682d546b11cebe933413fa8a",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 1444,
+      "file:checksum": "1220e6936134ef4e386f009c4c428f39af0f825848a1e0f6710f5ecdbab56bad9018",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_cordon_cuneta.thumb.jpg",
+      "href": "./cordon_cuneta.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 136673,
-      "file:checksum": "1220e729d58c0eb6ba3b10370b9c5e7bb3be8d65c32b29b74ecf450010dbc9ca863e",
+      "file:size": 227827,
+      "file:checksum": "12201d21af638ec585b52b71f7d77224a3c4626909aef894935684e65682b8a3892c",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 5068,
+      "file:checksum": "12201751f5aa315f116c4fc3e2cb83d28af389298a14a135905c4cac9fca2596989e",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "cordon_cuneta"
+  ]
 }

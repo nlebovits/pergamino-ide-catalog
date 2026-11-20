@@ -2,121 +2,21 @@
   "type": "Collection",
   "id": "comercio-y-cultura/colegios_de_profesionales",
   "stac_version": "1.1.0",
-  "description": "Colegios de profesionales en el Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Comercio y cultura"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_colegios_de_profesionales.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_colegios_de_profesionales"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiPoint",
-  "geoparquet:feature_count": 19,
-  "table:row_count": 19,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "nombre",
-      "type": "string"
-    },
-    {
-      "name": "domicilio",
-      "type": "string"
-    },
-    {
-      "name": "tel",
-      "type": "string"
-    },
-    {
-      "name": "mail",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_colegios_de_profesionales"
-  ],
   "title": "Colegios profesionales",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.5824999,
-          -33.901466,
-          -60.5676999,
-          -33.8904826
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Colegios de profesionales en el Partido de Pergamino.",
+  "keywords": [
+    "produccion",
+    "profesionales",
+    "actividad",
+    "colegio"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -137,62 +37,215 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.5824996,
+          -33.9014658,
+          -60.5677001,
+          -33.8904826
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Comercio y cultura"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/118",
+      "type": "text/html",
+      "title": "Colegios profesionales en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:colegios_de_profesionales",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:colegios_de_profesionales)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./colegios_de_profesionales.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "colegios_de_profesionales"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 118,
+  "pergamino:geonode_uuid": "1e636a9a-5505-432d-a2c3-b15c86429697",
+  "pergamino:source_updated": "2026-05-14T13:43:41Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 19,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "domicilio",
+      "type": "string"
+    },
+    {
+      "name": "tel",
+      "type": "string"
+    },
+    {
+      "name": "mail",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPoint",
+  "geoparquet:feature_count": 19,
   "assets": {
-    "publico_colegios_de_profesionales": {
-      "href": "./publico_colegios_de_profesionales.parquet",
+    "colegios_de_profesionales": {
+      "href": "./colegios_de_profesionales.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-14T13:43:41Z",
+      "pergamino:content_hash": "154217109827925502325:19",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 5658,
-      "file:checksum": "1220331d2b6480f0da1b6364946b34fbb4b385c02cc7e3a497a7db9867d0743f93cf",
       "roles": [
         "data"
       ],
+      "table:row_count": 19,
+      "file:size": 3952,
+      "file:checksum": "1220c760d53e897ed8a58d3b34a2f0e5b9890b0e014ad8f3c3d2742be3bf0bb703cf",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4365,
-      "file:checksum": "1220f00479ca148e135add4c35f75fe51eb415cef5c36bf6ec19f59e8a6c334d9a18",
+    "version-2026-08-14": {
+      "href": "./publico_colegios_de_profesionales.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:colegios_de_profesionales). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 19,
+      "file:size": 5658,
+      "file:checksum": "1220331d2b6480f0da1b6364946b34fbb4b385c02cc7e3a497a7db9867d0743f93cf"
     },
-    "publico_colegios_de_profesionales-tiles": {
-      "href": "./publico_colegios_de_profesionales.pmtiles",
+    "colegios_de_profesionales-tiles": {
+      "href": "./colegios_de_profesionales.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_colegios_de_profesionales (vector tiles)",
-      "file:size": 7136,
-      "file:checksum": "1220d779c86ba5c23ea73c36ed273ccdc3c7a33c986f92eda1b0578c4cbb0e2b3d50",
       "roles": [
         "visual"
       ],
+      "file:size": 23216,
+      "file:checksum": "1220b66330eb9ce529914db1eda47db1c79e4867416239452b293414d82cbe034b8a",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "point",
-      "file:size": 514,
-      "file:checksum": "1220c0255480b86762d495c47d34460dafa65c51e0184cf91e17f7ff075eee356a9b",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1108,
+      "file:checksum": "1220e38d90c03ef20d61ea3a9a775714d66483c56a4851868d1e3d374ddd9d1da2a0",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 271,
+      "file:checksum": "1220d9e4a72895b7f1776498edcf0c972ba3a268ae07f183491e7f1e259e5f49d0e5",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_colegios_de_profesionales.thumb.jpg",
+      "href": "./colegios_de_profesionales.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 84607,
-      "file:checksum": "12206f1a89b3f9a032135cba51ab96bdb23bac0353fce1c76b769d92da00ef64ad33",
+      "file:size": 79289,
+      "file:checksum": "1220c1e1a6d657f54490be9e64c1704078ba480e04a4e9891ee6564e2b20cb255eda",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3313,
+      "file:checksum": "1220b7579d26e5aeed2e7958ea57cfbee1da06608a1b72e9fcaf4ffb7f2b31d8c68c",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "colegios_de_profesionales"
+  ]
 }

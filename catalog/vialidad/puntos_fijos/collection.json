@@ -2,121 +2,25 @@
   "type": "Collection",
   "id": "vialidad/puntos_fijos",
   "stac_version": "1.1.0",
-  "description": "Puntos fijos de nivelación del IGN para la Ciudad de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Vialidad"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Apuntos_fijos",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:puntos_fijos"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_puntos_fijos.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_puntos_fijos"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 76,
-  "table:row_count": 76,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "ente",
-      "type": "string"
-    },
-    {
-      "name": "cota",
-      "type": "double"
-    },
-    {
-      "name": "ubicacion",
-      "type": "string"
-    },
-    {
-      "name": "identificador",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_puntos_fijos"
-  ],
   "title": "Puntos fijos de nivelación IGN",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.60199516,
-          -33.9146119,
-          -60.5317059,
-          -33.8789579
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Puntos fijos de nivelación del IGN para la Ciudad de Pergamino.",
+  "keywords": [
+    "red",
+    "cota",
+    "topologia",
+    "elevacion",
+    "nivelacion",
+    "fijo",
+    "ign",
+    "punto"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -144,73 +48,215 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6019952,
+          -33.9146117,
+          -60.5317064,
+          -33.8789582
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vialidad"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/237",
+      "type": "text/html",
+      "title": "Puntos fijos de nivelación IGN en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:puntos_fijos",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:puntos_fijos)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./puntos_fijos.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "puntos_fijos"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 237,
+  "pergamino:geonode_uuid": "1e5282b8-9287-43dd-ae69-f4f5db810bfa",
+  "pergamino:source_updated": "2026-04-29T14:14:16Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 76,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "ente",
+      "type": "string"
+    },
+    {
+      "name": "cota",
+      "type": "double"
+    },
+    {
+      "name": "ubicacion",
+      "type": "string"
+    },
+    {
+      "name": "identificador",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 76,
   "assets": {
-    "publico_puntos_fijos": {
-      "href": "./publico_puntos_fijos.parquet",
+    "puntos_fijos": {
+      "href": "./puntos_fijos.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-04-29T14:14:16Z",
+      "pergamino:content_hash": "627822861489628794923:76",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 8595,
-      "file:checksum": "1220704924e3a4ee18eabd6f1a1c85b8219d5b42ec99e6bcede1abf16dca24dd58b6",
       "roles": [
         "data"
       ],
+      "table:row_count": 76,
+      "file:size": 7053,
+      "file:checksum": "122028d8e2d8d086a8f0711ac69400d5e1db403029395fcf7f67ff67c31a28a53c58",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_puntos_fijos.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:puntos_fijos). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 76,
+      "file:size": 8595,
+      "file:checksum": "1220704924e3a4ee18eabd6f1a1c85b8219d5b42ec99e6bcede1abf16dca24dd58b6"
+    },
+    "puntos_fijos-tiles": {
+      "href": "./puntos_fijos.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 55310,
+      "file:checksum": "1220fecdd79840cb30631c8ed7eb910472e6007fc6e500250e62a1e776c036f77820",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "puntos_fijos",
-      "file:size": 475,
-      "file:checksum": "1220ff20b910640af27812e0c5af785c9ba01c22de93f2a887f874672fbca6a46f5e",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 580,
+      "file:checksum": "1220c076c438463199b7628c1f35f78b03729104445fb6d1bc6939d415762f1a76b2",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
-      "file:size": 336,
-      "file:checksum": "12207ad2b83365184a7fb6041c029148773d423e975e43ea44c91dca59e95980a4ca",
+      "file:size": 409,
+      "file:checksum": "1220122c386c3ecb7d088bcdda2500d03a3183a7707981c55e842772276b5547da8f",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1172,
-      "file:checksum": "1220c5b4dd2f6bb616ab5cb5e35386aeb12b244cef51d9c97346339adfb2f7034d78",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_puntos_fijos-tiles": {
-      "href": "./publico_puntos_fijos.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_puntos_fijos (vector tiles)",
-      "file:size": 16238,
-      "file:checksum": "12207ab0a1d1f543b3977ac3ce0ce707feed30475fb22dacc307e7ff1d02d2c94b95",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_puntos_fijos.thumb.jpg",
+      "href": "./puntos_fijos.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 96378,
-      "file:checksum": "12204eefa7c28a271af5c4f4fb62835a0b056d55d903e2fbbd8d0e11cc7031b364b0",
+      "file:size": 83752,
+      "file:checksum": "1220341a022df3a109067f657d6e4d3c699f2fcccf7a270435d4fd15bdc3f44ea078",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3493,
+      "file:checksum": "1220dffc35843a7e56d8382910290d1d1cd8b10961a0da0046da3d0b2cbe3e33dd51",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "puntos_fijos"
+  ]
 }

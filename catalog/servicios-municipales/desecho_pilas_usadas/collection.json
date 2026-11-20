@@ -2,121 +2,26 @@
   "type": "Collection",
   "id": "servicios-municipales/desecho_pilas_usadas",
   "stac_version": "1.1.0",
-  "description": "Puntos de desecho de pilas usadas en el Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Servicios municipales"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_desecho_pilas_usadas.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_desecho_pilas_usadas"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 2,
-  "table:row_count": 2,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "entidad",
-      "type": "string"
-    },
-    {
-      "name": "direccion",
-      "type": "string"
-    },
-    {
-      "name": "observaciones",
-      "type": "string"
-    },
-    {
-      "name": "activo",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_desecho_pilas_usadas"
-  ],
   "title": "Desecho de pilas usadas",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.57473921,
-          -33.897348,
-          -60.5729929,
-          -33.89057464
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Puntos de desecho de pilas usadas en el Partido de Pergamino.",
+  "keywords": [
+    "descarte",
+    "desecho",
+    "electronico",
+    "usadas",
+    "actua",
+    "pilas",
+    "verde",
+    "reciclado",
+    "ambiente"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -137,62 +42,215 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.5923196,
+          -33.9114631,
+          -60.555259,
+          -33.8776546
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Servicios municipales"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/137",
+      "type": "text/html",
+      "title": "Desecho de pilas usadas en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:desecho_pilas_usadas",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:desecho_pilas_usadas)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./desecho_pilas_usadas.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "desecho_pilas_usadas"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 137,
+  "pergamino:geonode_uuid": "4162c3c8-2ab6-4aec-ae8b-2c7494a38eb9",
+  "pergamino:source_updated": "2026-05-12T14:31:37Z",
+  "pergamino:update_frequency": "unknown",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 50,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "entidad",
+      "type": "string"
+    },
+    {
+      "name": "direccion",
+      "type": "string"
+    },
+    {
+      "name": "observaciones",
+      "type": "string"
+    },
+    {
+      "name": "activo",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 50,
   "assets": {
-    "publico_desecho_pilas_usadas": {
-      "href": "./publico_desecho_pilas_usadas.parquet",
+    "desecho_pilas_usadas": {
+      "href": "./desecho_pilas_usadas.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-12T14:31:37Z",
+      "pergamino:content_hash": "492641759642698512826:50",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 4689,
-      "file:checksum": "12208a45559b81da08a3d2846af7d2a7ede3b7cc3a5c69dcd6a67e20a0c62b1f7a19",
       "roles": [
         "data"
       ],
+      "table:row_count": 50,
+      "file:size": 6415,
+      "file:checksum": "12205914e7c90dd84168531da1351a644d4aac52e73151cb8a5fac0d7d9157bd62c2",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4368,
-      "file:checksum": "1220a5e070e10905dff7372e1ae636b4bc25dd4ff52072df2501e78a2e0857815f2b",
+    "version-2026-08-14": {
+      "href": "./publico_desecho_pilas_usadas.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:desecho_pilas_usadas). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 2,
+      "file:size": 4689,
+      "file:checksum": "12208a45559b81da08a3d2846af7d2a7ede3b7cc3a5c69dcd6a67e20a0c62b1f7a19"
     },
-    "publico_desecho_pilas_usadas-tiles": {
-      "href": "./publico_desecho_pilas_usadas.pmtiles",
+    "desecho_pilas_usadas-tiles": {
+      "href": "./desecho_pilas_usadas.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_desecho_pilas_usadas (vector tiles)",
-      "file:size": 5195,
-      "file:checksum": "1220b802ecce6608d362a487766daec22a1250ba9740be357b3ab603420c356c1be5",
       "roles": [
         "visual"
       ],
+      "file:size": 37493,
+      "file:checksum": "122082380a1787b74ac94b090b169c0118990bcf80b0ebfb6e1517effe9064db4a6c",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "desecho_pilas_usadas",
-      "file:size": 500,
-      "file:checksum": "1220985afd95eba2495d04ad19bb4028f17760cb3d4fd7d19792e153a9de3e149b15",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 484,
+      "file:checksum": "122076f3859d1d9bf90410e2dfb9d9f1d06de9e115317658d9a0c21f9eae43dc47a8",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 476,
+      "file:checksum": "1220976e1313024adedc24574b932170074d6c87d6dc2e998b0155fcfcc75ade0c81",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_desecho_pilas_usadas.thumb.jpg",
+      "href": "./desecho_pilas_usadas.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 77378,
-      "file:checksum": "1220e6477d2d987bb19559d83a3f523432d7b4192291f978bd67971b9d2e37207c92",
+      "file:size": 71044,
+      "file:checksum": "1220fb1686c83004f96d7073a69492cf1342981d160b7be4ac2f16805a7082cd4b3f",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3260,
+      "file:checksum": "1220517ea7a9fcc332b3928e676b9bcb902c76a53f2e4b871e39c80e49239fb41c01",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "desecho_pilas_usadas"
+  ]
 }

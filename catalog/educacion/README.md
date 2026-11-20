@@ -1,40 +1,39 @@
 # Educación
 
-Establecimientos educativos por nivel y tipo de gestión, predios educativos y bibliotecas del Partido de Pergamino.
+Establecimientos educativos, por nivel y por tipo de gestión, predios educativos y bibliotecas del Partido de Pergamino.
 
-4 colecciones. Forma parte del espejo cloud-native de la [IDE Pergamino](../README.md).
+Forma parte del espejo cloud-native de la [IDE Pergamino](../README.md).
 
 ## Colecciones
 
-| Colección | Registros | Geometría | Descripción |
-|---|--:|---|---|
-| [Bibliotecas](./bibliotecas/) | 11 | Point | Bibliotecas del Partido de Pergamino. |
-| [Educacion por gestion](./gestion/) | 200 | Multi Point | Capa de establecimientos educativos del Partido de Pergamino organizados por gestión como jardines, escuelas, colegio... |
-| [Educacion por nivel](./nivel/) | 200 | Multi Point | Capa de establecimientos educativos del Partido de Pergamino organizados por nivel como jardines, escuelas, colegios,... |
-| [Predios educativos](./predios_educativos/) | 133 | Multi Polygon | Predios educativos del Partido de Pergamino. |
+| Colección | Geometría | Descripción |
+|---|---|---|
+| [Bibliotecas](./bibliotecas/) | puntos | Bibliotecas del Partido de Pergamino. |
+| [Educacion](./educacion/) | puntos | Capa de establecimientos educativos del Partido de Pergamino organizados por nivel y gestión como jardines, escuelas, colegios, instituto... |
+| [Educacion por gestion](./gestion/) | puntos | Capa de establecimientos educativos del Partido de Pergamino organizados por gestión como jardines, escuelas, colegios, institutos, profe... |
+| [Educacion por nivel](./nivel/) | puntos | Capa de establecimientos educativos del Partido de Pergamino organizados por nivel como jardines, escuelas, colegios, institutos, profeso... |
+| [Predios educativos](./predios_educativos/) | polígonos | Predios educativos del Partido de Pergamino. |
 
 ## Datos de terceros
 
 Estas colecciones son datos producidos por otros organismos y rehospedados por la Municipalidad de Pergamino. La atribución corresponde al organismo de origen.
 
-- **Mapa Escolar** — Educacion por nivel
-- **Prov. Buenos Aires** — Predios educativos
+- **Provincia de Buenos Aires**: Predios educativos
 
 ## Acceso
 
+Cada colección tiene su README con el esquema, y su AGENTS.md con consultas probadas. Por ejemplo:
+
 ```python
 import duckdb
-duckdb.sql("INSTALL spatial; LOAD spatial;")
 
-df = duckdb.sql("""
-  SELECT * FROM read_parquet(
-    'https://data.source.coop/nlebovits/pergamino-ide/educacion/bibliotecas/publico_bibliotecas.parquet')
-  LIMIT 10
-""").df()
+con = duckdb.connect()
+con.sql("INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;")
+con.sql("SELECT * FROM read_parquet('https://data.source.coop/nlebovits/pergamino-ide/educacion/bibliotecas/bibliotecas.parquet') LIMIT 10").show()
 ```
 
 ## Procedencia y licencia
 
-Fuente original: [IDE Pergamino](https://geonode.pergamino.gob.ar/) — Dirección de Sistemas de Información Georreferenciada, Municipalidad de Pergamino.
+Fuente: [GeoNode de la IDE Pergamino](https://geonode.pergamino.gob.ar/), Dirección de Sistemas de Información Georreferenciada, Municipalidad de Pergamino.
 
 Licencia: CC BY-SA 4.0, según la declaración del municipio para su IDE. Las colecciones de terceros conservan la atribución a su organismo de origen.

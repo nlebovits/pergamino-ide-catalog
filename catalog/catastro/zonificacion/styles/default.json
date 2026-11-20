@@ -1,10 +1,10 @@
 {
   "version": 8,
-  "name": "zonificacion",
+  "name": "zonificacion_uso_suelo",
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_zonificacion.pmtiles",
+      "url": "pmtiles://../zonificacion.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,49 +14,35 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_zonificacion",
+      "source-layer": "zonificacion",
       "paint": {
         "fill-color": [
           "match",
           [
             "get",
-            "descripcion"
+            "zonas"
           ],
-          "AREA COMPLEMENTARIA",
-          "#fee1f4",
-          "AREA RURAL",
-          "#ffffff",
-          "AREA URBANA",
-          "#eedec1",
-          "BANDA DE CIRCULACION",
-          "#eeeeee",
-          "CENTRAL",
-          "#accce5",
-          "DISTRITO DE URBANIZACION ESPECIAL",
-          "#c5f4fb",
-          "INDUSTRIAL",
-          "#f1b0ac",
-          "PRECINTO INDUSTRIAL",
-          "#f4f5e1",
+          "COMERCIAL",
+          "#eb9b9b",
           "RESIDENCIAL",
-          "#fdf8de",
-          "RESIDENCIAL CON DISPOSICIONES ESPECIALES",
-          "#fdf8de",
+          "#ffdfb2",
           "RESIDENCIAL EXTRAURBANA",
-          "#fdf8de",
+          "#d6c4c3",
+          "INDUSTRIAL",
+          "#dcb6f1",
+          "RESERVA",
+          "#fafdb8",
           "USO ESPECIFICO",
-          "#fae9de",
-          "ZONA CLUB DE CAMPO",
-          "#c7d1c1",
-          "ZONA DE RECUPERACION",
-          "#dbe6d0",
-          "ZONA DE RESERVA FISCAL",
-          "#dbe6d0",
-          "ZONA VERDE",
-          "#afc3ad",
+          "#98989b",
+          "RECUPERACION",
+          "#e4f0f7",
+          "ESPARCIMIENTO",
+          "#7abf7f",
+          "AGROPECUARIA",
+          "#e8f5dc",
           "#cccccc"
         ],
-        "fill-opacity": 0.5,
+        "fill-opacity": 0.6,
         "fill-outline-color": "#232323"
       }
     },
@@ -64,22 +50,23 @@
       "id": "categorical-fill-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_zonificacion",
+      "source-layer": "zonificacion",
       "layout": {
         "text-field": [
           "get",
           "designacion"
         ],
-        "text-size": 9.0,
-        "text-anchor": "left",
+        "text-size": 11.0,
+        "text-anchor": "center",
         "text-font": [
           "Noto Sans Regular"
         ]
       },
       "paint": {
-        "text-color": "#000000"
+        "text-color": "#000000",
+        "text-halo-color": "#FFFFFF",
+        "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

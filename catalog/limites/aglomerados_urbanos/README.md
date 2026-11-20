@@ -1,118 +1,87 @@
-# IDE Pergamino - Infraestructura de Datos Espaciales
+# Aglomerados urbanos
 
-Catálogo de datos geoespaciales abiertos del Municipio de Pergamino,
-Provincia de Buenos Aires, Argentina. Incluye capas de catastro,
-infraestructura, transporte, servicios de emergencia, demografía,
-agricultura, medio ambiente, planificación urbana e indicadores sociales.
+Mancha de aglomerados urbanos del Partido de Pergamino donde se observan edificaciones e instalaciones urbanas en las cuales se desarrollan actividades humanas.
 
-Este catálogo es un espejo cloud-native de la IDE de Pergamino. Los datos
-originales son publicados por la Dirección de Sistemas de Información
-Georreferenciada (DSIG) de la Municipalidad de Pergamino a través de su
-GeoServer y su portal GeoNode. Aquí se republican en formatos optimizados
-para consulta directa desde la nube (GeoParquet, PMTiles) sin alterar su
-contenido.
+| | |
+|---|---|
+| Identificador | `limites/aglomerados_urbanos` |
+| Geometría | polígonos |
+| Fuente | [Aglomerados urbanos en GeoNode](https://geonode.pergamino.gob.ar/catalogue/#/dataset/46), capa WFS `geonode:aglomerados_urbanos` |
+| Licencia | [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| Actualización declarada por la fuente | cuando es necesario |
 
-![Argentina](https://img.shields.io/badge/Argentina-blue) ![Buenos Aires](https://img.shields.io/badge/Buenos_Aires-blue) ![Pergamino](https://img.shields.io/badge/Pergamino-blue) ![catastro](https://img.shields.io/badge/catastro-blue) ![infraestructura](https://img.shields.io/badge/infraestructura-blue) ![transporte](https://img.shields.io/badge/transporte-blue) ![censo](https://img.shields.io/badge/censo-blue) ![agricultura](https://img.shields.io/badge/agricultura-blue) ![medio ambiente](https://img.shields.io/badge/medio_ambiente-blue) ![planificación urbana](https://img.shields.io/badge/planificaci%C3%B3n_urbana-blue) ![datos abiertos](https://img.shields.io/badge/datos_abiertos-blue) ![GeoParquet](https://img.shields.io/badge/GeoParquet-blue)
+## Propósito
 
-## Spatial Coverage
+Según el registro de GeoNode:
 
-- **Bounding Box**: [-60.84932978, -34.09429927, -60.16285307, -33.58446085]
+> El dataset no debe ser tomado como un límite formal de la urbanidad/ruralidad, ya que es continuamente cambiante y no siempre responde a la planificación urbana, sino a las actividades humanas en el entorno social.
 
-## Temporal Coverage
+## Calidad de los datos
 
-- **Start**: open
-- **End**: ongoing
+Según el registro de GeoNode:
 
-## Schema
+> Los límites de las áreas se obtuvieron mediante imágenes aéreas, tomando como referencia los aglomerados de viviendas o industrias adyacentes a la Ciudad y Pueblos del Partido de Pergamino.
 
-| Column | Type | Description |
-|--------|------|-------------|
-| id | int64 |  |
-| area | double |  |
-| metodologia | string |  |
-| clasificacion | string |  |
-| distrito | string |  |
-| fecha_actualizacion | double |  |
-| fuente | string |  |
-| definicion | string |  |
-| descargo_responsabilidad | string |  |
-| observaciones | string |  |
-| seccion | int64 |  |
-| geometry | binary |  |
-| bbox | struct<xmin: double, ymin: double, xmax: double, ymax: double> |  |
+## Esquema
 
-## Files
+| Columna | Tipo |
+|---|---|
+| `id` | int64 |
+| `area` | double |
+| `metodologia` | string |
+| `clasificacion` | string |
+| `distrito` | string |
+| `fecha_actualizacion` | double |
+| `fuente` | string |
+| `definicion` | string |
+| `descargo_responsabilidad` | string |
+| `observaciones` | string |
+| `seccion` | int64 |
+| `geometry` | binary |
+| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
 
-| File | Size | Checksum |
-|------|------|----------|
-| ./publico_aglomerados_urbanos.parquet | 49.4 KB | 1220a1487a00... |
+La fuente no publica descripciones de columnas: GeoNode devuelve una descripción vacía para cada atributo. Por eso las columnas no tienen descripción en `table:columns`, salvo `geometry` y `bbox`, que agrega este catálogo.
 
-## Quick Start
+## Acceso
 
 ```python
-import geopandas as gpd
+import duckdb
 
-gdf = gpd.read_parquet("./publico_aglomerados_urbanos.parquet")
-print(gdf.head())
+con = duckdb.connect()
+con.sql("INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;")
+con.sql("SELECT * FROM read_parquet('https://data.source.coop/nlebovits/pergamino-ide/limites/aglomerados_urbanos/aglomerados_urbanos.parquet') LIMIT 10").show()
 ```
 
-## STAC Metadata
+Hay más consultas, todas probadas, en [AGENTS.md](./AGENTS.md).
 
-- **root**: `../catalog.json`
-- **parent**: `../catalog.json`
+## Visualización
 
-## Source
+Las teselas vectoriales están en `./aglomerados_urbanos.pmtiles` (capa `aglomerados_urbanos`). El estilo por defecto, `styles/default.json`, deriva del estilo SLD que publica GeoNode para esta capa.
 
-[https://ide.pergamino.gob.ar:8443/geoserver/wfs](https://ide.pergamino.gob.ar:8443/geoserver/wfs)
+Leyenda tal como la publica la fuente:
 
-## Processing Notes
+![Leyenda](./legends/source.png)
 
-Extraído del servicio WFS de IDE Pergamino
-(https://ide.pergamino.gob.ar:8443/geoserver/wfs) y enriquecido con los
-metadatos ISO publicados por GeoNode (https://geonode.pergamino.gob.ar).
-Convertido a GeoParquet 1.1.0 (WKB, EPSG:4326, columna de cobertura bbox)
-y a PMTiles para visualización web. Las simbologías proceden de los SLD
-oficiales del GeoServer municipal.
+## Versiones
 
+Cada extracción que cambia los datos es una versión nueva. La versión actual está en `./aglomerados_urbanos.parquet`. Las anteriores son los activos `version-*` de `collection.json`, con el número de registros y la suma de verificación de cada una. Sus archivos no cambian.
 
-## Citation
+La primera versión proviene del GeoServer anterior de la IDE Pergamino y sigue publicada en `./publico_aglomerados_urbanos.parquet`.
 
-Municipalidad de Pergamino (2026). IDE Pergamino - Infraestructura de
-Datos Espaciales. Espejo cloud-native publicado por Nissim Lebovits.
-Disponible en: https://source.coop/nlebovits/pergamino-ide
+## Procedencia
 
+Productor: Municipalidad de Pergamino. Publicado por la Dirección de Sistemas de Información Georreferenciada (DSIG) de la Municipalidad de Pergamino en [GeoNode](https://geonode.pergamino.gob.ar/catalogue/#/dataset/46).
 
-## Attribution
+Atribución declarada en GeoNode: "Municipalidad de Pergamino".
 
-Municipalidad de Pergamino - Dirección de Sistemas de Información Georreferenciada (IDE Pergamino), Provincia de Buenos Aires, Argentina
+Este catálogo es un espejo. Para el dato autoritativo, consultar la IDE de Pergamino.
 
-## License
+## Licencia
 
-[CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+CC-BY-SA-4.0. Es la licencia que declara la Municipalidad de Pergamino para su IDE:
 
-## Contact
+> Los datos dispuestos en nuestra Infraestructura de Datos Espaciales estan licenciados mediante Creative Commons 4.0 BY-SA, lo cual permite utilizar, compartir y adaptar este material siempre que reconozca atribución y permita la misma licencia en sus derivados.
 
-Nissim Lebovits <nlebovits@pm.me>
+## Advertencia del publicador
 
-## Known Issues
-
-- La licencia CC BY-SA 4.0 corresponde a la declaración de la Municipalidad
-  de Pergamino para su IDE. Varias capas son datos de terceros rehospedados
-  por el municipio (INTA, IGN, INDEC, RENABAP, CONICET, INA, BAHRA, Correo
-  Argentino, CARTOARBA). Esas capas conservan la atribución a su organismo
-  de origen y no se relicencian.
-- El municipio advierte que la información "se encuentra en constante
-  actualización por parte de las distintas áreas responsables de su
-  generación, por lo tanto, podria contener diferencias e inconsistencias
-  en relación al objeto o fenómeno representado, tanto espacial como
-  temporalmente."
-- GeoNode declara `maintenance_frequency: notPlanned` para 111 de 218
-  conjuntos de datos. La mayor parte del catálogo no tiene una
-  actualización programada.
-- La vigencia del contenido no coincide con la fecha de publicación de los
-  metadatos. Consultar las columnas `fuente` y `actualizacion` de cada capa.
-
-
----
-
-*Generated by [Portolan](https://github.com/portolan-sdi/portolan-cli) from STAC metadata and .portolan/metadata.yaml*
+> La información contenida en la IDE se encuentra en constante actualización por parte de las distintas áreas responsables de su generación, por lo tanto, podria contener diferencias e inconsistencias en relación al objeto o fenómeno representado, tanto espacial como temporalmente.

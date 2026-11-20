@@ -4,21 +4,60 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_guardias_medicas.pmtiles",
+      "url": "pmtiles://../guardias_medicas.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_guardias_medicas",
+      "source-layer": "guardias_medicas",
       "paint": {
-        "circle-color": "#888888",
-        "circle-radius": 7.5,
-        "circle-opacity": 1.0
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 9.5,
+        "circle-stroke-color": "#e31a1c",
+        "circle-stroke-width": 1.5,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "guardias_medicas",
+      "paint": {
+        "circle-color": "#e31a1c",
+        "circle-opacity": 1.0,
+        "circle-radius": 5.5,
+        "circle-stroke-color": "#e31a1c",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "circle-1-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "guardias_medicas",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 11.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#1a1a1a",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.5
       }
     }
   ]

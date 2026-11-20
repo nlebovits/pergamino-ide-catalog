@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_hacinamiento.pmtiles",
+      "url": "pmtiles://../hacinamiento.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "graduated-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_hacinamiento",
+      "source-layer": "hacinamiento",
       "paint": {
         "fill-color": [
           "step",

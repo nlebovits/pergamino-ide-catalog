@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_curvas_de_nivel_iatasa_abs.pmtiles",
+      "url": "pmtiles://../curvas_de_nivel_iatasa_abs.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "line-0",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_curvas_de_nivel_iatasa_abs",
+      "source-layer": "curvas_de_nivel_iatasa_abs",
       "paint": {
         "line-color": "#e08a21",
         "line-width": 1,

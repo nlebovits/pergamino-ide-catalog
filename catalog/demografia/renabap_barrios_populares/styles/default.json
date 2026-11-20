@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_renabap_barrios_populares.pmtiles",
+      "url": "pmtiles://../renabap_barrios_populares.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "graduated-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_renabap_barrios_populares",
+      "source-layer": "renabap_barrios_populares",
       "paint": {
         "fill-color": [
           "step",

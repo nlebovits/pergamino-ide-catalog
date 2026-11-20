@@ -2,169 +2,26 @@
   "type": "Collection",
   "id": "vialidad/material_de_calzada",
   "stac_version": "1.1.0",
-  "description": "Tipo de material mayoritario que posee la calle, adoquinado, asfalto, hormigón, escoriado, tierra y metálico.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Vialidad"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Amaterial_de_calzada",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:material_de_calzada"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_material_de_calzada.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_material_de_calzada"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "MultiLineString",
-  "geoparquet:feature_count": 11703,
-  "table:row_count": 11703,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "id",
-      "type": "int64"
-    },
-    {
-      "name": "nombre",
-      "type": "string"
-    },
-    {
-      "name": "impar_ini",
-      "type": "int64"
-    },
-    {
-      "name": "impar_fin",
-      "type": "int64"
-    },
-    {
-      "name": "par_ini",
-      "type": "int64"
-    },
-    {
-      "name": "par_fin",
-      "type": "int64"
-    },
-    {
-      "name": "clase",
-      "type": "string"
-    },
-    {
-      "name": "barrio",
-      "type": "string"
-    },
-    {
-      "name": "etiqueta",
-      "type": "string"
-    },
-    {
-      "name": "localidad",
-      "type": "string"
-    },
-    {
-      "name": "long",
-      "type": "int64"
-    },
-    {
-      "name": "ancho_real",
-      "type": "double"
-    },
-    {
-      "name": "ancho_calzada",
-      "type": "double"
-    },
-    {
-      "name": "material_calzada",
-      "type": "string"
-    },
-    {
-      "name": "cordon_cuneta",
-      "type": "string"
-    },
-    {
-      "name": "proyecto_infraestructura",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.9114543,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_material_de_calzada"
-  ],
   "title": "Material de calzada",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.94418595,
-          -34.1768119,
-          -60.138792,
-          -33.55320865
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Describe el tipo de material mayoritario para las calles del Partido de Pergamino: adoquinado, asfalto, hormigón, escoriado, tierra y metálico.",
+  "keywords": [
+    "adoquinado",
+    "hormigón",
+    "pergamino",
+    "calzada",
+    "calle",
+    "material",
+    "asfalto",
+    "tierra",
+    "escoriado"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -185,73 +42,459 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.9441859,
+          -34.1768118,
+          -60.1387924,
+          -33.5532086
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Vialidad"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/293",
+      "type": "text/html",
+      "title": "Material de calzada en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:vista_callejero_1",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:vista_callejero_1)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./material_de_calzada.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "material_de_calzada"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 293,
+  "pergamino:geonode_uuid": "080b3ea4-0837-4450-ba1d-d238c3f69f4b",
+  "pergamino:source_updated": "2026-05-12T10:21:27Z",
+  "pergamino:update_frequency": "continual",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 11714,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "codigo",
+      "type": "int64"
+    },
+    {
+      "name": "ancho",
+      "type": "int64"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "nombre_alt",
+      "type": "string"
+    },
+    {
+      "name": "pre_tipo",
+      "type": "string"
+    },
+    {
+      "name": "pre_dir",
+      "type": "string"
+    },
+    {
+      "name": "impar_ini",
+      "type": "int64"
+    },
+    {
+      "name": "impar_fin",
+      "type": "int64"
+    },
+    {
+      "name": "par_ini",
+      "type": "int64"
+    },
+    {
+      "name": "par_fin",
+      "type": "int64"
+    },
+    {
+      "name": "ruta",
+      "type": "string"
+    },
+    {
+      "name": "clase",
+      "type": "string"
+    },
+    {
+      "name": "sentido",
+      "type": "int64"
+    },
+    {
+      "name": "barrio",
+      "type": "string"
+    },
+    {
+      "name": "barrido",
+      "type": "decimal128(38, 0)"
+    },
+    {
+      "name": "zona_barri",
+      "type": "string"
+    },
+    {
+      "name": "etiqueta",
+      "type": "string"
+    },
+    {
+      "name": "buffer",
+      "type": "int64"
+    },
+    {
+      "name": "t_etiq",
+      "type": "int64"
+    },
+    {
+      "name": "e_num_imp",
+      "type": "string"
+    },
+    {
+      "name": "e_num_par",
+      "type": "string"
+    },
+    {
+      "name": "localidad",
+      "type": "string"
+    },
+    {
+      "name": "long",
+      "type": "int64"
+    },
+    {
+      "name": "long_km",
+      "type": "double"
+    },
+    {
+      "name": "buff",
+      "type": "int64"
+    },
+    {
+      "name": "ordenanza",
+      "type": "string"
+    },
+    {
+      "name": "prog_ini",
+      "type": "double"
+    },
+    {
+      "name": "prog_fin",
+      "type": "double"
+    },
+    {
+      "name": "est_medido",
+      "type": "string"
+    },
+    {
+      "name": "cc_empresa",
+      "type": "string"
+    },
+    {
+      "name": "cc_fecha_inicio_obra",
+      "type": "string"
+    },
+    {
+      "name": "cc_fecha_fin_obra",
+      "type": "string"
+    },
+    {
+      "name": "cc_expediente",
+      "type": "string"
+    },
+    {
+      "name": "cc_etapa",
+      "type": "double"
+    },
+    {
+      "name": "pav_empresa",
+      "type": "string"
+    },
+    {
+      "name": "pav_fecha_inicio_obra",
+      "type": "string"
+    },
+    {
+      "name": "pav_fecha_fin_obra",
+      "type": "string"
+    },
+    {
+      "name": "pav_expediente",
+      "type": "string"
+    },
+    {
+      "name": "pav_etapa",
+      "type": "double"
+    },
+    {
+      "name": "velocidad_maxima",
+      "type": "int64"
+    },
+    {
+      "name": "cpa_impar",
+      "type": "string"
+    },
+    {
+      "name": "cpa_par",
+      "type": "string"
+    },
+    {
+      "name": "restriccion_estacionamiento",
+      "type": "string"
+    },
+    {
+      "name": "observaciones",
+      "type": "string"
+    },
+    {
+      "name": "nombre_corto",
+      "type": "string"
+    },
+    {
+      "name": "ancho_vereda_par",
+      "type": "double"
+    },
+    {
+      "name": "ancho_vereda_impar",
+      "type": "double"
+    },
+    {
+      "name": "tipo_vereda_par",
+      "type": "string"
+    },
+    {
+      "name": "tipo_vereda_impar",
+      "type": "string"
+    },
+    {
+      "name": "cob_cloacas_par",
+      "type": "string"
+    },
+    {
+      "name": "cob_cloacas_impar",
+      "type": "string"
+    },
+    {
+      "name": "cob_agua_par",
+      "type": "string"
+    },
+    {
+      "name": "cob_agua_impar",
+      "type": "string"
+    },
+    {
+      "name": "ancho_nominal",
+      "type": "int64"
+    },
+    {
+      "name": "ancho_real",
+      "type": "double"
+    },
+    {
+      "name": "ancho_calzada",
+      "type": "double"
+    },
+    {
+      "name": "id_calle",
+      "type": "int64"
+    },
+    {
+      "name": "lado_ciclovia",
+      "type": "string"
+    },
+    {
+      "name": "transitable",
+      "type": "string"
+    },
+    {
+      "name": "numero_reparto_facturacion",
+      "type": "int64"
+    },
+    {
+      "name": "nombre_completo",
+      "type": "string"
+    },
+    {
+      "name": "material_calzada",
+      "type": "string"
+    },
+    {
+      "name": "cordon_cuneta",
+      "type": "string"
+    },
+    {
+      "name": "proyecto_infraestructura",
+      "type": "string"
+    },
+    {
+      "name": "arbolado",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiLineString",
+  "geoparquet:feature_count": 11714,
   "assets": {
-    "publico_material_de_calzada": {
-      "href": "./publico_material_de_calzada.parquet",
+    "material_de_calzada": {
+      "href": "./material_de_calzada.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-12T10:21:27Z",
+      "pergamino:content_hash": "107116165084437992370866:11714",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 787975,
-      "file:checksum": "1220de0ead00693e220b40fcc019144ca2b09e863226ff60ac3d71118076ebd5380b",
       "roles": [
         "data"
       ],
+      "table:row_count": 11714,
+      "file:size": 929431,
+      "file:checksum": "12205768498e2b8726387b4f39f1a3f1c0eea10f72ac5c4f88dff8b300fc3340d9dd",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_material_de_calzada.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:material_de_calzada). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 11703,
+      "file:size": 787975,
+      "file:checksum": "1220de0ead00693e220b40fcc019144ca2b09e863226ff60ac3d71118076ebd5380b"
+    },
+    "material_de_calzada-tiles": {
+      "href": "./material_de_calzada.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 8305373,
+      "file:checksum": "12203fc9effb0b6e47af1dccd4e54df3bb11e8f2bf79813d974e73d9368ac030e32e",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "material_de_calzada",
-      "file:size": 1439,
-      "file:checksum": "1220d86b28db883b8287c2c62f06ab542c4186dad3672e39f75612f667a1a2c88561",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 3526,
+      "file:checksum": "1220681a81411ddfd4e994716172df1d01be1b45749c226443598a00121976ba6950",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 1814,
       "file:checksum": "12206da98d40918738a0d2e544d993097c69d9aaa6f1b528036f301f417ae0bcd1f4",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1518,
-      "file:checksum": "1220bdf37a2439459dae6aeb49e27a6090eef46909c4df588dd5ded6a5eeb2173345",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_material_de_calzada-tiles": {
-      "href": "./publico_material_de_calzada.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_material_de_calzada (vector tiles)",
-      "file:size": 4882444,
-      "file:checksum": "122021cbfa6e950e7cf55232c2dce9db33f97f869a4c6ef2ba637e646095f5729826",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_material_de_calzada.thumb.jpg",
+      "href": "./material_de_calzada.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 135884,
-      "file:checksum": "1220093ebd074f87809f24f67c3596305d264fc5f23a8057980db7567f1abeadafcc",
+      "file:size": 199065,
+      "file:checksum": "1220842e198a0f6cd1eee209a08ca8c242a9a45c9f75ee76832ae15d5c52acdd301b",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 5116,
+      "file:checksum": "1220a3bd27d64e554f1de711942797fba420768be1130dba800a6895765837e450f4",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "material_de_calzada"
+  ]
 }

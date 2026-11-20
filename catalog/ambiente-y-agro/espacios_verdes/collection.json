@@ -2,7 +2,66 @@
   "type": "Collection",
   "id": "ambiente-y-agro/espacios_verdes",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Espacios verdes públicos",
   "description": "Contiene todos los espacios verdes públicos del Partido de Pergamino, como plazas, plazoletas y parques.",
+  "keywords": [
+    "terraplen",
+    "juegos",
+    "plazoleta",
+    "esparcimiento",
+    "parque",
+    "plaza",
+    "pergamino",
+    "verde",
+    "arroyo"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.8433147,
+          -34.0910367,
+          -60.1678099,
+          -33.660809
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,47 +76,53 @@
       "title": "Ambiente y agro"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/148",
+      "type": "text/html",
+      "title": "Espacios verdes públicos en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:espacios_verdes",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:espacios_verdes)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aespacios_verdes",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:espacios_verdes"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_espacios_verdes.pmtiles",
+      "href": "./espacios_verdes.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_espacios_verdes"
+        "espacios_verdes"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 492,
-  "table:row_count": 492,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 148,
+  "pergamino:geonode_uuid": "a5cef1cd-cebb-468d-942c-57d35600b876",
+  "pergamino:source_updated": "2026-05-11T14:36:47Z",
+  "pergamino:update_frequency": "continual",
   "table:primary_geometry": "geometry",
+  "table:row_count": 492,
   "table:columns": [
     {
       "name": "id",
@@ -245,133 +310,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.9114543,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_espacios_verdes"
-  ],
-  "title": "Espacios verdes públicos",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.843315,
-          -34.091037,
-          -60.16780992,
-          -33.6608089
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 492,
   "assets": {
-    "publico_espacios_verdes": {
-      "href": "./publico_espacios_verdes.parquet",
+    "espacios_verdes": {
+      "href": "./espacios_verdes.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-11T14:36:47Z",
+      "pergamino:content_hash": "4476573775163656814210:492",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 133719,
-      "file:checksum": "122037af54c84d6f443d522996e77a618cb9711198faec83bac1fb8792fac309ff11",
       "roles": [
         "data"
       ],
+      "table:row_count": 492,
+      "file:size": 134768,
+      "file:checksum": "122086d89e115d7d0913c6742897014483ab30ef50f5ff745191e547116eea8584cb",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_espacios_verdes.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:espacios_verdes). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 492,
+      "file:size": 133719,
+      "file:checksum": "122037af54c84d6f443d522996e77a618cb9711198faec83bac1fb8792fac309ff11"
+    },
+    "espacios_verdes-tiles": {
+      "href": "./espacios_verdes.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 461748,
+      "file:checksum": "1220a2276ee042599e31a6ab8df0a98fce1205e638366a352f58f8d2a64bd49f7b68",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "espacios_verdes",
-      "file:size": 1790,
-      "file:checksum": "12207bab8aab7d4aa1d65227debbded26926a519999dab0bc92782b746a01e2be743",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1766,
+      "file:checksum": "122033fc5d2a7a5ad1feeabda95083950ee304f02c5cd6219ab9a49ae2d1472de42d",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
-      "file:size": 1858,
-      "file:checksum": "12203232db3385705cf2e9a42c68c374f9bb0afaaddfe8b7584e431da6ea0c59fa69",
+      "file:size": 1657,
+      "file:checksum": "12206fd8d570dedcbe2de680d71921c89c6b135a33ccfc3b697d34531270c058d9ee",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 2279,
-      "file:checksum": "1220131490ce09e0d1f48dba41afd22416b53a731e11de7d296730843fbeebfe71c0",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_espacios_verdes-tiles": {
-      "href": "./publico_espacios_verdes.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_espacios_verdes (vector tiles)",
-      "file:size": 462979,
-      "file:checksum": "12207958dddbb441faef96216812f1b5be05c56377bb5c64fc3c79f983917e3da528",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_espacios_verdes.thumb.jpg",
+      "href": "./espacios_verdes.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 36029,
-      "file:checksum": "122018c2979a3d2b92c34f98d0b4c036aa765ce22fd6e7644dbc3c9a3b8aa44c4737",
+      "file:size": 22951,
+      "file:checksum": "1220b87b37f5f84a57f76e318406c921db196c30826ada8abff4f14bc0e8d80bdf6c",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 4604,
+      "file:checksum": "122036ecf2b240ad9ab85cbebbb28c82edc3a77c1b7e01d705c151da9b3a57b21584",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "espacios_verdes"
+  ]
 }

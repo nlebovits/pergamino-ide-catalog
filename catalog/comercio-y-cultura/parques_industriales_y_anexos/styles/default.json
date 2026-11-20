@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_parques_industriales_y_anexos.pmtiles",
+      "url": "pmtiles://../parques_industriales_y_anexos.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_parques_industriales_y_anexos",
+      "source-layer": "parques_industriales_y_anexos",
       "paint": {
         "fill-color": [
           "match",
@@ -36,7 +36,7 @@
       "id": "categorical-fill-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_parques_industriales_y_anexos",
+      "source-layer": "parques_industriales_y_anexos",
       "layout": {
         "text-field": [
           "get",

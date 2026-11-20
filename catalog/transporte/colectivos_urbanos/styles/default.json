@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_colectivos_urbanos.pmtiles",
+      "url": "pmtiles://../colectivos_urbanos.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-line",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_colectivos_urbanos",
+      "source-layer": "colectivos_urbanos",
       "paint": {
         "line-color": [
           "match",
@@ -44,7 +44,7 @@
       "id": "categorical-line-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_colectivos_urbanos",
+      "source-layer": "colectivos_urbanos",
       "layout": {
         "text-field": [
           "get",

@@ -2,121 +2,24 @@
   "type": "Collection",
   "id": "salud/guardias_medicas",
   "stac_version": "1.1.0",
-  "description": "Guardias médicas de los principales centros de salud de Pergamino, públicos y privados.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Salud"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aguardias_medicas",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:guardias_medicas"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_guardias_medicas.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_guardias_medicas"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "MultiPoint",
-  "geoparquet:feature_count": 5,
-  "table:row_count": 5,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "nombre",
-      "type": "string"
-    },
-    {
-      "name": "ubicacion",
-      "type": "string"
-    },
-    {
-      "name": "telefono_1",
-      "type": "string"
-    },
-    {
-      "name": "telefono_2",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_guardias_medicas"
-  ],
   "title": "Guardias médicas",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.585469,
-          -33.91155412,
-          -60.5647839,
-          -33.89089785
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Guardias médicas de los principales centros de salud de Pergamino, públicos y privados.",
+  "keywords": [
+    "salud",
+    "medicina",
+    "pergamino",
+    "medica",
+    "clinica",
+    "hospital",
+    "guardia"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -137,73 +40,215 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.5854688,
+          -33.9115541,
+          -60.5647843,
+          -33.8908979
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Salud"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/174",
+      "type": "text/html",
+      "title": "Guardias médicas en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:guardias_medicas",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:guardias_medicas)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./guardias_medicas.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "guardias_medicas"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 174,
+  "pergamino:geonode_uuid": "5f2b7407-3a4a-4f9d-af6f-6a0dfbbbac7f",
+  "pergamino:source_updated": "2026-05-08T13:01:07Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 5,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "ubicacion",
+      "type": "string"
+    },
+    {
+      "name": "telefono_1",
+      "type": "string"
+    },
+    {
+      "name": "telefono_2",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPoint",
+  "geoparquet:feature_count": 5,
   "assets": {
-    "publico_guardias_medicas": {
-      "href": "./publico_guardias_medicas.parquet",
+    "guardias_medicas": {
+      "href": "./guardias_medicas.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-08T13:01:07Z",
+      "pergamino:content_hash": "67105019512134732332:5",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 4373,
-      "file:checksum": "12207aec34b6fdd85d46178ff0bddef912346c97eb13a08e3a4108e1a16913caace3",
       "roles": [
         "data"
       ],
+      "table:row_count": 5,
+      "file:size": 2528,
+      "file:checksum": "1220a436a44e6f4dfdab7c9b188ca9d760d5d4fbb876337043201533a028043881b7",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_guardias_medicas.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:guardias_medicas). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 5,
+      "file:size": 4373,
+      "file:checksum": "12207aec34b6fdd85d46178ff0bddef912346c97eb13a08e3a4108e1a16913caace3"
+    },
+    "guardias_medicas-tiles": {
+      "href": "./guardias_medicas.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 8237,
+      "file:checksum": "1220d0d1e1d525aaf3766b2d449c03c053ac31008e8ea57980ab598c0545d0a98d62",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "guardias_medicas",
-      "file:size": 487,
-      "file:checksum": "1220825651a0605ffb077a1675888953b0f1e189e87716fe8108e22ca67f5c30ebed",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1439,
+      "file:checksum": "1220a56481295493381763827612326ef8d9514367393ffcb010beab2bddfbd0ae4f",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
-      "file:size": 102,
-      "file:checksum": "12206b071e3b00232b6e969192ac2edb0c5c81c245c269cc480ec5e4eac3215a6938",
+      "file:size": 552,
+      "file:checksum": "12206a81141a7b3a98f99d02384209d62294766764188cbff28f51b217701266a1e3",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1193,
-      "file:checksum": "12204abcf4bd493957cad893ab7eba81d30a21732e8158de1671c8fba38befa6182c",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_guardias_medicas-tiles": {
-      "href": "./publico_guardias_medicas.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_guardias_medicas (vector tiles)",
-      "file:size": 5149,
-      "file:checksum": "1220033409da42f9a29cd8de2e4f4c8a364e44543330900b3f8b231e0454f485e2c2",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_guardias_medicas.thumb.jpg",
+      "href": "./guardias_medicas.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 102709,
-      "file:checksum": "1220d6df77f832ba34b30870732ac7198f72d7c2ebc5ca3306485fa327a6fa9b2b40",
+      "file:size": 101838,
+      "file:checksum": "1220efeabc6c22516b7a64afe846dcb70d37bab2f6f6cbbf01382833f7151ed0bef5",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3271,
+      "file:checksum": "1220fe6a3172a585ad978f1974d408ff69e0f818bdd3e024a6506e8e51d6c446dfde",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "guardias_medicas"
+  ]
 }

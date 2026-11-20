@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_cobertura_arbolado_urbano.pmtiles",
+      "url": "pmtiles://../cobertura_arbolado_urbano.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "fill-0",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_cobertura_arbolado_urbano",
+      "source-layer": "cobertura_arbolado_urbano",
       "paint": {
         "fill-color": "#6f996f",
         "fill-opacity": 1.0,

@@ -2,117 +2,23 @@
   "type": "Collection",
   "id": "ambiente-y-agro/curvas_nivel_ign",
   "stac_version": "1.1.0",
-  "description": "Curvas de nivel o isolineas del Instituto Geográfico Naciona (IGN) con paso de 10m, recortado al Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Ambiente y agro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_curvas_nivel_ign.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_curvas_nivel_ign"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "LineString",
-  "geoparquet:feature_count": 202,
-  "table:row_count": 202,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "cota",
-      "type": "int64"
-    },
-    {
-      "name": "hoja",
-      "type": "string"
-    },
-    {
-      "name": "fuente",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5401611,
-    -33.7654485,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_curvas_nivel_ign"
-  ],
   "title": "Curvas de nivel (IGN)",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.94288141,
-          -34.1659879,
-          -60.1918058,
-          -33.5555989
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Curvas de nivel o isolineas del Instituto Geográfico Naciona (IGN) con paso de 10m, recortado al Partido de Pergamino.",
+  "keywords": [
+    "pergamino",
+    "nivel",
+    "ign",
+    "curvas",
+    "10m",
+    "isolineas"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -133,62 +39,211 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.9428814,
+          -34.1659878,
+          -60.1918058,
+          -33.5555992
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Ambiente y agro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/129",
+      "type": "text/html",
+      "title": "Curvas de nivel (IGN) en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:curvas_nivel_ign",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:curvas_nivel_ign)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./curvas_nivel_ign.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "curvas_nivel_ign"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 129,
+  "pergamino:geonode_uuid": "3c67f7b8-04d0-41cd-b065-20b2b28d14f2",
+  "pergamino:source_updated": "2026-05-13T16:52:37Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 202,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "cota",
+      "type": "int64"
+    },
+    {
+      "name": "hoja",
+      "type": "string"
+    },
+    {
+      "name": "fuente",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "LineString",
+  "geoparquet:feature_count": 202,
   "assets": {
-    "publico_curvas_nivel_ign": {
-      "href": "./publico_curvas_nivel_ign.parquet",
+    "curvas_nivel_ign": {
+      "href": "./curvas_nivel_ign.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-13T16:52:37Z",
+      "pergamino:content_hash": "1813265221956891471142:202",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 89746,
-      "file:checksum": "1220897adda92a5f626ca9b24b28438726b38317fa51fbb684da7b2b3cbdb026cc29",
       "roles": [
         "data"
       ],
+      "table:row_count": 202,
+      "file:size": 94910,
+      "file:checksum": "12203575f5ac769ef0ab4a11b0bdc4d9ff462ff808552b0770582ea0a8a383338472",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4322,
-      "file:checksum": "1220ff8db5c62a29c1ac65891a208de595a76b1442fd42bde9ceccd07feecd545d4b",
+    "version-2026-08-14": {
+      "href": "./publico_curvas_nivel_ign.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:curvas_nivel_ign). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 202,
+      "file:size": 89746,
+      "file:checksum": "1220897adda92a5f626ca9b24b28438726b38317fa51fbb684da7b2b3cbdb026cc29"
     },
-    "publico_curvas_nivel_ign-tiles": {
-      "href": "./publico_curvas_nivel_ign.pmtiles",
+    "curvas_nivel_ign-tiles": {
+      "href": "./curvas_nivel_ign.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_curvas_nivel_ign (vector tiles)",
-      "file:size": 595629,
-      "file:checksum": "1220ec33a474e6797997a09328b017ed4d0ebfd51bd429eb69da2480ecbe22de6091",
       "roles": [
         "visual"
       ],
+      "file:size": 618376,
+      "file:checksum": "12203776ee167c8ad26b77268c4f9810337108c5972076d74a39f1a9c7c64f99223e",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "curvas_nivel_ign",
-      "file:size": 474,
-      "file:checksum": "1220e6df95a10c50a7b167053911f1bece44b3edd9d4834082b5f4bc7c6b0af630bf",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1486,
+      "file:checksum": "1220e74540d98e710ac2ecf6cae1fca1d458e1b4ac5f69b032d75918bb1b1821928d",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 722,
+      "file:checksum": "122038edce8ab8846c11c064f5f57fa87e4c2c70ecb60e1f7c24ecde006948216157",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_curvas_nivel_ign.thumb.jpg",
+      "href": "./curvas_nivel_ign.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 169403,
-      "file:checksum": "12202946f2bd3f6573c41d87219a3e922acb7eaefad80c268fed6b4848ff75313998",
+      "file:size": 105644,
+      "file:checksum": "122089945854a6491602e2ff28b67675726f20f8382a5f93ba871e43d4c18524cdb5",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3250,
+      "file:checksum": "12205d85d93f8a3cf081ead1c9656876a99455acd6e8e9d9b29e90e651fbc8b466f0",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "curvas_nivel_ign"
+  ]
 }

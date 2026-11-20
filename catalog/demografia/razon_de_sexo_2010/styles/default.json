@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_razon_de_sexo_2010.pmtiles",
+      "url": "pmtiles://../razon_de_sexo_2010.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_razon_de_sexo_2010",
+      "source-layer": "razon_de_sexo_2010",
       "paint": {
         "fill-color": [
           "match",

@@ -2,7 +2,63 @@
   "type": "Collection",
   "id": "catastro/edificios_historicos",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Edificios históricos",
   "description": "Edificios históricos del Partido de Pergamino.",
+  "keywords": [
+    "construcciones",
+    "pergamino",
+    "patrimonio",
+    "historicos",
+    "edificios",
+    "cultura"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.587266,
+          -33.9371924,
+          -60.5498988,
+          -33.8636805
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -11,55 +67,69 @@
       "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
     },
     {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
       "rel": "parent",
       "href": "../catalog.json",
       "type": "application/json",
       "title": "Catastro"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/144",
+      "type": "text/html",
+      "title": "Edificios históricos en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:edificios_historicos",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:edificios_historicos)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_edificios_historicos.pmtiles",
+      "href": "./edificios_historicos.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_edificios_historicos"
+        "edificios_historicos"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiPoint",
-  "geoparquet:feature_count": 73,
-  "table:row_count": 73,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 144,
+  "pergamino:geonode_uuid": "cc174737-a6b8-450d-990c-8b8d2f9cde1f",
+  "pergamino:source_updated": "2026-05-11T15:51:38Z",
+  "pergamino:update_frequency": "unknown",
   "table:primary_geometry": "geometry",
+  "table:row_count": 73,
   "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "descrip",
       "type": "string"
@@ -145,122 +215,107 @@
       "type": "string"
     },
     {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_edificios_historicos"
-  ],
-  "title": "Edificios históricos",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.587266,
-          -33.93719236,
-          -60.54989882,
-          -33.86368
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "MultiPoint",
+  "geoparquet:feature_count": 73,
   "assets": {
-    "publico_edificios_historicos": {
-      "href": "./publico_edificios_historicos.parquet",
+    "edificios_historicos": {
+      "href": "./edificios_historicos.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-11T15:51:38Z",
+      "pergamino:content_hash": "635255981626846481071:73",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 14964,
-      "file:checksum": "1220bb0ae80554842e08b4ea7b0c2de7ec473789602a5874ebfd5dd82bc5c29eab49",
       "roles": [
         "data"
       ],
+      "table:row_count": 73,
+      "file:size": 12175,
+      "file:checksum": "12207ba84407558e991e2b6cd4af0fa9b97197ef13ebee8d08fb6436c697a7c91591",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4796,
-      "file:checksum": "122049b00a0fa459289d5b4f9ce6c76fd6d927d346f2eb23318105e8f70285807c8a",
+    "version-2026-08-14": {
+      "href": "./publico_edificios_historicos.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:edificios_historicos). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 73,
+      "file:size": 14964,
+      "file:checksum": "1220bb0ae80554842e08b4ea7b0c2de7ec473789602a5874ebfd5dd82bc5c29eab49"
     },
-    "publico_edificios_historicos-tiles": {
-      "href": "./publico_edificios_historicos.pmtiles",
+    "edificios_historicos-tiles": {
+      "href": "./edificios_historicos.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_edificios_historicos (vector tiles)",
-      "file:size": 24713,
-      "file:checksum": "12204b409748c94cc4784bc28b10048a475882679da816ad85a46cdec6c51618243b",
       "roles": [
         "visual"
       ],
+      "file:size": 96015,
+      "file:checksum": "1220cbf3a7bdfe455f4437197df651e22fd8435094bf5d243f7f9bb1cc815ffed961",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "edificios_historicos",
-      "file:size": 499,
-      "file:checksum": "1220edf46d45aa4637fc68707b3b52b6f5aec8f66c15402ddeb46b83158c8fd0f339",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1089,
+      "file:checksum": "122077643eba174107ec7889f66fa088031b98cef42aec13197ac2c5c661137baa56",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 237,
+      "file:checksum": "122091d0a957c1e9f7b5aeeab658a91e348c22fc3329f3e91924275f8833eee70e58",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_edificios_historicos.thumb.jpg",
+      "href": "./edificios_historicos.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 99078,
-      "file:checksum": "12207e9dee3871e0fbd4d6366201accae6aef922cfc47bb741db55f32c7fdb83598b",
+      "file:size": 69653,
+      "file:checksum": "1220e73db230db817cf13492644e358b18c66aea7b41a8d7a22da4834633ff6b2867",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3762,
+      "file:checksum": "1220b01a1c59e17b4ca29a2754d6c65814b9a370755f1a1ee7aae4416fca2cf27305",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "edificios_historicos"
+  ]
 }

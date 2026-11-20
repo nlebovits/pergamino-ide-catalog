@@ -1,34 +1,30 @@
 # Guía para agentes — Catastro
 
-Parcelario y jerarquía catastral del Partido de Pergamino, desde la circunscripción hasta la subparcela y la propiedad horizontal, junto con zonificación, edificaciones y edificios de interés.
+Parcelario y jerarquía catastral del Partido de Pergamino, desde la circunscripción hasta la subparcela y la propiedad horizontal, junto con zonificación, edificaciones detectadas sobre imágenes y edificios de interés.
 
-Cada colección tiene su propio `AGENTS.md` con esquema, claves de unión y consultas probadas. Este archivo es el índice del grupo.
+Cada colección tiene su propio `AGENTS.md` con el esquema, los valores medidos y consultas probadas. Este archivo es el índice del grupo.
 
 ## Colecciones
 
-- [`catastro/areas_fiscalizadas_construcciones`](./areas_fiscalizadas_construcciones/AGENTS.md) — Áreas fiscalizadas construcciones no declaradas, 33 registros, Polygon
-- [`catastro/chacra`](./chacra/AGENTS.md) — Catastro chacra, 285 registros, Multi Polygon
-- [`catastro/circunscripcion`](./circunscripcion/AGENTS.md) — Catastro circunscripcion, 23 registros, Multi Polygon
-- [`catastro/fraccion`](./fraccion/AGENTS.md) — Catastro fraccion, 181 registros, Multi Polygon
-- [`catastro/manzana`](./manzana/AGENTS.md) — Catastro manzana, 2.564 registros, Multi Polygon
-- [`catastro/medida_lado`](./medida_lado/AGENTS.md) — Catastro medida lado de parcela, 196.722 registros, Point
-- [`catastro/parcela`](./parcela/AGENTS.md) — Catastro parcela, 55.134 registros, Polygon
-- [`catastro/ph`](./ph/AGENTS.md) — Catastro ph, 9.864 registros, Point
-- [`catastro/quinta`](./quinta/AGENTS.md) — Catastro quinta, 136 registros, Multi Polygon
-- [`catastro/seccion`](./seccion/AGENTS.md) — Catastro seccion, 71 registros, Multi Polygon
-- [`catastro/subparcela`](./subparcela/AGENTS.md) — Catastro subparcela, 487 registros, Polygon
-- [`catastro/complejos_habitacionales`](./complejos_habitacionales/AGENTS.md) — Complejos habitacionales, 108 registros, Polygon
-- [`catastro/edificaciones_pa`](./edificaciones_pa/AGENTS.md) — Edificaciones detectadas PA, 4.921 registros, Polygon
-- [`catastro/edificaciones_pb`](./edificaciones_pb/AGENTS.md) — Edificaciones detectadas PB, 48.168 registros, Polygon
-- [`catastro/edificios_en_altura`](./edificios_en_altura/AGENTS.md) — Edificios en altura, 457 registros, Multi Point
-- [`catastro/edificios_historicos`](./edificios_historicos/AGENTS.md) — Edificios históricos, 73 registros, Multi Point
-- [`catastro/estado_parcela`](./estado_parcela/AGENTS.md) — Estado parcela, 55.134 registros, Polygon
-- [`catastro/parcelario`](./parcelario/AGENTS.md) — Parcelario, 55.134 registros, Polygon
-- [`catastro/parcelario_contralor`](./parcelario_contralor/AGENTS.md) — Parcelario contralor, 55.134 registros, Polygon
-- [`catastro/zonificacion`](./zonificacion/AGENTS.md) — Zonificacion, 230 registros, Multi Polygon
+- [`catastro/areas_fiscalizadas_construcciones`](./areas_fiscalizadas_construcciones/AGENTS.md): Áreas fiscalizadas construcciones no declaradas, polígonos
+- [`catastro/chacra`](./chacra/AGENTS.md): Catastro chacra, polígonos
+- [`catastro/circunscripcion`](./circunscripcion/AGENTS.md): Catastro circunscripcion, polígonos
+- [`catastro/complejos_habitacionales`](./complejos_habitacionales/AGENTS.md): Complejos habitacionales, polígonos
+- [`catastro/edificaciones_automaticas`](./edificaciones_automaticas/AGENTS.md): Edificaciones detectadas con IA, polígonos
+- [`catastro/edificios_en_altura`](./edificios_en_altura/AGENTS.md): Edificios en altura, puntos
+- [`catastro/edificios_historicos`](./edificios_historicos/AGENTS.md): Edificios históricos, puntos
+- [`catastro/fraccion`](./fraccion/AGENTS.md): Catastro fraccion, polígonos
+- [`catastro/manzana`](./manzana/AGENTS.md): Catastro manzana, polígonos
+- [`catastro/medida_lado`](./medida_lado/AGENTS.md): Catastro medida lado de parcela, puntos
+- [`catastro/parcela`](./parcela/AGENTS.md): Catastro parcela, polígonos
+- [`catastro/ph`](./ph/AGENTS.md): Catastro ph, puntos
+- [`catastro/quinta`](./quinta/AGENTS.md): Catastro quinta, polígonos
+- [`catastro/seccion`](./seccion/AGENTS.md): Catastro seccion, polígonos
+- [`catastro/subparcela`](./subparcela/AGENTS.md): Catastro subparcela, polígonos
+- [`catastro/zonificacion`](./zonificacion/AGENTS.md): Zonificacion, polígonos
 
 ## Notas de acceso
 
-- Todos los datos están en GeoParquet 1.1.0, WKB, EPSG:4326, con columna de cobertura `bbox` y ordenamiento espacial Hilbert. Los filtros espaciales aprovechan las estadísticas por grupo de filas.
-- Las capas tienen además PMTiles para visualización web y un estilo MapLibre en `styles/default.json` derivado del SLD oficial del GeoServer municipal.
-- Los nombres de columna están en español y varias capas traen `fuente` y `actualizacion` a nivel de registro, que es la señal de vigencia más confiable.
+- Los datos están en GeoParquet 1.1, geometría WKB en EPSG:4326, con columna de cobertura `bbox` y orden espacial Hilbert. Un filtro sobre `bbox` lee sólo los grupos de filas que lo cumplen.
+- Las capas tienen además PMTiles y un estilo MapLibre en `styles/default.json`, derivado del estilo SLD que publica GeoNode.
+- Los nombres de columna están en español, tal como los publica la fuente.

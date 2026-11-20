@@ -4,17 +4,17 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_rampas_acceso_veredas.pmtiles",
+      "url": "pmtiles://../rampas_acceso_veredas.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_rampas_acceso_veredas",
+      "source-layer": "rampas_acceso_veredas",
       "paint": {
         "circle-color": [
           "match",
@@ -30,10 +30,88 @@
           "#2d85e2",
           "verde",
           "#2cc87d",
-          "#cccccc"
+          "#000000"
         ],
-        "circle-radius": 7.0,
-        "circle-opacity": 1.0
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "baldosa",
+          1.0,
+          "pavimento",
+          1.0,
+          "premoldeado",
+          1.0,
+          "verde",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "baldosa",
+          3.5,
+          "pavimento",
+          3.5,
+          "premoldeado",
+          3.5,
+          "verde",
+          3.5,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "baldosa",
+          "#e2207a",
+          "pavimento",
+          "#90948c",
+          "premoldeado",
+          "#2d85e2",
+          "verde",
+          "#2cc87d",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "baldosa",
+          1.0,
+          "pavimento",
+          1.0,
+          "premoldeado",
+          1.0,
+          "verde",
+          1.0,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "baldosa",
+          1.0,
+          "pavimento",
+          1.0,
+          "premoldeado",
+          1.0,
+          "verde",
+          1.0,
+          0
+        ]
       }
     }
   ]

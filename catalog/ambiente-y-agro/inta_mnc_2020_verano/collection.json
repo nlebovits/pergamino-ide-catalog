@@ -2,113 +2,35 @@
   "type": "Collection",
   "id": "ambiente-y-agro/inta_mnc_2020_verano",
   "stac_version": "1.1.0",
-  "description": "Mapa nacional de cultivos INTA verano 2020 para el Partido de Pergamino, tomado de https://geo-backend.inta.gob.ar/catalogue/#/dataset/482",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Ambiente y agro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Ainta_mnc_2020_verano",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:inta_mnc_2020_verano"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_inta_mnc_2020_verano.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_inta_mnc_2020_verano"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 28724,
-  "table:row_count": 28724,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "dn",
-      "type": "int64"
-    },
-    {
-      "name": "categoria",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5511474,
-    -33.8293567,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_inta_mnc_2020_verano"
-  ],
   "title": "Mapa nacional de cultivos INTA verano 2020",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.94404449,
-          -34.176495,
-          -60.13879467,
-          -33.5402179
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Mapa nacional de cultivos INTA verano 2020 para el Partido de Pergamino, tomado de https://geo-backend.inta.gob.ar/catalogue/#/dataset/482",
+  "keywords": [
+    "geointa",
+    "verano",
+    "cultivo",
+    "sorgo",
+    "cereales",
+    "trigo",
+    "cobertura",
+    "2020",
+    "agricola",
+    "soja",
+    "arveja",
+    "maiz",
+    "pergamino",
+    "barbecho",
+    "ganadero",
+    "inta",
+    "mapa",
+    "nacional"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -136,73 +58,207 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.9440445,
+          -34.1764948,
+          -60.1387947,
+          -33.5402181
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Ambiente y agro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/186",
+      "type": "text/html",
+      "title": "Mapa nacional de cultivos INTA verano 2020 en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:inta_mnc_2020_verano",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:inta_mnc_2020_verano)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./inta_mnc_2020_verano.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "inta_mnc_2020_verano"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 186,
+  "pergamino:geonode_uuid": "b88d98a6-6452-46fe-ac3b-5cdc8621b85c",
+  "pergamino:source_updated": "2026-05-07T10:34:38Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 28724,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "dn",
+      "type": "int64"
+    },
+    {
+      "name": "categoria",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 28724,
   "assets": {
-    "publico_inta_mnc_2020_verano": {
-      "href": "./publico_inta_mnc_2020_verano.parquet",
+    "inta_mnc_2020_verano": {
+      "href": "./inta_mnc_2020_verano.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-07T10:34:38Z",
+      "pergamino:content_hash": "264599573201840381180861:28724",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 2036129,
-      "file:checksum": "1220696d563f7714e3341bb5d0574ad3958e4d0ba9068adbdf5fdd36c724a48e04ee",
       "roles": [
         "data"
       ],
+      "table:row_count": 28724,
+      "file:size": 2150960,
+      "file:checksum": "122070f8a21777a450fcdae2870b5eab2e7073ce308ffdafd9b0c13940cb8806ec16",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_inta_mnc_2020_verano.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:inta_mnc_2020_verano). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 28724,
+      "file:size": 2036129,
+      "file:checksum": "1220696d563f7714e3341bb5d0574ad3958e4d0ba9068adbdf5fdd36c724a48e04ee"
+    },
+    "inta_mnc_2020_verano-tiles": {
+      "href": "./inta_mnc_2020_verano.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 8878099,
+      "file:checksum": "1220771281e7efb16b12051edbe90c51c652ce112f3cd4917876abdc50c3619dbf67",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "inta_mnc_2020_verano",
-      "file:size": 678,
-      "file:checksum": "1220bad3e1655a03a9885f663d88d57d07436723227594eaafba99ce4146f5d44e39",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 662,
+      "file:checksum": "1220a052ca53b4a564f21fbfde0139ecde77efd621aebf2928ae04faa9ed1cca006a",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 644,
       "file:checksum": "1220cc2bd7e2c95927a6d90f85547cc5b4d7083ba30c35a5433aca30ee8371dc0cae",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1149,
-      "file:checksum": "1220503f675bb14bb78cc01869db65bdc8b01d171daf200d3e783aa7572f3477b8f7",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_inta_mnc_2020_verano-tiles": {
-      "href": "./publico_inta_mnc_2020_verano.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_inta_mnc_2020_verano (vector tiles)",
-      "file:size": 7383253,
-      "file:checksum": "1220f59d7291a1b0373aa92322a87c2c3cdbe6343c19126c1bc21c245665e1e5a3e9",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_inta_mnc_2020_verano.thumb.jpg",
+      "href": "./inta_mnc_2020_verano.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 282668,
-      "file:checksum": "12200950fc862e9bfe4484224d23f900456027dc136562dba28ae2712c975ebfe6d2",
+      "file:size": 277993,
+      "file:checksum": "1220ab463ddd4bb8391f090f64c783ad3464fd206e52c86c625282348e2d9fd68638",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3750,
+      "file:checksum": "12204c6a16421fd3f346a33b52aea5b5cca2242acef7d8b1d4715d7f67d9bf86849c",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "inta_mnc_2020_verano"
+  ]
 }

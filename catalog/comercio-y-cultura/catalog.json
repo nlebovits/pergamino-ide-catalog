@@ -32,12 +32,6 @@
     },
     {
       "rel": "child",
-      "href": "./beata_crescencia_perez/collection.json",
-      "type": "application/json",
-      "title": "Beata crescencia perez"
-    },
-    {
-      "rel": "child",
       "href": "./colegios_de_profesionales/collection.json",
       "type": "application/json",
       "title": "Colegios profesionales"
@@ -139,5 +133,5 @@
       "title": "Human-readable documentation"
     }
   ],
-  "updated": "2026-11-20T07:41:37Z"
+  "updated": "2026-11-20T09:51:46Z"
 }

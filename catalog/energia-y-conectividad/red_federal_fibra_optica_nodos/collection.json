@@ -2,7 +2,73 @@
   "type": "Collection",
   "id": "energia-y-conectividad/red_federal_fibra_optica_nodos",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Nodos de la Red Federal de Fibra Óptica",
   "description": "Capa de nodos de la Red Federal de Fibra Óptica de Argentina (REFEFO) en un radio de 50km desde el Partido de Pergamino.",
+  "keywords": [
+    "internet",
+    "red",
+    "comunicaciones",
+    "pergamino",
+    "optica",
+    "refefo",
+    "fibra",
+    "idecom",
+    "nodos"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "IDECOM - Ente Nacional de Comunicaciones (ENACOM)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.enacom.gob.ar/"
+    },
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -61.0995605,
+          -34.5838,
+          -59.6391119,
+          -33.127075
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,48 +83,59 @@
       "title": "Energía y conectividad"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/245",
+      "type": "text/html",
+      "title": "Nodos de la Red Federal de Fibra Óptica en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:red_federal_fibra_optica_nodos",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:red_federal_fibra_optica_nodos)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Ared_federal_fibra_optica_nodos",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:red_federal_fibra_optica_nodos"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_red_federal_fibra_optica_nodos.pmtiles",
+      "href": "./red_federal_fibra_optica_nodos.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_red_federal_fibra_optica_nodos"
+        "red_federal_fibra_optica_nodos"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 50,
-  "table:row_count": 50,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 245,
+  "pergamino:geonode_uuid": "4b32b189-dd5d-41c0-ae72-33f3dc466d04",
+  "pergamino:source_updated": "2026-05-21T13:18:30Z",
+  "pergamino:update_frequency": "notPlanned",
   "table:primary_geometry": "geometry",
+  "table:row_count": 50,
   "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
     {
       "name": "id",
       "type": "int64"
@@ -104,141 +181,107 @@
       "type": "double"
     },
     {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8567314,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_red_federal_fibra_optica_nodos"
-  ],
-  "title": "Nodos de la Red Federal de Fibra Óptica",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -61.0995609,
-          -34.5838,
-          -59.6391119,
-          -33.1270749
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "IDECOM - Ente Nacional de Comunicaciones (ENACOM)",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://www.enacom.gob.ar/"
-    },
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "processor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 50,
   "assets": {
-    "publico_red_federal_fibra_optica_nodos": {
-      "href": "./publico_red_federal_fibra_optica_nodos.parquet",
+    "red_federal_fibra_optica_nodos": {
+      "href": "./red_federal_fibra_optica_nodos.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-21T13:18:30Z",
+      "pergamino:content_hash": "464160048928720707653:50",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 10154,
-      "file:checksum": "12207e5b8dcb9cf195e35161220e0e929940eea20318f5dc85033801870e68ff72f1",
       "roles": [
         "data"
       ],
+      "table:row_count": 50,
+      "file:size": 7149,
+      "file:checksum": "12208f8862c5bb8465455e183365c9456099bf0dad739431766d5aa78c4634fc4a9e",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_red_federal_fibra_optica_nodos.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:red_federal_fibra_optica_nodos). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 50,
+      "file:size": 10154,
+      "file:checksum": "12207e5b8dcb9cf195e35161220e0e929940eea20318f5dc85033801870e68ff72f1"
+    },
+    "red_federal_fibra_optica_nodos-tiles": {
+      "href": "./red_federal_fibra_optica_nodos.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 107660,
+      "file:checksum": "122003837c3b31e38ff6a605d1d52a687cee57957acf712e60f25c8804d955ac3473",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "refefo_nodos",
-      "file:size": 529,
-      "file:checksum": "1220d9ae7c5d77b02d6fc8892b771a9e593d446073f763845e93a7cc75deecc9aaa0",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 634,
+      "file:checksum": "12205e13d664ec2684ab17446c46a2528a75913a6e9e25dcfe88e9a04b628cb9483b",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 240,
       "file:checksum": "1220fdd6788683596ada2a6747a63ffe461370be1ccdb55656b96d04c920f2e80a52",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1396,
-      "file:checksum": "12203202bfdeb91b0eeb84c0800bc82e23abc8068d19feaa4c91bda1215ed6435c0e",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_red_federal_fibra_optica_nodos-tiles": {
-      "href": "./publico_red_federal_fibra_optica_nodos.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_red_federal_fibra_optica_nodos (vector tiles)",
-      "file:size": 78408,
-      "file:checksum": "1220fbf75852f3578ffff4a258bea28a9c3ecb45ccb0df40b4afe0e1422986cbc5f9",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_red_federal_fibra_optica_nodos.thumb.jpg",
+      "href": "./red_federal_fibra_optica_nodos.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 60490,
-      "file:checksum": "1220bfafab7230f00f4f3077cab06302c3fd7ed1d743627695e47705db6583a33c87",
+      "file:size": 40056,
+      "file:checksum": "12207d71bafe6735030a17904a2ce40f9f2fddfde4fc7852368261502922f0a2e868",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3691,
+      "file:checksum": "12208cb171c294e548685a8d6fdf677d4964eb4254860ce874758e82aaebd20c7c35",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "red_federal_fibra_optica_nodos"
+  ]
 }

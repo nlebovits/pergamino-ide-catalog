@@ -4,21 +4,24 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_red_federal_fibra_optica_nodos.pmtiles",
+      "url": "pmtiles://../red_federal_fibra_optica_nodos.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_red_federal_fibra_optica_nodos",
+      "source-layer": "red_federal_fibra_optica_nodos",
       "paint": {
         "circle-color": "#db1e2a",
+        "circle-opacity": 1.0,
         "circle-radius": 3.5,
-        "circle-opacity": 1.0
+        "circle-stroke-color": "#801119",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
       }
     }
   ]

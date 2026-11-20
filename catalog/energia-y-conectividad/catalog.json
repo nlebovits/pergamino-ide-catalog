@@ -6,7 +6,7 @@
   ],
   "id": "energia-y-conectividad",
   "title": "Energía y conectividad",
-  "description": "Cobertura de gas natural, circuitos energéticos, red de fibra óptica municipal y federal, y puntos de acceso wifi en espacios verdes.",
+  "description": "Cobertura de gas natural, circuitos energéticos, nodos y tramos de la Red Federal de Fibra Óptica, y puntos de acceso wifi en espacios verdes.",
   "links": [
     {
       "rel": "root",
@@ -29,12 +29,6 @@
       "href": "./cobertura_gas_natural/collection.json",
       "type": "application/json",
       "title": "Cobertura de gas natural"
-    },
-    {
-      "rel": "child",
-      "href": "./fibra_optica/collection.json",
-      "type": "application/json",
-      "title": "Red de fibra óptica municipal"
     },
     {
       "rel": "child",
@@ -67,5 +61,5 @@
       "title": "Human-readable documentation"
     }
   ],
-  "updated": "2026-11-20T07:41:37Z"
+  "updated": "2026-11-20T09:51:46Z"
 }

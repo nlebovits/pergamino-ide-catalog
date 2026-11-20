@@ -4,17 +4,17 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_educacion_gestion.pmtiles",
+      "url": "pmtiles://../gestion.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_educacion_gestion",
+      "source-layer": "gestion",
       "paint": {
         "circle-color": [
           "match",
@@ -23,35 +23,94 @@
             "sector"
           ],
           "Privada",
-          "#4c50d1",
+          "#d32f2f",
           "Estatal",
-          "#25c4d5",
-          "#cccccc"
+          "#1565c0",
+          "#000000"
         ],
-        "circle-radius": 7.0,
-        "circle-opacity": 1.0
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "sector"
+          ],
+          "Privada",
+          1.0,
+          "Estatal",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "sector"
+          ],
+          "Privada",
+          3.5,
+          "Estatal",
+          3.5,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "sector"
+          ],
+          "Privada",
+          "#ffffff",
+          "Estatal",
+          "#ffffff",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "sector"
+          ],
+          "Privada",
+          1.0,
+          "Estatal",
+          1.0,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "sector"
+          ],
+          "Privada",
+          1.0,
+          "Estatal",
+          1.0,
+          0
+        ]
       }
     },
     {
       "id": "categorical-circle-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_educacion_gestion",
+      "source-layer": "gestion",
       "layout": {
         "text-field": [
           "get",
           "nivel"
         ],
-        "text-size": 13.0,
+        "text-size": 12.0,
         "text-anchor": "left",
         "text-font": [
           "Noto Sans Regular"
         ]
       },
       "paint": {
-        "text-color": "#000000"
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.5
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

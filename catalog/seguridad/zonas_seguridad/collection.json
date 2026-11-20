@@ -2,7 +2,65 @@
   "type": "Collection",
   "id": "seguridad/zonas_seguridad",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Zonas de seguridad",
   "description": "Zonas de seguridad de la Ciudad de Pergamino propuestas por la Secretaría de Seguridad.",
+  "keywords": [
+    "delincuencia",
+    "policia",
+    "zona",
+    "cuadricula",
+    "sector",
+    "seguridad",
+    "comisaria",
+    "pergamino"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6271738,
+          -33.9478657,
+          -60.4995713,
+          -33.8402168
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,48 +75,63 @@
       "title": "Seguridad"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/268",
+      "type": "text/html",
+      "title": "Zonas de seguridad en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:zonas_seguridad",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:zonas_seguridad)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Azonas_seguridad",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:zonas_seguridad"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_zonas_seguridad.pmtiles",
+      "href": "./zonas_seguridad.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_zonas_seguridad"
+        "zonas_seguridad"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 14,
-  "table:row_count": 14,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 268,
+  "pergamino:geonode_uuid": "0b86e2a5-f01c-4362-b60d-4b2fe688a3d6",
+  "pergamino:source_updated": "2026-05-12T10:34:15Z",
+  "pergamino:update_frequency": "notPlanned",
   "table:primary_geometry": "geometry",
+  "table:row_count": 14,
   "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "comisaria",
       "type": "string"
@@ -84,134 +157,107 @@
       "type": "string"
     },
     {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.9023362,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_zonas_seguridad"
-  ],
-  "title": "Zonas de seguridad",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.627174,
-          -33.947866,
-          -60.499571,
-          -33.84021685
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 14,
   "assets": {
-    "publico_zonas_seguridad": {
-      "href": "./publico_zonas_seguridad.parquet",
+    "zonas_seguridad": {
+      "href": "./zonas_seguridad.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-12T10:34:15Z",
+      "pergamino:content_hash": "95340202564384112826:14",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 8729,
-      "file:checksum": "1220964fe421bcf3a76c4291670ccfc6849e2202d63ee0b980f50a40d89ef0153eb4",
       "roles": [
         "data"
       ],
+      "table:row_count": 14,
+      "file:size": 6456,
+      "file:checksum": "12204ebb5bc17f77666848c58bcca87971a35d08411ccb1b44664dc2a9edde529856",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_zonas_seguridad.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:zonas_seguridad). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 14,
+      "file:size": 8729,
+      "file:checksum": "1220964fe421bcf3a76c4291670ccfc6849e2202d63ee0b980f50a40d89ef0153eb4"
+    },
+    "zonas_seguridad-tiles": {
+      "href": "./zonas_seguridad.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 51654,
+      "file:checksum": "12208837ac091d3e3a7ef5a8952b9a2dff83fd8832a5e789321a4a32fd3163648347",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "zonas_seguridad",
-      "file:size": 1275,
-      "file:checksum": "1220674cd4dd6b179e2aed86087050993ee7b73e01821528b608c6b9273ecec291e6",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1251,
+      "file:checksum": "12208d813f2f8594f9f3a004ab329d84392231c6192900dadb7dac55e30029f7cbce",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 621,
       "file:checksum": "1220ec3ef7c84bf9d106de9ee3c569ceab5efc59e49797e49726208ad2d95eaaac6e",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1243,
-      "file:checksum": "122010c50c3c91f1122af9127e050d82a79ee86629925c517621fde496ee8aab8072",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_zonas_seguridad-tiles": {
-      "href": "./publico_zonas_seguridad.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_zonas_seguridad (vector tiles)",
-      "file:size": 50950,
-      "file:checksum": "12207770dfdb81ead938249ccd0b33cc41c23af3a375a2c9ce6329d3a17e3e0d0d45",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_zonas_seguridad.thumb.jpg",
+      "href": "./zonas_seguridad.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 63238,
-      "file:checksum": "122042cecae88f7ea0513af17c36deeae02d8f519f81a0bc401d3d57426f61001c2d",
+      "file:size": 58307,
+      "file:checksum": "1220de74f97cd1d6b631ca1457058b216e43664544ec5f79c64e8415c226a8725a88",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3475,
+      "file:checksum": "1220dceddab7330757b14362ee86280039f5e85bc07ef0436b2718a3e7f7681171aa",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "zonas_seguridad"
+  ]
 }

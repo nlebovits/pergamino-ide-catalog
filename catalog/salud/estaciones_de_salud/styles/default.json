@@ -4,21 +4,35 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_estaciones_de_salud.pmtiles",
+      "url": "pmtiles://../estaciones_de_salud.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_estaciones_de_salud",
+      "source-layer": "estaciones_de_salud",
       "paint": {
-        "circle-color": "#888888",
-        "circle-radius": 10.0,
-        "circle-opacity": 1.0
+        "circle-color": "#FFFFFF",
+        "circle-opacity": 1.0,
+        "circle-radius": 11.0,
+        "circle-stroke-color": "#59c96c",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "estaciones_de_salud",
+      "paint": {
+        "circle-color": "#59c96c",
+        "circle-opacity": 1.0,
+        "circle-radius": 6.0
       }
     }
   ]

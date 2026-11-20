@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_aglomerados_urbanos.pmtiles",
+      "url": "pmtiles://../aglomerados_urbanos.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_aglomerados_urbanos",
+      "source-layer": "aglomerados_urbanos",
       "paint": {
         "fill-color": [
           "match",
@@ -31,7 +31,7 @@
           "#cccccc"
         ],
         "fill-opacity": 0.5,
-        "fill-outline-color": "#232323"
+        "fill-outline-color": "#FFFFFF"
       }
     }
   ]

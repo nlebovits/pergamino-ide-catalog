@@ -2,117 +2,26 @@
   "type": "Collection",
   "id": "servicios-municipales/desarrollo_social",
   "stac_version": "1.1.0",
-  "description": "Centros dependientes de la Secretaría de Desarrollo Social para todo el Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Servicios municipales"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_desarrollo_social.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_desarrollo_social"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiPoint",
-  "geoparquet:feature_count": 8,
-  "table:row_count": 8,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "nombre",
-      "type": "string"
-    },
-    {
-      "name": "direccion",
-      "type": "string"
-    },
-    {
-      "name": "telefono",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5950927,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_desarrollo_social"
-  ],
   "title": "Dependencias de la Secretaría de Desarrollo Social",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.65290934,
-          -33.92543436,
-          -60.380151,
-          -33.76157375
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Centros dependientes de la Secretaría de Desarrollo Social para todo el Partido de Pergamino.",
+  "keywords": [
+    "social",
+    "desarrollo",
+    "cdc",
+    "asistencia",
+    "planes",
+    "centros",
+    "pergamino",
+    "hogar",
+    "taller"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -133,62 +42,211 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6529093,
+          -33.9254344,
+          -60.3801513,
+          -33.7615737
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Servicios municipales"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/136",
+      "type": "text/html",
+      "title": "Dependencias de la Secretaría de Desarrollo Social en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:desarrollo_social",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:desarrollo_social)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./desarrollo_social.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "desarrollo_social"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 136,
+  "pergamino:geonode_uuid": "2cd0fe05-d7ab-4635-82cf-14bbd0f25432",
+  "pergamino:source_updated": "2026-05-12T14:49:06Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 8,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "direccion",
+      "type": "string"
+    },
+    {
+      "name": "telefono",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPoint",
+  "geoparquet:feature_count": 8,
   "assets": {
-    "publico_desarrollo_social": {
-      "href": "./publico_desarrollo_social.parquet",
+    "desarrollo_social": {
+      "href": "./desarrollo_social.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-12T14:49:06Z",
+      "pergamino:content_hash": "97437837319329275379:8",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 4432,
-      "file:checksum": "12200afb165aa9285e97475d03fda94afaf52fa83bb87eb8ca24cbd9aa3d34483252",
       "roles": [
         "data"
       ],
+      "table:row_count": 8,
+      "file:size": 2729,
+      "file:checksum": "12202164191f605e4806c54c36aa760d34c70508d45f817c31d5c4b5a1ff6777eb95",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4333,
-      "file:checksum": "12209c61a33d00b0c430035c6129ab08d108d1448ca6c2c9c29973505afd0398cbce",
+    "version-2026-08-14": {
+      "href": "./publico_desarrollo_social.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:desarrollo_social). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 8,
+      "file:size": 4432,
+      "file:checksum": "12200afb165aa9285e97475d03fda94afaf52fa83bb87eb8ca24cbd9aa3d34483252"
     },
-    "publico_desarrollo_social-tiles": {
-      "href": "./publico_desarrollo_social.pmtiles",
+    "desarrollo_social-tiles": {
+      "href": "./desarrollo_social.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_desarrollo_social (vector tiles)",
-      "file:size": 8749,
-      "file:checksum": "12200b088ae4a5e7492115aa5684e48862cade2f7ace2965c1bf2995346b150a7179",
       "roles": [
         "visual"
       ],
+      "file:size": 14861,
+      "file:checksum": "12206861624fba72c984480ce9a39f1083f7837a1bdeddad4a56eaff6295d59a7d8e",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "desarrollo_social",
-      "file:size": 979,
-      "file:checksum": "1220e2a807dcc592ba6f177da8167f7f7e52f5fb9d0b6d1b122cafbcb6e2a52f075d",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1076,
+      "file:checksum": "12209d31eece1710aed72ce4986cd531c1da858b59ec7879f25fc7bb749c9359ddde",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 231,
+      "file:checksum": "1220fcb1052f9c1bf5e6307890ddd2629c8f4dce572cf937102c34822ae5c7a15054",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_desarrollo_social.thumb.jpg",
+      "href": "./desarrollo_social.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 42266,
-      "file:checksum": "12202d0ca67774a1474fb47035d4a7ff6fa215c381c93ef1a07313fd095cbe9ba5f1",
+      "file:size": 19222,
+      "file:checksum": "12207dd3f25aa87bbda3957bfb99d331e534c5b127fedd76a291a2d80446564bd63b",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3319,
+      "file:checksum": "1220edfb1caa38202cc492e48b32153e416d8c607d9691c34bc378215d953896d08b",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "desarrollo_social"
+  ]
 }

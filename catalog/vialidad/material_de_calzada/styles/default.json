@@ -4,17 +4,21 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_material_de_calzada.pmtiles",
+      "url": "pmtiles://../material_de_calzada.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-line",
+      "id": "sld-0-line",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_material_de_calzada",
+      "source-layer": "material_de_calzada",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
       "paint": {
         "line-color": [
           "match",
@@ -34,17 +38,127 @@
           "#747474",
           "tierra",
           "#747474",
-          "#cccccc"
+          "#000000"
         ],
-        "line-width": 7.0,
-        "line-opacity": 1.0
+        "line-opacity": [
+          "match",
+          [
+            "get",
+            "material_calzada"
+          ],
+          "adoquinado",
+          1.0,
+          "asfalto",
+          1.0,
+          "escoriado",
+          1.0,
+          "hormigon",
+          1.0,
+          "metal",
+          1.0,
+          "tierra",
+          1.0,
+          0
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "material_calzada"
+          ],
+          "adoquinado",
+          7.0,
+          "asfalto",
+          7.0,
+          "escoriado",
+          7.0,
+          "hormigon",
+          7.0,
+          "metal",
+          7.0,
+          "tierra",
+          7.0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sld-1-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "material_de_calzada",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "material_calzada"
+          ],
+          "adoquinado",
+          "#453b1b",
+          "asfalto",
+          "#ff3c06",
+          "escoriado",
+          "#008dc7",
+          "hormigon",
+          "#abdd3f",
+          "metal",
+          "#7feadf",
+          "tierra",
+          "#91683e",
+          "#000000"
+        ],
+        "line-opacity": [
+          "match",
+          [
+            "get",
+            "material_calzada"
+          ],
+          "adoquinado",
+          1.0,
+          "asfalto",
+          1.0,
+          "escoriado",
+          1.0,
+          "hormigon",
+          1.0,
+          "metal",
+          1.0,
+          "tierra",
+          1.0,
+          0
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "material_calzada"
+          ],
+          "adoquinado",
+          6.0,
+          "asfalto",
+          6.0,
+          "escoriado",
+          6.0,
+          "hormigon",
+          6.0,
+          "metal",
+          6.0,
+          "tierra",
+          6.0,
+          0
+        ]
       }
     },
     {
       "id": "categorical-line-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_material_de_calzada",
+      "source-layer": "material_de_calzada",
       "layout": {
         "text-field": [
           "get",

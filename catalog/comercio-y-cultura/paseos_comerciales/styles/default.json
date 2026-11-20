@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_paseos_comerciales.pmtiles",
+      "url": "pmtiles://../paseos_comerciales.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-line",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_paseos_comerciales",
+      "source-layer": "paseos_comerciales",
       "paint": {
         "line-color": [
           "match",

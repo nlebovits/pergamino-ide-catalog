@@ -2,121 +2,36 @@
   "type": "Collection",
   "id": "catastro/subparcela",
   "stac_version": "1.1.0",
-  "description": "Subparcelas catastrales del Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Catastro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_catastro_subparcela.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_catastro_subparcela"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 487,
-  "table:row_count": 487,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "id",
-      "type": "int64"
-    },
-    {
-      "name": "nomencla",
-      "type": "string"
-    },
-    {
-      "name": "partida",
-      "type": "int64"
-    },
-    {
-      "name": "etiqueta",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5841064,
-    -33.9205714,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_catastro_subparcela"
-  ],
   "title": "Catastro subparcela",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.64746047,
-          -33.93098,
-          -60.38044254,
-          -33.75996854
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Subparcelas catastrales del Partido de Pergamino.",
+  "keywords": [
+    "objeto",
+    "inmueble",
+    "partida",
+    "circunscripcion",
+    "fraccion",
+    "manzana",
+    "quinta",
+    "subparcela",
+    "pergamino",
+    "catastro",
+    "planeamiento",
+    "seccion",
+    "cartoarba",
+    "chacra",
+    "nomenclatura",
+    "letra",
+    "ph",
+    "arba",
+    "parcela"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -144,62 +59,231 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6474605,
+          -33.93098,
+          -60.3804425,
+          -33.7599685
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Catastro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/97",
+      "type": "text/html",
+      "title": "Catastro subparcela en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:catastro_subparcela",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:catastro_subparcela)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./subparcela.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "subparcela"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 97,
+  "pergamino:geonode_uuid": "ff8f8b09-02a2-4ace-8156-5495e30e3ec6",
+  "pergamino:source_updated": "2026-05-15T13:21:54Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 487,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "nomencla",
+      "type": "string"
+    },
+    {
+      "name": "etiqueta",
+      "type": "string"
+    },
+    {
+      "name": "partido",
+      "type": "int64"
+    },
+    {
+      "name": "partida",
+      "type": "int64"
+    },
+    {
+      "name": "fecha",
+      "type": "string"
+    },
+    {
+      "name": "baldia",
+      "type": "int64"
+    },
+    {
+      "name": "caracteris",
+      "type": "string"
+    },
+    {
+      "name": "numero_inmueble",
+      "type": "int64"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 487,
   "assets": {
-    "publico_catastro_subparcela": {
-      "href": "./publico_catastro_subparcela.parquet",
+    "subparcela": {
+      "href": "./subparcela.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-15T13:21:54Z",
+      "pergamino:content_hash": "4287814803087000508518:487",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 42136,
-      "file:checksum": "1220e641519cc36aa95c97a4f2193c1f29a4cddf8ce62ec4ef4a570176b468cadc99",
       "roles": [
         "data"
       ],
+      "table:row_count": 487,
+      "file:size": 45182,
+      "file:checksum": "12205f5d4c794674a4972a29c86c10f001bfd9fa985f8797ce2f94de7a7e9c61bc5b",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4356,
-      "file:checksum": "12209f25dc7de79515c019618e4c4ae9dff626ab021419693c2f0b34df8f3f165f4a",
+    "version-2026-08-14": {
+      "href": "./publico_catastro_subparcela.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:catastro_subparcela). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 487,
+      "file:size": 42136,
+      "file:checksum": "1220e641519cc36aa95c97a4f2193c1f29a4cddf8ce62ec4ef4a570176b468cadc99"
     },
-    "publico_catastro_subparcela-tiles": {
-      "href": "./publico_catastro_subparcela.pmtiles",
+    "subparcela-tiles": {
+      "href": "./subparcela.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_catastro_subparcela (vector tiles)",
-      "file:size": 115485,
-      "file:checksum": "12207fa06272673ac4b15b4bce1d5d8936bfbe85fac1ec07ae46bbc74fd8a4599551",
       "roles": [
         "visual"
       ],
+      "file:size": 138395,
+      "file:checksum": "12200b01e6bc32524512d0c8de4b404f0fe3f826d867b8419498dc0b8b7b4c71f923",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "catastro_subparcela",
-      "file:size": 485,
-      "file:checksum": "12205a5af917f13915dd0af066d1de1a7992fdc28c34a4d2f71976819715e94ac0eb",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 465,
+      "file:checksum": "1220f41b5b29b0e0e1fcdf82ba7ee6b0ca742ce19239eeb4061123ea8c3208dec509",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 286,
+      "file:checksum": "12200b20541d706dc69b780f9a5283b8920537a0497e72cf15839c2e162eaf068d4e",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_catastro_subparcela.thumb.jpg",
+      "href": "./subparcela.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 42577,
-      "file:checksum": "1220a9b1c2892a0c8654ae71d5e316def1a9bc9abb192c4a835104743464cb1d30b9",
+      "file:size": 18695,
+      "file:checksum": "1220787586a3f59f73f23a873c66bd37936ea89424a9fba1ba948b893aba79a91344",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3634,
+      "file:checksum": "12208bd73abad8b46271dd0c2fda2c0ebc5cf08a8acba4f6088b67ca28375a7ad3d1",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "subparcela"
+  ]
 }

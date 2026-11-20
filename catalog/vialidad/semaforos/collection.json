@@ -2,7 +2,75 @@
   "type": "Collection",
   "id": "vialidad/semaforos",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Semaforos",
   "description": "Capa de semáforos del Partido de Pergamino.",
+  "keywords": [
+    "moto",
+    "paso",
+    "amarillo",
+    "semaforos",
+    "giro",
+    "bicicleta",
+    "colectivo",
+    "pergamino",
+    "verde",
+    "rojo",
+    "señal",
+    "transito",
+    "avenida",
+    "calle",
+    "peatonal",
+    "orden",
+    "auto",
+    "camion"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.638357,
+          -33.9154768,
+          -60.5394968,
+          -33.8595507
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,48 +85,63 @@
       "title": "Vialidad"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/256",
+      "type": "text/html",
+      "title": "Semaforos en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:semaforos",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:semaforos)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Asemaforos",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:semaforos"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_semaforos.pmtiles",
+      "href": "./semaforos.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_semaforos"
+        "semaforos"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 294,
-  "table:row_count": 294,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 256,
+  "pergamino:geonode_uuid": "64e350ae-ead1-4111-9a29-fabe2792ea8e",
+  "pergamino:source_updated": "2026-05-12T11:59:22Z",
+  "pergamino:update_frequency": "asNeeded",
   "table:primary_geometry": "geometry",
+  "table:row_count": 310,
   "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "tipo",
       "type": "string"
@@ -80,134 +163,107 @@
       "type": "string"
     },
     {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_semaforos"
-  ],
-  "title": "Semaforos",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.63835695,
-          -33.915477,
-          -60.5394968,
-          -33.85955068
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 310,
   "assets": {
-    "publico_semaforos": {
-      "href": "./publico_semaforos.parquet",
+    "semaforos": {
+      "href": "./semaforos.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-12T11:59:22Z",
+      "pergamino:content_hash": "2738013312466727882298:310",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 15917,
-      "file:checksum": "122032ba986d0a34a1ef31bfbee4d56e21ca18bd031c910d308736d0299668545288",
       "roles": [
         "data"
       ],
+      "table:row_count": 310,
+      "file:size": 16220,
+      "file:checksum": "12205338e272cf126a91a27ee5402e2d8012a96d93adcec27022ed33d442a1d22af3",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_semaforos.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:semaforos). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 294,
+      "file:size": 15917,
+      "file:checksum": "122032ba986d0a34a1ef31bfbee4d56e21ca18bd031c910d308736d0299668545288"
+    },
+    "semaforos-tiles": {
+      "href": "./semaforos.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 59458,
+      "file:checksum": "1220755f08b2700f1f90bccd95d9c317c6ac4ef8925ac7fee0566841d8f04085cf37",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "semaforos",
-      "file:size": 714,
-      "file:checksum": "12205ee6f24f960eab91e188d695d2b45a682fed33fe038e7ba983b24b5af55107fe",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 5319,
+      "file:checksum": "1220829592bf3ef398a9f4c5ead50d036af8a9be78d9ffed614d85865b6a75ca0c6d",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 1200,
       "file:checksum": "12206b2cee09e19d24fba4712b899bfef6c807dc505e2d674534dc454af9e8f36b1e",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1194,
-      "file:checksum": "12207cbb2226d69747fa6356ac23b7729cd3227bf0b6d723c6565d7f7d4e6ea02642",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_semaforos-tiles": {
-      "href": "./publico_semaforos.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_semaforos (vector tiles)",
-      "file:size": 14534,
-      "file:checksum": "1220512c76128df5d7dfb71cb01244e943d59a28ae77a058685a34faf42af5667c42",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_semaforos.thumb.jpg",
+      "href": "./semaforos.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 79041,
-      "file:checksum": "1220db32a7608c391d0420c069fec65c07cb2e508511c6ef14fabf95043e718b224e",
+      "file:size": 77263,
+      "file:checksum": "122075be273daca300bbb76a1a9fbf41481d84abb2ebededfda1123c65d5ca1f7df2",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3185,
+      "file:checksum": "1220148ebcd2a99568f1bf90b75475677021e56faee8a40620597b47913edac7e711",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "semaforos"
+  ]
 }

@@ -2,7 +2,71 @@
   "type": "Collection",
   "id": "vialidad/carteles_viales",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Carteles viales",
   "description": "Carteles y señales de tránsito en el Partido de Pergamino.",
+  "keywords": [
+    "giro",
+    "vial",
+    "calle",
+    "direccion",
+    "indicacion",
+    "indicaciones",
+    "stop",
+    "señaletica",
+    "pare",
+    "cartel",
+    "señal",
+    "ruta",
+    "avenida",
+    "poste"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6392533,
+          -33.9423954,
+          -60.3703821,
+          -33.8595261
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -11,55 +75,69 @@
       "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
     },
     {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
       "rel": "parent",
       "href": "../catalog.json",
       "type": "application/json",
       "title": "Vialidad"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/83",
+      "type": "text/html",
+      "title": "Carteles viales en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:carteles_viales",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:carteles_viales)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_carteles_viales.pmtiles",
+      "href": "./carteles_viales.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_carteles_viales"
+        "carteles_viales"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 3002,
-  "table:row_count": 3002,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 83,
+  "pergamino:geonode_uuid": "55226785-638e-40bb-88ee-72402c4cecbb",
+  "pergamino:source_updated": "2026-05-15T15:26:41Z",
+  "pergamino:update_frequency": "asNeeded",
   "table:primary_geometry": "geometry",
+  "table:row_count": 3002,
   "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "tipo",
       "type": "string"
@@ -113,122 +191,107 @@
       "type": "string"
     },
     {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5621337,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_carteles_viales"
-  ],
-  "title": "Carteles viales",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.63925325,
-          -33.94239536,
-          -60.3703819,
-          -33.859526
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 3002,
   "assets": {
-    "publico_carteles_viales": {
-      "href": "./publico_carteles_viales.parquet",
+    "carteles_viales": {
+      "href": "./carteles_viales.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-15T15:26:41Z",
+      "pergamino:content_hash": "27469346631566484302940:3002",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 125239,
-      "file:checksum": "1220f3d88aa2e1d7ee7199b1b1190c92b2cf85d3f2a627dda95c8caf232f361be24e",
       "roles": [
         "data"
       ],
+      "table:row_count": 3002,
+      "file:size": 131082,
+      "file:checksum": "1220d94ba169a064bbdd7fe896f5d5f5ad91499efe6549e5ae51576b22bf3ac5458a",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4586,
-      "file:checksum": "1220c1bcf73c4901d96aad39ff1f1424fd5d1df2eeb518c75e3d050fabe95cd9744b",
+    "version-2026-08-14": {
+      "href": "./publico_carteles_viales.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:carteles_viales). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 3002,
+      "file:size": 125239,
+      "file:checksum": "1220f3d88aa2e1d7ee7199b1b1190c92b2cf85d3f2a627dda95c8caf232f361be24e"
     },
-    "publico_carteles_viales-tiles": {
-      "href": "./publico_carteles_viales.pmtiles",
+    "carteles_viales-tiles": {
+      "href": "./carteles_viales.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_carteles_viales (vector tiles)",
-      "file:size": 70269,
-      "file:checksum": "1220e02ba16e191b9de946892e66c7124abec6868351862134ff70885a627167bd71",
       "roles": [
         "visual"
       ],
+      "file:size": 462365,
+      "file:checksum": "12207b5a8644e64bf5d97bdf997e2baf2b65c41568a74d162b47088bf100b0594c5d",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "carteles_viales",
-      "file:size": 741,
-      "file:checksum": "1220a710fbfe1c309c0a51a592a9165c895710c702c1b81097d10e272a85b615ed33",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1991,
+      "file:checksum": "122058d1212bd5ae6e03ec0d65bd34852b4f85361b8b4ae4aa00350be49e9474ade8",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 1082,
+      "file:checksum": "12200dddfb2a2a772f93713abfd2ad6ca4ed3896f80634127f67cc2f241de812b59a",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_carteles_viales.thumb.jpg",
+      "href": "./carteles_viales.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 61423,
-      "file:checksum": "1220bb0bedbcbc929199695ed645ee69ec7b49d9bff0a29d7f149b5568d4cccf6bdd",
+      "file:size": 82993,
+      "file:checksum": "12204fc5a831a927ba6fa0d921d6140fe720b7f80b82cc3a801bc3e8a07b1ff78447",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3540,
+      "file:checksum": "12203c7735c0013b769952cc6c5f07dfc14196b2ba69c0cf0611507d1dd54eee2ac2",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "carteles_viales"
+  ]
 }

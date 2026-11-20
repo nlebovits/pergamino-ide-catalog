@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_curvas_nivel_cuenca.pmtiles",
+      "url": "pmtiles://../curvas_nivel_cuenca.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "line-0",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_curvas_nivel_cuenca",
+      "source-layer": "curvas_nivel_cuenca",
       "paint": {
         "line-color": "#FF8040",
         "line-width": 1,
@@ -25,7 +25,7 @@
       "id": "line-0-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_curvas_nivel_cuenca",
+      "source-layer": "curvas_nivel_cuenca",
       "layout": {
         "text-field": [
           "get",

@@ -2,121 +2,30 @@
   "type": "Collection",
   "id": "comercio-y-cultura/oferentes_espacios_culturales",
   "stac_version": "1.1.0",
-  "description": "Oferentes de espacios culturales públicos y privados en la Ciudad de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Comercio y cultura"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aoferentes_espacios_culturales",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:oferentes_espacios_culturales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_oferentes_espacios_culturales.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_oferentes_espacios_culturales"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "MultiPoint",
-  "geoparquet:feature_count": 20,
-  "table:row_count": 20,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "nombre",
-      "type": "string"
-    },
-    {
-      "name": "domicilio",
-      "type": "string"
-    },
-    {
-      "name": "telefono",
-      "type": "string"
-    },
-    {
-      "name": "facebook",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_oferentes_espacios_culturales"
-  ],
   "title": "Oferentes de espacios culturales",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.588997,
-          -33.9131792,
-          -60.5303099,
-          -33.8868239
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Oferentes de espacios culturales públicos y privados en la Ciudad de Pergamino.",
+  "keywords": [
+    "espectaculo",
+    "auditorio",
+    "espacio",
+    "pergamino",
+    "folcklore",
+    "musica",
+    "tango",
+    "cine",
+    "cultural",
+    "arte",
+    "sala",
+    "cultura",
+    "teatro"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -137,73 +46,215 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.5889968,
+          -33.9131792,
+          -60.5303104,
+          -33.8868243
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Comercio y cultura"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/214",
+      "type": "text/html",
+      "title": "Oferentes de espacios culturales en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:oferentes_espacios_culturales",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:oferentes_espacios_culturales)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./oferentes_espacios_culturales.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "oferentes_espacios_culturales"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 214,
+  "pergamino:geonode_uuid": "998c4f2d-3397-4470-808b-e621cbf92f04",
+  "pergamino:source_updated": "2026-05-04T11:35:33Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 20,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "domicilio",
+      "type": "string"
+    },
+    {
+      "name": "telefono",
+      "type": "string"
+    },
+    {
+      "name": "facebook",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPoint",
+  "geoparquet:feature_count": 20,
   "assets": {
-    "publico_oferentes_espacios_culturales": {
-      "href": "./publico_oferentes_espacios_culturales.parquet",
+    "oferentes_espacios_culturales": {
+      "href": "./oferentes_espacios_culturales.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-04T11:35:33Z",
+      "pergamino:content_hash": "175280855616813103340:20",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 5881,
-      "file:checksum": "122023ec40845bd9ff51914eb7aad281673272e62d44c7136b144e0e698aa9f7f07a",
       "roles": [
         "data"
       ],
+      "table:row_count": 20,
+      "file:size": 4145,
+      "file:checksum": "1220d25d3f72b571b2e1180f45d8e1ae8725b34edfedb2a387031d6ee83a32c11b93",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_oferentes_espacios_culturales.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:oferentes_espacios_culturales). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 20,
+      "file:size": 5881,
+      "file:checksum": "122023ec40845bd9ff51914eb7aad281673272e62d44c7136b144e0e698aa9f7f07a"
+    },
+    "oferentes_espacios_culturales-tiles": {
+      "href": "./oferentes_espacios_culturales.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 25532,
+      "file:checksum": "12201e2bdd4e4b6727e922f0a9c09112f975344d1dca748e3d5d6e6231a298d72989",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "oferentes_espacios_culturales",
-      "file:size": 526,
-      "file:checksum": "1220a408a0ff21543f5743d81046759ac71ef86aa62e8cd9bc6ce66395cbc8f213d8",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 631,
+      "file:checksum": "122012d7c94e0a75340aceb412c5d3ae1db57bee2ec53cd69b51ca3ee3a549c15435",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 446,
       "file:checksum": "12208d1f774927ac0e03355b4d192b2e705e42271358e6b4f1cd77dffe1c3165c61b",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1238,
-      "file:checksum": "12207cd1606004922fb8c056a8d93edaca840e0f95f410cf0a91df66da8d25185d1f",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_oferentes_espacios_culturales-tiles": {
-      "href": "./publico_oferentes_espacios_culturales.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_oferentes_espacios_culturales (vector tiles)",
-      "file:size": 8903,
-      "file:checksum": "1220bf2e4574620843ed8035f81428167cb11bc649e86c91afa7f3a5db96f0913c97",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_oferentes_espacios_culturales.thumb.jpg",
+      "href": "./oferentes_espacios_culturales.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 86915,
-      "file:checksum": "12207c20c6c555dd4d4a92c8465920b41b324d52a65cfe337f90055a4f94d113c066",
+      "file:size": 59441,
+      "file:checksum": "12209db5332b276099b9caeedd2df999b3b7a3d6dbd51b584d1b2b46de2ddf7b9a52",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3403,
+      "file:checksum": "1220fd971d3cf6b83066476f4d08e81e970be9d02b283295deb989486ba9f3be30f8",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "oferentes_espacios_culturales"
+  ]
 }

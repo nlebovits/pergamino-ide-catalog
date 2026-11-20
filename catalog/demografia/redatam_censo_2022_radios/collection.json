@@ -2,7 +2,74 @@
   "type": "Collection",
   "id": "demografia/redatam_censo_2022_radios",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "REDATAM Censo 2022 por radio",
   "description": "La capa contiene múltiples datos de población obtenidos en el Censo del 2022 a nivel de radio censal para el Partido de Pergamino, como cantidad de habitantes, mujeres, varones, rangos etáreos, etc.",
+  "keywords": [
+    "edad",
+    "habitantes",
+    "radio",
+    "mujeres",
+    "censo",
+    "poblacion",
+    "indec",
+    "2022",
+    "redatam",
+    "personas",
+    "demografico",
+    "dpe",
+    "estadisticas",
+    "pergamino",
+    "pueblos",
+    "sociedad",
+    "varones"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.9441518,
+          -34.1765632,
+          -60.1387808,
+          -33.5402251
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -14,51 +81,61 @@
       "rel": "parent",
       "href": "../catalog.json",
       "type": "application/json",
-      "title": "Demografía e indicadores sociales"
+      "title": "Demografía"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/248",
+      "type": "text/html",
+      "title": "REDATAM Censo 2022 por radio en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:redatam_censo_2022_radios",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:redatam_censo_2022_radios)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aredatam_censo_2022_radios",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:redatam_censo_2022_radios"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_redatam_censo_2022_radios.pmtiles",
+      "href": "./redatam_censo_2022_radios.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_redatam_censo_2022_radios"
+        "redatam_censo_2022_radios"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "MultiPolygon",
-  "geoparquet:feature_count": 212,
-  "table:row_count": 212,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 248,
+  "pergamino:geonode_uuid": "43965328-b19a-497c-aa07-f5aea7475d3c",
+  "pergamino:source_updated": "2026-05-26T16:46:11Z",
+  "pergamino:update_frequency": "notPlanned",
   "table:primary_geometry": "geometry",
+  "table:row_count": 212,
   "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "fid",
       "type": "int64"
@@ -177,133 +254,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5841064,
-    -33.9023362,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_redatam_censo_2022_radios"
-  ],
-  "title": "REDATAM Censo 2022 por radio",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.944152,
-          -34.17656322,
-          -60.13878081,
-          -33.540225
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "MultiPolygon",
+  "geoparquet:feature_count": 212,
   "assets": {
-    "publico_redatam_censo_2022_radios": {
-      "href": "./publico_redatam_censo_2022_radios.parquet",
+    "redatam_censo_2022_radios": {
+      "href": "./redatam_censo_2022_radios.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-26T16:46:11Z",
+      "pergamino:content_hash": "1854893284398222767937:212",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 140272,
-      "file:checksum": "122031771b83b59fb30cfc9bbf1ab1909774e20347f286e68755a1cbb7c36300a8b4",
       "roles": [
         "data"
       ],
+      "table:row_count": 212,
+      "file:size": 154521,
+      "file:checksum": "12202b5b6d3ffffb5d410ef136e3a82906c10ec3a7dea5e4a1afc26e589b21996545",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "legends/source": {
-      "href": "./legends/source.png",
-      "type": "image/png",
-      "title": "source Legend",
+    "version-2026-08-14": {
+      "href": "./publico_redatam_censo_2022_radios.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:redatam_censo_2022_radios). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "legend"
+        "archive"
       ],
-      "file:size": 1924,
-      "file:checksum": "122044baa9622931d58be2ec4a36ee5487f5c8cc3a3259d4b70c8367dd30331dbf87",
-      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 212,
+      "file:size": 140272,
+      "file:checksum": "122031771b83b59fb30cfc9bbf1ab1909774e20347f286e68755a1cbb7c36300a8b4"
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 2076,
-      "file:checksum": "1220e6cb52a6c1aea8206b801e23cb3378e44c0723fd2998bac48ce5673b8e882a64",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_redatam_censo_2022_radios-tiles": {
-      "href": "./publico_redatam_censo_2022_radios.pmtiles",
+    "redatam_censo_2022_radios-tiles": {
+      "href": "./redatam_censo_2022_radios.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_redatam_censo_2022_radios (vector tiles)",
-      "file:size": 2352070,
-      "file:checksum": "12209497557a29027cbcb9c2d72a1ee6ae99431730952808e605391bb6d32465d666",
       "roles": [
         "visual"
       ],
+      "file:size": 2358459,
+      "file:checksum": "12203efed93d15867d36b3fda4c03e5d78c03411eb2f8a130cdd2c65fbd0003befcb",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "Default",
-      "file:size": 909,
-      "file:checksum": "122057e91e6295cc26b7ea1a39209953702d94a1f5aa74564f44611d0fb408b807b1",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 893,
+      "file:checksum": "12206adb1eb1e46db0271695747900d910ea57f729a7012480957032525aef1ce3b1",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 1924,
+      "file:checksum": "122044baa9622931d58be2ec4a36ee5487f5c8cc3a3259d4b70c8367dd30331dbf87",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_redatam_censo_2022_radios.thumb.jpg",
+      "href": "./redatam_censo_2022_radios.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 33677,
-      "file:checksum": "1220233d6d0003d727c7cb233f8e94713eaccb6fbfd0b527d82b877bdf53cb1d21ca",
+      "file:size": 30323,
+      "file:checksum": "122061017477ed1df9962a4c5dddbbf5e00e9fb8dab51eb34fd54804200828b68cb5",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 4546,
+      "file:checksum": "12204de156b56d97e59e3d7f03636c9d196a808e08d8654d14f16054c4767fcb212a",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "redatam_censo_2022_radios"
+  ]
 }

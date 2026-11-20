@@ -4,17 +4,17 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_puntos_de_interes.pmtiles",
+      "url": "pmtiles://../puntos_de_interes.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_puntos_de_interes",
+      "source-layer": "puntos_de_interes",
       "paint": {
         "circle-color": [
           "match",
@@ -36,17 +36,125 @@
           "#1f86ed",
           "religioso",
           "#d6f088",
-          "#cccccc"
+          "#000000"
         ],
-        "circle-radius": 7.0,
-        "circle-opacity": 1.0
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo_interes"
+          ],
+          "aire libre",
+          1.0,
+          "arquitectonico",
+          1.0,
+          "cultural",
+          1.0,
+          "deportivo",
+          1.0,
+          "historico",
+          1.0,
+          "monumento",
+          1.0,
+          "religioso",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo_interes"
+          ],
+          "aire libre",
+          3.5,
+          "arquitectonico",
+          3.5,
+          "cultural",
+          3.5,
+          "deportivo",
+          3.5,
+          "historico",
+          3.5,
+          "monumento",
+          3.5,
+          "religioso",
+          3.5,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "tipo_interes"
+          ],
+          "aire libre",
+          "#232323",
+          "arquitectonico",
+          "#232323",
+          "cultural",
+          "#232323",
+          "deportivo",
+          "#232323",
+          "historico",
+          "#232323",
+          "monumento",
+          "#232323",
+          "religioso",
+          "#232323",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "tipo_interes"
+          ],
+          "aire libre",
+          0.5,
+          "arquitectonico",
+          0.5,
+          "cultural",
+          0.5,
+          "deportivo",
+          0.5,
+          "historico",
+          0.5,
+          "monumento",
+          0.5,
+          "religioso",
+          0.5,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "tipo_interes"
+          ],
+          "aire libre",
+          1.0,
+          "arquitectonico",
+          1.0,
+          "cultural",
+          1.0,
+          "deportivo",
+          1.0,
+          "historico",
+          1.0,
+          "monumento",
+          1.0,
+          "religioso",
+          1.0,
+          0
+        ]
       }
     },
     {
       "id": "categorical-circle-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_puntos_de_interes",
+      "source-layer": "puntos_de_interes",
       "layout": {
         "text-field": [
           "get",

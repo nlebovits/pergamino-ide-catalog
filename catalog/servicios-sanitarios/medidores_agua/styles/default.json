@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_medidores_agua.pmtiles",
+      "url": "pmtiles://../medidores_agua.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_medidores_agua",
+      "source-layer": "medidores_agua",
       "paint": {
         "fill-color": [
           "match",
@@ -40,7 +40,7 @@
       "id": "categorical-fill-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_medidores_agua",
+      "source-layer": "medidores_agua",
       "layout": {
         "text-field": [
           "get",

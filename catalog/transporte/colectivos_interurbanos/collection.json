@@ -2,7 +2,71 @@
   "type": "Collection",
   "id": "transporte/colectivos_interurbanos",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Colectivos interurbanos",
   "description": "Lineas de colectivos interurbanos que conectan el Partido de Pergamino con Partidos aledaños.",
+  "keywords": [
+    "san nicolas",
+    "colon",
+    "omnibus",
+    "arrecifes",
+    "rojas",
+    "larga",
+    "bus",
+    "colectivo",
+    "pergamino",
+    "linea",
+    "pueblos",
+    "rosario",
+    "distancia",
+    "junin"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -61.1069899,
+          -34.2942313,
+          -60.1016312,
+          -33.5959709
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -11,55 +75,64 @@
       "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
     },
     {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
       "rel": "parent",
       "href": "../catalog.json",
       "type": "application/json",
       "title": "Transporte"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/115",
+      "type": "text/html",
+      "title": "Colectivos interurbanos en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:colectivos_interurbanos",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:colectivos_interurbanos)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_colectivos_interurbanos.pmtiles",
+      "href": "./colectivos_interurbanos.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_colectivos_interurbanos"
+        "colectivos_interurbanos"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiLineString",
-  "geoparquet:feature_count": 57,
-  "table:row_count": 57,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 115,
+  "pergamino:geonode_uuid": "908a071c-c290-4f33-aaa9-794e8a6ceaf6",
+  "pergamino:source_updated": "2026-05-14T14:47:06Z",
+  "pergamino:update_frequency": "asNeeded",
   "table:primary_geometry": "geometry",
+  "table:row_count": 57,
   "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "empresa",
       "type": "string"
@@ -102,121 +175,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5841064,
-    -33.9114543,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_colectivos_interurbanos"
-  ],
-  "title": "Colectivos interurbanos",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -61.10699,
-          -34.29423126,
-          -60.101631,
-          -33.5959709
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "MultiLineString",
+  "geoparquet:feature_count": 57,
   "assets": {
-    "publico_colectivos_interurbanos": {
-      "href": "./publico_colectivos_interurbanos.parquet",
+    "colectivos_interurbanos": {
+      "href": "./colectivos_interurbanos.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-14T14:47:06Z",
+      "pergamino:content_hash": "505173028446470542497:57",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 33360,
-      "file:checksum": "12206ec9b03916d0b209753a3d42dc662186614a61f26a52e84a210b83819fc8309e",
       "roles": [
         "data"
       ],
+      "table:row_count": 57,
+      "file:size": 32076,
+      "file:checksum": "1220a7172d67015602e4d15ea48ed3df6d7d4c82fe67d1f341e446fc5e577b9448bb",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4512,
-      "file:checksum": "1220d6a339516e42aee87b3f0cc99af6db7266b3480e8c84d6ac104730a1e233cd6c",
+    "version-2026-08-14": {
+      "href": "./publico_colectivos_interurbanos.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:colectivos_interurbanos). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 57,
+      "file:size": 33360,
+      "file:checksum": "12206ec9b03916d0b209753a3d42dc662186614a61f26a52e84a210b83819fc8309e"
     },
-    "publico_colectivos_interurbanos-tiles": {
-      "href": "./publico_colectivos_interurbanos.pmtiles",
+    "colectivos_interurbanos-tiles": {
+      "href": "./colectivos_interurbanos.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_colectivos_interurbanos (vector tiles)",
-      "file:size": 242684,
-      "file:checksum": "1220984adf30bdba51b8ac02ed528cfe69ea848b8a15076e074fd60d1662f06d7045",
       "roles": [
         "visual"
       ],
+      "file:size": 250420,
+      "file:checksum": "1220b154992b0264df9e3b4efa23a19c8f45746666a1cbd3e1415923b48893eb4f17",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "colectivos_interurbanos",
-      "file:size": 1438,
-      "file:checksum": "12204c7cfd62f989f60254d7a55a0eae98dc4c2bda93225a11ee436b818537caca91",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 2767,
+      "file:checksum": "1220a8bfaacf49fa3dbb3875468133fa4870d42a5a256ead97e9ea17e7eb82ff368b",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 1574,
+      "file:checksum": "122089fd77c53e0275853958f9055834d562a6b20200230f64d49b043cc402d7e37a",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_colectivos_interurbanos.thumb.jpg",
+      "href": "./colectivos_interurbanos.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 50583,
-      "file:checksum": "1220e3d5bd81206945b4e263d8503632f5acac5fb58e1b914119057f115c22531420",
+      "file:size": 47253,
+      "file:checksum": "1220b48bcc5fa05a78f04af68d3d5666dbd61223d0e247c9d7fdd38e1e48db9b40b5",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3709,
+      "file:checksum": "1220c3485e3a0ec51643729665a5b6b857036f7eb37c0fbaced75571f9a071709ac1",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "colectivos_interurbanos"
+  ]
 }

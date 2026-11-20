@@ -1,0 +1,325 @@
+{
+  "type": "Collection",
+  "id": "servicios-sanitarios/agua_nodos",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Red de agua corriente - Nodos",
+  "description": "Sistema de llaves y nodos de la red de agua corriente de la Ciudad de Pergamino.",
+  "keywords": [
+    "red",
+    "agua",
+    "cañeria",
+    "obras sanitarias",
+    "doss",
+    "llave",
+    "corriente",
+    "servicio"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6145494,
+          -33.9341825,
+          -60.530604,
+          -33.8482823
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Servicios sanitarios"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/54",
+      "type": "text/html",
+      "title": "Red de agua corriente - Nodos en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:agua_nodos",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:agua_nodos)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./agua_nodos.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "agua_nodos"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 54,
+  "pergamino:geonode_uuid": "83d4490d-0090-495b-825e-85ca9edd49e3",
+  "pergamino:source_updated": "2026-05-12T12:56:35Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 6179,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "diametro",
+      "type": "string"
+    },
+    {
+      "name": "material",
+      "type": "string"
+    },
+    {
+      "name": "ubicacion",
+      "type": "string"
+    },
+    {
+      "name": "clase",
+      "type": "string"
+    },
+    {
+      "name": "tipo_valv",
+      "type": "string"
+    },
+    {
+      "name": "vuelt_tot",
+      "type": "int64"
+    },
+    {
+      "name": "vuelt_act",
+      "type": "int64"
+    },
+    {
+      "name": "vuelt_rel",
+      "type": "double"
+    },
+    {
+      "name": "vuelt_norm",
+      "type": "string"
+    },
+    {
+      "name": "indicador",
+      "type": "string"
+    },
+    {
+      "name": "hidr_long",
+      "type": "double"
+    },
+    {
+      "name": "hidr_estad",
+      "type": "string"
+    },
+    {
+      "name": "sistema",
+      "type": "string"
+    },
+    {
+      "name": "condicion",
+      "type": "string"
+    },
+    {
+      "name": "med_tipo",
+      "type": "string"
+    },
+    {
+      "name": "med_marca",
+      "type": "string"
+    },
+    {
+      "name": "med_capac",
+      "type": "string"
+    },
+    {
+      "name": "med_uso",
+      "type": "string"
+    },
+    {
+      "name": "conexion",
+      "type": "string"
+    },
+    {
+      "name": "antig",
+      "type": "int64"
+    },
+    {
+      "name": "fecha_act",
+      "type": "string"
+    },
+    {
+      "name": "resp_act",
+      "type": "string"
+    },
+    {
+      "name": "obs",
+      "type": "string"
+    },
+    {
+      "name": "resp_obra",
+      "type": "string"
+    },
+    {
+      "name": "progresiva",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 6179,
+  "assets": {
+    "agua_nodos": {
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-12T12:56:35Z",
+      "pergamino:content_hash": "57874065808904435678833:6179",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 178,
+      "href": "./agua_nodos.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "table:row_count": 6179,
+      "file:size": 275792,
+      "file:checksum": "1220f8e00a7091fbeb1ee8538fa13019256e200be6f156e3926ed3948f7569f23e21",
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "agua_nodos-tiles": {
+      "href": "./agua_nodos.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 1128184,
+      "file:checksum": "1220172eb44d98979c38ea305f6cab044a726a38e02d6431dbb7f73d1f9a94cc7595",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
+    },
+    "styles/default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 3032,
+      "file:checksum": "1220f239e7b4126159dde8fa236fce0a17535a32facba12a6c46c4f6c86000c629b7",
+      "title": "Estilo MapLibre",
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
+    },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 2057,
+      "file:checksum": "122034399ad6944c78e221253732bbd7ca014a7e075afe7a0a6e00de8d0d5254464e",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
+    "thumbnail": {
+      "href": "./agua_nodos.thumb.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 198571,
+      "file:checksum": "1220e31d0c2001f2221b5bbf0612598fd0d7dd97e259b9d884ae33ca0c2cee26aa9b",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3795,
+      "file:checksum": "12200b168ff98f88acf71fd3f4e176d9d67eac2605210c764a51c621370392c86cd3",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+    }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "agua_nodos"
+  ]
+}

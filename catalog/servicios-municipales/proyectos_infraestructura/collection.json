@@ -2,7 +2,66 @@
   "type": "Collection",
   "id": "servicios-municipales/proyectos_infraestructura",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Proyectos de infraestructura vial",
   "description": "Proyectos de nfraestructura urbana sobre las vías de circulación: cordón cuneta y pavimentación para el Partido de Pergamino.",
+  "keywords": [
+    "adoquin",
+    "mejorado",
+    "cordon",
+    "cuneta",
+    "pavimento",
+    "calle",
+    "asfalto",
+    "tierra",
+    "escoriado"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.9441859,
+          -34.1768118,
+          -60.1387924,
+          -33.5532086
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,47 +76,53 @@
       "title": "Servicios municipales"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/297",
+      "type": "text/html",
+      "title": "Proyectos de infraestructura vial en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:proyectos_infraestructura",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:proyectos_infraestructura)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aproyectos_infraestructura",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:proyectos_infraestructura"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_proyectos_infraestructura.pmtiles",
+      "href": "./proyectos_infraestructura.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_proyectos_infraestructura"
+        "proyectos_infraestructura"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "MultiLineString",
-  "geoparquet:feature_count": 11703,
-  "table:row_count": 11703,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 297,
+  "pergamino:geonode_uuid": "d1842333-efe4-4fc0-a6c5-8af011f1aea6",
+  "pergamino:source_updated": "2026-05-04T15:55:04Z",
+  "pergamino:update_frequency": "continual",
   "table:primary_geometry": "geometry",
+  "table:row_count": 11714,
   "table:columns": [
     {
       "name": "id",
@@ -100,7 +165,7 @@
       "type": "string"
     },
     {
-      "name": "long",
+      "name": "longitud",
       "type": "int64"
     },
     {
@@ -116,12 +181,16 @@
       "type": "string"
     },
     {
+      "name": "cordon_cuneta",
+      "type": "string"
+    },
+    {
       "name": "pav_etapa",
       "type": "double"
     },
     {
-      "name": "cordon_cuneta",
-      "type": "string"
+      "name": "cc_etapa",
+      "type": "double"
     },
     {
       "name": "proyecto_infraestructura",
@@ -129,133 +198,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.9114543,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_proyectos_infraestructura"
-  ],
-  "title": "Proyectos de infraestructura vial",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.94418595,
-          -34.1768119,
-          -60.138792,
-          -33.55320865
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "MultiLineString",
+  "geoparquet:feature_count": 11714,
   "assets": {
-    "publico_proyectos_infraestructura": {
-      "href": "./publico_proyectos_infraestructura.parquet",
+    "proyectos_infraestructura": {
+      "href": "./proyectos_infraestructura.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-04T15:55:04Z",
+      "pergamino:content_hash": "108220851177807548832349:11714",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 789020,
-      "file:checksum": "1220782ed38e224892c115f051be7064ca9b3d41be4ab7ba9f0611494d532fd147c3",
       "roles": [
         "data"
       ],
+      "table:row_count": 11714,
+      "file:size": 763449,
+      "file:checksum": "1220ad10a04dda92fe6664980f6d9bc7b8063e144bba56047a3750166a4207eead5e",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_proyectos_infraestructura.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:proyectos_infraestructura). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 11703,
+      "file:size": 789020,
+      "file:checksum": "1220782ed38e224892c115f051be7064ca9b3d41be4ab7ba9f0611494d532fd147c3"
+    },
+    "proyectos_infraestructura-tiles": {
+      "href": "./proyectos_infraestructura.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 4950666,
+      "file:checksum": "1220b5f3b660efd142fd2c8cffb0a86991fd5e43f730fe98347438131c65c6085792",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "proyectos_infraestructura",
-      "file:size": 1349,
-      "file:checksum": "122017e00caf3cefaec7ddcfabbcb0659074d3b44591a3c8570730211cc93eb93d05",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 2881,
+      "file:checksum": "12204f05052c4558a648193f219d3be5353ef194a3fc5af9d73c720fb778e6ab50cc",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 1121,
       "file:checksum": "1220b7e4b8294801f82979f813c03c0207fd8aa38eec8f6cc9f43cd953ff9b1ad8a7",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1568,
-      "file:checksum": "12208eeaefb78d3840b9518ab27b7d3a27c09bf534bc1667b97d6b496b577daf3cad",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_proyectos_infraestructura-tiles": {
-      "href": "./publico_proyectos_infraestructura.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_proyectos_infraestructura (vector tiles)",
-      "file:size": 4949170,
-      "file:checksum": "12204166172fcc6e4d76aa52d54170c39340809a6a64b37d3164c7712e51c5702374",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_proyectos_infraestructura.thumb.jpg",
+      "href": "./proyectos_infraestructura.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 99681,
-      "file:checksum": "122049b23021e0e6f44710198ac83a425e3cade850fdfd9622fbe22764f329f37925",
+      "file:size": 24088,
+      "file:checksum": "122003eeecbc7126d4c4a74b265b67f1d451ef1b7fc8911265ed24849bf1ef16b788",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 4050,
+      "file:checksum": "1220567037a68e89429e5c8ed74f08d8895970010e560ea2e7183695f53c2e23b984",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "proyectos_infraestructura"
+  ]
 }

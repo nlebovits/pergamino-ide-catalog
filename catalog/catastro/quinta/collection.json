@@ -2,125 +2,36 @@
   "type": "Collection",
   "id": "catastro/quinta",
   "stac_version": "1.1.0",
-  "description": "Quintas catastrales del Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Catastro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_catastro_quinta.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_catastro_quinta"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiPolygon",
-  "geoparquet:feature_count": 136,
-  "table:row_count": 136,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "id",
-      "type": "int64"
-    },
-    {
-      "name": "cca",
-      "type": "string"
-    },
-    {
-      "name": "ara1",
-      "type": "double"
-    },
-    {
-      "name": "sag",
-      "type": "string"
-    },
-    {
-      "name": "etiqueta",
-      "type": "int64"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5511474,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_catastro_quinta"
-  ],
   "title": "Catastro quinta",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.8538199,
-          -34.03570049,
-          -60.3693699,
-          -33.67807993
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Quintas catastrales del Partido de Pergamino.",
+  "keywords": [
+    "objeto",
+    "inmueble",
+    "partida",
+    "circunscripcion",
+    "fraccion",
+    "manzana",
+    "quinta",
+    "subparcela",
+    "pergamino",
+    "catastro",
+    "planeamiento",
+    "seccion",
+    "cartoarba",
+    "chacra",
+    "nomenclatura",
+    "letra",
+    "ph",
+    "arba",
+    "parcela"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -148,62 +59,215 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.8538196,
+          -34.0357005,
+          -60.36937,
+          -33.6780799
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Catastro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/95",
+      "type": "text/html",
+      "title": "Catastro quinta en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:catastro_quinta",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:catastro_quinta)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./quinta.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "quinta"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 95,
+  "pergamino:geonode_uuid": "48d544a0-fd91-4635-9504-09c8eee9c6c7",
+  "pergamino:source_updated": "2026-05-15T13:41:28Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 136,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "cca",
+      "type": "string"
+    },
+    {
+      "name": "ara1",
+      "type": "double"
+    },
+    {
+      "name": "sag",
+      "type": "string"
+    },
+    {
+      "name": "etiqueta",
+      "type": "int64"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPolygon",
+  "geoparquet:feature_count": 136,
   "assets": {
-    "publico_catastro_quinta": {
-      "href": "./publico_catastro_quinta.parquet",
+    "quinta": {
+      "href": "./quinta.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-15T13:41:28Z",
+      "pergamino:content_hash": "1229673682569408256416:136",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 32131,
-      "file:checksum": "1220765be492a7a37e82858c683739bdc22a878309953d62be603cf91c0aaad1d298",
       "roles": [
         "data"
       ],
+      "table:row_count": 136,
+      "file:size": 33445,
+      "file:checksum": "12208d37c169498261d2e45af0d092ed8248fdd30d6ebde14925633a68c7c725c1cd",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4360,
-      "file:checksum": "12208ee051281529ebdd36c5056c9c92be2c414ed980b051315846b18596508e1275",
+    "version-2026-08-14": {
+      "href": "./publico_catastro_quinta.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:catastro_quinta). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 136,
+      "file:size": 32131,
+      "file:checksum": "1220765be492a7a37e82858c683739bdc22a878309953d62be603cf91c0aaad1d298"
     },
-    "publico_catastro_quinta-tiles": {
-      "href": "./publico_catastro_quinta.pmtiles",
+    "quinta-tiles": {
+      "href": "./quinta.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_catastro_quinta (vector tiles)",
-      "file:size": 84335,
-      "file:checksum": "12208860b2131dbbc1c14379082bfa227229d3cfb71441f0dfd3ec9e5b8131aa9181",
       "roles": [
         "visual"
       ],
+      "file:size": 81395,
+      "file:checksum": "122039b9a7d65ae32d266987f45051f69fe5a78d08d92f5dae45ebcba6e3b0381e53",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "catastro_quinta",
-      "file:size": 473,
-      "file:checksum": "1220d11a73740465fe7949b675983994f5aad27c9464bd510f5faf14a3fe71275acf",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 453,
+      "file:checksum": "1220d256ce41b0f3bca685806ff52485c2948f45d0b1eee2ee4535b2fc6a37409759",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 286,
+      "file:checksum": "12200b20541d706dc69b780f9a5283b8920537a0497e72cf15839c2e162eaf068d4e",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_catastro_quinta.thumb.jpg",
+      "href": "./quinta.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 36458,
-      "file:checksum": "12200fcda977ab97e9c7e943641480d203ff672bbbefcad8e81b9e62953f63ba092f",
+      "file:size": 23696,
+      "file:checksum": "12206283c7755757e4728f387811cfa50fdc647c36a418421ee3355b008234376304",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3460,
+      "file:checksum": "122074f295c1aa1b4536683da94a5fefd735125a6609d6336ec3d943022c6308ca18",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "quinta"
+  ]
 }

@@ -1,118 +1,90 @@
-# IDE Pergamino - Infraestructura de Datos Espaciales
+# Circuitos energéticos (TEAM-UNNOBA)
 
-Catálogo de datos geoespaciales abiertos del Municipio de Pergamino,
-Provincia de Buenos Aires, Argentina. Incluye capas de catastro,
-infraestructura, transporte, servicios de emergencia, demografía,
-agricultura, medio ambiente, planificación urbana e indicadores sociales.
+Circuitos energéticos identificados por el equipo de investigación TEAM UNNOBA para todo el Partido de Pergamino.
 
-Este catálogo es un espejo cloud-native de la IDE de Pergamino. Los datos
-originales son publicados por la Dirección de Sistemas de Información
-Georreferenciada (DSIG) de la Municipalidad de Pergamino a través de su
-GeoServer y su portal GeoNode. Aquí se republican en formatos optimizados
-para consulta directa desde la nube (GeoParquet, PMTiles) sin alterar su
-contenido.
+| | |
+|---|---|
+| Identificador | `energia-y-conectividad/circuitos_energeticos` |
+| Geometría | puntos |
+| Fuente | [Circuitos energéticos (TEAM-UNNOBA) en GeoNode](https://geonode.pergamino.gob.ar/catalogue/#/dataset/306), capa WFS `geonode:circuitos_energeticos` |
+| Licencia | [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| Actualización declarada por la fuente | desconocida |
 
-![Argentina](https://img.shields.io/badge/Argentina-blue) ![Buenos Aires](https://img.shields.io/badge/Buenos_Aires-blue) ![Pergamino](https://img.shields.io/badge/Pergamino-blue) ![catastro](https://img.shields.io/badge/catastro-blue) ![infraestructura](https://img.shields.io/badge/infraestructura-blue) ![transporte](https://img.shields.io/badge/transporte-blue) ![censo](https://img.shields.io/badge/censo-blue) ![agricultura](https://img.shields.io/badge/agricultura-blue) ![medio ambiente](https://img.shields.io/badge/medio_ambiente-blue) ![planificación urbana](https://img.shields.io/badge/planificaci%C3%B3n_urbana-blue) ![datos abiertos](https://img.shields.io/badge/datos_abiertos-blue) ![GeoParquet](https://img.shields.io/badge/GeoParquet-blue)
+## Propósito
 
-## Spatial Coverage
+Según el registro de GeoNode:
 
-- **Bounding Box**: [-60.6443328, -33.94502582, -60.53938442, -33.73404211]
+> Los circuitos energéticos de escala local buscan dar a conocer y poner en valor iniciativas, proyectos y patrimonio vinculado a la energía en diversas localidades del país. La construcción gráfica de los circuitos busca se reconozca y aprecie el valor de los recursos energéticos y alentar prácticas sostenibles, potenciando capacidades locales y de articulación en red.
 
-## Temporal Coverage
+## Calidad de los datos
 
-- **Start**: open
-- **End**: ongoing
+Según el registro de GeoNode:
 
-## Schema
+> El trabajo fue realizado en conjunto por el Centro de Estudios sobre Territorio, Energía yAmbiente de la Universidad Nacional del Noroeste de la Provincia de Buenos Aires (TEAM-UNNOBA) y la Dirección de Gestión Ambiental de la Municipalidad de Pergamino.
 
-| Column | Type | Description |
-|--------|------|-------------|
-| denominacion | string |  |
-| identificador | string |  |
-| sendero | string |  |
-| ubicacion | string |  |
-| promotor | string |  |
-| año | string |  |
-| financiamiento | string |  |
-| tecnologia | string |  |
-| fuente | string |  |
-| enlace_team | string |  |
-| proposito | string |  |
-| geometry | binary |  |
-| bbox | struct<xmin: double, ymin: double, xmax: double, ymax: double> |  |
+## Esquema
 
-## Files
+| Columna | Tipo |
+|---|---|
+| `geometry` | binary |
+| `id` | int64 |
+| `denominacion` | string |
+| `identificador` | string |
+| `sendero` | string |
+| `ubicacion` | string |
+| `promotor` | string |
+| `año` | string |
+| `financiamiento` | string |
+| `tecnologia` | string |
+| `fuente` | string |
+| `enlace_team` | string |
+| `proposito` | string |
+| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
 
-| File | Size | Checksum |
-|------|------|----------|
-| ./publico_circuitos_energeticos.parquet | 9.6 KB | 122043cac7e2... |
+La fuente no publica descripciones de columnas: GeoNode devuelve una descripción vacía para cada atributo. Por eso las columnas no tienen descripción en `table:columns`, salvo `geometry` y `bbox`, que agrega este catálogo.
 
-## Quick Start
+## Acceso
 
 ```python
-import geopandas as gpd
+import duckdb
 
-gdf = gpd.read_parquet("./publico_circuitos_energeticos.parquet")
-print(gdf.head())
+con = duckdb.connect()
+con.sql("INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;")
+con.sql("SELECT * FROM read_parquet('https://data.source.coop/nlebovits/pergamino-ide/energia-y-conectividad/circuitos_energeticos/circuitos_energeticos.parquet') LIMIT 10").show()
 ```
 
-## STAC Metadata
+Hay más consultas, todas probadas, en [AGENTS.md](./AGENTS.md).
 
-- **root**: `../catalog.json`
-- **parent**: `../catalog.json`
+## Visualización
 
-## Source
+Las teselas vectoriales están en `./circuitos_energeticos.pmtiles` (capa `circuitos_energeticos`). El estilo por defecto, `styles/default.json`, deriva del estilo SLD que publica GeoNode para esta capa.
 
-[https://ide.pergamino.gob.ar:8443/geoserver/wfs](https://ide.pergamino.gob.ar:8443/geoserver/wfs)
+Leyenda tal como la publica la fuente:
 
-## Processing Notes
+![Leyenda](./legends/source.png)
 
-Extraído del servicio WFS de IDE Pergamino
-(https://ide.pergamino.gob.ar:8443/geoserver/wfs) y enriquecido con los
-metadatos ISO publicados por GeoNode (https://geonode.pergamino.gob.ar).
-Convertido a GeoParquet 1.1.0 (WKB, EPSG:4326, columna de cobertura bbox)
-y a PMTiles para visualización web. Las simbologías proceden de los SLD
-oficiales del GeoServer municipal.
+## Versiones
 
+Cada extracción que cambia los datos es una versión nueva. La versión actual está en `./circuitos_energeticos.parquet`. Las anteriores son los activos `version-*` de `collection.json`, con el número de registros y la suma de verificación de cada una. Sus archivos no cambian.
 
-## Citation
+La primera versión proviene del GeoServer anterior de la IDE Pergamino y sigue publicada en `./publico_circuitos_energeticos.parquet`.
 
-Municipalidad de Pergamino (2026). IDE Pergamino - Infraestructura de
-Datos Espaciales. Espejo cloud-native publicado por Nissim Lebovits.
-Disponible en: https://source.coop/nlebovits/pergamino-ide
+## Procedencia
 
+Productor: Universidad Nacional del Noroeste de la Provincia de Buenos Aires. Publicado por la Dirección de Sistemas de Información Georreferenciada (DSIG) de la Municipalidad de Pergamino en [GeoNode](https://geonode.pergamino.gob.ar/catalogue/#/dataset/306).
 
-## Attribution
+Atribución declarada en GeoNode: "Municipalidad de Pergamino, UNNOBA".
 
-Municipalidad de Pergamino - Dirección de Sistemas de Información Georreferenciada (IDE Pergamino), Provincia de Buenos Aires, Argentina
+Es un dato de otro organismo, rehospedado por el municipio. La atribución corresponde al organismo de origen.
 
-## License
+Este catálogo es un espejo. Para el dato autoritativo, consultar la IDE de Pergamino.
 
-[CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+## Licencia
 
-## Contact
+CC-BY-SA-4.0. Es la licencia que declara la Municipalidad de Pergamino para su IDE:
 
-Nissim Lebovits <nlebovits@pm.me>
+> Los datos dispuestos en nuestra Infraestructura de Datos Espaciales estan licenciados mediante Creative Commons 4.0 BY-SA, lo cual permite utilizar, compartir y adaptar este material siempre que reconozca atribución y permita la misma licencia en sus derivados.
 
-## Known Issues
+## Advertencia del publicador
 
-- La licencia CC BY-SA 4.0 corresponde a la declaración de la Municipalidad
-  de Pergamino para su IDE. Varias capas son datos de terceros rehospedados
-  por el municipio (INTA, IGN, INDEC, RENABAP, CONICET, INA, BAHRA, Correo
-  Argentino, CARTOARBA). Esas capas conservan la atribución a su organismo
-  de origen y no se relicencian.
-- El municipio advierte que la información "se encuentra en constante
-  actualización por parte de las distintas áreas responsables de su
-  generación, por lo tanto, podria contener diferencias e inconsistencias
-  en relación al objeto o fenómeno representado, tanto espacial como
-  temporalmente."
-- GeoNode declara `maintenance_frequency: notPlanned` para 111 de 218
-  conjuntos de datos. La mayor parte del catálogo no tiene una
-  actualización programada.
-- La vigencia del contenido no coincide con la fecha de publicación de los
-  metadatos. Consultar las columnas `fuente` y `actualizacion` de cada capa.
-
-
----
-
-*Generated by [Portolan](https://github.com/portolan-sdi/portolan-cli) from STAC metadata and .portolan/metadata.yaml*
+> La información contenida en la IDE se encuentra en constante actualización por parte de las distintas áreas responsables de su generación, por lo tanto, podria contener diferencias e inconsistencias en relación al objeto o fenómeno representado, tanto espacial como temporalmente.

@@ -2,7 +2,72 @@
   "type": "Collection",
   "id": "demografia/icv",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Índice de Calidad de Vida (ICV)",
   "description": "Capa de datos que permite conocer el Índice de Calidad de Vida o ICV desde una perspectiva geográfica, elaborado por el CONICET. Mapa de cobertura sobre el Partido de Pergamino",
+  "keywords": [
+    "2010",
+    "censo",
+    "indec",
+    "pergamino",
+    "calidad",
+    "indice",
+    "icv",
+    "vida"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET)",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://www.conicet.gov.ar/"
+    },
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.9433813,
+          -34.1761202,
+          -60.1387133,
+          -33.5403955
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -14,51 +79,61 @@
       "rel": "parent",
       "href": "../catalog.json",
       "type": "application/json",
-      "title": "Demografía e indicadores sociales"
+      "title": "Demografía"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/179",
+      "type": "text/html",
+      "title": "Índice de Calidad de Vida (ICV) en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:icv",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:icv)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Aicv",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:icv"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_icv.pmtiles",
+      "href": "./icv.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_icv"
+        "icv"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 178,
-  "table:row_count": 178,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 179,
+  "pergamino:geonode_uuid": "2f62a728-a9a7-42a5-b9c9-acde5bee6461",
+  "pergamino:source_updated": "2026-05-04T10:52:57Z",
+  "pergamino:update_frequency": "unknown",
   "table:primary_geometry": "geometry",
+  "table:row_count": 178,
   "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "clavera",
       "type": "double"
@@ -101,140 +176,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_icv"
-  ],
-  "title": "Índice de Calidad de Vida (ICV)",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.94338126,
-          -34.17612015,
-          -60.1387129,
-          -33.54039557
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET)",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://www.conicet.gov.ar/"
-    },
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "processor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 178,
   "assets": {
-    "publico_icv": {
-      "href": "./publico_icv.parquet",
+    "icv": {
+      "href": "./icv.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-04T10:52:57Z",
+      "pergamino:content_hash": "1665154671744400427353:178",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 65560,
-      "file:checksum": "1220e1d9a664c97a0c35c74a085879a0d7e8ba78bcc6f97fc1ee2399c0e3c556a14f",
       "roles": [
         "data"
       ],
+      "table:row_count": 178,
+      "file:size": 65422,
+      "file:checksum": "12202b79e6ba1a7ec8b9bc94b4d46fcc555a0af2d7ae82b1d79c256ad3c597a1d954",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "legends/source": {
-      "href": "./legends/source.png",
-      "type": "image/png",
-      "title": "source Legend",
+    "version-2026-08-14": {
+      "href": "./publico_icv.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:icv). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "legend"
+        "archive"
       ],
-      "file:size": 2517,
-      "file:checksum": "1220b65760d8bcd4dbeca23bf695c8cd3c244058887ab837be365830a3ae818f3272",
-      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 178,
+      "file:size": 65560,
+      "file:checksum": "1220e1d9a664c97a0c35c74a085879a0d7e8ba78bcc6f97fc1ee2399c0e3c556a14f"
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1323,
-      "file:checksum": "12208ad458297c4a85d9718bb85de24aea003651c7bfcb70f2fe8a30dd3a79b698f0",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_icv-tiles": {
-      "href": "./publico_icv.pmtiles",
+    "icv-tiles": {
+      "href": "./icv.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_icv (vector tiles)",
-      "file:size": 1530788,
-      "file:checksum": "12205d4977f099b288bab61b80cc2258935287d5c295cbe8948b0e95a04b68e1bb3c",
       "roles": [
         "visual"
       ],
+      "file:size": 1554187,
+      "file:checksum": "122067b9e95845999420dd905082da406d5675e51bffe5963ecabdee73a0d5ffa005",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "Default",
-      "file:size": 960,
-      "file:checksum": "12208b25e59ddd8d43a97aa49ef7bddf8e09cba0500a923ade14de358ed8d84d0a2a",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 944,
+      "file:checksum": "1220281a4c1630916219afeec7ae14e819de27dfa62ada8a37cdd663ae1bc05113a6",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 2544,
+      "file:checksum": "12207e3e0a72361316476e48a36fa90829a111732b8846594d7076559711b5ac35ec",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_icv.thumb.jpg",
+      "href": "./icv.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 77442,
-      "file:checksum": "122036b718b5f0f176ab11d526d25bc59b0ede74dfa368d2165d8a052f21cf03aeb6",
+      "file:size": 73382,
+      "file:checksum": "1220c785f7ac45e55052d6caf4d7ad15b503574bdeab8dca33c13ade5df441c48683",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3942,
+      "file:checksum": "12205549b28d82b074fb206555b0531b242cfe7187e9bf226fc7efb113c2ada54b5a",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "icv"
+  ]
 }

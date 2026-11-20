@@ -1,80 +1,98 @@
-# Publico Renabap Barrios Populares
+# Renabap barrios populares
 
-Publico Renabap Barrios Populares
+Barrios populares relevados por RENABAP, en el Partido de Pergamino.
 
-## Spatial Coverage
+| | |
+|---|---|
+| Identificador | `demografia/renabap_barrios_populares` |
+| Geometría | polígonos |
+| Fuente | [Renabap barrios populares en GeoNode](https://geonode.pergamino.gob.ar/catalogue/#/dataset/252), capa WFS `geonode:renabap_barrios_populares` |
+| Licencia | [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/) |
+| Actualización declarada por la fuente | no planificada |
 
-- **Bounding Box**: [-60.61497805, -34.09313746, -60.41097023, -33.85968697]
+## Propósito
 
-## Temporal Coverage
+Según el registro de GeoNode:
 
-- **Start**: open
-- **End**: ongoing
+> El dato muestra un relevamiento que hace Nación en el territorio, mostrando barrios populares. Permite analizar vulnerabilidades en el territorio desde lo social.
 
-## Schema
+## Calidad de los datos
 
-| Column | Type | Description |
-|--------|------|-------------|
-| fid | int64 |  |
-| renabap_id | int64 |  |
-| nombre_barrio | string |  |
-| provincia | string |  |
-| departamento | string |  |
-| localidad | string |  |
-| cantidad_familias_aproximada | int64 |  |
-| cantidad_viviendas_aproximadas | int64 |  |
-| decada_de_creacion | string |  |
-| anio_de_creacion | int64 |  |
-| energia_electrica | string |  |
-| efluentes_cloacales | string |  |
-| agua_corriente | string |  |
-| cocina | string |  |
-| calefaccion | string |  |
-| situacion_dominial | string |  |
-| clasificacion_barrio | string |  |
-| superficie_m2 | int64 |  |
-| actualizacion | string |  |
-| observaciones | string |  |
-| revision | int64 |  |
-| geometry | binary |  |
-| bbox | struct<xmin: double, ymin: double, xmax: double, ymax: double> |  |
+Según el registro de GeoNode:
 
-## Files
+> El mapa fue elaborado por la RENABAP.
 
-| File | Size | Checksum |
-|------|------|----------|
-| ./publico_renabap_barrios_populares.parquet | 15.1 KB | 1220c1e5c14b... |
+## Esquema
 
-## Quick Start
+| Columna | Tipo |
+|---|---|
+| `geometry` | binary |
+| `id` | int64 |
+| `fid` | int64 |
+| `renabap_id` | int64 |
+| `nombre_barrio` | string |
+| `provincia` | string |
+| `departamento` | string |
+| `localidad` | string |
+| `cantidad_familias_aproximada` | int64 |
+| `cantidad_viviendas_aproximadas` | int64 |
+| `decada_de_creacion` | string |
+| `anio_de_creacion` | int64 |
+| `energia_electrica` | string |
+| `efluentes_cloacales` | string |
+| `agua_corriente` | string |
+| `cocina` | string |
+| `calefaccion` | string |
+| `situacion_dominial` | string |
+| `clasificacion_barrio` | string |
+| `superficie_m2` | int64 |
+| `actualizacion` | string |
+| `observaciones` | string |
+| `revision` | int64 |
+| `bbox` | struct<xmin: double, ymin: double, xmax: double, ymax: double> |
+
+La fuente no publica descripciones de columnas: GeoNode devuelve una descripción vacía para cada atributo. Por eso las columnas no tienen descripción en `table:columns`, salvo `geometry` y `bbox`, que agrega este catálogo.
+
+## Acceso
 
 ```python
-import geopandas as gpd
+import duckdb
 
-gdf = gpd.read_parquet("./publico_renabap_barrios_populares.parquet")
-print(gdf.head())
+con = duckdb.connect()
+con.sql("INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;")
+con.sql("SELECT * FROM read_parquet('https://data.source.coop/nlebovits/pergamino-ide/demografia/renabap_barrios_populares/renabap_barrios_populares.parquet') LIMIT 10").show()
 ```
 
-## STAC Metadata
+Hay más consultas, todas probadas, en [AGENTS.md](./AGENTS.md).
 
-- **root**: `../catalog.json`
-- **parent**: `../catalog.json`
+## Visualización
 
-## Source
+Las teselas vectoriales están en `./renabap_barrios_populares.pmtiles` (capa `renabap_barrios_populares`). El estilo por defecto, `styles/default.json`, deriva del estilo SLD que publica GeoNode para esta capa.
 
-[https://ide.pergamino.gob.ar:8443/geoserver/wfs](https://ide.pergamino.gob.ar:8443/geoserver/wfs)
+Leyenda tal como la publica la fuente:
 
-## Attribution
+![Leyenda](./legends/source.png)
 
-Municipalidad de Pergamino
+## Versiones
 
-## License
+Cada extracción que cambia los datos es una versión nueva. La versión actual está en `./renabap_barrios_populares.parquet`. Las anteriores son los activos `version-*` de `collection.json`, con el número de registros y la suma de verificación de cada una. Sus archivos no cambian.
 
-CC-BY-SA-4.0
+La primera versión proviene del GeoServer anterior de la IDE Pergamino y sigue publicada en `./publico_renabap_barrios_populares.parquet`.
 
-## Contact
+## Procedencia
 
-TODO: Add value <TODO: Add value>
+Productor: Municipalidad de Pergamino. Publicado por la Dirección de Sistemas de Información Georreferenciada (DSIG) de la Municipalidad de Pergamino en [GeoNode](https://geonode.pergamino.gob.ar/catalogue/#/dataset/252).
 
----
+Atribución declarada en GeoNode: "Municipalidad de Pergamino".
 
-*Generated by [Portolan](https://github.com/portolan-sdi/portolan-cli) from STAC metadata and .portolan/metadata.yaml*
+Este catálogo es un espejo. Para el dato autoritativo, consultar la IDE de Pergamino.
+
+## Licencia
+
+CC-BY-SA-4.0. Es la licencia que declara la Municipalidad de Pergamino para su IDE:
+
+> Los datos dispuestos en nuestra Infraestructura de Datos Espaciales estan licenciados mediante Creative Commons 4.0 BY-SA, lo cual permite utilizar, compartir y adaptar este material siempre que reconozca atribución y permita la misma licencia en sus derivados.
+
+## Advertencia del publicador
+
+> La información contenida en la IDE se encuentra en constante actualización por parte de las distintas áreas responsables de su generación, por lo tanto, podria contener diferencias e inconsistencias en relación al objeto o fenómeno representado, tanto espacial como temporalmente.

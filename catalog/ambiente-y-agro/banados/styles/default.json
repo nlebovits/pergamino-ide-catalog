@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_banados.pmtiles",
+      "url": "pmtiles://../banados.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,11 +14,11 @@
       "id": "fill-0",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_banados",
+      "source-layer": "banados",
       "paint": {
         "fill-color": "#20C2F2",
         "fill-opacity": 0.5,
-        "fill-outline-color": "#00FFFF"
+        "fill-outline-color": "#20C2F2"
       }
     }
   ]

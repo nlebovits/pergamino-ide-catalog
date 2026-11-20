@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_museos_y_espacios_culturales.pmtiles",
+      "url": "pmtiles://../museos_y_espacios_culturales.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_museos_y_espacios_culturales",
+      "source-layer": "museos_y_espacios_culturales",
       "paint": {
         "circle-color": [
           "match",
@@ -30,8 +30,41 @@
           "#FF0000",
           "#cccccc"
         ],
-        "circle-radius": 10.0,
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Escuela",
+          5.0,
+          "Gobierno",
+          5.0,
+          "Museo",
+          5.0,
+          2.5
+        ],
         "circle-opacity": 1.0
+      }
+    },
+    {
+      "id": "categorical-circle-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "museos_y_espacios_culturales",
+      "layout": {
+        "text-field": [
+          "get",
+          "nombre"
+        ],
+        "text-size": 11.0,
+        "text-anchor": "top",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#000000"
       }
     }
   ]

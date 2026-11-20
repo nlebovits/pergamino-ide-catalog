@@ -2,129 +2,38 @@
   "type": "Collection",
   "id": "catastro/medida_lado",
   "stac_version": "1.1.0",
-  "description": "Medidas de los macizos (parcelas) del Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Catastro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_catastro_medida_lado.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_catastro_medida_lado"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 196722,
-  "table:row_count": 196722,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "id",
-      "type": "int64"
-    },
-    {
-      "name": "lzn",
-      "type": "double"
-    },
-    {
-      "name": "tdl",
-      "type": "string"
-    },
-    {
-      "name": "feo",
-      "type": "decimal128(38, 0)"
-    },
-    {
-      "name": "cca",
-      "type": "string"
-    },
-    {
-      "name": "sag",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_catastro_medida_lado"
-  ],
   "title": "Catastro medida lado de parcela",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.85363711,
-          -35.19623836,
-          -59.0950239,
-          -33.58574251
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Medidas de los macizos (parcelas) del Partido de Pergamino.",
+  "keywords": [
+    "objeto",
+    "inmueble",
+    "partida",
+    "circunscripcion",
+    "fraccion",
+    "manzana",
+    "quinta",
+    "subparcela",
+    "pergamino",
+    "catastro",
+    "planeamiento",
+    "seccion",
+    "cartoarba",
+    "chacra",
+    "nomenclatura",
+    "letra",
+    "macizo",
+    "medida",
+    "ph",
+    "arba",
+    "parcela"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -152,62 +61,219 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.8536371,
+          -35.1962384,
+          -59.0950242,
+          -33.5857425
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Catastro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/91",
+      "type": "text/html",
+      "title": "Catastro medida lado de parcela en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:catastro_medida_lado",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:catastro_medida_lado)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./medida_lado.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "medida_lado"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 91,
+  "pergamino:geonode_uuid": "365d695f-4932-4fd8-bbce-f27667bbf8cc",
+  "pergamino:source_updated": "2026-05-15T14:31:38Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 196705,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "lzn",
+      "type": "double"
+    },
+    {
+      "name": "tdl",
+      "type": "string"
+    },
+    {
+      "name": "feo",
+      "type": "decimal128(38, 0)"
+    },
+    {
+      "name": "cca",
+      "type": "string"
+    },
+    {
+      "name": "sag",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 196705,
   "assets": {
-    "publico_catastro_medida_lado": {
-      "href": "./publico_catastro_medida_lado.parquet",
+    "medida_lado": {
+      "href": "./medida_lado.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-15T14:31:38Z",
+      "pergamino:content_hash": "1814299428718774323461896:196705",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 10381360,
-      "file:checksum": "1220addd0d66933f1ed74b693226738e69d5e52b2a1fe17ad3c6fa62cf15b25132c6",
       "roles": [
         "data"
       ],
+      "table:row_count": 196705,
+      "file:size": 8889357,
+      "file:checksum": "12206bc69873261303f6dde722a16e9b93c40af27f401b18fe6c4caf637736116360",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4395,
-      "file:checksum": "1220f0f8db3f60ea4ee13171f1bf2171df00118ea92903a011afd7284d9987c4499a",
+    "version-2026-08-14": {
+      "href": "./publico_catastro_medida_lado.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:catastro_medida_lado). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 196722,
+      "file:size": 10381360,
+      "file:checksum": "1220addd0d66933f1ed74b693226738e69d5e52b2a1fe17ad3c6fa62cf15b25132c6"
     },
-    "publico_catastro_medida_lado-tiles": {
-      "href": "./publico_catastro_medida_lado.pmtiles",
+    "medida_lado-tiles": {
+      "href": "./medida_lado.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_catastro_medida_lado (vector tiles)",
-      "file:size": 5909654,
-      "file:checksum": "1220d57f91ac33b66b8cc6a6c32b50282c8a89b0d297c644565d5c709d091b6a5ab0",
       "roles": [
         "visual"
       ],
+      "file:size": 10553553,
+      "file:checksum": "122035fc6f614af48cf8941f4f3a5bdee91c7e3b2267284e5926a529524593768a3b",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "catastro_medida_lado",
-      "file:size": 499,
-      "file:checksum": "12203801c8e72676968c873df9b034a7f240e7db9876af7028bc83acabafc9a192c1",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 465,
+      "file:checksum": "1220e3d1bec059bc94c4fd829571bda0e6d079dadf68a3a4388fb6fe8975ad30eb94",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 88,
+      "file:checksum": "1220a90cf9c1e4f9bd88c36d419afd98f56b08876b8eeb7c351fa7f82f90769bdae6",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_catastro_medida_lado.thumb.jpg",
+      "href": "./medida_lado.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 67098,
-      "file:checksum": "1220e2b9b9d8e84daac7198ecdc6da0310b7d4e4dbbbb484cb63191f6f130c6e3ff6",
+      "file:size": 28108,
+      "file:checksum": "1220720dd9915f882a9bbd66047c6eb4443169bee5b70eeed41f616fa16e066f8cc4",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3585,
+      "file:checksum": "1220dee3fe8f7bd7f368c149db45d0e8edd5ebbbb76703172a9a3d78b83cf1cb2a42",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "medida_lado"
+  ]
 }

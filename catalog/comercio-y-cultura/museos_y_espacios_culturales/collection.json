@@ -2,7 +2,66 @@
   "type": "Collection",
   "id": "comercio-y-cultura/museos_y_espacios_culturales",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Museos y espacios culturales",
   "description": "Museos y espacios culturales del Partido de Pergamino.",
+  "keywords": [
+    "muestra",
+    "pintura",
+    "museo",
+    "cuadro",
+    "espacio",
+    "pergamino",
+    "musica",
+    "cultura",
+    "teatro"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.591087,
+          -33.9137439,
+          -60.3993405,
+          -33.6738341
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -17,48 +76,58 @@
       "title": "Comercio y cultura"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/211",
+      "type": "text/html",
+      "title": "Museos y espacios culturales en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:museos_y_espacios_culturales",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:museos_y_espacios_culturales)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
     },
     {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Amuseos_y_espacios_culturales",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:museos_y_espacios_culturales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_museos_y_espacios_culturales.pmtiles",
+      "href": "./museos_y_espacios_culturales.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_museos_y_espacios_culturales"
+        "museos_y_espacios_culturales"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 14,
-  "table:row_count": 14,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 211,
+  "pergamino:geonode_uuid": "13c8bada-953b-4a81-b68a-a690a9097770",
+  "pergamino:source_updated": "2026-05-04T13:29:45Z",
+  "pergamino:update_frequency": "unknown",
   "table:primary_geometry": "geometry",
+  "table:row_count": 14,
   "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "gid",
       "type": "int64"
@@ -89,133 +158,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.8932172,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_museos_y_espacios_culturales"
-  ],
-  "title": "Museos y espacios culturales",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.59108701,
-          -33.9137439,
-          -60.39934053,
-          -33.673834
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 14,
   "assets": {
-    "publico_museos_y_espacios_culturales": {
-      "href": "./publico_museos_y_espacios_culturales.parquet",
+    "museos_y_espacios_culturales": {
+      "href": "./museos_y_espacios_culturales.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-04T13:29:45Z",
+      "pergamino:content_hash": "107482810254465625892:14",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 6105,
-      "file:checksum": "1220893c4a6eaff988224395ee3573326a17e2cb546ad9764bd69a6c2b493fc563c0",
       "roles": [
         "data"
       ],
+      "table:row_count": 14,
+      "file:size": 4171,
+      "file:checksum": "1220e482c7829f4f313d1f6c1e4be2ccbeaf770e249212aca7b2246bfe7f3ecea4a3",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_museos_y_espacios_culturales.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:museos_y_espacios_culturales). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 14,
+      "file:size": 6105,
+      "file:checksum": "1220893c4a6eaff988224395ee3573326a17e2cb546ad9764bd69a6c2b493fc563c0"
+    },
+    "museos_y_espacios_culturales-tiles": {
+      "href": "./museos_y_espacios_culturales.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 17571,
+      "file:checksum": "122025fefe9ba09f5fd1b0cd18c9c6fab1e7b2d9d6f63b62876d213a886174a53ffb",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "museos_y_espacios_culturales",
-      "file:size": 763,
-      "file:checksum": "12207414b286e86d8dcb5d90feee3881ffd6efdf5e575e945b0e2aad299dfdeca881",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1389,
+      "file:checksum": "1220e9bf57dc3ec3e12a91c76178a5441566a3ae3adf7835c35604d045ed3c0305da",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 709,
       "file:checksum": "1220e1142003985f647a0cfc12f662b3118842b7640247bb6624b1375ed2acf25947",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1299,
-      "file:checksum": "12202f6408c8c09017d21cbfa9ab1721af0475645685b74d7e3359b109a2c4bf777d",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_museos_y_espacios_culturales-tiles": {
-      "href": "./publico_museos_y_espacios_culturales.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_museos_y_espacios_culturales (vector tiles)",
-      "file:size": 8013,
-      "file:checksum": "12203cbdcbdf908358e675a21a06b9e07d370ec444461256d73f928731ad30f27a8f",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_museos_y_espacios_culturales.thumb.jpg",
+      "href": "./museos_y_espacios_culturales.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 44020,
-      "file:checksum": "122013b7efc453d1c46d245cd98ec8bd9a3f2ff91898cd8994ef448eff4662117301",
+      "file:size": 19199,
+      "file:checksum": "1220ebd1b844b2258da70f216795a1fdcb22497376d24c9585cd6109ce76ee0b268c",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3400,
+      "file:checksum": "1220964e0a0901c144d204ce388ad5a0003d013e75381588f188b98e73d157759698",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "museos_y_espacios_culturales"
+  ]
 }

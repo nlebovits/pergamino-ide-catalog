@@ -6,7 +6,7 @@
   ],
   "id": "vialidad",
   "title": "Vialidad",
-  "description": "Red vial del Partido de Pergamino: callejero, tipo de calzada y vereda, cordón cuneta, señalización, semáforos, alumbrado público y caminos rurales.",
+  "description": "Red vial del Partido de Pergamino: callejero, material de calzada, cordón cuneta, rampas de acceso, señalización, semáforos, reductores de velocidad, alumbrado público, puntos fijos y red de nivelación del IGN, y caminos rurales.",
   "links": [
     {
       "rel": "root",
@@ -26,21 +26,9 @@
     },
     {
       "rel": "child",
-      "href": "./altura_de_calle/collection.json",
-      "type": "application/json",
-      "title": "Altura de calle"
-    },
-    {
-      "rel": "child",
       "href": "./callejero/collection.json",
       "type": "application/json",
       "title": "Callejero"
-    },
-    {
-      "rel": "child",
-      "href": "./callejero_listado/collection.json",
-      "type": "application/json",
-      "title": "Listado de calles"
     },
     {
       "rel": "child",
@@ -94,13 +82,13 @@
       "rel": "child",
       "href": "./rampas_acceso_veredas/collection.json",
       "type": "application/json",
-      "title": "Rampas de acceso a veredas"
+      "title": "Rampas de acceso discapacidad motriz"
     },
     {
       "rel": "child",
-      "href": "./recambio_led/collection.json",
+      "href": "./red_nivelacion_ign_precision/collection.json",
       "type": "application/json",
-      "title": "Recambio led"
+      "title": "Red de nivelación de precisión del IGN"
     },
     {
       "rel": "child",
@@ -115,18 +103,6 @@
       "title": "Semaforos"
     },
     {
-      "rel": "child",
-      "href": "./tipo_de_vereda/collection.json",
-      "type": "application/json",
-      "title": "Tipo de vereda"
-    },
-    {
-      "rel": "child",
-      "href": "./tranqueras_rurales/collection.json",
-      "type": "application/json",
-      "title": "Tranqueras Geolocalizadas"
-    },
-    {
       "rel": "agents",
       "href": "./AGENTS.md",
       "type": "text/markdown",
@@ -139,5 +115,5 @@
       "title": "Human-readable documentation"
     }
   ],
-  "updated": "2026-11-20T07:41:37Z"
+  "updated": "2026-11-20T09:51:46Z"
 }

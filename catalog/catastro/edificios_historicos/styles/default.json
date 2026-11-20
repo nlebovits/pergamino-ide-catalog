@@ -4,21 +4,46 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_edificios_historicos.pmtiles",
+      "url": "pmtiles://../edificios_historicos.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_edificios_historicos",
+      "source-layer": "edificios_historicos",
       "paint": {
-        "circle-color": "#888888",
-        "circle-radius": 7.5,
-        "circle-opacity": 1.0
+        "circle-color": "#8d6e63",
+        "circle-opacity": 1.0,
+        "circle-radius": 4.0,
+        "circle-stroke-color": "#ffffff",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "circle-0-labels",
+      "type": "symbol",
+      "source": "data",
+      "source-layer": "edificios_historicos",
+      "layout": {
+        "text-field": [
+          "get",
+          "descrip"
+        ],
+        "text-size": 11.0,
+        "text-anchor": "left",
+        "text-font": [
+          "Noto Sans Regular"
+        ]
+      },
+      "paint": {
+        "text-color": "#3e2723",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.5
       }
     }
   ]

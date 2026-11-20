@@ -4,17 +4,21 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_cordon_cuneta.pmtiles",
+      "url": "pmtiles://../cordon_cuneta.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-line",
+      "id": "sld-0-line",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_cordon_cuneta",
+      "source-layer": "cordon_cuneta",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
       "paint": {
         "line-color": [
           "match",
@@ -32,17 +36,117 @@
           "#747474",
           "no_corresponde",
           "#747474",
-          "#cccccc"
+          "#000000"
         ],
-        "line-width": 7.0,
-        "line-opacity": 1.0
+        "line-opacity": [
+          "match",
+          [
+            "get",
+            "cordon_cuneta"
+          ],
+          "ambos",
+          1.0,
+          "impar",
+          1.0,
+          "par",
+          1.0,
+          "ninguno",
+          1.0,
+          "no_corresponde",
+          1.0,
+          0
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "cordon_cuneta"
+          ],
+          "ambos",
+          7.0,
+          "impar",
+          7.0,
+          "par",
+          7.0,
+          "ninguno",
+          7.0,
+          "no_corresponde",
+          7.0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sld-1-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "cordon_cuneta",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "cordon_cuneta"
+          ],
+          "ambos",
+          "#01eeff",
+          "impar",
+          "#01eeff",
+          "par",
+          "#01eeff",
+          "ninguno",
+          "#ff2701",
+          "no_corresponde",
+          "#bebebe",
+          "#000000"
+        ],
+        "line-opacity": [
+          "match",
+          [
+            "get",
+            "cordon_cuneta"
+          ],
+          "ambos",
+          1.0,
+          "impar",
+          1.0,
+          "par",
+          1.0,
+          "ninguno",
+          1.0,
+          "no_corresponde",
+          1.0,
+          0
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "cordon_cuneta"
+          ],
+          "ambos",
+          6.0,
+          "impar",
+          4.0,
+          "par",
+          4.0,
+          "ninguno",
+          6.0,
+          "no_corresponde",
+          8.0,
+          0
+        ]
       }
     },
     {
       "id": "categorical-line-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_cordon_cuneta",
+      "source-layer": "cordon_cuneta",
       "layout": {
         "text-field": [
           "get",

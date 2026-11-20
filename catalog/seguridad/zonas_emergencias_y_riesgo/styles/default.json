@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_zonas_emergencias_y_riesgo.pmtiles",
+      "url": "pmtiles://../zonas_emergencias_y_riesgo.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_zonas_emergencias_y_riesgo",
+      "source-layer": "zonas_emergencias_y_riesgo",
       "paint": {
         "fill-color": [
           "match",
@@ -50,7 +50,7 @@
       "id": "categorical-fill-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_zonas_emergencias_y_riesgo",
+      "source-layer": "zonas_emergencias_y_riesgo",
       "layout": {
         "text-field": [
           "get",

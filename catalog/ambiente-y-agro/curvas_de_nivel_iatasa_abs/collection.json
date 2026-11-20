@@ -2,125 +2,26 @@
   "type": "Collection",
   "id": "ambiente-y-agro/curvas_de_nivel_iatasa_abs",
   "stac_version": "1.1.0",
-  "description": "Curvas de nivel elaboradas por IATASA-ABS para la Ciudad de Pergamino, año 2007.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Ambiente y agro"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_curvas_de_nivel_iatasa_abs.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_curvas_de_nivel_iatasa_abs"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "LineString",
-  "geoparquet:feature_count": 349,
-  "table:row_count": 349,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "cota",
-      "type": "double"
-    },
-    {
-      "name": "fuente",
-      "type": "string"
-    },
-    {
-      "name": "actualizacion",
-      "type": "string"
-    },
-    {
-      "name": "observaciones",
-      "type": "string"
-    },
-    {
-      "name": "grosor_marca",
-      "type": "double"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5731201,
-    -33.9114543,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_curvas_de_nivel_iatasa_abs"
-  ],
   "title": "Curvas de nivel (IATASA-ABS)",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.60202307,
-          -33.9228879,
-          -60.53169075,
-          -33.8592178
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Curvas de nivel elaboradas por IATASA-ABS para la Ciudad de Pergamino, año 2007.",
+  "keywords": [
+    "iatasa",
+    "pergamino",
+    "nivelacion",
+    "pluvial",
+    "nivel",
+    "curvas",
+    "puntos",
+    "inundacion",
+    "abs"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -147,62 +48,219 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6020231,
+          -33.9228877,
+          -60.5316907,
+          -33.8592178
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Ambiente y agro"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/127",
+      "type": "text/html",
+      "title": "Curvas de nivel (IATASA-ABS) en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:curvas_de_nivel_iatasa_abs",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:curvas_de_nivel_iatasa_abs)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./curvas_de_nivel_iatasa_abs.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "curvas_de_nivel_iatasa_abs"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 127,
+  "pergamino:geonode_uuid": "8fc7e525-14e9-45a0-9998-c8460f3550b7",
+  "pergamino:source_updated": "2026-05-14T10:58:13Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 349,
+  "table:columns": [
+    {
+      "name": "gid",
+      "type": "int64"
+    },
+    {
+      "name": "cota",
+      "type": "double"
+    },
+    {
+      "name": "fuente",
+      "type": "string"
+    },
+    {
+      "name": "actualizacion",
+      "type": "string"
+    },
+    {
+      "name": "observaciones",
+      "type": "string"
+    },
+    {
+      "name": "grosor_marca",
+      "type": "double"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "LineString",
+  "geoparquet:feature_count": 349,
   "assets": {
-    "publico_curvas_de_nivel_iatasa_abs": {
-      "href": "./publico_curvas_de_nivel_iatasa_abs.parquet",
+    "curvas_de_nivel_iatasa_abs": {
+      "href": "./curvas_de_nivel_iatasa_abs.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-14T10:58:13Z",
+      "pergamino:content_hash": "3293869736101625525494:349",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 1110266,
-      "file:checksum": "1220fea59102afa9776084d6d445f1ccf1ee623303a9aa1d9990cb0bad0d306c3a4b",
       "roles": [
         "data"
       ],
+      "table:row_count": 349,
+      "file:size": 1231685,
+      "file:checksum": "122076e261aaa7fb78181ea8d98ed2fbc9d2e92610260dbcc7fe442bfdefa57ce2f0",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4410,
-      "file:checksum": "1220d1b9c2539f31e4229c3cb2ab36b7937ebc23f326d4ba4e2f04c65dcd18700a59",
+    "version-2026-08-14": {
+      "href": "./publico_curvas_de_nivel_iatasa_abs.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:curvas_de_nivel_iatasa_abs). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 349,
+      "file:size": 1110266,
+      "file:checksum": "1220fea59102afa9776084d6d445f1ccf1ee623303a9aa1d9990cb0bad0d306c3a4b"
     },
-    "publico_curvas_de_nivel_iatasa_abs-tiles": {
-      "href": "./publico_curvas_de_nivel_iatasa_abs.pmtiles",
+    "curvas_de_nivel_iatasa_abs-tiles": {
+      "href": "./curvas_de_nivel_iatasa_abs.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_curvas_de_nivel_iatasa_abs (vector tiles)",
-      "file:size": 366006,
-      "file:checksum": "12201e5f019ef64b82059f82285368312da73b21ab64d929c646b291ffa0e968707f",
       "roles": [
         "visual"
       ],
+      "file:size": 392528,
+      "file:checksum": "12202a6a5b73e0fc3aca3d03ac804017a90439104a20732edebfd737b32daa3979fb",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "curvas_de_nivel_iatasa_abs",
-      "file:size": 504,
-      "file:checksum": "122004359823e956b8f0d561bfdbb89af9a1b7f16081ae8d0822db4950b948dfb71f",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 488,
+      "file:checksum": "1220f60c9ed06f09d199524cfa248df09c97f46da34edf6b86be9727ef8ab91457f1",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 1713,
+      "file:checksum": "122067dd0f1a76153f3386572e0493b3f1a38a836fbd39ccba95a03c2afa8aa58760",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_curvas_de_nivel_iatasa_abs.thumb.jpg",
+      "href": "./curvas_de_nivel_iatasa_abs.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 241924,
-      "file:checksum": "1220fc2ae0fca6b1eecabdab9b046e541698e0c469d4eaf44f5c1b51de6fdc328c17",
+      "file:size": 237583,
+      "file:checksum": "122074eea9bf6cfa8534f4097774cd1a25f8db84814f0239412975560281d172469b",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3726,
+      "file:checksum": "1220eb51904a174cbe9bf1a031605116625cd8c187eac4d5c6baeef398134b8aaa9c",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "curvas_de_nivel_iatasa_abs"
+  ]
 }

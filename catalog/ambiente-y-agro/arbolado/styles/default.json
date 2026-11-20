@@ -4,17 +4,17 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_arbolado.pmtiles",
+      "url": "pmtiles://../arbolado.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_arbolado",
+      "source-layer": "arbolado",
       "paint": {
         "circle-color": [
           "match",
@@ -30,10 +30,88 @@
           "#bad7b3",
           "sin_datos",
           "#f0f0f0",
-          "#cccccc"
+          "#000000"
         ],
-        "circle-radius": 7.0,
-        "circle-opacity": 1.0
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "altura"
+          ],
+          "más de 15 metros",
+          1.0,
+          "de 6 a 15 metros",
+          1.0,
+          "hasta 6 metros",
+          1.0,
+          "sin_datos",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "altura"
+          ],
+          "más de 15 metros",
+          3.5,
+          "de 6 a 15 metros",
+          3.5,
+          "hasta 6 metros",
+          3.5,
+          "sin_datos",
+          3.5,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "altura"
+          ],
+          "más de 15 metros",
+          "#232323",
+          "de 6 a 15 metros",
+          "#232323",
+          "hasta 6 metros",
+          "#232323",
+          "sin_datos",
+          "#232323",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "altura"
+          ],
+          "más de 15 metros",
+          0.5,
+          "de 6 a 15 metros",
+          0.5,
+          "hasta 6 metros",
+          0.5,
+          "sin_datos",
+          0.5,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "altura"
+          ],
+          "más de 15 metros",
+          1.0,
+          "de 6 a 15 metros",
+          1.0,
+          "hasta 6 metros",
+          1.0,
+          "sin_datos",
+          1.0,
+          0
+        ]
       }
     }
   ]

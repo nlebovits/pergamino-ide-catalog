@@ -4,17 +4,21 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_proyectos_infraestructura.pmtiles",
+      "url": "pmtiles://../proyectos_infraestructura.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-line",
+      "id": "sld-0-line",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_proyectos_infraestructura",
+      "source-layer": "proyectos_infraestructura",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
       "paint": {
         "line-color": [
           "match",
@@ -28,34 +32,113 @@
           "#ff2701",
           "cordon_y_asfalto",
           "#01eeff",
-          "#cccccc"
+          "#000000"
         ],
-        "line-width": 6.0,
-        "line-opacity": 1.0
+        "line-opacity": [
+          "match",
+          [
+            "get",
+            "proyecto_infraestructura"
+          ],
+          "cordon",
+          1.0,
+          "asfalto",
+          1.0,
+          "cordon_y_asfalto",
+          1.0,
+          0
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "proyecto_infraestructura"
+          ],
+          "cordon",
+          6.0,
+          "asfalto",
+          6.0,
+          "cordon_y_asfalto",
+          6.0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sld-1-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "proyectos_infraestructura",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": [
+          "match",
+          [
+            "get",
+            "proyecto_infraestructura"
+          ],
+          "cordon",
+          "#ffffff",
+          "asfalto",
+          "#ffffff",
+          "cordon_y_asfalto",
+          "#ff2701",
+          "#000000"
+        ],
+        "line-opacity": [
+          "match",
+          [
+            "get",
+            "proyecto_infraestructura"
+          ],
+          "cordon",
+          1.0,
+          "asfalto",
+          1.0,
+          "cordon_y_asfalto",
+          1.0,
+          0
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "proyecto_infraestructura"
+          ],
+          "cordon",
+          5.0,
+          "asfalto",
+          5.0,
+          "cordon_y_asfalto",
+          5.0,
+          0
+        ]
       }
     },
     {
       "id": "categorical-line-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_proyectos_infraestructura",
+      "source-layer": "proyectos_infraestructura",
       "layout": {
         "text-field": [
           "get",
           "pav_etapa"
         ],
-        "text-size": 11.0,
-        "text-anchor": "left",
+        "text-size": 10.0,
+        "text-anchor": "center",
         "text-font": [
           "Noto Sans Regular"
         ]
       },
       "paint": {
         "text-color": "#000000",
-        "text-halo-color": "#FFFFFF",
-        "text-halo-width": 1.5
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

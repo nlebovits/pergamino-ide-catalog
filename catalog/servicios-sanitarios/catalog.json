@@ -6,7 +6,7 @@
   ],
   "id": "servicios-sanitarios",
   "title": "Servicios sanitarios",
-  "description": "Cobertura de agua corriente y red cloacal por período de gestión, medidores, pozos y estaciones de bombeo de la Dirección de Obras y Servicios Sanitarios (DOSS), desagües pluviales y zonas de facturación.",
+  "description": "Redes de agua corriente y cloacas (líneas, nodos y cobertura), medidores, pozos y estaciones de bombeo de la Dirección de Obras y Servicios Sanitarios (DOSS), desagües pluviales, sumideros y compuertas, y zonas de facturación.",
   "links": [
     {
       "rel": "root",
@@ -20,51 +20,39 @@
     },
     {
       "rel": "child",
-      "href": "./cobertura_agua_antes_de_2015/collection.json",
+      "href": "./agua_lineas/collection.json",
       "type": "application/json",
-      "title": "Cobertura agua antes de 2015"
+      "title": "Red de agua corriente - Líneas"
     },
     {
       "rel": "child",
-      "href": "./cobertura_agua_de_2015_a_2019/collection.json",
+      "href": "./agua_nodos/collection.json",
       "type": "application/json",
-      "title": "Cobertura agua de 2015 a 2019"
+      "title": "Red de agua corriente - Nodos"
     },
     {
       "rel": "child",
-      "href": "./cobertura_agua_de_2019_a_2023/collection.json",
+      "href": "./cloacas_lineas/collection.json",
       "type": "application/json",
-      "title": "Cobertura agua de 2019 a 2023"
+      "title": "Red cloacal - Líneas"
     },
     {
       "rel": "child",
-      "href": "./cobertura_agua_de_2023_a_2027/collection.json",
+      "href": "./cloacas_nodos/collection.json",
       "type": "application/json",
-      "title": "Cobertura agua de 2023 a 2027"
+      "title": "Red cloacal - Nodos"
     },
     {
       "rel": "child",
-      "href": "./cobertura_cloacas_antes_de_2015/collection.json",
+      "href": "./cobertura_agua/collection.json",
       "type": "application/json",
-      "title": "Cobertura cloacas antes de 2015"
+      "title": "Cobertura de red de agua corriente"
     },
     {
       "rel": "child",
-      "href": "./cobertura_cloacas_de_2015_a_2019/collection.json",
+      "href": "./cobertura_cloacas/collection.json",
       "type": "application/json",
-      "title": "Cobertura cloacas de 2015 a 2019"
-    },
-    {
-      "rel": "child",
-      "href": "./cobertura_cloacas_de_2019_a_2023/collection.json",
-      "type": "application/json",
-      "title": "Cobertura cloacas de 2019 a 2023"
-    },
-    {
-      "rel": "child",
-      "href": "./cobertura_cloacas_de_2023_a_2027/collection.json",
-      "type": "application/json",
-      "title": "Cobertura cloacas de 2023 a 2027"
+      "title": "Cobertura de red cloacal"
     },
     {
       "rel": "child",
@@ -80,9 +68,9 @@
     },
     {
       "rel": "child",
-      "href": "./colectoras_cloacales_maximas/collection.json",
+      "href": "./compuertas_pluviales/collection.json",
       "type": "application/json",
-      "title": "Colectoras cloacales maximas"
+      "title": "Compuertas antirretorno en desagües pluviales"
     },
     {
       "rel": "child",
@@ -106,7 +94,7 @@
       "rel": "child",
       "href": "./pozos_agua_doss/collection.json",
       "type": "application/json",
-      "title": "Pozos agua doss"
+      "title": "Pozos de agua DOSS"
     },
     {
       "rel": "child",
@@ -133,5 +121,5 @@
       "title": "Human-readable documentation"
     }
   ],
-  "updated": "2026-11-20T07:41:37Z"
+  "updated": "2026-11-20T09:51:46Z"
 }

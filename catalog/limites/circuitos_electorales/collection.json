@@ -2,133 +2,22 @@
   "type": "Collection",
   "id": "limites/circuitos_electorales",
   "stac_version": "1.1.0",
-  "description": "Circuitos electorales del Partido de Pergamino.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Límites administrativos"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_circuitos_electorales.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_circuitos_electorales"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "MultiPolygon",
-  "geoparquet:feature_count": 122,
-  "table:row_count": 122,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "id",
-      "type": "int64"
-    },
-    {
-      "name": "circuito",
-      "type": "string"
-    },
-    {
-      "name": "cabecera",
-      "type": "string"
-    },
-    {
-      "name": "municipio",
-      "type": "string"
-    },
-    {
-      "name": "muni_id",
-      "type": "double"
-    },
-    {
-      "name": "circuitos_intendente_3ro",
-      "type": "string"
-    },
-    {
-      "name": "circuitos_intendente_%_3ro",
-      "type": "double"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -59.298706,
-    -34.0663118,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_circuitos_electorales"
-  ],
   "title": "Circuitos electorales",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -61.329004,
-          -34.6199679,
-          -58.84867369,
-          -33.26326581
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Circuitos electorales del Partido de Pergamino",
+  "keywords": [
+    "elecciones",
+    "pergamino",
+    "circuito",
+    "voto",
+    "electoral"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -149,62 +38,203 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -61.3290035,
+          -34.6199676,
+          -58.8486737,
+          -33.2632658
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Límites administrativos"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/103",
+      "type": "text/html",
+      "title": "Circuitos electorales en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:circuitos_electorales",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:circuitos_electorales)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./circuitos_electorales.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "circuitos_electorales"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 103,
+  "pergamino:geonode_uuid": "7bd62be5-c0f2-46d9-afc9-67a4b4331112",
+  "pergamino:source_updated": "2026-05-14T16:17:31Z",
+  "pergamino:update_frequency": "notPlanned",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 20,
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "circuito",
+      "type": "string"
+    },
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPolygon",
+  "geoparquet:feature_count": 20,
   "assets": {
-    "publico_circuitos_electorales": {
-      "href": "./publico_circuitos_electorales.parquet",
+    "circuitos_electorales": {
+      "href": "./circuitos_electorales.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-14T16:17:31Z",
+      "pergamino:content_hash": "238815853027166078941:20",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 198184,
-      "file:checksum": "122098bace1dd02d25d266a81c34364d94a0d44e900dabea21ac657db9d72f97585e",
       "roles": [
         "data"
       ],
+      "table:row_count": 20,
+      "file:size": 26469,
+      "file:checksum": "12203afb082954ee45a70a3f0375e449fd5a78bbb36dac9255f4ca01794a39573e86",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4472,
-      "file:checksum": "122064f65c05114af6aa751ae04cd559345bc629c446983c48ac12868349feeefdc6",
+    "version-2026-08-14": {
+      "href": "./publico_circuitos_electorales.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:circuitos_electorales). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 122,
+      "file:size": 198184,
+      "file:checksum": "122098bace1dd02d25d266a81c34364d94a0d44e900dabea21ac657db9d72f97585e"
     },
-    "publico_circuitos_electorales-tiles": {
-      "href": "./publico_circuitos_electorales.pmtiles",
+    "circuitos_electorales-tiles": {
+      "href": "./circuitos_electorales.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_circuitos_electorales (vector tiles)",
-      "file:size": 2374711,
-      "file:checksum": "122076607f90757cc74a3f5fd58136a296157ce2e0068feea6854b9725041f300dba",
       "roles": [
         "visual"
       ],
+      "file:size": 272418,
+      "file:checksum": "12200f8eb6e06e5bad8b18ebcd605e012f77994ed7e48bf0f64a04c7b821f89023e2",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "circuitos_electorales",
-      "file:size": 505,
-      "file:checksum": "12204c9daaa9b0947b67464c1bd40913f5118cc2d4048c584d6cf66ec5fb14e99587",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 976,
+      "file:checksum": "1220a6670c866119d35fa87426a984d01e61e5e8119f78bd0060b258e2378177963c",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 114,
+      "file:checksum": "1220140b120153e63aee0be201316debc991f0c06d8a9338b61797a285bfe9dbe6e9",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_circuitos_electorales.thumb.jpg",
+      "href": "./circuitos_electorales.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 103012,
-      "file:checksum": "1220411752841d010afed746fe7b8c1d25efafbbdb8fd509e9ec614475ea25827735",
+      "file:size": 36437,
+      "file:checksum": "1220027373885cae776c4f7d54a79e2e874bd62d6e4fc432bc8b34adb7cdff81c328",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3167,
+      "file:checksum": "1220cfc95bf375bfa58f8b442b109098409278593be5484bf4015e8adf27cfaac9c9",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "circuitos_electorales"
+  ]
 }

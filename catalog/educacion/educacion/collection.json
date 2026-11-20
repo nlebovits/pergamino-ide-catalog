@@ -1,0 +1,307 @@
+{
+  "type": "Collection",
+  "id": "educacion/educacion",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Educacion",
+  "description": "Capa de establecimientos educativos del Partido de Pergamino organizados por nivel y gestión como jardines, escuelas, colegios, institutos, profesorados y universidades.",
+  "keywords": [
+    "secundaria",
+    "jardin",
+    "terciario",
+    "educacion",
+    "escuelas",
+    "maternal",
+    "profesional",
+    "profesorado",
+    "instituto",
+    "universidad",
+    "formacion",
+    "colegio",
+    "pergamino",
+    "primaria"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.8487125,
+          -34.0936982,
+          -60.1685635,
+          -33.5894093
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Educación"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/145",
+      "type": "text/html",
+      "title": "Educacion en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:educacion",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:educacion)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./educacion.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "educacion"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 145,
+  "pergamino:geonode_uuid": "fbde7b51-c98a-48e4-b008-b829a03ceeef",
+  "pergamino:source_updated": "2026-05-11T15:34:05Z",
+  "pergamino:update_frequency": "asNeeded",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 200,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "clave",
+      "type": "string"
+    },
+    {
+      "name": "cue_anexo",
+      "type": "double"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "nro",
+      "type": "string"
+    },
+    {
+      "name": "direccion",
+      "type": "string"
+    },
+    {
+      "name": "calles_ale",
+      "type": "string"
+    },
+    {
+      "name": "telefono",
+      "type": "string"
+    },
+    {
+      "name": "cp",
+      "type": "string"
+    },
+    {
+      "name": "email",
+      "type": "string"
+    },
+    {
+      "name": "sector",
+      "type": "string"
+    },
+    {
+      "name": "layer",
+      "type": "string"
+    },
+    {
+      "name": "etiqueta",
+      "type": "string"
+    },
+    {
+      "name": "nivel",
+      "type": "string"
+    },
+    {
+      "name": "fuente",
+      "type": "string"
+    },
+    {
+      "name": "latitud",
+      "type": "double"
+    },
+    {
+      "name": "longitud",
+      "type": "double"
+    },
+    {
+      "name": "barrio",
+      "type": "string"
+    },
+    {
+      "name": "localidad",
+      "type": "string"
+    },
+    {
+      "name": "estado",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "MultiPoint",
+  "geoparquet:feature_count": 200,
+  "assets": {
+    "educacion": {
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-11T15:34:05Z",
+      "pergamino:content_hash": "1979406414451348452578:200",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
+      "href": "./educacion.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data"
+      ],
+      "table:row_count": 200,
+      "file:size": 31982,
+      "file:checksum": "1220cd081a3b341c0136d21da9bc4c66a6fd9781da9ef87d658c8e0b6100ce356c44",
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "educacion-tiles": {
+      "href": "./educacion.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 501027,
+      "file:checksum": "1220153b8c70070905b38c0ce5b87466df6ab1ab42ae88a2b270e9f8e3c3707910ea",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
+    },
+    "styles/default": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "file:size": 450,
+      "file:checksum": "12207990f056ae9c982abf6d9d5b6e3e9d2e05f1964c1f7a50af50e3c8b2274c9091",
+      "title": "Estilo MapLibre",
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
+    },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 133,
+      "file:checksum": "122032ed1f661faeb7287bd16b52d0e35adae6677125fa843936dcc72aa43b65d48d",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
+    "thumbnail": {
+      "href": "./educacion.thumb.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 68150,
+      "file:checksum": "1220d8db433b6d52a5bae2702a016022aef1cca9a3028332528ff78d94887f8ba4eb",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3802,
+      "file:checksum": "1220d38f6de35af34eeedd45487bbf834271471ddd90a0d5107704bcea14de3bb159",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+    }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "educacion"
+  ]
+}

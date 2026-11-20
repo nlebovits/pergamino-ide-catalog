@@ -4,17 +4,17 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_educacion_nivel.pmtiles",
+      "url": "pmtiles://../nivel.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_educacion_nivel",
+      "source-layer": "nivel",
       "paint": {
         "circle-color": [
           "match",
@@ -23,43 +23,142 @@
             "nivel"
           ],
           "especial",
-          "#4c50d1",
+          "#8e24aa",
           "formacion",
-          "#c220e6",
+          "#fb8c00",
           "inicial",
-          "#dc800e",
+          "#43a047",
           "primaria",
-          "#ec4a80",
+          "#1e88e5",
           "secundaria",
-          "#c0e982",
+          "#e53935",
           "superior",
-          "#25c4d5",
-          "#cccccc"
+          "#546e7a",
+          "#000000"
         ],
-        "circle-radius": 7.0,
-        "circle-opacity": 1.0
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "nivel"
+          ],
+          "especial",
+          1.0,
+          "formacion",
+          1.0,
+          "inicial",
+          1.0,
+          "primaria",
+          1.0,
+          "secundaria",
+          1.0,
+          "superior",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "nivel"
+          ],
+          "especial",
+          3.5,
+          "formacion",
+          3.5,
+          "inicial",
+          3.5,
+          "primaria",
+          3.5,
+          "secundaria",
+          3.5,
+          "superior",
+          3.5,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "nivel"
+          ],
+          "especial",
+          "#ffffff",
+          "formacion",
+          "#ffffff",
+          "inicial",
+          "#ffffff",
+          "primaria",
+          "#ffffff",
+          "secundaria",
+          "#ffffff",
+          "superior",
+          "#ffffff",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "nivel"
+          ],
+          "especial",
+          1.0,
+          "formacion",
+          1.0,
+          "inicial",
+          1.0,
+          "primaria",
+          1.0,
+          "secundaria",
+          1.0,
+          "superior",
+          1.0,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "nivel"
+          ],
+          "especial",
+          1.0,
+          "formacion",
+          1.0,
+          "inicial",
+          1.0,
+          "primaria",
+          1.0,
+          "secundaria",
+          1.0,
+          "superior",
+          1.0,
+          0
+        ]
       }
     },
     {
       "id": "categorical-circle-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_educacion_nivel",
+      "source-layer": "nivel",
       "layout": {
         "text-field": [
           "get",
           "nivel"
         ],
-        "text-size": 13.0,
+        "text-size": 12.0,
         "text-anchor": "left",
         "text-font": [
           "Noto Sans Regular"
         ]
       },
       "paint": {
-        "text-color": "#000000"
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 1.5
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

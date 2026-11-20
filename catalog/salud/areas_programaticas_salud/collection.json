@@ -2,7 +2,65 @@
   "type": "Collection",
   "id": "salud/areas_programaticas_salud",
   "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
+  ],
+  "title": "Áreas programaticas de salud",
   "description": "Áreas o zonas programáticas de la Secretaria de Salud para la Ciudad de Pergamino.",
+  "keywords": [
+    "atencion",
+    "salud",
+    "caps",
+    "pergamino",
+    "programatica",
+    "areas",
+    "salitas",
+    "primaria"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6203381,
+          -33.9378786,
+          -60.5041941,
+          -33.8288253
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
   "links": [
     {
       "rel": "root",
@@ -11,55 +69,64 @@
       "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
     },
     {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs",
-      "type": "text/html",
-      "title": "Original source"
-    },
-    {
       "rel": "parent",
       "href": "../catalog.json",
       "type": "application/json",
       "title": "Salud"
     },
     {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/63",
+      "type": "text/html",
+      "title": "Áreas programaticas de salud en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:areas_programaticas_salud",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:areas_programaticas_salud)"
     },
     {
       "rel": "describedby",
       "href": "./README.md",
       "type": "text/markdown",
-      "title": "Human-readable documentation"
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
     },
     {
       "rel": "pmtiles",
-      "href": "./publico_areas_programaticas_salud.pmtiles",
+      "href": "./areas_programaticas_salud.pmtiles",
       "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
       "pmtiles:layers": [
-        "publico_areas_programaticas_salud"
+        "areas_programaticas_salud"
       ]
     }
   ],
-  "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
-    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "geoparquet:geometry_type": "Polygon",
-  "geoparquet:feature_count": 17,
-  "table:row_count": 17,
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 63,
+  "pergamino:geonode_uuid": "b6054dec-b4dd-4988-9d46-a286482fce1d",
+  "pergamino:source_updated": "2026-05-18T12:56:29Z",
+  "pergamino:update_frequency": "notPlanned",
   "table:primary_geometry": "geometry",
+  "table:row_count": 17,
   "table:columns": [
+    {
+      "name": "id",
+      "type": "int64"
+    },
     {
       "name": "nombre_area",
       "type": "string"
@@ -98,121 +165,111 @@
     },
     {
       "name": "geometry",
-      "type": "binary"
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
     },
     {
       "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
     }
   ],
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.5950927,
-    -33.8840972,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_areas_programaticas_salud"
-  ],
-  "title": "Áreas programaticas de salud",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.62033813,
-          -33.9378789,
-          -60.5041939,
-          -33.828825
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
-  "license": "CC-BY-SA-4.0",
-  "providers": [
-    {
-      "name": "Municipalidad de Pergamino",
-      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG), Subsecretaría de Modernización, Innovación y Tecnología",
-      "roles": [
-        "producer",
-        "licensor"
-      ],
-      "url": "https://pergamino.ar/servicios/ide-pergamino/"
-    },
-    {
-      "name": "Source Cooperative",
-      "roles": [
-        "host"
-      ],
-      "url": "https://source.coop/nlebovits/pergamino-ide",
-      "email": "nlebovits@pm.me"
-    }
-  ],
+  "geoparquet:geometry_type": "Polygon",
+  "geoparquet:feature_count": 17,
   "assets": {
-    "publico_areas_programaticas_salud": {
-      "href": "./publico_areas_programaticas_salud.parquet",
+    "areas_programaticas_salud": {
+      "href": "./areas_programaticas_salud.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-05-18T12:56:29Z",
+      "pergamino:content_hash": "120710311386743241240:17",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 11547,
-      "file:checksum": "1220b8a9f775131dc764ea9e4fdd404ca531eb175f0dc2b9fd0570fae9ae48f2b284",
       "roles": [
         "data"
       ],
+      "table:row_count": 17,
+      "file:size": 8973,
+      "file:checksum": "12208dde8350c6d9a03c3de7a996791751718ba801d3aa85e230a13c13532f175bea",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 4563,
-      "file:checksum": "12200b54938969d32c24c17bde345cf85f1732474e020582af3cd16dd2b157a7f675",
+    "version-2026-08-14": {
+      "href": "./publico_areas_programaticas_salud.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:areas_programaticas_salud). Es anterior a la publicación de la capa en GeoNode y no cambia.",
       "roles": [
-        "documentation"
+        "archive"
       ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 17,
+      "file:size": 11547,
+      "file:checksum": "1220b8a9f775131dc764ea9e4fdd404ca531eb175f0dc2b9fd0570fae9ae48f2b284"
     },
-    "publico_areas_programaticas_salud-tiles": {
-      "href": "./publico_areas_programaticas_salud.pmtiles",
+    "areas_programaticas_salud-tiles": {
+      "href": "./areas_programaticas_salud.pmtiles",
       "type": "application/vnd.pmtiles",
-      "title": "publico_areas_programaticas_salud (vector tiles)",
-      "file:size": 95013,
-      "file:checksum": "122068a34650eb7f825c128f22b73bcd50c30e68b7e345daaf2d84d5ced74cd99aee",
       "roles": [
         "visual"
       ],
+      "file:size": 96060,
+      "file:checksum": "12202a9ef74e68b8c8a145ee275d23d5fd3224ccf33bac7fc1ad40a8d8c621e4cc97",
+      "title": "Teselas vectoriales (PMTiles)",
       "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "areas_programaticas_salud",
-      "file:size": 1804,
-      "file:checksum": "1220ee77dfebf8509d5cc573fbcc908937ff2cb404a15388d5919ac99cd89c58ca94",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 1711,
+      "file:checksum": "12203c160c8be2f8d8a6c3f2e76f15b0b55b10f7fbee16ed418098aa8f86c6f149b0",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
+    "legends/source": {
+      "href": "./legends/source.png",
+      "type": "image/png",
+      "roles": [
+        "legend"
+      ],
+      "file:size": 1461,
+      "file:checksum": "122005c341a48bb1b530eb586d4c11c0a2b38b32b7ecf88507892c89fc9f0f664a1e",
+      "title": "Leyenda de la fuente",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
+    },
     "thumbnail": {
-      "href": "./publico_areas_programaticas_salud.thumb.jpg",
+      "href": "./areas_programaticas_salud.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 63818,
-      "file:checksum": "12203b8e8ec32403053a0000d4fb8faf69dd3d577b3b05f60c816a74d293febcd9f5",
+      "file:size": 59038,
+      "file:checksum": "1220284b5f3a4282f2be4ab9547e3742af3f89dbdd1152b2ee681cd09f632c71b926",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3707,
+      "file:checksum": "12205e3478d501a57398120b38c5f80ef9961fe44a38bdeea08b6e713c6d9aaad082",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "areas_programaticas_salud"
+  ]
 }

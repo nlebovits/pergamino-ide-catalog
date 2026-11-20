@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_pobreza_cronica.pmtiles",
+      "url": "pmtiles://../pobreza_cronica.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_pobreza_cronica",
+      "source-layer": "pobreza_cronica",
       "paint": {
         "fill-color": [
           "match",

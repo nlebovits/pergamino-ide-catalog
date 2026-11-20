@@ -6,7 +6,7 @@
   ],
   "id": "transporte",
   "title": "Transporte",
-  "description": "Transporte público y movilidad: colectivos urbanos e interurbanos y sus líneas, paradas, ferrocarriles, ciclovías, remises y taxis, aeropuertos y estacionamiento.",
+  "description": "Transporte público y movilidad: colectivos urbanos e interurbanos, paradas, puntos de carga SUBE, ferrocarriles, circuitos de cicloturismo y la Vuelta al Partido, remises y taxis, aeropuertos y estacionamiento.",
   "links": [
     {
       "rel": "root",
@@ -32,12 +32,6 @@
     },
     {
       "rel": "child",
-      "href": "./ciclovias/collection.json",
-      "type": "application/json",
-      "title": "Ciclovias"
-    },
-    {
-      "rel": "child",
       "href": "./colectivos_interurbanos/collection.json",
       "type": "application/json",
       "title": "Colectivos interurbanos"
@@ -47,12 +41,6 @@
       "href": "./colectivos_urbanos/collection.json",
       "type": "application/json",
       "title": "Colectivos urbanos"
-    },
-    {
-      "rel": "child",
-      "href": "./estacionamiento_medido/collection.json",
-      "type": "application/json",
-      "title": "Estacionamiento medido"
     },
     {
       "rel": "child",
@@ -80,42 +68,6 @@
     },
     {
       "rel": "child",
-      "href": "./linea_a/collection.json",
-      "type": "application/json",
-      "title": "Linea a"
-    },
-    {
-      "rel": "child",
-      "href": "./linea_b/collection.json",
-      "type": "application/json",
-      "title": "Linea b"
-    },
-    {
-      "rel": "child",
-      "href": "./linea_c/collection.json",
-      "type": "application/json",
-      "title": "Linea c"
-    },
-    {
-      "rel": "child",
-      "href": "./linea_d/collection.json",
-      "type": "application/json",
-      "title": "Linea d"
-    },
-    {
-      "rel": "child",
-      "href": "./linea_e/collection.json",
-      "type": "application/json",
-      "title": "Linea e"
-    },
-    {
-      "rel": "child",
-      "href": "./linea_parque_industrial/collection.json",
-      "type": "application/json",
-      "title": "Linea parque industrial"
-    },
-    {
-      "rel": "child",
       "href": "./paradas_de_colectivo/collection.json",
       "type": "application/json",
       "title": "Paradas de colectivo"
@@ -133,6 +85,12 @@
       "title": "Puntos de recarga SUBE"
     },
     {
+      "rel": "child",
+      "href": "./vuelta_partido/collection.json",
+      "type": "application/json",
+      "title": "Vuelta al Partido"
+    },
+    {
       "rel": "agents",
       "href": "./AGENTS.md",
       "type": "text/markdown",
@@ -145,5 +103,5 @@
       "title": "Human-readable documentation"
     }
   ],
-  "updated": "2026-11-20T07:41:37Z"
+  "updated": "2026-11-20T09:51:46Z"
 }

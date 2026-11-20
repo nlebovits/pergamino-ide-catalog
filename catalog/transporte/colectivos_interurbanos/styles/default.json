@@ -4,26 +4,27 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_colectivos_interurbanos.pmtiles",
+      "url": "pmtiles://../colectivos_interurbanos.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-line",
+      "id": "sld-0-line",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_colectivos_interurbanos",
+      "source-layer": "colectivos_interurbanos",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
       "paint": {
         "line-color": [
           "match",
           [
-            "to-string",
-            [
-              "get",
-              "linea"
-            ]
+            "get",
+            "linea"
           ],
           "227",
           "#6ce6af",
@@ -35,17 +36,100 @@
           "#5298ec",
           "Linea 2",
           "#e983b3",
-          "#cccccc"
+          "#000000"
         ],
-        "line-width": 4.0,
-        "line-opacity": 1.0
+        "line-opacity": [
+          "match",
+          [
+            "get",
+            "linea"
+          ],
+          "227",
+          1.0,
+          "330",
+          1.0,
+          "345",
+          1.0,
+          "368",
+          1.0,
+          "Linea 2",
+          1.0,
+          0
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "linea"
+          ],
+          "227",
+          4.0,
+          "330",
+          4.0,
+          "345",
+          4.0,
+          "368",
+          4.0,
+          "Linea 2",
+          4.0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sld-1-line",
+      "type": "line",
+      "source": "data",
+      "source-layer": "colectivos_interurbanos",
+      "layout": {
+        "line-join": "round",
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#000000",
+        "line-opacity": [
+          "match",
+          [
+            "get",
+            "linea"
+          ],
+          "227",
+          1.0,
+          "330",
+          1.0,
+          "345",
+          1.0,
+          "368",
+          1.0,
+          "Linea 2",
+          1.0,
+          0
+        ],
+        "line-width": [
+          "match",
+          [
+            "get",
+            "linea"
+          ],
+          "227",
+          1.0,
+          "330",
+          1.0,
+          "345",
+          1.0,
+          "368",
+          1.0,
+          "Linea 2",
+          1.0,
+          0
+        ]
       }
     },
     {
       "id": "categorical-line-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_colectivos_interurbanos",
+      "source-layer": "colectivos_interurbanos",
       "layout": {
         "text-field": [
           "get",
@@ -63,6 +147,5 @@
         "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

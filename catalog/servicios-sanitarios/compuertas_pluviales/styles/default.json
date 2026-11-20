@@ -1,0 +1,53 @@
+{
+  "version": 8,
+  "name": "compuertas_pluviales",
+  "sources": {
+    "data": {
+      "type": "vector",
+      "url": "pmtiles://../compuertas_pluviales.pmtiles",
+      "minzoom": 0,
+      "maxzoom": 15
+    }
+  },
+  "layers": [
+    {
+      "id": "sld-0-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "compuertas_pluviales",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 9.0,
+        "circle-stroke-color": "#a46500",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "compuertas_pluviales",
+      "paint": {
+        "circle-color": "#a46500",
+        "circle-opacity": 1.0,
+        "circle-radius": 3.5
+      }
+    },
+    {
+      "id": "sld-2-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "compuertas_pluviales",
+      "paint": {
+        "circle-color": "#000000",
+        "circle-opacity": 0.0,
+        "circle-radius": 3.5,
+        "circle-stroke-color": "#a46500",
+        "circle-stroke-width": 2.0,
+        "circle-stroke-opacity": 1.0
+      }
+    }
+  ]
+}

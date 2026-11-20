@@ -4,21 +4,21 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_catastro_seccion.pmtiles",
+      "url": "pmtiles://../seccion.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "line-0",
-      "type": "line",
+      "id": "fill-0",
+      "type": "fill",
       "source": "data",
-      "source-layer": "publico_catastro_seccion",
+      "source-layer": "seccion",
       "paint": {
-        "line-color": "#bfbfbf",
-        "line-width": 3.0,
-        "line-opacity": 1.0
+        "fill-color": "#888888",
+        "fill-opacity": 1.0,
+        "fill-outline-color": "#232323"
       }
     }
   ]

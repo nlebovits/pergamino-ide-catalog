@@ -1,24 +1,163 @@
 {
   "version": 8,
-  "name": "reductores_de_velocidad",
+  "name": "reductor_de_velocidad",
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_reductores_de_velocidad.pmtiles",
+      "url": "pmtiles://../reductores_de_velocidad.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_reductores_de_velocidad",
+      "source-layer": "reductores_de_velocidad",
       "paint": {
-        "circle-color": "#888888",
-        "circle-radius": 10.0,
-        "circle-opacity": 1.0
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cemento",
+          "#807274",
+          "plastico",
+          "#e8c81e",
+          "escombro",
+          "#51e7db",
+          "#000000"
+        ],
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cemento",
+          1.0,
+          "plastico",
+          1.0,
+          "escombro",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cemento",
+          4.0,
+          "plastico",
+          4.0,
+          "escombro",
+          4.0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "reductores_de_velocidad",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cemento",
+          "#807274",
+          "plastico",
+          "#e8c81e",
+          "escombro",
+          "#51e7db",
+          "#000000"
+        ],
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cemento",
+          1.0,
+          "plastico",
+          1.0,
+          "escombro",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cemento",
+          4.0,
+          "plastico",
+          4.0,
+          "escombro",
+          4.0,
+          0
+        ]
+      }
+    },
+    {
+      "id": "sld-2-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "reductores_de_velocidad",
+      "paint": {
+        "circle-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cemento",
+          "#807274",
+          "plastico",
+          "#e8c81e",
+          "escombro",
+          "#51e7db",
+          "#000000"
+        ],
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cemento",
+          1.0,
+          "plastico",
+          1.0,
+          "escombro",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "cemento",
+          5.0,
+          "plastico",
+          5.0,
+          "escombro",
+          5.0,
+          0
+        ]
       }
     }
   ]

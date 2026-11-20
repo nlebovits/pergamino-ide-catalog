@@ -4,17 +4,17 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_entretenimiento.pmtiles",
+      "url": "pmtiles://../entretenimiento.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "categorical-circle",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_entretenimiento",
+      "source-layer": "entretenimiento",
       "paint": {
         "circle-color": [
           "match",
@@ -23,39 +23,130 @@
             "tipo"
           ],
           "Cine",
-          "#FF0000",
+          "#5315f0",
           "Juego de azar",
-          "#FFFF00",
+          "#c4e077",
+          "Otro",
+          "#db744c",
           "Teatro",
-          "#0000FF",
+          "#41b5df",
           "Teatro bar",
-          "#00FF00",
-          "#cccccc"
+          "#3dc963",
+          "#000000"
         ],
-        "circle-radius": 10.0,
-        "circle-opacity": 1.0
+        "circle-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Cine",
+          1.0,
+          "Juego de azar",
+          1.0,
+          "Otro",
+          1.0,
+          "Teatro",
+          1.0,
+          "Teatro bar",
+          1.0,
+          0
+        ],
+        "circle-radius": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Cine",
+          3.5,
+          "Juego de azar",
+          3.5,
+          "Otro",
+          3.5,
+          "Teatro",
+          3.5,
+          "Teatro bar",
+          3.5,
+          0
+        ],
+        "circle-stroke-color": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Cine",
+          "#232323",
+          "Juego de azar",
+          "#232323",
+          "Otro",
+          "#232323",
+          "Teatro",
+          "#232323",
+          "Teatro bar",
+          "#232323",
+          "#000000"
+        ],
+        "circle-stroke-width": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Cine",
+          0.5,
+          "Juego de azar",
+          0.5,
+          "Otro",
+          0.5,
+          "Teatro",
+          0.5,
+          "Teatro bar",
+          0.5,
+          0
+        ],
+        "circle-stroke-opacity": [
+          "match",
+          [
+            "get",
+            "tipo"
+          ],
+          "Cine",
+          1.0,
+          "Juego de azar",
+          1.0,
+          "Otro",
+          1.0,
+          "Teatro",
+          1.0,
+          "Teatro bar",
+          1.0,
+          0
+        ]
       }
     },
     {
       "id": "categorical-circle-labels",
       "type": "symbol",
       "source": "data",
-      "source-layer": "publico_entretenimiento",
+      "source-layer": "entretenimiento",
       "layout": {
         "text-field": [
           "get",
           "nombre"
         ],
-        "text-size": 11.0,
-        "text-anchor": "top-left",
+        "text-size": 13.0,
+        "text-anchor": "left",
         "text-font": [
           "Noto Sans Regular"
         ]
       },
       "paint": {
-        "text-color": "#000000"
+        "text-color": "#000000",
+        "text-halo-color": "#ffffff",
+        "text-halo-width": 2.0
       }
     }
-  ],
-  "glyphs": "https://fonts.openmaptiles.org/{fontstack}/{range}.pbf"
+  ]
 }

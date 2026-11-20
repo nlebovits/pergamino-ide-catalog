@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_red_federal_fibra_optica_tramos.pmtiles",
+      "url": "pmtiles://../red_federal_fibra_optica_tramos.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "line-0",
       "type": "line",
       "source": "data",
-      "source-layer": "publico_red_federal_fibra_optica_tramos",
+      "source-layer": "red_federal_fibra_optica_tramos",
       "paint": {
         "line-color": "#54b04a",
         "line-width": 2.0,

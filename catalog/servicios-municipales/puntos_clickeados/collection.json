@@ -2,117 +2,30 @@
   "type": "Collection",
   "id": "servicios-municipales/puntos_clickeados",
   "stac_version": "1.1.0",
-  "description": "Puntos educativos Clickeados del Partido de Pergamino pertenecientes a la Secretaría de Desarrollo Social.",
-  "links": [
-    {
-      "rel": "root",
-      "href": "../../catalog.json",
-      "type": "application/json",
-      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
-    },
-    {
-      "rel": "parent",
-      "href": "../catalog.json",
-      "type": "application/json",
-      "title": "Servicios municipales"
-    },
-    {
-      "rel": "agents",
-      "href": "./AGENTS.md",
-      "type": "text/markdown",
-      "title": "Agent/LLM usage guide"
-    },
-    {
-      "rel": "describedby",
-      "href": "./README.md",
-      "type": "text/markdown",
-      "title": "Human-readable documentation"
-    },
-    {
-      "rel": "via",
-      "href": "https://ide.pergamino.gob.ar:8443/geoserver/wfs?service=WFS&request=GetFeature&typename=publico%3Apuntos_clickeados",
-      "type": "text/html",
-      "title": "Source WFS layer: publico:puntos_clickeados"
-    },
-    {
-      "rel": "license",
-      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "title": "License"
-    },
-    {
-      "rel": "pmtiles",
-      "href": "./publico_puntos_clickeados.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "pmtiles:layers": [
-        "publico_puntos_clickeados"
-      ]
-    }
-  ],
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/version/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "geoparquet:geometry_type": "Point",
-  "geoparquet:feature_count": 4,
-  "table:row_count": 4,
-  "table:primary_geometry": "geometry",
-  "table:columns": [
-    {
-      "name": "nombre",
-      "type": "string"
-    },
-    {
-      "name": "domicilio",
-      "type": "string"
-    },
-    {
-      "name": "barrio",
-      "type": "string"
-    },
-    {
-      "name": "geometry",
-      "type": "binary"
-    },
-    {
-      "name": "bbox",
-      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
-    }
-  ],
-  "updated": "2026-11-20T07:41:37Z",
-  "pmtiles:min_zoom": 0,
-  "pmtiles:max_zoom": 15,
-  "pmtiles:tile_type": "mvt",
-  "pmtiles:center": [
-    -60.6131489,
-    -33.8840972,
-    15
-  ],
-  "pmtiles:layers": [
-    "publico_puntos_clickeados"
-  ],
   "title": "Puntos clickeados",
-  "extent": {
-    "spatial": {
-      "bbox": [
-        [
-          -60.6131489,
-          -33.90874449,
-          -60.5563056,
-          -33.882885
-        ]
-      ]
-    },
-    "temporal": {
-      "interval": [
-        [
-          null,
-          null
-        ]
-      ]
-    }
-  },
+  "description": "Puntos educativos Clickeados del Partido de Pergamino pertenecientes a la Secretaría de Desarrollo Social.",
+  "keywords": [
+    "capacitacion",
+    "social",
+    "robotica",
+    "modernizacion",
+    "clickeados",
+    "desarrollo",
+    "netbook",
+    "clickear",
+    "educacion",
+    "cdc",
+    "plan",
+    "tecnologia",
+    "pergamino"
+  ],
   "license": "CC-BY-SA-4.0",
   "providers": [
     {
@@ -133,73 +46,211 @@
       "email": "nlebovits@pm.me"
     }
   ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.6131488,
+          -33.9087445,
+          -60.5563056,
+          -33.8828854
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Servicios municipales"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "Creative Commons Atribución-CompartirIgual 4.0"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/234",
+      "type": "text/html",
+      "title": "Puntos clickeados en GeoNode (IDE Pergamino)"
+    },
+    {
+      "rel": "related",
+      "href": "https://geonode.pergamino.gob.ar/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geonode:puntos_clickeados",
+      "type": "application/gml+xml; version=3.2",
+      "title": "Servicio WFS de origen (geonode:puntos_clickeados)"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "./puntos_clickeados.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales",
+      "pmtiles:layers": [
+        "puntos_clickeados"
+      ]
+    }
+  ],
+  "version": "2026-11-20",
+  "updated": "2026-11-20T09:51:46Z",
+  "pergamino:geonode_pk": 234,
+  "pergamino:geonode_uuid": "b1f1eab1-7b7a-4b56-9ed1-a14c5300fb33",
+  "pergamino:source_updated": "2026-04-29T15:14:52Z",
+  "pergamino:update_frequency": "unknown",
+  "table:primary_geometry": "geometry",
+  "table:row_count": 4,
+  "table:columns": [
+    {
+      "name": "geometry",
+      "type": "binary",
+      "description": "Geometría del objeto en WKB, EPSG:4326."
+    },
+    {
+      "name": "id",
+      "type": "int64"
+    },
+    {
+      "name": "nombre",
+      "type": "string"
+    },
+    {
+      "name": "domicilio",
+      "type": "string"
+    },
+    {
+      "name": "barrio",
+      "type": "string"
+    },
+    {
+      "name": "bbox",
+      "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>",
+      "description": "Caja envolvente de la geometría (xmin, ymin, xmax, ymax), columna de cobertura de GeoParquet 1.1 para filtros espaciales."
+    }
+  ],
+  "geoparquet:geometry_type": "Point",
+  "geoparquet:feature_count": 4,
   "assets": {
-    "publico_puntos_clickeados": {
-      "href": "./publico_puntos_clickeados.parquet",
+    "puntos_clickeados": {
+      "href": "./puntos_clickeados.parquet",
+      "version": "2026-11-20",
+      "created": "2026-11-20T08:03:27Z",
+      "pergamino:source_updated": "2026-04-29T15:14:52Z",
+      "pergamino:content_hash": "28364946537739085833:4",
+      "pergamino:repaired_geometries": 0,
+      "pergamino:null_geometries": 0,
       "type": "application/vnd.apache.parquet",
-      "file:size": 3940,
-      "file:checksum": "12201739c0aa20fa8f7e145d6860d8f48ac0907c45705b0b16670cfa1102bb9ba97e",
       "roles": [
         "data"
       ],
+      "table:row_count": 4,
+      "file:size": 2228,
+      "file:checksum": "1220e076f5103dfbc5a0dfa92337dc7d075410dc92e4715feac4b53887d0f0535742",
       "title": "Datos (GeoParquet)",
       "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
+    },
+    "version-2026-08-14": {
+      "href": "./publico_puntos_clickeados.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Versión 2026-08-14",
+      "description": "Primera versión de la colección, extraída del GeoServer anterior de la IDE Pergamino (https://ide.pergamino.gob.ar:8443/geoserver/wfs, capa publico:puntos_clickeados). Es anterior a la publicación de la capa en GeoNode y no cambia.",
+      "roles": [
+        "archive"
+      ],
+      "version": "2026-08-14",
+      "created": "2026-08-14T21:21:48Z",
+      "table:row_count": 4,
+      "file:size": 3940,
+      "file:checksum": "12201739c0aa20fa8f7e145d6860d8f48ac0907c45705b0b16670cfa1102bb9ba97e"
+    },
+    "puntos_clickeados-tiles": {
+      "href": "./puntos_clickeados.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual"
+      ],
+      "file:size": 8073,
+      "file:checksum": "1220315371c87f67013d105369d22a92b128f4f101eb5c96aa98e0a3f4733087b690",
+      "title": "Teselas vectoriales (PMTiles)",
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
       "type": "application/vnd.mapbox.style+json",
-      "title": "puntos_clickeados",
-      "file:size": 490,
-      "file:checksum": "1220fa9fb03727fa85d1b9207422863b7219a8c3744037ac04efb75125b2e95ceac4",
       "roles": [
         "style",
         "default"
       ],
+      "file:size": 595,
+      "file:checksum": "12206fc01dc5ca1094fb945e06792f5663a51d6bd5b506c4e750184b8768da31a8df",
+      "title": "Estilo MapLibre",
       "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
       "type": "image/png",
-      "title": "source Legend",
       "roles": [
         "legend"
       ],
       "file:size": 612,
       "file:checksum": "1220d9e5ecc3f6ffa1874582540d3579bfd8bfae6e65670da5d0b61428ad5a0bf041",
+      "title": "Leyenda de la fuente",
       "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
-    "documentation": {
-      "href": "./README.md",
-      "type": "text/markdown",
-      "file:size": 1165,
-      "file:checksum": "12206356ca9949a04fbc04f49ff0622f300e74f87e901db13a579199a89dad94d97b",
-      "roles": [
-        "documentation"
-      ],
-      "title": "Documentación",
-      "description": "README de la colección: contenido, procedencia, licencia y acceso."
-    },
-    "publico_puntos_clickeados-tiles": {
-      "href": "./publico_puntos_clickeados.pmtiles",
-      "type": "application/vnd.pmtiles",
-      "title": "publico_puntos_clickeados (vector tiles)",
-      "file:size": 5831,
-      "file:checksum": "1220824ded5690823156653368290c4d3150d6f1c1bf2a4192c5a07ab4ba301c94de",
-      "roles": [
-        "visual"
-      ],
-      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
-    },
     "thumbnail": {
-      "href": "./publico_puntos_clickeados.thumb.jpg",
+      "href": "./puntos_clickeados.thumb.jpg",
       "type": "image/jpeg",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 88862,
-      "file:checksum": "12204360a833bf6f40f90f7b21bd47c7cf8668ab3a31d067dc5532d3c9c5fd75bc55",
+      "file:size": 60074,
+      "file:checksum": "12208b8f8c0d2df75ecde8831ad1598c0f1f2e59d58571bcb9b52837e3619559a957",
       "title": "Vista previa",
       "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
+    },
+    "documentation": {
+      "href": "./README.md",
+      "type": "text/markdown",
+      "roles": [
+        "documentation"
+      ],
+      "file:size": 3443,
+      "file:checksum": "12204ada8adb7efb9c769ee2bee4918cb13f88bbedbd961dd7419a825cc0a6db418e",
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     }
-  }
+  },
+  "pmtiles:min_zoom": 0,
+  "pmtiles:max_zoom": 15,
+  "pmtiles:tile_type": "mvt",
+  "pmtiles:layers": [
+    "puntos_clickeados"
+  ]
 }

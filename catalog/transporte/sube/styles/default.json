@@ -4,21 +4,68 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_sube.pmtiles",
+      "url": "pmtiles://../sube.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
   },
   "layers": [
     {
-      "id": "circle-0",
+      "id": "sld-0-circle",
       "type": "circle",
       "source": "data",
-      "source-layer": "publico_sube",
+      "source-layer": "sube",
       "paint": {
-        "circle-color": "#888888",
-        "circle-radius": 11.0,
-        "circle-opacity": 1.0
+        "circle-color": "#4a90e2",
+        "circle-opacity": 1.0,
+        "circle-radius": 8.0,
+        "circle-stroke-color": "#254a74",
+        "circle-stroke-width": 1.0,
+        "circle-stroke-opacity": 1.0
+      }
+    },
+    {
+      "id": "sld-1-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "sube",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 2.5
+      }
+    },
+    {
+      "id": "sld-2-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "sube",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 2.5
+      }
+    },
+    {
+      "id": "sld-3-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "sube",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 2.5
+      }
+    },
+    {
+      "id": "sld-4-circle",
+      "type": "circle",
+      "source": "data",
+      "source-layer": "sube",
+      "paint": {
+        "circle-color": "#ffffff",
+        "circle-opacity": 1.0,
+        "circle-radius": 2.5
       }
     }
   ]

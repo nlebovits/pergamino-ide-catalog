@@ -4,7 +4,7 @@
   "sources": {
     "data": {
       "type": "vector",
-      "url": "pmtiles://../publico_coeficientes_zonales_doss.pmtiles",
+      "url": "pmtiles://../coeficientes_zonales_doss.pmtiles",
       "minzoom": 0,
       "maxzoom": 15
     }
@@ -14,7 +14,7 @@
       "id": "categorical-fill",
       "type": "fill",
       "source": "data",
-      "source-layer": "publico_coeficientes_zonales_doss",
+      "source-layer": "coeficientes_zonales_doss",
       "paint": {
         "fill-color": [
           "match",
