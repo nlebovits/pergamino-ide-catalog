@@ -1,0 +1,6 @@
+{
+  "_comment": "Thumbnail windows for layers whose features vanish at the scale of the whole partido. Each frames the centre of the city of Pergamino.",
+  "catastro/edificaciones_automaticas": [-60.590, -33.905, -60.555, -33.880],
+  "demografia/manzanas_isdd": [-60.610, -33.920, -60.540, -33.870],
+  "educacion/educacion": [-60.610, -33.920, -60.540, -33.870]
+}

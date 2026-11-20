@@ -25,7 +25,16 @@ listed here so that each one has a stated reason.
 | Rule | Where | Reason |
 |---|---|---|
 | PTL-DAT-020 | every vector collection | The source publishes no column descriptions. GeoNode's `attribute_set` returns a null `description` for every attribute. The spec forbids placeholder text (PORTO-FMT-079), so the columns stay undescribed and each collection README says why. |
-| PTL-CAT-001 | `ambiente-y-agro/`, `catastro/` | These groups hold more than 20 collections. The grouping follows the publisher's own themes, and splitting them would invent a hierarchy the source does not have. |
+| PTL-CAT-001 | `ambiente-y-agro/` | This group holds 30 collections, and the rule warns above 20. The grouping follows the publisher's own themes, and splitting it would invent a hierarchy the source does not have. |
+
+## Info findings
+
+Info findings need no action. Two appear on every run:
+
+| Rule | Where | Reason |
+|---|---|---|
+| PTL-PRO-002 | every vector collection | The rule asks for a `canonical` link when the upstream publishes its own STAC catalog. GeoNode does not. Its API root (`/api/v2/`) lists no STAC resource, and `/stac`, `/api/stac` and `/api/v2/stac` return 404. |
+| PTL-DAT-006 | current and archived files under 200 rows | rashid needs 200 rows to judge spatial ordering, so it reports that it could not. `tools/extract.py` sorts every new extract on a Hilbert curve, whatever its size. |
 
 ## A separate matter: stac-check cannot read the Portolan schema
 

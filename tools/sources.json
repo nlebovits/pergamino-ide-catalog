@@ -1,0 +1,1210 @@
+{
+  "geonode": "https://geonode.pergamino.gob.ar",
+  "wfs": "https://geonode.pergamino.gob.ar/geoserver/ows",
+  "collections": {
+    "demografia/poblacion_1991": {
+      "alternate": "geonode:1991_poblacion",
+      "pk": 433,
+      "uuid": "e7b72a9a-b892-4065-b022-74a9f870c8fc",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "demografia/poblacion_2001": {
+      "alternate": "geonode:2001_poblacion",
+      "pk": 436,
+      "uuid": "640c75de-f1b8-4cbb-9507-5c0ddbad0b79",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "demografia/poblacion_2010": {
+      "alternate": "geonode:2010_poblacion",
+      "pk": 435,
+      "uuid": "5836cb64-a907-478a-9075-8a3cdda6c964",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "demografia/poblacion_2022": {
+      "alternate": "geonode:2022_poblacion",
+      "pk": 434,
+      "uuid": "4b682c26-7a6f-4e64-b3ce-946987c3234e",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "transporte/aeropuertos": {
+      "alternate": "geonode:aeropuertos",
+      "pk": 50,
+      "uuid": "11546a76-6b94-4e2e-998d-1fed0880aa7a",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "comercio-y-cultura/agencias_de_viaje": {
+      "alternate": "geonode:agencias_de_viaje",
+      "pk": 51,
+      "uuid": "e77683a3-cb38-4918-89a6-d3fdc352a5b6",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-municipales/agencias_gubernamentales": {
+      "alternate": "geonode:agencias_gubernamentales",
+      "pk": 52,
+      "uuid": "b5614840-ffed-4c29-b431-c6928a362593",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "limites/aglomerados_urbanos": {
+      "alternate": "geonode:aglomerados_urbanos",
+      "pk": 46,
+      "uuid": "602ec356-afd3-453c-b48b-bcf64ff1ccb4",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-sanitarios/agua_lineas": {
+      "alternate": "geonode:agua_lineas",
+      "pk": 53,
+      "uuid": "b9574554-24fa-4bc3-8c6f-b1689cb391a6",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-sanitarios/agua_nodos": {
+      "alternate": "geonode:agua_nodos",
+      "pk": 54,
+      "uuid": "83d4490d-0090-495b-825e-85ca9edd49e3",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "vialidad/alcantarillas_vialidad": {
+      "alternate": "geonode:alcantarillas_vialidad",
+      "pk": 56,
+      "uuid": "a80acbb9-25f7-4953-93e3-bbfc1674be97",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "ambiente-y-agro/arbolado": {
+      "alternate": "geonode:arbolado",
+      "pk": 58,
+      "uuid": "5673616c-54c5-4b19-a7d1-84c39836cba1",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "catastro/areas_fiscalizadas_construcciones": {
+      "alternate": "geonode:areas_fiscalizadas_construcciones",
+      "pk": 60,
+      "uuid": "599b7d6c-9c51-4a72-b759-3a700891bc4d",
+      "update_frequency": "continual",
+      "min_days": 7
+    },
+    "limites/areas_localidades": {
+      "alternate": "geonode:areas_localidades",
+      "pk": 61,
+      "uuid": "8aa05e1b-9369-4710-af1f-233b0236166c",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "servicios-municipales/areas_programaticas_desarrollo_social": {
+      "alternate": "geonode:areas_programaticas_desarrollo_social",
+      "pk": 62,
+      "uuid": "6abc6c42-4298-4ff5-8ce0-4defad9cbc9a",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "salud/areas_programaticas_salud": {
+      "alternate": "geonode:areas_programaticas_salud",
+      "pk": 63,
+      "uuid": "b6054dec-b4dd-4988-9d46-a286482fce1d",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "comercio-y-cultura/asociaciones_sindicales": {
+      "alternate": "geonode:asociaciones_sindicales",
+      "pk": 64,
+      "uuid": "38510bc7-9118-4fca-b3c3-b543a67771b4",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "ambiente-y-agro/banados": {
+      "alternate": "geonode:banados",
+      "pk": 65,
+      "uuid": "cf9b4451-a805-4687-90a3-bcbd8da4fea8",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "servicios-municipales/barrido_y_limpieza": {
+      "alternate": "geonode:barrido_y_limpieza",
+      "pk": 67,
+      "uuid": "3220f8c0-160f-4fb2-9c48-a5ae3f3f920d",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "limites/barrios_y_pueblos": {
+      "alternate": "geonode:barrios_y_pueblos",
+      "pk": 68,
+      "uuid": "8db11e28-cc42-4537-82ec-5d6ab066b424",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "educacion/bibliotecas": {
+      "alternate": "geonode:bibliotecas",
+      "pk": 71,
+      "uuid": "c4eeed4f-e75b-48df-9683-449a85a4d580",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "servicios-municipales/bocas_pago_tasas": {
+      "alternate": "geonode:bocas_pago_tasas",
+      "pk": 72,
+      "uuid": "90304bc3-cf9d-4d8c-a655-987331878386",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "seguridad/bomberos": {
+      "alternate": "geonode:bomberos",
+      "pk": 74,
+      "uuid": "8a04ffb3-352d-4f68-968c-49cc0b72e611",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "demografia/calidad_vivienda": {
+      "alternate": "geonode:calidad_vivienda",
+      "pk": 76,
+      "uuid": "00eb1218-4293-4138-9166-bca1c91f9c62",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "vialidad/callejero": {
+      "alternate": "geonode:callejero",
+      "pk": 77,
+      "uuid": "44e6e35b-e9e3-4bd4-9c5a-b19641953f06",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "vialidad/camaras_y_radares": {
+      "alternate": "geonode:camaras_y_radares",
+      "pk": 80,
+      "uuid": "13d0a6fd-8b9a-48bd-84c6-ddb5d28b0231",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "salud/caps": {
+      "alternate": "geonode:caps",
+      "pk": 82,
+      "uuid": "14962d4e-d198-486c-9d68-9ef5ec29602b",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "vialidad/carteles_viales": {
+      "alternate": "geonode:carteles_viales",
+      "pk": 83,
+      "uuid": "55226785-638e-40bb-88ee-72402c4cecbb",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "catastro/chacra": {
+      "alternate": "geonode:catastro_chacra",
+      "pk": 84,
+      "uuid": "042fbeb7-f4e3-4d27-855e-20810534996d",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "catastro/circunscripcion": {
+      "alternate": "geonode:catastro_circunscripcion",
+      "pk": 85,
+      "uuid": "930ca97f-0a98-490e-a5ce-198aa297e577",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "catastro/fraccion": {
+      "alternate": "geonode:catastro_fraccion",
+      "pk": 86,
+      "uuid": "661681c4-7d5b-4b78-b3de-53ba6140aff7",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "catastro/manzana": {
+      "alternate": "geonode:catastro_manzana",
+      "pk": 90,
+      "uuid": "b1fafd66-489e-4380-972b-8853488403bb",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "catastro/medida_lado": {
+      "alternate": "geonode:catastro_medida_lado",
+      "pk": 91,
+      "uuid": "365d695f-4932-4fd8-bbce-f27667bbf8cc",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "catastro/parcela": {
+      "alternate": "geonode:catastro_parcela",
+      "pk": 92,
+      "uuid": "e5029afb-f52c-461c-88b7-f8e3c3aaa9de",
+      "update_frequency": "continual",
+      "min_days": 7
+    },
+    "catastro/ph": {
+      "alternate": "geonode:catastro_ph",
+      "pk": 94,
+      "uuid": "bc253730-2491-4cfd-a1a4-99dcb19e42de",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "catastro/quinta": {
+      "alternate": "geonode:catastro_quinta",
+      "pk": 95,
+      "uuid": "48d544a0-fd91-4635-9504-09c8eee9c6c7",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "catastro/seccion": {
+      "alternate": "geonode:catastro_seccion",
+      "pk": 96,
+      "uuid": "0e2b2f92-1428-4db9-bd2d-da7abda5348d",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "catastro/subparcela": {
+      "alternate": "geonode:catastro_subparcela",
+      "pk": 97,
+      "uuid": "ff8f8b09-02a2-4ace-8156-5495e30e3ec6",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-municipales/centros_de_desarrollo_comunitario": {
+      "alternate": "geonode:centros_de_desarrollo_comunitario",
+      "pk": 99,
+      "uuid": "084f8176-7524-4964-81b8-6988debf4f4c",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "salud/centros_de_salud": {
+      "alternate": "geonode:centros_de_salud",
+      "pk": 100,
+      "uuid": "3cdb8065-8bf0-4d74-a2e9-4cf529cc6206",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "seguridad/centros_evacuados": {
+      "alternate": "geonode:centros_evacuados",
+      "pk": 101,
+      "uuid": "e69439b6-8a9c-4717-a538-4bc036a3a3dc",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "transporte/cicloturismo_rural": {
+      "alternate": "geonode:cicloturismo",
+      "pk": 102,
+      "uuid": "a24bd132-8a32-47b3-b031-6ff549ba1982",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "limites/circuitos_electorales": {
+      "alternate": "geonode:circuitos_electorales",
+      "pk": 103,
+      "uuid": "7bd62be5-c0f2-46d9-afc9-67a4b4331112",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "energia-y-conectividad/circuitos_energeticos": {
+      "alternate": "geonode:circuitos_energeticos",
+      "pk": 306,
+      "uuid": "c5c18170-96b7-4377-8cc2-b300b0923998",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "servicios-sanitarios/cloacas_lineas": {
+      "alternate": "geonode:cloacas_lineas",
+      "pk": 106,
+      "uuid": "060d5211-c562-45b3-ad64-1d0ae416542d",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-sanitarios/cloacas_nodos": {
+      "alternate": "geonode:cloacas_nodos",
+      "pk": 107,
+      "uuid": "cc9c0641-a4ca-4f72-973a-e790ead2a83c",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-sanitarios/cobertura_agua": {
+      "alternate": "geonode:cobertura_agua",
+      "pk": 108,
+      "uuid": "45167663-abb2-4660-b32e-cd7f01a78cd6",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "ambiente-y-agro/cobertura_arbolado_urbano": {
+      "alternate": "geonode:cobertura_arbolado_urbano",
+      "pk": 109,
+      "uuid": "a22ace90-e0e9-4075-bf89-cb897ec178c9",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "servicios-sanitarios/cobertura_cloacas": {
+      "alternate": "geonode:cobertura_cloacas",
+      "pk": 110,
+      "uuid": "46119dfd-dd4f-4619-8adf-bbb14cb8a3e1",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "energia-y-conectividad/cobertura_gas_natural": {
+      "alternate": "geonode:cobertura_gas_natural",
+      "pk": 111,
+      "uuid": "5d6a75b9-adc9-4675-840c-0f8231d2b2b3",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "servicios-sanitarios/codigo_reparto_facturacion": {
+      "alternate": "geonode:codigo_reparto_facturacion",
+      "pk": 296,
+      "uuid": "ed0690d4-8921-4d98-b7ad-bfbf909c343e",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-sanitarios/coeficientes_zonales_doss": {
+      "alternate": "geonode:coeficientes_zonales_doss",
+      "pk": 113,
+      "uuid": "5a20eaf8-86cf-4470-9439-f610d3e2c0c0",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "transporte/colectivos_interurbanos": {
+      "alternate": "geonode:colectivos_interurbanos",
+      "pk": 115,
+      "uuid": "908a071c-c290-4f33-aaa9-794e8a6ceaf6",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "transporte/colectivos_urbanos": {
+      "alternate": "geonode:colectivos_urbanos",
+      "pk": 116,
+      "uuid": "478bc818-d69a-4164-b2c2-b63411af65b2",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "comercio-y-cultura/colegios_de_profesionales": {
+      "alternate": "geonode:colegios_de_profesionales",
+      "pk": 118,
+      "uuid": "1e636a9a-5505-432d-a2c3-b15c86429697",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "vialidad/comisiones_caminos_rurales": {
+      "alternate": "geonode:comisiones_caminos_rurales",
+      "pk": 119,
+      "uuid": "366dd014-3231-4dcf-bca4-a58fb171a488",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "catastro/complejos_habitacionales": {
+      "alternate": "geonode:complejos_habitacionales",
+      "pk": 405,
+      "uuid": "b28cf316-308d-492b-8681-c4806c733179",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-sanitarios/compuertas_pluviales": {
+      "alternate": "geonode:compuertas_pluviales",
+      "pk": 355,
+      "uuid": "3317661c-02c4-499e-96f5-f335acc7f0c7",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-municipales/contenedores_basura_reciclaje": {
+      "alternate": "geonode:contenedores_basura_reciclaje",
+      "pk": 121,
+      "uuid": "b44fa542-9b1c-4e00-b7f7-ba6ab1ac7922",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "limites/cpa": {
+      "alternate": "geonode:cpa",
+      "pk": 122,
+      "uuid": "494c2807-06a9-4641-b76b-b223d862d8f9",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "ambiente-y-agro/cuencas_arroyo_pergamino": {
+      "alternate": "geonode:cuencas_arroyo_pergamino",
+      "pk": 124,
+      "uuid": "7db1b88d-a895-4f2b-9f82-830f316b022f",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/cuencas_hidricas_norte_ba": {
+      "alternate": "geonode:cuencas_hidricas_norte_ba",
+      "pk": 125,
+      "uuid": "e38f274c-50b6-49b4-97cf-ff0c493293d2",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/cursos_de_agua": {
+      "alternate": "geonode:cursos_de_agua",
+      "pk": 126,
+      "uuid": "083e5e2b-9726-4119-85e9-49daaaab611c",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/curvas_de_nivel_iatasa_abs": {
+      "alternate": "geonode:curvas_de_nivel_iatasa_abs",
+      "pk": 127,
+      "uuid": "8fc7e525-14e9-45a0-9998-c8460f3550b7",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/curvas_nivel_cuenca": {
+      "alternate": "geonode:curvas_nivel_cuenca",
+      "pk": 128,
+      "uuid": "8620b5cf-22ab-4343-a799-af31cd0651b4",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/curvas_nivel_ign": {
+      "alternate": "geonode:curvas_nivel_ign",
+      "pk": 129,
+      "uuid": "3c67f7b8-04d0-41cd-b065-20b2b28d14f2",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "limites/delegaciones_pueblos": {
+      "alternate": "geonode:delegaciones_pueblos",
+      "pk": 130,
+      "uuid": "8f98931d-2f6e-4a7b-b465-618f1de7365c",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "servicios-municipales/dependencias_municipales": {
+      "alternate": "geonode:dependencias_municipales",
+      "pk": 133,
+      "uuid": "bc7f4f5f-4738-4e42-8b37-510062e9b903",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "seguridad/dependencias_seguridad": {
+      "alternate": "geonode:dependencias_seguridad",
+      "pk": 134,
+      "uuid": "349c5597-deb5-4e43-b706-dc2d935c1074",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "comercio-y-cultura/deportivo": {
+      "alternate": "geonode:deportivo",
+      "pk": 135,
+      "uuid": "fd133d3a-29d5-446f-bdd2-9a42a695e33f",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-municipales/desarrollo_social": {
+      "alternate": "geonode:desarrollo_social",
+      "pk": 136,
+      "uuid": "2cd0fe05-d7ab-4635-82cf-14bbd0f25432",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-municipales/desecho_pilas_usadas": {
+      "alternate": "geonode:desecho_pilas_usadas",
+      "pk": 137,
+      "uuid": "4162c3c8-2ab6-4aec-ae8b-2c7494a38eb9",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "salud/desfibriladores": {
+      "alternate": "geonode:desfibriladores",
+      "pk": 138,
+      "uuid": "3bb3b14c-de30-4c62-8886-03991304492f",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "catastro/edificaciones_automaticas": {
+      "alternate": "geonode:edificaciones_automaticas",
+      "pk": 140,
+      "uuid": "56016b2c-ffd1-4aaa-a117-f18cbee8e85c",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "catastro/edificios_en_altura": {
+      "alternate": "geonode:edificios_en_altura",
+      "pk": 143,
+      "uuid": "978e1656-2c10-40c5-987f-cde090cc218a",
+      "update_frequency": "continual",
+      "min_days": 7
+    },
+    "catastro/edificios_historicos": {
+      "alternate": "geonode:edificios_historicos",
+      "pk": 144,
+      "uuid": "cc174737-a6b8-450d-990c-8b8d2f9cde1f",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "educacion/educacion": {
+      "alternate": "geonode:educacion",
+      "pk": 145,
+      "uuid": "fbde7b51-c98a-48e4-b008-b829a03ceeef",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "educacion/gestion": {
+      "alternate": "geonode:educacion_gestion",
+      "pk": 300,
+      "uuid": "8509185b-96dd-4b1d-b98c-5654fb119540",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "educacion/nivel": {
+      "alternate": "geonode:educacion_nivel",
+      "pk": 299,
+      "uuid": "b46ea6c0-cead-484a-9230-d7e5eb19481c",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "comercio-y-cultura/entretenimiento": {
+      "alternate": "geonode:entretenimiento",
+      "pk": 147,
+      "uuid": "4526448e-4a0d-4b18-9fbb-09db2a504939",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "ambiente-y-agro/espacios_verdes": {
+      "alternate": "geonode:espacios_verdes",
+      "pk": 148,
+      "uuid": "a5cef1cd-cebb-468d-942c-57d35600b876",
+      "update_frequency": "continual",
+      "min_days": 7
+    },
+    "transporte/estacionamiento_motos_bicicletas": {
+      "alternate": "geonode:estacionamiento_motos_bicicletas",
+      "pk": 149,
+      "uuid": "b6830e48-c07b-479a-9e41-8d13246f7380",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "transporte/estacionamiento_nocturno": {
+      "alternate": "geonode:estacionamiento_nocturno",
+      "pk": 150,
+      "uuid": "77cf48af-1709-4efe-8d03-c1735c544635",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "transporte/estacionamiento_privado": {
+      "alternate": "geonode:estacionamiento_privado",
+      "pk": 151,
+      "uuid": "3bb84301-0af3-4c23-a6b4-2803e6edb137",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-sanitarios/estaciones_de_bombeo": {
+      "alternate": "geonode:estaciones_de_bombeo",
+      "pk": 152,
+      "uuid": "eb20a313-80af-4794-8705-5950a81befde",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "salud/estaciones_de_salud": {
+      "alternate": "geonode:estaciones_de_salud",
+      "pk": 153,
+      "uuid": "d0bad0a6-29b9-4a88-99b5-deb5d72093d8",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "comercio-y-cultura/estaciones_servicio": {
+      "alternate": "geonode:estaciones_servicio",
+      "pk": 155,
+      "uuid": "b6ad6fb1-bafd-49ff-9f3f-f0595da83869",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "comercio-y-cultura/extraccion_dinero": {
+      "alternate": "geonode:extraccion_dinero",
+      "pk": 158,
+      "uuid": "e2ee35e8-407c-4719-927c-54ec3119c7b8",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "transporte/ferrocarriles": {
+      "alternate": "geonode:ferrocarriles",
+      "pk": 160,
+      "uuid": "bd344e59-a46f-4d17-b81b-2e1157ba3845",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "comercio-y-cultura/gastronomia": {
+      "alternate": "geonode:gastronomia",
+      "pk": 168,
+      "uuid": "b359d8bb-ad2f-4ac4-b9bb-0bde7c165f38",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "comercio-y-cultura/gomerias": {
+      "alternate": "geonode:gomerias",
+      "pk": 171,
+      "uuid": "2cd94122-aaaf-4ee7-bfd8-c86a35f330c8",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "salud/guardias_emergencias_servicios": {
+      "alternate": "geonode:guardias_emergencias_servicios",
+      "pk": 173,
+      "uuid": "a04f863c-eb97-418b-a08f-dff922d0e371",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "salud/guardias_medicas": {
+      "alternate": "geonode:guardias_medicas",
+      "pk": 174,
+      "uuid": "5f2b7407-3a4a-4f9d-af6f-6a0dfbbbac7f",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "demografia/hacinamiento": {
+      "alternate": "geonode:hacinamiento",
+      "pk": 177,
+      "uuid": "c1efecbe-7565-4274-b6fa-21c90e40504b",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "comercio-y-cultura/hospedajes": {
+      "alternate": "geonode:hospedajes",
+      "pk": 178,
+      "uuid": "729959e0-3bdf-4d0f-bf32-ae6567007690",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "demografia/icv": {
+      "alternate": "geonode:icv",
+      "pk": 179,
+      "uuid": "2f62a728-a9a7-42a5-b9c9-acde5bee6461",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "ambiente-y-agro/inta_carbono_suelo_2015_2022": {
+      "alternate": "geonode:inta_carbono_suelo_2015_2022",
+      "pk": 182,
+      "uuid": "adcb55ee-1175-4418-bf89-d2caa3730e19",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/inta_mnc_2018_2019": {
+      "alternate": "geonode:inta_mnc_2018_2019",
+      "pk": 183,
+      "uuid": "8e97ebdd-adcd-43e0-b9eb-21902f5f1fb3",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/inta_mnc_2019_invierno": {
+      "alternate": "geonode:inta_mnc_2019_invierno",
+      "pk": 184,
+      "uuid": "adef9958-9ae9-4393-b40c-9001b3269549",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/inta_mnc_2020_invierno": {
+      "alternate": "geonode:inta_mnc_2020_invierno",
+      "pk": 185,
+      "uuid": "ece9446d-b971-435f-bc4c-76f0b816b52f",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/inta_mnc_2020_verano": {
+      "alternate": "geonode:inta_mnc_2020_verano",
+      "pk": 186,
+      "uuid": "b88d98a6-6452-46fe-ac3b-5cdc8621b85c",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/inta_mnc_2021_invierno": {
+      "alternate": "geonode:inta_mnc_2021_invierno",
+      "pk": 187,
+      "uuid": "a03d3ff5-f056-4a5b-94c6-61f63fe7ba5d",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/inta_mnc_2021_verano": {
+      "alternate": "geonode:inta_mnc_2021_verano",
+      "pk": 188,
+      "uuid": "a88e2968-03e3-49fd-9ce2-91b49ac3c2ff",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/inta_mnc_2022_invierno": {
+      "alternate": "geonode:inta_mnc_2022_invierno",
+      "pk": 189,
+      "uuid": "e09a50ba-1b81-4b97-a8ad-094ce68c43f5",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/inta_mnc_2022_verano": {
+      "alternate": "geonode:inta_mnc_2022_verano",
+      "pk": 190,
+      "uuid": "44a110cf-6197-4fa5-8b34-0d9aae9a7cc1",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/inta_mnc_2023_verano": {
+      "alternate": "geonode:inta_mnc_2023_verano",
+      "pk": 191,
+      "uuid": "8c31ff0f-4bc3-4d3c-903e-f4ab91b293d9",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/inundacion_1995": {
+      "alternate": "geonode:inundacion_1995",
+      "pk": 192,
+      "uuid": "985b043e-ea74-4ee2-833c-3738f4e552b4",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/inundacion_2016": {
+      "alternate": "geonode:inundacion_2016",
+      "pk": 193,
+      "uuid": "782b749d-bcc1-472a-9578-3db4a5915f36",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/isohietas_precipitaciones_medias_anuales_pergamino_geointa": {
+      "alternate": "geonode:isohietas_precipitaciones_medias_anuales_pergamino_geointa",
+      "pk": 194,
+      "uuid": "2cdbac6e-9b3d-486e-9807-67b9975f4f02",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/limpieza_mantenimiento_espacios_verdes": {
+      "alternate": "geonode:limpieza_mantenimiento_espacios_verdes",
+      "pk": 197,
+      "uuid": "25feef6a-d835-4213-9392-3d5d4bb11f03",
+      "update_frequency": "annually",
+      "min_days": 28
+    },
+    "limites/localidades": {
+      "alternate": "geonode:localidades",
+      "pk": 298,
+      "uuid": "c00a6b98-56db-4c53-818a-f23bf4323f32",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "vialidad/luminarias": {
+      "alternate": "geonode:luminarias",
+      "pk": 199,
+      "uuid": "da18cb91-648a-46ad-bc01-1ddace8a70da",
+      "update_frequency": "continual",
+      "min_days": 7
+    },
+    "ambiente-y-agro/luminarias_espacios_verdes": {
+      "alternate": "geonode:luminarias_espacios_verdes",
+      "pk": 201,
+      "uuid": "735f7501-2383-4927-bea7-e1e4c3160335",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "limites/manchas_urbanas_historicas": {
+      "alternate": "geonode:manchas_urbanas_historicas",
+      "pk": 203,
+      "uuid": "d148ae1f-9cd5-4e5a-94b3-c0394a299b5e",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "demografia/manzanas_isdd": {
+      "alternate": "geonode:manzanas_isdd",
+      "pk": 440,
+      "uuid": "8e6e5052-0fe6-4aea-a91b-d2d563326788",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "servicios-sanitarios/medidores_agua": {
+      "alternate": "geonode:medidores_agua",
+      "pk": 207,
+      "uuid": "ddfa0d66-dceb-48bc-a77b-11f02156b9db",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "comercio-y-cultura/medios_de_comunicacion": {
+      "alternate": "geonode:medios_de_comunicacion",
+      "pk": 210,
+      "uuid": "c44ad611-053d-4f34-9cf5-c90dd6201eb1",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "comercio-y-cultura/museos_y_espacios_culturales": {
+      "alternate": "geonode:museos_y_espacios_culturales",
+      "pk": 211,
+      "uuid": "13c8bada-953b-4a81-b68a-a690a9097770",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "demografia/nbi": {
+      "alternate": "geonode:nbi",
+      "pk": 212,
+      "uuid": "87d245af-8638-4932-bc91-3f9383ab4ccb",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "comercio-y-cultura/oferentes_espacios_culturales": {
+      "alternate": "geonode:oferentes_espacios_culturales",
+      "pk": 214,
+      "uuid": "998c4f2d-3397-4470-808b-e621cbf92f04",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "transporte/paradas_de_colectivo": {
+      "alternate": "geonode:paradas_de_colectivo",
+      "pk": 217,
+      "uuid": "610e8e0d-8113-4f16-89ce-969cb8eca2e7",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "comercio-y-cultura/parques_industriales_y_anexos": {
+      "alternate": "geonode:parques_industriales_y_anexos",
+      "pk": 222,
+      "uuid": "06efd192-e583-4713-b4f8-ae763012fb97",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "limites/partido_pergamino": {
+      "alternate": "geonode:partido_pergamino",
+      "pk": 223,
+      "uuid": "d594b096-86c5-449a-9542-7c0ed2c75662",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "comercio-y-cultura/paseos_comerciales": {
+      "alternate": "geonode:paseos_comerciales",
+      "pk": 225,
+      "uuid": "2b2e8d04-36ff-41e1-9a1d-e19f9f2bd906",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-sanitarios/pluviales": {
+      "alternate": "geonode:pluviales",
+      "pk": 226,
+      "uuid": "2f7d7285-0130-46d6-b4cf-4136edf9e73c",
+      "update_frequency": "continual",
+      "min_days": 7
+    },
+    "demografia/pobreza_cronica": {
+      "alternate": "geonode:pobreza_cronica",
+      "pk": 227,
+      "uuid": "c6f913cf-52a4-4dfb-a5eb-08061815b844",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "servicios-sanitarios/pozos_agua_doss": {
+      "alternate": "geonode:pozos_doss",
+      "pk": 295,
+      "uuid": "b70f94fd-cb42-4369-8cfc-9afdc5ea2f21",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "educacion/predios_educativos": {
+      "alternate": "geonode:predios_educativos",
+      "pk": 229,
+      "uuid": "bab63d92-7699-4388-9ed1-838934911217",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "vialidad/progresivas_rutas": {
+      "alternate": "geonode:progresivas_rutas",
+      "pk": 230,
+      "uuid": "1d934cb7-3530-4089-8ad5-b6d03dad5f93",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "ambiente-y-agro/proyecto_presa": {
+      "alternate": "geonode:proyecto_presa",
+      "pk": 232,
+      "uuid": "e682709b-de7a-4cd9-92e4-b9f5eb6db4a6",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/proyecto_presa_area_inundable": {
+      "alternate": "geonode:proyecto_presa_area_inundable",
+      "pk": 233,
+      "uuid": "96c63539-1e49-48b8-a4aa-84e31e0ac3ed",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "servicios-municipales/proyectos_infraestructura": {
+      "alternate": "geonode:proyectos_infraestructura",
+      "pk": 297,
+      "uuid": "d1842333-efe4-4fc0-a6c5-8af011f1aea6",
+      "update_frequency": "continual",
+      "min_days": 7
+    },
+    "servicios-municipales/puntos_clickeados": {
+      "alternate": "geonode:puntos_clickeados",
+      "pk": 234,
+      "uuid": "b1f1eab1-7b7a-4b56-9ed1-a14c5300fb33",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "comercio-y-cultura/puntos_de_interes": {
+      "alternate": "geonode:puntos_de_interes",
+      "pk": 235,
+      "uuid": "2680d9e6-07bd-446e-bfa5-4f8ebf732edd",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "ambiente-y-agro/puntos_de_nivel_iatasa_abs": {
+      "alternate": "geonode:puntos_de_nivel_iatasa_abs",
+      "pk": 236,
+      "uuid": "4e31e3b3-7a7f-4e63-9fa5-5df94f9c1178",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "vialidad/puntos_fijos": {
+      "alternate": "geonode:puntos_fijos",
+      "pk": 237,
+      "uuid": "1e5282b8-9287-43dd-ae69-f4f5db810bfa",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "comercio-y-cultura/puntos_venta_simple": {
+      "alternate": "geonode:puntos_venta_simple",
+      "pk": 239,
+      "uuid": "fc0dadd0-12d3-4729-9242-2d00a894e79a",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "demografia/radios_censales_indec_2010": {
+      "alternate": "geonode:radios_censales_indec_2010",
+      "pk": 240,
+      "uuid": "71499357-d88d-4ea0-8987-67084644c9da",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "vialidad/rampas_acceso_veredas": {
+      "alternate": "geonode:rampas_acceso_discapacidad",
+      "pk": 241,
+      "uuid": "620b830c-20c7-4970-a400-c3bc6a4ae6d4",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "demografia/razon_de_sexo_2010": {
+      "alternate": "geonode:razon_de_sexo_2010",
+      "pk": 242,
+      "uuid": "af2340d4-f191-4a9b-9cdd-c30211814a9b",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "servicios-municipales/recoleccion_residuos_domiciliarios": {
+      "alternate": "geonode:recoleccion_residuos_domiciliarios",
+      "pk": 243,
+      "uuid": "56ca0f39-9246-417e-a796-c35f704d6aaa",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "servicios-municipales/recoleccion_residuos_voluminosos": {
+      "alternate": "geonode:recoleccion_residuos_voluminosos",
+      "pk": 244,
+      "uuid": "24aa8048-53cd-4181-af66-b399803d3b06",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "energia-y-conectividad/red_federal_fibra_optica_nodos": {
+      "alternate": "geonode:red_federal_fibra_optica_nodos",
+      "pk": 245,
+      "uuid": "4b32b189-dd5d-41c0-ae72-33f3dc466d04",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "energia-y-conectividad/red_federal_fibra_optica_tramos": {
+      "alternate": "geonode:red_federal_fibra_optica_tramos",
+      "pk": 246,
+      "uuid": "024a93d7-e568-4bfc-a37d-e25606260d9c",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "vialidad/red_nivelacion_ign_precision": {
+      "alternate": "geonode:red_nivelacion_ign_precision",
+      "pk": 247,
+      "uuid": "3a7677a3-c07d-4a8b-8ffc-33d2319a867a",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "demografia/redatam_censo_2022_radios": {
+      "alternate": "geonode:redatam_censo_2022_radios",
+      "pk": 248,
+      "uuid": "43965328-b19a-497c-aa07-f5aea7475d3c",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "vialidad/reductores_de_velocidad": {
+      "alternate": "geonode:reductor_de_velocidad",
+      "pk": 249,
+      "uuid": "e41ee8f3-7851-4bb8-99b0-33bb68a3faf1",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "transporte/remis_taxi": {
+      "alternate": "geonode:remis_taxi",
+      "pk": 251,
+      "uuid": "68bf26ca-0b9b-44dd-a39a-903271423e3d",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "demografia/renabap_barrios_populares": {
+      "alternate": "geonode:renabap_barrios_populares",
+      "pk": 252,
+      "uuid": "6fa00bd7-a02b-4d7d-8514-0f266c996024",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "ambiente-y-agro/riego_por_pivote_central": {
+      "alternate": "geonode:riego_por_pivote_central",
+      "pk": 253,
+      "uuid": "3c0907a4-c93e-4719-a7b3-95d0c197b044",
+      "update_frequency": "annually",
+      "min_days": 28
+    },
+    "servicios-municipales/sanitarios_publicos": {
+      "alternate": "geonode:sanitarios_publicos",
+      "pk": 254,
+      "uuid": "84a4309f-ed5c-4af5-bf20-ec8d6f7bb347",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "vialidad/semaforos": {
+      "alternate": "geonode:semaforos",
+      "pk": 256,
+      "uuid": "64e350ae-ead1-4111-9a29-fabe2792ea8e",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "transporte/sube": {
+      "alternate": "geonode:sube",
+      "pk": 258,
+      "uuid": "04df4108-8d3d-48c2-847b-04ba442d142e",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "ambiente-y-agro/suelos_pergamino_50mil": {
+      "alternate": "geonode:suelos_pergamino_50mil",
+      "pk": 259,
+      "uuid": "8fc9035b-dae0-46fb-a1b4-b7b3e65bf816",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "servicios-sanitarios/sumideros": {
+      "alternate": "geonode:sumideros",
+      "pk": 260,
+      "uuid": "3db3708b-03b3-49fc-9687-441063afe1fc",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "vialidad/material_de_calzada": {
+      "alternate": "geonode:vista_callejero_1",
+      "pk": 293,
+      "uuid": "080b3ea4-0837-4450-ba1d-d238c3f69f4b",
+      "update_frequency": "continual",
+      "min_days": 7
+    },
+    "vialidad/cordon_cuneta": {
+      "alternate": "geonode:vista_callejero_2",
+      "pk": 294,
+      "uuid": "6f27e87b-caa9-490c-8320-9e4ef04e400f",
+      "update_frequency": "continual",
+      "min_days": 7
+    },
+    "transporte/vuelta_partido": {
+      "alternate": "geonode:vuelta_partido",
+      "pk": 263,
+      "uuid": "7fd1f1f2-8077-45b1-bf2e-12ab0838b4dd",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "energia-y-conectividad/wifi_espacios_verdes": {
+      "alternate": "geonode:wifi_espacios_verdes",
+      "pk": 264,
+      "uuid": "8a5ce164-27cb-4d6a-accd-f354ab2c7ed5",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    },
+    "limites/zonas_electorales_celp": {
+      "alternate": "geonode:zonas_electorales_celp",
+      "pk": 265,
+      "uuid": "81c5d563-47bf-444c-a558-09dc854560ef",
+      "update_frequency": "unknown",
+      "min_days": 7
+    },
+    "seguridad/zonas_emergencias_y_riesgo": {
+      "alternate": "geonode:zonas_emergencias_y_riesgo",
+      "pk": 266,
+      "uuid": "fc37fb85-3ae3-4ea0-97c2-491cfcc8d49c",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "servicios-sanitarios/zonas_facturacion": {
+      "alternate": "geonode:zonas_facturacion",
+      "pk": 267,
+      "uuid": "aac9707e-565c-49b8-9fe8-8256c331d2b1",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "seguridad/zonas_seguridad": {
+      "alternate": "geonode:zonas_seguridad",
+      "pk": 268,
+      "uuid": "0b86e2a5-f01c-4362-b60d-4b2fe688a3d6",
+      "update_frequency": "notPlanned",
+      "min_days": 7
+    },
+    "catastro/zonificacion": {
+      "alternate": "geonode:zonificacion",
+      "pk": 269,
+      "uuid": "fa316090-3f9b-463f-8acc-f9a41352d483",
+      "update_frequency": "asNeeded",
+      "min_days": 7
+    }
+  },
+  "not_mirrored": {
+    "acevedo_10cm": "subtype raster",
+    "aeroclub_10cm": "subtype raster",
+    "alfonzo_10cm": "subtype raster",
+    "benitez_10cm": "subtype raster",
+    "centro_10cm": "subtype raster",
+    "cuadriculas_policiales_obsoletas": "not published in GeoNode",
+    "edificaciones_pa": "the WFS does not serve it",
+    "edificaciones_pb": "the WFS does not serve it",
+    "este_1_10cm": "subtype raster",
+    "este_2_10cm": "subtype raster",
+    "este_3_10cm": "subtype raster",
+    "farmacias": "excluded in grouping.EXCLUDED",
+    "fontezuela_10cm": "subtype raster",
+    "guerrico_10cm": "subtype raster",
+    "la_violeta_10cm": "subtype raster",
+    "manzanas_censo_arbolado_2024": "the WFS does not serve it",
+    "norte_1_10cm": "subtype raster",
+    "norte_2_10cm": "subtype raster",
+    "norte_3_10cm": "subtype raster",
+    "norte_4_10cm": "subtype raster",
+    "norte_5_10cm": "subtype raster",
+    "norte_6_10cm": "subtype raster",
+    "norte_7_10cm": "subtype raster",
+    "ocampo_10cm": "subtype raster",
+    "oeste_1_10cm": "subtype raster",
+    "oeste_2_10cm": "subtype raster",
+    "open_buildings_height_8m": "subtype raster",
+    "parcelario_rafam_2023_08": "not published in GeoNode",
+    "parcelario_siser_con_partidas_pagas": "not published in GeoNode",
+    "parcelario_siser_tripartito": "not published in GeoNode",
+    "parcelario_tarifa_social": "excluded in grouping.EXCLUDED",
+    "pena_10cm": "subtype raster",
+    "pergamino_sector_1_2020": "subtype remote",
+    "pergamino_sector_2_2020": "subtype remote",
+    "pergamino_sector_3_2020": "subtype remote",
+    "pergamino_sector_4_2020": "subtype remote",
+    "pergamino_sector_5_2020": "subtype remote",
+    "pergamino_sector_6_2020": "subtype remote",
+    "pergamino_sector_7_2020": "subtype remote",
+    "pergamino_sector_8_2020": "subtype remote",
+    "pergamino_sector_9_2020": "subtype remote",
+    "pinzon_10cm_9eb85c09bda4f8ac207e7e4a0b79c5e7": "subtype raster",
+    "pozos_bombeo_doss": "excluded in grouping.EXCLUDED",
+    "rancagua_10cm_cog": "subtype raster",
+    "socorro_10cm": "subtype raster",
+    "sur_1_10cm": "subtype raster",
+    "sur_2_10cm": "subtype raster",
+    "sur_3_10cm": "subtype raster",
+    "sur_4_10cm": "subtype raster",
+    "sur_5_10cm": "subtype raster",
+    "tranqueras_rurales": "excluded in grouping.EXCLUDED",
+    "urquiza_10cm": "subtype raster",
+    "villa_san_jose_rancagua_10cm": "subtype raster",
+    "zona_industrial_sur_10cm": "subtype raster"
+  }
+}

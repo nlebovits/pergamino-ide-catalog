@@ -21,9 +21,13 @@ catalog/                  the published tree, synced 1:1 to object storage
   catalog.json            root, links 13 thematic sub-catalogs
   <theme>/                sub-catalog: catalog.json, README.md, AGENTS.md
     <collection>/         collection.json, README.md, AGENTS.md, styles/, legends/
+tools/sources.json        the GeoNode dataset behind each collection
+tools/refresh.py          the weekly refresh: probe, extract, version
+tools/generate/           the docs, catalogs, styles and thumbnails
 tools/publish.py          the only thing that uploads
 tests/                    the gates CI runs
-docs/conformance.md       the accepted-deviations ledger, deliberately empty
+docs/refresh.md           how the weekly refresh works, and how to run it
+docs/conformance.md       the accepted-deviations ledger
 ```
 
 Everything under `catalog/` is published. Nothing outside it ever is. That
@@ -32,14 +36,23 @@ no flag that widens the walk.
 
 ## What is in the catalog
 
-183 collections in 13 thematic groups, covering cadastre, roads, transport,
-water and sanitation, energy and connectivity, health, education, security,
-demographics, environment and agriculture, administrative boundaries, municipal
-services, and commerce and culture.
+The vector layers the municipality publishes in GeoNode, in 13 thematic
+groups: cadastre, roads, transport, water and sanitation, energy and
+connectivity, health, education, security, demographics, environment and
+agriculture, administrative boundaries, municipal services, and commerce and
+culture. `tools/sources.json` lists the dataset behind each collection.
 
-Just over a million features, in GeoParquet 1.1.0 with Hilbert spatial ordering
-and a bbox covering column, plus PMTiles for web display and MapLibre styles
-derived from the municipality's own GeoServer SLDs.
+Each layer is GeoParquet 1.1.0 with Hilbert spatial ordering and a bbox
+covering column, plus PMTiles for web display and a MapLibre style derived
+from the SLD that GeoNode publishes for it. Every collection AGENTS.md has
+example queries, and CI runs each one.
+
+## Weekly refresh
+
+`.github/workflows/refresh.yml` runs every Monday. It asks GeoNode whether
+each dataset changed, re-extracts the ones that did, and publishes each
+change as a new version. Earlier versions stay readable under `versions/`.
+See [docs/refresh.md](./docs/refresh.md).
 
 ## Working on it
 
@@ -66,8 +79,10 @@ in the bucket. Stale objects have to be removed deliberately.
 ## Editing
 
 Do not hand-edit generated output. `README.md` and `AGENTS.md` under `catalog/`
-are generated from collection metadata and the harvested upstream records; edit
-the source and regenerate. A CI gate rebuilds and diffs, so a hand edit shows up
+are generated from collection metadata, the GeoNode records in
+`tools/generate/data/geonode.json`, and the facts measured from the data in
+`tools/generate/data/measured.json`. Edit the source and regenerate with
+`python3 tools/generate/build_docs.py catalog`. A CI gate rebuilds and diffs, so a hand edit shows up
 as a failure rather than surviving quietly.
 
 ## Licence

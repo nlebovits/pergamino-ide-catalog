@@ -21,7 +21,6 @@ import json
 import os
 import sys
 
-ROOT = sys.argv[1]
 MAXZOOM = 15
 
 
@@ -44,6 +43,7 @@ def dedupe_match(expr):
 
 
 def main():
+    ROOT = sys.argv[1]
     fixed = sourced = deduped = 0
     flat, driven = [], []
     for group in sorted(os.listdir(ROOT)):
@@ -94,9 +94,8 @@ def main():
     print(f"  duplicate match keys dropped: {deduped}")
     print(f"  data-driven         : {len(driven)}")
     print(f"  flat (single colour): {len(flat)}")
-    with open(os.path.join(os.path.dirname(ROOT), "flat-styles.txt"), "w") as fh:
-        fh.write("\n".join(flat))
-    print("\nflat-style collections written to flat-styles.txt")
+    for name in flat:
+        print(f"  flat: {name}")
 
 
 if __name__ == "__main__":

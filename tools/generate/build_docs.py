@@ -1,275 +1,516 @@
-"""Generate README.md and AGENTS.md for the root catalog and each sub-catalog.
+#!/usr/bin/env python3
+"""Generate README.md and AGENTS.md for the root, each group and each
+GeoNode collection.
 
-Catalog-level READMEs are tables of contents, per the Portolan documentation
-best practices. Collection-level docs are generated separately by the CLI from
-each collection's own metadata.
+Every sentence about a dataset comes from one of three committed sources,
+so the docs regenerate deterministically and offline:
 
-Everything here is derived from collection.json and the harvested upstream
-metadata, so it regenerates deterministically.
+- the collection's ``collection.json``
+- the GeoNode record, as stored in ``tools/generate/data/geonode.json``
+  (``tools/snapshot.py``), quoted rather than paraphrased
+- the facts measured from the data, in ``tools/generate/data/measured.json``
+  (``tools/generate/measure.py``)
+
+The docs quote no row counts and no dates of the current data, because both
+change on every refresh. ``tests/test_no_data_numbers.py`` and
+``tests/test_no_stale_dates.py`` enforce that. Every ```sql block in an
+AGENTS.md runs in CI (``tests/test_queries.py``).
+
+The imagery and the virtual collections (``imagenes/``, ``externos/``) have
+their own generators. This script only links to them.
+
+    python3 tools/generate/build_docs.py catalog
 """
+from __future__ import annotations
 
 import json
-import os
 import sys
+from pathlib import Path
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from grouping import GROUPS  # noqa: E402
+HERE = Path(__file__).resolve().parent
+sys.path.insert(0, str(HERE))
+sys.path.insert(0, str(HERE.parent))
+
+from build_catalogs import EXTRA_GROUPS  # noqa: E402
 from group_descriptions import GROUP_DOCS  # noqa: E402
+from grouping import GROUPS  # noqa: E402
+from publish import load_config  # noqa: E402
 
-DST = sys.argv[1]
-META = json.load(open(sys.argv[2], encoding="utf-8"))
+BASE = load_config()["public_base"].rstrip("/")
+DATA = HERE / "data"
+SOURCES = json.loads((HERE.parent / "sources.json").read_text())["collections"]
+RECORDS = json.loads((DATA / "geonode.json").read_text())
+MEASURED = json.loads((DATA / "measured.json").read_text())
 
-BASE = "https://data.source.coop/nlebovits/pergamino-ide"
-
-ORIGIN_NOTE = {
-    "INTA": "INTA", "IGN": "IGN", "INDEC": "INDEC", "CONICET": "CONICET",
-    "INA": "INA", "BAHRA": "BAHRA", "CARTOARBA": "ARBA", "ARBA": "ARBA",
-    "Correo Argentino": "Correo Argentino", "IDECOM": "IDECOM/ENACOM",
-    "ABS-IATASA": "IATASA-ABS", "UNNOBA": "UNNOBA", "PBA": "Prov. Buenos Aires",
+GEOMETRY = {"point": "puntos", "line": "líneas", "polygon": "polígonos",
+            "none": "sin geometría"}
+FREQUENCY = {
+    "continual": "continua", "daily": "diaria", "weekly": "semanal",
+    "fortnightly": "quincenal", "monthly": "mensual",
+    "quarterly": "trimestral", "biannually": "semestral",
+    "annually": "anual", "asNeeded": "cuando es necesario",
+    "irregular": "irregular", "notPlanned": "no planificada",
+    "unknown": "desconocida",
 }
+BARRIOS = "limites/barrios_y_pueblos"
+LICENSE_QUOTE = (
+    "> Los datos dispuestos en nuestra Infraestructura de Datos Espaciales "
+    "estan licenciados mediante Creative Commons 4.0 BY-SA, lo cual permite "
+    "utilizar, compartir y adaptar este material siempre que reconozca "
+    "atribución y permita la misma licencia en sus derivados.")
+WARNING_QUOTE = (
+    "> La información contenida en la IDE se encuentra en constante "
+    "actualización por parte de las distintas áreas responsables de su "
+    "generación, por lo tanto, podria contener diferencias e inconsistencias "
+    "en relación al objeto o fenómeno representado, tanto espacial como "
+    "temporalmente.")
+NO_COLUMN_DOCS = (
+    "La fuente no publica descripciones de columnas: GeoNode devuelve una "
+    "descripción vacía para cada atributo. Por eso las columnas no tienen "
+    "descripción en `table:columns`, salvo `geometry` y `bbox`, que agrega "
+    "este catálogo.")
 
 
-def load_collections(group):
-    out = []
-    gdir = os.path.join(DST, group)
-    cat = json.load(open(os.path.join(gdir, "catalog.json"), encoding="utf-8"))
-    for ln in cat["links"]:
-        if ln.get("rel") != "child":
-            continue
-        leaf = ln["href"].split("/")[1]
-        col = json.load(open(os.path.join(gdir, leaf, "collection.json"),
-                             encoding="utf-8"))
-        out.append((leaf, col))
+def write(path: Path, lines: list[str]) -> None:
+    path.write_text("\n".join(lines).rstrip("\n") + "\n", encoding="utf-8")
+
+
+def clean(value: str | None) -> str:
+    import html
+    import re
+
+    value = html.unescape(re.sub(r"<[^>]+>", " ", value or ""))
+    value = re.sub(r"\s+", " ", value.replace("\xa0", " ")).strip()
+    empty = {"", "no information provided", "ninguna", "ninguna.", "none"}
+    return "" if value.lower() in empty else value
+
+
+def ident(name: str) -> str:
+    """A column name, quoted for DuckDB."""
+    return '"' + name.replace('"', '""') + '"'
+
+
+def data_url(collection: str) -> str:
+    return f"{BASE}/{collection}/{collection.split('/')[-1]}.parquet"
+
+
+def load_collection(catalog: Path, collection: str) -> dict:
+    return json.loads((catalog / collection / "collection.json").read_text())
+
+
+def group_collections(catalog: Path, group: str) -> list[dict]:
+    return [json.loads(p.read_text())
+            for p in sorted((catalog / group).glob("*/collection.json"))]
+
+
+# --------------------------------------------------------------------------
+# Collection docs
+
+
+def queries(collection: str, doc: dict, facts: dict) -> list[tuple[str, str]]:
+    """(title, sql) for every example query this collection supports."""
+    url = data_url(collection)
+    spatial = facts["geometry"] != "none"
+    drop = " EXCLUDE (geometry, bbox)" if spatial else ""
+    out = [("Primeros registros", "\n".join([
+        f"SELECT *{drop}",
+        f"FROM read_parquet('{url}')",
+        "LIMIT 5;"]))]
+    for column in list(facts["categories"])[:2]:
+        out.append((f"Registros por `{column}`", "\n".join([
+            f"SELECT {ident(column)}, count(*) AS registros",
+            f"FROM read_parquet('{url}')",
+            "GROUP BY ALL",
+            "ORDER BY registros DESC;"])))
+    if spatial and facts["in_city"]:
+        out.append(("Registros por barrio", "\n".join([
+            "SELECT b.nombre AS barrio, count(*) AS registros",
+            f"FROM read_parquet('{url}') AS t",
+            f"JOIN read_parquet('{data_url(BARRIOS)}') AS b",
+            "  ON ST_Intersects(ST_PointOnSurface(t.geometry), b.geometry)",
+            "GROUP BY b.nombre",
+            "ORDER BY registros DESC",
+            "LIMIT 10;"])))
+    if spatial:
+        x0, y0, x1, y1 = doc["extent"]["spatial"]["bbox"][0]
+        cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
+        dx, dy = max((x1 - x0) / 10, 0.005), max((y1 - y0) / 10, 0.005)
+        out.append(("Filtro por ventana, con la columna `bbox`", "\n".join([
+            "SELECT count(*) AS registros",
+            f"FROM read_parquet('{url}')",
+            f"WHERE bbox.xmin >= {cx - dx:.4f} AND bbox.xmax <= {cx + dx:.4f}",
+            f"  AND bbox.ymin >= {cy - dy:.4f} AND bbox.ymax <= {cy + dy:.4f};",
+        ])))
+    for key, target in facts["joins"].items():
+        out.append((f"Unión con `{target}` por `{key}`", "\n".join([
+            f"SELECT t.{ident(key)}, count(*) AS registros",
+            f"FROM read_parquet('{url}') AS t",
+            f"JOIN read_parquet('{data_url(target)}') AS r",
+            f"  ON CAST(t.{ident(key)} AS VARCHAR) = "
+            f"CAST(r.{ident(key)} AS VARCHAR)",
+            "GROUP BY ALL",
+            "ORDER BY registros DESC",
+            "LIMIT 10;"])))
     return out
 
 
-def upstream_layer(col):
-    for ln in col.get("links", []):
-        if ln.get("rel") == "via" and "typename" in (ln.get("href") or ""):
-            return ln["href"].split("typename=")[-1].split("&")[0].replace("%3A", ":")
-    return ""
+def providers_text(doc: dict) -> str:
+    producers = [p["name"] for p in doc["providers"]
+                 if "producer" in p.get("roles", [])]
+    return ", ".join(producers)
 
 
-def third_party(layer_key):
-    attr = (META.get(layer_key, {}) or {}).get("gn_attribution", "") or ""
-    parts = [p.strip() for p in attr.split(",")[1:] if p.strip()]
-    return [ORIGIN_NOTE.get(p, p) for p in parts]
+def first_version_note(doc: dict) -> str | None:
+    for key, asset in doc["assets"].items():
+        if key.startswith("version-") and "publico_" in asset["href"]:
+            return (f"La primera versión proviene del GeoServer anterior de "
+                    f"la IDE Pergamino y sigue publicada en "
+                    f"`{asset['href']}`.")
+    return None
 
 
-def rowcount(col):
-    n = col.get("table:row_count")
-    if n is None:
-        for a in (col.get("assets") or {}).values():
-            if "data" in (a.get("roles") or []):
-                n = a.get("table:row_count")
-    return n
+def collection_readme(catalog: Path, collection: str) -> None:
+    doc = load_collection(catalog, collection)
+    entry = SOURCES[collection]
+    record = RECORDS[entry["alternate"]]
+    facts = MEASURED[collection]
+    leaf = collection.split("/")[-1]
+    page = f"https://geonode.pergamino.gob.ar/catalogue/#/dataset/{entry['pk']}"
+    L = [f"# {doc['title']}", "", doc["description"], "",
+         "| | |", "|---|---|",
+         f"| Identificador | `{collection}` |",
+         f"| Geometría | {GEOMETRY[facts['geometry']]} |",
+         f"| Fuente | [{doc['title']} en GeoNode]({page}), capa WFS "
+         f"`{entry['alternate']}` |",
+         "| Licencia | [CC-BY-SA-4.0]"
+         "(https://creativecommons.org/licenses/by-sa/4.0/) |",
+         "| Actualización declarada por la fuente | "
+         f"{FREQUENCY.get(entry['update_frequency'], entry['update_frequency'])} |",
+         ""]
+    for title, field in (("Propósito", "raw_purpose"),
+                         ("Calidad de los datos", "raw_data_quality_statement"),
+                         ("Información complementaria",
+                          "raw_supplemental_information"),
+                         ("Restricciones de uso declaradas",
+                          "raw_constraints_other")):
+        value = clean(record.get(field))
+        if value:
+            L += [f"## {title}", "", "Según el registro de GeoNode:", "",
+                  f"> {value}", ""]
+    L += ["## Esquema", "", "| Columna | Tipo |", "|---|---|"]
+    for column in doc["table:columns"]:
+        L.append(f"| `{column['name']}` | {column['type']} |")
+    L += ["", NO_COLUMN_DOCS, "",
+          "## Acceso", "",
+          "```python", "import duckdb", "",
+          "con = duckdb.connect()",
+          'con.sql("INSTALL spatial; LOAD spatial; '
+          'INSTALL httpfs; LOAD httpfs;")',
+          f"con.sql(\"SELECT * FROM read_parquet('{data_url(collection)}') "
+          "LIMIT 10\").show()",
+          "```", "",
+          "Hay más consultas, todas probadas, en [AGENTS.md](./AGENTS.md).",
+          ""]
+    if f"{leaf}-tiles" in doc["assets"]:
+        L += ["## Visualización", "",
+              f"Las teselas vectoriales están en `./{leaf}.pmtiles` (capa "
+              f"`{leaf}`). El estilo por defecto, `styles/default.json`, "
+              "deriva del estilo SLD que publica GeoNode para esta capa."]
+        if "legends/source" in doc["assets"]:
+            L += ["", "Leyenda tal como la publica la fuente:", "",
+                  "![Leyenda](./legends/source.png)"]
+        L.append("")
+    L += ["## Versiones", "",
+          "Cada extracción que cambia los datos es una versión nueva. La "
+          f"versión actual está en `./{leaf}.parquet`. Las anteriores son "
+          "los activos `version-*` de `collection.json`, con el número de "
+          "registros y la suma de verificación de cada una. Sus archivos no "
+          "cambian."]
+    note = first_version_note(doc)
+    if note:
+        L += ["", note]
+    L += ["", "## Procedencia", "",
+          f"Productor: {providers_text(doc)}. Publicado por la Dirección de "
+          "Sistemas de Información Georreferenciada (DSIG) de la "
+          f"Municipalidad de Pergamino en [GeoNode]({page}).", ""]
+    attribution = clean(record.get("attribution"))
+    if attribution:
+        L += [f"Atribución declarada en GeoNode: \"{attribution}\".", ""]
+    if len(doc["providers"]) > 2:
+        L += ["Es un dato de otro organismo, rehospedado por el municipio. "
+              "La atribución corresponde al organismo de origen.", ""]
+    L += ["Este catálogo es un espejo. Para el dato autoritativo, consultar "
+          "la IDE de Pergamino.", "",
+          "## Licencia", "",
+          "CC-BY-SA-4.0. Es la licencia que declara la Municipalidad de "
+          "Pergamino para su IDE:", "", LICENSE_QUOTE, "",
+          "## Advertencia del publicador", "", WARNING_QUOTE, ""]
+    write(catalog / collection / "README.md", L)
 
 
-def geom_of(col):
-    g = col.get("geoparquet:geometry_type") or ""
-    return g.replace("Multi", "Multi ").strip() or "-"
+def collection_agents(catalog: Path, collection: str) -> None:
+    doc = load_collection(catalog, collection)
+    entry = SOURCES[collection]
+    facts = MEASURED[collection]
+    leaf = collection.split("/")[-1]
+    L = [f"# Guía para agentes — {doc['title']}", "",
+         f"`{collection}`: {GEOMETRY[facts['geometry']]}. "
+         f"{doc['description']}", "",
+         "## Acceso", "",
+         f"- Datos: `{data_url(collection)}`. GeoParquet 1.1, geometría WKB "
+         "en EPSG:4326, columna de cobertura `bbox`, orden espacial Hilbert.",
+         ]
+    if f"{leaf}-tiles" in doc["assets"]:
+        L.append(f"- Teselas: `{BASE}/{collection}/{leaf}.pmtiles`, capa "
+                 f"`{leaf}`, zoom 0 a 15.")
+    L += [f"- Metadatos: `{BASE}/{collection}/collection.json`. El número "
+          "de registros está en `table:row_count`, y cada versión anterior "
+          "en un activo `version-*`.",
+          f"- Fuente: capa WFS `{entry['alternate']}` de GeoNode.", "",
+          "## Esquema", ""]
+    for column in doc["table:columns"]:
+        L.append(f"- `{column['name']}` ({column['type']})")
+    L += ["", NO_COLUMN_DOCS, ""]
+    if facts["categories"]:
+        L += ["Valores medidos en los datos, de más a menos frecuente, de las "
+              "columnas de texto con pocas categorías:", "", "```text"]
+        for column, values in facts["categories"].items():
+            L.append(f"{column}: " + " | ".join(values))
+        L += ["```", ""]
+    L += ["## Consultas de ejemplo", "",
+          "Cada bloque corre tal cual en el CLI de DuckDB después de "
+          "`INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;`.", ""]
+    for title, sql in queries(collection, doc, facts):
+        L += [f"### {title}", "", "```sql", sql, "```", ""]
+    L += ["## Notas de calidad", "",
+          "- Las geometrías inválidas de la fuente se reparan con "
+          "`shapely.make_valid`. `pergamino:repaired_geometries` en el activo "
+          "de datos dice cuántas se repararon en cada versión.",
+          "- La fecha de los metadatos es de publicación en GeoNode, no del "
+          "contenido. Si la capa tiene columnas como `fuente` o "
+          "`actualizacion`, son la mejor señal de vigencia.", ""]
+    if facts["joins"] or facts["in_city"]:
+        L += ["## Colecciones relacionadas", ""]
+        for key, target in facts["joins"].items():
+            L.append(f"- `{target}`, por `{key}`. Hay valores de `{key}` que "
+                     "coinciden en las dos colecciones.")
+        if facts["in_city"]:
+            L.append(f"- `{BARRIOS}`, por intersección espacial.")
+        L.append("")
+    write(catalog / collection / "AGENTS.md", L)
 
 
-def write_group_readme(group):
+# --------------------------------------------------------------------------
+# Group and root docs
+
+
+def group_readme(catalog: Path, group: str) -> None:
     title, desc = GROUP_DOCS[group]
-    cols = load_collections(group)
+    cols = group_collections(catalog, group)
     L = [f"# {title}", "", desc, "",
-         f"{len(cols)} colecciones. Forma parte del espejo cloud-native de la "
-         f"[IDE Pergamino](../README.md).", "",
+         "Forma parte del espejo cloud-native de la "
+         "[IDE Pergamino](../README.md).", "",
          "## Colecciones", "",
-         "| Colección | Registros | Geometría | Descripción |",
-         "|---|--:|---|---|"]
-    for leaf, col in cols:
-        n = rowcount(col)
-        n = f"{n:,}".replace(",", ".") if isinstance(n, int) else "-"
-        d = (col.get("description") or "").replace("|", "/").replace("\n", " ")
-        if len(d) > 120:
-            d = d[:117] + "..."
-        L.append(f"| [{col['title']}](./{leaf}/) | {n} | {geom_of(col)} | {d} |")
-
-    tp = {}
-    for leaf, col in cols:
-        key = upstream_layer(col).split(":")[-1]
-        for o in third_party(key):
-            tp.setdefault(o, []).append(col["title"])
-    if tp:
+         "| Colección | Geometría | Descripción |", "|---|---|---|"]
+    for col in cols:
+        leaf = col["id"].split("/")[-1]
+        facts = MEASURED.get(col["id"], {"geometry": "none"})
+        d = col["description"].replace("|", "/").replace("\n", " ")
+        if len(d) > 140:
+            d = d[:137].rstrip() + "..."
+        L.append(f"| [{col['title']}](./{leaf}/) | "
+                 f"{GEOMETRY[facts['geometry']]} | {d} |")
+    third = {}
+    for col in cols:
+        for p in col["providers"][:-2]:
+            third.setdefault(p["name"], []).append(col["title"])
+    if third:
         L += ["", "## Datos de terceros", "",
               "Estas colecciones son datos producidos por otros organismos y "
               "rehospedados por la Municipalidad de Pergamino. La atribución "
               "corresponde al organismo de origen.", ""]
-        for org, names in sorted(tp.items()):
-            L.append(f"- **{org}** — {', '.join(sorted(names))}")
-
+        for org, names in sorted(third.items()):
+            L.append(f"- **{org}**: {', '.join(sorted(names))}")
     L += ["", "## Acceso", "",
-          "```python", "import duckdb",
-          'duckdb.sql("INSTALL spatial; LOAD spatial;")',
-          "", "df = duckdb.sql(\"\"\"",
-          '  SELECT * FROM read_parquet(',
-          f"    '{BASE}/{group}/{cols[0][0]}/{os.path.basename(next(a['href'] for a in (cols[0][1].get('assets') or {}).values() if 'data' in (a.get('roles') or [])))}')",
-          "  LIMIT 10",
-          '""").df()', "```", "",
+          "Cada colección tiene su README con el esquema, y su AGENTS.md con "
+          "consultas probadas. Por ejemplo:", "",
+          "```python", "import duckdb", "",
+          "con = duckdb.connect()",
+          'con.sql("INSTALL spatial; LOAD spatial; '
+          'INSTALL httpfs; LOAD httpfs;")',
+          f"con.sql(\"SELECT * FROM read_parquet('{data_url(cols[0]['id'])}') "
+          "LIMIT 10\").show()",
+          "```", "",
           "## Procedencia y licencia", "",
-          "Fuente original: [IDE Pergamino](https://geonode.pergamino.gob.ar/) — "
-          "Dirección de Sistemas de Información Georreferenciada, Municipalidad "
-          "de Pergamino.", "",
+          "Fuente: [GeoNode de la IDE Pergamino]"
+          "(https://geonode.pergamino.gob.ar/), Dirección de Sistemas de "
+          "Información Georreferenciada, Municipalidad de Pergamino.", "",
           "Licencia: CC BY-SA 4.0, según la declaración del municipio para su "
           "IDE. Las colecciones de terceros conservan la atribución a su "
-          "organismo de origen.", ""]
-    open(os.path.join(DST, group, "README.md"), "w", encoding="utf-8").write("\n".join(L))
+          "organismo de origen."]
+    write(catalog / group / "README.md", L)
 
 
-def write_group_agents(group):
+def group_agents(catalog: Path, group: str) -> None:
     title, desc = GROUP_DOCS[group]
-    cols = load_collections(group)
+    cols = group_collections(catalog, group)
     L = [f"# Guía para agentes — {title}", "", desc, "",
-         "Cada colección tiene su propio `AGENTS.md` con esquema, claves de "
-         "unión y consultas probadas. Este archivo es el índice del grupo.", "",
-         "## Colecciones", ""]
-    for leaf, col in cols:
-        n = rowcount(col)
-        n = f"{n:,}".replace(",", ".") if isinstance(n, int) else "?"
-        L.append(f"- [`{col['id']}`](./{leaf}/AGENTS.md) — {col['title']}, "
-                 f"{n} registros, {geom_of(col)}")
+         "Cada colección tiene su propio `AGENTS.md` con el esquema, los "
+         "valores medidos y consultas probadas. Este archivo es el índice del "
+         "grupo.", "", "## Colecciones", ""]
+    for col in cols:
+        leaf = col["id"].split("/")[-1]
+        facts = MEASURED.get(col["id"], {"geometry": "none"})
+        L.append(f"- [`{col['id']}`](./{leaf}/AGENTS.md): {col['title']}, "
+                 f"{GEOMETRY[facts['geometry']]}")
     L += ["", "## Notas de acceso", "",
-          "- Todos los datos están en GeoParquet 1.1.0, WKB, EPSG:4326, con "
-          "columna de cobertura `bbox` y ordenamiento espacial Hilbert. "
-          "Los filtros espaciales aprovechan las estadísticas por grupo de filas.",
-          "- Las capas tienen además PMTiles para visualización web y un estilo "
-          "MapLibre en `styles/default.json` derivado del SLD oficial del "
-          "GeoServer municipal.",
-          "- Los nombres de columna están en español y varias capas traen "
-          "`fuente` y `actualizacion` a nivel de registro, que es la señal de "
-          "vigencia más confiable.", ""]
-    open(os.path.join(DST, group, "AGENTS.md"), "w", encoding="utf-8").write("\n".join(L))
+          "- Los datos están en GeoParquet 1.1, geometría WKB en EPSG:4326, "
+          "con columna de cobertura `bbox` y orden espacial Hilbert. Un "
+          "filtro sobre `bbox` lee sólo los grupos de filas que lo cumplen.",
+          "- Las capas tienen además PMTiles y un estilo MapLibre en "
+          "`styles/default.json`, derivado del estilo SLD que publica GeoNode.",
+          "- Los nombres de columna están en español, tal como los publica la "
+          "fuente."]
+    write(catalog / group / "AGENTS.md", L)
 
 
-def write_root():
-    total = sum(len(GROUPS[g]) for g in GROUPS)
+def extra_groups(catalog: Path) -> list[tuple[str, dict]]:
+    out = []
+    for group in EXTRA_GROUPS:
+        path = catalog / group / "catalog.json"
+        if path.exists():
+            out.append((group, json.loads(path.read_text())))
+    return out
+
+
+def root_readme(catalog: Path) -> None:
     L = ["# IDE Pergamino — Infraestructura de Datos Espaciales", "",
          "Espejo cloud-native de la IDE del Municipio de Pergamino, Provincia "
-         "de Buenos Aires, Argentina.", "",
-         f"{total} colecciones en {len(GROUPS)} grupos temáticos, en GeoParquet "
-         "y PMTiles, consultables directamente desde la nube.", "",
-         "## Grupos", "",
-         "| Grupo | Colecciones | Contenido |", "|---|--:|---|"]
-    for g in GROUPS:
-        t, d = GROUP_DOCS[g]
-        d1 = d.split(".")[0]
-        L.append(f"| [{t}](./{g}/) | {len(GROUPS[g])} | {d1} |")
+         "de Buenos Aires, Argentina. Las capas vectoriales que publica el "
+         "municipio en GeoNode están aquí en GeoParquet y PMTiles, "
+         "consultables directamente desde la nube.", "",
+         "## Grupos", "", "| Grupo | Contenido |", "|---|---|"]
+    for group in GROUPS:
+        t, d = GROUP_DOCS[group]
+        L.append(f"| [{t}](./{group}/) | {d.split('. ')[0].rstrip('.')} |")
+    for group, cat in extra_groups(catalog):
+        L.append(f"| [{cat['title']}](./{group}/) | "
+                 f"{cat['description'].split('. ')[0].rstrip('.')} |")
     L += ["", "## Acceso rápido", "",
-          "```python", "import duckdb",
-          'duckdb.sql("INSTALL spatial; LOAD spatial;")', "",
-          "# Los barrios de Pergamino",
-          'duckdb.sql("""',
-          f"  SELECT * FROM read_parquet('{BASE}/limites/barrios/publico_barrios.parquet')",
-          '""").df()', "```", "",
+          "```python", "import duckdb", "",
+          "con = duckdb.connect()",
+          'con.sql("INSTALL spatial; LOAD spatial; '
+          'INSTALL httpfs; LOAD httpfs;")',
+          f"con.sql(\"SELECT nombre FROM read_parquet('{data_url(BARRIOS)}')"
+          "\").show()",
+          "```", "",
           "## Procedencia", "",
-          "Los datos son producidos y publicados por la **Dirección de Sistemas "
-          "de Información Georreferenciada (DSIG)** de la Municipalidad de "
-          "Pergamino, a través de su GeoServer y su portal GeoNode:", "",
+          "Los datos vectoriales son producidos y publicados por la "
+          "**Dirección de Sistemas de Información Georreferenciada (DSIG)** "
+          "de la Municipalidad de Pergamino, en su portal GeoNode:", "",
           "- Geoportal: https://geonode.pergamino.gob.ar/",
-          "- Geoservicios: https://ide.pergamino.gob.ar:8443/geoserver/",
+          "- Geoservicios: https://geonode.pergamino.gob.ar/geoserver/ows",
           "- Página institucional: https://pergamino.ar/servicios/ide-pergamino/",
           "",
           "Este catálogo **no es la fuente original**. Es un espejo optimizado "
           "para consulta en la nube. Para el dato autoritativo y actualizado, "
-          "consultar la IDE de Pergamino.", "",
+          "consultar la IDE de Pergamino. Un proceso semanal compara cada capa "
+          "con GeoNode y publica una versión nueva cuando los datos cambian.",
+          "",
           "Varias capas son datos de organismos nacionales y provinciales "
-          "(INTA, IGN, INDEC, RENABAP, CONICET, INA, ARBA, BAHRA, Correo "
-          "Argentino) rehospedados por el municipio. Cada colección atribuye a "
-          "su organismo de origen.", "",
+          "rehospedados por el municipio. Cada colección atribuye a su "
+          "organismo de origen.", "",
           "## Licencia", "",
           "**CC BY-SA 4.0**, según la declaración de la Municipalidad de "
-          "Pergamino para su IDE:", "",
-          "> Los datos dispuestos en nuestra Infraestructura de Datos "
-          "Espaciales estan licenciados mediante Creative Commons 4.0 BY-SA, "
-          "lo cual permite utilizar, compartir y adaptar este material siempre "
-          "que reconozca atribución y permita la misma licencia en sus "
-          "derivados.", "",
+          "Pergamino para su IDE:", "", LICENSE_QUOTE, "",
           "La licencia cubre los datos, no la marca institucional del "
           "municipio. Las capas de terceros conservan los términos de su "
           "organismo de origen.", "",
-          "## Advertencia del publicador", "",
-          "> La información contenida en la IDE se encuentra en constante "
-          "actualización por parte de las distintas áreas responsables de su "
-          "generación, por lo tanto, podria contener diferencias e "
-          "inconsistencias en relación al objeto o fenómeno representado, "
-          "tanto espacial como temporalmente.", "",
-          "GeoNode declara `maintenance_frequency: notPlanned` para más de la "
-          "mitad del catálogo. La mayor parte de los datos no tiene una "
-          "actualización programada.", "",
-          ]
-    L += ["", "## Cobertura", "",
-          "Este espejo replica la mayor parte de las capas vectoriales "
-          "publicadas por la IDE de Pergamino. Un pequeño número no se "
-          "replica. Para consultas sobre la cobertura, escribir a "
-          "nlebovits@pm.me.", ""]
-    open(os.path.join(DST, "README.md"), "w", encoding="utf-8").write("\n".join(L))
+          "## Advertencia del publicador", "", WARNING_QUOTE, "",
+          "## Cobertura", "",
+          "Este espejo replica la mayor parte de las capas vectoriales que "
+          "GeoNode publica. Un pequeño número no se replica. Para consultas "
+          "sobre la cobertura, escribir a nlebovits@pm.me."]
+    write(catalog / "README.md", L)
 
 
-def write_root_agents():
+def root_agents(catalog: Path) -> None:
     L = ["# Guía para agentes — IDE Pergamino", "",
          "Espejo cloud-native de la IDE del Municipio de Pergamino "
-         "(Buenos Aires, Argentina). "
-         f"{sum(len(v) for v in GROUPS.values())} colecciones en "
-         f"{len(GROUPS)} grupos temáticos.", "",
+         "(Buenos Aires, Argentina), con las capas vectoriales que el "
+         "municipio publica en GeoNode.", "",
          "## Cómo está organizado", "",
-         "El catálogo raíz enlaza a 13 subcatálogos temáticos; cada uno enlaza "
-         "a sus colecciones. Los identificadores son rutas: `catastro/parcela`, "
-         "`demografia/nbi`, `ambiente-y-agro/arbolado`.", ""]
-    for g in GROUPS:
-        t, _ = GROUP_DOCS[g]
-        L.append(f"- [`{g}/`](./{g}/AGENTS.md) — {t}, {len(GROUPS[g])} colecciones")
+         "El catálogo raíz enlaza a subcatálogos temáticos, y cada uno enlaza "
+         "a sus colecciones. Los identificadores son rutas: "
+         "`catastro/parcela`, `demografia/nbi`, `ambiente-y-agro/arbolado`.",
+         ""]
+    for group in GROUPS:
+        t, _ = GROUP_DOCS[group]
+        L.append(f"- [`{group}/`](./{group}/AGENTS.md): {t}")
+    for group, cat in extra_groups(catalog):
+        L.append(f"- [`{group}/`](./{group}/AGENTS.md): {cat['title']}")
     L += ["", "## Formato", "",
-          "- **GeoParquet 1.1.0**, geometría WKB en `geometry`, EPSG:4326, "
+          "- **GeoParquet 1.1**, geometría WKB en `geometry`, EPSG:4326, "
           "columna de cobertura `bbox` (struct xmin/ymin/xmax/ymax), "
-          "ordenamiento espacial Hilbert, compresión ZSTD.",
+          "orden espacial Hilbert, compresión ZSTD.",
           "- **PMTiles** para visualización web, con estilo MapLibre en "
-          "`styles/default.json` derivado del SLD oficial del municipio.",
-          "- Nombres de columna en español.", "",
+          "`styles/default.json` derivado del estilo SLD que publica GeoNode.",
+          "- Nombres de columna en español, tal como los publica la fuente.",
+          "- Cada `collection.json` registra sus versiones como activos "
+          "`version-*`. La versión actual de una colección siempre está en "
+          "`<grupo>/<colección>/<colección>.parquet`.", "",
           "## Consulta", "",
-          "```python", "import duckdb",
-          'duckdb.sql("INSTALL spatial; LOAD spatial;")',
-          'duckdb.sql("""',
-          "  SELECT nombre, ST_Area(geometry) AS area",
-          f"  FROM read_parquet('{BASE}/limites/barrios/publico_barrios.parquet')",
-          "  ORDER BY area DESC LIMIT 5",
-          '""").df()', "```", "",
-          "## Claves de unión útiles", "",
-          "- `partida` — número de partida inmobiliaria, une las capas "
-          "catastrales entre sí.",
-          "- `id_calle` — identificador de calle municipal, une "
-          "`vialidad/callejero` con `vialidad/callejero_listado`.",
-          "- `clavera` / `radio_id` — radio censal INDEC, une las capas de "
-          "`demografia/` entre sí.",
-          "- `cpa` — Código Postal Argentino, único por lado de manzana; "
-          "`vialidad/callejero` trae `cpa_par` y `cpa_impar`.", "",
-          "## Advertencias", "",
+          "```sql",
+          "SELECT nombre, ST_Area(ST_Transform(geometry, 'EPSG:4326', "
+          "'EPSG:22175', always_xy := true)) / 10000 AS hectareas",
+          f"FROM read_parquet('{data_url(BARRIOS)}')",
+          "ORDER BY hectareas DESC",
+          "LIMIT 5;",
+          "```", "",
+          "## Claves de unión", "",
+          "Medidas en los datos: se listan las que tienen valores en común "
+          "entre colecciones. Cada `AGENTS.md` de colección muestra la unión "
+          "concreta.", ""]
+    keys = {}
+    for collection, facts in MEASURED.items():
+        for key, target in facts["joins"].items():
+            keys.setdefault((key, target), []).append(collection)
+    for (key, target), colls in sorted(keys.items()):
+        L.append(f"- `{key}` une `{target}` con: "
+                 + ", ".join(f"`{c}`" for c in sorted(colls)) + ".")
+    L += ["", "## Advertencias", "",
           "- **`limites/zonas_electorales_celp` no es electoral en sentido "
-          "político.** CELP es la Cooperativa Eléctrica Limitada de Pergamino; "
-          "son los distritos de su gobernanza interna.",
-          "- **Las capas `cobertura_agua_*` y `cobertura_cloacas_*` usan "
-          "períodos de gestión de gobierno, no ventanas de validez del dato.** "
-          "`cobertura_agua_de_2023_a_2027` es la cobertura de la gestión "
-          "actual, no una proyección.",
-          "- **`demografia/nbi`** se titula upstream \"Niveles Básicos "
-          "Insatisfechos\"; el término correcto es *Necesidades* Básicas "
-          "Insatisfechas (INDEC).",
-          "- La fecha de los metadatos es de republicación, no del contenido. "
+          "político.** GeoNode la describe como \"Capa de zonas electorales "
+          "de la Cooperativa Eléctrica Limitada de Pergamino\".",
+          "- **`demografia/nbi`**: la descripción en GeoNode dice \"Niveles "
+          "Básicos Insatisfechos\". El término del INDEC, que usa el título, "
+          "es *Necesidades* Básicas Insatisfechas.",
+          "- La fecha de los metadatos es de publicación, no del contenido. "
           "Varias capas traen `fuente` y `actualizacion` por registro, que es "
-          "la señal de vigencia más confiable. `ambiente-y-agro/arbolado` y "
-          "`vialidad/tipo_de_vereda` provienen del censo de 2013.",
-          "- Cerca de 46 colecciones son datos de terceros (INTA, IGN, INDEC, "
+          "la señal de vigencia más confiable. `ambiente-y-agro/arbolado` "
+          "proviene del censo de arbolado de 2013.",
+          "- Varias colecciones son datos de terceros (INTA, IGN, INDEC, "
           "RENABAP, CONICET, INA, ARBA, BAHRA, Correo Argentino) rehospedados "
-          "por el municipio. Atribuir al organismo de origen, no al municipio.", ""]
-    open(os.path.join(DST, "AGENTS.md"), "w", encoding="utf-8").write("\n".join(L))
+          "por el municipio. Atribuir al organismo de origen, no al "
+          "municipio."]
+    write(catalog / "AGENTS.md", L)
+
+
+def main() -> int:
+    catalog = Path(sys.argv[1])
+    for collection in sorted(SOURCES):
+        if (catalog / collection / "collection.json").exists():
+            collection_readme(catalog, collection)
+            collection_agents(catalog, collection)
+    for group in GROUPS:
+        group_readme(catalog, group)
+        group_agents(catalog, group)
+    root_readme(catalog)
+    root_agents(catalog)
+    print(f"wrote docs for {len(SOURCES)} collections, {len(GROUPS)} groups "
+          "and the root")
+    return 0
 
 
 if __name__ == "__main__":
-    for g in GROUPS:
-        write_group_readme(g)
-        write_group_agents(g)
-        print(f"  {g}: README.md + AGENTS.md")
-    write_root()
-    write_root_agents()
-    print("  root: README.md + AGENTS.md")
+    raise SystemExit(main())

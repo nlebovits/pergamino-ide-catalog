@@ -18,6 +18,14 @@ SLUG=$(echo "$COLL" | tr '/' '_')
 OUT="$WORK/$SLUG"
 mkdir -p "$OUT"
 
+# A window from windows.json, keyed by collection id, unless FRAME_BBOX is set.
+ID="${COLL#catalog/}"
+if [ -z "${FRAME_BBOX:-}" ]; then
+  FRAME_BBOX=$(python3 -c "import json,sys;w=json.load(open(sys.argv[1])).get(sys.argv[2]);print(','.join(map(str,w)) if w else '')" \
+    "$SCRIPT_DIR/windows.json" "$ID")
+fi
+export FRAME_BBOX
+
 INFO=$(python3 "$SCRIPT_DIR/frame.py" "$COLL" "$OUT" 2>/dev/null)
 if [ -z "$INFO" ] || [ "$INFO" = "NO_PMTILES" ]; then
   echo -e "$COLL\tSKIP\tno-pmtiles\t\t"
@@ -66,8 +74,8 @@ if [ -n "$EXISTING" ]; then
   FINAL="$EXISTING"
 else
   PM=$(ls "$COLL"/*.pmtiles 2>/dev/null | head -1)
-  FINAL="$COLL/$(basename "${PM%.pmtiles}").thumb.png"
-  cp "$OUT/full.png" "$FINAL"
+  FINAL="$COLL/$(basename "${PM%.pmtiles}").thumb.jpg"
+  convert "$OUT/full.png" -quality 90 "$FINAL"
 fi
 
 echo -e "$COLL\t$GATE\t$(stat -c%s "$FINAL")\t$FILL\t$ASPECT"

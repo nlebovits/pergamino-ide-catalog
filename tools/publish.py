@@ -27,11 +27,26 @@ unpublish it. Delete the object yourself if that is what you meant.
 
 If boto3 is missing or the listing fails, every file is treated as changed and
 a dry run still works offline. It never silently skips.
+
+Uploads go in a fixed order: archived versions (``versions/``) first, then
+other data files, then metadata. A reader never sees a collection.json that
+names a file not yet uploaded, and a current file is never replaced before
+the archive of the version it replaces is in the bucket. Inside each of the
+three groups, ``PUBLISH_WORKERS`` files (default 16) upload at once; a
+group starts only when the one before it is complete.
+
+``PUBLISH_WRITE_PREFIX`` replaces ``write_prefix`` for the scheduled refresh,
+which signs in to the Source Cooperative data proxy and not to the raw
+bucket. It does not widen the walk. When ``AWS_ENDPOINT_URL_S3`` is set,
+boto3 sends every call to that endpoint and this script asks for path-style
+addressing, which the proxy requires. The optional ``profile`` and
+``region`` keys select the AWS profile for a publish by hand.
 """
 from __future__ import annotations
 
 import argparse
 import hashlib
+import os
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -68,6 +83,13 @@ DEFAULT_TYPE = "application/octet-stream"
 STYLE_TYPE = "application/vnd.mapbox.style+json"
 
 
+# Environment variables that replace a config key. The scheduled refresh sets
+# them; a maintainer publishing by hand leaves them unset.
+ENV_OVERRIDES = {"PUBLISH_WRITE_PREFIX": "write_prefix"}
+
+METADATA_SUFFIXES = {".json", ".md", ".txt", ".yaml", ".xml"}
+
+
 @dataclass(frozen=True)
 class Upload:
     """One local file and the object key it publishes to."""
@@ -91,6 +113,9 @@ def load_config(path: Path = CONFIG) -> dict[str, str]:
             continue
         key, value = line.split(":", 1)
         config[key.strip()] = value.strip().strip("'\"")
+    for variable, key in ENV_OVERRIDES.items():
+        if os.environ.get(variable):
+            config[key] = os.environ[variable]
     missing = {"write_prefix", "public_base", "publish_dir"} - config.keys()
     if missing:
         sys.exit(f"{path.name} is missing: {', '.join(sorted(missing))}")
@@ -134,6 +159,36 @@ def is_publishable(rel: Path) -> bool:
     return not any(part.startswith(".") for part in rel.parts)
 
 
+def upload_rank(rel: Path) -> int:
+    """0 for an archived version, 1 for other data, 2 for metadata."""
+    if "versions" in rel.parts[:-1]:
+        return 0
+    if rel.suffix.lower() in METADATA_SUFFIXES:
+        return 2
+    return 1
+
+
+def aws_session(config: dict[str, str]):
+    """The boto3 session every AWS call is built from."""
+    import boto3
+
+    return boto3.Session(profile_name=config.get("profile") or None,
+                         region_name=config.get("region") or None)
+
+
+def s3_client(session):
+    """An S3 client, path-style when an endpoint is set.
+
+    The Source data proxy names the account as the bucket
+    (``s3://<account>/<product>/...``) and serves no per-bucket hostnames.
+    """
+    if not os.environ.get("AWS_ENDPOINT_URL_S3"):
+        return session.client("s3")
+    from botocore.config import Config
+
+    return session.client("s3", config=Config(s3={"addressing_style": "path"}))
+
+
 def collect_uploads(config: dict[str, str], root: Path = ROOT) -> list[Upload]:
     """Every file that would be uploaded, in sorted order.
 
@@ -153,6 +208,7 @@ def collect_uploads(config: dict[str, str], root: Path = ROOT) -> list[Upload]:
             continue
         key = f"{prefix}/{rel.as_posix()}" if prefix else rel.as_posix()
         uploads.append(Upload(path, key, content_type_for(path)))
+    uploads.sort(key=lambda u: (upload_rank(Path(u.key)), u.key))
     return uploads
 
 
@@ -181,15 +237,16 @@ def is_unchanged(upload: Upload, index: dict[str, tuple[int, str]]) -> bool:
     return etag == md5(upload.local)
 
 
-def remote_index(bucket: str, prefix: str) -> dict[str, tuple[int, str]]:
+def remote_index(bucket: str, prefix: str,
+                 config: dict[str, str]) -> dict[str, tuple[int, str]]:
     """Size and ETag for every object under the prefix, or {} when unreadable."""
-    try:
-        import boto3
-    except ImportError:
+    import importlib.util
+
+    if importlib.util.find_spec("boto3") is None:
         print("note: boto3 is not installed; treating every file as changed")
         return {}
     try:
-        client = boto3.client("s3")
+        client = s3_client(aws_session(config))
         index = {}
         paginator = client.get_paginator("list_objects_v2")
         for page in paginator.paginate(Bucket=bucket, Prefix=prefix):
@@ -234,7 +291,7 @@ def main() -> int:
               file=sys.stderr)
         return 1
 
-    index = {} if args.force else remote_index(bucket, prefix)
+    index = {} if args.force else remote_index(bucket, prefix, config)
     changed = [u for u in uploads if args.force or not is_unchanged(u, index)]
 
     print(f"publish_dir: {config['publish_dir']}/")
@@ -254,17 +311,26 @@ def main() -> int:
         print("nothing to upload")
         return 0
 
-    import boto3
+    from concurrent.futures import ThreadPoolExecutor
+    from itertools import groupby
 
-    client = boto3.client("s3", region_name=config.get("region"))
-    for upload in changed:
+    client = s3_client(aws_session(config))
+    workers = int(os.environ.get("PUBLISH_WORKERS", "16"))
+
+    def send(upload: Upload) -> str:
         client.upload_file(
             str(upload.local),
             bucket,
             upload.key,
             ExtraArgs={"ContentType": upload.content_type},
         )
-        print(f"  uploaded  {upload.key}")
+        return upload.key
+
+    # changed keeps collect_uploads' rank order, so each group is contiguous.
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for _, group in groupby(changed, key=lambda u: upload_rank(Path(u.key))):
+            for key in pool.map(send, list(group)):
+                print(f"  uploaded  {key}")
     print(f"\nuploaded {len(changed)} file(s)")
     return 0
 

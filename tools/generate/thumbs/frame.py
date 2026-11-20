@@ -93,13 +93,20 @@ def main():
     coll = sys.argv[1]
     outdir = sys.argv[2]
     use_basemap = (os.environ.get("USE_BASEMAP", "true") == "true")
+    # Carto's light basemap now answers every request with an "API KEY
+    # REQUIRED" placeholder tile, so the default is Esri's light grey canvas.
     basemap = os.environ.get(
         "BASEMAP_URL",
-        "https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png")
+        "https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/"
+        "World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}")
     opacity = float(os.environ.get("BASEMAP_OPACITY", "0.55"))
 
     c = json.load(open(os.path.join(coll, "collection.json"), encoding="utf-8"))
     bbox = c["extent"]["spatial"]["bbox"][0]
+    # FRAME_BBOX="xmin,ymin,xmax,ymax" frames a dense window instead of the
+    # whole extent, for a layer whose features vanish at the partido scale.
+    if os.environ.get("FRAME_BBOX"):
+        bbox = [float(v) for v in os.environ["FRAME_BBOX"].split(",")]
     fb, fill, aspect = frame(bbox)
 
     pm = [f for f in os.listdir(coll) if f.endswith(".pmtiles")]
