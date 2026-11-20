@@ -49,7 +49,7 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
@@ -96,7 +96,7 @@
       "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
     }
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "pmtiles:min_zoom": 0,
   "pmtiles:max_zoom": 15,
   "pmtiles:tile_type": "mvt",
@@ -164,7 +164,9 @@
       "file:checksum": "12206eb2d44cc196a027d6beea10fb7ce8e3139c794ddbe0bcf91c620f9b01a5d2f1",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "legends/source": {
       "href": "./legends/source.png",
@@ -174,7 +176,8 @@
         "legend"
       ],
       "file:size": 1427,
-      "file:checksum": "122023ac3c0188d06f8992c2e4c1be44583a71bee715e8fa6786820fa6258796c293"
+      "file:checksum": "122023ac3c0188d06f8992c2e4c1be44583a71bee715e8fa6786820fa6258796c293",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
     "documentation": {
       "href": "./README.md",
@@ -183,7 +186,9 @@
       "file:checksum": "12202f6c205fd602e2b1faff3b9400cddb2e1a5ca30fd1c641fbf192c76c998eb014",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_isohietas_precipitaciones_medias_anuales_pergamino_geointa-tiles": {
       "href": "./publico_isohietas_precipitaciones_medias_anuales_pergamino_geointa.pmtiles",
@@ -193,7 +198,8 @@
       "file:checksum": "1220642764d2cf515f7f1ade75c541e18ebd7278f0194eed77641987fcdf6e07bb70",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -204,7 +210,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_isohietas_precipitaciones_medias_anuales_pergamino_geointa.thumb.jpg",
@@ -213,7 +220,9 @@
         "thumbnail"
       ],
       "file:size": 236333,
-      "file:checksum": "1220df6616260e80e26ad07755e224431bfcc00376438b2db2eb43193860e6f4552b"
+      "file:checksum": "1220df6616260e80e26ad07755e224431bfcc00376438b2db2eb43193860e6f4552b",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

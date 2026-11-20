@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 86,
   "table:row_count": 86,
@@ -153,7 +153,9 @@
       "file:checksum": "1220af53bda11c052be3c4d79dde4573d9ccb6adcce1c2018e71406faace83bc255a",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -162,7 +164,9 @@
       "file:checksum": "12207d5eb5168478c4741cefc62b13f97aa6eacb6373dda9f81bd6a98e9757d52824",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_bocas_pago_tasas-tiles": {
       "href": "./publico_bocas_pago_tasas.pmtiles",
@@ -172,7 +176,8 @@
       "file:checksum": "1220ddc6374eb27821b6c899e5f364233f8296571b4d9ad226bd8d1916e44853bd21",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -183,7 +188,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_bocas_pago_tasas.thumb.jpg",
@@ -192,7 +198,9 @@
         "thumbnail"
       ],
       "file:size": 34968,
-      "file:checksum": "12205602b8e6bb97b278fd86bf8e3af848bbd508f7201b6598a225242126be17ea78"
+      "file:checksum": "12205602b8e6bb97b278fd86bf8e3af848bbd508f7201b6598a225242126be17ea78",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

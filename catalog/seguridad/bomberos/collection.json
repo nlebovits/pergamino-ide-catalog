@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPoint",
   "geoparquet:feature_count": 2,
   "table:row_count": 2,
@@ -157,7 +157,9 @@
       "file:checksum": "1220e6783caa4ae5c892ff0f9f4fde8a3b605fd037961aa921a46a9a511f0500da24",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -166,7 +168,9 @@
       "file:checksum": "12203ec4655d0212a02153700b4eddd061c52e2bd950e3ec6d822fb1d91d7dacc9dc",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_bomberos-tiles": {
       "href": "./publico_bomberos.pmtiles",
@@ -175,8 +179,9 @@
       "file:size": 6730,
       "file:checksum": "1220cad56fa8517cbbc31afab383114557e5bfb6642a70e1dd546b91dfe0b42d3d17",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -187,7 +192,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_bomberos.thumb.jpg",
@@ -196,7 +202,9 @@
         "thumbnail"
       ],
       "file:size": 51610,
-      "file:checksum": "122041b6f8dba5cee7b1128a8c7e188218afde0d3ef5114d0564799ebdc2d4381e58"
+      "file:checksum": "122041b6f8dba5cee7b1128a8c7e188218afde0d3ef5114d0564799ebdc2d4381e58",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

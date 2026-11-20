@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 11,
   "table:row_count": 11,
@@ -145,7 +145,9 @@
       "file:checksum": "12200b946df452878dd846f355bc6f5a9ff3ede248c7dcd2170bdd646a0ceacc46f4",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -154,7 +156,9 @@
       "file:checksum": "1220730481f9fbba26a1664699e0a083d5030a8baa020d50dd9574ae1373d9a90a42",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_centros_de_desarrollo_comunitario-tiles": {
       "href": "./publico_centros_de_desarrollo_comunitario.pmtiles",
@@ -163,8 +167,9 @@
       "file:size": 12308,
       "file:checksum": "1220d18d9b4f9122817b48e81cc78bb6882d5b607c13cf8d26e611ae88fa3b42fb55",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -175,7 +180,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_centros_de_desarrollo_comunitario.thumb.jpg",
@@ -184,7 +190,9 @@
         "thumbnail"
       ],
       "file:size": 42099,
-      "file:checksum": "1220dafea93794e0be5275a4853beab563c45e8c90c2ee3388a7523a96ee18ba9972"
+      "file:checksum": "1220dafea93794e0be5275a4853beab563c45e8c90c2ee3388a7523a96ee18ba9972",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

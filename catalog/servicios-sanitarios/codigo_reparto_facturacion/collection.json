@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiLineString",
   "geoparquet:feature_count": 11703,
   "table:row_count": 11703,
@@ -169,7 +169,9 @@
       "file:checksum": "122083adcb5ceb3ad2b8d5d6bbdf7b66fe45d6cac84510f89cb3065d53d95429baa3",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -178,7 +180,9 @@
       "file:checksum": "12205e4098f37471446d2c9b81fe8791db58217ed99985d5266d2078b0ad888df0da",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_codigo_reparto_facturacion-tiles": {
       "href": "./publico_codigo_reparto_facturacion.pmtiles",
@@ -188,7 +192,8 @@
       "file:checksum": "1220b04068d2e7c878aca081e3256884cf5da9631defb4c208f950b4927f751f1dea",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -199,7 +204,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_codigo_reparto_facturacion.thumb.jpg",
@@ -208,7 +214,9 @@
         "thumbnail"
       ],
       "file:size": 100503,
-      "file:checksum": "122026bcbcbd2ef3089706da784e657150683820d37dcbec4b9d86da6fffa83a87c3"
+      "file:checksum": "122026bcbcbd2ef3089706da784e657150683820d37dcbec4b9d86da6fffa83a87c3",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

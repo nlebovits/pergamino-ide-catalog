@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 202,
   "table:row_count": 202,
@@ -153,7 +153,9 @@
       "file:checksum": "122039271ac52bf86289259b34df71b8ad8a965d203e522b496c6b5c7da034b6fc08",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -162,7 +164,9 @@
       "file:checksum": "12209f0e2185113d5b3a2e7148680b3f5872c00fa7a26d31eb4e23e05f89cc6c2b9f",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_dependencias_municipales-tiles": {
       "href": "./publico_dependencias_municipales.pmtiles",
@@ -172,7 +176,8 @@
       "file:checksum": "1220d618d2864f2350420fa5f881057d133b74ea09fc6aef1edc8c0dea4d02754c36",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -183,7 +188,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_dependencias_municipales.thumb.jpg",
@@ -192,7 +198,9 @@
         "thumbnail"
       ],
       "file:size": 31572,
-      "file:checksum": "122057137bf696dc55c3d2db7def024c3521ebd5b341405b738755e21342ac7ced3b"
+      "file:checksum": "122057137bf696dc55c3d2db7def024c3521ebd5b341405b738755e21342ac7ced3b",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

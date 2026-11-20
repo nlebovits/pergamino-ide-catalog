@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "LineString",
   "geoparquet:feature_count": 42,
   "table:row_count": 42,
@@ -169,7 +169,9 @@
       "file:checksum": "122097c8f5c5c2a7c2cffb96878f4cc4fad8983dafbc2aff449a059176d17ddaab0c",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -178,7 +180,9 @@
       "file:checksum": "12205e8c9e2bc3b51fa73ec393761d1cece578e26759fae6eece96127d972a0b3589",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_colectoras_cloacales_maximas-tiles": {
       "href": "./publico_colectoras_cloacales_maximas.pmtiles",
@@ -188,7 +192,8 @@
       "file:checksum": "122094fd93e53f72ecb3a48d2d5bc8b824806d0294c689a5b844d549a22a869b1d10",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -199,7 +204,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_colectoras_cloacales_maximas.thumb.jpg",
@@ -208,7 +214,9 @@
         "thumbnail"
       ],
       "file:size": 83175,
-      "file:checksum": "12206d22f7047449539bd3b61d8df675d74b19b87ac67c6d63d72eff0dce93a179b3"
+      "file:checksum": "12206d22f7047449539bd3b61d8df675d74b19b87ac67c6d63d72eff0dce93a179b3",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

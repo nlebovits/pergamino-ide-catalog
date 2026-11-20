@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPoint",
   "geoparquet:feature_count": 52,
   "table:row_count": 52,
@@ -179,7 +179,9 @@
       "file:checksum": "1220b032e0b630352cc442810233426951f011ef5ee2afcc900797f3e890af570221",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -188,7 +190,9 @@
       "file:checksum": "122017be2cf8e0c9e886f65bae6c38614ab4d5250772cb6963d82c4fa2419c4d3fa6",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_dependencias_seguridad-tiles": {
       "href": "./publico_dependencias_seguridad.pmtiles",
@@ -197,8 +201,9 @@
       "file:size": 41943,
       "file:checksum": "1220e3eedac594144a8b562c8e9025e01e7b3c3b95c17bb8e170bae3ec0c552d3b57",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -209,7 +214,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_dependencias_seguridad.thumb.jpg",
@@ -218,7 +224,9 @@
         "thumbnail"
       ],
       "file:size": 35989,
-      "file:checksum": "1220e2fc022b897e2d525f0c0a333d49397cf4448b092e197f43eb4fb8a26e357120"
+      "file:checksum": "1220e2fc022b897e2d525f0c0a333d49397cf4448b092e197f43eb4fb8a26e357120",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

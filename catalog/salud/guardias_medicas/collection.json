@@ -49,7 +49,7 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
@@ -84,7 +84,7 @@
       "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
     }
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "pmtiles:min_zoom": 0,
   "pmtiles:max_zoom": 15,
   "pmtiles:tile_type": "mvt",
@@ -145,7 +145,9 @@
       "file:checksum": "12207aec34b6fdd85d46178ff0bddef912346c97eb13a08e3a4108e1a16913caace3",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -156,7 +158,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
@@ -166,7 +169,8 @@
         "legend"
       ],
       "file:size": 102,
-      "file:checksum": "12206b071e3b00232b6e969192ac2edb0c5c81c245c269cc480ec5e4eac3215a6938"
+      "file:checksum": "12206b071e3b00232b6e969192ac2edb0c5c81c245c269cc480ec5e4eac3215a6938",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
     "documentation": {
       "href": "./README.md",
@@ -175,7 +179,9 @@
       "file:checksum": "12204abcf4bd493957cad893ab7eba81d30a21732e8158de1671c8fba38befa6182c",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_guardias_medicas-tiles": {
       "href": "./publico_guardias_medicas.pmtiles",
@@ -184,8 +190,9 @@
       "file:size": 5149,
       "file:checksum": "1220033409da42f9a29cd8de2e4f4c8a364e44543330900b3f8b231e0454f485e2c2",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "thumbnail": {
       "href": "./publico_guardias_medicas.thumb.jpg",
@@ -194,7 +201,9 @@
         "thumbnail"
       ],
       "file:size": 102709,
-      "file:checksum": "1220d6df77f832ba34b30870732ac7198f72d7c2ebc5ca3306485fa327a6fa9b2b40"
+      "file:checksum": "1220d6df77f832ba34b30870732ac7198f72d7c2ebc5ca3306485fa327a6fa9b2b40",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

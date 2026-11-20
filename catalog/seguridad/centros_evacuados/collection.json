@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 5,
   "table:row_count": 5,
@@ -153,7 +153,9 @@
       "file:checksum": "122049a29742190cf219dfa7267ca151dfb8a85d2e71bad1273fd2c8668878ae096d",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -162,7 +164,9 @@
       "file:checksum": "122081733f12cf9964fc525d7a14e6a7e8e77fc2ba3b2a71257c95c42132bd120777",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_centros_evacuados-tiles": {
       "href": "./publico_centros_evacuados.pmtiles",
@@ -171,8 +175,9 @@
       "file:size": 8010,
       "file:checksum": "122015a3908de114c67313f91fe0e0aace112edbde4d908eb711fcadf61f0c65c19e",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -183,7 +188,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_centros_evacuados.thumb.jpg",
@@ -192,7 +198,9 @@
         "thumbnail"
       ],
       "file:size": 106543,
-      "file:checksum": "1220e4783f614e79f7fb8df540e3cef64ca4593cc192b74b18be4dbbcecc43cf3271"
+      "file:checksum": "1220e4783f614e79f7fb8df540e3cef64ca4593cc192b74b18be4dbbcecc43cf3271",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

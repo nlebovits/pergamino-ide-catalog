@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "LineString",
   "geoparquet:feature_count": 10,
   "table:row_count": 10,
@@ -153,7 +153,9 @@
       "file:checksum": "12206e241e27aa86dd4371a962105c2c5c2f9da6abc89bbc9dfd6663499739ba3b11",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -162,7 +164,9 @@
       "file:checksum": "12206d1e5622ed8c7b0534e000a62a5fc4b1dd1d1f76851ee13bae18ac4092bc2ffc",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_cicloturismo_rural-tiles": {
       "href": "./publico_cicloturismo_rural.pmtiles",
@@ -171,8 +175,9 @@
       "file:size": 162582,
       "file:checksum": "1220ce9927000d666f5443f6dcc828a519069a1ec79f086e9536ecd87efea87bf60a",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -183,7 +188,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_cicloturismo_rural.thumb.jpg",
@@ -192,7 +198,9 @@
         "thumbnail"
       ],
       "file:size": 72658,
-      "file:checksum": "122029da974b60fcc994b0e3b7bccd6041821ed576b4713ba38c1fdd5c2008de5b90"
+      "file:checksum": "122029da974b60fcc994b0e3b7bccd6041821ed576b4713ba38c1fdd5c2008de5b90",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

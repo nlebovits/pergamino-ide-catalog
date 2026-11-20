@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 40,
   "table:row_count": 40,
@@ -225,7 +225,9 @@
       "file:checksum": "122010476f0c82ae1e4374d53bb6dee89a03b80a469c9135058258446b1e93485701",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -234,7 +236,9 @@
       "file:checksum": "1220eb441da35121f318e94675b41043408d6cec49ab490a34270d5341eea98a1687",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_aeropuertos-tiles": {
       "href": "./publico_aeropuertos.pmtiles",
@@ -243,8 +247,9 @@
       "file:size": 134732,
       "file:checksum": "1220e574d42a64438e284dbf9455af485f48167c8a28dd5fca1b74e8f4bb2614aef1",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -255,7 +260,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_aeropuertos.thumb.jpg",
@@ -264,7 +270,9 @@
         "thumbnail"
       ],
       "file:size": 62631,
-      "file:checksum": "1220d1b92bf47e3194d8202f4138d2923636c3b8193bfae361c7f5a719c4ca2e854f"
+      "file:checksum": "1220d1b92bf47e3194d8202f4138d2923636c3b8193bfae361c7f5a719c4ca2e854f",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

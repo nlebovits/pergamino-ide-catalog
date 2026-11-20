@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "LineString",
   "geoparquet:feature_count": 848,
   "table:row_count": 848,
@@ -143,7 +143,9 @@
       "file:checksum": "1220ca4de75a0620f7da419a0bf857cec93daa3bb20aab53070d52bfae8522d1bb87",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -152,7 +154,9 @@
       "file:checksum": "12203c1c20252da5f390619216ae8e588d7c6be653fc2a809e9545152a7aa497e9eb",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_curvas_nivel_cuenca-tiles": {
       "href": "./publico_curvas_nivel_cuenca.pmtiles",
@@ -162,7 +166,8 @@
       "file:checksum": "122002f74bf9ccb00daaa81004c7d5c727e8d31e41266dea72acf6b5b08a9933b3ef",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -173,7 +178,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_curvas_nivel_cuenca.thumb.jpg",
@@ -182,7 +188,9 @@
         "thumbnail"
       ],
       "file:size": 212935,
-      "file:checksum": "122051f7ec06bb0015dd9489ae240c8e12807598f1afca7ddae340dcb987c09c8a9a"
+      "file:checksum": "122051f7ec06bb0015dd9489ae240c8e12807598f1afca7ddae340dcb987c09c8a9a",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

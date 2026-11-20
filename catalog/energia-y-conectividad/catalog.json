@@ -2,7 +2,7 @@
   "type": "Catalog",
   "stac_version": "1.1.0",
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json"
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json"
   ],
   "id": "energia-y-conectividad",
   "title": "Energía y conectividad",
@@ -67,5 +67,5 @@
       "title": "Human-readable documentation"
     }
   ],
-  "updated": "2026-08-14T21:21:48Z"
+  "updated": "2026-11-20T07:41:37Z"
 }

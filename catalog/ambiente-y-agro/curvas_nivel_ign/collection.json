@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "LineString",
   "geoparquet:feature_count": 202,
   "table:row_count": 202,
@@ -141,7 +141,9 @@
       "file:checksum": "1220897adda92a5f626ca9b24b28438726b38317fa51fbb684da7b2b3cbdb026cc29",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -150,7 +152,9 @@
       "file:checksum": "1220ff8db5c62a29c1ac65891a208de595a76b1442fd42bde9ceccd07feecd545d4b",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_curvas_nivel_ign-tiles": {
       "href": "./publico_curvas_nivel_ign.pmtiles",
@@ -160,7 +164,8 @@
       "file:checksum": "1220ec33a474e6797997a09328b017ed4d0ebfd51bd429eb69da2480ecbe22de6091",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -171,7 +176,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_curvas_nivel_ign.thumb.jpg",
@@ -180,7 +186,9 @@
         "thumbnail"
       ],
       "file:size": 169403,
-      "file:checksum": "12202946f2bd3f6573c41d87219a3e922acb7eaefad80c268fed6b4848ff75313998"
+      "file:checksum": "12202946f2bd3f6573c41d87219a3e922acb7eaefad80c268fed6b4848ff75313998",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

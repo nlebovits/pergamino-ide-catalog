@@ -49,7 +49,7 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
@@ -72,7 +72,7 @@
       "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
     }
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "pmtiles:min_zoom": 0,
   "pmtiles:max_zoom": 15,
   "pmtiles:tile_type": "mvt",
@@ -133,7 +133,9 @@
       "file:checksum": "122089130e169e7219d92995098b7721d9bf4337eccec3dc8eb67e8242b4614a4097",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -144,7 +146,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
@@ -154,7 +157,8 @@
         "legend"
       ],
       "file:size": 138,
-      "file:checksum": "1220817417994d283ea42def57ef68b93b39459ac053816480258020a6d0207f5814"
+      "file:checksum": "1220817417994d283ea42def57ef68b93b39459ac053816480258020a6d0207f5814",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
     "documentation": {
       "href": "./README.md",
@@ -163,7 +167,9 @@
       "file:checksum": "122022a721421fb6947464cd660edac0005bc1f431782ae648e528e8262a6f45ae4c",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_jurisdicciones_policiales-tiles": {
       "href": "./publico_jurisdicciones_policiales.pmtiles",
@@ -173,7 +179,8 @@
       "file:checksum": "122099c071d07897e41eca1de275c5f847cd08d6b13e6a08e5cf5b009d0deec8e624",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "thumbnail": {
       "href": "./publico_jurisdicciones_policiales.thumb.jpg",
@@ -182,7 +189,9 @@
         "thumbnail"
       ],
       "file:size": 49432,
-      "file:checksum": "1220876ebf4fe0e69f70ed0f40bf0fd6ce3e332322b375ba6cdd46ca23e4448a8800"
+      "file:checksum": "1220876ebf4fe0e69f70ed0f40bf0fd6ce3e332322b375ba6cdd46ca23e4448a8800",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

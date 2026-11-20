@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPoint",
   "geoparquet:feature_count": 8,
   "table:row_count": 8,
@@ -141,7 +141,9 @@
       "file:checksum": "12200afb165aa9285e97475d03fda94afaf52fa83bb87eb8ca24cbd9aa3d34483252",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -150,7 +152,9 @@
       "file:checksum": "12209c61a33d00b0c430035c6129ab08d108d1448ca6c2c9c29973505afd0398cbce",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_desarrollo_social-tiles": {
       "href": "./publico_desarrollo_social.pmtiles",
@@ -159,8 +163,9 @@
       "file:size": 8749,
       "file:checksum": "12200b088ae4a5e7492115aa5684e48862cade2f7ace2965c1bf2995346b150a7179",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -171,7 +176,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_desarrollo_social.thumb.jpg",
@@ -180,7 +186,9 @@
         "thumbnail"
       ],
       "file:size": 42266,
-      "file:checksum": "12202d0ca67774a1474fb47035d4a7ff6fa215c381c93ef1a07313fd095cbe9ba5f1"
+      "file:checksum": "12202d0ca67774a1474fb47035d4a7ff6fa215c381c93ef1a07313fd095cbe9ba5f1",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

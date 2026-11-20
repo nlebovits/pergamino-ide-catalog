@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Polygon",
   "geoparquet:feature_count": 108,
   "table:row_count": 108,
@@ -173,7 +173,9 @@
       "file:checksum": "12202463b7840078317a6294725853c132f6278bf403129305f28e37e3a45c378565",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -182,7 +184,9 @@
       "file:checksum": "1220cf72006942a1114332486951da9f467b632e663ef3579461502e0b573322d989",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_complejos_habitacionales-tiles": {
       "href": "./publico_complejos_habitacionales.pmtiles",
@@ -191,8 +195,9 @@
       "file:size": 129096,
       "file:checksum": "12201c1ad53e550189b81e842349b09644d7891e4ed54c0668679dba201a38efbe73",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -203,7 +208,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_complejos_habitacionales.thumb.jpg",
@@ -212,7 +218,9 @@
         "thumbnail"
       ],
       "file:size": 43668,
-      "file:checksum": "1220ca58f70ee7220f3fad03d6ff70b91bebe3753fae23365dc354298a4bbdb8c279"
+      "file:checksum": "1220ca58f70ee7220f3fad03d6ff70b91bebe3753fae23365dc354298a4bbdb8c279",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

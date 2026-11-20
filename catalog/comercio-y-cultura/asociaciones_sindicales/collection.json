@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 29,
   "table:row_count": 29,
@@ -161,7 +161,9 @@
       "file:checksum": "1220e4da281834810398d1eadc0d062e7234fbdd0c472447fe5cc810b767aa891c77",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -170,7 +172,9 @@
       "file:checksum": "122081d45905199646fbbf55c27f8a89cf9a9f69afaccc25784e2d371edc72831c75",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_asociaciones_sindicales-tiles": {
       "href": "./publico_asociaciones_sindicales.pmtiles",
@@ -179,8 +183,9 @@
       "file:size": 11795,
       "file:checksum": "1220c7de040304914c3d4b3632783c5c42c00176fe18b28ce8ed076c85fe72ed63ec",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -191,7 +196,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_asociaciones_sindicales.thumb.jpg",
@@ -200,7 +206,9 @@
         "thumbnail"
       ],
       "file:size": 94415,
-      "file:checksum": "1220fd9b7c70e1e27184debe9ee3e7f90891c3947df67332f338a1406cb5b3fb90fd"
+      "file:checksum": "1220fd9b7c70e1e27184debe9ee3e7f90891c3947df67332f338a1406cb5b3fb90fd",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

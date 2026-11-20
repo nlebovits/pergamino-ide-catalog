@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiLineString",
   "geoparquet:feature_count": 11703,
   "table:row_count": 11703,
@@ -393,7 +393,9 @@
       "file:checksum": "1220efea0d2a98de12765e7de3f6cdaae655ddf75a8b721798cfc03d7885504d37f1",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -402,7 +404,9 @@
       "file:checksum": "1220ecb18dae04b24861c2f3d6d3bc9b6e50c837c58fe919e85f4fc5b64dd7ca74eb",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_callejero-tiles": {
       "href": "./publico_callejero.pmtiles",
@@ -411,8 +415,9 @@
       "file:size": 8262656,
       "file:checksum": "12204aa7f908a1ae1dcecb82ca67856b3e12ffcc4e5ea3d5a7195fcb68a66aa80251",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -423,7 +428,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_callejero.thumb.jpg",
@@ -432,7 +438,9 @@
         "thumbnail"
       ],
       "file:size": 191246,
-      "file:checksum": "1220dc1750c54b6d5288f4130fa6012a8386ab8ffe0ba27a81463cfe2d13dd57b8b9"
+      "file:checksum": "1220dc1750c54b6d5288f4130fa6012a8386ab8ffe0ba27a81463cfe2d13dd57b8b9",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

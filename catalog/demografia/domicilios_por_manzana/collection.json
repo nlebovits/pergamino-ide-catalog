@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "LineString",
   "geoparquet:feature_count": 2197,
   "table:row_count": 2197,
@@ -189,7 +189,9 @@
       "file:checksum": "12203cec4592bae8a1ac8cf4ddb59156ce274d5d309615036aa691cd89875993c104",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -198,7 +200,9 @@
       "file:checksum": "1220be5d49a19ab48442eca966e729641637f571437ed94f59c0156e75083449a00e",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_domicilios_por_manzana-tiles": {
       "href": "./publico_domicilios_por_manzana.pmtiles",
@@ -208,7 +212,8 @@
       "file:checksum": "1220dd4f53e2c3fd62f416adb1061603e479470899a37e67a9800d944e3b9f0af595",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -219,7 +224,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_domicilios_por_manzana.thumb.jpg",
@@ -228,7 +234,9 @@
         "thumbnail"
       ],
       "file:size": 160866,
-      "file:checksum": "122019fa83c544c038e3ce3221c30bc588114c2ccda694d4575a43f9f5db03737d1a"
+      "file:checksum": "122019fa83c544c038e3ce3221c30bc588114c2ccda694d4575a43f9f5db03737d1a",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

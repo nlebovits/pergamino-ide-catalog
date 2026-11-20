@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiLineString",
   "geoparquet:feature_count": 11703,
   "table:row_count": 11703,
@@ -161,7 +161,9 @@
       "file:checksum": "1220fa9a7f62601a8a80ae7bf95f8c47ecde802a6ee7cdcda6ecb2db70eb586f79b3",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -170,7 +172,9 @@
       "file:checksum": "122096fd3f653929efe451ad34042e1f24de6458862ddac456d379a5e0ad9fdcd79b",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_altura_de_calle-tiles": {
       "href": "./publico_altura_de_calle.pmtiles",
@@ -180,7 +184,8 @@
       "file:checksum": "12202ce1bf472b5a76503c1f6f390fb8e6fa8e682173f3bd72b352a17915c69674b6",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -191,7 +196,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_altura_de_calle.thumb.jpg",
@@ -200,7 +206,9 @@
         "thumbnail"
       ],
       "file:size": 247967,
-      "file:checksum": "12202230038132323353d2d8e28b516eff3fd8939cefbd0ff314b26f151fd0a6a32b"
+      "file:checksum": "12202230038132323353d2d8e28b516eff3fd8939cefbd0ff314b26f151fd0a6a32b",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

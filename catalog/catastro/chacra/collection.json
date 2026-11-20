@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPolygon",
   "geoparquet:feature_count": 285,
   "table:row_count": 285,
@@ -156,7 +156,9 @@
       "file:checksum": "122010737b0cd040491785ad94e09c4b46d1c15f457f6858d3cbc8abbf2b98f2c79d",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -165,7 +167,9 @@
       "file:checksum": "12209c6d21ea8a83279512aa12927815b5622febdb38f1a2d0d6cbad8295fa43fcbe",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_catastro_chacra-tiles": {
       "href": "./publico_catastro_chacra.pmtiles",
@@ -174,8 +178,9 @@
       "file:size": 233581,
       "file:checksum": "1220f8406e2d06b2247239620aabdca85056470f1636611ff214d42177bb73a95270",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -186,7 +191,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_catastro_chacra.thumb.jpg",
@@ -195,7 +201,9 @@
         "thumbnail"
       ],
       "file:size": 43975,
-      "file:checksum": "1220792c60c96a7aefa943751f247207220ff0bc80f6b56fc50bc29bfaa08685ee98"
+      "file:checksum": "1220792c60c96a7aefa943751f247207220ff0bc80f6b56fc50bc29bfaa08685ee98",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

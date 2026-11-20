@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPoint",
   "geoparquet:feature_count": 200,
   "table:row_count": 200,
@@ -185,7 +185,9 @@
       "file:checksum": "12205161ccab43435c1cb0ecb0d30eb6031c57338e581233bdce84c4c2abf652ecfc",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -194,7 +196,9 @@
       "file:checksum": "122013eb3c3bda40fc9fa66dab7bb1575ea40257998d777360d5a610a0a2ca88ca68",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_educacion_gestion-tiles": {
       "href": "./publico_educacion_gestion.pmtiles",
@@ -203,8 +207,9 @@
       "file:size": 131396,
       "file:checksum": "12205c1ce31568cfd7e3b0f13bef6e1a2093b3bfbedf8a94fd59c8d2733a6d3a0c26",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -215,7 +220,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_educacion_gestion.thumb.jpg",
@@ -224,7 +230,9 @@
         "thumbnail"
       ],
       "file:size": 29390,
-      "file:checksum": "1220c26a7b624e4f66478a86137081de10ee877b6be49867d9ba050db0e1c5f576ea"
+      "file:checksum": "1220c26a7b624e4f66478a86137081de10ee877b6be49867d9ba050db0e1c5f576ea",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

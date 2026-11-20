@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPolygon",
   "geoparquet:feature_count": 58,
   "table:row_count": 58,
@@ -137,7 +137,9 @@
       "file:checksum": "12206ddaf695882bf64e68e12784aeedcbfa48644ce060932534de643cf99a0602be",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -146,7 +148,9 @@
       "file:checksum": "12209393b66b58a721dfa004ab8cd36b13628c8dca048ee8a7136edfacab5eb4de2d",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_coeficientes_zonales_doss-tiles": {
       "href": "./publico_coeficientes_zonales_doss.pmtiles",
@@ -156,7 +160,8 @@
       "file:checksum": "1220fde88d72912065e0435e1fe0fd6a9e9905ff286a0eedbf306c0f4741b9bf6400",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -167,7 +172,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_coeficientes_zonales_doss.thumb.jpg",
@@ -176,7 +182,9 @@
         "thumbnail"
       ],
       "file:size": 98983,
-      "file:checksum": "1220b3abd2b4a484fa75f523de2858fa658a93afe012c1f8caf55f6790e9108e6650"
+      "file:checksum": "1220b3abd2b4a484fa75f523de2858fa658a93afe012c1f8caf55f6790e9108e6650",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

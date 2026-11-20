@@ -49,7 +49,7 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
@@ -176,7 +176,7 @@
       "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
     }
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "pmtiles:min_zoom": 0,
   "pmtiles:max_zoom": 15,
   "pmtiles:tile_type": "mvt",
@@ -237,7 +237,9 @@
       "file:checksum": "12207733798c42ac3110b9f89830f6c0b980955e8d158d6861626e9eb322c655a816",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "legends/source": {
       "href": "./legends/source.png",
@@ -247,7 +249,8 @@
         "legend"
       ],
       "file:size": 952,
-      "file:checksum": "12203a53daca8def00d388f02a9e39dcbf5c201d847430acf483d556e1baa8d5c066"
+      "file:checksum": "12203a53daca8def00d388f02a9e39dcbf5c201d847430acf483d556e1baa8d5c066",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
     "documentation": {
       "href": "./README.md",
@@ -256,7 +259,9 @@
       "file:checksum": "122011dbbc9987cc911663fb857d2f8678a99e796eca4043576dd7aca536ef356ae6",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_habitantes_por_manzana_provisorio_2022-tiles": {
       "href": "./publico_habitantes_por_manzana_provisorio_2022.pmtiles",
@@ -266,7 +271,8 @@
       "file:checksum": "122019041219f1f043f6f8d8710fb58c584a6e6b70df15d0524ffb86e80eddd8901e",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -277,7 +283,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_habitantes_por_manzana_provisorio_2022.thumb.jpg",
@@ -286,7 +293,9 @@
         "thumbnail"
       ],
       "file:size": 53819,
-      "file:checksum": "1220a4914ae05b6c9becc1a9459aa17647486b63a2f617fb2756dd8882b4f0021e55"
+      "file:checksum": "1220a4914ae05b6c9becc1a9459aa17647486b63a2f617fb2756dd8882b4f0021e55",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

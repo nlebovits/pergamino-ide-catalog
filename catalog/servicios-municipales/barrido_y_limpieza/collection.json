@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Polygon",
   "geoparquet:feature_count": 21,
   "table:row_count": 21,
@@ -149,7 +149,9 @@
       "file:checksum": "1220de5e3492cdf580e1a51e704a0a5f567efc5b09641a2fa6f2e18e44eb2f2bf115",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -158,7 +160,9 @@
       "file:checksum": "122077c445829799cabc6f1495294a78dfee4abb332215519735bf6810645a24c4c3",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_barrido_y_limpieza-tiles": {
       "href": "./publico_barrido_y_limpieza.pmtiles",
@@ -168,7 +172,8 @@
       "file:checksum": "1220f23188d35ea4f3122336cd60130a42a98c92bf89836864f751d581a0ff554af8",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -179,7 +184,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_barrido_y_limpieza.thumb.jpg",
@@ -188,7 +194,9 @@
         "thumbnail"
       ],
       "file:size": 86975,
-      "file:checksum": "122064cfb86b391863948c962dad00e9a6f17996cf9dbd6925ab79f2bb2872249e0e"
+      "file:checksum": "122064cfb86b391863948c962dad00e9a6f17996cf9dbd6925ab79f2bb2872249e0e",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

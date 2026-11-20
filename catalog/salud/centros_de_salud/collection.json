@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPoint",
   "geoparquet:feature_count": 23,
   "table:row_count": 23,
@@ -161,7 +161,9 @@
       "file:checksum": "1220e1bb8b5e33186427f64ce60c38dff8cbfa0c9ea52b1fb892f23576ea9510587a",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -170,7 +172,9 @@
       "file:checksum": "1220a83785c3cde14142b84fe981b45baec68453dc1b6bb97fb72851a450c264c785",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_centros_de_salud-tiles": {
       "href": "./publico_centros_de_salud.pmtiles",
@@ -179,8 +183,9 @@
       "file:size": 10212,
       "file:checksum": "1220e7614991cd52aa1e2f3dc6218ac5902b3fa72f16f3a3cfc7b0df6567cddf38aa",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -191,7 +196,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_centros_de_salud.thumb.jpg",
@@ -200,7 +206,9 @@
         "thumbnail"
       ],
       "file:size": 109246,
-      "file:checksum": "12201b9f4dddaeeafb2d7865dbf04498e65fa7183f6d40d6c0f9a16e87cc6d4afd3f"
+      "file:checksum": "12201b9f4dddaeeafb2d7865dbf04498e65fa7183f6d40d6c0f9a16e87cc6d4afd3f",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

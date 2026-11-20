@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPolygon",
   "geoparquet:feature_count": 2564,
   "table:row_count": 2564,
@@ -156,7 +156,9 @@
       "file:checksum": "12207ca546cd3bc5d38b26bdbf12f692f42d6b969a3989198f2da4d2707938f5da9d",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -165,7 +167,9 @@
       "file:checksum": "1220825f1a63a526e69c43302084a9c7ae333ebc3c735779028bbb5611312525760a",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_catastro_manzana-tiles": {
       "href": "./publico_catastro_manzana.pmtiles",
@@ -175,7 +179,8 @@
       "file:checksum": "12204d038083c00068eae0ce97d534b9775d9a0b67c9d7517f90a805c111c09619c2",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -186,7 +191,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_catastro_manzana.thumb.jpg",
@@ -195,7 +201,9 @@
         "thumbnail"
       ],
       "file:size": 31373,
-      "file:checksum": "1220b1fe3501bba7899daacafbd47afd8496e7ef43eb174bc1b13df6f746927318ca"
+      "file:checksum": "1220b1fe3501bba7899daacafbd47afd8496e7ef43eb174bc1b13df6f746927318ca",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

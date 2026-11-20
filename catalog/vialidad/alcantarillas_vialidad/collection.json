@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 74,
   "table:row_count": 74,
@@ -169,7 +169,9 @@
       "file:checksum": "122032bb5dc326c0799ec82f1c7927ab7b4b3787e7b05d9f3d452c1e6c05436eba93",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -178,7 +180,9 @@
       "file:checksum": "122067ec59d4b56433d48f3cc4b833d2a326d17fe32411fba2a7d66058b08a631267",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_alcantarillas_vialidad-tiles": {
       "href": "./publico_alcantarillas_vialidad.pmtiles",
@@ -187,8 +191,9 @@
       "file:size": 61734,
       "file:checksum": "12206a66ced0289ce60cfd3c9fd224cfd7acafef23c89c46fcedbec11cbac50c1052",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -199,7 +204,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_alcantarillas_vialidad.thumb.jpg",
@@ -208,7 +214,9 @@
         "thumbnail"
       ],
       "file:size": 34796,
-      "file:checksum": "12206fdb904c83234b37aca29cf8ef3426c2ff08c7b0bdebd2617885277d2cccf79f"
+      "file:checksum": "12206fdb904c83234b37aca29cf8ef3426c2ff08c7b0bdebd2617885277d2cccf79f",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

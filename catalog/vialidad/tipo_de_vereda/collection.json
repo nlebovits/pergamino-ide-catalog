@@ -49,7 +49,7 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
@@ -108,7 +108,7 @@
       "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
     }
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "pmtiles:min_zoom": 0,
   "pmtiles:max_zoom": 15,
   "pmtiles:tile_type": "mvt",
@@ -169,7 +169,9 @@
       "file:checksum": "1220d4dff2b99ce3148284c4aa2f712cbd5bc35a7bc42500c691560525f72fb752d0",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -180,7 +182,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
@@ -190,7 +193,8 @@
         "legend"
       ],
       "file:size": 2280,
-      "file:checksum": "1220bebca7e4e2c9a70610d178dcd2099bee73735c0db25cd87dc2562ac882b3c27f"
+      "file:checksum": "1220bebca7e4e2c9a70610d178dcd2099bee73735c0db25cd87dc2562ac882b3c27f",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
     "documentation": {
       "href": "./README.md",
@@ -199,7 +203,9 @@
       "file:checksum": "1220e89e876b7fe27193e34ce8ebde1f17c4ca4dc7f6b3ac40ca076e88fd16455ad0",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_tipo_de_vereda-tiles": {
       "href": "./publico_tipo_de_vereda.pmtiles",
@@ -208,8 +214,9 @@
       "file:size": 3467694,
       "file:checksum": "12202d7577c00f70ae9f6236fea3e221a6c4fa62a8495c881e72986d9156ab2ff844",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "thumbnail": {
       "href": "./publico_tipo_de_vereda.thumb.jpg",
@@ -218,7 +225,9 @@
         "thumbnail"
       ],
       "file:size": 110236,
-      "file:checksum": "1220fe9ce95a81d77079c9805c6bcc43f5b82ef3b5e3ac3cbd30c90b08e5a2b7682e"
+      "file:checksum": "1220fe9ce95a81d77079c9805c6bcc43f5b82ef3b5e3ac3cbd30c90b08e5a2b7682e",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

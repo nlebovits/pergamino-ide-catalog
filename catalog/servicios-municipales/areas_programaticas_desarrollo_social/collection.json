@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Polygon",
   "geoparquet:feature_count": 7,
   "table:row_count": 7,
@@ -133,7 +133,9 @@
       "file:checksum": "122088ecaca721a7f1d5add74d4810ffc1382c9e37aa600a32bf40aa77a55d52b1d3",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -142,7 +144,9 @@
       "file:checksum": "1220356248638d15538e9e880c1a2f869ae23de4e0964503821050ddd763e2f0fc8d",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_areas_programaticas_desarrollo_social-tiles": {
       "href": "./publico_areas_programaticas_desarrollo_social.pmtiles",
@@ -151,8 +155,9 @@
       "file:size": 24783,
       "file:checksum": "12209c36d75c47d2edaad3d908f68e777a2dd550d854a2e978d8e64e1691d7fcd4d7",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -163,7 +168,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_areas_programaticas_desarrollo_social.thumb.jpg",
@@ -172,7 +178,9 @@
         "thumbnail"
       ],
       "file:size": 65048,
-      "file:checksum": "12200e785125f3dc273a5ec18f34f07daba5f7d0826ed47713fbe0f949245ed4cc6e"
+      "file:checksum": "12200e785125f3dc273a5ec18f34f07daba5f7d0826ed47713fbe0f949245ed4cc6e",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

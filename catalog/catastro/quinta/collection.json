@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPolygon",
   "geoparquet:feature_count": 136,
   "table:row_count": 136,
@@ -156,7 +156,9 @@
       "file:checksum": "1220765be492a7a37e82858c683739bdc22a878309953d62be603cf91c0aaad1d298",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -165,7 +167,9 @@
       "file:checksum": "12208ee051281529ebdd36c5056c9c92be2c414ed980b051315846b18596508e1275",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_catastro_quinta-tiles": {
       "href": "./publico_catastro_quinta.pmtiles",
@@ -174,8 +178,9 @@
       "file:size": 84335,
       "file:checksum": "12208860b2131dbbc1c14379082bfa227229d3cfb71441f0dfd3ec9e5b8131aa9181",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -186,7 +191,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_catastro_quinta.thumb.jpg",
@@ -195,7 +201,9 @@
         "thumbnail"
       ],
       "file:size": 36458,
-      "file:checksum": "12200fcda977ab97e9c7e943641480d203ff672bbbefcad8e81b9e62953f63ba092f"
+      "file:checksum": "12200fcda977ab97e9c7e943641480d203ff672bbbefcad8e81b9e62953f63ba092f",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

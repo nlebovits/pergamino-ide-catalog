@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPolygon",
   "geoparquet:feature_count": 37,
   "table:row_count": 37,
@@ -161,7 +161,9 @@
       "file:checksum": "1220f07711e0d1d897f63d7dbe9721091bc164b2366848891a72e94a4714fdaba8be",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -170,7 +172,9 @@
       "file:checksum": "1220b1e089f0c0534048305a894ed4ba0af84e9cf002d9a0ba3b81c676c7270dbc2e",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_cobertura_agua_de_2023_a_2027-tiles": {
       "href": "./publico_cobertura_agua_de_2023_a_2027.pmtiles",
@@ -180,7 +184,8 @@
       "file:checksum": "122002abf59c2795717fd83a867a9be4ce288a8285531999f4a49c362a2f1747c158",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -191,7 +196,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_cobertura_agua_de_2023_a_2027.thumb.jpg",
@@ -200,7 +206,9 @@
         "thumbnail"
       ],
       "file:size": 63668,
-      "file:checksum": "1220dfaa0d679d55d662063a42c49a787881831e52b219f7dc6240f060f1e780f369"
+      "file:checksum": "1220dfaa0d679d55d662063a42c49a787881831e52b219f7dc6240f060f1e780f369",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

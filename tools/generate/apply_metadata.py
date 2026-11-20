@@ -18,8 +18,9 @@ from datetime import datetime, timezone
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from grouping import GROUPS  # noqa: E402
 from group_descriptions import HAND_WRITTEN  # noqa: E402
+from assets import normalize_assets  # noqa: E402
 
-SCHEMA = "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json"
+SCHEMA = "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json"
 DST = sys.argv[1]
 META = json.load(open(sys.argv[2], encoding="utf-8"))
 
@@ -130,6 +131,7 @@ def main():
             col["description"] = description_for(layer, col.get("description", ""))
             col["providers"] = providers_for(layer)
             col["updated"] = now()
+            normalize_assets(col)
 
             ext = [e for e in col.get("stac_extensions", []) if "portolan" not in e]
             col["stac_extensions"] = sorted(set(ext + [SCHEMA]))

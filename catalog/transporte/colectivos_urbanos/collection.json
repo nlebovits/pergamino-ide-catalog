@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "LineString",
   "geoparquet:feature_count": 16,
   "table:row_count": 16,
@@ -165,7 +165,9 @@
       "file:checksum": "122082ebeb0eff2ebd755df3b55991f69201800077a48fb32ffd960656d8e87f8ca3",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -174,7 +176,9 @@
       "file:checksum": "1220f683162867d8cbb0773925f3a8f8075ad5ad14af7e232dc23c3c4f671f7751fc",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_colectivos_urbanos-tiles": {
       "href": "./publico_colectivos_urbanos.pmtiles",
@@ -184,7 +188,8 @@
       "file:checksum": "1220017d6f6556d447733661d0ecfb769e61aac4dce58def01280463e5c9cb2393a6",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -195,7 +200,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_colectivos_urbanos.thumb.jpg",
@@ -204,7 +210,9 @@
         "thumbnail"
       ],
       "file:size": 108058,
-      "file:checksum": "122015ac67812fe873320cda3dbf10ef6071617b4517e0784f7f1c84e9cd9d0e3323"
+      "file:checksum": "122015ac67812fe873320cda3dbf10ef6071617b4517e0784f7f1c84e9cd9d0e3323",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

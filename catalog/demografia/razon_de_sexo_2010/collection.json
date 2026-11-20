@@ -49,7 +49,7 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
@@ -100,7 +100,7 @@
       "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
     }
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "pmtiles:min_zoom": 0,
   "pmtiles:max_zoom": 15,
   "pmtiles:tile_type": "mvt",
@@ -168,7 +168,9 @@
       "file:checksum": "1220b482980a0b585510ceb9309c1472b94fbcd780b07c9b76835e3310facbfcf895",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -179,7 +181,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
@@ -189,7 +192,8 @@
         "legend"
       ],
       "file:size": 1038,
-      "file:checksum": "1220e0ef12bd267b53412320a08ef4ad629b09dfb1092f222fe07598f1dd9f576fc8"
+      "file:checksum": "1220e0ef12bd267b53412320a08ef4ad629b09dfb1092f222fe07598f1dd9f576fc8",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
     "documentation": {
       "href": "./README.md",
@@ -198,7 +202,9 @@
       "file:checksum": "1220a663cdafabd5e03c5357988815b5e1efdbbdff5d310b3025813e2154fec0f2ae",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_razon_de_sexo_2010-tiles": {
       "href": "./publico_razon_de_sexo_2010.pmtiles",
@@ -208,7 +214,8 @@
       "file:checksum": "12204d891876fb82a4b9afac066c2f5d27599f1481d45539c7b8777825328727f686",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "thumbnail": {
       "href": "./publico_razon_de_sexo_2010.thumb.jpg",
@@ -217,7 +224,9 @@
         "thumbnail"
       ],
       "file:size": 86107,
-      "file:checksum": "12202f68f34099ea762b89b1fefaad7793847647a85520b768337c38183492db3c27"
+      "file:checksum": "12202f68f34099ea762b89b1fefaad7793847647a85520b768337c38183492db3c27",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Polygon",
   "geoparquet:feature_count": 14,
   "table:row_count": 14,
@@ -157,7 +157,9 @@
       "file:checksum": "1220133f6b709debb7a8107aa5f2a7800de722248307ce6f1ad6bad5ad8cca4b9c0a",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -166,7 +168,9 @@
       "file:checksum": "1220471b09e1a0f017ea37725eafbc554fb98b14b459f0f79cbfa088fdced78ecfde",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_cuadriculas_policiales-tiles": {
       "href": "./publico_cuadriculas_policiales.pmtiles",
@@ -176,7 +180,8 @@
       "file:checksum": "1220050f5b59e280e9601a3cc43ec8ac1f5c85d1e553fe5bf06aa21a0f764ae1c185",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -187,7 +192,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_cuadriculas_policiales.thumb.jpg",
@@ -196,7 +202,9 @@
         "thumbnail"
       ],
       "file:size": 52093,
-      "file:checksum": "1220c15df220a5c83765a0dbf3494fd690261c6f0cb485bf6d9077ca48c08a57d52c"
+      "file:checksum": "1220c15df220a5c83765a0dbf3494fd690261c6f0cb485bf6d9077ca48c08a57d52c",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

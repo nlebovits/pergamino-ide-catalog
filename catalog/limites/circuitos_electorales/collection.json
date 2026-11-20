@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPolygon",
   "geoparquet:feature_count": 122,
   "table:row_count": 122,
@@ -157,7 +157,9 @@
       "file:checksum": "122098bace1dd02d25d266a81c34364d94a0d44e900dabea21ac657db9d72f97585e",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -166,7 +168,9 @@
       "file:checksum": "122064f65c05114af6aa751ae04cd559345bc629c446983c48ac12868349feeefdc6",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_circuitos_electorales-tiles": {
       "href": "./publico_circuitos_electorales.pmtiles",
@@ -175,8 +179,9 @@
       "file:size": 2374711,
       "file:checksum": "122076607f90757cc74a3f5fd58136a296157ce2e0068feea6854b9725041f300dba",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -187,7 +192,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_circuitos_electorales.thumb.jpg",
@@ -196,7 +202,9 @@
         "thumbnail"
       ],
       "file:size": 103012,
-      "file:checksum": "1220411752841d010afed746fe7b8c1d25efafbbdb8fd509e9ec614475ea25827735"
+      "file:checksum": "1220411752841d010afed746fe7b8c1d25efafbbdb8fd509e9ec614475ea25827735",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

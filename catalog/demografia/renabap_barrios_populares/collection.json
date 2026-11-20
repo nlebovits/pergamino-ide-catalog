@@ -49,7 +49,7 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
@@ -152,7 +152,7 @@
       "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
     }
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "pmtiles:min_zoom": 0,
   "pmtiles:max_zoom": 15,
   "pmtiles:tile_type": "mvt",
@@ -213,7 +213,9 @@
       "file:checksum": "1220c1e5c14b39191616875e2ed6594da1ea53c5d2b0ad77ac959a50d530977f7097",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "legends/source": {
       "href": "./legends/source.png",
@@ -223,7 +225,8 @@
         "legend"
       ],
       "file:size": 967,
-      "file:checksum": "1220b8695f1769eb826993f7e4e700523f64e1169eadbd0b695b6d9b8f9a99cadec4"
+      "file:checksum": "1220b8695f1769eb826993f7e4e700523f64e1169eadbd0b695b6d9b8f9a99cadec4",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
     "documentation": {
       "href": "./README.md",
@@ -232,7 +235,9 @@
       "file:checksum": "12206ea9e8ec4fd6c0a2352fe3d7af8c372e0f25400a78335755a663c65810b24d85",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_renabap_barrios_populares-tiles": {
       "href": "./publico_renabap_barrios_populares.pmtiles",
@@ -241,8 +246,9 @@
       "file:size": 59851,
       "file:checksum": "12204c821f521a2d9d4e6a9b1a916e07ec8f3fb73dcb5c4a8eb76f026afc5cc70ec1",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -253,7 +259,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_renabap_barrios_populares.thumb.jpg",
@@ -262,7 +269,9 @@
         "thumbnail"
       ],
       "file:size": 43467,
-      "file:checksum": "12200b84212134554cd91721fe88b728e101908e8348b10929dbb17e67cc788e67ad"
+      "file:checksum": "12200b84212134554cd91721fe88b728e101908e8348b10929dbb17e67cc788e67ad",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

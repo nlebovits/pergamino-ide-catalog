@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Polygon",
   "geoparquet:feature_count": 39,
   "table:row_count": 39,
@@ -161,7 +161,9 @@
       "file:checksum": "122029f125cd39ef193af2ee2de2827fdec390d9cce12070ffb079d75251b9203a7e",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -170,7 +172,9 @@
       "file:checksum": "12207c4070f3c762cf86ac5d97bf75086ac5023104e8382bc55a654c3f18ca6af4e9",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_cobertura_agua_de_2015_a_2019-tiles": {
       "href": "./publico_cobertura_agua_de_2015_a_2019.pmtiles",
@@ -179,8 +183,9 @@
       "file:size": 39658,
       "file:checksum": "12206f0e8b174735cd206a7749d6559222b2eb93abab60fce4b9794a1652262f005a",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -191,7 +196,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_cobertura_agua_de_2015_a_2019.thumb.jpg",
@@ -200,7 +206,9 @@
         "thumbnail"
       ],
       "file:size": 96057,
-      "file:checksum": "12200726d6135e6b939a52f0360272416dc1f8a1975fa58dc21dfaa2672276aae3f6"
+      "file:checksum": "12200726d6135e6b939a52f0360272416dc1f8a1975fa58dc21dfaa2672276aae3f6",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

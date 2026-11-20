@@ -49,7 +49,7 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
@@ -184,7 +184,7 @@
       "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
     }
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "pmtiles:min_zoom": 0,
   "pmtiles:max_zoom": 15,
   "pmtiles:tile_type": "mvt",
@@ -245,7 +245,9 @@
       "file:checksum": "122031771b83b59fb30cfc9bbf1ab1909774e20347f286e68755a1cbb7c36300a8b4",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "legends/source": {
       "href": "./legends/source.png",
@@ -255,7 +257,8 @@
         "legend"
       ],
       "file:size": 1924,
-      "file:checksum": "122044baa9622931d58be2ec4a36ee5487f5c8cc3a3259d4b70c8367dd30331dbf87"
+      "file:checksum": "122044baa9622931d58be2ec4a36ee5487f5c8cc3a3259d4b70c8367dd30331dbf87",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
     "documentation": {
       "href": "./README.md",
@@ -264,7 +267,9 @@
       "file:checksum": "1220e6cb52a6c1aea8206b801e23cb3378e44c0723fd2998bac48ce5673b8e882a64",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_redatam_censo_2022_radios-tiles": {
       "href": "./publico_redatam_censo_2022_radios.pmtiles",
@@ -273,8 +278,9 @@
       "file:size": 2352070,
       "file:checksum": "12209497557a29027cbcb9c2d72a1ee6ae99431730952808e605391bb6d32465d666",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -285,7 +291,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_redatam_censo_2022_radios.thumb.jpg",
@@ -294,7 +301,9 @@
         "thumbnail"
       ],
       "file:size": 33677,
-      "file:checksum": "1220233d6d0003d727c7cb233f8e94713eaccb6fbfd0b527d82b877bdf53cb1d21ca"
+      "file:checksum": "1220233d6d0003d727c7cb233f8e94713eaccb6fbfd0b527d82b877bdf53cb1d21ca",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPolygon",
   "geoparquet:feature_count": 23,
   "table:row_count": 23,
@@ -164,7 +164,9 @@
       "file:checksum": "1220cb261521d1ef18dfbf117bfaadb8d9ba2713525127f75a80b1ccebd7a6e5534e",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -173,7 +175,9 @@
       "file:checksum": "1220a0b6c63bf8757e1da47897568cfec97f2a2ee236661b68d0fc4aad7db051caed",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_catastro_circunscripcion-tiles": {
       "href": "./publico_catastro_circunscripcion.pmtiles",
@@ -182,8 +186,9 @@
       "file:size": 585312,
       "file:checksum": "12205d898f537469aabaa10926b752468d65b1d3edd6f040b48a54cc24a653aa1b99",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -194,7 +199,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_catastro_circunscripcion.thumb.jpg",
@@ -203,7 +209,9 @@
         "thumbnail"
       ],
       "file:size": 61495,
-      "file:checksum": "1220b1f49fb73dfa0238bd92d47bbf5cd9384944e7b27242d5acd47ee34bcb93af6d"
+      "file:checksum": "1220b1f49fb73dfa0238bd92d47bbf5cd9384944e7b27242d5acd47ee34bcb93af6d",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

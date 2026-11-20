@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Polygon",
   "geoparquet:feature_count": 4921,
   "table:row_count": 4921,
@@ -193,7 +193,9 @@
       "file:checksum": "122012952a04cbd45598a3bb7a257dc7a16e4249462973398821a493f31fc2d8efd1",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -202,7 +204,9 @@
       "file:checksum": "1220f5561a0bfddce5173cc8d220257455c242521abdcc503926dc05bf8ec32bf260",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_edificaciones_pa-tiles": {
       "href": "./publico_edificaciones_pa.pmtiles",
@@ -211,8 +215,9 @@
       "file:size": 1295723,
       "file:checksum": "12205c6ecbdfec56b6d217f090fa255343c325331a14bdde7cb812d798e6df7cddc3",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -223,7 +228,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_edificaciones_pa.thumb.jpg",
@@ -232,7 +238,9 @@
         "thumbnail"
       ],
       "file:size": 120734,
-      "file:checksum": "1220c3492912463b2e69eda6cff1b450cea3a78ef4e3362c2885060cbfc49c65d4a1"
+      "file:checksum": "1220c3492912463b2e69eda6cff1b450cea3a78ef4e3362c2885060cbfc49c65d4a1",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

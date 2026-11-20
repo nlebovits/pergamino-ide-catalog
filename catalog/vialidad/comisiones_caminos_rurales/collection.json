@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Polygon",
   "geoparquet:feature_count": 29,
   "table:row_count": 29,
@@ -157,7 +157,9 @@
       "file:checksum": "12205be220ac640ea51af6bc7496503744f87c46ef477f067413a44c5d9753a609d8",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -166,7 +168,9 @@
       "file:checksum": "122017484869ee522e920750757eeadbe2aa1a77c7645ac60d7f6085b8c5b89f49c1",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_comisiones_caminos_rurales-tiles": {
       "href": "./publico_comisiones_caminos_rurales.pmtiles",
@@ -176,7 +180,8 @@
       "file:checksum": "1220e850716ad575d1a7d0bc73942d68b8d4b33461b57444da45e7ac8c9397cc3089",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -187,7 +192,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_comisiones_caminos_rurales.thumb.jpg",
@@ -196,7 +202,9 @@
         "thumbnail"
       ],
       "file:size": 63130,
-      "file:checksum": "1220dd20cf7d8cefc8846757aef97fa1171ffc18528fb53490137b32bc0dca01ae0c"
+      "file:checksum": "1220dd20cf7d8cefc8846757aef97fa1171ffc18528fb53490137b32bc0dca01ae0c",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

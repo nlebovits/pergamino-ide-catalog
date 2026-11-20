@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 20,
   "table:row_count": 20,
@@ -161,7 +161,9 @@
       "file:checksum": "1220046d7450a360378d38c8db8cf8b4879da7809003f42f40cc0b9b3df61053fbd2",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -170,7 +172,9 @@
       "file:checksum": "1220d625233d383d9108c6330030d43d2a1d7b79da5915dbda40ca485be8f7728cb9",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_camaras_y_radares-tiles": {
       "href": "./publico_camaras_y_radares.pmtiles",
@@ -179,8 +183,9 @@
       "file:size": 17512,
       "file:checksum": "1220e37f4050a8eccb10b931ca79e5c862f1039cf8485f27fd1eaa743001dab5ee5f",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -191,7 +196,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_camaras_y_radares.thumb.jpg",
@@ -200,7 +206,9 @@
         "thumbnail"
       ],
       "file:size": 31724,
-      "file:checksum": "12205f2984d14da7a6a3440f5ded0241387bc06573835f3bee2c662fb6dbc98f8ba2"
+      "file:checksum": "12205f2984d14da7a6a3440f5ded0241387bc06573835f3bee2c662fb6dbc98f8ba2",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

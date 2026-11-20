@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 196722,
   "table:row_count": 196722,
@@ -160,7 +160,9 @@
       "file:checksum": "1220addd0d66933f1ed74b693226738e69d5e52b2a1fe17ad3c6fa62cf15b25132c6",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -169,7 +171,9 @@
       "file:checksum": "1220f0f8db3f60ea4ee13171f1bf2171df00118ea92903a011afd7284d9987c4499a",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_catastro_medida_lado-tiles": {
       "href": "./publico_catastro_medida_lado.pmtiles",
@@ -179,7 +183,8 @@
       "file:checksum": "1220d57f91ac33b66b8cc6a6c32b50282c8a89b0d297c644565d5c709d091b6a5ab0",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -190,7 +195,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_catastro_medida_lado.thumb.jpg",
@@ -199,7 +205,9 @@
         "thumbnail"
       ],
       "file:size": 67098,
-      "file:checksum": "1220e2b9b9d8e84daac7198ecdc6da0310b7d4e4dbbbb484cb63191f6f130c6e3ff6"
+      "file:checksum": "1220e2b9b9d8e84daac7198ecdc6da0310b7d4e4dbbbb484cb63191f6f130c6e3ff6",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

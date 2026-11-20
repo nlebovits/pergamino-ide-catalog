@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPolygon",
   "geoparquet:feature_count": 78,
   "table:row_count": 78,
@@ -165,7 +165,9 @@
       "file:checksum": "1220278d3ba70445da57d51cb3f559b0c77fdcc9e305c592a932db78cfee9669603b",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -174,7 +176,9 @@
       "file:checksum": "1220d5a86bd4715be560479ebbaa138825aa9098890c695fc47f8bbf9c6937878d70",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_cobertura_cloacas_antes_de_2015-tiles": {
       "href": "./publico_cobertura_cloacas_antes_de_2015.pmtiles",
@@ -184,7 +188,8 @@
       "file:checksum": "12201c4b0cac2e24c1d173cab076c2cb6191f244962410f4d7ae82a1665198867a65",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -195,7 +200,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_cobertura_cloacas_antes_de_2015.thumb.jpg",
@@ -204,7 +210,9 @@
         "thumbnail"
       ],
       "file:size": 93382,
-      "file:checksum": "12202da7f4f23443606c8b102d6ea084483bf8ff82878835390421d897a5d31b4abb"
+      "file:checksum": "12202da7f4f23443606c8b102d6ea084483bf8ff82878835390421d897a5d31b4abb",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

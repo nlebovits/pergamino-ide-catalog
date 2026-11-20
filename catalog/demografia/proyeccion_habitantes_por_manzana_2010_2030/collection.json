@@ -49,7 +49,7 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
@@ -152,7 +152,7 @@
       "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
     }
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "pmtiles:min_zoom": 0,
   "pmtiles:max_zoom": 15,
   "pmtiles:tile_type": "mvt",
@@ -220,7 +220,9 @@
       "file:checksum": "1220cf2eb7d8d793b0601a65264cdb95d1f6dddc0211449747910cff3cb69a6eb5d8",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "legends/source": {
       "href": "./legends/source.png",
@@ -230,7 +232,8 @@
         "legend"
       ],
       "file:size": 1215,
-      "file:checksum": "1220b6c6962b50639a8933701e69af03ec2abee9f7faf6448aef2587b417dacdf3ce"
+      "file:checksum": "1220b6c6962b50639a8933701e69af03ec2abee9f7faf6448aef2587b417dacdf3ce",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
     "documentation": {
       "href": "./README.md",
@@ -239,7 +242,9 @@
       "file:checksum": "12203a5c56f92bcb51ab68152b540e2db47af1fdc4453826b5cbd79be378cb0c25b6",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_proyeccion_habitantes_por_manzana_2010_2030-tiles": {
       "href": "./publico_proyeccion_habitantes_por_manzana_2010_2030.pmtiles",
@@ -249,7 +254,8 @@
       "file:checksum": "1220b176aa6cbf0fc8db97def6a7008cb1b668d7368756dc0106a2b5e1c90b79055c",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -260,7 +266,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_proyeccion_habitantes_por_manzana_2010_2030.thumb.jpg",
@@ -269,7 +276,9 @@
         "thumbnail"
       ],
       "file:size": 360788,
-      "file:checksum": "12206e438bbbeae453a89a661aa9e33747bab12196b965b028d7cc0b85f703b6a283"
+      "file:checksum": "12206e438bbbeae453a89a661aa9e33747bab12196b965b028d7cc0b85f703b6a283",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

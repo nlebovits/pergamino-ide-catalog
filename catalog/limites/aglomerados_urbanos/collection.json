@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Polygon",
   "geoparquet:feature_count": 166,
   "table:row_count": 166,
@@ -173,7 +173,9 @@
       "file:checksum": "1220a1487a00b613d4379d193b756b836eb5c96aaac7face4f22d69ceb84ae3a4083",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -182,7 +184,9 @@
       "file:checksum": "12200f55ace9938f69dd413b38f46ff46261379a160f202797bd4015c74eb1efcbf6",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_aglomerados_urbanos-tiles": {
       "href": "./publico_aglomerados_urbanos.pmtiles",
@@ -191,8 +195,9 @@
       "file:size": 333247,
       "file:checksum": "12206a7869d2a945de738b540baad837d2a16c2ae3ce626fcdd2e185de84612635ce",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -203,7 +208,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_aglomerados_urbanos.thumb.jpg",
@@ -212,7 +218,9 @@
         "thumbnail"
       ],
       "file:size": 39997,
-      "file:checksum": "12202a272bdbba135ef8161a9f55284a2bd30862669853a8f98758099c09dc28c6dc"
+      "file:checksum": "12202a272bdbba135ef8161a9f55284a2bd30862669853a8f98758099c09dc28c6dc",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

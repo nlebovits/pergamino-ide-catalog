@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiLineString",
   "geoparquet:feature_count": 11703,
   "table:row_count": 11703,
@@ -193,7 +193,9 @@
       "file:checksum": "1220de0ead00693e220b40fcc019144ca2b09e863226ff60ac3d71118076ebd5380b",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -202,7 +204,9 @@
       "file:checksum": "12203f803c945586c09d28f5fa6c7bba251b9673c4d2ff86588bb82c68f6dcdf31f3",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_cordon_cuneta-tiles": {
       "href": "./publico_cordon_cuneta.pmtiles",
@@ -212,7 +216,8 @@
       "file:checksum": "1220fec6f963179bbd47bc90fb540b9ea55af1807fae7c502f70e37a4e5555d37b17",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -223,7 +228,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_cordon_cuneta.thumb.jpg",
@@ -232,7 +238,9 @@
         "thumbnail"
       ],
       "file:size": 136673,
-      "file:checksum": "1220e729d58c0eb6ba3b10370b9c5e7bb3be8d65c32b29b74ecf450010dbc9ca863e"
+      "file:checksum": "1220e729d58c0eb6ba3b10370b9c5e7bb3be8d65c32b29b74ecf450010dbc9ca863e",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

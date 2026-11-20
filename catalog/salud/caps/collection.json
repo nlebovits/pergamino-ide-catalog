@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 30,
   "table:row_count": 30,
@@ -217,7 +217,9 @@
       "file:checksum": "1220233928b39bfac3efb99a1c9616b12e3ce484c17b4d409181f8fb03e5bbd66c13",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -226,7 +228,9 @@
       "file:checksum": "1220ce52c0146285000c76f96dae751f05bf7d15010626da5169c6d61325e72cfec7",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_caps-tiles": {
       "href": "./publico_caps.pmtiles",
@@ -235,8 +239,9 @@
       "file:size": 38423,
       "file:checksum": "122016c7d5be98afcd32db0f79fb32f237a45aa4a41129b3d956b70b229bdf2831f2",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -247,7 +252,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_caps.thumb.jpg",
@@ -256,7 +262,9 @@
         "thumbnail"
       ],
       "file:size": 37205,
-      "file:checksum": "12206ae2b7aa894e39c2848cd5a1f3473be7d118c1714023b054d24913e15d7d7c4d"
+      "file:checksum": "12206ae2b7aa894e39c2848cd5a1f3473be7d118c1714023b054d24913e15d7d7c4d",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

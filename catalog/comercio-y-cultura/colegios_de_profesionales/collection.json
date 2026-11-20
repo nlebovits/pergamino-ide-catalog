@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPoint",
   "geoparquet:feature_count": 19,
   "table:row_count": 19,
@@ -145,7 +145,9 @@
       "file:checksum": "1220331d2b6480f0da1b6364946b34fbb4b385c02cc7e3a497a7db9867d0743f93cf",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -154,7 +156,9 @@
       "file:checksum": "1220f00479ca148e135add4c35f75fe51eb415cef5c36bf6ec19f59e8a6c334d9a18",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_colegios_de_profesionales-tiles": {
       "href": "./publico_colegios_de_profesionales.pmtiles",
@@ -163,8 +167,9 @@
       "file:size": 7136,
       "file:checksum": "1220d779c86ba5c23ea73c36ed273ccdc3c7a33c986f92eda1b0578c4cbb0e2b3d50",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -175,7 +180,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_colegios_de_profesionales.thumb.jpg",
@@ -184,7 +190,9 @@
         "thumbnail"
       ],
       "file:size": 84607,
-      "file:checksum": "12206f1a89b3f9a032135cba51ab96bdb23bac0353fce1c76b769d92da00ef64ad33"
+      "file:checksum": "12206f1a89b3f9a032135cba51ab96bdb23bac0353fce1c76b769d92da00ef64ad33",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

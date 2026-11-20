@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPolygon",
   "geoparquet:feature_count": 71,
   "table:row_count": 71,
@@ -156,7 +156,9 @@
       "file:checksum": "1220b1d81903ff3128014627edc1d38f4dd3e2e7cac6622864969510a3038ef4ff2b",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -165,7 +167,9 @@
       "file:checksum": "1220b2cb663f36e249e82876b4a865e28f97ff53de0490bffac9e9cb5b3b73b34894",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_catastro_seccion-tiles": {
       "href": "./publico_catastro_seccion.pmtiles",
@@ -174,8 +178,9 @@
       "file:size": 148878,
       "file:checksum": "1220ef663db8bb22f74113ffa7c61280be7814668bc9b270065a11408786358ba75f",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -186,7 +191,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_catastro_seccion.thumb.jpg",
@@ -195,7 +201,9 @@
         "thumbnail"
       ],
       "file:size": 37430,
-      "file:checksum": "12203758cd19fa5fbee32bd3bd42a1228675360b40e16b89b0851418bb4ec08fe93a"
+      "file:checksum": "12203758cd19fa5fbee32bd3bd42a1228675360b40e16b89b0851418bb4ec08fe93a",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 10,
   "table:row_count": 10,
@@ -141,7 +141,9 @@
       "file:checksum": "12204ccc753fdb95fc00dc4b5a794a9676c9e573984f6b5808cb6d551e1db9926b99",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -150,7 +152,9 @@
       "file:checksum": "12206e70e09aa3004751cb33624e4e97f2c7a2387143acccf7cf2cd7df0ee65123bf",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_banados-tiles": {
       "href": "./publico_banados.pmtiles",
@@ -160,7 +164,8 @@
       "file:checksum": "12204ab6667c1c79c6c5d7e6d95a7947f0f28dd13e0181f9556b89ad1d7ddf001599",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -171,7 +176,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_banados.thumb.jpg",
@@ -180,7 +186,9 @@
         "thumbnail"
       ],
       "file:size": 56847,
-      "file:checksum": "12203cf317883ae1c73a9c519ee953537f62cea87cf7b3e4ce81e3e1f6356d8a3c1b"
+      "file:checksum": "12203cf317883ae1c73a9c519ee953537f62cea87cf7b3e4ce81e3e1f6356d8a3c1b",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

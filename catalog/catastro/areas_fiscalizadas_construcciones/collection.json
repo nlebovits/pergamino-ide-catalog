@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Polygon",
   "geoparquet:feature_count": 33,
   "table:row_count": 33,
@@ -161,7 +161,9 @@
       "file:checksum": "12208504478abccf205e45bd50563af80b4bb0752e4f5b3780b9be92ab3ec3de38b0",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -170,7 +172,9 @@
       "file:checksum": "12203d2d1e204592fd9b991563f8d0536c3a32c4cc965ae69e4aca14602fc19e6236",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_areas_fiscalizadas_construcciones-tiles": {
       "href": "./publico_areas_fiscalizadas_construcciones.pmtiles",
@@ -180,7 +184,8 @@
       "file:checksum": "1220c1dcac231ada57a6086680b4510a88aa0b5519cb300267af1c143119d31c8fc0",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -191,7 +196,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_areas_fiscalizadas_construcciones.thumb.jpg",
@@ -200,7 +206,9 @@
         "thumbnail"
       ],
       "file:size": 73345,
-      "file:checksum": "12209db925daab1aab6eb07e1d42709d23b0c9e2d6f6ec18ed64a627898634be2786"
+      "file:checksum": "12209db925daab1aab6eb07e1d42709d23b0c9e2d6f6ec18ed64a627898634be2786",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

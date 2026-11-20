@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 1653,
   "table:row_count": 1653,
@@ -165,7 +165,9 @@
       "file:checksum": "1220ee8bcec1497217d406a24901b3ec3a23692899307bd5d3d6e15daca14619fde1",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -174,7 +176,9 @@
       "file:checksum": "122044faf77bb4b59f2de0ec6aaaeec70feb1f40956d5374bb2001a53d4f4b74925e",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_rampas_acceso_veredas-tiles": {
       "href": "./publico_rampas_acceso_veredas.pmtiles",
@@ -184,7 +188,8 @@
       "file:checksum": "122053329b1dd187a0c6ab1a72b5e6f5a478d3b16bd4881394098b18ac6e5be635de",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -195,7 +200,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_rampas_acceso_veredas.thumb.jpg",
@@ -204,7 +210,9 @@
         "thumbnail"
       ],
       "file:size": 37247,
-      "file:checksum": "1220ed0035b47dd960dcadbb02fdc6266fafb4ae5923199bec6cdeecf6023e746c7c"
+      "file:checksum": "1220ed0035b47dd960dcadbb02fdc6266fafb4ae5923199bec6cdeecf6023e746c7c",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

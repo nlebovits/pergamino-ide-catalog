@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPoint",
   "geoparquet:feature_count": 73,
   "table:row_count": 73,
@@ -213,7 +213,9 @@
       "file:checksum": "1220bb0ae80554842e08b4ea7b0c2de7ec473789602a5874ebfd5dd82bc5c29eab49",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -222,7 +224,9 @@
       "file:checksum": "122049b00a0fa459289d5b4f9ce6c76fd6d927d346f2eb23318105e8f70285807c8a",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_edificios_historicos-tiles": {
       "href": "./publico_edificios_historicos.pmtiles",
@@ -231,8 +235,9 @@
       "file:size": 24713,
       "file:checksum": "12204b409748c94cc4784bc28b10048a475882679da816ad85a46cdec6c51618243b",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -243,7 +248,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_edificios_historicos.thumb.jpg",
@@ -252,7 +258,9 @@
         "thumbnail"
       ],
       "file:size": 99078,
-      "file:checksum": "12207e9dee3871e0fbd4d6366201accae6aef922cfc47bb741db55f32c7fdb83598b"
+      "file:checksum": "12207e9dee3871e0fbd4d6366201accae6aef922cfc47bb741db55f32c7fdb83598b",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

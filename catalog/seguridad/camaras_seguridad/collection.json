@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPoint",
   "geoparquet:feature_count": 523,
   "table:row_count": 523,
@@ -161,7 +161,9 @@
       "file:checksum": "1220dea682679a77b9ebebb98f2484db0878a7dffbaceb77981fe0f3a9a700bd77bd",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -170,7 +172,9 @@
       "file:checksum": "122070ffb2811311a5261fcf30e4afedf3692f42ada7287b3a70a54b50e3579ea562",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_camaras_seguridad-tiles": {
       "href": "./publico_camaras_seguridad.pmtiles",
@@ -179,8 +183,9 @@
       "file:size": 47268,
       "file:checksum": "1220a049c4a0d78a1a2863e7cffd4c0a0fd2ae65d60191b1ecefd07d9c322c891352",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -191,7 +196,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_camaras_seguridad.thumb.jpg",
@@ -200,7 +206,9 @@
         "thumbnail"
       ],
       "file:size": 32185,
-      "file:checksum": "1220bc57f93b696ccd9a1f83fad073cda596f7274b4ae42dc6c0826d53ea6e30df21"
+      "file:checksum": "1220bc57f93b696ccd9a1f83fad073cda596f7274b4ae42dc6c0826d53ea6e30df21",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

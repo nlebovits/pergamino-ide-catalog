@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Polygon",
   "geoparquet:feature_count": 178,
   "table:row_count": 178,
@@ -172,7 +172,9 @@
       "file:checksum": "1220324880758541c165e0d4c3ee3cf77dad79a36b5f078a64e167ddd1b558babcf5",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -181,7 +183,9 @@
       "file:checksum": "1220377602473f6d7fe166c38498a9b92a6499f1c73ae93014e7b502f1dadd0e0da7",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_calidad_vivienda-tiles": {
       "href": "./publico_calidad_vivienda.pmtiles",
@@ -190,8 +194,9 @@
       "file:size": 953812,
       "file:checksum": "1220dc5f9e5bc0ce2fd4a6c114140c5da7e2224fc5db2796f84809916defd5687d51",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -202,7 +207,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_calidad_vivienda.thumb.jpg",
@@ -211,7 +217,9 @@
         "thumbnail"
       ],
       "file:size": 72717,
-      "file:checksum": "12206c8365876af273d8585c0d3d7dc08b576b64d33c9f32e6e634686718ecf27903"
+      "file:checksum": "12206c8365876af273d8585c0d3d7dc08b576b64d33c9f32e6e634686718ecf27903",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

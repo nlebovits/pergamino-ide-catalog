@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 12,
   "table:row_count": 12,
@@ -153,7 +153,9 @@
       "file:checksum": "12207a61a7518015be7e6abbff9f2e1480531dd0f80c952365fe6026a0637b5bc61f",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -162,7 +164,9 @@
       "file:checksum": "12206a8b37a02dfa74733499e3a47ccbf6bf99ce6cede28f68aae98a1a377a9a1ae9",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_delegaciones_pueblos-tiles": {
       "href": "./publico_delegaciones_pueblos.pmtiles",
@@ -172,7 +176,8 @@
       "file:checksum": "1220a8d3d124bd0efdf955493463a84184cbd9a65e3d89e2e98aef7dc892a6dbf5a6",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -183,7 +188,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_delegaciones_pueblos.thumb.jpg",
@@ -192,7 +198,9 @@
         "thumbnail"
       ],
       "file:size": 36292,
-      "file:checksum": "1220f6a73ba3d4e584705b449fe31789a9a70f0ff00f4950d271501696de80088be2"
+      "file:checksum": "1220f6a73ba3d4e584705b449fe31789a9a70f0ff00f4950d271501696de80088be2",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

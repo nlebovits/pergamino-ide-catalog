@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPolygon",
   "geoparquet:feature_count": 62,
   "table:row_count": 62,
@@ -165,7 +165,9 @@
       "file:checksum": "12208956374871233759be3b03ad7e75e1203689ace6132a15915cf32e4ed6746848",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -174,7 +176,9 @@
       "file:checksum": "12207455abe4c0887148c089e3d82ea28521eaf2179e45b82db4e40eadedd3c63b4a",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_cobertura_cloacas_de_2019_a_2023-tiles": {
       "href": "./publico_cobertura_cloacas_de_2019_a_2023.pmtiles",
@@ -184,7 +188,8 @@
       "file:checksum": "12202bf7bfaeacad77f904db809825faafc7ee921165009e127e44a0ec81e2964102",
       "roles": [
         "visual"
-      ]
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -195,7 +200,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_cobertura_cloacas_de_2019_a_2023.thumb.jpg",
@@ -204,7 +210,9 @@
         "thumbnail"
       ],
       "file:size": 63501,
-      "file:checksum": "1220b54b717192b47a3b8e9a216b2af02f1be28790ddca1c0e4404c2f95b25d43369"
+      "file:checksum": "1220b54b717192b47a3b8e9a216b2af02f1be28790ddca1c0e4404c2f95b25d43369",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

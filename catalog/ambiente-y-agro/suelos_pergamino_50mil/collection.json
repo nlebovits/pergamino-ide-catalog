@@ -49,7 +49,7 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
@@ -204,7 +204,7 @@
       "type": "struct<xmin: double, ymin: double, xmax: double, ymax: double>"
     }
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "pmtiles:min_zoom": 0,
   "pmtiles:max_zoom": 15,
   "pmtiles:tile_type": "mvt",
@@ -272,7 +272,9 @@
       "file:checksum": "12207e61e451b4914f2152e93c04e2fcce240325e3cf61ebff6132c50ef89ddaa267",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -283,7 +285,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "legends/source": {
       "href": "./legends/source.png",
@@ -293,7 +296,8 @@
         "legend"
       ],
       "file:size": 4616,
-      "file:checksum": "122048a2073f5b573836c268f6a09d35f62012d31df91f5277812a4def3b9b4b7d80"
+      "file:checksum": "122048a2073f5b573836c268f6a09d35f62012d31df91f5277812a4def3b9b4b7d80",
+      "description": "Leyenda de la capa tal como la publica el servidor de la fuente."
     },
     "documentation": {
       "href": "./README.md",
@@ -302,7 +306,9 @@
       "file:checksum": "1220c6b157d1f3a068736a115ae9589d6540a002b65807ff5c604d8b5a819e461daa",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_suelos_pergamino_50mil-tiles": {
       "href": "./publico_suelos_pergamino_50mil.pmtiles",
@@ -311,8 +317,9 @@
       "file:size": 4100864,
       "file:checksum": "122076525f1848446fcb8e54c3672161bedf34ea377da8be2dc9947e817260f8b276",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "thumbnail": {
       "href": "./publico_suelos_pergamino_50mil.thumb.jpg",
@@ -321,7 +328,9 @@
         "thumbnail"
       ],
       "file:size": 232686,
-      "file:checksum": "12203d37c0b6376906518384a9a18377b982a77b0b9e024e4ae855816407e3331a05"
+      "file:checksum": "12203d37c0b6376906518384a9a18377b982a77b0b9e024e4ae855816407e3331a05",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

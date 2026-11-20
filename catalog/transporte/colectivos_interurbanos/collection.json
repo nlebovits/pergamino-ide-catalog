@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiLineString",
   "geoparquet:feature_count": 57,
   "table:row_count": 57,
@@ -169,7 +169,9 @@
       "file:checksum": "12206ec9b03916d0b209753a3d42dc662186614a61f26a52e84a210b83819fc8309e",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -178,7 +180,9 @@
       "file:checksum": "1220d6a339516e42aee87b3f0cc99af6db7266b3480e8c84d6ac104730a1e233cd6c",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_colectivos_interurbanos-tiles": {
       "href": "./publico_colectivos_interurbanos.pmtiles",
@@ -187,8 +191,9 @@
       "file:size": 242684,
       "file:checksum": "1220984adf30bdba51b8ac02ed528cfe69ea848b8a15076e074fd60d1662f06d7045",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -199,7 +204,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_colectivos_interurbanos.thumb.jpg",
@@ -208,7 +214,9 @@
         "thumbnail"
       ],
       "file:size": 50583,
-      "file:checksum": "1220e3d5bd81206945b4e263d8503632f5acac5fb58e1b914119057f115c22531420"
+      "file:checksum": "1220e3d5bd81206945b4e263d8503632f5acac5fb58e1b914119057f115c22531420",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPolygon",
   "geoparquet:feature_count": 45,
   "table:row_count": 45,
@@ -185,7 +185,9 @@
       "file:checksum": "122065b7ab427e45f178b098f6409d0eb80235c5483e16468c32e95eb6dd90483461",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -194,7 +196,9 @@
       "file:checksum": "1220c7a3bfaeaa4d681ced9004eaeebd2284b4401daa37dc8d8d792d49323207d0d4",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_barrios-tiles": {
       "href": "./publico_barrios.pmtiles",
@@ -203,8 +207,9 @@
       "file:size": 133547,
       "file:checksum": "1220c1181660f2df4878b2ec7784e88582eed3966127f9b51fcc9b7df64e376afffa",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -215,7 +220,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_barrios.thumb.jpg",
@@ -224,7 +230,9 @@
         "thumbnail"
       ],
       "file:size": 77568,
-      "file:checksum": "1220ddcbcb6b50361d4ea75a650db34c98d31662072bdd4914ec9b16a5ee63e08239"
+      "file:checksum": "1220ddcbcb6b50361d4ea75a650db34c98d31662072bdd4914ec9b16a5ee63e08239",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

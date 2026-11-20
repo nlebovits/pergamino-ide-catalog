@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "MultiPoint",
   "geoparquet:feature_count": 457,
   "table:row_count": 457,
@@ -237,7 +237,9 @@
       "file:checksum": "122009e2933ab316ce04e1e277b736870f8b9b09262bdea4e18512c68d7a89d26b30",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -246,7 +248,9 @@
       "file:checksum": "1220fd22f215ac8f15d6254bb366fc89c84b8dbca03966d2808163224342f1d2c011",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_edificios_en_altura-tiles": {
       "href": "./publico_edificios_en_altura.pmtiles",
@@ -255,8 +259,9 @@
       "file:size": 59883,
       "file:checksum": "1220df3a653e42454f85af57c9cd6cd0ff3454204b2a82b5b13c0796dac948298173",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -267,7 +272,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_edificios_en_altura.thumb.jpg",
@@ -276,7 +282,9 @@
         "thumbnail"
       ],
       "file:size": 31536,
-      "file:checksum": "12201795f4247d694491ebb9cd87cb3002ab2257fbcce13e7623f864a1ee308658e8"
+      "file:checksum": "12201795f4247d694491ebb9cd87cb3002ab2257fbcce13e7623f864a1ee308658e8",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

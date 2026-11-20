@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 3002,
   "table:row_count": 3002,
@@ -181,7 +181,9 @@
       "file:checksum": "1220f3d88aa2e1d7ee7199b1b1190c92b2cf85d3f2a627dda95c8caf232f361be24e",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -190,7 +192,9 @@
       "file:checksum": "1220c1bcf73c4901d96aad39ff1f1424fd5d1df2eeb518c75e3d050fabe95cd9744b",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_carteles_viales-tiles": {
       "href": "./publico_carteles_viales.pmtiles",
@@ -199,8 +203,9 @@
       "file:size": 70269,
       "file:checksum": "1220e02ba16e191b9de946892e66c7124abec6868351862134ff70885a627167bd71",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -211,7 +216,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_carteles_viales.thumb.jpg",
@@ -220,7 +226,9 @@
         "thumbnail"
       ],
       "file:size": 61423,
-      "file:checksum": "1220bb0bedbcbc929199695ed645ee69ec7b49d9bff0a29d7f149b5568d4cccf6bdd"
+      "file:checksum": "1220bb0bedbcbc929199695ed645ee69ec7b49d9bff0a29d7f149b5568d4cccf6bdd",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

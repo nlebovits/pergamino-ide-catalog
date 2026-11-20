@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 15,
   "table:row_count": 15,
@@ -165,7 +165,9 @@
       "file:checksum": "12206dd2697830f46936897e8e8200485ee184c74fe0dcc47ff4eb84310d043a9d9f",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -174,7 +176,9 @@
       "file:checksum": "1220c39430895017130eb58ca32db6fcdd8bb21f2edb53d88afacf729daf2387af36",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_agencias_de_viaje-tiles": {
       "href": "./publico_agencias_de_viaje.pmtiles",
@@ -183,8 +187,9 @@
       "file:size": 8255,
       "file:checksum": "1220e7f5512a0c94252a4d8f8213d035c424f3e7f53db7f61671e394deb997a9376b",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -195,7 +200,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_agencias_de_viaje.thumb.jpg",
@@ -204,7 +210,9 @@
         "thumbnail"
       ],
       "file:size": 101297,
-      "file:checksum": "1220d4265767500cfc3b5384edc57948e51599544f68284e79e423b5f0f754cf16ec"
+      "file:checksum": "1220d4265767500cfc3b5384edc57948e51599544f68284e79e423b5f0f754cf16ec",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

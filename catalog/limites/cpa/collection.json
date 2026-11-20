@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 6869,
   "table:row_count": 6869,
@@ -200,7 +200,9 @@
       "file:checksum": "1220f4961d0b8d8fa39d3890448ecbf93bda8c573b798731b35c8ccf63abd81926a9",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -209,7 +211,9 @@
       "file:checksum": "12200af2bded81c4e1cc051df77c5ae3dc2e23d7855dc7ddb1e239ed04e86bd5d96a",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_cpa-tiles": {
       "href": "./publico_cpa.pmtiles",
@@ -218,8 +222,9 @@
       "file:size": 361182,
       "file:checksum": "122060be2ffec7c755e20e4ba1b6c0f53ebdf79ad293dc00abfde2ccb011a2e2726c",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -230,7 +235,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_cpa.thumb.jpg",
@@ -239,7 +245,9 @@
         "thumbnail"
       ],
       "file:size": 94743,
-      "file:checksum": "1220276cdc0a323c6727bd5afd8b0c9d2164427e80e2e804166eac2b8161e5204fd1"
+      "file:checksum": "1220276cdc0a323c6727bd5afd8b0c9d2164427e80e2e804166eac2b8161e5204fd1",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

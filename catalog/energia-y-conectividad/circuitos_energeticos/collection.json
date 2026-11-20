@@ -49,12 +49,12 @@
     }
   ],
   "stac_extensions": [
-    "https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json",
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
     "https://stac-extensions.github.io/table/v1.2.0/schema.json",
     "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json"
   ],
-  "updated": "2026-08-14T21:21:48Z",
+  "updated": "2026-11-20T07:41:37Z",
   "geoparquet:geometry_type": "Point",
   "geoparquet:feature_count": 19,
   "table:row_count": 19,
@@ -180,7 +180,9 @@
       "file:checksum": "122043cac7e2eb94447f3a73f0359be5defd7935bf058852201cb3a8b808656cefbf",
       "roles": [
         "data"
-      ]
+      ],
+      "title": "Datos (GeoParquet)",
+      "description": "Todos los registros de la capa en GeoParquet, con geometría WKB en EPSG:4326 y una columna de cobertura `bbox`."
     },
     "documentation": {
       "href": "./README.md",
@@ -189,7 +191,9 @@
       "file:checksum": "122073e9e3d146024a0605f7385b3ade715d51cac5b50482c61299b7fcaf35012b3e",
       "roles": [
         "documentation"
-      ]
+      ],
+      "title": "Documentación",
+      "description": "README de la colección: contenido, procedencia, licencia y acceso."
     },
     "publico_circuitos_energeticos-tiles": {
       "href": "./publico_circuitos_energeticos.pmtiles",
@@ -198,8 +202,9 @@
       "file:size": 28808,
       "file:checksum": "1220a8f641ec518e2edf8d3c5229c6ae755e65a48623fe5ba94afb31675b0bc6105d",
       "roles": [
-        "data"
-      ]
+        "visual"
+      ],
+      "description": "Teselas vectoriales MVT generadas a partir del GeoParquet de esta colección, para visualización web."
     },
     "styles/default": {
       "href": "./styles/default.json",
@@ -210,7 +215,8 @@
       "roles": [
         "style",
         "default"
-      ]
+      ],
+      "description": "Estilo MapLibre por defecto para las teselas de esta colección, derivado del estilo SLD que publica la fuente."
     },
     "thumbnail": {
       "href": "./publico_circuitos_energeticos.thumb.jpg",
@@ -219,7 +225,9 @@
         "thumbnail"
       ],
       "file:size": 56957,
-      "file:checksum": "1220cbbdbcabdbcc6207f79e78a5eae2ed27740dfac9842f6e4d623d1861919a35c2"
+      "file:checksum": "1220cbbdbcabdbcc6207f79e78a5eae2ed27740dfac9842f6e4d623d1861919a35c2",
+      "title": "Vista previa",
+      "description": "Imagen de la capa dibujada con el estilo por defecto sobre un mapa base."
     }
   }
 }

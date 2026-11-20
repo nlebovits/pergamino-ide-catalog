@@ -14,8 +14,18 @@ widened allow-list is a false claim about what this catalog conforms to.
 
 ## Accepted deviations
 
-None. rashid passes clean: 0 errors, 0 warnings across 197 objects, with no
-disabled rule and no severity override.
+None. The catalog declares Portolan v0.3.0, and rashid 0.4.0 finds 0 errors
+with no disabled rule and no severity override.
+
+## Open warnings
+
+Warnings do not fail the gate, and they need no entry in `ACCEPTED`. They are
+listed here so that each one has a stated reason.
+
+| Rule | Where | Reason |
+|---|---|---|
+| PTL-DAT-020 | every vector collection | The source publishes no column descriptions. GeoNode's `attribute_set` returns a null `description` for every attribute. The spec forbids placeholder text (PORTO-FMT-079), so the columns stay undescribed and each collection README says why. |
+| PTL-CAT-001 | `ambiente-y-agro/`, `catastro/` | These groups hold more than 20 collections. The grouping follows the publisher's own themes, and splitting them would invent a hierarchy the source does not have. |
 
 ## A separate matter: stac-check cannot read the Portolan schema
 
@@ -29,7 +39,7 @@ extension raises:
 
 ```
 'list' object has no attribute 'get'
-[Schema: https://schemas.portolan-sdi.org/portolan/v0.1.1/schema.json]
+[Schema: https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json]
 ```
 
 **Evidence it is not this catalog's fault.** The published schema is well formed
