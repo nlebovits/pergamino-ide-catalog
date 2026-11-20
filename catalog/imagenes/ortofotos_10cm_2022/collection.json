@@ -95,52 +95,51 @@
       "href": "./overview.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "title": "Vista general de todos los mosaicos (COG)",
-      "description": "Todos los mosaicos en una sola imagen RGB de 8 bits, en Web Mercator (EPSG:3857) a 1 m, WebP con una banda alfa para el área sin imagen. Sirve para ver qué cubre la colección; para análisis usar el COG de cada ítem.",
+      "description": "Todos los mosaicos en una sola imagen RGB de 8 bits, en Web Mercator (EPSG:3857) a 1 m, WebP sin pérdida, con nodata 0 en el área sin imagen. Sirve para ver qué cubre la colección; para análisis usar el COG de cada ítem.",
       "roles": [
         "visual",
         "overview"
       ],
       "start_datetime": "2022-01-01T00:00:00Z",
       "end_datetime": "2022-12-31T23:59:59Z",
-      "file:size": 31039080,
-      "file:checksum": "12208e53163ef88caf7cc3b25e9555294330a099cef11d8a45201ce1d486481613c3",
+      "file:size": 170961624,
+      "file:checksum": "122064b70dae7911d575468cb507ff467f6e5e505f4cba2b448be07eb12687cb4ab2",
       "bands": [
         {
           "name": "red",
           "data_type": "uint8",
+          "nodata": 0,
           "statistics": {
-            "minimum": 0.0,
+            "minimum": 1.0,
             "maximum": 255.0,
-            "mean": 124.5296,
-            "stddev": 42.7747,
+            "mean": 124.5299,
+            "stddev": 42.7739,
             "valid_percent": 2.2605
           }
         },
         {
           "name": "green",
           "data_type": "uint8",
+          "nodata": 0,
           "statistics": {
-            "minimum": 0.0,
+            "minimum": 1.0,
             "maximum": 255.0,
-            "mean": 117.6534,
-            "stddev": 39.8164,
+            "mean": 117.6539,
+            "stddev": 39.8149,
             "valid_percent": 2.2605
           }
         },
         {
           "name": "blue",
           "data_type": "uint8",
+          "nodata": 0,
           "statistics": {
-            "minimum": 0.0,
+            "minimum": 1.0,
             "maximum": 255.0,
-            "mean": 100.4202,
-            "stddev": 41.7983,
+            "mean": 100.4214,
+            "stddev": 41.7953,
             "valid_percent": 2.2605
           }
-        },
-        {
-          "name": "alpha",
-          "data_type": "uint8"
         }
       ],
       "proj:code": "EPSG:3857",
@@ -182,8 +181,8 @@
       "roles": [
         "thumbnail"
       ],
-      "file:size": 83974,
-      "file:checksum": "1220631cb75b2a2b2e45850f119f65e2ac57a4efeb6dbcdfab4e382857426ff6a174"
+      "file:size": 84972,
+      "file:checksum": "12204ae4a14ddd992e97099d227aeec98a4278c742e18d1ce3e24e04e8c34e411ef0"
     }
   },
   "links": [
@@ -422,5 +421,5 @@
       "title": "CC BY-SA 4.0"
     }
   ],
-  "updated": "2026-11-20T12:21:34Z"
+  "updated": "2026-11-20T12:58:34Z"
 }

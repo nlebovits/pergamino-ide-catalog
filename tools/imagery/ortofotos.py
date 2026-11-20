@@ -15,8 +15,8 @@ Builds ``catalog/imagenes/ortofotos_10cm_2022``:
   file that does not, including every WCS assembly, is re-encoded once as a
   JPEG COG with an internal mask and exact embedded statistics.
 - Writes one Item per tile with the valid-data footprint as geometry, a
-  thumbnail, the collection overview (8-bit RGB plus alpha in EPSG:3857 at
-  1 m, WebP), the collection thumbnail and ``items.parquet``.
+  thumbnail, the collection overview (8-bit RGB in EPSG:3857 at 1 m,
+  lossless WebP, nodata 0), the collection thumbnail and ``items.parquet``.
 
 Idempotent: a tile whose Item exists and whose GeoNode ``last_updated``
 equals the Item's ``pergamino:source_updated`` is not downloaded again.
@@ -560,14 +560,18 @@ def tile_href(item: dict[str, Any]) -> str:
 
 
 def set_masked_stats(path: Path) -> None:
-    """Write exact statistics of bands 1-3 over the pixels band 4 marks valid.
+    """Make 0 mean "no tile" in bands 1-3, and write their exact statistics.
 
-    The COG driver's STATISTICS=YES ignores the alpha band of a sparse
-    warp, and it wrote a standard deviation of about 6 for the overview,
-    against about 26 in the image. A viewer that stretches contrast from
-    the statistics then maps a narrow grey range to the full 0-255 and
-    washes the image out. These values go into the band metadata, and
-    STATISTICS=AUTO copies them into the COG header.
+    Band 4 is the alpha band gdalwarp writes. Where it is 0, the colour
+    bands are set to 0; where it is not, a colour value of 0 becomes 1. The
+    COG then carries nodata 0 instead of the alpha band, and 0 is never a
+    real pixel.
+
+    The statistics cover the valid pixels only. The COG driver's
+    STATISTICS=YES counts the empty area of a sparse warp, which narrows the
+    standard deviation, and a viewer that stretches contrast from the
+    statistics then washes the image out. These values go into the band
+    metadata, and STATISTICS=AUTO copies them into the COG header.
     """
     import numpy as np
     import rasterio
@@ -581,7 +585,10 @@ def set_masked_stats(path: Path) -> None:
             valid = alpha > 0
             if not valid.any():
                 continue
-            vals = src.read([1, 2, 3], window=win)[:, valid].astype("float64")
+            rgb = src.read([1, 2, 3], window=win)
+            rgb = np.where(valid, np.maximum(rgb, 1), 0).astype("uint8")
+            src.write(rgb, [1, 2, 3], window=win)
+            vals = rgb[:, valid].astype("float64")
             n += vals.shape[1]
             s = s + vals.sum(axis=1)
             ss = ss + (vals * vals).sum(axis=1)
@@ -601,16 +608,25 @@ def set_masked_stats(path: Path) -> None:
 
 
 def build_overview(items: list[dict[str, Any]]) -> Path:
-    """8-bit RGB plus alpha overview of every tile in EPSG:3857 at 1 m.
+    """8-bit RGB overview of every tile in EPSG:3857 at 1 m, nodata 0.
 
-    gdalwarp reads each tile's internal overviews and honours its mask. The
-    alpha band it writes stays a band of the COG, compressed with lossy
-    WebP. An internal mask would not do: GDAL writes it as a 1-band image
-    after each overview level, and a viewer that ignores the TIFF mask flag
-    takes the smallest of those for the lowest zoom, which shows the
-    collection as a white silhouette on black. JPEG cannot hold the alpha
-    band. Areas with no tile are left unwritten (sparse), so the file stays
-    small.
+    gdalwarp reads each tile's internal overviews and honours its mask; its
+    alpha band becomes nodata 0 (set_masked_stats). The empty area is about
+    98% of the extent, so how it is marked decides what a viewer shows:
+
+    - An internal mask is a 1-band image after each overview level. A viewer
+      that ignores the TIFF mask flag takes the smallest one for the lowest
+      zoom and draws a white silhouette on black.
+    - An alpha band is ignored by viewers that compute a 2-98% stretch from
+      the pixels, such as the Source Cooperative COG viewer, which skips only
+      the nodata value. The empty pixels then set the stretch to about 0-100
+      and the image is bleached.
+
+    Nodata 0 works for both. It needs lossless compression: lossy WebP or
+    JPEG turns the zeros at the edge of each tile into small values, and
+    GDAL's overview averaging skips nodata but not alpha. Lossless WebP is
+    about half the size of DEFLATE here. Areas with no tile are left
+    unwritten (sparse).
     """
     out = COLLECTION_DIR / OVERVIEW_FILE
     work = Path(tempfile.mkdtemp(prefix="overview_", dir=RAW.parent))
@@ -626,8 +642,12 @@ def build_overview(items: list[dict[str, Any]]) -> Path:
     ])
     set_masked_stats(warped)
     common.run([
-        "gdal_translate", "-q", "-of", "COG", "-co", "COMPRESS=WEBP",
-        "-co", "QUALITY=80", "-co", "BLOCKSIZE=512",
+        "gdal_translate", "-q", "-of", "COG", "-b", "1", "-b", "2",
+        "-b", "3", "-a_nodata", "0", "-co", "COMPRESS=WEBP",
+        # 100 makes the COG driver's WebP lossless. The overview levels
+        # have their own setting, which defaults to lossy 75.
+        "-co", "QUALITY=100", "-co", "OVERVIEW_QUALITY=100",
+        "-co", "BLOCKSIZE=512",
         "-co", "SPARSE_OK=TRUE", "-co", "STATISTICS=AUTO",
         "-co", "OVERVIEW_RESAMPLING=AVERAGE", "-co", "BIGTIFF=IF_SAFER",
         "-co", "NUM_THREADS=ALL_CPUS", str(warped), str(out),
@@ -683,10 +703,10 @@ def update_collection(overview: bool = True) -> dict[str, Any]:
     ov = COLLECTION_DIR / OVERVIEW_FILE
     if ov.exists():
         doc["assets"]["overview"]["bands"] = [
-            {"name": n, "data_type": "uint8", "statistics": s}
+            {"name": n, "data_type": "uint8", "nodata": 0, "statistics": s}
             for n, s in zip(("red", "green", "blue"),
                             common.embedded_stats(ov))
-        ] + [{"name": "alpha", "data_type": "uint8"}]
+        ]
         doc["assets"]["overview"].update(common.proj_fields(ov))
     keep = [ln for ln in doc["links"] if ln["rel"] != "item"]
     doc["links"] = keep[:2] + common.item_links(COLLECTION_DIR, items) \
