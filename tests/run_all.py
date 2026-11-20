@@ -24,6 +24,8 @@ TESTS = [
     "test_no_stale_dates.py",
     "test_queries.py",
     "test_imagery_refresh.py",
+    "test_virtual_refresh.py",
+    "test_virtual.py",
 ]
 
 failed = []

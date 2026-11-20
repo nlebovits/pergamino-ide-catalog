@@ -1,0 +1,127 @@
+{
+  "type": "Catalog",
+  "id": "externos/glofas",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json"
+  ],
+  "title": "Peligro de inundación fluvial (JRC GloFAS)",
+  "description": "Mapas globales de peligro de inundación fluvial del JRC (CEMS-GloFAS), recortados al partido de Pergamino sin copiar los datos: profundidad del agua y clases de profundidad para siete períodos de retorno, y la máscara de agua permanente.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Datos de otros catálogos"
+    },
+    {
+      "rel": "child",
+      "href": "./profundidad_rp10/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 10 años"
+    },
+    {
+      "rel": "child",
+      "href": "./profundidad_rp20/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 20 años"
+    },
+    {
+      "rel": "child",
+      "href": "./profundidad_rp50/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 50 años"
+    },
+    {
+      "rel": "child",
+      "href": "./profundidad_rp75/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 75 años"
+    },
+    {
+      "rel": "child",
+      "href": "./profundidad_rp100/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 100 años"
+    },
+    {
+      "rel": "child",
+      "href": "./profundidad_rp200/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 200 años"
+    },
+    {
+      "rel": "child",
+      "href": "./profundidad_rp500/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 500 años"
+    },
+    {
+      "rel": "child",
+      "href": "./peligro_rp10/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 10 años"
+    },
+    {
+      "rel": "child",
+      "href": "./peligro_rp20/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 20 años"
+    },
+    {
+      "rel": "child",
+      "href": "./peligro_rp50/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 50 años"
+    },
+    {
+      "rel": "child",
+      "href": "./peligro_rp75/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 75 años"
+    },
+    {
+      "rel": "child",
+      "href": "./peligro_rp100/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 100 años"
+    },
+    {
+      "rel": "child",
+      "href": "./peligro_rp200/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 200 años"
+    },
+    {
+      "rel": "child",
+      "href": "./peligro_rp500/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 500 años"
+    },
+    {
+      "rel": "child",
+      "href": "./agua_permanente/collection.json",
+      "type": "application/json",
+      "title": "Cuerpos de agua permanentes (GloFAS)"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    }
+  ],
+  "updated": "2026-11-20T08:39:59Z"
+}

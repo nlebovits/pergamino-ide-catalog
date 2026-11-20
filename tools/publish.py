@@ -75,6 +75,10 @@ CONTENT_TYPES = {
     ".laz": "application/vnd.laszip",
     ".xml": "application/xml",
     ".yaml": "application/yaml",
+    # A GDAL VRT is XML; GDAL registers no media type of its own.
+    ".vrt": "application/xml",
+    # The media type Overture's own STAC uses for its latest.ddb.
+    ".ddb": "application/vnd.duckdb",
 }
 DEFAULT_TYPE = "application/octet-stream"
 

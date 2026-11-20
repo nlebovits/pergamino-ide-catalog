@@ -1,0 +1,46 @@
+{
+  "partido": {
+    "url": "https://data.source.coop/nlebovits/pergamino-ide/limites/partido_pergamino/partido_pergamino.parquet",
+    "legacy_url": "https://data.source.coop/nlebovits/pergamino-ide/limites/partido_pergamino/publico_partido_pergamino.parquet",
+    "local": "sources/publico_partido_pergamino.parquet"
+  },
+  "glofas": {
+    "catalog": "https://data.source.coop/nlebovits/jrc-glofas/catalog.json",
+    "tile": "ID75_S30_W70",
+    "layers": [
+      {"id": "profundidad_rp10", "upstream": "depth-rp10", "kind": "depth", "rp": 10},
+      {"id": "profundidad_rp20", "upstream": "depth-rp20", "kind": "depth", "rp": 20},
+      {"id": "profundidad_rp50", "upstream": "depth-rp50", "kind": "depth", "rp": 50},
+      {"id": "profundidad_rp75", "upstream": "depth-rp75", "kind": "depth", "rp": 75},
+      {"id": "profundidad_rp100", "upstream": "depth-rp100", "kind": "depth", "rp": 100},
+      {"id": "profundidad_rp200", "upstream": "depth-rp200", "kind": "depth", "rp": 200},
+      {"id": "profundidad_rp500", "upstream": "depth-rp500", "kind": "depth", "rp": 500},
+      {"id": "peligro_rp10", "upstream": "hazard-rp10", "kind": "hazard", "rp": 10},
+      {"id": "peligro_rp20", "upstream": "hazard-rp20", "kind": "hazard", "rp": 20},
+      {"id": "peligro_rp50", "upstream": "hazard-rp50", "kind": "hazard", "rp": 50},
+      {"id": "peligro_rp75", "upstream": "hazard-rp75", "kind": "hazard", "rp": 75},
+      {"id": "peligro_rp100", "upstream": "hazard-rp100", "kind": "hazard", "rp": 100},
+      {"id": "peligro_rp200", "upstream": "hazard-rp200", "kind": "hazard", "rp": 200},
+      {"id": "peligro_rp500", "upstream": "hazard-rp500", "kind": "hazard", "rp": 500},
+      {"id": "agua_permanente", "upstream": "permanent-water", "kind": "water"}
+    ],
+    "excluded": [
+      {"upstream": "spurious-depths", "reason": "no valid pixel inside the partido in tile ID75_S30_W70"}
+    ]
+  },
+  "overture": {
+    "mirror": "https://nlebovits.github.io/overture-portolan/catalog.json",
+    "stac": "https://stac.overturemaps.org/catalog.json",
+    "release_url": "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/{release}/theme={theme}/type={type}/",
+    "pmtiles": "https://overturemaps-extras-us-west-2.s3.us-west-2.amazonaws.com/tiles/{release}/{theme}.pmtiles",
+    "layers": [
+      {"id": "edificios", "theme": "buildings", "type": "building", "view": "edificios"},
+      {"id": "lugares", "theme": "places", "type": "place", "view": "lugares"},
+      {"id": "segmentos", "theme": "transportation", "type": "segment", "view": "segmentos"},
+      {"id": "uso_del_suelo", "theme": "base", "type": "land_use", "view": "uso_del_suelo"}
+    ],
+    "excluded": [
+      {"theme": "addresses", "type": "address", "reason": "the release holds no Argentine address; the only part over the partido bbox carries CL, BR and UY rows"}
+    ]
+  }
+}

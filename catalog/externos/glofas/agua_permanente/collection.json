@@ -1,0 +1,236 @@
+{
+  "type": "Collection",
+  "id": "externos/glofas/agua_permanente",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json"
+  ],
+  "title": "Cuerpos de agua permanentes (GloFAS)",
+  "description": "Máscara de los cuerpos de agua permanentes que el JRC usa para completar los mapas de peligro de GloFAS, recortada al partido de Pergamino sin copiar los datos.",
+  "keywords": [
+    "inundación",
+    "peligro",
+    "GloFAS",
+    "JRC",
+    "Copernicus",
+    "Pergamino"
+  ],
+  "license": "other",
+  "providers": [
+    {
+      "name": "European Commission, Joint Research Centre (JRC)",
+      "description": "Copernicus Emergency Management Service (CEMS), Global Flood Awareness System (GloFAS).",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://joint-research-centre.ec.europa.eu/"
+    },
+    {
+      "name": "JRC GloFAS en Source Cooperative (nlebovits/jrc-glofas)",
+      "description": "Convierte los GeoTIFF del JRC en COG y los publica. Los bytes que referencia esta colección están allí.",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://source.coop/nlebovits/jrc-glofas"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.94404785,
+          -34.17655858,
+          -60.13879236,
+          -33.54021706
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Peligro de inundación fluvial (JRC GloFAS)"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "via",
+      "href": "https://doi.org/10.2905/JRC.VD32YWG",
+      "type": "text/html",
+      "title": "Global river flood hazard maps (JRC, DOI)"
+    },
+    {
+      "rel": "via",
+      "href": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/CEMS-GLOFAS/flood_hazard/",
+      "type": "text/html",
+      "title": "Descarga original del JRC (CEMS-GLOFAS/flood_hazard)"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://data.source.coop/nlebovits/jrc-glofas/permanent-water/collection.json",
+      "type": "application/json",
+      "title": "Colección permanent-water en nlebovits/jrc-glofas"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by/4.0/",
+      "type": "text/html",
+      "title": "CC BY 4.0 (copyright.txt del JRC)"
+    },
+    {
+      "rel": "license",
+      "href": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "type": "text/html",
+      "title": "ODbL 1.0 (README.txt del JRC y Catálogo de Datos del JRC)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.source.coop/nlebovits/jrc-glofas/permanent-water/ID75_S30_W70/ID75_S30_W70_permanent_water.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data",
+        "external"
+      ],
+      "title": "Tesela COG de GloFAS (externa)",
+      "description": "Tesela ID75_S30_W70 de la capa `permanent-water` del catálogo nlebovits/jrc-glofas. Cubre 10° × 10°; el partido es una ventana dentro de ella. Los bytes no se copian a este catálogo.",
+      "bands": [
+        {
+          "name": "b1",
+          "data_type": "uint8"
+        }
+      ],
+      "nodata": 255.0,
+      "classification:classes": [
+        {
+          "value": 1,
+          "name": "agua_permanente",
+          "title": "Agua permanente",
+          "description": "Cuerpo de agua permanente usado por el JRC para completar los mapas de peligro.",
+          "color_hint": "1F78B4"
+        }
+      ],
+      "processing:expression": {
+        "format": "gdalwarp",
+        "expression": "gdalwarp -of VRT -cutline /vsicurl/https://data.source.coop/nlebovits/pergamino-ide/limites/partido_pergamino/partido_pergamino.parquet -crop_to_cutline /vsicurl/https://data.source.coop/nlebovits/jrc-glofas/permanent-water/ID75_S30_W70/ID75_S30_W70_permanent_water.tif agua_permanente.vrt"
+      }
+    },
+    "recorte": {
+      "href": "./agua_permanente.vrt",
+      "type": "application/xml",
+      "roles": [
+        "metadata",
+        "recipe"
+      ],
+      "title": "Recorte al partido (GDAL VRT)",
+      "description": "VRT de GDAL que lee la tesela externa por /vsicurl/ y la recorta al límite oficial del partido. Abrirlo con GDAL, QGIS o rasterio lee solo la ventana del partido. Las estadísticas de la banda describen esa ventana.",
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        763,
+        965
+      ],
+      "proj:transform": [
+        0.000833333336,
+        0.0,
+        -60.943748902766,
+        0.0,
+        -0.000833333333,
+        -33.54043333333
+      ],
+      "bands": [
+        {
+          "name": "b1",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 1.0,
+            "maximum": 1.0,
+            "mean": 1.0,
+            "stddev": 0.0,
+            "valid_percent": 0.435
+          }
+        }
+      ],
+      "nodata": 255.0,
+      "classification:classes": [
+        {
+          "value": 1,
+          "name": "agua_permanente",
+          "title": "Agua permanente",
+          "description": "Cuerpo de agua permanente usado por el JRC para completar los mapas de peligro.",
+          "color_hint": "1F78B4"
+        }
+      ],
+      "file:size": 85710,
+      "file:checksum": "1220c4f5613284f3d47ad8cdd85d59d0b3e8bc5c40603f38872b39540492328e4591"
+    },
+    "style": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "title": "Máscara del partido",
+      "description": "Estilo MapLibre que cubre todo lo que queda fuera del partido y traza su límite. El ráster se dibuja con la definición `renders` o con las clases de la banda.",
+      "file:size": 47073,
+      "file:checksum": "1220fdac54217595c0eeffb63283337d6b2ef6547a7cdd3aec5cc4713116d17963c7"
+    },
+    "thumbnail": {
+      "href": "./agua_permanente.thumb.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Vista previa",
+      "description": "La ventana del partido dibujada con la rampa o las clases por defecto sobre un mapa base, con la máscara aplicada.",
+      "file:size": 29457,
+      "file:checksum": "12204888346fd44d51bcf2cd5d4caf1f26237485c57358db5d6f8a54948004f445a8"
+    }
+  },
+  "pergamino:virtual": {
+    "upstream_catalog": "https://data.source.coop/nlebovits/jrc-glofas/catalog.json",
+    "upstream_collection": "permanent-water",
+    "tile": "ID75_S30_W70",
+    "recipe": "https://data.source.coop/nlebovits/pergamino-ide/externos/glofas/agua_permanente/agua_permanente.vrt"
+  },
+  "updated": "2026-11-20T09:02:38Z"
+}
