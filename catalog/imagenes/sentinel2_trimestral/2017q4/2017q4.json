@@ -1,0 +1,640 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json"
+  ],
+  "id": "2017q4",
+  "collection": "imagenes/sentinel2_trimestral",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -60.1394867,
+          -33.5239586
+        ],
+        [
+          -60.1176329,
+          -34.1765723
+        ],
+        [
+          -60.9436886,
+          -34.1932065
+        ],
+        [
+          -60.9592921,
+          -33.5401905
+        ],
+        [
+          -60.1394867,
+          -33.5239586
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -60.9592921,
+    -34.1932065,
+    -60.1176329,
+    -33.5239586
+  ],
+  "properties": {
+    "title": "Sentinel-2, mediana trimestral 2017 T4",
+    "description": "Mediana por píxel de las observaciones sin nubes de Sentinel-2 L2A entre 2017-10-01 y 2017-12-31, sobre el rectángulo del Partido de Pergamino. Contains modified Copernicus Sentinel data 2017.",
+    "datetime": null,
+    "start_datetime": "2017-10-01T00:00:00Z",
+    "end_datetime": "2017-12-31T23:59:59Z",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "gsd": 10,
+    "proj:code": "EPSG:32720",
+    "proj:shape": [
+      7245,
+      7619
+    ],
+    "proj:transform": [
+      10.0,
+      0.0,
+      689480.0,
+      0.0,
+      -10.0,
+      6286960.0
+    ],
+    "proj:bbox": [
+      689480.0,
+      6214510.0,
+      765670.0,
+      6286960.0
+    ],
+    "pergamino:source_collection": "sentinel-2-l2a",
+    "pergamino:max_scene_cloud_cover": 90,
+    "pergamino:scene_count": 54,
+    "pergamino:scene_ids": [
+      "S2B_20HQH_20171006_0_L2A",
+      "S2B_21HTC_20171006_0_L2A",
+      "S2A_20HQH_20171011_0_L2A",
+      "S2A_21HTC_20171011_0_L2A",
+      "S2A_20HPH_20171014_0_L2A",
+      "S2A_20HQH_20171014_0_L2A",
+      "S2A_21HTC_20171014_0_L2A",
+      "S2B_20HQH_20171016_0_L2A",
+      "S2B_21HTC_20171016_0_L2A",
+      "S2A_20HQH_20171021_0_L2A",
+      "S2A_21HTC_20171021_0_L2A",
+      "S2B_20HPH_20171029_1_L2A",
+      "S2B_20HQH_20171029_0_L2A",
+      "S2B_21HTC_20171029_0_L2A",
+      "S2B_20HPH_20171029_0_L2A",
+      "S2B_21HTC_20171029_1_L2A",
+      "S2A_20HQH_20171031_0_L2A",
+      "S2A_21HTC_20171031_0_L2A",
+      "S2A_20HPH_20171103_0_L2A",
+      "S2A_20HQH_20171103_0_L2A",
+      "S2A_21HTC_20171103_0_L2A",
+      "S2A_20HQH_20171110_0_L2A",
+      "S2A_21HTC_20171110_0_L2A",
+      "S2B_20HQH_20171115_0_L2A",
+      "S2B_21HTC_20171115_1_L2A",
+      "S2B_20HPH_20171118_0_L2A",
+      "S2B_20HQH_20171118_0_L2A",
+      "S2B_21HTC_20171118_0_L2A",
+      "S2A_20HPH_20171123_0_L2A",
+      "S2A_20HQH_20171123_1_L2A",
+      "S2A_20HPH_20171123_1_L2A",
+      "S2B_20HPH_20171128_0_L2A",
+      "S2B_20HQH_20171128_0_L2A",
+      "S2B_21HTC_20171128_0_L2A",
+      "S2A_20HQH_20171130_0_L2A",
+      "S2A_21HTC_20171130_0_L2A",
+      "S2B_20HQH_20171205_0_L2A",
+      "S2B_21HTC_20171205_0_L2A",
+      "S2A_20HQH_20171210_0_L2A",
+      "S2A_21HTC_20171210_0_L2A",
+      "S2B_20HQH_20171215_0_L2A",
+      "S2B_21HTC_20171215_0_L2A",
+      "S2B_20HPH_20171218_0_L2A",
+      "S2B_20HQH_20171218_0_L2A",
+      "S2B_21HTC_20171218_0_L2A",
+      "S2A_20HQH_20171220_0_L2A",
+      "S2A_21HTC_20171220_0_L2A",
+      "S2B_20HQH_20171225_0_L2A",
+      "S2B_21HTC_20171225_0_L2A",
+      "S2B_20HPH_20171228_0_L2A",
+      "S2B_20HQH_20171228_0_L2A",
+      "S2B_21HTC_20171228_0_L2A",
+      "S2A_20HQH_20171230_0_L2A",
+      "S2A_21HTC_20171230_0_L2A"
+    ],
+    "pergamino:acquisition_days": 22,
+    "pergamino:dn_shift": 1000,
+    "pergamino:valid_percent": 100.0,
+    "pergamino:attribution": "Contains modified Copernicus Sentinel data 2017",
+    "created": "2026-11-20T09:02:39Z"
+  },
+  "assets": {
+    "data": {
+      "href": "./data.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Mosaico de reflectancia, 4 bandas (COG)",
+      "description": "B02, B03, B04 y B08 a 10 m en EPSG:32720, uint16, nodata 0. Reflectancia = DN * 0.0001 - 0.1 (convención de Sentinel-2 Collection 1). Estadísticas por banda embebidas en la cabecera.",
+      "roles": [
+        "data",
+        "reflectance"
+      ],
+      "bands": [
+        {
+          "name": "B02",
+          "eo:common_name": "blue",
+          "eo:center_wavelength": 0.49,
+          "eo:full_width_half_max": 0.098,
+          "description": "Reflectancia de superficie (BOA), blue",
+          "data_type": "uint16",
+          "nodata": 0,
+          "unit": "1",
+          "raster:scale": 0.0001,
+          "raster:offset": -0.1,
+          "raster:spatial_resolution": 10,
+          "statistics": {
+            "minimum": 1023.0,
+            "maximum": 13376.0,
+            "mean": 1667.5752,
+            "stddev": 209.7243,
+            "valid_percent": 99.9986
+          }
+        },
+        {
+          "name": "B03",
+          "eo:common_name": "green",
+          "eo:center_wavelength": 0.56,
+          "eo:full_width_half_max": 0.045,
+          "description": "Reflectancia de superficie (BOA), green",
+          "data_type": "uint16",
+          "nodata": 0,
+          "unit": "1",
+          "raster:scale": 0.0001,
+          "raster:offset": -0.1,
+          "raster:spatial_resolution": 10,
+          "statistics": {
+            "minimum": 1092.0,
+            "maximum": 13432.0,
+            "mean": 1961.7872,
+            "stddev": 214.0751,
+            "valid_percent": 99.9986
+          }
+        },
+        {
+          "name": "B04",
+          "eo:common_name": "red",
+          "eo:center_wavelength": 0.665,
+          "eo:full_width_half_max": 0.038,
+          "description": "Reflectancia de superficie (BOA), red",
+          "data_type": "uint16",
+          "nodata": 0,
+          "unit": "1",
+          "raster:scale": 0.0001,
+          "raster:offset": -0.1,
+          "raster:spatial_resolution": 10,
+          "statistics": {
+            "minimum": 1062.0,
+            "maximum": 14132.0,
+            "mean": 2181.1288,
+            "stddev": 390.9239,
+            "valid_percent": 99.9986
+          }
+        },
+        {
+          "name": "B08",
+          "eo:common_name": "nir",
+          "eo:center_wavelength": 0.842,
+          "eo:full_width_half_max": 0.145,
+          "description": "Reflectancia de superficie (BOA), nir",
+          "data_type": "uint16",
+          "nodata": 0,
+          "unit": "1",
+          "raster:scale": 0.0001,
+          "raster:offset": -0.1,
+          "raster:spatial_resolution": 10,
+          "statistics": {
+            "minimum": 1138.0,
+            "maximum": 13928.0,
+            "mean": 3803.3806,
+            "stddev": 505.6705,
+            "valid_percent": 99.9986
+          }
+        }
+      ],
+      "file:size": 382144515,
+      "file:checksum": "1220a505c819053c05698a96e6e0f320e030d187fe9b5a783469b5c07b45b648b117"
+    },
+    "visual": {
+      "href": "./visual.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Color verdadero, 8 bits (COG)",
+      "description": "B04, B03 y B02 en RGB de 8 bits, JPEG, con máscara interna donde el mosaico no tiene datos. Estiramiento fijo para todos los trimestres: reflectancia 0 a 0.2 lineal a 1-255 con gamma 1/1.4.",
+      "roles": [
+        "visual"
+      ],
+      "bands": [
+        {
+          "name": "red",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 22.0,
+            "maximum": 255.0,
+            "mean": 173.0136,
+            "stddev": 41.715,
+            "valid_percent": 99.9986
+          }
+        },
+        {
+          "name": "green",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 29.0,
+            "maximum": 255.0,
+            "mean": 150.7531,
+            "stddev": 23.4207,
+            "valid_percent": 99.9986
+          }
+        },
+        {
+          "name": "blue",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 11.0,
+            "maximum": 255.0,
+            "mean": 115.7793,
+            "stddev": 25.7687,
+            "valid_percent": 99.9986
+          }
+        }
+      ],
+      "file:size": 15563365,
+      "file:checksum": "12200e5a584701b71f6d7a211c5957e42233a1329ab986cfb2e8fcfaaae6d99c8167"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Vista previa",
+      "description": "JPEG del recurso visual reducido, sin mapa base.",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 77134,
+      "file:checksum": "122008fb42e6a0617fa8b10c2dfb23da7e5f945071c3555aab5e638f33e5e1f0908d"
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "license",
+      "href": "https://sentinels.copernicus.eu/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "type": "application/pdf",
+      "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HQH_20171006_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HQH_20171006_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_21HTC_20171006_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_21HTC_20171006_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20171011_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HQH_20171011_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20171011_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_21HTC_20171011_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HPH_20171014_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HPH_20171014_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20171014_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HQH_20171014_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20171014_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_21HTC_20171014_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HQH_20171016_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HQH_20171016_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_21HTC_20171016_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_21HTC_20171016_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20171021_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HQH_20171021_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20171021_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_21HTC_20171021_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HPH_20171029_1_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HPH_20171029_1_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HQH_20171029_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HQH_20171029_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_21HTC_20171029_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_21HTC_20171029_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HPH_20171029_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HPH_20171029_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_21HTC_20171029_1_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_21HTC_20171029_1_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20171031_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HQH_20171031_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20171031_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_21HTC_20171031_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HPH_20171103_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HPH_20171103_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20171103_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HQH_20171103_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20171103_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_21HTC_20171103_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20171110_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HQH_20171110_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20171110_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_21HTC_20171110_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HQH_20171115_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HQH_20171115_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_21HTC_20171115_1_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_21HTC_20171115_1_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HPH_20171118_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HPH_20171118_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HQH_20171118_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HQH_20171118_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_21HTC_20171118_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_21HTC_20171118_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HPH_20171123_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HPH_20171123_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20171123_1_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HQH_20171123_1_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HPH_20171123_1_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HPH_20171123_1_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HPH_20171128_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HPH_20171128_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HQH_20171128_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HQH_20171128_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_21HTC_20171128_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_21HTC_20171128_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20171130_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HQH_20171130_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20171130_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_21HTC_20171130_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HQH_20171205_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HQH_20171205_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_21HTC_20171205_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_21HTC_20171205_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20171210_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HQH_20171210_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20171210_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_21HTC_20171210_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HQH_20171215_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HQH_20171215_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_21HTC_20171215_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_21HTC_20171215_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HPH_20171218_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HPH_20171218_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HQH_20171218_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HQH_20171218_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_21HTC_20171218_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_21HTC_20171218_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20171220_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HQH_20171220_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20171220_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_21HTC_20171220_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HQH_20171225_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HQH_20171225_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_21HTC_20171225_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_21HTC_20171225_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HPH_20171228_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HPH_20171228_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_20HQH_20171228_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_20HQH_20171228_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2B_21HTC_20171228_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2B_21HTC_20171228_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20171230_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_20HQH_20171230_0_L2A"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20171230_0_L2A",
+      "type": "application/geo+json",
+      "title": "S2A_21HTC_20171230_0_L2A"
+    }
+  ]
+}

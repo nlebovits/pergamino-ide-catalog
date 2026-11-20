@@ -1,0 +1,248 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "sur_3_10cm",
+  "collection": "imagenes/ortofotos_10cm_2022",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -60.5844553,
+          -33.9011593
+        ],
+        [
+          -60.5793423,
+          -33.9023697
+        ],
+        [
+          -60.5784626,
+          -33.9025073
+        ],
+        [
+          -60.5778304,
+          -33.9027549
+        ],
+        [
+          -60.5757137,
+          -33.9033325
+        ],
+        [
+          -60.569776,
+          -33.904598
+        ],
+        [
+          -60.5690613,
+          -33.9048731
+        ],
+        [
+          -60.5664773,
+          -33.9055883
+        ],
+        [
+          -60.5628762,
+          -33.9073214
+        ],
+        [
+          -60.5627113,
+          -33.9074314
+        ],
+        [
+          -60.5627113,
+          -33.9075689
+        ],
+        [
+          -60.5635635,
+          -33.9083667
+        ],
+        [
+          -60.5638109,
+          -33.9085042
+        ],
+        [
+          -60.5680167,
+          -33.9138685
+        ],
+        [
+          -60.5715903,
+          -33.9141436
+        ],
+        [
+          -60.5827784,
+          -33.9147213
+        ],
+        [
+          -60.5862146,
+          -33.9148038
+        ],
+        [
+          -60.5908328,
+          -33.9133733
+        ],
+        [
+          -60.5908603,
+          -33.9131258
+        ],
+        [
+          -60.5907778,
+          -33.9129332
+        ],
+        [
+          -60.5852525,
+          -33.9010768
+        ],
+        [
+          -60.5844553,
+          -33.9011593
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -60.5908603,
+    -33.9148038,
+    -60.5627113,
+    -33.9010768
+  ],
+  "properties": {
+    "title": "Ortofoto 2022: Barrios Centenario, Cueto y Villa Fernández",
+    "description": "Vuelos fotogramétricos del año 2022 realizados con VANT a pedido de la Municipalidad de Pergamino. Las imágenes fueron capturadas y elaboradas por la empresa TECSO a pedido de la Municipalidad de Pergamino, poseen entre 8 y 10 cm/px de resolución espacial. Área cubierta: Barrios Centenario, Cueto y Villa Fernández.",
+    "datetime": null,
+    "start_datetime": "2022-01-01T00:00:00Z",
+    "end_datetime": "2022-12-31T23:59:59Z",
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      13727,
+      28149
+    ],
+    "proj:transform": [
+      1e-06,
+      0.0,
+      -60.590860288955,
+      0.0,
+      -1e-06,
+      -33.901076808002
+    ],
+    "proj:bbox": [
+      -60.590860289,
+      -33.914803808,
+      -60.562711289,
+      -33.901076808
+    ],
+    "pergamino:geonode_pk": 398,
+    "pergamino:geonode_uuid": "0d57c146-b7c2-476c-855f-53fd0fabccaa",
+    "pergamino:geonode_alternate": "geonode:sur_3_10cm",
+    "pergamino:geonode_title": "sur_3_10cm_2022",
+    "pergamino:source_updated": "2026-06-29T17:27:37.222315Z",
+    "pergamino:source_method": "dataset_download",
+    "pergamino:jpeg_quality": 66,
+    "pergamino:attribution": "Municipalidad de Pergamino",
+    "pergamino:reencoded_because": [
+      "band 1 lacks embedded statistics"
+    ]
+  },
+  "assets": {
+    "data": {
+      "href": "./sur_3_10cm.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Ortofoto RGB de 8 bits (COG)",
+      "description": "Descargado de GeoNode (dataset_download); recodificado una vez como COG JPEG, con la calidad JPEG que declara el original (75 cuando el original no la declara). RGB de 8 bits en EPSG:4326, JPEG YCbCr, teselas de 512 px, overviews internas, máscara interna para el área sin imagen y estadísticas por banda embebidas en la cabecera.",
+      "roles": [
+        "data",
+        "visual"
+      ],
+      "bands": [
+        {
+          "name": "red",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 118.6508,
+            "stddev": 57.2202,
+            "valid_percent": 66.0301
+          }
+        },
+        {
+          "name": "green",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 114.9338,
+            "stddev": 54.2016,
+            "valid_percent": 66.0301
+          }
+        },
+        {
+          "name": "blue",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 105.0723,
+            "stddev": 58.0602,
+            "valid_percent": 66.0301
+          }
+        }
+      ],
+      "file:size": 51637208,
+      "file:checksum": "1220369743d06d98dc3bf1aaf8b784cb49a46aab0127bfc01063ba1cfaa28f76d950"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Vista previa",
+      "description": "JPEG del mosaico reducido; blanco fuera de la máscara.",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 24812,
+      "file:checksum": "12206c2e22821db4b1dcaecda8b583013e59c213d66652fe581b96f51748c24da62b"
+    },
+    "source": {
+      "href": "https://geonode.pergamino.gob.ar/datasets/geonode:sur_3_10cm/dataset_download",
+      "type": "image/tiff; application=geotiff",
+      "title": "Original en GeoNode (GeoTIFF)",
+      "description": "Descarga del mosaico original desde GeoNode.",
+      "roles": [
+        "source"
+      ],
+      "file:size": 52298162,
+      "file:checksum": "1220dbbb530e10fc2ce3ab4d0b9215b3ef1cbdfc1fa9e3be95be76cfdbd34aaa9dca"
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/398",
+      "type": "text/html",
+      "title": "GeoNode: sur_3_10cm_2022"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "CC BY-SA 4.0"
+    }
+  ]
+}

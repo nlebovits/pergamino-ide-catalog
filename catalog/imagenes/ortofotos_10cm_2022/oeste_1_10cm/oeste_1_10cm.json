@@ -1,0 +1,438 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "oeste_1_10cm",
+  "collection": "imagenes/ortofotos_10cm_2022",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -60.6042724,
+          -33.8898742
+        ],
+        [
+          -60.6040098,
+          -33.8898742
+        ],
+        [
+          -60.6041411,
+          -33.8897429
+        ],
+        [
+          -60.603826,
+          -33.8891387
+        ],
+        [
+          -60.6035633,
+          -33.8891387
+        ],
+        [
+          -60.6036159,
+          -33.8889548
+        ],
+        [
+          -60.6034845,
+          -33.8885871
+        ],
+        [
+          -60.6032482,
+          -33.8885871
+        ],
+        [
+          -60.6030906,
+          -33.8882719
+        ],
+        [
+          -60.6029593,
+          -33.8882456
+        ],
+        [
+          -60.5829201,
+          -33.8949174
+        ],
+        [
+          -60.5823948,
+          -33.8951013
+        ],
+        [
+          -60.5823685,
+          -33.8952326
+        ],
+        [
+          -60.5851788,
+          -33.9010902
+        ],
+        [
+          -60.5866495,
+          -33.9008538
+        ],
+        [
+          -60.5878051,
+          -33.9008275
+        ],
+        [
+          -60.5906679,
+          -33.9014316
+        ],
+        [
+          -60.592769,
+          -33.9013791
+        ],
+        [
+          -60.5935306,
+          -33.9011952
+        ],
+        [
+          -60.5940559,
+          -33.9011952
+        ],
+        [
+          -60.5948701,
+          -33.9013791
+        ],
+        [
+          -60.5959469,
+          -33.9014316
+        ],
+        [
+          -60.5965509,
+          -33.9011952
+        ],
+        [
+          -60.5972338,
+          -33.9010902
+        ],
+        [
+          -60.5975489,
+          -33.9009063
+        ],
+        [
+          -60.5989147,
+          -33.9009588
+        ],
+        [
+          -60.5989147,
+          -33.9008538
+        ],
+        [
+          -60.599151,
+          -33.9008275
+        ],
+        [
+          -60.5998076,
+          -33.9003547
+        ],
+        [
+          -60.6000965,
+          -33.9002496
+        ],
+        [
+          -60.6014097,
+          -33.9000658
+        ],
+        [
+          -60.6019875,
+          -33.8998556
+        ],
+        [
+          -60.602933,
+          -33.8998031
+        ],
+        [
+          -60.6042199,
+          -33.8993828
+        ],
+        [
+          -60.605323,
+          -33.8993303
+        ],
+        [
+          -60.6060846,
+          -33.8989625
+        ],
+        [
+          -60.6069513,
+          -33.8990676
+        ],
+        [
+          -60.6073716,
+          -33.8990676
+        ],
+        [
+          -60.6073978,
+          -33.8989888
+        ],
+        [
+          -60.6076079,
+          -33.8990413
+        ],
+        [
+          -60.6085797,
+          -33.8986736
+        ],
+        [
+          -60.6081857,
+          -33.8975704
+        ],
+        [
+          -60.6074504,
+          -33.8966511
+        ],
+        [
+          -60.6072402,
+          -33.8959681
+        ],
+        [
+          -60.6070564,
+          -33.895758
+        ],
+        [
+          -60.6071352,
+          -33.8956266
+        ],
+        [
+          -60.6068726,
+          -33.8948386
+        ],
+        [
+          -60.6065837,
+          -33.8948124
+        ],
+        [
+          -60.6065049,
+          -33.8943396
+        ],
+        [
+          -60.6063735,
+          -33.8942345
+        ],
+        [
+          -60.6064261,
+          -33.8941032
+        ],
+        [
+          -60.6060321,
+          -33.893105
+        ],
+        [
+          -60.6057695,
+          -33.8931576
+        ],
+        [
+          -60.6057695,
+          -33.8930525
+        ],
+        [
+          -60.6059533,
+          -33.893
+        ],
+        [
+          -60.6059271,
+          -33.8928424
+        ],
+        [
+          -60.6058745,
+          -33.8927636
+        ],
+        [
+          -60.6056644,
+          -33.8927898
+        ],
+        [
+          -60.6056382,
+          -33.8926322
+        ],
+        [
+          -60.6051917,
+          -33.8926848
+        ],
+        [
+          -60.6056644,
+          -33.8924746
+        ],
+        [
+          -60.6052705,
+          -33.8916866
+        ],
+        [
+          -60.6051391,
+          -33.8916866
+        ],
+        [
+          -60.6051391,
+          -33.8914502
+        ],
+        [
+          -60.6042724,
+          -33.8898742
+        ]
+      ],
+      [
+        [
+          -60.604929,
+          -33.8911875
+        ],
+        [
+          -60.6047977,
+          -33.8912138
+        ],
+        [
+          -60.604824,
+          -33.8911613
+        ],
+        [
+          -60.604929,
+          -33.8911875
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -60.6085797,
+    -33.9014316,
+    -60.5823685,
+    -33.8882456
+  ],
+  "properties": {
+    "title": "Ortofoto 2022: Parte sur del barrio San Vicente, parte sur del barrio 12 de Octubre y barrio Martín Miguel de Güemes",
+    "description": "Vuelos fotogramétricos del año 2022 realizados con VANT a pedido de la Municipalidad de Pergamino. Las imágenes fueron capturadas y elaboradas por la empresa TECSO a pedido de la Municipalidad de Pergamino, poseen entre 8 y 10 cm/px de resolución espacial. Área cubierta: Parte sur del barrio San Vicente, parte sur del barrio 12 de Octubre y barrio Martín Miguel de Güemes.",
+    "datetime": null,
+    "start_datetime": "2022-01-01T00:00:00Z",
+    "end_datetime": "2022-12-31T23:59:59Z",
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      13580,
+      26894
+    ],
+    "proj:transform": [
+      1e-06,
+      0.0,
+      -60.609262544976,
+      0.0,
+      -1e-06,
+      -33.887851638604
+    ],
+    "proj:bbox": [
+      -60.609262545,
+      -33.901431639,
+      -60.582368545,
+      -33.887851639
+    ],
+    "pergamino:geonode_pk": 419,
+    "pergamino:geonode_uuid": "4b359a6a-761e-42b4-ad5a-2118694e8525",
+    "pergamino:geonode_alternate": "geonode:oeste_1_10cm",
+    "pergamino:geonode_title": "oeste_1_10cm_2022",
+    "pergamino:source_updated": "2026-07-28T12:29:35.025398Z",
+    "pergamino:source_method": "dataset_download",
+    "pergamino:jpeg_quality": 60,
+    "pergamino:attribution": "Municipalidad de Pergamino",
+    "pergamino:reencoded_because": [
+      "band 1 lacks embedded statistics"
+    ]
+  },
+  "assets": {
+    "data": {
+      "href": "./oeste_1_10cm.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Ortofoto RGB de 8 bits (COG)",
+      "description": "Descargado de GeoNode (dataset_download); recodificado una vez como COG JPEG, con la calidad JPEG que declara el original (75 cuando el original no la declara). RGB de 8 bits en EPSG:4326, JPEG YCbCr, teselas de 512 px, overviews internas, máscara interna para el área sin imagen y estadísticas por banda embebidas en la cabecera.",
+      "roles": [
+        "data",
+        "visual"
+      ],
+      "bands": [
+        {
+          "name": "red",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 126.153,
+            "stddev": 50.8358,
+            "valid_percent": 59.1469
+          }
+        },
+        {
+          "name": "green",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 113.6143,
+            "stddev": 47.8034,
+            "valid_percent": 59.1469
+          }
+        },
+        {
+          "name": "blue",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 104.5556,
+            "stddev": 46.5926,
+            "valid_percent": 59.1469
+          }
+        }
+      ],
+      "file:size": 58324394,
+      "file:checksum": "1220ee909b27cc1983cf24b87ed5f11e78b3fcf91696fbb0df27fcda19726f754fe0"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Vista previa",
+      "description": "JPEG del mosaico reducido; blanco fuera de la máscara.",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 20048,
+      "file:checksum": "1220fc26f8dd3fccb36a56b5689954f59626fb0e56b93817d26c2503d632878f653f"
+    },
+    "source": {
+      "href": "https://geonode.pergamino.gob.ar/datasets/geonode:oeste_1_10cm/dataset_download",
+      "type": "image/tiff; application=geotiff",
+      "title": "Original en GeoNode (GeoTIFF)",
+      "description": "Descarga del mosaico original desde GeoNode.",
+      "roles": [
+        "source"
+      ],
+      "file:size": 57968695,
+      "file:checksum": "12206fddf68f554b8859ea23753663e51bfe62bee88322216d66edc6e2b9a66b870d"
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/419",
+      "type": "text/html",
+      "title": "GeoNode: oeste_1_10cm_2022"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "CC BY-SA 4.0"
+    }
+  ]
+}

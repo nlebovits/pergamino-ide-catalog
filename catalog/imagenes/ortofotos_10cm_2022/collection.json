@@ -1,0 +1,172 @@
+{
+  "type": "Collection",
+  "id": "imagenes/ortofotos_10cm_2022",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "title": "Ortofotos 10 cm 2022",
+  "description": "Mosaicos de ortofotos RGB que la Municipalidad de Pergamino publica en su GeoNode, uno por ítem, más una vista general de todos en EPSG:3857. GeoNode los describe así: \"Vuelos fotogramétricos del año 2022 realizados con VANT a pedido de la Municipalidad de Pergamino.\" y \"Las imágenes fueron capturadas y elaboradas por la empresa TECSO a pedido de la Municipalidad de Pergamino, poseen entre 8 y 10 cm/px de resolución espacial.\"",
+  "keywords": [
+    "ortofoto",
+    "VANT",
+    "fotogrametría",
+    "2022",
+    "Pergamino"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "providers": [
+    {
+      "name": "TECSO",
+      "description": "Según GeoNode, \"Las imágenes fueron capturadas y elaboradas por la empresa TECSO a pedido de la Municipalidad de Pergamino\".",
+      "roles": [
+        "producer",
+        "processor"
+      ]
+    },
+    {
+      "name": "Municipalidad de Pergamino",
+      "description": "Dirección de Sistemas de Información Georreferenciada (DSIG). Encargó los vuelos y publica los mosaicos en su GeoNode.",
+      "roles": [
+        "licensor"
+      ],
+      "url": "https://pergamino.ar/servicios/ide-pergamino/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.5851975,
+          -33.9045558,
+          -60.5640135,
+          -33.8869248
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2022-01-01T00:00:00Z",
+          "2022-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "item_assets": {
+    "data": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Ortofoto RGB de 8 bits (COG)",
+      "description": "RGB de 8 bits en EPSG:4326, JPEG YCbCr, teselas de 512 px, overviews internas, máscara interna y estadísticas embebidas.",
+      "roles": [
+        "data",
+        "visual"
+      ]
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "Vista previa",
+      "description": "JPEG del mosaico reducido; blanco fuera de la máscara.",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "source": {
+      "type": "image/tiff; application=geotiff",
+      "title": "Original en GeoNode (GeoTIFF)",
+      "description": "Descarga del mosaico original desde GeoNode.",
+      "roles": [
+        "source"
+      ]
+    }
+  },
+  "assets": {
+    "overview": {
+      "href": "./overview.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Vista general de todos los mosaicos (COG)",
+      "description": "Todos los mosaicos en una sola imagen RGB de 8 bits, en Web Mercator (EPSG:3857) a 1 m, JPEG con máscara interna. Sirve para ver qué cubre la colección; para análisis usar el COG de cada ítem.",
+      "roles": [
+        "visual",
+        "overview"
+      ],
+      "start_datetime": "2022-01-01T00:00:00Z",
+      "end_datetime": "2022-12-31T23:59:59Z"
+    },
+    "items": {
+      "href": "./items.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Copia de los ítems (stac-geoparquet)",
+      "description": "Una fila por ítem de esta colección, en stac-geoparquet, ordenadas por la curva de Hilbert del centro de su bbox. Una sola lectura devuelve todos los mosaicos con su huella.",
+      "roles": [
+        "collection-mirror"
+      ],
+      "file:size": 33143,
+      "file:checksum": "12209cacb096c2ed69049a1d6337ae843a2f546a31a043a45c8f62a64013e50498b3"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Vista previa",
+      "description": "La vista general recortada a los mosaicos de la ciudad de Pergamino (centro, norte, sur, este, oeste, aeroclub y zona industrial sur), sin mapa base.",
+      "roles": [
+        "thumbnail"
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Imágenes"
+    },
+    {
+      "rel": "item",
+      "href": "./centro_10cm/centro_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Barrio Centro"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes de IA"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/search/?q=10cm",
+      "type": "text/html",
+      "title": "GeoNode de Pergamino: búsqueda de los mosaicos de 10 cm"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "CC BY-SA 4.0"
+    }
+  ],
+  "updated": "2026-11-20T08:16:52Z"
+}

@@ -1,0 +1,338 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "este_2_10cm",
+  "collection": "imagenes/ortofotos_10cm_2022",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -60.5537746,
+          -33.8991252
+        ],
+        [
+          -60.5527583,
+          -33.8995104
+        ],
+        [
+          -60.5523903,
+          -33.8995454
+        ],
+        [
+          -60.5525305,
+          -33.9071276
+        ],
+        [
+          -60.552548,
+          -33.9073552
+        ],
+        [
+          -60.5526707,
+          -33.9073552
+        ],
+        [
+          -60.5530386,
+          -33.9151825
+        ],
+        [
+          -60.5531263,
+          -33.9167059
+        ],
+        [
+          -60.5531788,
+          -33.916776
+        ],
+        [
+          -60.5533891,
+          -33.9166884
+        ],
+        [
+          -60.5535819,
+          -33.9165133
+        ],
+        [
+          -60.5539323,
+          -33.9163207
+        ],
+        [
+          -60.5540024,
+          -33.9162156
+        ],
+        [
+          -60.5542653,
+          -33.9160931
+        ],
+        [
+          -60.5547033,
+          -33.9157779
+        ],
+        [
+          -60.5548435,
+          -33.9158304
+        ],
+        [
+          -60.5550713,
+          -33.9156028
+        ],
+        [
+          -60.5551589,
+          -33.9156553
+        ],
+        [
+          -60.5554393,
+          -33.9154452
+        ],
+        [
+          -60.5555795,
+          -33.9154977
+        ],
+        [
+          -60.5567535,
+          -33.9148148
+        ],
+        [
+          -60.5581729,
+          -33.9140793
+        ],
+        [
+          -60.5590315,
+          -33.9133264
+        ],
+        [
+          -60.5600653,
+          -33.9122932
+        ],
+        [
+          -60.560223,
+          -33.9113477
+        ],
+        [
+          -60.5604158,
+          -33.9108223
+        ],
+        [
+          -60.5611167,
+          -33.910297
+        ],
+        [
+          -60.5612744,
+          -33.9100869
+        ],
+        [
+          -60.5615022,
+          -33.9097542
+        ],
+        [
+          -60.56173,
+          -33.9091063
+        ],
+        [
+          -60.5621155,
+          -33.9083008
+        ],
+        [
+          -60.5627113,
+          -33.9075303
+        ],
+        [
+          -60.5627113,
+          -33.9074428
+        ],
+        [
+          -60.5624309,
+          -33.9071626
+        ],
+        [
+          -60.5619052,
+          -33.9067248
+        ],
+        [
+          -60.5618352,
+          -33.9066022
+        ],
+        [
+          -60.5617826,
+          -33.9066022
+        ],
+        [
+          -60.5575771,
+          -33.9026798
+        ],
+        [
+          -60.5541952,
+          -33.8990376
+        ],
+        [
+          -60.5537746,
+          -33.8991252
+        ]
+      ],
+      [
+        [
+          -60.555194,
+          -33.9042033
+        ],
+        [
+          -60.5551764,
+          -33.9042033
+        ],
+        [
+          -60.5551764,
+          -33.9041858
+        ],
+        [
+          -60.555194,
+          -33.9042033
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -60.5627113,
+    -33.916776,
+    -60.5523903,
+    -33.8990376
+  ],
+  "properties": {
+    "title": "Ortofoto 2022: Barrrio José Hernández",
+    "description": "Vuelos fotogramétricos del año 2022 realizados con VANT a pedido de la Municipalidad de Pergamino. Las imágenes fueron capturadas y elaboradas por la empresa TECSO a pedido de la Municipalidad de Pergamino, poseen entre 8 y 10 cm/px de resolución espacial. Área cubierta: Barrrio José Hernández.",
+    "datetime": null,
+    "start_datetime": "2022-01-01T00:00:00Z",
+    "end_datetime": "2022-12-31T23:59:59Z",
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      17931,
+      10321
+    ],
+    "proj:transform": [
+      1e-06,
+      0.0,
+      -60.562711300235,
+      0.0,
+      -1e-06,
+      -33.899037604785
+    ],
+    "proj:bbox": [
+      -60.5627113,
+      -33.916968605,
+      -60.5523903,
+      -33.899037605
+    ],
+    "pergamino:geonode_pk": 423,
+    "pergamino:geonode_uuid": "dcdddc07-abd2-4d71-b9d6-167e8211dd4a",
+    "pergamino:geonode_alternate": "geonode:este_2_10cm",
+    "pergamino:geonode_title": "este_2_10cm_2022",
+    "pergamino:source_updated": "2026-07-29T13:48:44.306603Z",
+    "pergamino:source_method": "dataset_download",
+    "pergamino:jpeg_quality": 75,
+    "pergamino:attribution": "Municipalidad de Pergamino",
+    "pergamino:reencoded_because": [
+      "band 1 lacks embedded statistics"
+    ]
+  },
+  "assets": {
+    "data": {
+      "href": "./este_2_10cm.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Ortofoto RGB de 8 bits (COG)",
+      "description": "Descargado de GeoNode (dataset_download); recodificado una vez como COG JPEG, con la calidad JPEG que declara el original (75 cuando el original no la declara). RGB de 8 bits en EPSG:4326, JPEG YCbCr, teselas de 512 px, overviews internas, máscara interna para el área sin imagen y estadísticas por banda embebidas en la cabecera.",
+      "roles": [
+        "data",
+        "visual"
+      ],
+      "bands": [
+        {
+          "name": "red",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 129.0867,
+            "stddev": 57.3416,
+            "valid_percent": 57.8122
+          }
+        },
+        {
+          "name": "green",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 121.1003,
+            "stddev": 54.1496,
+            "valid_percent": 57.8122
+          }
+        },
+        {
+          "name": "blue",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 110.8196,
+            "stddev": 57.0067,
+            "valid_percent": 57.8122
+          }
+        }
+      ],
+      "file:size": 34708400,
+      "file:checksum": "12206aab27377e4767738ba7c0a818b6429a86f153bc1cf83818e43df64ead8fc5a4"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Vista previa",
+      "description": "JPEG del mosaico reducido; blanco fuera de la máscara.",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 25584,
+      "file:checksum": "1220bf68d5c3ea452606c02897d5a87aae0d44185b1cb7f9a1e4ea9564632afa93a1"
+    },
+    "source": {
+      "href": "https://geonode.pergamino.gob.ar/datasets/geonode:este_2_10cm/dataset_download",
+      "type": "image/tiff; application=geotiff",
+      "title": "Original en GeoNode (GeoTIFF)",
+      "description": "Descarga del mosaico original desde GeoNode.",
+      "roles": [
+        "source"
+      ],
+      "file:size": 34920179,
+      "file:checksum": "12204bd4cd7ce379ef31ee6fcace4c9b6bf4dee1045e1ba1bc23165249b36c15f03f"
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/423",
+      "type": "text/html",
+      "title": "GeoNode: este_2_10cm_2022"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "CC BY-SA 4.0"
+    }
+  ]
+}

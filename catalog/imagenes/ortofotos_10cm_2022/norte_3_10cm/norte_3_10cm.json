@@ -1,0 +1,476 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "norte_3_10cm",
+  "collection": "imagenes/ortofotos_10cm_2022",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -60.5521008,
+          -33.8664175
+        ],
+        [
+          -60.5519194,
+          -33.8663138
+        ],
+        [
+          -60.5520231,
+          -33.8664952
+        ],
+        [
+          -60.5518158,
+          -33.8667026
+        ],
+        [
+          -60.5517121,
+          -33.8666767
+        ],
+        [
+          -60.5515825,
+          -33.8667804
+        ],
+        [
+          -60.5513493,
+          -33.8670396
+        ],
+        [
+          -60.5511938,
+          -33.8669877
+        ],
+        [
+          -60.5510902,
+          -33.8670914
+        ],
+        [
+          -60.551142,
+          -33.867221
+        ],
+        [
+          -60.5509606,
+          -33.867247
+        ],
+        [
+          -60.5509088,
+          -33.8673506
+        ],
+        [
+          -60.5508051,
+          -33.8673247
+        ],
+        [
+          -60.5506755,
+          -33.8675839
+        ],
+        [
+          -60.55052,
+          -33.8675839
+        ],
+        [
+          -60.5503646,
+          -33.8677395
+        ],
+        [
+          -60.5502609,
+          -33.8677135
+        ],
+        [
+          -60.5500795,
+          -33.8679468
+        ],
+        [
+          -60.5499759,
+          -33.8679209
+        ],
+        [
+          -60.5495094,
+          -33.8684653
+        ],
+        [
+          -60.5493798,
+          -33.8684134
+        ],
+        [
+          -60.5492243,
+          -33.8686467
+        ],
+        [
+          -60.5490689,
+          -33.8685949
+        ],
+        [
+          -60.5487838,
+          -33.8689319
+        ],
+        [
+          -60.5486801,
+          -33.8689319
+        ],
+        [
+          -60.5485506,
+          -33.8691392
+        ],
+        [
+          -60.5482914,
+          -33.8692948
+        ],
+        [
+          -60.54811,
+          -33.869554
+        ],
+        [
+          -60.5479027,
+          -33.8695022
+        ],
+        [
+          -60.5474104,
+          -33.8699687
+        ],
+        [
+          -60.5472549,
+          -33.8699428
+        ],
+        [
+          -60.5471512,
+          -33.8700984
+        ],
+        [
+          -60.5470216,
+          -33.8700984
+        ],
+        [
+          -60.5461665,
+          -33.8712389
+        ],
+        [
+          -60.5460887,
+          -33.8712908
+        ],
+        [
+          -60.5459333,
+          -33.8712389
+        ],
+        [
+          -60.5458037,
+          -33.8714463
+        ],
+        [
+          -60.5455964,
+          -33.8713167
+        ],
+        [
+          -60.5451558,
+          -33.8717833
+        ],
+        [
+          -60.5448449,
+          -33.871887
+        ],
+        [
+          -60.5448967,
+          -33.8719907
+        ],
+        [
+          -60.5447671,
+          -33.8721203
+        ],
+        [
+          -60.5446635,
+          -33.8720943
+        ],
+        [
+          -60.5442748,
+          -33.872535
+        ],
+        [
+          -60.5440674,
+          -33.8724572
+        ],
+        [
+          -60.5439638,
+          -33.8726128
+        ],
+        [
+          -60.5440415,
+          -33.8727165
+        ],
+        [
+          -60.543886,
+          -33.8728461
+        ],
+        [
+          -60.5437565,
+          -33.8727942
+        ],
+        [
+          -60.5434455,
+          -33.873209
+        ],
+        [
+          -60.5434196,
+          -33.8734164
+        ],
+        [
+          -60.5432123,
+          -33.8733904
+        ],
+        [
+          -60.5430309,
+          -33.8737274
+        ],
+        [
+          -60.5427977,
+          -33.8736237
+        ],
+        [
+          -60.5420721,
+          -33.8741162
+        ],
+        [
+          -60.5419684,
+          -33.8740903
+        ],
+        [
+          -60.5413724,
+          -33.8749198
+        ],
+        [
+          -60.5412169,
+          -33.8749198
+        ],
+        [
+          -60.5410614,
+          -33.8751013
+        ],
+        [
+          -60.5409318,
+          -33.8750754
+        ],
+        [
+          -60.5407504,
+          -33.8752827
+        ],
+        [
+          -60.5412169,
+          -33.875853
+        ],
+        [
+          -60.534842,
+          -33.8807263
+        ],
+        [
+          -60.5345052,
+          -33.8810115
+        ],
+        [
+          -60.5345829,
+          -33.8811929
+        ],
+        [
+          -60.5344792,
+          -33.8812966
+        ],
+        [
+          -60.5350753,
+          -33.8819187
+        ],
+        [
+          -60.535153,
+          -33.8818928
+        ],
+        [
+          -60.5351789,
+          -33.8819965
+        ],
+        [
+          -60.535464,
+          -33.8819187
+        ],
+        [
+          -60.5355676,
+          -33.8824112
+        ],
+        [
+          -60.5356713,
+          -33.8825149
+        ],
+        [
+          -60.5366819,
+          -33.8819447
+        ],
+        [
+          -60.5425644,
+          -33.8873623
+        ],
+        [
+          -60.5427458,
+          -33.8874142
+        ],
+        [
+          -60.560782,
+          -33.8737015
+        ],
+        [
+          -60.5606006,
+          -33.8734423
+        ],
+        [
+          -60.5524636,
+          -33.8660286
+        ],
+        [
+          -60.5521008,
+          -33.8664175
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -60.560782,
+    -33.8874142,
+    -60.5344792,
+    -33.8660286
+  ],
+  "properties": {
+    "title": "Ortofoto 2022: Barrio Los Pinos, partes de los barrios La Guarida y Scalabrini",
+    "description": "Vuelos fotogramétricos del año 2022 realizados con VANT a pedido de la Municipalidad de Pergamino. Las imágenes fueron capturadas y elaboradas por la empresa TECSO a pedido de la Municipalidad de Pergamino, poseen entre 8 y 10 cm/px de resolución espacial. Área cubierta: Barrio Los Pinos, partes de los barrios La Guarida y Scalabrini.",
+    "datetime": null,
+    "start_datetime": "2022-01-01T00:00:00Z",
+    "end_datetime": "2022-12-31T23:59:59Z",
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      21567,
+      26536
+    ],
+    "proj:transform": [
+      1e-06,
+      0.0,
+      -60.560782015733,
+      0.0,
+      -1e-06,
+      -33.865847169432
+    ],
+    "proj:bbox": [
+      -60.560782016,
+      -33.887414169,
+      -60.534246016,
+      -33.865847169
+    ],
+    "pergamino:geonode_pk": 428,
+    "pergamino:geonode_uuid": "1109fe57-0fa9-4bbd-a507-e0e0c4eaf5d3",
+    "pergamino:geonode_alternate": "geonode:norte_3_10cm",
+    "pergamino:geonode_title": "norte_3_10cm_2022",
+    "pergamino:source_updated": "2026-07-30T15:06:20.997777Z",
+    "pergamino:source_method": "dataset_download",
+    "pergamino:jpeg_quality": 75,
+    "pergamino:attribution": "Municipalidad de Pergamino",
+    "pergamino:reencoded_because": [
+      "band 1 lacks embedded statistics"
+    ]
+  },
+  "assets": {
+    "data": {
+      "href": "./norte_3_10cm.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Ortofoto RGB de 8 bits (COG)",
+      "description": "Descargado de GeoNode (dataset_download); recodificado una vez como COG JPEG, con la calidad JPEG que declara el original (75 cuando el original no la declara). RGB de 8 bits en EPSG:4326, JPEG YCbCr, teselas de 512 px, overviews internas, máscara interna para el área sin imagen y estadísticas por banda embebidas en la cabecera.",
+      "roles": [
+        "data",
+        "visual"
+      ],
+      "bands": [
+        {
+          "name": "red",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 128.5644,
+            "stddev": 43.0268,
+            "valid_percent": 42.6354
+          }
+        },
+        {
+          "name": "green",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 119.3228,
+            "stddev": 39.3882,
+            "valid_percent": 42.6354
+          }
+        },
+        {
+          "name": "blue",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 104.9462,
+            "stddev": 39.7308,
+            "valid_percent": 42.6354
+          }
+        }
+      ],
+      "file:size": 78201728,
+      "file:checksum": "1220a2b8913b7e807353b90bdb819ddf2790841e3777ad50726e8d0fc43b4c706ff2"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Vista previa",
+      "description": "JPEG del mosaico reducido; blanco fuera de la máscara.",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 22124,
+      "file:checksum": "1220e987ee1c8871079298f82aabac9145873a96cde47f8adc391af6fde7f0af6a55"
+    },
+    "source": {
+      "href": "https://geonode.pergamino.gob.ar/datasets/geonode:norte_3_10cm/dataset_download",
+      "type": "image/tiff; application=geotiff",
+      "title": "Original en GeoNode (GeoTIFF)",
+      "description": "Descarga del mosaico original desde GeoNode.",
+      "roles": [
+        "source"
+      ],
+      "file:size": 78417289,
+      "file:checksum": "1220af77f804fd0cfaaef9fa24929377f80f67617494fd2bfc2be4b344f7c8229066"
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/428",
+      "type": "text/html",
+      "title": "GeoNode: norte_3_10cm_2022"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "CC BY-SA 4.0"
+    }
+  ]
+}

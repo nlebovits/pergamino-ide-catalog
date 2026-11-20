@@ -1,0 +1,596 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "norte_5_10cm",
+  "collection": "imagenes/ortofotos_10cm_2022",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -60.581523,
+          -33.8564009
+        ],
+        [
+          -60.5809768,
+          -33.8571898
+        ],
+        [
+          -60.5812499,
+          -33.8574022
+        ],
+        [
+          -60.5807644,
+          -33.8574628
+        ],
+        [
+          -60.5807644,
+          -33.8576449
+        ],
+        [
+          -60.5804003,
+          -33.8575539
+        ],
+        [
+          -60.5803396,
+          -33.857827
+        ],
+        [
+          -60.580552,
+          -33.8578876
+        ],
+        [
+          -60.5804913,
+          -33.8579787
+        ],
+        [
+          -60.5801879,
+          -33.8581304
+        ],
+        [
+          -60.5795203,
+          -33.858009
+        ],
+        [
+          -60.5792168,
+          -33.8580697
+        ],
+        [
+          -60.5790044,
+          -33.8586765
+        ],
+        [
+          -60.5792472,
+          -33.8587979
+        ],
+        [
+          -60.5788831,
+          -33.8588889
+        ],
+        [
+          -60.5788224,
+          -33.859071
+        ],
+        [
+          -60.5783672,
+          -33.8592227
+        ],
+        [
+          -60.5782458,
+          -33.8593744
+        ],
+        [
+          -60.5786403,
+          -33.8598599
+        ],
+        [
+          -60.5788527,
+          -33.8599812
+        ],
+        [
+          -60.5787617,
+          -33.8601026
+        ],
+        [
+          -60.5690819,
+          -33.8673543
+        ],
+        [
+          -60.5691426,
+          -33.867688
+        ],
+        [
+          -60.5694461,
+          -33.8681735
+        ],
+        [
+          -60.5722377,
+          -33.8741812
+        ],
+        [
+          -60.5724501,
+          -33.8744543
+        ],
+        [
+          -60.5727232,
+          -33.8751825
+        ],
+        [
+          -60.5734818,
+          -33.8766085
+        ],
+        [
+          -60.5783976,
+          -33.8869247
+        ],
+        [
+          -60.5787617,
+          -33.8868944
+        ],
+        [
+          -60.5811892,
+          -33.8861055
+        ],
+        [
+          -60.5812499,
+          -33.8860145
+        ],
+        [
+          -60.5828581,
+          -33.8854683
+        ],
+        [
+          -60.5961185,
+          -33.8810384
+        ],
+        [
+          -60.5958454,
+          -33.8804923
+        ],
+        [
+          -60.5957847,
+          -33.8800675
+        ],
+        [
+          -60.5955723,
+          -33.8797641
+        ],
+        [
+          -60.5955723,
+          -33.879582
+        ],
+        [
+          -60.5947833,
+          -33.8779739
+        ],
+        [
+          -60.5944495,
+          -33.8774884
+        ],
+        [
+          -60.5944192,
+          -33.8773671
+        ],
+        [
+          -60.5945406,
+          -33.8773671
+        ],
+        [
+          -60.5945406,
+          -33.877276
+        ],
+        [
+          -60.5943889,
+          -33.8771243
+        ],
+        [
+          -60.5936606,
+          -33.8755466
+        ],
+        [
+          -60.5934179,
+          -33.8752128
+        ],
+        [
+          -60.5934482,
+          -33.8750004
+        ],
+        [
+          -60.5931751,
+          -33.874606
+        ],
+        [
+          -60.592993,
+          -33.8739384
+        ],
+        [
+          -60.5926289,
+          -33.8734226
+        ],
+        [
+          -60.592811,
+          -33.8732102
+        ],
+        [
+          -60.5926896,
+          -33.8730585
+        ],
+        [
+          -60.5924468,
+          -33.8730889
+        ],
+        [
+          -60.5922648,
+          -33.8727551
+        ],
+        [
+          -60.5923862,
+          -33.8726641
+        ],
+        [
+          -60.5923558,
+          -33.8724517
+        ],
+        [
+          -60.592022,
+          -33.8719055
+        ],
+        [
+          -60.5918703,
+          -33.8718752
+        ],
+        [
+          -60.5917793,
+          -33.8714504
+        ],
+        [
+          -60.5915365,
+          -33.8711773
+        ],
+        [
+          -60.5909903,
+          -33.870085
+        ],
+        [
+          -60.5909903,
+          -33.8697816
+        ],
+        [
+          -60.5907779,
+          -33.8694175
+        ],
+        [
+          -60.5907779,
+          -33.8692051
+        ],
+        [
+          -60.5905048,
+          -33.8685376
+        ],
+        [
+          -60.5903228,
+          -33.8683556
+        ],
+        [
+          -60.5901104,
+          -33.8678701
+        ],
+        [
+          -60.5899586,
+          -33.8679004
+        ],
+        [
+          -60.5896552,
+          -33.8675667
+        ],
+        [
+          -60.5898979,
+          -33.8674756
+        ],
+        [
+          -60.5898676,
+          -33.8673239
+        ],
+        [
+          -60.5897159,
+          -33.8671722
+        ],
+        [
+          -60.5894124,
+          -33.8672329
+        ],
+        [
+          -60.5894428,
+          -33.8669598
+        ],
+        [
+          -60.5885932,
+          -33.8655034
+        ],
+        [
+          -60.5883504,
+          -33.8655945
+        ],
+        [
+          -60.5882594,
+          -33.8655945
+        ],
+        [
+          -60.588229,
+          -33.8654731
+        ],
+        [
+          -60.5876828,
+          -33.8655641
+        ],
+        [
+          -60.5875008,
+          -33.865018
+        ],
+        [
+          -60.5873187,
+          -33.8648359
+        ],
+        [
+          -60.5872277,
+          -33.8644111
+        ],
+        [
+          -60.5871063,
+          -33.8643504
+        ],
+        [
+          -60.5865601,
+          -33.8633492
+        ],
+        [
+          -60.5861656,
+          -33.8622265
+        ],
+        [
+          -60.5859836,
+          -33.8621355
+        ],
+        [
+          -60.5857408,
+          -33.8613466
+        ],
+        [
+          -60.5855284,
+          -33.8611645
+        ],
+        [
+          -60.585316,
+          -33.8605881
+        ],
+        [
+          -60.5851946,
+          -33.8605881
+        ],
+        [
+          -60.5852857,
+          -33.860406
+        ],
+        [
+          -60.5851643,
+          -33.8600419
+        ],
+        [
+          -60.5848912,
+          -33.8594351
+        ],
+        [
+          -60.5846788,
+          -33.8593744
+        ],
+        [
+          -60.5847395,
+          -33.859162
+        ],
+        [
+          -60.5845877,
+          -33.8588282
+        ],
+        [
+          -60.5843753,
+          -33.8587372
+        ],
+        [
+          -60.5843146,
+          -33.8583731
+        ],
+        [
+          -60.5840719,
+          -33.8579483
+        ],
+        [
+          -60.5838291,
+          -33.8578876
+        ],
+        [
+          -60.5837381,
+          -33.8576146
+        ],
+        [
+          -60.5839202,
+          -33.8574022
+        ],
+        [
+          -60.5838898,
+          -33.8571898
+        ],
+        [
+          -60.5834347,
+          -33.8572505
+        ],
+        [
+          -60.5834347,
+          -33.8570381
+        ],
+        [
+          -60.582494,
+          -33.856765
+        ],
+        [
+          -60.5817354,
+          -33.8564009
+        ],
+        [
+          -60.581523,
+          -33.8564009
+        ]
+      ],
+      [
+        [
+          -60.5899283,
+          -33.8684162
+        ],
+        [
+          -60.5898979,
+          -33.8684162
+        ],
+        [
+          -60.5898979,
+          -33.8683556
+        ],
+        [
+          -60.5899283,
+          -33.8684162
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -60.5961185,
+    -33.8869247,
+    -60.5690819,
+    -33.8564009
+  ],
+  "properties": {
+    "title": "Ortofoto 2022: Barrios Maiztegui, Favaloro y  Champagnat, partes del barrio Villa San José y Ameghino",
+    "description": "Vuelos fotogramétricos del año 2022 realizados con VANT a pedido de la Municipalidad de Pergamino. Las imágenes fueron capturadas y elaboradas por la empresa TECSO a pedido de la Municipalidad de Pergamino, poseen entre 8 y 10 cm/px de resolución espacial. Área cubierta: Barrios Maiztegui, Favaloro y  Champagnat, partes del barrio Villa San José y Ameghino.",
+    "datetime": null,
+    "start_datetime": "2022-01-01T00:00:00Z",
+    "end_datetime": "2022-12-31T23:59:59Z",
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      31070,
+      27431
+    ],
+    "proj:transform": [
+      1e-06,
+      0.0,
+      -60.596512942559,
+      0.0,
+      -1e-06,
+      -33.855854733959
+    ],
+    "proj:bbox": [
+      -60.596512943,
+      -33.886924734,
+      -60.569081943,
+      -33.855854734
+    ],
+    "pergamino:geonode_pk": 430,
+    "pergamino:geonode_uuid": "2ca89821-4a3f-4dc7-ae27-402b22d89ec3",
+    "pergamino:geonode_alternate": "geonode:norte_5_10cm",
+    "pergamino:geonode_title": "norte_5_10cm_2022",
+    "pergamino:source_updated": "2026-07-31T12:01:33.477926Z",
+    "pergamino:source_method": "wcs",
+    "pergamino:jpeg_quality": 75,
+    "pergamino:attribution": "Municipalidad de Pergamino"
+  },
+  "assets": {
+    "data": {
+      "href": "./norte_5_10cm.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Ortofoto RGB de 8 bits (COG)",
+      "description": "GeoNode rechaza la descarga directa de este mosaico por su tamaño; se armó desde el WCS 2.0.1 de GeoServer en piezas alineadas a la grilla nativa; recodificado una vez como COG JPEG, con la calidad JPEG que declara el original (75 cuando el original no la declara). RGB de 8 bits en EPSG:4326, JPEG YCbCr, teselas de 512 px, overviews internas, máscara interna para el área sin imagen y estadísticas por banda embebidas en la cabecera.",
+      "roles": [
+        "data",
+        "visual"
+      ],
+      "bands": [
+        {
+          "name": "red",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 127.0982,
+            "stddev": 42.4968,
+            "valid_percent": 53.1153
+          }
+        },
+        {
+          "name": "green",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 117.6246,
+            "stddev": 39.9002,
+            "valid_percent": 53.1153
+          }
+        },
+        {
+          "name": "blue",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 104.2959,
+            "stddev": 41.6456,
+            "valid_percent": 53.1153
+          }
+        }
+      ],
+      "file:size": 116141427,
+      "file:checksum": "12205c2d30e62d90cf0c486146c00f91d078a6e5f4f05bff370391ac9cd320ed019f"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Vista previa",
+      "description": "JPEG del mosaico reducido; blanco fuera de la máscara.",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 29314,
+      "file:checksum": "1220c205a3eb0a3be9bc22f731c15f863bb1c8e63c8667c42eca1cddff772116251c"
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/430",
+      "type": "text/html",
+      "title": "GeoNode: norte_5_10cm_2022"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "CC BY-SA 4.0"
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "id": "norte_2_10cm",
+  "collection": "imagenes/ortofotos_10cm_2022",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -60.5426919,
+          -33.8873876
+        ],
+        [
+          -60.5426919,
+          -33.8874492
+        ],
+        [
+          -60.5430817,
+          -33.8878185
+        ],
+        [
+          -60.5433689,
+          -33.8880237
+        ],
+        [
+          -60.5512879,
+          -33.8952873
+        ],
+        [
+          -60.5636999,
+          -33.8910605
+        ],
+        [
+          -60.5630844,
+          -33.8897062
+        ],
+        [
+          -60.5598019,
+          -33.8830787
+        ],
+        [
+          -60.5567861,
+          -33.8766973
+        ],
+        [
+          -60.5426919,
+          -33.8873876
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -60.5636999,
+    -33.8952873,
+    -60.5426919,
+    -33.8766973
+  ],
+  "properties": {
+    "title": "Ortofoto 2022: Parte del barrio Acevedo, barrios Newbery y Virgen de Itatí",
+    "description": "Vuelos fotogramétricos del año 2022 realizados con VANT a pedido de la Municipalidad de Pergamino. Las imágenes fueron capturadas y elaboradas por la empresa TECSO a pedido de la Municipalidad de Pergamino, poseen entre 8 y 10 cm/px de resolución espacial. Área cubierta: Parte del barrio Acevedo, barrios Newbery y Virgen de Itatí.",
+    "datetime": null,
+    "start_datetime": "2022-01-01T00:00:00Z",
+    "end_datetime": "2022-12-31T23:59:59Z",
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      18590,
+      21008
+    ],
+    "proj:transform": [
+      1e-06,
+      0.0,
+      -60.563699900757,
+      0.0,
+      -1e-06,
+      -33.876697343226
+    ],
+    "proj:bbox": [
+      -60.563699901,
+      -33.895287343,
+      -60.542691901,
+      -33.876697343
+    ],
+    "pergamino:geonode_pk": 427,
+    "pergamino:geonode_uuid": "62024cef-e369-40f2-a1a6-effe64b5b702",
+    "pergamino:geonode_alternate": "geonode:norte_2_10cm",
+    "pergamino:geonode_title": "norte_2_10cm_2022",
+    "pergamino:source_updated": "2026-07-30T14:14:37.945505Z",
+    "pergamino:source_method": "dataset_download",
+    "pergamino:jpeg_quality": 75,
+    "pergamino:attribution": "Municipalidad de Pergamino"
+  },
+  "assets": {
+    "data": {
+      "href": "./norte_2_10cm.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Ortofoto RGB de 8 bits (COG)",
+      "description": "Descargado de GeoNode (dataset_download); copia byte a byte de la descarga de GeoNode. RGB de 8 bits en EPSG:4326, JPEG YCbCr, teselas de 512 px, overviews internas, máscara interna para el área sin imagen y estadísticas por banda embebidas en la cabecera.",
+      "roles": [
+        "data",
+        "visual"
+      ],
+      "bands": [
+        {
+          "name": "red",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 119.171,
+            "stddev": 58.2177,
+            "valid_percent": 54.44
+          }
+        },
+        {
+          "name": "green",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 109.6924,
+            "stddev": 54.1596,
+            "valid_percent": 54.44
+          }
+        },
+        {
+          "name": "blue",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 98.3914,
+            "stddev": 52.6178,
+            "valid_percent": 54.44
+          }
+        }
+      ],
+      "file:size": 71824751,
+      "file:checksum": "1220cfbe823bcf43c36446abac789226be697bdd9412adda8acefb72254c23e13e92"
+    },
+    "thumbnail": {
+      "href": "./thumbnail.jpg",
+      "type": "image/jpeg",
+      "title": "Vista previa",
+      "description": "JPEG del mosaico reducido; blanco fuera de la máscara.",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:size": 32219,
+      "file:checksum": "122033dc43b876c05843393dd47aac686eb29b2e188792956c50e589ca4194b8eaf9"
+    },
+    "source": {
+      "href": "https://geonode.pergamino.gob.ar/datasets/geonode:norte_2_10cm/dataset_download",
+      "type": "image/tiff; application=geotiff",
+      "title": "Original en GeoNode (GeoTIFF)",
+      "description": "Descarga del mosaico original desde GeoNode.",
+      "roles": [
+        "source"
+      ],
+      "file:size": 71824751,
+      "file:checksum": "1220cfbe823bcf43c36446abac789226be697bdd9412adda8acefb72254c23e13e92"
+    }
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://geonode.pergamino.gob.ar/catalogue/#/dataset/427",
+      "type": "text/html",
+      "title": "GeoNode: norte_2_10cm_2022"
+    },
+    {
+      "rel": "license",
+      "href": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "type": "text/html",
+      "title": "CC BY-SA 4.0"
+    }
+  ]
+}
