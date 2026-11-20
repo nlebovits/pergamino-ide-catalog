@@ -47,10 +47,10 @@
     "spatial": {
       "bbox": [
         [
-          -60.5851975,
-          -33.9045558,
-          -60.5640135,
-          -33.8869248
+          -60.8517001,
+          -34.0942963,
+          -60.1613136,
+          -33.6536464
         ]
       ]
     },
@@ -101,7 +101,63 @@
         "overview"
       ],
       "start_datetime": "2022-01-01T00:00:00Z",
-      "end_datetime": "2022-12-31T23:59:59Z"
+      "end_datetime": "2022-12-31T23:59:59Z",
+      "file:size": 35940294,
+      "file:checksum": "1220b47c11efe3801f16e0df727d5f133afa25696a23cb91ffd0fce21f2a8b8788e9",
+      "bands": [
+        {
+          "name": "red",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 124.2045,
+            "stddev": 6.2688,
+            "valid_percent": 100.0
+          }
+        },
+        {
+          "name": "green",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 117.3677,
+            "stddev": 5.8436,
+            "valid_percent": 100.0
+          }
+        },
+        {
+          "name": "blue",
+          "data_type": "uint8",
+          "statistics": {
+            "minimum": 0.0,
+            "maximum": 255.0,
+            "mean": 100.7486,
+            "stddev": 6.144,
+            "valid_percent": 100.0
+          }
+        }
+      ],
+      "proj:code": "EPSG:3857",
+      "proj:shape": [
+        59203,
+        76985
+      ],
+      "proj:transform": [
+        1.0,
+        0.0,
+        -6774111.0,
+        0.0,
+        -1.0,
+        -3982268.0
+      ],
+      "proj:bbox": [
+        -6774111.0,
+        -4041471.0,
+        -6697126.0,
+        -3982268.0
+      ]
     },
     "items": {
       "href": "./items.parquet",
@@ -111,8 +167,8 @@
       "roles": [
         "collection-mirror"
       ],
-      "file:size": 33143,
-      "file:checksum": "12209cacb096c2ed69049a1d6337ae843a2f546a31a043a45c8f62a64013e50498b3"
+      "file:size": 102141,
+      "file:checksum": "1220cbde82428f4c4904250cdd0c8a0232858f0e0cc6f17e20a5f7ce3cf8a675c11b"
     },
     "thumbnail": {
       "href": "./thumbnail.jpg",
@@ -121,7 +177,9 @@
       "description": "La vista general recortada a los mosaicos de la ciudad de Pergamino (centro, norte, sur, este, oeste, aeroclub y zona industrial sur), sin mapa base.",
       "roles": [
         "thumbnail"
-      ]
+      ],
+      "file:size": 85372,
+      "file:checksum": "1220ee7b13008f290a940d7d9463c0a40c2eb49193abc0f6e1f7847af57c645575c1"
     }
   },
   "links": [
@@ -139,9 +197,189 @@
     },
     {
       "rel": "item",
+      "href": "./acevedo_10cm/acevedo_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Pueblo Acevedo"
+    },
+    {
+      "rel": "item",
+      "href": "./aeroclub_10cm/aeroclub_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Barrio Aeroclub"
+    },
+    {
+      "rel": "item",
+      "href": "./alfonzo_10cm/alfonzo_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Pueblo Mariano H. Alfonzo"
+    },
+    {
+      "rel": "item",
+      "href": "./benitez_10cm/benitez_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Pueblo Mariano Benitez"
+    },
+    {
+      "rel": "item",
       "href": "./centro_10cm/centro_10cm.json",
       "type": "application/geo+json",
       "title": "Ortofoto 2022: Barrio Centro"
+    },
+    {
+      "rel": "item",
+      "href": "./este_1_10cm/este_1_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Barrios Desiderio de la Fuente, Trocha, Villa Progreso y 27 de Noviembre"
+    },
+    {
+      "rel": "item",
+      "href": "./este_2_10cm/este_2_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Barrrio José Hernández"
+    },
+    {
+      "rel": "item",
+      "href": "./este_3_10cm/este_3_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Barrios La Amalia, San Martín, 25 de Mayo, La Rural y María Crescencia"
+    },
+    {
+      "rel": "item",
+      "href": "./fontezuela_10cm/fontezuela_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Pueblo Fontezuela"
+    },
+    {
+      "rel": "item",
+      "href": "./guerrico_10cm/guerrico_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Pueblo Guerrico"
+    },
+    {
+      "rel": "item",
+      "href": "./la_violeta_10cm/la_violeta_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: La Violeta"
+    },
+    {
+      "rel": "item",
+      "href": "./norte_1_10cm/norte_1_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Barrios Viajantes y Villa Alicia"
+    },
+    {
+      "rel": "item",
+      "href": "./norte_2_10cm/norte_2_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Parte del barrio Acevedo, barrios Newbery y Virgen de Itatí"
+    },
+    {
+      "rel": "item",
+      "href": "./norte_3_10cm/norte_3_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Barrio Los Pinos, partes de los barrios La Guarida y Scalabrini"
+    },
+    {
+      "rel": "item",
+      "href": "./norte_4_10cm/norte_4_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Partes de los barrios Acevedo, Ameghino y Villa San José"
+    },
+    {
+      "rel": "item",
+      "href": "./norte_5_10cm/norte_5_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Barrios Maiztegui, Favaloro y  Champagnat, partes del barrio Villa San José y Ameghino"
+    },
+    {
+      "rel": "item",
+      "href": "./norte_6_10cm/norte_6_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Barrio Otero y parte del barrio Scalabrini"
+    },
+    {
+      "rel": "item",
+      "href": "./norte_7_10cm/norte_7_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Parte del barrio La Guarida y barrio Luar Kayad"
+    },
+    {
+      "rel": "item",
+      "href": "./ocampo_10cm/ocampo_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Ocampo"
+    },
+    {
+      "rel": "item",
+      "href": "./oeste_1_10cm/oeste_1_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Parte sur del barrio San Vicente, parte sur del barrio 12 de Octubre y barrio Martín Miguel de Güemes"
+    },
+    {
+      "rel": "item",
+      "href": "./oeste_2_10cm/oeste_2_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Barrios 12 de Octubre, Martín Illia, Santa Inés y Quinta Mastrángelo"
+    },
+    {
+      "rel": "item",
+      "href": "./pena_10cm/pena_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Pueblo Juan Andrés de la Peña"
+    },
+    {
+      "rel": "item",
+      "href": "./socorro_10cm/socorro_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Pueblo El Socorro (Villa Angélica)"
+    },
+    {
+      "rel": "item",
+      "href": "./sur_1_10cm/sur_1_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Barrios Santa Julia, Malvinas y Campos del Sur"
+    },
+    {
+      "rel": "item",
+      "href": "./sur_2_10cm/sur_2_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Barrios Belgrano y Mariano Moreno"
+    },
+    {
+      "rel": "item",
+      "href": "./sur_3_10cm/sur_3_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Barrios Centenario, Cueto y Villa Fernández"
+    },
+    {
+      "rel": "item",
+      "href": "./sur_4_10cm/sur_4_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Atahualpa Yupanqui"
+    },
+    {
+      "rel": "item",
+      "href": "./sur_5_10cm/sur_5_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Parte este del barrio 9 de Julio, Barrio Kennedy y Parque Industrial Pergamino"
+    },
+    {
+      "rel": "item",
+      "href": "./urquiza_10cm/urquiza_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Pueblo Urquiza (Juan Anchorena)"
+    },
+    {
+      "rel": "item",
+      "href": "./villa_san_jose_rancagua_10cm/villa_san_jose_rancagua_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Paraje Villa San José de Rancagua"
+    },
+    {
+      "rel": "item",
+      "href": "./zona_industrial_sur_10cm/zona_industrial_sur_10cm.json",
+      "type": "application/geo+json",
+      "title": "Ortofoto 2022: Zona industrial sur, ACA, Cooperativa Alfonzo, PARCUM, AgroFert, MetalCAS"
     },
     {
       "rel": "agents",
@@ -168,5 +406,5 @@
       "title": "CC BY-SA 4.0"
     }
   ],
-  "updated": "2026-11-20T08:16:52Z"
+  "updated": "2026-11-20T10:57:34Z"
 }
