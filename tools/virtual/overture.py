@@ -65,7 +65,7 @@ GUIDES = {
 
 def schema_page(layer: dict) -> str:
     return ("https://docs.overturemaps.org/schema/reference/"
-            f"{layer['theme']}/{layer['type'].replace('_', '-')}/")
+            f"{layer['theme']}/{layer['type']}/")
 
 
 # --- bbox helpers ----------------------------------------------------------

@@ -19,6 +19,8 @@ El catálogo raíz enlaza a subcatálogos temáticos, y cada uno enlaza a sus co
 - [`limites/`](./limites/AGENTS.md): Límites administrativos
 - [`servicios-municipales/`](./servicios-municipales/AGENTS.md): Servicios municipales
 - [`comercio-y-cultura/`](./comercio-y-cultura/AGENTS.md): Comercio y cultura
+- [`imagenes/`](./imagenes/AGENTS.md): Imágenes
+- [`externos/`](./externos/AGENTS.md): Datos de otros catálogos
 
 ## Formato
 

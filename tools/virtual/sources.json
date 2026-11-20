@@ -1,8 +1,7 @@
 {
   "partido": {
     "url": "https://data.source.coop/nlebovits/pergamino-ide/limites/partido_pergamino/partido_pergamino.parquet",
-    "legacy_url": "https://data.source.coop/nlebovits/pergamino-ide/limites/partido_pergamino/publico_partido_pergamino.parquet",
-    "local": "sources/publico_partido_pergamino.parquet"
+    "local": "catalog/limites/partido_pergamino/partido_pergamino.parquet"
   },
   "glofas": {
     "catalog": "https://data.source.coop/nlebovits/jrc-glofas/catalog.json",

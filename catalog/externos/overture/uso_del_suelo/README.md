@@ -45,7 +45,7 @@ Nombres y tipos leídos del GeoParquet; descripciones tomadas de overture-portol
 
 - Productor: Overture Maps Foundation (https://overturemaps.org/).
 - Guía: https://docs.overturemaps.org/guides/base/
-- Esquema: https://docs.overturemaps.org/schema/reference/base/land-use/
+- Esquema: https://docs.overturemaps.org/schema/reference/base/land_use/
 - Catálogo del que deriva: overture-portolan (`https://nlebovits.github.io/overture-portolan/base/land_use/collection.json`); si sus URLs no responden, el catálogo STAC de Overture (`https://stac.overturemaps.org/catalog.json`).
 
 ## Licencia

@@ -160,7 +160,7 @@
     },
     {
       "rel": "via",
-      "href": "https://docs.overturemaps.org/schema/reference/base/land-use/",
+      "href": "https://docs.overturemaps.org/schema/reference/base/land_use/",
       "type": "text/html",
       "title": "Esquema de Overture: land_use"
     },

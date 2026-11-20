@@ -135,31 +135,27 @@ def probe(url: str, timeout: int = 30) -> int:
 
 
 def load_partido(url: str | None = None) -> Partido:
-    """The partido polygon: from url, the legacy url, or the local copy.
+    """The partido polygon: the local catalog file, else its public URL.
 
-    The geometry is the same in all three; the order only decides which one
-    answers. Building never depends on the published URL being live.
+    The refresh and a local build both have the catalog checkout, so the
+    local file answers. A CI job without data files reads the bucket.
     """
     import pyarrow.parquet as pq
     import shapely
 
-    candidates = [url or PARTIDO_URL, CONFIG["partido"]["legacy_url"]]
-    errors = []
-    for candidate in candidates:
-        try:
-            table = pq.read_table(io.BytesIO(get_bytes(candidate)),
-                                  columns=["geometry"])
-            geom = shapely.from_wkb(table.column("geometry")[0].as_py())
-            return Partido(geom, candidate)
-        except Exception as exc:  # noqa: BLE001 - try the next source
-            errors.append(f"{candidate}: {exc}")
+    def read(source) -> Partido:
+        table = pq.read_table(source, columns=["geometry"])
+        return shapely.from_wkb(table.column("geometry")[0].as_py())
+
     local = ROOT / CONFIG["partido"]["local"]
-    if local.exists():
-        table = pq.read_table(local, columns=["geometry"])
-        geom = shapely.from_wkb(table.column("geometry")[0].as_py())
-        return Partido(geom, str(local))
-    raise SystemExit("cannot load the partido boundary:\n  "
-                     + "\n  ".join(errors))
+    if url is None and local.exists():
+        return Partido(read(local), str(local))
+    candidate = url or PARTIDO_URL
+    try:
+        return Partido(read(io.BytesIO(get_bytes(candidate))), candidate)
+    except Exception as exc:  # noqa: BLE001 - say which source failed
+        raise SystemExit(f"cannot load the partido boundary from "
+                         f"{candidate}: {exc}") from exc
 
 
 def display_geometry(partido: Partido):

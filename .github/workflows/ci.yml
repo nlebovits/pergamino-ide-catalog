@@ -26,13 +26,13 @@ jobs:
       - name: Install the validators
         run: |
           python -m pip install 'rashid==0.4.0' stac-check==1.14.0 \
-            duckdb==1.5.6 pyarrow==26.0.1
+            duckdb==1.5.6 pyarrow==26.0.1 geoparquet-io==1.7.0
 
       - name: Lint the tooling
         run: |
           python -m pip install pyflakes
           pyflakes tools/*.py tests/*.py tools/generate/*.py \
-            tools/generate/thumbs/*.py
+            tools/generate/thumbs/*.py tools/imagery/*.py tools/virtual/*.py
 
       # CI_LIGHT exempts the data files from the link check. They are gitignored
       # by design and live in object storage, so a fresh clone has the metadata

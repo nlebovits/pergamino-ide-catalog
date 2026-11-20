@@ -25,7 +25,7 @@ El recurso `data` de `collection.json` lleva en `processing:expression` la consu
 
 ## Notas
 
-- Columnas en inglés, con la semántica de Overture: ver https://docs.overturemaps.org/schema/reference/base/land-use/.
+- Columnas en inglés, con la semántica de Overture: ver https://docs.overturemaps.org/schema/reference/base/land_use/.
 - `geometry` está en EPSG:4326. Para medir en metros usar `ST_Length_Spheroid` o `ST_Area_Spheroid`.
 - `sources` registra la fuente de cada atributo; la licencia de cada fuente está en https://docs.overturemaps.org/attribution/.
 - Overture borra las publicaciones viejas a los pocos meses. Las URLs de las partes se actualizan con `tools/virtual/refresh.py`.
