@@ -849,6 +849,7 @@
     "title": "Parte 00009",
     "datetime": "2026-11-18T00:00:00Z",
     "table:row_count": 0,
+    "processing:lineage": "Filas de la parte 00009 de transportation/segment, release 2026-11-18.0 de Overture, que caen dentro del partido de Pergamino. La expresión del recurso data hace el recorte al leer.",
     "pergamino:upstream_bbox": [
       -80.108696,
       -33.923557,

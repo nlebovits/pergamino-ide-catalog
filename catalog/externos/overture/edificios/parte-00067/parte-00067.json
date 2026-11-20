@@ -813,6 +813,7 @@
     "title": "Parte 00067",
     "datetime": "2026-11-18T00:00:00Z",
     "table:row_count": 82287,
+    "processing:lineage": "Filas de la parte 00067 de buildings/building, release 2026-11-18.0 de Overture, que caen dentro del partido de Pergamino. La expresión del recurso data hace el recorte al leer.",
     "pergamino:upstream_bbox": [
       -60.695179,
       -34.609119,

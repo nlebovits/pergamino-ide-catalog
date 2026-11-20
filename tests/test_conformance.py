@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Portolan conformance gate, via rashid.
 
-Fails on any error-severity finding whose rule is not in ACCEPTED.
+Fails on any error-severity finding whose rule and path are not in ACCEPTED.
 
 ACCEPTED ships empty, and the rule for growing it is not negotiable: every
 entry needs a row in docs/conformance.md giving the rule, where it fires, why
@@ -31,7 +31,12 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 from publish import load_config  # noqa: E402
 
-ACCEPTED: set[str] = set()
+# (rule id, path) pairs. A pair waives one rule on one object, so an accepted
+# deviation cannot hide the same rule failing anywhere else.
+ACCEPTED: set[tuple[str, str]] = {
+    # rashid 0.4.0 asks an overview COG for a style. rashid main exempts it.
+    ("PTL-VIZ-002", "imagenes/ortofotos_10cm_2022/collection.json"),
+}
 
 config = load_config()
 target = ROOT / config["publish_dir"]
@@ -55,9 +60,15 @@ except json.JSONDecodeError:
     raise SystemExit("rashid produced no JSON report")
 
 findings = report.get("findings", [])
+
+
+def accepted(finding: dict) -> bool:
+    return (finding.get("rule_id"), finding.get("path")) in ACCEPTED
+
+
 blocking = [
     f for f in findings
-    if f.get("severity") == "error" and f.get("rule_id") not in ACCEPTED
+    if f.get("severity") == "error" and not accepted(f)
 ]
 
 for finding in blocking:
@@ -66,7 +77,7 @@ for finding in blocking:
     if finding.get("fix_hint"):
         print(f"       hint: {finding['fix_hint']}")
 
-waived = [f for f in findings if f.get("rule_id") in ACCEPTED]
+waived = [f for f in findings if accepted(f)]
 if waived:
     print(f"\n{len(waived)} accepted finding(s); see docs/conformance.md")
 

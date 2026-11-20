@@ -24,6 +24,10 @@ terms of use. A number there is the publisher's statement, such as the
 "10%" that defines chronic poverty, and each refresh quotes the record
 again.
 
+A number followed by a unit ("200 años", "10 m") is a measure, not a
+count, so a recorded count that is also a unit value is not flagged. The
+GloFAS layers name their return periods this way.
+
 It cannot recognise every count, such as "39 rows", so review those by hand.
 ALLOWED lists the few numbers that are configuration, not data.
 
@@ -46,6 +50,8 @@ SMALLEST = 100
 ALLOWED: set[str] = set()
 URL = re.compile(r"https?://[^\s)>\]`'\"]+")
 QUOTE = re.compile(r"^>.*$", re.M)
+# Units that make a number a measure: a period or a length.
+UNIT = r"(?:años?|m|cm|km|px)\b"
 
 
 def recorded_counts() -> set[int]:
@@ -70,7 +76,8 @@ def recorded_counts() -> set[int]:
 def count_pattern(counts: set[int]) -> re.Pattern:
     forms = sorted({f"{c:,}" for c in counts} | {str(c) for c in counts},
                    key=len, reverse=True)
-    return re.compile(r"(?<![\w.,])(?:" + "|".join(map(re.escape, forms)) + r")(?![\w,])")
+    return re.compile(r"(?<![\w.,])(?:" + "|".join(map(re.escape, forms))
+                      + r")(?![\w,])(?!\s+" + UNIT + ")")
 
 
 errors = []

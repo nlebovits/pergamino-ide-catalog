@@ -14,8 +14,15 @@ widened allow-list is a false claim about what this catalog conforms to.
 
 ## Accepted deviations
 
-None. The catalog declares Portolan v0.3.0, and rashid 0.4.0 finds 0 errors
-with no disabled rule and no severity override.
+The catalog declares Portolan v0.3.0. rashid 0.4.0 reports one error that
+this catalog accepts, on one object:
+
+| Rule | Where | Why accepted | Tracking |
+|---|---|---|---|
+| PTL-VIZ-002 | `imagenes/ortofotos_10cm_2022/collection.json` | The collection overview COG carries the `visual` and `overview` roles that PORTO-FMT-067 asks for. rashid 0.4.0 then asks for a MapLibre style, which a raster overview does not have. rashid exempts a `visual` COG without the `data` role since commit b2cb5e4, which is not yet in a release. | [rashid#291](https://github.com/portolan-sdi/rashid/pull/291). Remove the entry when the rashid pin moves past 0.4.0. |
+
+`ACCEPTED` in `tests/test_conformance.py` holds (rule, path) pairs, so the
+entry waives the rule on this object only.
 
 ## Open warnings
 
@@ -77,6 +84,6 @@ When you accept one, add a row and a section explaining it, like this:
 |---|---|---|---|
 | PTL-VIZ-001 | all thumbnails | WebP is not yet permitted; the size saving is 4x | portolan-spec#121 |
 
-Then add the rule id to ACCEPTED in tests/test_conformance.py. Both, or
-neither.
+Then add the (rule id, path) pair to ACCEPTED in
+tests/test_conformance.py. Both, or neither.
 -->

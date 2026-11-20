@@ -401,6 +401,13 @@ def stored_parts(collection: dict, folder: Path) -> list[str]:
     return sorted(hrefs)
 
 
+def part_lineage(layer: dict, res: dict, part: dict) -> str:
+    return (f"Filas de la parte {part['id']} de {layer['theme']}/"
+            f"{layer['type']}, release {res['release']} de Overture, que "
+            "caen dentro del partido de Pergamino. La expresión del recurso "
+            "data hace el recorte al leer.")
+
+
 def build_item(layer: dict, res: dict, part: dict, partido: C.Partido,
                rows: int) -> dict:
     import shapely
@@ -422,6 +429,9 @@ def build_item(layer: dict, res: dict, part: dict, partido: C.Partido,
             "title": f"Parte {part['id']}",
             "datetime": release_datetime(res["release"]),
             "table:row_count": rows,
+            # processing v1.2.0 requires a processing field in the item
+            # properties; the asset's expression alone does not count.
+            "processing:lineage": part_lineage(layer, res, part),
             "pergamino:upstream_bbox": [round(v, 6) for v in part["bbox"]],
         },
         "links": [
