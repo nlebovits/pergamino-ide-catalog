@@ -28,15 +28,13 @@ boto3>=1.34
 stac-check==1.14.0
 pyflakes==4.1.0
 # The imagery refresh (tools/imagery/), pinned to the versions that built
-# the published COGs. It adds a Sentinel-2 quarter when one ends.
-odc-stac==0.5.3
-odc-geo==0.5.4
+# the published orthophoto COGs. It adds a Sentinel-2 quarter when one
+# ends. Both builders also call the GDAL command-line tools (gdalwarp,
+# gdal_translate, gdalbuildvrt). On Ubuntu: sudo apt-get install -y gdal-bin
 pystac==1.16.1
 pystac-client==0.9.1
 rasterio==1.5.2
 rio-cogeo==7.0.4
-dask==2026.8.0
-xarray==2026.9.0
 numpy==2.5.5
 pillow==13.0.0
 stac-geoparquet==0.8.3

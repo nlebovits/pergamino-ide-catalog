@@ -1,32 +1,43 @@
-# Sentinel-2: mosaicos trimestrales sin nubes
+# Sentinel-2: la fecha más despejada de cada trimestre
 
-Un mosaico por trimestre calendario, desde el primero de 2017, de imágenes
-Sentinel-2 L2A (reflectancia de superficie) sobre el rectángulo del Partido
-de Pergamino (longitud -60.944 a -60.139, latitud -34.177 a -33.540). Cada
-mosaico es la mediana por píxel de las observaciones del trimestre que la
-clasificación de escena de Sentinel-2 no marca como nube, sombra de nube,
-cirro, saturación o sin dato.
+Una fecha por trimestre calendario, desde el primero de 2017, de imágenes
+Sentinel-2 L2A (reflectancia de superficie) sobre el Partido de Pergamino.
+Cada ítem es el día del trimestre cuyas escenas cubren todo el partido con
+la menor nubosidad declarada.
 
-Contains modified Copernicus Sentinel data. El año de cada mosaico va en su
-ítem (`pergamino:attribution`).
+Este catálogo no copia ni recalcula ningún píxel. Los ítems apuntan a los
+COG que publica Element 84 Earth Search en el Registry of Open Data on AWS,
+y enlazan cada escena con todas sus bandas.
 
 ## Contenido
 
-Un ítem por trimestre (`2024q3`, por ejemplo), con:
+Un ítem por trimestre (`2025q3`, por ejemplo), con:
 
-- **`data`**: COG de 4 bandas uint16 a 10 m en UTM 20S (EPSG:32720): B02
-  (azul), B03 (verde), B04 (rojo) y B08 (infrarrojo cercano), en ese orden.
-  Nodata 0. DEFLATE con predictor 2, teselas de 512 px, overviews internas
-  y estadísticas exactas por banda embebidas en la cabecera. Cada banda
-  declara en `bands` su `eo:common_name`, su longitud de onda central y su
-  escala: reflectancia = DN × 0.0001 − 0.1.
-- **`visual`**: COG RGB de 8 bits (B04, B03, B02) en JPEG, con máscara
-  interna, para ver el mosaico en un navegador.
-- **`thumbnail`**: JPEG reducido del recurso `visual`.
+- **`visual-<tesela>-<HHMM>`**, uno por escena del día: el `TCI.tif` de
+  Earth Search, color verdadero RGB de 8 bits a 10 m en la proyección UTM
+  de su tesela MGRS, nodata 0, con overviews internas. Tres teselas cubren
+  el partido: 20HPH y 20HQH (UTM 20S) y 21HTC (UTM 21S). `HHMM` es la hora
+  UTC de la toma. Un día con dos pasadas tiene la misma tesela dos veces.
+  Los recursos llevan los roles `data`, `visual` y `external`, sin
+  `file:size` ni `file:checksum`: el archivo es de Earth Search y puede
+  cambiar.
+- **`thumbnail`**: JPEG del mosaico del día recortado al partido, generado
+  desde las overviews de los COG.
+- Un vínculo **`derived_from`** por escena, al ítem de Earth Search. Ese
+  ítem tiene todas las bandas (B01 a B12), la clasificación de escena (SCL)
+  y los metadatos de la escena.
 
-La geometría de cada ítem es la huella de los píxeles con al menos una
-observación sin nubes en el trimestre. `items.parquet`, en la colección,
-tiene una fila por ítem.
+La geometría de cada ítem es el partido intersecado con las huellas de las
+escenas del día. `datetime` es la hora de la primera toma del día.
+
+En la colección:
+
+- **`items.parquet`**: una fila por ítem, en stac-geoparquet.
+- **`escenas.parquet`**: todas las escenas Sentinel-2 L2A de Earth Search
+  que tocan el rectángulo del partido desde 2017, una fila por escena, en
+  orden temporal, en stac-geoparquet. Sirve para elegir otra fecha, armar
+  una serie temporal o calcular una mediana sin consultar la API de Earth
+  Search.
 
 ## Método
 
@@ -34,65 +45,30 @@ tiene una fila por ítem.
 
 1. Busca en Element 84 Earth Search
    (`https://earth-search.aws.element84.com/v1`) las escenas L2A que tocan
-   el rectángulo del partido en el trimestre. Usa la colección
-   `sentinel-2-c1-l2a` (que Earth Search titula "Sentinel-2 Collection 1
-   Level-2A") cuando tiene escenas para el trimestre, y si no,
-   `sentinel-2-l2a` ("Sentinel-2 Level-2A"). Sobre este rectángulo `sentinel-2-c1-l2a` no tiene
-   escenas de 2017, así que los trimestres de 2017 salen de
-   `sentinel-2-l2a`. Cada ítem dice cuál usó
+   el rectángulo del partido (longitud -60.944 a -60.139, latitud -34.177 a
+   -33.540) en el trimestre. Agrupa las escenas por día.
+2. Se queda con los días cuyas huellas cubren el partido entero. De esos
+   elige el día cuya escena más nubosa tiene el menor `eo:cloud_cover`. La
+   nubosidad es la que declara Earth Search para la tesela MGRS entera, no
+   la del partido.
+3. Usa la colección `sentinel-2-c1-l2a` (que Earth Search titula
+   "Sentinel-2 Collection 1 Level-2A") cuando tiene un día que cubre el
+   partido. Si no, usa `sentinel-2-l2a` ("Sentinel-2 Level-2A"). Sobre el
+   partido `sentinel-2-c1-l2a` no tiene escenas de 2017 y tiene huecos en
+   2022. Cada ítem dice qué colección usó
    (`pergamino:source_collection`).
-2. Descarta las escenas cuya nubosidad declarada (`eo:cloud_cover`, sobre
-   la tesela MGRS entera) supera el 90 %: cuestan una lectura completa y no
-   aportan casi ningún píxel despejado. Si eso dejara el trimestre sin
-   escenas, las usa todas. El umbral queda en cada ítem
-   (`pergamino:max_scene_cloud_cover`).
-3. Carga B02, B03, B04, B08 y la clasificación de escena (SCL) con
-   odc-stac, a 10 m en EPSG:32720, agrupando por día solar, en bloques dask
-   de 2048 px. La SCL, de 20 m, se lleva a 10 m por vecino más cercano.
-4. Enmascara los píxeles con SCL 0 (sin dato), 1 (saturado o defectuoso),
-   3 (sombra de nube), 8 (nube, probabilidad media), 9 (nube, probabilidad
-   alta) y 10 (cirro), y los valores 0.
-5. Toma la mediana por píxel de lo que queda.
+4. Si ningún día cubre el partido entero, elige el que cubre la mayor
+   parte. `pergamino:partido_coverage` guarda la fracción cubierta, de 0 a
+   1.
 
-Los trimestres sin escenas, o sin ningún píxel despejado, no tienen ítem:
-un mosaico enteramente sin datos no describe nada. Quedan listados en
+Un trimestre sin ninguna escena no tiene ítem y queda listado en
 `pergamino:excluded_quarters` de la colección.
-
-### Una sola convención de valores
-
-En Collection 1 la reflectancia es DN × 0.0001 − 0.1. Las escenas de
-`sentinel-2-l2a` anteriores a la línea base 04.00 declaran desplazamiento
-0 (reflectancia = DN × 0.0001). Antes de la mediana, a los DN distintos de
-0 de esas escenas se les suma la diferencia, calculada del `offset` que
-declara cada escena (1000 en ese caso), para que todos los mosaicos
-compartan la convención de Collection 1. Cada ítem guarda lo que se sumó
-en `pergamino:dn_shift`. Las escenas de las dos colecciones además salen
-de líneas base de procesamiento distintas de la ESA (cada escena declara
-la suya en `s2:processing_baseline`), así que los trimestres de 2017 no son
-estrictamente comparables con los siguientes.
-
-### Estiramiento del recurso `visual`
-
-El mismo para todos los trimestres, para poder compararlos a simple vista:
-reflectancia de 0 a 0.20 llevada linealmente a 1–255 y luego una gamma de
-1/1.4. El valor 0 queda para la máscara. Para analizar, usar `data`, no
-`visual`.
-
-## Cuántas observaciones tiene cada trimestre
-
-Cada ítem registra cuántas escenas entraron (`pergamino:scene_count`), sus
-identificadores (`pergamino:scene_ids` y un vínculo `derived_from` a cada
-una), cuántos días solares distintos (`pergamino:acquisition_days`) y qué
-porcentaje del rectángulo tiene al menos una observación despejada
-(`pergamino:valid_percent`, igual al `valid_percent` de las estadísticas de
-cada banda). Un trimestre con pocas observaciones despejadas se publica
-igual; esos campos dicen cuánto confiar en él.
 
 ## Actualización
 
 `tools/imagery/refresh.py`, llamado por la actualización semanal, agrega el
 trimestre más reciente cuando terminó hace al menos 14 días y todavía no
-está. Los trimestres ya publicados no se recalculan.
+está. La misma corrida reconstruye `items.parquet` y `escenas.parquet`.
 
 ## Licencia
 
@@ -116,9 +92,10 @@ sobre el uso de datos Copernicus Sentinel
 > adapted or modified, the user shall provide the following notice:
 > (1) 'Contains modified Copernicus Sentinel data [Year]' for Sentinel data
 
-Estos mosaicos son datos modificados. Quien los redistribuya o los muestre
-debe incluir "Contains modified Copernicus Sentinel data" con el año o los
-años que use.
+Las miniaturas son datos modificados: llevan "Contains modified Copernicus
+Sentinel data" con el año en su descripción. Quien recorte, combine o
+modifique las escenas debe incluir esa leyenda con el año o los años que
+use. Cada ítem trae la leyenda de su año en `pergamino:attribution`.
 
 No hay identificador SPDX para estos términos, así que la colección declara
 `license: other` y enlaza el aviso legal.
@@ -127,30 +104,32 @@ No hay identificador SPDX para estos términos, así que la colección declara
 
 - Productor: la Agencia Espacial Europea (ESA), dentro del programa
   Copernicus de la Unión Europea.
-- Escenas L2A en COG y catálogo STAC: Element 84, Earth Search
-  (https://earth-search.aws.element84.com/v1), con las imágenes en el
-  Registry of Open Data on AWS
+- Escenas L2A en COG y catálogo STAC: Element 84, Earth Search, con las
+  imágenes en el Registry of Open Data on AWS
   (https://registry.opendata.aws/sentinel-2-l2a-cogs/).
-- Mosaicos: calculados para este catálogo con
+- Selección de fechas, ítems y miniaturas: este catálogo, con
   `tools/imagery/s2_quarterly.py`.
 
 ## Limitaciones
 
-- La mediana mezcla fechas: un píxel puede venir de una escena y su vecino
-  de otra. No sirve para fechar un evento dentro del trimestre.
-- La SCL de Sentinel-2 no detecta todas las nubes ni todas las sombras. Con
-  pocas observaciones despejadas pueden quedar restos.
-- El rectángulo cubre más que el partido. Para recortar al límite, usar
-  `limites/partido_pergamino` del catálogo.
+- `eo:cloud_cover` mide la tesela MGRS entera, que es mucho más grande que
+  el partido. La fecha elegida puede tener nubes sobre el partido aunque
+  la tesela declare poca nubosidad, o al revés. Mirar la miniatura.
+- Los recursos apuntan a archivos de Earth Search. Si Element 84 los mueve
+  o los borra, el recurso deja de responder. El identificador de cada
+  escena (`pergamino:scene_ids`) permite buscarla de nuevo en Earth Search.
+- Los trimestres que salen de `sentinel-2-l2a` y los de
+  `sentinel-2-c1-l2a` tienen líneas base de procesamiento distintas de la
+  ESA (cada escena declara la suya en `s2:processing_baseline`).
 
 ## Acceso rápido
 
 ```sql
-INSTALL spatial; LOAD spatial;
-SELECT id, start_datetime, "pergamino:scene_count" AS escenas
+SELECT id, datetime, "eo:cloud_cover" AS nubosidad,
+       "pergamino:source_collection" AS coleccion
 FROM read_parquet('https://data.source.coop/nlebovits/pergamino-ide/imagenes/sentinel2_trimestral/items.parquet')
-ORDER BY start_datetime;
+ORDER BY datetime;
 ```
 
-La guía para agentes, [AGENTS.md](./AGENTS.md), tiene recetas con GDAL,
-rasterio y DuckDB.
+La guía para agentes, [AGENTS.md](./AGENTS.md), tiene recetas con DuckDB,
+GDAL y lazycogs.

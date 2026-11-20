@@ -6,7 +6,7 @@
   ],
   "id": "imagenes",
   "title": "Imágenes",
-  "description": "Imágenes del Partido de Pergamino: las ortofotos de 10 cm de 2022 que publica la Municipalidad en su GeoNode y mosaicos trimestrales sin nubes de Sentinel-2 desde 2017.",
+  "description": "Imágenes del Partido de Pergamino: las ortofotos de 10 cm de 2022 que publica la Municipalidad en su GeoNode y la fecha más despejada de cada trimestre de Sentinel-2 desde 2017, como referencias a los COG de Earth Search.",
   "links": [
     {
       "rel": "root",
@@ -28,7 +28,7 @@
       "rel": "child",
       "href": "./sentinel2_trimestral/collection.json",
       "type": "application/json",
-      "title": "Sentinel-2: mosaicos trimestrales sin nubes"
+      "title": "Sentinel-2: la fecha más despejada de cada trimestre"
     },
     {
       "rel": "agents",

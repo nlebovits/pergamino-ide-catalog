@@ -75,7 +75,9 @@ jobs:
       - name: Install the refresh tools
         run: |
           sudo apt-get update -q
-          sudo apt-get install -y -q tippecanoe imagemagick
+          # gdal-bin: the imagery builders call gdalwarp, gdal_translate
+          # and gdalbuildvrt.
+          sudo apt-get install -y -q tippecanoe imagemagick gdal-bin
           python -m pip install -r tools/requirements.txt
           # rashid 0.4.0 conflicts with portolan-cli's pin; see
           # tools/requirements.txt.

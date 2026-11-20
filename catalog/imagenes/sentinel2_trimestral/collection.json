@@ -5,17 +5,15 @@
   "stac_extensions": [
     "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/raster/v2.0.0/schema.json"
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json"
   ],
-  "title": "Sentinel-2: mosaicos trimestrales sin nubes",
-  "description": "Un mosaico por trimestre calendario, desde 2017, de imágenes Sentinel-2 L2A sobre el rectángulo del Partido de Pergamino: la mediana por píxel de las observaciones que la clasificación de escena (SCL) no marca como nube, sombra de nube, cirro, saturación o sin dato. Bandas B02, B03, B04 y B08 a 10 m en UTM 20S (EPSG:32720). Derivado de Copernicus Sentinel-2 vía Element 84 Earth Search.",
+  "title": "Sentinel-2: la fecha más despejada de cada trimestre",
+  "description": "Una fecha por trimestre calendario, desde 2017, de imágenes Sentinel-2 L2A sobre el Partido de Pergamino: el día cuyas escenas cubren todo el partido con la menor nubosidad declarada. Los ítems apuntan a los COG de color verdadero que publica Element 84 Earth Search, sin copiarlos ni recalcularlos, y enlazan cada escena con todas sus bandas. escenas.parquet lista todas las escenas sobre el partido, para calcular medianas o series temporales del lado del usuario.",
   "keywords": [
     "Sentinel-2",
     "Copernicus",
     "imágenes satelitales",
-    "mosaico",
-    "mediana trimestral",
+    "color verdadero",
     "Pergamino"
   ],
   "license": "other",
@@ -31,7 +29,7 @@
     },
     {
       "name": "Element 84",
-      "description": "Publica los productos L2A como COG y el catálogo STAC Earth Search.",
+      "description": "Publica los productos L2A como COG y el catálogo STAC Earth Search. Aloja los archivos a los que apuntan los ítems.",
       "roles": [
         "processor"
       ],
@@ -50,18 +48,18 @@
     "spatial": {
       "bbox": [
         [
-          -60.9592921,
-          -34.1932065,
-          -60.1176329,
-          -33.5239586
+          -60.944048,
+          -34.176559,
+          -60.138792,
+          -33.540324
         ]
       ]
     },
     "temporal": {
       "interval": [
         [
-          "2017-01-01T00:00:00Z",
-          "2024-09-30T23:59:59Z"
+          "2017-01-27T14:08:34Z",
+          "2026-09-17T14:11:58Z"
         ]
       ]
     }
@@ -78,61 +76,10 @@
     ]
   },
   "item_assets": {
-    "data": {
-      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
-      "title": "Mosaico de reflectancia, 4 bandas (COG)",
-      "description": "B02, B03, B04 y B08 a 10 m en EPSG:32720, uint16, nodata 0. Reflectancia = DN * 0.0001 - 0.1.",
-      "roles": [
-        "data",
-        "reflectance"
-      ],
-      "bands": [
-        {
-          "name": "B02",
-          "eo:common_name": "blue",
-          "data_type": "uint16",
-          "nodata": 0,
-          "raster:scale": 0.0001,
-          "raster:offset": -0.1
-        },
-        {
-          "name": "B03",
-          "eo:common_name": "green",
-          "data_type": "uint16",
-          "nodata": 0,
-          "raster:scale": 0.0001,
-          "raster:offset": -0.1
-        },
-        {
-          "name": "B04",
-          "eo:common_name": "red",
-          "data_type": "uint16",
-          "nodata": 0,
-          "raster:scale": 0.0001,
-          "raster:offset": -0.1
-        },
-        {
-          "name": "B08",
-          "eo:common_name": "nir",
-          "data_type": "uint16",
-          "nodata": 0,
-          "raster:scale": 0.0001,
-          "raster:offset": -0.1
-        }
-      ]
-    },
-    "visual": {
-      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
-      "title": "Color verdadero, 8 bits (COG)",
-      "description": "B04, B03 y B02 en RGB de 8 bits, JPEG, con máscara interna.",
-      "roles": [
-        "visual"
-      ]
-    },
     "thumbnail": {
       "type": "image/jpeg",
       "title": "Vista previa",
-      "description": "JPEG del recurso visual reducido, sin mapa base.",
+      "description": "Mosaico de los recursos visuales del día, recortado al partido y reducido.",
       "roles": [
         "thumbnail"
       ]
@@ -143,23 +90,34 @@
       "href": "./items.parquet",
       "type": "application/vnd.apache.parquet",
       "title": "Copia de los ítems (stac-geoparquet)",
-      "description": "Una fila por ítem de esta colección, en stac-geoparquet, ordenadas por la curva de Hilbert del centro de su bbox. Una sola lectura devuelve todos los trimestres.",
+      "description": "Una fila por ítem de esta colección, en stac-geoparquet. Una sola lectura devuelve todos los trimestres.",
       "roles": [
         "collection-mirror"
       ],
-      "file:size": 92968,
-      "file:checksum": "12208578e6f84a5e0bf8c6463b61302004cf0cc48357aef36cb54510385fe0414f21"
+      "file:size": 100687,
+      "file:checksum": "12209aa132605cb1f748e007d34bbf8c82c29df0310505544a3802154a447aa09a8b"
+    },
+    "escenas": {
+      "href": "./escenas.parquet",
+      "type": "application/vnd.apache.parquet",
+      "title": "Escenas de Earth Search sobre el partido (stac-geoparquet)",
+      "description": "Todas las escenas Sentinel-2 L2A de Earth Search que tocan el rectángulo del partido desde 2017, una fila por escena, en orden temporal, con sus recursos (cada banda, la SCL y el TCI). Sirve para elegir otras fechas o para calcular una mediana con lazycogs u odc-stac.",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 4095206,
+      "file:checksum": "1220cac2177cdf395e8df23d160608abcdc35d41a3da7ba761db47078405e817dcc6"
     },
     "thumbnail": {
       "href": "./thumbnail.jpg",
       "type": "image/jpeg",
       "title": "Vista previa",
-      "description": "Vista previa del mosaico más reciente (2024q3).",
+      "description": "Vista previa del trimestre más reciente (2026q3). Contains modified Copernicus Sentinel data 2026.",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 71922,
-      "file:checksum": "1220cd6a52ace92e34d299444ad26990895bf84b0b02e2515f279307476220c46766"
+      "file:size": 53089,
+      "file:checksum": "12203057364122456128e4ba8d9902cec57ec4f0d99041266973b749e62a2c158f62"
     }
   },
   "links": [
@@ -179,61 +137,235 @@
       "rel": "item",
       "href": "./2017q1/2017q1.json",
       "type": "application/geo+json",
-      "title": "Sentinel-2, mediana trimestral 2017 T1"
+      "title": "Sentinel-2, 2017-01-27 (2017 T1)"
     },
     {
       "rel": "item",
       "href": "./2017q2/2017q2.json",
       "type": "application/geo+json",
-      "title": "Sentinel-2, mediana trimestral 2017 T2"
+      "title": "Sentinel-2, 2017-05-27 (2017 T2)"
     },
     {
       "rel": "item",
       "href": "./2017q3/2017q3.json",
       "type": "application/geo+json",
-      "title": "Sentinel-2, mediana trimestral 2017 T3"
+      "title": "Sentinel-2, 2017-07-21 (2017 T3)"
     },
     {
       "rel": "item",
       "href": "./2017q4/2017q4.json",
       "type": "application/geo+json",
-      "title": "Sentinel-2, mediana trimestral 2017 T4"
+      "title": "Sentinel-2, 2017-10-14 (2017 T4)"
     },
     {
       "rel": "item",
       "href": "./2018q1/2018q1.json",
       "type": "application/geo+json",
-      "title": "Sentinel-2, mediana trimestral 2018 T1"
+      "title": "Sentinel-2, 2018-03-23 (2018 T1)"
     },
     {
       "rel": "item",
       "href": "./2018q2/2018q2.json",
       "type": "application/geo+json",
-      "title": "Sentinel-2, mediana trimestral 2018 T2"
+      "title": "Sentinel-2, 2018-06-16 (2018 T2)"
     },
     {
       "rel": "item",
       "href": "./2018q3/2018q3.json",
       "type": "application/geo+json",
-      "title": "Sentinel-2, mediana trimestral 2018 T3"
+      "title": "Sentinel-2, 2018-07-21 (2018 T3)"
     },
     {
       "rel": "item",
       "href": "./2018q4/2018q4.json",
       "type": "application/geo+json",
-      "title": "Sentinel-2, mediana trimestral 2018 T4"
+      "title": "Sentinel-2, 2018-11-03 (2018 T4)"
     },
     {
       "rel": "item",
       "href": "./2019q1/2019q1.json",
       "type": "application/geo+json",
-      "title": "Sentinel-2, mediana trimestral 2019 T1"
+      "title": "Sentinel-2, 2019-03-28 (2019 T1)"
+    },
+    {
+      "rel": "item",
+      "href": "./2019q2/2019q2.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2019-04-07 (2019 T2)"
+    },
+    {
+      "rel": "item",
+      "href": "./2019q3/2019q3.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2019-09-14 (2019 T3)"
+    },
+    {
+      "rel": "item",
+      "href": "./2019q4/2019q4.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2019-11-28 (2019 T4)"
+    },
+    {
+      "rel": "item",
+      "href": "./2020q1/2020q1.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2020-02-26 (2020 T1)"
+    },
+    {
+      "rel": "item",
+      "href": "./2020q2/2020q2.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2020-05-26 (2020 T2)"
+    },
+    {
+      "rel": "item",
+      "href": "./2020q3/2020q3.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2020-09-28 (2020 T3)"
+    },
+    {
+      "rel": "item",
+      "href": "./2020q4/2020q4.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2020-10-13 (2020 T4)"
+    },
+    {
+      "rel": "item",
+      "href": "./2021q1/2021q1.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2021-02-25 (2021 T1)"
+    },
+    {
+      "rel": "item",
+      "href": "./2021q2/2021q2.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2021-04-16 (2021 T2)"
+    },
+    {
+      "rel": "item",
+      "href": "./2021q3/2021q3.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2021-08-29 (2021 T3)"
+    },
+    {
+      "rel": "item",
+      "href": "./2021q4/2021q4.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2021-10-18 (2021 T4)"
+    },
+    {
+      "rel": "item",
+      "href": "./2022q1/2022q1.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2022-03-22 (2022 T1)"
+    },
+    {
+      "rel": "item",
+      "href": "./2022q2/2022q2.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2022-05-01 (2022 T2)"
+    },
+    {
+      "rel": "item",
+      "href": "./2022q3/2022q3.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2022-07-30 (2022 T3)"
+    },
+    {
+      "rel": "item",
+      "href": "./2022q4/2022q4.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2022-12-27 (2022 T4)"
+    },
+    {
+      "rel": "item",
+      "href": "./2023q1/2023q1.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2023-02-10 (2023 T1)"
+    },
+    {
+      "rel": "item",
+      "href": "./2023q2/2023q2.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2023-04-26 (2023 T2)"
+    },
+    {
+      "rel": "item",
+      "href": "./2023q3/2023q3.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2023-09-18 (2023 T3)"
+    },
+    {
+      "rel": "item",
+      "href": "./2023q4/2023q4.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2023-10-28 (2023 T4)"
+    },
+    {
+      "rel": "item",
+      "href": "./2024q1/2024q1.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2024-03-06 (2024 T1)"
+    },
+    {
+      "rel": "item",
+      "href": "./2024q2/2024q2.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2024-04-05 (2024 T2)"
     },
     {
       "rel": "item",
       "href": "./2024q3/2024q3.json",
       "type": "application/geo+json",
-      "title": "Sentinel-2, mediana trimestral 2024 T3"
+      "title": "Sentinel-2, 2024-07-09 (2024 T3)"
+    },
+    {
+      "rel": "item",
+      "href": "./2024q4/2024q4.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2024-12-11 (2024 T4)"
+    },
+    {
+      "rel": "item",
+      "href": "./2025q1/2025q1.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2025-03-18 (2025 T1)"
+    },
+    {
+      "rel": "item",
+      "href": "./2025q2/2025q2.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2025-05-10 (2025 T2)"
+    },
+    {
+      "rel": "item",
+      "href": "./2025q3/2025q3.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2025-09-12 (2025 T3)"
+    },
+    {
+      "rel": "item",
+      "href": "./2025q4/2025q4.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2025-10-02 (2025 T4)"
+    },
+    {
+      "rel": "item",
+      "href": "./2026q1/2026q1.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2026-03-01 (2026 T1)"
+    },
+    {
+      "rel": "item",
+      "href": "./2026q2/2026q2.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2026-04-10 (2026 T2)"
+    },
+    {
+      "rel": "item",
+      "href": "./2026q3/2026q3.json",
+      "type": "application/geo+json",
+      "title": "Sentinel-2, 2026-09-17 (2026 T3)"
     },
     {
       "rel": "agents",
@@ -272,6 +404,6 @@
       "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
     }
   ],
-  "updated": "2026-11-20T11:20:20Z",
-  "pergamino:attribution": "Contains modified Copernicus Sentinel data 2017-2024"
+  "updated": "2026-11-20T12:07:12Z",
+  "pergamino:attribution": "Copernicus Sentinel data 2017-2026"
 }

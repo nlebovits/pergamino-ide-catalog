@@ -19,7 +19,7 @@ Espejo cloud-native de la IDE del Municipio de Pergamino, Provincia de Buenos Ai
 | [Límites administrativos](./limites/) | Límites del partido, barrios y pueblos, localidades y sus áreas, delegaciones, aglomerados urbanos, manchas urbanas históricas desde 1773, circuitos electorales y códigos postales |
 | [Servicios municipales](./servicios-municipales/) | Dependencias y trámites municipales, desarrollo social, higiene urbana, recolección de residuos, puntos de reciclado y sanitarios públicos |
 | [Comercio y cultura](./comercio-y-cultura/) | Actividad comercial, gastronomía y hospedaje, cultura, deporte y entretenimiento, medios de comunicación, entidades profesionales y sindicales, parques industriales y puntos de interés |
-| [Imágenes](./imagenes/) | Imágenes del Partido de Pergamino: las ortofotos de 10 cm de 2022 que publica la Municipalidad en su GeoNode y mosaicos trimestrales sin nubes de Sentinel-2 desde 2017 |
+| [Imágenes](./imagenes/) | Imágenes del Partido de Pergamino: las ortofotos de 10 cm de 2022 que publica la Municipalidad en su GeoNode y la fecha más despejada de cada trimestre de Sentinel-2 desde 2017, como referencias a los COG de Earth Search |
 | [Datos de otros catálogos](./externos/) | Colecciones virtuales: la parte de conjuntos de datos publicados en otros catálogos Portolan que cae dentro del partido de Pergamino, sin copiar los datos |
 
 ## Acceso rápido

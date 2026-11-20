@@ -3,9 +3,8 @@
   "stac_version": "1.1.0",
   "stac_extensions": [
     "https://stac-extensions.github.io/file/v2.1.0/schema.json",
-    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
     "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
-    "https://stac-extensions.github.io/raster/v2.0.0/schema.json"
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json"
   ],
   "id": "2017q1",
   "collection": "imagenes/sentinel2_trimestral",
@@ -14,250 +13,1234 @@
     "coordinates": [
       [
         [
-          -60.1394867,
-          -33.5239586
+          -60.591521,
+          -34.115712
         ],
         [
-          -60.1176329,
-          -34.1765723
+          -60.602752,
+          -34.112587
         ],
         [
-          -60.9436886,
-          -34.1932065
+          -60.615447,
+          -34.112386
         ],
         [
-          -60.9592921,
-          -33.5401905
+          -60.626997,
+          -34.11074
         ],
         [
-          -60.1394867,
-          -33.5239586
+          -60.632033,
+          -34.108334
+        ],
+        [
+          -60.631622,
+          -34.107243
+        ],
+        [
+          -60.634264,
+          -34.103206
+        ],
+        [
+          -60.633839,
+          -34.102488
+        ],
+        [
+          -60.635199,
+          -34.098998
+        ],
+        [
+          -60.637646,
+          -34.095784
+        ],
+        [
+          -60.643031,
+          -34.094108
+        ],
+        [
+          -60.649311,
+          -34.093461
+        ],
+        [
+          -60.65222,
+          -34.094771
+        ],
+        [
+          -60.652609,
+          -34.093852
+        ],
+        [
+          -60.657241,
+          -34.092059
+        ],
+        [
+          -60.658884,
+          -34.089458
+        ],
+        [
+          -60.660269,
+          -34.089523
+        ],
+        [
+          -60.659887,
+          -34.088253
+        ],
+        [
+          -60.662787,
+          -34.084339
+        ],
+        [
+          -60.668484,
+          -34.080134
+        ],
+        [
+          -60.671307,
+          -34.076204
+        ],
+        [
+          -60.674526,
+          -34.064392
+        ],
+        [
+          -60.690086,
+          -34.051741
+        ],
+        [
+          -60.696865,
+          -34.050228
+        ],
+        [
+          -60.716009,
+          -34.035152
+        ],
+        [
+          -60.703773,
+          -34.026375
+        ],
+        [
+          -60.797765,
+          -33.951854
+        ],
+        [
+          -60.802484,
+          -33.955809
+        ],
+        [
+          -60.828789,
+          -33.935944
+        ],
+        [
+          -60.829912,
+          -33.936976
+        ],
+        [
+          -60.837908,
+          -33.930365
+        ],
+        [
+          -60.839298,
+          -33.931561
+        ],
+        [
+          -60.842999,
+          -33.931534
+        ],
+        [
+          -60.861776,
+          -33.913271
+        ],
+        [
+          -60.870926,
+          -33.905404
+        ],
+        [
+          -60.900844,
+          -33.882174
+        ],
+        [
+          -60.906853,
+          -33.887223
+        ],
+        [
+          -60.944048,
+          -33.856409
+        ],
+        [
+          -60.861072,
+          -33.781143
+        ],
+        [
+          -60.901572,
+          -33.748498
+        ],
+        [
+          -60.811313,
+          -33.674366
+        ],
+        [
+          -60.839039,
+          -33.653682
+        ],
+        [
+          -60.851202,
+          -33.641573
+        ],
+        [
+          -60.873057,
+          -33.612566
+        ],
+        [
+          -60.888188,
+          -33.598586
+        ],
+        [
+          -60.911009,
+          -33.580677
+        ],
+        [
+          -60.904236,
+          -33.573149
+        ],
+        [
+          -60.90059,
+          -33.571341
+        ],
+        [
+          -60.894235,
+          -33.565286
+        ],
+        [
+          -60.890789,
+          -33.563577
+        ],
+        [
+          -60.888782,
+          -33.561186
+        ],
+        [
+          -60.886453,
+          -33.56073
+        ],
+        [
+          -60.88222,
+          -33.556713
+        ],
+        [
+          -60.874099,
+          -33.552158
+        ],
+        [
+          -60.869054,
+          -33.550368
+        ],
+        [
+          -60.867187,
+          -33.548331
+        ],
+        [
+          -60.861416,
+          -33.546357
+        ],
+        [
+          -60.848961,
+          -33.545535
+        ],
+        [
+          -60.84765,
+          -33.544653
+        ],
+        [
+          -60.845587,
+          -33.545765
+        ],
+        [
+          -60.842478,
+          -33.545986
+        ],
+        [
+          -60.839171,
+          -33.544326
+        ],
+        [
+          -60.837173,
+          -33.54473
+        ],
+        [
+          -60.8301,
+          -33.543664
+        ],
+        [
+          -60.829151,
+          -33.542116
+        ],
+        [
+          -60.826602,
+          -33.544243
+        ],
+        [
+          -60.82467,
+          -33.5438
+        ],
+        [
+          -60.820305,
+          -33.540592
+        ],
+        [
+          -60.818245,
+          -33.540324
+        ],
+        [
+          -60.81821,
+          -33.543703
+        ],
+        [
+          -60.814963,
+          -33.543934
+        ],
+        [
+          -60.814225,
+          -33.545135
+        ],
+        [
+          -60.812526,
+          -33.545813
+        ],
+        [
+          -60.812606,
+          -33.546876
+        ],
+        [
+          -60.810406,
+          -33.54772
+        ],
+        [
+          -60.807232,
+          -33.552644
+        ],
+        [
+          -60.807139,
+          -33.553919
+        ],
+        [
+          -60.810766,
+          -33.554472
+        ],
+        [
+          -60.809713,
+          -33.555901
+        ],
+        [
+          -60.804079,
+          -33.559873
+        ],
+        [
+          -60.80328,
+          -33.55948
+        ],
+        [
+          -60.802549,
+          -33.562077
+        ],
+        [
+          -60.798962,
+          -33.56427
+        ],
+        [
+          -60.798557,
+          -33.566008
+        ],
+        [
+          -60.796646,
+          -33.566157
+        ],
+        [
+          -60.796163,
+          -33.56798
+        ],
+        [
+          -60.79458,
+          -33.568422
+        ],
+        [
+          -60.793145,
+          -33.56998
+        ],
+        [
+          -60.789968,
+          -33.570824
+        ],
+        [
+          -60.787951,
+          -33.573951
+        ],
+        [
+          -60.782286,
+          -33.577386
+        ],
+        [
+          -60.781864,
+          -33.579028
+        ],
+        [
+          -60.779981,
+          -33.578505
+        ],
+        [
+          -60.774783,
+          -33.579326
+        ],
+        [
+          -60.774155,
+          -33.580233
+        ],
+        [
+          -60.765988,
+          -33.581841
+        ],
+        [
+          -60.765635,
+          -33.582951
+        ],
+        [
+          -60.760425,
+          -33.58513
+        ],
+        [
+          -60.758167,
+          -33.585151
+        ],
+        [
+          -60.755412,
+          -33.586868
+        ],
+        [
+          -60.755927,
+          -33.587479
+        ],
+        [
+          -60.755276,
+          -33.587969
+        ],
+        [
+          -60.752661,
+          -33.587185
+        ],
+        [
+          -60.7463,
+          -33.588367
+        ],
+        [
+          -60.743435,
+          -33.587069
+        ],
+        [
+          -60.741688,
+          -33.587819
+        ],
+        [
+          -60.734434,
+          -33.586491
+        ],
+        [
+          -60.728363,
+          -33.587246
+        ],
+        [
+          -60.72646,
+          -33.586777
+        ],
+        [
+          -60.721032,
+          -33.588454
+        ],
+        [
+          -60.719208,
+          -33.587311
+        ],
+        [
+          -60.714018,
+          -33.587495
+        ],
+        [
+          -60.711114,
+          -33.588749
+        ],
+        [
+          -60.709628,
+          -33.586997
+        ],
+        [
+          -60.707006,
+          -33.586898
+        ],
+        [
+          -60.701314,
+          -33.585032
+        ],
+        [
+          -60.693391,
+          -33.584765
+        ],
+        [
+          -60.692338,
+          -33.584065
+        ],
+        [
+          -60.683807,
+          -33.585485
+        ],
+        [
+          -60.681317,
+          -33.587175
+        ],
+        [
+          -60.674062,
+          -33.588726
+        ],
+        [
+          -60.669671,
+          -33.591197
+        ],
+        [
+          -60.664553,
+          -33.592429
+        ],
+        [
+          -60.66043,
+          -33.596011
+        ],
+        [
+          -60.658498,
+          -33.600464
+        ],
+        [
+          -60.656986,
+          -33.600677
+        ],
+        [
+          -60.656443,
+          -33.603731
+        ],
+        [
+          -60.652579,
+          -33.607177
+        ],
+        [
+          -60.649922,
+          -33.606727
+        ],
+        [
+          -60.648107,
+          -33.607534
+        ],
+        [
+          -60.63978,
+          -33.616389
+        ],
+        [
+          -60.638034,
+          -33.615854
+        ],
+        [
+          -60.634158,
+          -33.618966
+        ],
+        [
+          -60.631806,
+          -33.619455
+        ],
+        [
+          -60.631664,
+          -33.620711
+        ],
+        [
+          -60.625603,
+          -33.625334
+        ],
+        [
+          -60.620816,
+          -33.626038
+        ],
+        [
+          -60.619552,
+          -33.628902
+        ],
+        [
+          -60.617916,
+          -33.628183
+        ],
+        [
+          -60.618203,
+          -33.626385
+        ],
+        [
+          -60.616885,
+          -33.625379
+        ],
+        [
+          -60.613853,
+          -33.626819
+        ],
+        [
+          -60.610755,
+          -33.627221
+        ],
+        [
+          -60.60968,
+          -33.628685
+        ],
+        [
+          -60.605743,
+          -33.630448
+        ],
+        [
+          -60.60132,
+          -33.627497
+        ],
+        [
+          -60.594863,
+          -33.631094
+        ],
+        [
+          -60.592958,
+          -33.630871
+        ],
+        [
+          -60.589959,
+          -33.632292
+        ],
+        [
+          -60.587131,
+          -33.631011
+        ],
+        [
+          -60.586332,
+          -33.631728
+        ],
+        [
+          -60.587104,
+          -33.634163
+        ],
+        [
+          -60.58512,
+          -33.634372
+        ],
+        [
+          -60.584427,
+          -33.635204
+        ],
+        [
+          -60.582371,
+          -33.634433
+        ],
+        [
+          -60.580943,
+          -33.636049
+        ],
+        [
+          -60.578969,
+          -33.636187
+        ],
+        [
+          -60.576361,
+          -33.637934
+        ],
+        [
+          -60.573684,
+          -33.63784
+        ],
+        [
+          -60.572863,
+          -33.637004
+        ],
+        [
+          -60.570703,
+          -33.637404
+        ],
+        [
+          -60.570351,
+          -33.6393
+        ],
+        [
+          -60.569318,
+          -33.640275
+        ],
+        [
+          -60.566266,
+          -33.641573
+        ],
+        [
+          -60.561785,
+          -33.645003
+        ],
+        [
+          -60.556836,
+          -33.646644
+        ],
+        [
+          -60.552333,
+          -33.646156
+        ],
+        [
+          -60.541687,
+          -33.647392
+        ],
+        [
+          -60.539649,
+          -33.647027
+        ],
+        [
+          -60.531835,
+          -33.648666
+        ],
+        [
+          -60.527152,
+          -33.648927
+        ],
+        [
+          -60.525223,
+          -33.648092
+        ],
+        [
+          -60.523674,
+          -33.648778
+        ],
+        [
+          -60.522771,
+          -33.648119
+        ],
+        [
+          -60.522555,
+          -33.64608
+        ],
+        [
+          -60.518869,
+          -33.644357
+        ],
+        [
+          -60.512513,
+          -33.644686
+        ],
+        [
+          -60.50987,
+          -33.646152
+        ],
+        [
+          -60.503425,
+          -33.645925
+        ],
+        [
+          -60.500783,
+          -33.644643
+        ],
+        [
+          -60.497589,
+          -33.644481
+        ],
+        [
+          -60.494538,
+          -33.642906
+        ],
+        [
+          -60.490066,
+          -33.64342
+        ],
+        [
+          -60.486845,
+          -33.641635
+        ],
+        [
+          -60.483884,
+          -33.64125
+        ],
+        [
+          -60.477015,
+          -33.637562
+        ],
+        [
+          -60.472979,
+          -33.638057
+        ],
+        [
+          -60.470924,
+          -33.637185
+        ],
+        [
+          -60.468499,
+          -33.637747
+        ],
+        [
+          -60.46782,
+          -33.63558
+        ],
+        [
+          -60.464049,
+          -33.634958
+        ],
+        [
+          -60.462494,
+          -33.633892
+        ],
+        [
+          -60.461591,
+          -33.631474
+        ],
+        [
+          -60.459656,
+          -33.631486
+        ],
+        [
+          -60.457516,
+          -33.627758
+        ],
+        [
+          -60.458557,
+          -33.625073
+        ],
+        [
+          -60.456935,
+          -33.622925
+        ],
+        [
+          -60.458936,
+          -33.621494
+        ],
+        [
+          -60.457818,
+          -33.617754
+        ],
+        [
+          -60.459129,
+          -33.612194
+        ],
+        [
+          -60.460558,
+          -33.609634
+        ],
+        [
+          -60.459958,
+          -33.608221
+        ],
+        [
+          -60.458777,
+          -33.607921
+        ],
+        [
+          -60.459037,
+          -33.606228
+        ],
+        [
+          -60.456853,
+          -33.603501
+        ],
+        [
+          -60.45666,
+          -33.600124
+        ],
+        [
+          -60.458055,
+          -33.597548
+        ],
+        [
+          -60.429877,
+          -33.618704
+        ],
+        [
+          -60.427226,
+          -33.616351
+        ],
+        [
+          -60.394054,
+          -33.64153
+        ],
+        [
+          -60.388202,
+          -33.636146
+        ],
+        [
+          -60.3267,
+          -33.683289
+        ],
+        [
+          -60.326705,
+          -33.680838
+        ],
+        [
+          -60.327946,
+          -33.678705
+        ],
+        [
+          -60.327894,
+          -33.67565
+        ],
+        [
+          -60.32663,
+          -33.673136
+        ],
+        [
+          -60.327446,
+          -33.671856
+        ],
+        [
+          -60.324624,
+          -33.670301
+        ],
+        [
+          -60.32267,
+          -33.667084
+        ],
+        [
+          -60.323245,
+          -33.66606
+        ],
+        [
+          -60.3206,
+          -33.664212
+        ],
+        [
+          -60.318657,
+          -33.65846
+        ],
+        [
+          -60.317407,
+          -33.65777
+        ],
+        [
+          -60.313218,
+          -33.650863
+        ],
+        [
+          -60.240198,
+          -33.663541
+        ],
+        [
+          -60.241694,
+          -33.66151
+        ],
+        [
+          -60.243193,
+          -33.651983
+        ],
+        [
+          -60.242669,
+          -33.650098
+        ],
+        [
+          -60.243599,
+          -33.648383
+        ],
+        [
+          -60.173239,
+          -33.661394
+        ],
+        [
+          -60.176032,
+          -33.672821
+        ],
+        [
+          -60.159765,
+          -33.689973
+        ],
+        [
+          -60.141367,
+          -33.693274
+        ],
+        [
+          -60.138792,
+          -33.711179
+        ],
+        [
+          -60.196556,
+          -33.824844
+        ],
+        [
+          -60.231555,
+          -33.869751
+        ],
+        [
+          -60.237051,
+          -34.010868
+        ],
+        [
+          -60.23844,
+          -34.011333
+        ],
+        [
+          -60.243057,
+          -34.007865
+        ],
+        [
+          -60.247304,
+          -34.008074
+        ],
+        [
+          -60.248737,
+          -34.007459
+        ],
+        [
+          -60.250737,
+          -34.008589
+        ],
+        [
+          -60.256404,
+          -34.008511
+        ],
+        [
+          -60.261367,
+          -34.007227
+        ],
+        [
+          -60.266034,
+          -34.007279
+        ],
+        [
+          -60.267954,
+          -34.008457
+        ],
+        [
+          -60.270197,
+          -34.00843
+        ],
+        [
+          -60.27669,
+          -34.007177
+        ],
+        [
+          -60.281716,
+          -34.005943
+        ],
+        [
+          -60.287051,
+          -34.000335
+        ],
+        [
+          -60.290756,
+          -34.001391
+        ],
+        [
+          -60.299693,
+          -33.998301
+        ],
+        [
+          -60.310475,
+          -33.999991
+        ],
+        [
+          -60.31592,
+          -34.003046
+        ],
+        [
+          -60.314794,
+          -34.00458
+        ],
+        [
+          -60.413553,
+          -34.093127
+        ],
+        [
+          -60.408062,
+          -34.097383
+        ],
+        [
+          -60.408909,
+          -34.098381
+        ],
+        [
+          -60.496465,
+          -34.176559
+        ],
+        [
+          -60.49673,
+          -34.174479
+        ],
+        [
+          -60.494565,
+          -34.173532
+        ],
+        [
+          -60.494451,
+          -34.171163
+        ],
+        [
+          -60.496277,
+          -34.170288
+        ],
+        [
+          -60.49563,
+          -34.168545
+        ],
+        [
+          -60.497453,
+          -34.167925
+        ],
+        [
+          -60.498084,
+          -34.165815
+        ],
+        [
+          -60.49674,
+          -34.161894
+        ],
+        [
+          -60.498597,
+          -34.16104
+        ],
+        [
+          -60.498602,
+          -34.159475
+        ],
+        [
+          -60.501014,
+          -34.157564
+        ],
+        [
+          -60.500891,
+          -34.156267
+        ],
+        [
+          -60.501804,
+          -34.155133
+        ],
+        [
+          -60.502825,
+          -34.155286
+        ],
+        [
+          -60.503353,
+          -34.154205
+        ],
+        [
+          -60.508092,
+          -34.151991
+        ],
+        [
+          -60.512635,
+          -34.147645
+        ],
+        [
+          -60.514363,
+          -34.143876
+        ],
+        [
+          -60.524197,
+          -34.139462
+        ],
+        [
+          -60.530502,
+          -34.139384
+        ],
+        [
+          -60.539655,
+          -34.137619
+        ],
+        [
+          -60.551227,
+          -34.130462
+        ],
+        [
+          -60.55638,
+          -34.129564
+        ],
+        [
+          -60.560987,
+          -34.125509
+        ],
+        [
+          -60.565137,
+          -34.123695
+        ],
+        [
+          -60.571614,
+          -34.118448
+        ],
+        [
+          -60.57685,
+          -34.115475
+        ],
+        [
+          -60.586333,
+          -34.114933
+        ],
+        [
+          -60.591521,
+          -34.115712
         ]
       ]
     ]
   },
   "bbox": [
-    -60.9592921,
-    -34.1932065,
-    -60.1176329,
-    -33.5239586
+    -60.944048,
+    -34.176559,
+    -60.138792,
+    -33.540324
   ],
   "properties": {
-    "title": "Sentinel-2, mediana trimestral 2017 T1",
-    "description": "Mediana por píxel de las observaciones sin nubes de Sentinel-2 L2A entre 2017-01-01 y 2017-03-31, sobre el rectángulo del Partido de Pergamino. Contains modified Copernicus Sentinel data 2017.",
-    "datetime": null,
-    "start_datetime": "2017-01-01T00:00:00Z",
-    "end_datetime": "2017-03-31T23:59:59Z",
+    "title": "Sentinel-2, 2017-01-27 (2017 T1)",
+    "description": "La fecha más despejada del trimestre 2017 T1 que cubre el Partido de Pergamino: 2017-01-27, teselas MGRS 20HPH, 20HQH, 21HTC. Los recursos apuntan a los COG de color verdadero de Earth Search; los vínculos derived_from llevan a cada escena, con todas sus bandas.",
+    "datetime": "2017-01-27T14:08:34Z",
     "constellation": "sentinel-2",
     "instruments": [
       "msi"
     ],
     "gsd": 10,
-    "proj:code": "EPSG:32720",
-    "proj:shape": [
-      7245,
-      7619
-    ],
-    "proj:transform": [
-      10.0,
-      0.0,
-      689480.0,
-      0.0,
-      -10.0,
-      6286960.0
-    ],
-    "proj:bbox": [
-      689480.0,
-      6214510.0,
-      765670.0,
-      6286960.0
-    ],
+    "eo:cloud_cover": 0.1227,
+    "processing:lineage": "Escenas Sentinel-2 L2A de sentinel-2-l2a en Earth Search, sin modificar. Se eligió el día solar cuyas huellas cubren el partido y cuya escena más nubosa tiene el menor eo:cloud_cover del trimestre.",
     "pergamino:source_collection": "sentinel-2-l2a",
-    "pergamino:max_scene_cloud_cover": 90,
-    "pergamino:scene_count": 24,
     "pergamino:scene_ids": [
-      "S2A_20HPH_20170107_0_L2A",
-      "S2A_20HQH_20170107_0_L2A",
-      "S2A_21HTC_20170107_0_L2A",
       "S2A_20HPH_20170127_0_L2A",
       "S2A_20HQH_20170127_0_L2A",
-      "S2A_21HTC_20170127_0_L2A",
-      "S2A_20HQH_20170203_0_L2A",
-      "S2A_21HTC_20170203_0_L2A",
-      "S2A_20HPH_20170206_0_L2A",
-      "S2A_20HQH_20170206_0_L2A",
-      "S2A_21HTC_20170206_0_L2A",
-      "S2A_20HPH_20170216_0_L2A",
-      "S2A_20HQH_20170223_0_L2A",
-      "S2A_21HTC_20170223_0_L2A",
-      "S2A_20HQH_20170305_0_L2A",
-      "S2A_21HTC_20170305_0_L2A",
-      "S2A_20HPH_20170308_0_L2A",
-      "S2A_20HQH_20170308_0_L2A",
-      "S2A_21HTC_20170308_0_L2A",
-      "S2A_20HQH_20170325_0_L2A",
-      "S2A_21HTC_20170325_0_L2A",
-      "S2A_20HPH_20170328_0_L2A",
-      "S2A_20HQH_20170328_0_L2A",
-      "S2A_21HTC_20170328_0_L2A"
+      "S2A_21HTC_20170127_0_L2A"
     ],
-    "pergamino:acquisition_days": 10,
-    "pergamino:dn_shift": 1000,
-    "pergamino:valid_percent": 100.0,
-    "pergamino:attribution": "Contains modified Copernicus Sentinel data 2017",
-    "created": "2026-11-20T08:42:51Z"
+    "pergamino:partido_coverage": 1.0,
+    "pergamino:attribution": "Copernicus Sentinel data 2017"
   },
   "assets": {
-    "data": {
-      "href": "./data.tif",
+    "visual-20HPH-1408": {
+      "href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/20/H/PH/2017/1/S2A_20HPH_20170127_0_L2A/TCI.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
-      "title": "Mosaico de reflectancia, 4 bandas (COG)",
-      "description": "B02, B03, B04 y B08 a 10 m en EPSG:32720, uint16, nodata 0. Reflectancia = DN * 0.0001 - 0.1 (convención de Sentinel-2 Collection 1). Estadísticas por banda embebidas en la cabecera.",
+      "title": "Color verdadero, tesela 20HPH, 14:08 UTC (COG de Earth Search)",
+      "description": "TCI de la escena S2A_20HPH_20170127_0_L2A: RGB de 8 bits a 10 m en la proyección UTM de la tesela, nodata 0, con overviews internas. Archivo de Earth Search, no una copia.",
       "roles": [
         "data",
-        "reflectance"
+        "visual",
+        "external"
       ],
-      "bands": [
-        {
-          "name": "B02",
-          "eo:common_name": "blue",
-          "eo:center_wavelength": 0.49,
-          "eo:full_width_half_max": 0.098,
-          "description": "Reflectancia de superficie (BOA), blue",
-          "data_type": "uint16",
-          "nodata": 0,
-          "unit": "1",
-          "raster:scale": 0.0001,
-          "raster:offset": -0.1,
-          "raster:spatial_resolution": 10,
-          "statistics": {
-            "minimum": 1001.0,
-            "maximum": 13032.0,
-            "mean": 1324.8425,
-            "stddev": 159.7582,
-            "valid_percent": 99.9983
-          }
-        },
-        {
-          "name": "B03",
-          "eo:common_name": "green",
-          "eo:center_wavelength": 0.56,
-          "eo:full_width_half_max": 0.045,
-          "description": "Reflectancia de superficie (BOA), green",
-          "data_type": "uint16",
-          "nodata": 0,
-          "unit": "1",
-          "raster:scale": 0.0001,
-          "raster:offset": -0.1,
-          "raster:spatial_resolution": 10,
-          "statistics": {
-            "minimum": 1015.0,
-            "maximum": 12232.0,
-            "mean": 1646.4095,
-            "stddev": 179.7731,
-            "valid_percent": 99.9983
-          }
-        },
-        {
-          "name": "B04",
-          "eo:common_name": "red",
-          "eo:center_wavelength": 0.665,
-          "eo:full_width_half_max": 0.038,
-          "description": "Reflectancia de superficie (BOA), red",
-          "data_type": "uint16",
-          "nodata": 0,
-          "unit": "1",
-          "raster:scale": 0.0001,
-          "raster:offset": -0.1,
-          "raster:spatial_resolution": 10,
-          "statistics": {
-            "minimum": 1021.0,
-            "maximum": 12472.0,
-            "mean": 1510.3533,
-            "stddev": 265.1214,
-            "valid_percent": 99.9983
-          }
-        },
-        {
-          "name": "B08",
-          "eo:common_name": "nir",
-          "eo:center_wavelength": 0.842,
-          "eo:full_width_half_max": 0.145,
-          "description": "Reflectancia de superficie (BOA), nir",
-          "data_type": "uint16",
-          "nodata": 0,
-          "unit": "1",
-          "raster:scale": 0.0001,
-          "raster:offset": -0.1,
-          "raster:spatial_resolution": 10,
-          "statistics": {
-            "minimum": 1001.0,
-            "maximum": 13496.0,
-            "mean": 4626.8021,
-            "stddev": 1058.5816,
-            "valid_percent": 99.9983
-          }
-        }
-      ],
-      "file:size": 395381051,
-      "file:checksum": "122011c5f0da8b6db7ad87a75b8a37f36bff483b2965c4061dbcbc654daf940a41f5"
+      "processing:expression": {
+        "format": "gdal",
+        "expression": "gdalwarp -t_srs EPSG:32720 -tr 10 10 -tap -cutline /vsicurl/https://data.source.coop/nlebovits/pergamino-ide/limites/partido_pergamino/partido_pergamino.parquet -crop_to_cutline -dstalpha -co COMPRESS=DEFLATE -co TILED=YES /vsicurl/https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/20/H/PH/2017/1/S2A_20HPH_20170127_0_L2A/TCI.tif /vsicurl/https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/20/H/QH/2017/1/S2A_20HQH_20170127_0_L2A/TCI.tif /vsicurl/https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/21/H/TC/2017/1/S2A_21HTC_20170127_0_L2A/TCI.tif sentinel2_2017q1.tif"
+      }
     },
-    "visual": {
-      "href": "./visual.tif",
+    "visual-20HQH-1408": {
+      "href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/20/H/QH/2017/1/S2A_20HQH_20170127_0_L2A/TCI.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
-      "title": "Color verdadero, 8 bits (COG)",
-      "description": "B04, B03 y B02 en RGB de 8 bits, JPEG, con máscara interna donde el mosaico no tiene datos. Estiramiento fijo para todos los trimestres: reflectancia 0 a 0.2 lineal a 1-255 con gamma 1/1.4.",
+      "title": "Color verdadero, tesela 20HQH, 14:08 UTC (COG de Earth Search)",
+      "description": "TCI de la escena S2A_20HQH_20170127_0_L2A: RGB de 8 bits a 10 m en la proyección UTM de la tesela, nodata 0, con overviews internas. Archivo de Earth Search, no una copia.",
       "roles": [
-        "visual"
-      ],
-      "bands": [
-        {
-          "name": "red",
-          "data_type": "uint8",
-          "statistics": {
-            "minimum": 11.0,
-            "maximum": 255.0,
-            "mean": 94.3719,
-            "stddev": 33.4623,
-            "valid_percent": 99.9983
-          }
-        },
-        {
-          "name": "green",
-          "data_type": "uint8",
-          "statistics": {
-            "minimum": 9.0,
-            "maximum": 255.0,
-            "mean": 113.5341,
-            "stddev": 21.2324,
-            "valid_percent": 99.9983
-          }
-        },
-        {
-          "name": "blue",
-          "data_type": "uint8",
-          "statistics": {
-            "minimum": 2.0,
-            "maximum": 255.0,
-            "mean": 69.0294,
-            "stddev": 21.7086,
-            "valid_percent": 99.9983
-          }
-        }
-      ],
-      "file:size": 15863463,
-      "file:checksum": "1220bc172ed5993e8ba26706ff017f66500b8168df7c49d30cf2c02194e48fa3a5cf"
+        "data",
+        "visual",
+        "external"
+      ]
+    },
+    "visual-21HTC-1408": {
+      "href": "https://sentinel-cogs.s3.us-west-2.amazonaws.com/sentinel-s2-l2a-cogs/21/H/TC/2017/1/S2A_21HTC_20170127_0_L2A/TCI.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Color verdadero, tesela 21HTC, 14:08 UTC (COG de Earth Search)",
+      "description": "TCI de la escena S2A_21HTC_20170127_0_L2A: RGB de 8 bits a 10 m en la proyección UTM de la tesela, nodata 0, con overviews internas. Archivo de Earth Search, no una copia.",
+      "roles": [
+        "data",
+        "visual",
+        "external"
+      ]
     },
     "thumbnail": {
       "href": "./thumbnail.jpg",
       "type": "image/jpeg",
       "title": "Vista previa",
-      "description": "JPEG del recurso visual reducido, sin mapa base.",
+      "description": "Mosaico de los recursos visuales del día, recortado al partido y reducido. Contains modified Copernicus Sentinel data 2017.",
       "roles": [
         "thumbnail"
       ],
-      "file:size": 67631,
-      "file:checksum": "1220c7fa552bc58a96648fe859f5e4339aec7bb6d6b104d8c2a39fcc547a34fea82e"
+      "file:size": 44615,
+      "file:checksum": "1220691059709405f1fa8f0773224d649123e5fc52d7900987900fca90ea63d13ca5"
     }
   },
   "links": [
@@ -284,24 +1267,6 @@
     },
     {
       "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HPH_20170107_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_20HPH_20170107_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20170107_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_20HQH_20170107_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20170107_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_21HTC_20170107_0_L2A"
-    },
-    {
-      "rel": "derived_from",
       "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HPH_20170127_0_L2A",
       "type": "application/geo+json",
       "title": "S2A_20HPH_20170127_0_L2A"
@@ -317,114 +1282,6 @@
       "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20170127_0_L2A",
       "type": "application/geo+json",
       "title": "S2A_21HTC_20170127_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20170203_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_20HQH_20170203_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20170203_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_21HTC_20170203_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HPH_20170206_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_20HPH_20170206_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20170206_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_20HQH_20170206_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20170206_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_21HTC_20170206_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HPH_20170216_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_20HPH_20170216_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20170223_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_20HQH_20170223_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20170223_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_21HTC_20170223_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20170305_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_20HQH_20170305_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20170305_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_21HTC_20170305_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HPH_20170308_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_20HPH_20170308_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20170308_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_20HQH_20170308_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20170308_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_21HTC_20170308_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20170325_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_20HQH_20170325_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20170325_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_21HTC_20170325_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HPH_20170328_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_20HPH_20170328_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_20HQH_20170328_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_20HQH_20170328_0_L2A"
-    },
-    {
-      "rel": "derived_from",
-      "href": "https://earth-search.aws.element84.com/v1/collections/sentinel-2-l2a/items/S2A_21HTC_20170328_0_L2A",
-      "type": "application/geo+json",
-      "title": "S2A_21HTC_20170328_0_L2A"
     }
   ]
 }
