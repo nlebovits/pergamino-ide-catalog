@@ -80,6 +80,12 @@
     },
     {
       "rel": "child",
+      "href": "./lugares_overture/collection.json",
+      "type": "application/json",
+      "title": "Lugares de interés (Overture Maps)"
+    },
+    {
+      "rel": "child",
       "href": "./medios_de_comunicacion/collection.json",
       "type": "application/json",
       "title": "Medios de comunicacion"
@@ -133,5 +139,5 @@
       "title": "Human-readable documentation"
     }
   ],
-  "updated": "2026-11-20T09:51:46Z"
+  "updated": "2026-11-20T12:59:05Z"
 }

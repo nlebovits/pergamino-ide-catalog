@@ -16,6 +16,7 @@ Cada colección tiene su propio `AGENTS.md` con el esquema, los valores medidos 
 - [`comercio-y-cultura/gastronomia`](./gastronomia/AGENTS.md): Oferta gastronómica, puntos
 - [`comercio-y-cultura/gomerias`](./gomerias/AGENTS.md): Gomerias, puntos
 - [`comercio-y-cultura/hospedajes`](./hospedajes/AGENTS.md): Hoteles y hospedajes, puntos
+- [`comercio-y-cultura/lugares_overture`](./lugares_overture/AGENTS.md): Lugares de interés (Overture Maps), vectores externos
 - [`comercio-y-cultura/medios_de_comunicacion`](./medios_de_comunicacion/AGENTS.md): Medios de comunicacion, puntos
 - [`comercio-y-cultura/museos_y_espacios_culturales`](./museos_y_espacios_culturales/AGENTS.md): Museos y espacios culturales, puntos
 - [`comercio-y-cultura/oferentes_espacios_culturales`](./oferentes_espacios_culturales/AGENTS.md): Oferentes de espacios culturales, puntos
@@ -29,3 +30,4 @@ Cada colección tiene su propio `AGENTS.md` con el esquema, los valores medidos 
 - Los datos están en GeoParquet 1.1, geometría WKB en EPSG:4326, con columna de cobertura `bbox` y orden espacial Hilbert. Un filtro sobre `bbox` lee sólo los grupos de filas que lo cumplen.
 - Las capas tienen además PMTiles y un estilo MapLibre en `styles/default.json`, derivado del estilo SLD que publica GeoNode.
 - Los nombres de columna están en español, tal como los publica la fuente.
+- Las colecciones `comercio-y-cultura/lugares_overture` son virtuales: no tienen un GeoParquet propio. Su `AGENTS.md` dice cómo leer el recorte (un VRT de GDAL o un archivo de vistas DuckDB), y la consulta lee los datos del servidor del productor.

@@ -98,6 +98,12 @@
     },
     {
       "rel": "child",
+      "href": "./segmentos_overture/collection.json",
+      "type": "application/json",
+      "title": "Segmentos de transporte (Overture Maps)"
+    },
+    {
+      "rel": "child",
       "href": "./semaforos/collection.json",
       "type": "application/json",
       "title": "Semaforos"
@@ -115,5 +121,5 @@
       "title": "Human-readable documentation"
     }
   ],
-  "updated": "2026-11-20T09:51:46Z"
+  "updated": "2026-11-20T12:59:05Z"
 }

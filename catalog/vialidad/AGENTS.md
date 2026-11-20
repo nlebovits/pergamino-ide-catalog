@@ -19,6 +19,7 @@ Cada colección tiene su propio `AGENTS.md` con el esquema, los valores medidos 
 - [`vialidad/rampas_acceso_veredas`](./rampas_acceso_veredas/AGENTS.md): Rampas de acceso discapacidad motriz, puntos
 - [`vialidad/red_nivelacion_ign_precision`](./red_nivelacion_ign_precision/AGENTS.md): Red de nivelación de precisión del IGN, puntos
 - [`vialidad/reductores_de_velocidad`](./reductores_de_velocidad/AGENTS.md): Reductores de velocidad, puntos
+- [`vialidad/segmentos_overture`](./segmentos_overture/AGENTS.md): Segmentos de transporte (Overture Maps), vectores externos
 - [`vialidad/semaforos`](./semaforos/AGENTS.md): Semaforos, puntos
 
 ## Notas de acceso
@@ -26,3 +27,4 @@ Cada colección tiene su propio `AGENTS.md` con el esquema, los valores medidos 
 - Los datos están en GeoParquet 1.1, geometría WKB en EPSG:4326, con columna de cobertura `bbox` y orden espacial Hilbert. Un filtro sobre `bbox` lee sólo los grupos de filas que lo cumplen.
 - Las capas tienen además PMTiles y un estilo MapLibre en `styles/default.json`, derivado del estilo SLD que publica GeoNode.
 - Los nombres de columna están en español, tal como los publica la fuente.
+- Las colecciones `vialidad/segmentos_overture` son virtuales: no tienen un GeoParquet propio. Su `AGENTS.md` dice cómo leer el recorte (un VRT de GDAL o un archivo de vistas DuckDB), y la consulta lee los datos del servidor del productor.

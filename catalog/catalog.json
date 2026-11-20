@@ -98,12 +98,6 @@
       "title": "Imágenes"
     },
     {
-      "rel": "child",
-      "href": "./externos/catalog.json",
-      "type": "application/json",
-      "title": "Datos de otros catálogos"
-    },
-    {
       "rel": "agents",
       "href": "./AGENTS.md",
       "type": "text/markdown",
@@ -134,5 +128,5 @@
       "title": "Reportar un problema"
     }
   ],
-  "updated": "2026-11-20T12:21:34Z"
+  "updated": "2026-11-20T12:59:05Z"
 }

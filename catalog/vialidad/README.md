@@ -21,7 +21,14 @@ Forma parte del espejo cloud-native de la [IDE Pergamino](../README.md).
 | [Rampas de acceso discapacidad motriz](./rampas_acceso_veredas/) | puntos | Rampas de acceso a veredas para personas con dificultades motrices o carritos de bebés/infantes para todo el Partido de Pergamino. |
 | [Red de nivelación de precisión del IGN](./red_nivelacion_ign_precision/) | puntos | Red de Nivelación de Precisión del Instituto Geográfico Nacional recortado al Partido de Pergamino. |
 | [Reductores de velocidad](./reductores_de_velocidad/) | puntos | Reductores de velocidad y bumpers, también conocidos como lomas o lomos de burro localizados dentro del Partido de Pergamino. |
+| [Segmentos de transporte (Overture Maps)](./segmentos_overture/) | vectores externos | Segmentos de calles, caminos, vías férreas y vías navegables de Overture Maps dentro del partido de Pergamino, referenciados sin copiar l... |
 | [Semaforos](./semaforos/) | puntos | Capa de semáforos del Partido de Pergamino. |
+
+## Datos de otros catálogos
+
+Estas colecciones no vienen de GeoNode. Describen la parte de un conjunto de datos publicado en otro catálogo que cae dentro del partido, sin copiar sus bytes: el recurso `data` apunta al archivo original y un recurso `recorte` lo recorta al leer. Cada una conserva la licencia de su productor; ver su README.
+
+- **Overture Maps Foundation**: `segmentos_overture`
 
 ## Datos de terceros
 
@@ -46,3 +53,5 @@ con.sql("SELECT * FROM read_parquet('https://data.source.coop/nlebovits/pergamin
 Fuente: [GeoNode de la IDE Pergamino](https://geonode.pergamino.gob.ar/), Dirección de Sistemas de Información Georreferenciada, Municipalidad de Pergamino.
 
 Licencia: CC BY-SA 4.0, según la declaración del municipio para su IDE. Las colecciones de terceros conservan la atribución a su organismo de origen.
+
+Las colecciones de *Datos de otros catálogos* no vienen de GeoNode ni llevan la licencia del municipio: cada una declara la de su productor.

@@ -1,0 +1,293 @@
+{
+  "type": "Collection",
+  "id": "comercio-y-cultura/lugares_overture",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/table/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/web-map-links/v1.3.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json"
+  ],
+  "title": "Lugares de interés (Overture Maps)",
+  "description": "Lugares de interés (comercios, servicios, instituciones) de Overture Maps dentro del partido de Pergamino, referenciados sin copiar los datos.",
+  "keywords": [
+    "Overture Maps",
+    "places",
+    "place",
+    "Pergamino"
+  ],
+  "license": "other",
+  "providers": [
+    {
+      "name": "Overture Maps Foundation",
+      "roles": [
+        "producer",
+        "licensor"
+      ],
+      "url": "https://overturemaps.org/"
+    },
+    {
+      "name": "Source Cooperative",
+      "roles": [
+        "host"
+      ],
+      "url": "https://source.coop/nlebovits/pergamino-ide",
+      "email": "nlebovits@pm.me"
+    }
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -60.94404785,
+          -34.17655855,
+          -60.13879236,
+          -33.54021703
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-10-21T00:00:00Z",
+          "2026-10-21T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "table:columns": [
+    {
+      "name": "id",
+      "type": "VARCHAR",
+      "description": "A feature ID. This may be an ID associated with the Global Entity Reference System (GERS) if—and-only-if the feature represents an entity that is part of GERS."
+    },
+    {
+      "name": "geometry",
+      "type": "GEOMETRY('OGC:CRS84')",
+      "description": "Place's geometry which MUST be a Point as defined by GeoJSON schema."
+    },
+    {
+      "name": "confidence",
+      "type": "DOUBLE",
+      "description": "The confidence of the existence of the place. It's a number between 0 and 1. 0 means that we're sure that the place doesn't exist (anymore). 1 means that we're sure that the place exists. If there's no value for the confidence, it means that we don't have any confidence information. Places with operating_status set to 'closed' will have a confidence score of 0"
+    },
+    {
+      "name": "websites",
+      "type": "VARCHAR[]",
+      "description": "The websites of the place."
+    },
+    {
+      "name": "emails",
+      "type": "VARCHAR[]",
+      "description": "The email addresses of the place."
+    },
+    {
+      "name": "socials",
+      "type": "VARCHAR[]",
+      "description": "The social media URLs of the place."
+    },
+    {
+      "name": "phones",
+      "type": "VARCHAR[]",
+      "description": "The phone numbers of the place."
+    },
+    {
+      "name": "brand",
+      "type": "STRUCT(wikidata VARCHAR, \"names\" STRUCT(\"primary\" VARCHAR, common MAP(VARCHAR, VARCHAR), rules STRUCT(variant VARCHAR, \"language\" VARCHAR, perspectives STRUCT(\"mode\" VARCHAR, countries VARCHAR[]), \"value\" VARCHAR, \"between\" DOUBLE[], side VARCHAR)[]))",
+      "description": "The brand of the place. A location with multiple brands is modeled as multiple separate places, each with its own brand."
+    },
+    {
+      "name": "addresses",
+      "type": "STRUCT(freeform VARCHAR, locality VARCHAR, postcode VARCHAR, region VARCHAR, country VARCHAR)[]",
+      "description": "The addresses of the place."
+    },
+    {
+      "name": "names",
+      "type": "STRUCT(\"primary\" VARCHAR, common MAP(VARCHAR, VARCHAR), rules STRUCT(variant VARCHAR, \"language\" VARCHAR, perspectives STRUCT(\"mode\" VARCHAR, countries VARCHAR[]), \"value\" VARCHAR, \"between\" DOUBLE[], side VARCHAR)[])",
+      "description": "Properties defining the names of a feature. The struct carries a primary name, optional common names by language, and optional rules. Quoted from the namesContainer definition in the Overture schema."
+    },
+    {
+      "name": "sources",
+      "type": "STRUCT(property VARCHAR, dataset VARCHAR, license VARCHAR, record_id VARCHAR, update_time VARCHAR, confidence DOUBLE, \"between\" DOUBLE[], provider VARCHAR, resource VARCHAR, \"version\" VARCHAR)[]",
+      "description": "The array of source information for the properties of a given feature, with each entry being a source object which lists the property in JSON Pointer notation. All features must have a root level source which is the default source if a specific property's source is not specified."
+    },
+    {
+      "name": "operating_status",
+      "type": "VARCHAR",
+      "description": "Indicates the operating status of a place, can be one of [\"open\", \"permanently_closed\", \"temporarily_closed\"]. This is not an indication of 'opening hours' or that the place is open/closed at the current time-of-day or day-of-week."
+    },
+    {
+      "name": "basic_category",
+      "type": "VARCHAR",
+      "description": "The basic level category of a place. At present this is a mapping of the categories.primary entry to a new, simplified name. This mapping can be 1:1 or M:1 from the existing categories.primary entry. If the entry is currently empty in categories.primary, this entry will be empty. This type of categorization is a cognitive science model that is relevant for taxonomy and ontology development that shows the most broadest and general category name that is most often found in the middle of a general-to-specific hierarchy, with generalization proceeding upward and specialization proceeding downward. The full list of basic level categories is available at https://docs.overturemaps.org/guides/places/"
+    },
+    {
+      "name": "taxonomy",
+      "type": "STRUCT(\"primary\" VARCHAR, hierarchy VARCHAR[], alternates VARCHAR[])",
+      "description": "A new representation of the place's category within the Overture taxonomy. Provides the primary classification, full hierarchy path, and alternate categories."
+    },
+    {
+      "name": "version",
+      "type": "INTEGER",
+      "description": "Version number of the feature, incremented in each Overture release where the geometry or attributes of this feature changed."
+    },
+    {
+      "name": "bbox",
+      "type": "STRUCT(xmin DOUBLE, xmax DOUBLE, ymin DOUBLE, ymax DOUBLE)"
+    }
+  ],
+  "table:row_count": 2789,
+  "pmtiles:layers": [
+    "place"
+  ],
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "IDE Pergamino - Infraestructura de Datos Espaciales"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Comercio y cultura"
+    },
+    {
+      "rel": "agents",
+      "href": "./AGENTS.md",
+      "type": "text/markdown",
+      "title": "Guía para agentes"
+    },
+    {
+      "rel": "describedby",
+      "href": "./README.md",
+      "type": "text/markdown",
+      "title": "Documentación"
+    },
+    {
+      "rel": "via",
+      "href": "https://docs.overturemaps.org/guides/places/",
+      "type": "text/html",
+      "title": "Guía de Overture: places"
+    },
+    {
+      "rel": "via",
+      "href": "https://docs.overturemaps.org/schema/reference/places/place/",
+      "type": "text/html",
+      "title": "Esquema de Overture: place"
+    },
+    {
+      "rel": "canonical",
+      "href": "https://stac.overturemaps.org/2026-10-21.0/places/place/collection.json",
+      "type": "application/json",
+      "title": "Overture STAC, publicación 2026-10-21.0"
+    },
+    {
+      "rel": "derived_from",
+      "href": "https://nlebovits.github.io/overture-portolan/places/place/collection.json",
+      "type": "application/json",
+      "title": "Colección en overture-portolan"
+    },
+    {
+      "rel": "pmtiles",
+      "href": "https://overturemaps-extras-us-west-2.s3.us-west-2.amazonaws.com/tiles/2026-10-21.0/places.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "title": "Teselas vectoriales de Overture (places)",
+      "pmtiles:layers": [
+        "place"
+      ]
+    },
+    {
+      "href": "https://docs.overturemaps.org/attribution/",
+      "rel": "license",
+      "title": "Overture Maps Attribution and Licensing",
+      "type": "text/html"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=places/type=place/part-00004-14b83d8c-d850-51f9-85b2-8f8a0b4634af-c000.zstd.parquet",
+      "type": "application/vnd.apache.parquet",
+      "roles": [
+        "data",
+        "external"
+      ],
+      "title": "GeoParquet, parte 00004 (externa)",
+      "description": "Archivo de la publicación 2026-10-21.0 de Overture Maps. Cubre una región mayor que el partido; la expresión de procesamiento lee solo lo que cae dentro.",
+      "processing:expression": {
+        "format": "duckdb-sql",
+        "expression": "SELECT o.*\nFROM read_parquet('https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=places/type=place/part-00004-14b83d8c-d850-51f9-85b2-8f8a0b4634af-c000.zstd.parquet', hive_partitioning = false) AS o,\n     (SELECT geometry AS partido FROM read_parquet('https://data.source.coop/nlebovits/pergamino-ide/limites/partido_pergamino/partido_pergamino.parquet')) AS p\nWHERE o.bbox.xmin <= -60.13879236 AND o.bbox.xmax >= -60.94404785 AND o.bbox.ymin <= -33.54021703 AND o.bbox.ymax >= -34.17655855\n  AND ST_Intersects(o.geometry, p.partido)"
+      },
+      "alternate": {
+        "s3": {
+          "href": "s3://overturemaps-us-west-2/release/2026-10-21.0/theme=places/type=place/part-00004-14b83d8c-d850-51f9-85b2-8f8a0b4634af-c000.zstd.parquet",
+          "title": "S3, us-west-2, sin credenciales"
+        }
+      }
+    },
+    "visual": {
+      "href": "https://overturemaps-extras-us-west-2.s3.us-west-2.amazonaws.com/tiles/2026-10-21.0/places.pmtiles",
+      "type": "application/vnd.pmtiles",
+      "roles": [
+        "visual",
+        "external"
+      ],
+      "title": "Teselas vectoriales de Overture (places)",
+      "description": "PMTiles que publica Overture Maps para todo el mundo. La capa de esta colección es `place`; el estilo por defecto oculta lo que cae fuera del partido."
+    },
+    "recorte": {
+      "href": "./lugares_overture.ddb",
+      "type": "application/vnd.duckdb",
+      "roles": [
+        "metadata",
+        "recipe"
+      ],
+      "title": "Vista DuckDB del recorte (`lugares`)",
+      "description": "Base DuckDB que contiene solo la vista `lugares`. La vista lee las partes externas con un prefiltro sobre la columna `bbox` y `ST_Intersects` contra el límite oficial del partido. Se abre con `ATTACH ... (READ_ONLY)` después de cargar `spatial` y `httpfs`."
+    },
+    "style": {
+      "href": "./styles/default.json",
+      "type": "application/vnd.mapbox.style+json",
+      "roles": [
+        "style",
+        "default"
+      ],
+      "title": "Por defecto, con máscara del partido",
+      "description": "Las capas del estilo por defecto de overture-portolan sobre las PMTiles de esta publicación, con una máscara que cubre todo lo que queda fuera del partido.",
+      "file:size": 47783,
+      "file:checksum": "12208081547cf901d89f6a152980f7bb8a7967ffbcc83f27b4872a9f859b979debd0"
+    },
+    "thumbnail": {
+      "href": "./lugares_overture.thumb.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Vista previa",
+      "description": "El recorte dibujado con el estilo por defecto sobre un mapa base, con la máscara aplicada.",
+      "file:size": 28257,
+      "file:checksum": "12206a678e5e13308ba685e51f83c8ec8054ca3d6c9ec2f18adc817ab285eae401dd"
+    }
+  },
+  "pergamino:virtual": {
+    "overture_release": "2026-10-21.0",
+    "resolved_via": "overture-portolan",
+    "geometry_types": [
+      "POINT"
+    ],
+    "view": "lugares",
+    "upstream_parts": {
+      "00004": [
+        -74.910522,
+        -84.928329,
+        3.874484,
+        -20.01293
+      ]
+    },
+    "recipe": "https://data.source.coop/nlebovits/pergamino-ide/comercio-y-cultura/lugares_overture/lugares_overture.ddb"
+  },
+  "updated": "2026-11-20T12:59:05Z"
+}

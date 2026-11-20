@@ -1,7 +1,11 @@
 """Shared pieces of the virtual-collection builder.
 
 A virtual collection lists the part of a dataset in another catalog that falls
-inside the partido de Pergamino, without copying its bytes. Everything here is
+inside the partido de Pergamino, without copying its bytes. Each one lives in
+the thematic group it belongs to, beside the municipal layers: its id is the
+``collection`` field of its layer in ``sources.json``, such as
+``catastro/edificios_overture``. It carries ``pergamino:virtual``, which is how
+the tools and the gates tell it from a GeoNode collection. Everything here is
 used by both ``build.py`` (write every collection from scratch) and
 ``refresh.py`` (re-resolve upstream hrefs weekly).
 
@@ -30,7 +34,6 @@ CONFIG = json.loads(CONFIG_PATH.read_text())
 PARTIDO_URL: str = CONFIG["partido"]["url"]
 
 PUBLIC_BASE = "https://data.source.coop/nlebovits/pergamino-ide"
-GROUP = "externos"
 
 USER_AGENT = "pergamino-ide-catalog virtual-collections"
 
@@ -263,6 +266,43 @@ def structural_links(depth: int, parent_title: str) -> list[dict]:
         {"rel": "parent", "href": "../catalog.json",
          "type": "application/json", "title": parent_title},
     ]
+
+
+def leaf(cid: str) -> str:
+    """The folder name of a collection: ``glofas_peligro_rp10``."""
+    return cid.rsplit("/", 1)[-1]
+
+
+def folder(cid: str) -> Path:
+    """Where a collection lives. Reads CATALOG at call time (tests swap it)."""
+    return CATALOG / cid
+
+
+def group_title(cid: str) -> str:
+    """The title of the thematic group that holds a collection."""
+    path = CATALOG / cid.split("/", 1)[0] / "catalog.json"
+    return json.loads(path.read_text())["title"]
+
+
+def collection_links(cid: str) -> list[dict]:
+    """root and parent links of a collection inside its thematic group."""
+    return structural_links(2, group_title(cid))
+
+
+def is_virtual(doc: dict) -> bool:
+    return "pergamino:virtual" in doc
+
+
+def is_glofas(doc: dict) -> bool:
+    """GloFAS collections record their upstream catalog; Overture ones do not."""
+    return "upstream_catalog" in doc.get("pergamino:virtual", {})
+
+
+def virtual_collections(catalog: Path | None = None) -> list[Path]:
+    """Every collection.json under the catalog that is virtual."""
+    base = catalog or CATALOG
+    return [p for p in sorted(base.glob("*/*/collection.json"))
+            if is_virtual(json.loads(p.read_text()))]
 
 
 def doc_links() -> list[dict]:

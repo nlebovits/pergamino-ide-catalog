@@ -80,6 +80,96 @@
     },
     {
       "rel": "child",
+      "href": "./glofas_agua_permanente/collection.json",
+      "type": "application/json",
+      "title": "Cuerpos de agua permanentes (GloFAS)"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_peligro_rp10/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 10 años"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_peligro_rp100/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 100 años"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_peligro_rp20/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 20 años"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_peligro_rp200/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 200 años"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_peligro_rp50/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 50 años"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_peligro_rp500/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 500 años"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_peligro_rp75/collection.json",
+      "type": "application/json",
+      "title": "Clases de profundidad de inundación, retorno de 75 años"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_profundidad_rp10/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 10 años"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_profundidad_rp100/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 100 años"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_profundidad_rp20/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 20 años"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_profundidad_rp200/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 200 años"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_profundidad_rp50/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 50 años"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_profundidad_rp500/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 500 años"
+    },
+    {
+      "rel": "child",
+      "href": "./glofas_profundidad_rp75/collection.json",
+      "type": "application/json",
+      "title": "Profundidad de inundación, retorno de 75 años"
+    },
+    {
+      "rel": "child",
       "href": "./inta_carbono_suelo_2015_2022/collection.json",
       "type": "application/json",
       "title": "Almacenamiento de Carbono en los suelos 2015-2022"
@@ -199,6 +289,12 @@
       "title": "Carta de suelos Pergamino 1:50.000"
     },
     {
+      "rel": "child",
+      "href": "./uso_del_suelo_overture/collection.json",
+      "type": "application/json",
+      "title": "Uso del suelo (Overture Maps)"
+    },
+    {
       "rel": "agents",
       "href": "./AGENTS.md",
       "type": "text/markdown",
@@ -211,5 +307,5 @@
       "title": "Human-readable documentation"
     }
   ],
-  "updated": "2026-11-20T09:51:46Z"
+  "updated": "2026-11-20T12:59:05Z"
 }

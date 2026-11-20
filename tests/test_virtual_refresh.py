@@ -149,7 +149,10 @@ config = json.loads((ROOT / "tools" / "virtual" / "sources.json").read_text())
 check(config["partido"]["url"] == C.PARTIDO_URL,
       "PARTIDO_URL comes from sources.json")
 
-for path in sorted((ROOT / "catalog" / "externos").rglob("*.json")):
+virtual_files = [p for coll in C.virtual_collections(ROOT / "catalog")
+                 for p in sorted(coll.parent.rglob("*.json"))]
+check(len(virtual_files) > 0, "the catalog has virtual collections")
+for path in virtual_files:
     if "styles" in path.parts:
         continue
     doc = json.loads(path.read_text())

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Weekly check of the virtual collections under catalog/externos/.
+"""Weekly check of the virtual collections (sources.json, ``collection``).
 
     python3 tools/virtual/refresh.py --dry-run     # report only
     python3 tools/virtual/refresh.py               # rebuild what moved
@@ -7,7 +7,7 @@
 The weekly job calls ``refresh(catalog, now, dry_run)``. It returns one entry
 per collection id::
 
-    {"externos/overture/edificios": {"status": "ok", "detail": "..."}}
+    {"catastro/edificios_overture": {"status": "ok", "detail": "..."}}
 
 Statuses:
 
@@ -23,9 +23,10 @@ STAC second (see overture.resolve); the path used is stored per collection in
 ``pergamino:virtual.resolved_via``. GloFAS COGs are re-resolved through the
 jrc-glofas items and probed with HEAD.
 
-Outside a dry run every checked collection and the three externos catalogs
-get ``updated`` set to ``now``: core.md (Source Provenance) asks a sync to
-stamp everything it checks, changed or not.
+Outside a dry run every checked collection gets ``updated`` set to ``now``:
+core.md (Source Provenance) asks a sync to stamp everything it checks, changed
+or not. The group catalogs take the newest collection's stamp when
+tools/generate/build_catalogs.py relinks them.
 
 The decision logic is in pure functions (``decide_overture``,
 ``decide_glofas``) so tests/test_virtual_refresh.py covers it offline.
@@ -118,8 +119,6 @@ def decide_glofas(stored_href: str, resolved_href: str | None,
 def use_catalog(catalog: Path) -> None:
     """Point the builders at another catalog directory (tests, staging)."""
     C.CATALOG = catalog
-    G.SUBDIR = catalog / C.GROUP / "glofas"
-    O.SUBDIR = catalog / C.GROUP / "overture"
 
 
 def _load(path: Path) -> dict | None:
@@ -134,11 +133,9 @@ def _stamp(path: Path, now: datetime) -> None:
 
 def refresh_overture(now: datetime, dry_run: bool, partido) -> Result:
     out: Result = {}
-    resolutions: dict[str, dict] = {}
-    rebuilt = False
     for layer in O.OVERTURE["layers"]:
-        cid = f"{C.GROUP}/overture/{layer['id']}"
-        folder = O.SUBDIR / layer["id"]
+        cid = layer["collection"]
+        folder = C.folder(cid)
         coll = _load(folder / "collection.json")
         if coll is None:
             out[cid] = {"status": "skipped",
@@ -148,12 +145,12 @@ def refresh_overture(now: datetime, dry_run: bool, partido) -> Result:
         resolved, error = None, None
         try:
             resolved = O.resolve(layer, partido.bbox)
-            resolutions[layer["id"]] = resolved
         except Exception as exc:  # noqa: BLE001 - reported as error
             error = str(exc)
         live = {h: C.probe(h) for h in stored["hrefs"]}
         status, detail, rebuild = decide_overture(stored, resolved, error,
                                                   live, dry_run)
+        rebuilt = False
         if rebuild:
             try:
                 O.write_collection(layer, resolved, partido, docs, now,
@@ -163,15 +160,13 @@ def refresh_overture(now: datetime, dry_run: bool, partido) -> Result:
                 status, detail = "error", f"rebuild failed: {exc}"
         elif not dry_run and status == "ok":
             _stamp(folder / "collection.json", now)
+        # The .ddb is gitignored: a fresh checkout has none, so write it
+        # whenever it is missing, not only after a rebuild.
+        ddb = folder / O.ddb_name(cid)
+        if (not dry_run and resolved is not None and status == "ok"
+                and (rebuilt or not ddb.exists())):
+            detail += "; " + O.write_recipe(layer, resolved, partido)
         out[cid] = {"status": status, "detail": detail}
-
-    ddb = O.SUBDIR / O.DDB_NAME
-    complete = len(resolutions) == len(O.OVERTURE["layers"])
-    if not dry_run and complete and (rebuilt or not ddb.exists()):
-        note = O.write_recipe(resolutions, partido)
-        for cid in out:
-            if out[cid]["status"] == "ok":
-                out[cid]["detail"] += f"; {note}"
     return out
 
 
@@ -179,8 +174,8 @@ def refresh_glofas(now: datetime, dry_run: bool, partido) -> Result:
     out: Result = {}
     rebuild_any = False
     for layer in G.GLOFAS["layers"]:
-        cid = f"{C.GROUP}/glofas/{layer['id']}"
-        path = G.SUBDIR / layer["id"] / "collection.json"
+        cid = layer["collection"]
+        path = C.folder(cid) / "collection.json"
         coll = _load(path)
         if coll is None:
             out[cid] = {"status": "skipped",
@@ -220,9 +215,6 @@ def refresh(catalog: Path, now: datetime, dry_run: bool) -> Result:
     result: Result = {}
     result.update(refresh_glofas(now, dry_run, partido))
     result.update(refresh_overture(now, dry_run, partido))
-    if not dry_run:
-        for rel in ("", "glofas", "overture"):
-            _stamp(catalog / C.GROUP / rel / "catalog.json", now)
     return result
 
 

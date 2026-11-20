@@ -16,8 +16,8 @@
 *.gpkg
 *.shp
 *.zip
-# DuckDB files: catalog/externos/overture/pergamino_overture.ddb holds only
-# views, but it is a generated binary. tools/virtual/build.py rebuilds it.
+# DuckDB files: each Overture collection's <name>.ddb holds only views, but
+# it is a generated binary. tools/virtual/build.py rebuilds it.
 *.ddb
 
 # Downloaded sources and build scratch. Re-fetchable by your own tooling.

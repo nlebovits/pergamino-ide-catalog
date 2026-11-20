@@ -31,7 +31,7 @@ BASE = ROOT / config["publish_dir"]
 # variable is unset and everything is checked.
 CI_LIGHT = os.environ.get("CI_LIGHT") == "1"
 #
-# `.ddb` is here for the same reason: externos/overture/pergamino_overture.ddb
+# `.ddb` is here for the same reason: each Overture collection's <name>.ddb
 # is a generated binary (DuckDB views, no data), rebuilt by
 # tools/virtual/build.py and kept out of git like the data it points at.
 DATA_SUFFIXES = (

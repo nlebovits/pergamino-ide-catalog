@@ -434,9 +434,6 @@ def build_quarter(quarter: Quarter, force: bool = False,
         log(f"{quarter.label} no scenes in {C1} or {L2A}; excluded")
         return "empty"
     out_dir.mkdir(parents=True, exist_ok=True)
-    # The computed mosaics this collection held before 2026-11-20.
-    for stale in ("data.tif", "visual.tif"):
-        (out_dir / stale).unlink(missing_ok=True)
     if cutline is None:
         with tempfile.TemporaryDirectory(dir=_work()) as tmp:
             render_thumbnail(day, write_cutline(area, Path(tmp)), thumb)

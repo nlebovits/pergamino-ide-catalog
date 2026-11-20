@@ -1,19 +1,26 @@
 # Virtual collections
 
-`catalog/externos/` ("Datos de otros catálogos") lists datasets that other
-Portolan catalogs already publish in cloud-native formats, restricted to the
-partido de Pergamino. It copies no data bytes. Each collection holds metadata,
+A virtual collection lists a dataset that another Portolan catalog already
+publishes in a cloud-native format, restricted to the partido de Pergamino. It
+copies no data bytes. Each one sits in the thematic group it belongs to,
+beside the municipal layers, and carries `pergamino:virtual`, which is how
+the tools and the gates find it. Each collection holds metadata,
 a recipe that clips the upstream data to the partido, a style that masks
 everything outside the partido, and a thumbnail rendered from the upstream
 bytes. This page records how they are encoded, why, and what the Portolan
 spec does not yet say about them.
 
-## What is in the group
+## What there is, and where
 
-| Subcatalog | Collections | Upstream | Recipe asset |
-|---|---|---|---|
-| `externos/glofas/` | 15, one per layer | JRC GloFAS flood hazard maps, through `nlebovits/jrc-glofas` on Source Cooperative | one GDAL VRT per collection |
-| `externos/overture/` | 4: `edificios`, `lugares`, `segmentos`, `uso_del_suelo` | Overture Maps, resolved through `overture-portolan` or Overture's own STAC | one DuckDB file of views, shared |
+| Collections | Upstream | Recipe asset |
+|---|---|---|
+| `ambiente-y-agro/glofas_*`, 15, one per layer, beside the observed floods `inundacion_1995` and `inundacion_2016` | JRC GloFAS flood hazard maps, through `nlebovits/jrc-glofas` on Source Cooperative | one GDAL VRT per collection |
+| `catastro/edificios_overture`, `comercio-y-cultura/lugares_overture`, `vialidad/segmentos_overture`, `ambiente-y-agro/uso_del_suelo_overture` | Overture Maps, resolved through `overture-portolan` or Overture's own STAC | one DuckDB file per collection, holding its view |
+
+The id of each collection is the `collection` field of its layer in
+`tools/virtual/sources.json`. The group README of a theme lists its virtual
+collections in a section of their own, with each producer's licence, and its
+AGENTS.md names them.
 
 GloFAS ships seven return periods for depth, the same seven reclassified into
 hazard classes, permanent water, and a spurious-depth mask. The spurious-depth
@@ -74,10 +81,12 @@ Every clip is reproducible from the metadata alone.
   v1.2.0). GloFAS uses format `gdalwarp` with the full command line. Overture
   items use format `duckdb-sql` with the full `SELECT`.
 - A local recipe asset, roles `["metadata", "recipe"]`, holds the same clip in
-  a form a client opens directly. GloFAS gets `<id>.vrt`, a warped VRT whose
-  cutline is the partido and whose source is `/vsicurl/` on the upstream COG.
-  Overture gets `externos/overture/pergamino_overture.ddb`, a DuckDB database
-  that holds four views and no rows.
+  a form a client opens directly. GloFAS gets `<collection>.vrt`, a warped
+  VRT whose cutline is the partido and whose source is `/vsicurl/` on the
+  upstream COG. Each Overture collection gets `<collection>.ddb`, a DuckDB
+  database that holds its one view and no rows. The four collections live in
+  four groups, so one shared file would sit outside three of them. Joining two
+  layers attaches two files, as the `lugares_overture` guide shows.
 
 The Overture views filter on the GeoParquet `bbox` covering column first, so
 DuckDB skips row groups by their footer statistics, and then apply
@@ -147,13 +156,16 @@ command line.
   and Overture's STAC (`collections.parquet`) second, and records the path in
   `pergamino:virtual.resolved_via`. A new release, a changed part list, or a
   stored href that no longer answers 200 rebuilds the collection's items,
-  links, style, and the shared `.ddb`. A mirror that lags behind the stored
+  links, style, and `.ddb`. A missing `.ddb` (a fresh checkout) is
+  rewritten too. A mirror that lags behind the stored
   release never steps a live collection back.
 - **GloFAS.** Refresh re-resolves each COG through the `jrc-glofas` items and
-  probes it. A moved COG rebuilds the subcatalog. A dead one is an error.
+  probes it. A moved COG rebuilds every GloFAS collection. A dead one is an
+  error.
 
-Outside a dry run every checked collection and the three `externos` catalogs
-get `updated = now`, changed or not, as core.md asks of a mirror sync. The
+Outside a dry run every checked collection gets `updated = now`, changed or
+not, as core.md asks of a mirror sync. The group catalogs take the newest
+collection's stamp when `tools/generate/build_catalogs.py` relinks them. The
 decision logic is pure and tested offline in `tests/test_virtual_refresh.py`.
 
 ## Conformance
@@ -185,7 +197,7 @@ Not posted. For the maintainer to review and post.
 > upstream Portolan or STAC collection.
 >
 > Overture publishes per-part STAC items next to its GeoParquet. Our
-> `externos/overture/edificios` collection keeps the two building parts that
+> `catastro/edificios_overture` collection keeps the two building parts that
 > cross the partido. We wrote one local item per part, each with an
 > absolute `data` href into Overture's bucket (roles `data`, `external`), the
 > clip as `processing:expression`, and a geometry clipped to the partido.

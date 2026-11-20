@@ -23,9 +23,10 @@ from group_descriptions import GROUP_DOCS  # noqa: E402
 from grouping import GROUPS, TITLES  # noqa: E402
 
 SCHEMA = "https://schemas.portolan-sdi.org/portolan/v0.3.0/schema.json"
-# Groups built by their own tools: imagery (tools/imagery/) and the virtual
-# collections over other catalogs (tools/virtual/).
-EXTRA_GROUPS = ["imagenes", "externos"]
+# Groups built by their own tools: imagery (tools/imagery/). The virtual
+# collections over other catalogs (tools/virtual/) live in the thematic
+# groups, and build_group links them like any other collection.
+EXTRA_GROUPS = ["imagenes"]
 
 
 def write_json(path: Path, doc: dict) -> None:

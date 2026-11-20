@@ -16,8 +16,10 @@ change on every refresh. ``tests/test_no_data_numbers.py`` and
 ``tests/test_no_stale_dates.py`` enforce that. Every ```sql block in an
 AGENTS.md runs in CI (``tests/test_queries.py``).
 
-The imagery and the virtual collections (``imagenes/``, ``externos/``) have
-their own generators. This script only links to them.
+The imagery (``imagenes/``) and the virtual collections have their own
+generators. The virtual collections sit in the thematic groups, marked by
+``pergamino:virtual``; this script lists them in their group's README and
+AGENTS.md, but does not write their own docs.
 
     python3 tools/generate/build_docs.py catalog
 """
@@ -101,6 +103,40 @@ def load_collection(catalog: Path, collection: str) -> dict:
 def group_collections(catalog: Path, group: str) -> list[dict]:
     return [json.loads(p.read_text())
             for p in sorted((catalog / group).glob("*/collection.json"))]
+
+
+def is_virtual(col: dict) -> bool:
+    """A collection over another catalog's data (tools/virtual/)."""
+    return "pergamino:virtual" in col
+
+
+def kind_label(col: dict) -> str:
+    """The Geometría cell: measured for GeoNode layers, the source otherwise."""
+    if is_virtual(col):
+        raster = "upstream_catalog" in col["pergamino:virtual"]
+        return "ráster externo" if raster else "vectores externos"
+    facts = MEASURED.get(col["id"], {"geometry": "none"})
+    return GEOMETRY[facts["geometry"]]
+
+
+def virtual_section(cols: list[dict]) -> list[str]:
+    """Group README lines for the virtual collections, if the group has any."""
+    virtual = [c for c in cols if is_virtual(c)]
+    if not virtual:
+        return []
+    producers: dict[str, list[str]] = {}
+    for col in virtual:
+        producers.setdefault(col["providers"][0]["name"], []).append(
+            f"`{col['id'].split('/')[-1]}`")
+    L = ["", "## Datos de otros catálogos", "",
+         "Estas colecciones no vienen de GeoNode. Describen la parte de un "
+         "conjunto de datos publicado en otro catálogo que cae dentro del "
+         "partido, sin copiar sus bytes: el recurso `data` apunta al archivo "
+         "original y un recurso `recorte` lo recorta al leer. Cada una "
+         "conserva la licencia de su productor; ver su README.", ""]
+    for org, names in sorted(producers.items()):
+        L.append(f"- **{org}**: {', '.join(sorted(names))}")
+    return L
 
 
 # --------------------------------------------------------------------------
@@ -307,6 +343,7 @@ def collection_agents(catalog: Path, collection: str) -> None:
 def group_readme(catalog: Path, group: str) -> None:
     title, desc = GROUP_DOCS[group]
     cols = group_collections(catalog, group)
+    local = [c for c in cols if not is_virtual(c)]
     L = [f"# {title}", "", desc, "",
          "Forma parte del espejo cloud-native de la "
          "[IDE Pergamino](../README.md).", "",
@@ -314,14 +351,16 @@ def group_readme(catalog: Path, group: str) -> None:
          "| Colección | Geometría | Descripción |", "|---|---|---|"]
     for col in cols:
         leaf = col["id"].split("/")[-1]
-        facts = MEASURED.get(col["id"], {"geometry": "none"})
         d = col["description"].replace("|", "/").replace("\n", " ")
         if len(d) > 140:
             d = d[:137].rstrip() + "..."
         L.append(f"| [{col['title']}](./{leaf}/) | "
-                 f"{GEOMETRY[facts['geometry']]} | {d} |")
+                 f"{kind_label(col)} | {d} |")
+    L += virtual_section(cols)
     third = {}
     for col in cols:
+        if is_virtual(col):
+            continue
         for p in col["providers"][:-2]:
             third.setdefault(p["name"], []).append(col["title"])
     if third:
@@ -338,7 +377,7 @@ def group_readme(catalog: Path, group: str) -> None:
           "con = duckdb.connect()",
           'con.sql("INSTALL spatial; LOAD spatial; '
           'INSTALL httpfs; LOAD httpfs;")',
-          f"con.sql(\"SELECT * FROM read_parquet('{data_url(cols[0]['id'])}') "
+          f"con.sql(\"SELECT * FROM read_parquet('{data_url(local[0]['id'])}') "
           "LIMIT 10\").show()",
           "```", "",
           "## Procedencia y licencia", "",
@@ -348,6 +387,10 @@ def group_readme(catalog: Path, group: str) -> None:
           "Licencia: CC BY-SA 4.0, según la declaración del municipio para su "
           "IDE. Las colecciones de terceros conservan la atribución a su "
           "organismo de origen."]
+    if any(is_virtual(c) for c in cols):
+        L += ["", "Las colecciones de *Datos de otros catálogos* no vienen de "
+              "GeoNode ni llevan la licencia del municipio: cada una declara "
+              "la de su productor."]
     write(catalog / group / "README.md", L)
 
 
@@ -360,9 +403,8 @@ def group_agents(catalog: Path, group: str) -> None:
          "grupo.", "", "## Colecciones", ""]
     for col in cols:
         leaf = col["id"].split("/")[-1]
-        facts = MEASURED.get(col["id"], {"geometry": "none"})
         L.append(f"- [`{col['id']}`](./{leaf}/AGENTS.md): {col['title']}, "
-                 f"{GEOMETRY[facts['geometry']]}")
+                 f"{kind_label(col)}")
     L += ["", "## Notas de acceso", "",
           "- Los datos están en GeoParquet 1.1, geometría WKB en EPSG:4326, "
           "con columna de cobertura `bbox` y orden espacial Hilbert. Un "
@@ -371,6 +413,14 @@ def group_agents(catalog: Path, group: str) -> None:
           "`styles/default.json`, derivado del estilo SLD que publica GeoNode.",
           "- Los nombres de columna están en español, tal como los publica la "
           "fuente."]
+    virtual = [c["id"] for c in cols if is_virtual(c)]
+    if virtual:
+        L += ["- Las colecciones "
+              + ", ".join(f"`{v}`" for v in virtual)
+              + " son virtuales: no tienen un GeoParquet propio. Su "
+              "`AGENTS.md` dice cómo leer el recorte (un VRT de GDAL o un "
+              "archivo de vistas DuckDB), y la consulta lee los datos del "
+              "servidor del productor."]
     write(catalog / group / "AGENTS.md", L)
 
 

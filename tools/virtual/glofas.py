@@ -1,7 +1,9 @@
 """Virtual collections over the JRC GloFAS flood hazard maps.
 
-Each GloFAS layer becomes one collection under ``externos/glofas/``. The data
-asset is the upstream COG tile that covers the partido, referenced in place.
+Each GloFAS layer becomes one collection in ``ambiente-y-agro/``, named
+``glofas_<layer>`` (the ``collection`` of its layer in sources.json), beside the
+observed floods. The data asset is the upstream COG tile that covers the
+partido, referenced in place.
 The clip is a warped GDAL VRT committed beside the collection: a few lines of
 XML that read the upstream COG through /vsicurl/ with the partido as cutline.
 
@@ -22,8 +24,6 @@ from urllib.parse import urljoin
 import common as C
 
 GLOFAS = C.CONFIG["glofas"]
-SUBDIR = C.CATALOG / C.GROUP / "glofas"
-SUBCATALOG_TITLE = "Peligro de inundación fluvial (JRC GloFAS)"
 
 DOI = "https://doi.org/10.2905/JRC.VD32YWG"
 JRC_STORE = ("https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/CEMS-GLOFAS/"
@@ -273,10 +273,10 @@ def thumbnail_asset(thumb: Path) -> dict:
 def build_collection(layer: dict, partido: C.Partido, coll_url: str,
                      cog: str, m: dict, rescale_max: float,
                      thumb: Path | None) -> dict:
-    cid = f"{C.GROUP}/glofas/{layer['id']}"
-    folder = SUBDIR / layer["id"]
+    cid = layer["collection"]
+    folder = C.folder(cid)
     title, description = titles(layer)
-    vrt_name = f"{layer['id']}.vrt"
+    vrt_name = f"{C.leaf(cid)}.vrt"
     vrt_url = C.public_url(f"{cid}/{vrt_name}")
 
     ext = [C.EXT["portolan"], C.EXT["file"], C.EXT["proj"],
@@ -352,7 +352,7 @@ def build_collection(layer: dict, partido: C.Partido, coll_url: str,
             "spatial": {"bbox": [partido.bbox]},
             "temporal": {"interval": [[None, None]]},
         },
-        "links": C.structural_links(3, SUBCATALOG_TITLE) + C.doc_links() + [
+        "links": C.collection_links(cid) + C.doc_links() + [
             {"rel": "via", "href": DOI, "type": "text/html",
              "title": "Global river flood hazard maps (JRC, DOI)"},
             {"rel": "via", "href": JRC_STORE, "type": "text/html",
@@ -382,45 +382,21 @@ def build_collection(layer: dict, partido: C.Partido, coll_url: str,
     return doc
 
 
-def subcatalog(layers: list[dict]) -> dict:
-    links = C.structural_links(2, "Datos de otros catálogos")
-    for layer in layers:
-        links.append({
-            "rel": "child",
-            "href": f"./{layer['id']}/collection.json",
-            "type": "application/json",
-            "title": titles(layer)[0],
-        })
-    links += C.doc_links()
-    return {
-        "type": "Catalog",
-        "id": f"{C.GROUP}/glofas",
-        "stac_version": "1.1.0",
-        "stac_extensions": [C.EXT["portolan"]],
-        "title": SUBCATALOG_TITLE,
-        "description": (
-            "Mapas globales de peligro de inundación fluvial del JRC "
-            "(CEMS-GloFAS), recortados al partido de Pergamino sin copiar "
-            "los datos: profundidad del agua y clases de profundidad para "
-            "siete períodos de retorno, y la máscara de agua permanente."),
-        "links": links,
-    }
-
-
 def build(partido: C.Partido, docs, now) -> list[str]:
     """Write every GloFAS collection. Returns the collection ids written."""
     layers = GLOFAS["layers"]
     resolved = {}
     measured = {}
     for layer in layers:
-        folder = SUBDIR / layer["id"]
+        cid = layer["collection"]
+        folder = C.folder(cid)
         folder.mkdir(parents=True, exist_ok=True)
         coll_url, cog = resolve_cog(layer)
         resolved[layer["id"]] = (coll_url, cog)
-        vrt = folder / f"{layer['id']}.vrt"
+        vrt = folder / f"{C.leaf(cid)}.vrt"
         write_vrt(partido, cog, vrt)
         measured[layer["id"]] = measure(vrt)
-        print(f"  glofas/{layer['id']}: {measured[layer['id']]['shape']}")
+        print(f"  {cid}: {measured[layer['id']]['shape']}")
 
     depth_max = max(
         measured[ly["id"]]["statistics"]["maximum"]
@@ -431,20 +407,16 @@ def build(partido: C.Partido, docs, now) -> list[str]:
 
     written = []
     for layer in layers:
-        folder = SUBDIR / layer["id"]
+        cid = layer["collection"]
+        folder = C.folder(cid)
         C.write_json(folder / "styles" / "default.json",
                      mask_style(partido, titles(layer)[0]))
         coll_url, cog = resolved[layer["id"]]
-        thumb = folder / f"{layer['id']}.thumb.jpg"
+        thumb = folder / f"{C.leaf(cid)}.thumb.jpg"
         doc = build_collection(layer, partido, coll_url, cog,
                                measured[layer["id"]], rescale_max, thumb)
         docs.write_glofas(layer, doc, folder)
         path = folder / "collection.json"
         C.write_json(path, C.keep_updated(path, doc, now))
         written.append(doc["id"])
-
-    SUBDIR.mkdir(parents=True, exist_ok=True)
-    cat_path = SUBDIR / "catalog.json"
-    C.write_json(cat_path, C.keep_updated(cat_path, subcatalog(layers), now))
-    docs.write_glofas_group(layers, SUBDIR)
     return written

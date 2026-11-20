@@ -63,8 +63,8 @@ PARTIDO_NOTE = (
 
 
 def _glofas_urls(layer: dict) -> tuple[str, str]:
-    cid = f"{C.GROUP}/glofas/{layer['id']}"
-    return cid, C.public_url(f"{cid}/{layer['id']}.vrt")
+    cid = layer["collection"]
+    return cid, C.public_url(f"{cid}/{C.leaf(cid)}.vrt")
 
 
 def _glofas_content(layer: dict) -> list[str]:
@@ -97,7 +97,7 @@ def _glofas_content(layer: dict) -> list[str]:
 def write_glofas(layer: dict, doc: dict, folder: Path) -> None:
     cid, vrt = _glofas_urls(layer)
     cog = doc["assets"]["data"]["href"]
-    name = layer["id"]
+    name = C.leaf(cid)
     readme = [
         f"# {doc['title']}", "", doc["description"], "",
         ATTRIBUTION_NOTE, "",
@@ -173,62 +173,25 @@ def write_glofas(layer: dict, doc: dict, folder: Path) -> None:
         "servidor (comprobado con HEAD). Esta colección no los copia.",
         "- Los mapas modelan crecidas de ríos de cuencas grandes. No "
         "representan anegamientos por lluvia local. Las inundaciones "
-        "observadas en el partido están en el grupo `ambiente-y-agro/`.",
+        "observadas en el partido son `ambiente-y-agro/inundacion_1995` y "
+        "`ambiente-y-agro/inundacion_2016`, en este mismo grupo.",
         f"- {JRC_NOT_OFFICIAL}", "",
-        "## Colecciones relacionadas", "",
-        "- Las demás colecciones de `externos/glofas/`: misma tesela, otros "
-        "períodos de retorno.",
+        "## Comparar períodos de retorno", "",
+        "Todos los VRT de GloFAS comparten la grilla, así que se pueden "
+        "apilar sin remuestrear. Las siete profundidades:", "",
+        *_bash(
+            "gdalbuildvrt -separate profundidad.vrt \\\n" + " \\\n".join(
+                f"  /vsicurl/{_glofas_urls(ly)[1]}"
+                for ly in G.GLOFAS["layers"] if ly["kind"] == "depth")),
+        "", "## Colecciones relacionadas", "",
+        "- Las demás colecciones `ambiente-y-agro/glofas_*`: misma tesela, "
+        "otros períodos de retorno.",
         "- `limites/partido_pergamino`: el límite que define el recorte.",
     ]
     _write(folder / "AGENTS.md", agents)
 
 
-def write_glofas_group(layers: list[dict], folder: Path) -> None:
-    rows = ["| Colección | Contenido |", "|---|---|"]
-    for layer in layers:
-        title = G.titles(layer)[0]
-        rows.append(f"| [{title}](./{layer['id']}/) | `{layer['upstream']}` |")
-    readme = [
-        f"# {G.SUBCATALOG_TITLE}", "",
-        G.subcatalog(layers)["description"], "",
-        ATTRIBUTION_NOTE, "",
-        "## Colecciones", "", *rows, "",
-        "La capa `spurious-depths` del JRC no se incluye: no tiene ninguna "
-        "celda válida dentro del partido.", "",
-        "## Licencia", "",
-        "Ver el README de cada colección: el JRC publica dos declaraciones "
-        "de licencia distintas y ambas se citan textualmente.", "",
-        "## Procedencia", "",
-        f"JRC, *Global river flood hazard maps* ({G.DOI}), convertidos a COG "
-        f"por nlebovits/jrc-glofas ({G.UPSTREAM_PAGE}).", "",
-    ]
-    _write(folder / "README.md", readme)
-    agents = [
-        f"# Guía para agentes — {G.SUBCATALOG_TITLE}", "",
-        "Cada colección es una capa del JRC recortada al partido por un VRT "
-        "de GDAL. El VRT es la forma de leerla; el COG externo es la tesela "
-        "de 10° × 10° completa.", "",
-        "## Colecciones", "",
-    ]
-    for layer in layers:
-        agents.append(f"- [`{C.GROUP}/glofas/{layer['id']}`]"
-                      f"(./{layer['id']}/AGENTS.md) — {G.titles(layer)[0]}")
-    agents += [
-        "", "## Comparar períodos de retorno", "",
-        "Todos los VRT comparten la grilla, así que se pueden apilar sin "
-        "remuestrear:", "",
-        *_bash(
-            "gdalbuildvrt -separate profundidad.vrt \\\n" + " \\\n".join(
-                f"  /vsicurl/{_glofas_urls(ly)[1]}"
-                for ly in layers if ly["kind"] == "depth")),
-        "",
-    ]
-    _write(folder / "AGENTS.md", agents)
-
-
 # --- Overture --------------------------------------------------------------
-
-DDB_URL = C.public_url(f"{C.GROUP}/overture/{O.DDB_NAME}")
 
 # One example query per type, using columns the builder checks are present.
 EXAMPLES = {
@@ -255,12 +218,31 @@ EXAMPLES = {
 }
 
 
-def _attach() -> str:
-    return f"ATTACH '{DDB_URL}' AS ov (READ_ONLY);"
+def _attach(layer: dict, alias: str = "ov") -> str:
+    return f"ATTACH '{O.ddb_url(layer['collection'])}' AS {alias} (READ_ONLY);"
 
 
-def _sql(body: str) -> list[str]:
-    return ["```sql", DUCKDB_PRELUDE, _attach(), body, "```"]
+def _sql(layer: dict, body: str) -> list[str]:
+    return ["```sql", DUCKDB_PRELUDE, _attach(layer), body, "```"]
+
+
+def _layer(type_: str) -> dict:
+    return next(ly for ly in O.OVERTURE["layers"] if ly["type"] == type_)
+
+
+def _join_example() -> list[str]:
+    """Places inside a building: two .ddb files, one ATTACH each."""
+    places, buildings = _layer("place"), _layer("building")
+    return [
+        "```sql", DUCKDB_PRELUDE,
+        _attach(places, "lug"), _attach(buildings, "edi"),
+        "SELECT l.basic_category, count(*) AS lugares\n"
+        f"FROM lug.{places['view']} AS l\n"
+        f"JOIN edi.{buildings['view']} AS e\n"
+        "  ON ST_Intersects(l.geometry, e.geometry)\n"
+        "GROUP BY l.basic_category\n"
+        "ORDER BY lugares DESC\nLIMIT 10;",
+        "```"]
 
 
 def example_for(layer: dict, columns: set[str]) -> tuple[str, str]:
@@ -315,9 +297,9 @@ def write_overture(layer: dict, doc: dict, folder: Path, res: dict) -> None:
         f"Maps. {parts_text} La publicación usada y la ruta por la que se resolvió "
         "están en `pergamino:virtual` dentro de `collection.json`.", "",
         "## Acceso", "",
-        f"El archivo `{DDB_URL}` contiene solo vistas, una por colección de "
-        f"`externos/overture/`. La vista de esta colección es `{view}`:", "",
-        *_sql(f"SELECT * FROM ov.{view} LIMIT 10;"), "",
+        f"El archivo `{O.ddb_url(layer['collection'])}` contiene solo la "
+        f"vista `{view}` de esta colección:", "",
+        *_sql(layer, f"SELECT * FROM ov.{view} LIMIT 10;"), "",
         "Para el mapa, las PMTiles de Overture (recurso `visual`) con el "
         "estilo `styles/default.json`, que oculta lo que cae fuera del "
         "partido.", "",
@@ -346,7 +328,12 @@ def write_overture(layer: dict, doc: dict, folder: Path, res: dict) -> None:
         "`ST_Intersects` con el límite oficial del partido. Requiere "
         "`spatial` y `httpfs`.", "",
         f"### {ex_title}", "",
-        *_sql(ex_body), "",
+        *_sql(layer, ex_body), "",
+        *([] if layer["type"] != "place" else [
+            "### Lugares dentro de un edificio", "",
+            "Cada colección de Overture tiene su propio archivo de vistas; "
+            "para unir dos capas, adjuntar los dos:", "",
+            *_join_example(), ""]),
         "### Sin el archivo de vistas", "",
         f"{where_expr} Las URLs de las partes cambian con cada publicación "
         "de Overture, así que conviene leerlas del STAC o usar la vista.",
@@ -362,132 +349,9 @@ def write_overture(layer: dict, doc: dict, folder: Path, res: dict) -> None:
         "URLs de las partes se actualizan con `tools/virtual/refresh.py`.",
         "",
         "## Colecciones relacionadas", "",
-        "- Las demás colecciones de `externos/overture/`, en el mismo "
-        "archivo de vistas.",
+        "- Las demás capas de Overture Maps en este catálogo: "
+        + ", ".join(f"`{ly['collection']}`" for ly in O.OVERTURE["layers"]
+                    if ly["id"] != layer["id"]) + ".",
         "- `limites/partido_pergamino`: el límite que define el recorte.",
     ]
     _write(folder / "AGENTS.md", agents)
-
-
-def write_overture_group(layers: list[dict], folder: Path,
-                         resolutions: dict) -> None:
-    rows = ["| Colección | Vista | Tipo de Overture |", "|---|---|---|"]
-    for layer in layers:
-        rows.append(f"| [{O.TITLES[layer['type']][0]}](./{layer['id']}/) | "
-                    f"`{layer['view']}` | `{layer['theme']}/{layer['type']}` |")
-    readme = [
-        f"# {O.SUBCATALOG_TITLE}", "",
-        O.subcatalog(layers)["description"], "",
-        ATTRIBUTION_NOTE, "",
-        "## Colecciones", "", *rows, "",
-        "El tema `addresses` no se incluye: la publicación de Overture no "
-        "trae direcciones de Argentina.", "",
-        "## Acceso", "",
-        *_sql("SHOW TABLES FROM ov;"), "",
-        "## Licencia", "",
-        f"Cada colección declara la licencia que Overture declara para su "
-        f"tema. Atribución: {O.ATTRIBUTION}", "",
-    ]
-    _write(folder / "README.md", readme)
-    agents = [
-        f"# Guía para agentes — {O.SUBCATALOG_TITLE}", "",
-        "Un solo archivo de vistas DuckDB da acceso a las cuatro capas, ya "
-        "recortadas al partido.", "",
-        "## Colecciones", "",
-    ]
-    for layer in layers:
-        agents.append(f"- [`{C.GROUP}/overture/{layer['id']}`]"
-                      f"(./{layer['id']}/AGENTS.md) — vista "
-                      f"`ov.{layer['view']}`")
-    agents += [
-        "", "## Unir capas", "",
-        "Lugares de interés que caen dentro de un edificio, por categoría:",
-        "",
-        *_sql("SELECT l.basic_category, count(*) AS lugares\n"
-              "FROM ov.lugares AS l\n"
-              "JOIN ov.edificios AS e\n"
-              "  ON ST_Intersects(l.geometry, e.geometry)\n"
-              "GROUP BY l.basic_category\n"
-              "ORDER BY lugares DESC\nLIMIT 10;"),
-        "",
-        "## Notas", "",
-        "- Las vistas leen las partes externas en cada consulta; nada se "
-        "guarda en este catálogo.",
-        "- `id` es el identificador GERS de Overture, estable entre "
-        "publicaciones para el mismo objeto.",
-    ]
-    _write(folder / "AGENTS.md", agents)
-
-
-# --- the group ---------------------------------------------------------------
-
-GROUP_TITLE = "Datos de otros catálogos"
-GROUP_DESCRIPTION = (
-    "Colecciones virtuales: la parte de conjuntos de datos publicados en "
-    "otros catálogos Portolan que cae dentro del partido de Pergamino, sin "
-    "copiar los datos. Peligro de inundación fluvial del JRC (GloFAS) y "
-    "edificios, lugares, transporte y uso del suelo de Overture Maps.")
-
-
-def write_group(folder: Path) -> None:
-    readme = [
-        f"# {GROUP_TITLE}", "", GROUP_DESCRIPTION, "",
-        "## Subcatálogos", "",
-        f"- [{G.SUBCATALOG_TITLE}](./glofas/)",
-        f"- [{O.SUBCATALOG_TITLE}](./overture/)", "",
-        "## Cómo funciona una colección virtual", "",
-        "- El recurso `data` es el archivo del otro catálogo, con URL "
-        "absoluta y los roles `data` y `external`. No se copia.",
-        "- Un recurso `recorte` (roles `metadata` y `recipe`) hace el "
-        "recorte al leer: un VRT de GDAL para los ráster, un archivo de "
-        "vistas DuckDB para los vectores. La misma operación está en "
-        "`processing:expression` sobre el recurso `data`.",
-        "- El enlace `derived_from` apunta a la colección del otro "
-        "catálogo; `via` a la página del productor; `canonical` al STAC del "
-        "productor cuando existe.",
-        "- El estilo por defecto cubre con una máscara todo lo que queda "
-        "fuera del partido.", "",
-        PARTIDO_NOTE, "",
-        "## Licencia", "",
-        "Cada colección conserva la licencia de su productor; ninguna se "
-        "relicencia bajo la licencia de la IDE.", "",
-    ]
-    _write(folder / "README.md", readme)
-    agents = [
-        f"# Guía para agentes — {GROUP_TITLE}", "",
-        GROUP_DESCRIPTION, "",
-        "- [`externos/glofas/`](./glofas/AGENTS.md) — ráster; leer el VRT "
-        "`recorte` con GDAL.",
-        "- [`externos/overture/`](./overture/AGENTS.md) — vectores; "
-        "`ATTACH` del archivo de vistas DuckDB.", "",
-        "## Antes de consultar", "",
-        "- Los datos no están en este catálogo. Cada consulta los lee del "
-        "servidor del otro catálogo; si ese servidor falla, la consulta "
-        "falla.",
-        "- " + PARTIDO_NOTE,
-        "- Atribuir al productor (JRC, Overture Maps Foundation), no al "
-        "municipio.",
-    ]
-    _write(folder / "AGENTS.md", agents)
-
-
-def group_catalog() -> dict:
-    links = [
-        {"rel": "root", "href": "../catalog.json",
-         "type": "application/json", "title": C.ROOT_TITLE},
-        {"rel": "parent", "href": "../catalog.json",
-         "type": "application/json", "title": C.ROOT_TITLE},
-        {"rel": "child", "href": "./glofas/catalog.json",
-         "type": "application/json", "title": G.SUBCATALOG_TITLE},
-        {"rel": "child", "href": "./overture/catalog.json",
-         "type": "application/json", "title": O.SUBCATALOG_TITLE},
-    ] + C.doc_links()
-    return {
-        "type": "Catalog",
-        "id": C.GROUP,
-        "stac_version": "1.1.0",
-        "stac_extensions": [C.EXT["portolan"]],
-        "title": GROUP_TITLE,
-        "description": GROUP_DESCRIPTION,
-        "links": links,
-    }

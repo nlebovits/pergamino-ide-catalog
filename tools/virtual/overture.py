@@ -1,10 +1,12 @@
 """Virtual collections over Overture Maps.
 
-Each Overture type becomes one collection under ``externos/overture/``. Its
-items are the upstream GeoParquet part files whose bbox meets the partido,
-referenced in place: one item per part, as the overture-portolan mirror does.
-The clip is a DuckDB file of views, ``externos/overture/pergamino_overture.ddb``,
-shared by the four collections so one ATTACH reaches every layer.
+Each Overture type becomes one collection in the thematic group it belongs to
+(the ``collection`` of its layer in sources.json): ``catastro/edificios_overture``,
+``comercio-y-cultura/lugares_overture``, ``vialidad/segmentos_overture`` and
+``ambiente-y-agro/uso_del_suelo_overture``. Its items are the upstream
+GeoParquet part files whose bbox meets the partido, referenced in place: one
+item per part, as the overture-portolan mirror does. The clip is a DuckDB file
+beside the collection, ``<collection>.ddb``, holding one view.
 
 Resolution, in order (recorded per collection in ``pergamino:resolved_via``):
 
@@ -32,9 +34,6 @@ from urllib.parse import urljoin, urlparse
 import common as C
 
 OVERTURE = C.CONFIG["overture"]
-SUBDIR = C.CATALOG / C.GROUP / "overture"
-SUBCATALOG_TITLE = "Overture Maps"
-DDB_NAME = "pergamino_overture.ddb"
 STAC_HOST = "https://stac.overturemaps.org"
 ATTRIBUTION = "https://docs.overturemaps.org/attribution/"
 
@@ -421,7 +420,7 @@ def build_item(layer: dict, res: dict, part: dict, partido: C.Partido,
         "stac_extensions": [C.EXT["processing"], C.EXT["alternate"],
                             C.EXT["table"]],
         "id": iid,
-        "collection": f"{C.GROUP}/overture/{layer['id']}",
+        "collection": layer["collection"],
         "geometry": geom,
         "bbox": [round(v, 6) for v in shapely.from_geojson(
             json.dumps(geom)).bounds],
@@ -435,7 +434,7 @@ def build_item(layer: dict, res: dict, part: dict, partido: C.Partido,
             "pergamino:upstream_bbox": [round(v, 6) for v in part["bbox"]],
         },
         "links": [
-            {"rel": "root", "href": "../../../../catalog.json",
+            {"rel": "root", "href": "../../../catalog.json",
              "type": "application/json", "title": C.ROOT_TITLE},
             {"rel": "parent", "href": "../collection.json",
              "type": "application/json",
@@ -510,8 +509,8 @@ def thumbnail_asset(thumb: Path) -> dict:
 def build_collection(layer: dict, res: dict, partido: C.Partido,
                      m: dict, canonical: dict, zooms: tuple[int, int],
                      thumb: Path | None) -> dict:
-    cid = f"{C.GROUP}/overture/{layer['id']}"
-    folder = SUBDIR / layer["id"]
+    cid = layer["collection"]
+    folder = C.folder(cid)
     title, description = TITLES[layer["type"]]
     pm = pmtiles_url(res["release"], layer)
     descriptions = column_descriptions(res["mirror"])
@@ -549,16 +548,16 @@ def build_collection(layer: dict, res: dict, partido: C.Partido,
                 "fuera del partido."),
         },
         "recorte": {
-            "href": f"../{DDB_NAME}",
+            "href": f"./{ddb_name(cid)}",
             "type": C.DUCKDB_TYPE,
             "roles": C.RECIPE_ROLES,
-            "title": f"Vistas DuckDB del recorte (vista `{layer['view']}`)",
+            "title": f"Vista DuckDB del recorte (`{layer['view']}`)",
             "description": (
-                "Base DuckDB que contiene solo vistas, una por colección de "
-                "este subcatálogo. Cada vista lee las partes externas con un "
-                "prefiltro sobre la columna `bbox` y `ST_Intersects` contra "
-                "el límite oficial del partido. Se abre con `ATTACH ... "
-                "(READ_ONLY)` después de cargar `spatial` y `httpfs`."),
+                f"Base DuckDB que contiene solo la vista `{layer['view']}`. "
+                "La vista lee las partes externas con un prefiltro sobre la "
+                "columna `bbox` y `ST_Intersects` contra el límite oficial "
+                "del partido. Se abre con `ATTACH ... (READ_ONLY)` después "
+                "de cargar `spatial` y `httpfs`."),
         },
         "style": {
             "href": "./styles/default.json",
@@ -575,7 +574,7 @@ def build_collection(layer: dict, res: dict, partido: C.Partido,
     if thumb is not None and thumb.exists():
         assets["thumbnail"] = thumbnail_asset(thumb)
 
-    links = C.structural_links(3, SUBCATALOG_TITLE) + C.doc_links() + [
+    links = C.collection_links(cid) + C.doc_links() + [
         {"rel": "via", "href": GUIDES[layer["theme"]], "type": "text/html",
          "title": f"Guía de Overture: {layer['theme']}"},
         {"rel": "via", "href": schema_page(layer), "type": "text/html",
@@ -635,41 +634,15 @@ def build_collection(layer: dict, res: dict, partido: C.Partido,
             "view": layer["view"],
             "upstream_parts": {p["id"]: [round(v, 6) for v in p["bbox"]]
                                for p in res["parts"]},
-            "recipe": C.public_url(f"{C.GROUP}/overture/{DDB_NAME}"),
+            "recipe": ddb_url(cid),
         },
-    }
-
-
-def subcatalog(layers: list[dict]) -> dict:
-    links = C.structural_links(2, "Datos de otros catálogos")
-    for layer in layers:
-        links.append({"rel": "child",
-                      "href": f"./{layer['id']}/collection.json",
-                      "type": "application/json",
-                      "title": TITLES[layer["type"]][0]})
-    links += C.doc_links() + [
-        {"rel": "via", "href": "https://docs.overturemaps.org/",
-         "type": "text/html", "title": "Documentación de Overture Maps"},
-    ]
-    return {
-        "type": "Catalog",
-        "id": f"{C.GROUP}/overture",
-        "stac_version": "1.1.0",
-        "stac_extensions": [C.EXT["portolan"]],
-        "title": SUBCATALOG_TITLE,
-        "description": (
-            "Edificios, lugares de interés, segmentos de transporte y uso "
-            "del suelo de Overture Maps dentro del partido de Pergamino, "
-            "referenciados sin copiar los datos. Un archivo DuckDB de vistas "
-            "recorta cada capa al partido al consultarla."),
-        "links": links,
     }
 
 
 def write_collection(layer: dict, res: dict, partido: C.Partido, docs,
                      now, force_updated: bool = False) -> dict:
     """Measure, then write one collection, its items, style, and docs."""
-    folder = SUBDIR / layer["id"]
+    folder = C.folder(layer["collection"])
     folder.mkdir(parents=True, exist_ok=True)
     m = measure(res["parts"], partido)
     canonical = C.get_json(canonical_url(res["release"], layer))
@@ -689,35 +662,35 @@ def write_collection(layer: dict, res: dict, partido: C.Partido, docs,
         if stale.is_dir() and stale.name not in keep:
             shutil.rmtree(stale)
 
-    thumb = folder / f"{layer['id']}.thumb.jpg"
+    thumb = folder / f"{C.leaf(layer['collection'])}.thumb.jpg"
     doc = build_collection(layer, res, partido, m, canonical, zooms, thumb)
     docs.write_overture(layer, doc, folder, res)
     path = folder / "collection.json"
     C.write_json(path, C.keep_updated(path, doc, now, force=force_updated))
-    print(f"  overture/{layer['id']}: {res['release']} via "
+    print(f"  {layer['collection']}: {res['release']} via "
           f"{res['resolved_via']}, parts {[p['id'] for p in res['parts']]}")
     return doc
 
 
-def views_for(resolutions: dict[str, dict], bbox: list[float],
-              partido_url: str | None = None) -> dict[str, str]:
-    views = {}
-    for layer in OVERTURE["layers"]:
-        res = resolutions[layer["id"]]
-        views[layer["view"]] = clip_sql([p["href"] for p in res["parts"]],
-                                        bbox, partido_url)
-    return views
+def ddb_name(cid: str) -> str:
+    return f"{C.leaf(cid)}.ddb"
 
 
-def write_recipe(resolutions: dict[str, dict], partido: C.Partido,
+def ddb_url(cid: str) -> str:
+    return C.public_url(f"{cid}/{ddb_name(cid)}")
+
+
+def write_recipe(layer: dict, res: dict, partido: C.Partido,
                  partido_url: str | None = None) -> str:
-    """Write the shared .ddb. Returns a status line."""
+    """Write the collection's .ddb with its one view. Returns a status line."""
     url = partido_url or C.PARTIDO_URL
+    name = ddb_name(layer["collection"])
     if C.probe(url) != 200:
-        return (f"skipped {DDB_NAME}: {url} does not answer 200, and a view "
+        return (f"skipped {name}: {url} does not answer 200, and a view "
                 "cannot be created over a file DuckDB cannot read")
-    write_ddb(views_for(resolutions, partido.bbox, url), SUBDIR / DDB_NAME)
-    return f"wrote {DDB_NAME}"
+    sql = clip_sql([p["href"] for p in res["parts"]], partido.bbox, url)
+    write_ddb({layer["view"]: sql}, C.folder(layer["collection"]) / name)
+    return f"wrote {name}"
 
 
 def build(partido: C.Partido, docs, now,
@@ -726,11 +699,8 @@ def build(partido: C.Partido, docs, now,
     resolutions = {ly["id"]: resolve(ly, partido.bbox) for ly in layers}
     written = []
     for layer in layers:
-        doc = write_collection(layer, resolutions[layer["id"]], partido,
-                               docs, now)
+        res = resolutions[layer["id"]]
+        doc = write_collection(layer, res, partido, docs, now)
         written.append(doc["id"])
-    print("  " + write_recipe(resolutions, partido, partido_url))
-    cat_path = SUBDIR / "catalog.json"
-    C.write_json(cat_path, C.keep_updated(cat_path, subcatalog(layers), now))
-    docs.write_overture_group(layers, SUBDIR, resolutions)
+        print("  " + write_recipe(layer, res, partido, partido_url))
     return written

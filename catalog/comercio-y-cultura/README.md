@@ -18,6 +18,7 @@ Forma parte del espejo cloud-native de la [IDE Pergamino](../README.md).
 | [Oferta gastronómica](./gastronomia/) | puntos | Oferta gastronómica del Partido de Pergamino. |
 | [Gomerias](./gomerias/) | puntos | Gomerías y tiendas de venta de neumáticos en Pergamino. |
 | [Hoteles y hospedajes](./hospedajes/) | puntos | Hoteles y hospedajes del Partido de Pergamino. |
+| [Lugares de interés (Overture Maps)](./lugares_overture/) | vectores externos | Lugares de interés (comercios, servicios, instituciones) de Overture Maps dentro del partido de Pergamino, referenciados sin copiar los d... |
 | [Medios de comunicacion](./medios_de_comunicacion/) | puntos | Medios gráficos y audiovisuales del Partido de Pergamino. |
 | [Museos y espacios culturales](./museos_y_espacios_culturales/) | puntos | Museos y espacios culturales del Partido de Pergamino. |
 | [Oferentes de espacios culturales](./oferentes_espacios_culturales/) | puntos | Oferentes de espacios culturales públicos y privados en la Ciudad de Pergamino. |
@@ -25,6 +26,12 @@ Forma parte del espejo cloud-native de la [IDE Pergamino](../README.md).
 | [Paseos comerciales](./paseos_comerciales/) | líneas | Paseos comerciales primarios, secundarios y terciarios de Pergamino. |
 | [Puntos de interes cultural](./puntos_de_interes/) | puntos | Puntos de interés (POI) cultural del Partido de Pergamino. |
 | [Puntos de venta SIMPLE](./puntos_venta_simple/) | puntos | Capa de puntos de venta y recarga de créditos para el sistema Simple de Estacionamiento Medido para la Ciudad de Pergamino. |
+
+## Datos de otros catálogos
+
+Estas colecciones no vienen de GeoNode. Describen la parte de un conjunto de datos publicado en otro catálogo que cae dentro del partido, sin copiar sus bytes: el recurso `data` apunta al archivo original y un recurso `recorte` lo recorta al leer. Cada una conserva la licencia de su productor; ver su README.
+
+- **Overture Maps Foundation**: `lugares_overture`
 
 ## Acceso
 
@@ -43,3 +50,5 @@ con.sql("SELECT * FROM read_parquet('https://data.source.coop/nlebovits/pergamin
 Fuente: [GeoNode de la IDE Pergamino](https://geonode.pergamino.gob.ar/), Dirección de Sistemas de Información Georreferenciada, Municipalidad de Pergamino.
 
 Licencia: CC BY-SA 4.0, según la declaración del municipio para su IDE. Las colecciones de terceros conservan la atribución a su organismo de origen.
+
+Las colecciones de *Datos de otros catálogos* no vienen de GeoNode ni llevan la licencia del municipio: cada una declara la de su productor.

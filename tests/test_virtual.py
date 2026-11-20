@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """The virtual collections still point at something, and their clips work.
 
-Every collection under catalog/externos/ references bytes another catalog
-hosts. Nothing local breaks when those move, so this gate asks the network:
+Every virtual collection (one with ``pergamino:virtual``, in its thematic
+group) references bytes another catalog hosts. Nothing local breaks when those move, so this gate asks the network:
 
 - every absolute https href in an asset or a link answers 2xx (HEAD, with a
   one-byte ranged GET where a server refuses HEAD);
@@ -25,10 +25,12 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-BASE = ROOT / "catalog" / "externos"
+CATALOG = ROOT / "catalog"
 sys.path.insert(0, str(ROOT / "tools" / "virtual"))
 
-from common import probe  # noqa: E402
+from common import is_glofas, probe, virtual_collections  # noqa: E402
+
+COLLECTIONS = virtual_collections(CATALOG)
 
 # A window can differ from extent / pixel size by the pixels GDAL adds when it
 # snaps the cutline's bounds outward to the source grid.
@@ -37,8 +39,8 @@ PIXEL_SLACK = 2
 if os.environ.get("VIRTUAL_CHECK_REMOTE") == "0":
     print("SKIP: VIRTUAL_CHECK_REMOTE=0; external hrefs not checked.")
     raise SystemExit(0)
-if not BASE.is_dir():
-    print("SKIP: catalog/externos/ does not exist.")
+if not COLLECTIONS:
+    print("SKIP: the catalog has no virtual collection.")
     raise SystemExit(0)
 try:
     socket.getaddrinfo("data.source.coop", 443)
@@ -50,8 +52,12 @@ errors: list[str] = []
 
 
 def documents() -> list[Path]:
-    return [p for p in sorted(BASE.rglob("*.json"))
-            if "styles" not in p.relative_to(BASE).parts]
+    """Each virtual collection and its items, not its styles."""
+    out = []
+    for coll in COLLECTIONS:
+        out += [p for p in sorted(coll.parent.rglob("*.json"))
+                if "styles" not in p.relative_to(coll.parent).parts]
+    return out
 
 
 hrefs: dict[str, str] = {}
@@ -79,8 +85,10 @@ if shutil.which("gdalinfo") is None:
 else:
     env = {**os.environ, "GDAL_PAM_ENABLED": "NO",
            "GDAL_DISABLE_READDIR_ON_OPEN": "EMPTY_DIR"}
-    for path in sorted((BASE / "glofas").glob("*/collection.json")):
+    for path in COLLECTIONS:
         doc = json.loads(path.read_text())
+        if not is_glofas(doc):
+            continue
         clip = doc["assets"]["recorte"]
         vrt = path.parent / clip["href"].removeprefix("./")
         proc = subprocess.run(["gdalinfo", "-json", str(vrt)],

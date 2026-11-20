@@ -18,6 +18,21 @@ Forma parte del espejo cloud-native de la [IDE Pergamino](../README.md).
 | [Curvas de nivel cuenca Arroyo Pergamino](./curvas_nivel_cuenca/) | líneas | Curvas de nivel elaboradas por IATASA-ABS para el proyecto de la Presa del Arroyo Pergamino, nivel de paso a 2.5m. El área de la cuenca e... |
 | [Curvas de nivel (IGN)](./curvas_nivel_ign/) | líneas | Curvas de nivel o isolineas del Instituto Geográfico Naciona (IGN) con paso de 10m, recortado al Partido de Pergamino. |
 | [Espacios verdes públicos](./espacios_verdes/) | polígonos | Contiene todos los espacios verdes públicos del Partido de Pergamino, como plazas, plazoletas y parques. |
+| [Cuerpos de agua permanentes (GloFAS)](./glofas_agua_permanente/) | ráster externo | Máscara de los cuerpos de agua permanentes que el JRC usa para completar los mapas de peligro de GloFAS, recortada al partido de Pergamin... |
+| [Clases de profundidad de inundación, retorno de 10 años](./glofas_peligro_rp10/) | ráster externo | Profundidad del agua agrupada en cuatro clases para una crecida fluvial con un período de retorno de 10 años, modelada por el JRC (CEMS-G... |
+| [Clases de profundidad de inundación, retorno de 100 años](./glofas_peligro_rp100/) | ráster externo | Profundidad del agua agrupada en cuatro clases para una crecida fluvial con un período de retorno de 100 años, modelada por el JRC (CEMS-... |
+| [Clases de profundidad de inundación, retorno de 20 años](./glofas_peligro_rp20/) | ráster externo | Profundidad del agua agrupada en cuatro clases para una crecida fluvial con un período de retorno de 20 años, modelada por el JRC (CEMS-G... |
+| [Clases de profundidad de inundación, retorno de 200 años](./glofas_peligro_rp200/) | ráster externo | Profundidad del agua agrupada en cuatro clases para una crecida fluvial con un período de retorno de 200 años, modelada por el JRC (CEMS-... |
+| [Clases de profundidad de inundación, retorno de 50 años](./glofas_peligro_rp50/) | ráster externo | Profundidad del agua agrupada en cuatro clases para una crecida fluvial con un período de retorno de 50 años, modelada por el JRC (CEMS-G... |
+| [Clases de profundidad de inundación, retorno de 500 años](./glofas_peligro_rp500/) | ráster externo | Profundidad del agua agrupada en cuatro clases para una crecida fluvial con un período de retorno de 500 años, modelada por el JRC (CEMS-... |
+| [Clases de profundidad de inundación, retorno de 75 años](./glofas_peligro_rp75/) | ráster externo | Profundidad del agua agrupada en cuatro clases para una crecida fluvial con un período de retorno de 75 años, modelada por el JRC (CEMS-G... |
+| [Profundidad de inundación, retorno de 10 años](./glofas_profundidad_rp10/) | ráster externo | Profundidad del agua en metros para una crecida fluvial con un período de retorno de 10 años, modelada por el JRC (CEMS-GloFAS) a 3 segun... |
+| [Profundidad de inundación, retorno de 100 años](./glofas_profundidad_rp100/) | ráster externo | Profundidad del agua en metros para una crecida fluvial con un período de retorno de 100 años, modelada por el JRC (CEMS-GloFAS) a 3 segu... |
+| [Profundidad de inundación, retorno de 20 años](./glofas_profundidad_rp20/) | ráster externo | Profundidad del agua en metros para una crecida fluvial con un período de retorno de 20 años, modelada por el JRC (CEMS-GloFAS) a 3 segun... |
+| [Profundidad de inundación, retorno de 200 años](./glofas_profundidad_rp200/) | ráster externo | Profundidad del agua en metros para una crecida fluvial con un período de retorno de 200 años, modelada por el JRC (CEMS-GloFAS) a 3 segu... |
+| [Profundidad de inundación, retorno de 50 años](./glofas_profundidad_rp50/) | ráster externo | Profundidad del agua en metros para una crecida fluvial con un período de retorno de 50 años, modelada por el JRC (CEMS-GloFAS) a 3 segun... |
+| [Profundidad de inundación, retorno de 500 años](./glofas_profundidad_rp500/) | ráster externo | Profundidad del agua en metros para una crecida fluvial con un período de retorno de 500 años, modelada por el JRC (CEMS-GloFAS) a 3 segu... |
+| [Profundidad de inundación, retorno de 75 años](./glofas_profundidad_rp75/) | ráster externo | Profundidad del agua en metros para una crecida fluvial con un período de retorno de 75 años, modelada por el JRC (CEMS-GloFAS) a 3 segun... |
 | [Almacenamiento de Carbono en los suelos 2015-2022](./inta_carbono_suelo_2015_2022/) | polígonos | Vectorización de los datos provisto por INTA respecto al almacenamiento de carbono en el suelo para el Partido de Pergamino con datos rec... |
 | [Mapa nacional de cultivos INTA 2018-2019](./inta_mnc_2018_2019/) | polígonos | Mapa nacional de cultivos INTA 2018-2019 para el Partido de Pergamino, tomado de https://geo-backend.inta.gob.ar/catalogue/#/dataset/479 |
 | [Mapa nacional de cultivos INTA invierno 2019](./inta_mnc_2019_invierno/) | polígonos | Mapa nacional de cultivos INTA invierno 2019 para el Partido de Pergamino, tomado de https://geo-backend.inta.gob.ar/catalogue/#/dataset/481 |
@@ -38,6 +53,14 @@ Forma parte del espejo cloud-native de la [IDE Pergamino](../README.md).
 | [Puntos de nivel (IATASA-ABS)](./puntos_de_nivel_iatasa_abs/) | puntos | Puntos de nivelación generados por el estudio IATASA-ABS para el Partido de Pergamino. |
 | [Riego por pivote central](./riego_por_pivote_central/) | polígonos | Detección automática del riego en el campo por pivote central con imágenes Sentinel para el Partido de Pergamino. |
 | [Carta de suelos Pergamino 1:50.000](./suelos_pergamino_50mil/) | polígonos | Recorte de Cartas de Suelos República Argentina (INTA) para el Partido de Pergamino. El Plan Mapa de Suelos de la Región Pampeana en el a... |
+| [Uso del suelo (Overture Maps)](./uso_del_suelo_overture/) | vectores externos | Polígonos de uso del suelo de Overture Maps dentro del partido de Pergamino, referenciados sin copiar los datos. |
+
+## Datos de otros catálogos
+
+Estas colecciones no vienen de GeoNode. Describen la parte de un conjunto de datos publicado en otro catálogo que cae dentro del partido, sin copiar sus bytes: el recurso `data` apunta al archivo original y un recurso `recorte` lo recorta al leer. Cada una conserva la licencia de su productor; ver su README.
+
+- **European Commission, Joint Research Centre (JRC)**: `glofas_agua_permanente`, `glofas_peligro_rp100`, `glofas_peligro_rp10`, `glofas_peligro_rp200`, `glofas_peligro_rp20`, `glofas_peligro_rp500`, `glofas_peligro_rp50`, `glofas_peligro_rp75`, `glofas_profundidad_rp100`, `glofas_profundidad_rp10`, `glofas_profundidad_rp200`, `glofas_profundidad_rp20`, `glofas_profundidad_rp500`, `glofas_profundidad_rp50`, `glofas_profundidad_rp75`
+- **Overture Maps Foundation**: `uso_del_suelo_overture`
 
 ## Datos de terceros
 
@@ -64,3 +87,5 @@ con.sql("SELECT * FROM read_parquet('https://data.source.coop/nlebovits/pergamin
 Fuente: [GeoNode de la IDE Pergamino](https://geonode.pergamino.gob.ar/), Dirección de Sistemas de Información Georreferenciada, Municipalidad de Pergamino.
 
 Licencia: CC BY-SA 4.0, según la declaración del municipio para su IDE. Las colecciones de terceros conservan la atribución a su organismo de origen.
+
+Las colecciones de *Datos de otros catálogos* no vienen de GeoNode ni llevan la licencia del municipio: cada una declara la de su productor.

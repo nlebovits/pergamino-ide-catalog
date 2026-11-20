@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Render the preview of every externos collection, from upstream bytes.
+"""Render the preview of every virtual collection, from upstream bytes.
 
     export PATH=<node 24.12+>/bin:$PATH
     CHIITILER_PROCESSES=0 npx chiitiler tile-server --port 13581 &
-    python3 tools/virtual/thumbs.py [--only externos/glofas/peligro_rp100]
+    python3 tools/virtual/thumbs.py [--only ambiente-y-agro/glofas_peligro_rp100]
 
 Each preview is the collection's default styling over a basemap, framed to
 the 3:2 card with ``tools/generate/thumbs/frame.py``, with the partido mask
@@ -267,7 +267,7 @@ def render(doc: dict, partido: C.Partido) -> str:
     fb, _, _ = frame(doc["extent"]["spatial"]["bbox"][0])
     with tempfile.TemporaryDirectory() as tmp:
         work = Path(tmp)
-        if doc["id"].startswith(f"{C.GROUP}/glofas/"):
+        if C.is_glofas(doc):
             full = raster_style(doc, folder, work, True)
         else:
             full = vector_style(doc, folder, partido, fb, True)
@@ -281,7 +281,7 @@ def render(doc: dict, partido: C.Partido) -> str:
         out = folder / f"{name}.thumb.jpg"
         post_clip(full, fb, SIZE, out)
 
-    module = G if doc["id"].startswith(f"{C.GROUP}/glofas/") else O
+    module = G if C.is_glofas(doc) else O
     path = folder / "collection.json"
     current = json.loads(path.read_text())
     current["assets"]["thumbnail"] = module.thumbnail_asset(out)
@@ -291,7 +291,7 @@ def render(doc: dict, partido: C.Partido) -> str:
 
 def collections(only: list[str] | None) -> list[dict]:
     out = []
-    for path in sorted((C.CATALOG / C.GROUP).rglob("collection.json")):
+    for path in C.virtual_collections():
         doc = json.loads(path.read_text())
         if not only or any(doc["id"] == o or doc["id"].startswith(o + "/")
                            for o in only):

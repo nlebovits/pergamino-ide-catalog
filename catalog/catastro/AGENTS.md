@@ -13,6 +13,7 @@ Cada colección tiene su propio `AGENTS.md` con el esquema, los valores medidos 
 - [`catastro/edificaciones_automaticas`](./edificaciones_automaticas/AGENTS.md): Edificaciones detectadas con IA, polígonos
 - [`catastro/edificios_en_altura`](./edificios_en_altura/AGENTS.md): Edificios en altura, puntos
 - [`catastro/edificios_historicos`](./edificios_historicos/AGENTS.md): Edificios históricos, puntos
+- [`catastro/edificios_overture`](./edificios_overture/AGENTS.md): Edificios (Overture Maps), vectores externos
 - [`catastro/fraccion`](./fraccion/AGENTS.md): Catastro fraccion, polígonos
 - [`catastro/manzana`](./manzana/AGENTS.md): Catastro manzana, polígonos
 - [`catastro/medida_lado`](./medida_lado/AGENTS.md): Catastro medida lado de parcela, puntos
@@ -28,3 +29,4 @@ Cada colección tiene su propio `AGENTS.md` con el esquema, los valores medidos 
 - Los datos están en GeoParquet 1.1, geometría WKB en EPSG:4326, con columna de cobertura `bbox` y orden espacial Hilbert. Un filtro sobre `bbox` lee sólo los grupos de filas que lo cumplen.
 - Las capas tienen además PMTiles y un estilo MapLibre en `styles/default.json`, derivado del estilo SLD que publica GeoNode.
 - Los nombres de columna están en español, tal como los publica la fuente.
+- Las colecciones `catastro/edificios_overture` son virtuales: no tienen un GeoParquet propio. Su `AGENTS.md` dice cómo leer el recorte (un VRT de GDAL o un archivo de vistas DuckDB), y la consulta lee los datos del servidor del productor.

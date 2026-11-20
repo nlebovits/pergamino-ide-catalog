@@ -15,6 +15,7 @@ Forma parte del espejo cloud-native de la [IDE Pergamino](../README.md).
 | [Edificaciones detectadas con IA](./edificaciones_automaticas/) | polígonos | Edificaciones detectadas automáticamente para el Partido de Pergamino por google research mediante entrenamiento IA: Open Buildings 2023.... |
 | [Edificios en altura](./edificios_en_altura/) | puntos | Edificios de 3 o más pisos en el Partido de Pergamino. |
 | [Edificios históricos](./edificios_historicos/) | puntos | Edificios históricos del Partido de Pergamino. |
+| [Edificios (Overture Maps)](./edificios_overture/) | vectores externos | Huellas de edificios de Overture Maps dentro del partido de Pergamino, referenciadas sin copiar los datos. |
 | [Catastro fraccion](./fraccion/) | polígonos | Fracciones catastrales del Partido de Pergamino. |
 | [Catastro manzana](./manzana/) | polígonos | Manzanas catastrales del Partido de Pergamino. |
 | [Catastro medida lado de parcela](./medida_lado/) | puntos | Medidas de los macizos (parcelas) del Partido de Pergamino. |
@@ -24,6 +25,12 @@ Forma parte del espejo cloud-native de la [IDE Pergamino](../README.md).
 | [Catastro seccion](./seccion/) | polígonos | Capa de secciones catastrales del Partido de Pergamino. |
 | [Catastro subparcela](./subparcela/) | polígonos | Subparcelas catastrales del Partido de Pergamino. |
 | [Zonificacion](./zonificacion/) | polígonos | Capa de zonificación y uso del suelo para el Partido de Pergamino. |
+
+## Datos de otros catálogos
+
+Estas colecciones no vienen de GeoNode. Describen la parte de un conjunto de datos publicado en otro catálogo que cae dentro del partido, sin copiar sus bytes: el recurso `data` apunta al archivo original y un recurso `recorte` lo recorta al leer. Cada una conserva la licencia de su productor; ver su README.
+
+- **Overture Maps Foundation**: `edificios_overture`
 
 ## Datos de terceros
 
@@ -48,3 +55,5 @@ con.sql("SELECT * FROM read_parquet('https://data.source.coop/nlebovits/pergamin
 Fuente: [GeoNode de la IDE Pergamino](https://geonode.pergamino.gob.ar/), Dirección de Sistemas de Información Georreferenciada, Municipalidad de Pergamino.
 
 Licencia: CC BY-SA 4.0, según la declaración del municipio para su IDE. Las colecciones de terceros conservan la atribución a su organismo de origen.
+
+Las colecciones de *Datos de otros catálogos* no vienen de GeoNode ni llevan la licencia del municipio: cada una declara la de su productor.

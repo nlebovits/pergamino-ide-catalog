@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
-"""Regenerate every collection under catalog/externos/ from sources.json.
+"""Regenerate every virtual collection from sources.json.
 
     python3 tools/virtual/build.py                  # everything
     python3 tools/virtual/build.py --only glofas    # one upstream
     python3 tools/virtual/thumbs.py                 # then the previews
 
 Needs the network (upstream STAC, Parquet footers, COG headers), GDAL on PATH,
-and duckdb, pyarrow and shapely. Writes:
+and duckdb, pyarrow and shapely. Each collection lives in its thematic group,
+at the ``collection`` id its layer gives in sources.json. Writes:
 
-- externos/catalog.json and the glofas/ and overture/ sub-catalogs;
 - per collection: collection.json, README.md, AGENTS.md, styles/default.json;
 - GloFAS: one clip VRT per collection (committed: deterministic text);
-- Overture: items, and externos/overture/pergamino_overture.ddb (gitignored:
+- Overture: items, and one ``<collection>.ddb`` per collection (gitignored:
   a binary, regenerated here and published by tools/publish.py).
+
+Then it reruns tools/generate/build_catalogs.py and build_docs.py, so each
+group catalog links its virtual collections and each group README and
+AGENTS.md lists them.
 
 A rerun that finds nothing new leaves every file byte-identical, `updated`
 included. ``--partido-url`` overrides the boundary URL the DuckDB views read;
@@ -22,7 +26,7 @@ a .ddb built with it.
 from __future__ import annotations
 
 import argparse
-import json
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -34,31 +38,14 @@ import docs  # noqa: E402
 import glofas  # noqa: E402
 import overture  # noqa: E402
 
-GROUP_LINK = {
-    "rel": "child",
-    "href": f"./{C.GROUP}/catalog.json",
-    "type": "application/json",
-    "title": docs.GROUP_TITLE,
-}
+GENERATE = Path(__file__).resolve().parent.parent / "generate"
 
 
-def link_group_in_root(root: Path) -> bool:
-    """Add the externos child link to the root catalog if it is missing."""
-    path = root / "catalog.json"
-    cat = json.loads(path.read_text())
-    if any(ln.get("href") == GROUP_LINK["href"] for ln in cat["links"]):
-        return False
-    last_child = max(i for i, ln in enumerate(cat["links"])
-                     if ln.get("rel") == "child")
-    cat["links"].insert(last_child + 1, dict(GROUP_LINK))
-    return C.write_json(path, cat)
-
-
-def write_group(root: Path, now: datetime) -> None:
-    folder = root / C.GROUP
-    path = folder / "catalog.json"
-    C.write_json(path, C.keep_updated(path, docs.group_catalog(), now))
-    docs.write_group(folder)
+def relink_groups(catalog: Path) -> None:
+    """Rebuild the group catalogs and their docs, which list the collections."""
+    for script in ("build_catalogs.py", "build_docs.py"):
+        subprocess.run([sys.executable, str(GENERATE / script), str(catalog)],
+                       check=True)
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -75,13 +62,11 @@ def main(argv: list[str] | None = None) -> int:
         print(f"WARNING: views read {args.partido_url}, not the published "
               f"constant {C.PARTIDO_URL}. Do not publish this .ddb.")
 
-    write_group(C.CATALOG, now)
     if args.only in (None, "glofas"):
         glofas.build(partido, docs, now)
     if args.only in (None, "overture"):
         overture.build(partido, docs, now, args.partido_url)
-    if link_group_in_root(C.CATALOG):
-        print("linked externos/ from the root catalog")
+    relink_groups(C.CATALOG)
     return 0
 
 

@@ -161,6 +161,10 @@ def drop_unmapped(collections: dict) -> list[str]:
     dropped = []
     for path in sorted(CATALOG.glob("*/*/collection.json")):
         collection = str(path.parent.relative_to(CATALOG))
+        doc = json.loads(path.read_text())
+        # Imagery and the virtual collections are not GeoNode layers.
+        if collection.startswith("imagenes/") or "pergamino:virtual" in doc:
+            continue
         if collection not in collections:
             shutil.rmtree(path.parent)
             dropped.append(collection)
