@@ -13,7 +13,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from grouping import GROUPS, EXCLUDED  # noqa: E402
+from grouping import GROUPS  # noqa: E402
 from group_descriptions import GROUP_DOCS  # noqa: E402
 
 DST = sys.argv[1]
