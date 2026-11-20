@@ -17,11 +17,13 @@ this to test new data before it uploads it.
 Blocks that open with WHERE are fragments and are skipped. Only ```sql fences
 run; ```python and ```bash fences are prose.
 
-One connection loads spatial and httpfs once and uses at most half the
-machine's cores and memory, so a run leaves the rest of the machine usable.
-QUERY_THREADS and QUERY_MEMORY override the two limits. QUERY_WORKERS
-blocks (default 8) run at once, each on its own cursor of that connection,
-so a remote run overlaps its HTTP waits inside the same limits.
+QUERY_WORKERS blocks (default 8) run at once, so a remote run overlaps its
+HTTP waits. Each worker has its own connection, because an ATTACH belongs
+to the database instance and every cursor of a connection would see it.
+The workers share half the machine's cores and memory, so a run leaves the
+rest of the machine usable. QUERY_THREADS and QUERY_MEMORY override the two
+totals. After each block the worker detaches what the block attached, as a
+reader who runs the block in a fresh session would have it.
 
     python3 tests/test_queries.py
     QUERY_ONLY=limites python3 tests/test_queries.py   # one subtree
@@ -70,15 +72,28 @@ def sql_blocks():
             yield f"{rel}#{i}", sql, any(p in sql for p in REMOTE)
 
 
-def connect():
-    """One connection with the extensions loaded and half the machine."""
-    import duckdb
-
+def limits(workers: int = 1) -> tuple[int, int]:
+    """Threads and memory in MB for one of `workers` connections."""
     threads = int(os.environ.get("QUERY_THREADS")
                   or max(1, (os.cpu_count() or 2) // 2))
-    memory = os.environ.get("QUERY_MEMORY") or (
-        f"{os.sysconf('SC_PAGE_SIZE') * os.sysconf('SC_PHYS_PAGES') // 2**31}GB")
-    con = duckdb.connect(config={"threads": threads, "memory_limit": memory})
+    env = os.environ.get("QUERY_MEMORY", "")
+    if env:
+        number = float(env.upper().rstrip("B").rstrip("GM"))
+        memory = number * (1024 if env.upper().rstrip("B").endswith("G")
+                           else 1)
+    else:
+        memory = (os.sysconf("SC_PAGE_SIZE")
+                  * os.sysconf("SC_PHYS_PAGES") / 2 / 2**20)
+    return max(1, threads // workers), max(256, int(memory // workers))
+
+
+def connect(workers: int = 1):
+    """A connection with the extensions loaded and its share of the limits."""
+    import duckdb
+
+    threads, memory = limits(workers)
+    con = duckdb.connect(config={"threads": threads,
+                                 "memory_limit": f"{memory}MB"})
     con.execute("INSTALL spatial; LOAD spatial; INSTALL httpfs; LOAD httpfs;")
     return con
 
@@ -89,8 +104,14 @@ def run(con, sql: str) -> tuple[int, str]:
 
     timer = threading.Timer(TIMEOUT, con.interrupt)
     timer.start()
+    before = attached(con)
     try:
-        con.execute(sql).fetchall()
+        result = con.execute(sql)
+        if result.description:
+            # Arrow, not Python objects: a TIMESTAMPTZ converts to Python
+            # only with pytz installed, and the gate checks the query, not
+            # the client's conversion.
+            result.fetch_arrow_table()
         return 0, ""
     except duckdb.Error as exc:
         if not timer.is_alive():
@@ -98,6 +119,14 @@ def run(con, sql: str) -> tuple[int, str]:
         return 1, str(exc).splitlines()[0][:300]
     finally:
         timer.cancel()
+        for name in attached(con) - before:
+            con.execute(f'DETACH "{name}"')
+
+
+def attached(con) -> set[str]:
+    return {row[0] for row in con.execute(
+        "SELECT database_name FROM duckdb_databases() WHERE NOT internal"
+    ).fetchall()}
 
 
 def main() -> int:
@@ -115,15 +144,15 @@ def main() -> int:
             if run_remote or not remote]
     skipped = len(blocks) - len(todo)
     os.chdir(CATALOG)
-    con = connect()
+    workers = min(WORKERS, len(todo)) or 1
     local = threading.local()
 
     def run_block(block):
-        if not hasattr(local, "cursor"):
-            local.cursor = con.cursor()
-        return block[0], *run(local.cursor, block[1])
+        if not hasattr(local, "con"):
+            local.con = connect(workers)
+        return block[0], *run(local.con, block[1])
 
-    with ThreadPoolExecutor(max_workers=WORKERS) as pool:
+    with ThreadPoolExecutor(max_workers=workers) as pool:
         results = list(pool.map(run_block, todo))
     failures = [(label, why) for label, code, why in results if code]
     for label, why in failures:
