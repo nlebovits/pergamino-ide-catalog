@@ -172,6 +172,18 @@ not, as core.md asks of a mirror sync. The group catalogs take the newest
 collection's stamp when `tools/generate/build_catalogs.py` relinks them. The
 decision logic is pure and tested offline in `tests/test_virtual_refresh.py`.
 
+## Link check
+
+`tests/test_virtual.py` probes every external href of the virtual
+collections. A 404, a 410, or any other 4xx fails it: the server says the
+link is wrong. A host that does not answer (a timeout, a DNS, connection or
+TLS failure) or answers 5xx is an outage upstream, which no pull request can
+fix, so CI prints a `WARNING` with the URL and the error and passes. With
+`VIRTUAL_STRICT=1` an outage fails as well. The `virtual-links` job of the
+weekly refresh workflow runs the gate that way, with GDAL so the clip VRTs
+open too, and a host that is still down then turns that run red.
+`tests/test_virtual_probe.py` tests the classification offline.
+
 ## Conformance
 
 <!-- CONFORMANCE -->
