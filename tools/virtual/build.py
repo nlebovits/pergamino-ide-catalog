@@ -31,12 +31,12 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+# tools/, for the package imports below. A bare ``import common`` would share
+# one sys.modules entry with tools/imagery/common.py; see tools/refresh.py hook.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import common as C  # noqa: E402
-import docs  # noqa: E402
-import glofas  # noqa: E402
-import overture  # noqa: E402
+from virtual import common as C  # noqa: E402
+from virtual import docs, glofas, overture  # noqa: E402
 
 GENERATE = Path(__file__).resolve().parent.parent / "generate"
 

@@ -31,7 +31,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
-import common as C
+from virtual import common as C
 
 OVERTURE = C.CONFIG["overture"]
 STAC_HOST = "https://stac.overturemaps.org"

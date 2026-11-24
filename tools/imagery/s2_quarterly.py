@@ -49,9 +49,11 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+# tools/, for the package import below. A bare ``import common`` would share
+# one sys.modules entry with tools/virtual/common.py; see tools/refresh.py hook.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import common  # noqa: E402
+from imagery import common  # noqa: E402
 
 EARTH_SEARCH = "https://earth-search.aws.element84.com/v1"
 C1 = "sentinel-2-c1-l2a"
