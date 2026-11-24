@@ -292,3 +292,34 @@ jobs:
           else
             gh issue create --title "$title" --body-file body.md
           fi
+
+  # The virtual collections point at hosts this catalog does not run. In CI,
+  # tests/test_virtual.py only warns when one of them does not answer (a
+  # timeout, a DNS or TLS failure, a 5xx), so that an upstream outage cannot
+  # block a pull request. This job runs the same gate strictly, with GDAL so
+  # the clip VRTs open too: a host still down at the weekly run fails it, and
+  # the failed run is the alert. A 404 fails both. It holds no credentials
+  # and writes nothing, so it runs beside the refresh, not after it.
+  virtual-links:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install GDAL
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q gdal-bin
+
+      - name: Check every external href, failing on an outage
+        env:
+          VIRTUAL_STRICT: "1"
+        run: python tests/test_virtual.py

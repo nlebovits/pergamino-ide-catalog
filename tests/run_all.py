@@ -26,6 +26,7 @@ TESTS = [
     "test_hooks.py",
     "test_imagery_refresh.py",
     "test_virtual_refresh.py",
+    "test_virtual_probe.py",
     "test_virtual.py",
 ]
 

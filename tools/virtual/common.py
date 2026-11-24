@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import copy
 import hashlib
+import http.client
 import io
 import json
 import urllib.error
@@ -114,24 +115,42 @@ def get_json(url: str, timeout: int = 60) -> dict:
 
 
 def probe(url: str, timeout: int = 30) -> int:
-    """HTTP status of url, or 0 when unreachable.
+    """HTTP status of url, or 0 when unreachable."""
+    return probe_detail(url, timeout)[0]
+
+
+def _describe(exc: BaseException) -> str:
+    """One line naming what went wrong: ``TimeoutError: timed out``."""
+    reason = getattr(exc, "reason", None)
+    if isinstance(exc, urllib.error.URLError) and reason is not None:
+        exc = reason if isinstance(reason, BaseException) else exc
+    text = str(exc).strip() or "no message"
+    return f"{type(exc).__name__}: {text}"
+
+
+def probe_detail(url: str, timeout: int = 30) -> tuple[int, str]:
+    """(HTTP status, error) of url. The status is 0 when nothing answered.
 
     HEAD first. Some servers refuse HEAD (the JRC catalogue answers 405), so
-    a 403/405 falls back to a one-byte ranged GET.
+    a 403/405 falls back to a one-byte ranged GET. The error is empty on a
+    2xx, ``HTTP <code> <reason>`` on an HTTP error, and the exception (a
+    timeout, a DNS failure, a refused or reset connection, a TLS failure, a
+    malformed response) when nothing answered.
     """
     for method, headers in (("HEAD", None), ("GET", {"Range": "bytes=0-0"})):
         try:
             with urllib.request.urlopen(
                 _request(url, method, headers), timeout=timeout
             ) as resp:
-                return resp.status
+                return resp.status, ""
         except urllib.error.HTTPError as exc:
             if method == "HEAD" and exc.code in (403, 405):
                 continue
-            return exc.code
-        except (urllib.error.URLError, TimeoutError, OSError):
-            return 0
-    return 0
+            return exc.code, f"HTTP {exc.code} {exc.reason}"
+        except (urllib.error.URLError, TimeoutError, OSError,
+                http.client.HTTPException) as exc:
+            return 0, _describe(exc)
+    return 0, "no answer"
 
 
 # --- the partido -------------------------------------------------------
