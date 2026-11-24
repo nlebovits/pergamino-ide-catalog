@@ -40,7 +40,7 @@ workflow runs the gates, then ``tools/publish.py``.
 from __future__ import annotations
 
 import argparse
-import importlib.util
+import importlib
 import json
 import shutil
 import subprocess
@@ -292,14 +292,17 @@ def source_changes(sources: dict) -> list[str]:
 
 
 def hook(name: str):
-    """``tools/<name>/refresh.py`` as a module, or None when absent."""
-    path = HERE / name / "refresh.py"
-    if not path.exists():
+    """``tools/<name>/refresh.py`` as the module ``<name>.refresh``, or None
+    when absent.
+
+    Each hook directory is a package, so its modules are ``<name>.common``
+    and so on. Loaded by file path with its directory on ``sys.path``, a
+    hook's bare ``import common`` would get whichever ``common`` the process
+    imported first: the imagery one, when the virtual hook ran second.
+    """
+    if not (HERE / name / "refresh.py").exists():
         return None
-    spec = importlib.util.spec_from_file_location(f"{name}_refresh", path)
-    module = importlib.util.module_from_spec(spec)
-    spec.loader.exec_module(module)
-    return module
+    return importlib.import_module(f"{name}.refresh")
 
 
 def regenerate(ctx: Context, changed: list[str],
@@ -396,10 +399,12 @@ def main() -> int:
 
     if not args.only:
         for name in ("imagery", "virtual"):
-            module = hook(name)
-            if module is None:
-                continue
+            # Inside the try: a hook that fails to import is an error in the
+            # report, not a crash that leaves no report behind.
             try:
+                module = hook(name)
+                if module is None:
+                    continue
                 outcome = module.refresh(ctx.catalog, ctx.now, args.dry_run)
             except Exception:  # noqa: BLE001 - report and go on
                 outcome = {f"{name}/*": {"status": "error",

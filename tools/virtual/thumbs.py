@@ -34,13 +34,15 @@ import urllib.request
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-sys.path.insert(0, str(HERE))
+# tools/, for the package imports below. A bare ``import common`` would share
+# one sys.modules entry with tools/imagery/common.py; see tools/refresh.py hook.
+sys.path.insert(0, str(HERE.parent))
 sys.path.insert(0, str(HERE.parent / "generate" / "thumbs"))
 
-import common as C  # noqa: E402
-import glofas as G  # noqa: E402
-import overture as O  # noqa: E402
 from frame import frame  # noqa: E402
+from virtual import common as C  # noqa: E402
+from virtual import glofas as G  # noqa: E402
+from virtual import overture as O  # noqa: E402
 
 CHIITILER = os.environ.get("CHIITILER_URL", "http://localhost:13581")
 # Carto's light tiles now answer 200 with an "API KEY REQUIRED" image, so the

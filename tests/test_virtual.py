@@ -26,9 +26,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CATALOG = ROOT / "catalog"
-sys.path.insert(0, str(ROOT / "tools" / "virtual"))
+sys.path.insert(0, str(ROOT / "tools"))
 
-from common import is_glofas, probe, virtual_collections  # noqa: E402
+from virtual.common import is_glofas, probe, virtual_collections  # noqa: E402
 
 COLLECTIONS = virtual_collections(CATALOG)
 

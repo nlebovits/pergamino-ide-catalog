@@ -17,16 +17,14 @@ from __future__ import annotations
 import json
 import os
 import subprocess
-import sys
 import tempfile
 from pathlib import Path
 from urllib.parse import urljoin
 
-import common as C
-
-# Appended: tools/ and tools/virtual/ both have a refresh.py.
-sys.path.append(str(C.ROOT / "tools"))
-from featured import with_featured  # noqa: E402
+# The package ``virtual`` imports only with tools/ on sys.path, so
+# tools/featured.py is importable too.
+from featured import with_featured
+from virtual import common as C
 
 GLOFAS = C.CONFIG["glofas"]
 

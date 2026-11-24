@@ -15,11 +15,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "tools" / "imagery"))
+sys.path.insert(0, str(ROOT / "tools"))
 
-import ortofotos  # noqa: E402
-import refresh  # noqa: E402
-from s2_quarterly import Quarter, latest_quarter, quarters_between  # noqa: E402
+from imagery import ortofotos, refresh  # noqa: E402
+from imagery.s2_quarterly import (  # noqa: E402
+    Quarter, latest_quarter, quarters_between)
 
 errors: list[str] = []
 

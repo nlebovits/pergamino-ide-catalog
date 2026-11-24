@@ -38,11 +38,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+# tools/, for the package imports below. A bare ``import common`` would share
+# one sys.modules entry with tools/virtual/common.py; see tools/refresh.py hook.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import common  # noqa: E402
-import ortofotos  # noqa: E402
-import s2_quarterly  # noqa: E402
+from imagery import common, ortofotos, s2_quarterly  # noqa: E402
 
 ORTHO_ID = ortofotos.COLLECTION_ID
 S2_ID = s2_quarterly.COLLECTION_ID

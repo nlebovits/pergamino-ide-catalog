@@ -42,12 +42,13 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-# Appended, not prepended: tools/ and tools/imagery/ both have a refresh.py.
-sys.path.append(str(Path(__file__).resolve().parent.parent))
+# tools/, for the package import below and for featured.py. A bare
+# ``import common`` would share one sys.modules entry with
+# tools/virtual/common.py; see tools/refresh.py hook.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-import common  # noqa: E402
 from featured import with_featured  # noqa: E402
+from imagery import common  # noqa: E402
 
 GEONODE = "https://geonode.pergamino.gob.ar"
 WCS = f"{GEONODE}/geoserver/ows"

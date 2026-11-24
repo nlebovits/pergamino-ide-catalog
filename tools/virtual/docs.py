@@ -10,9 +10,9 @@ from __future__ import annotations
 
 from pathlib import Path
 
-import common as C
-import glofas as G
-import overture as O
+from virtual import common as C
+from virtual import glofas as G
+from virtual import overture as O
 
 DUCKDB_PRELUDE = ("INSTALL spatial; LOAD spatial;\n"
                   "INSTALL httpfs; LOAD httpfs;")

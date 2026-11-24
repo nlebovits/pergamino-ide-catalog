@@ -14,12 +14,12 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(ROOT / "tools" / "virtual"))
+sys.path.insert(0, str(ROOT / "tools"))
 
 try:
-    import common as C  # noqa: E402
-    import overture as O  # noqa: E402
-    from refresh import decide_glofas, decide_overture  # noqa: E402
+    from virtual import common as C  # noqa: E402
+    from virtual import overture as O  # noqa: E402
+    from virtual.refresh import decide_glofas, decide_overture  # noqa: E402
 except ImportError as exc:  # a dependency of the builder is missing
     print(f"SKIP: {exc}")
     raise SystemExit(0)
